@@ -10,23 +10,22 @@ export const EnterprisePlanCard = () => (
   <PricingCardRoot className="pt-10 max-w-4xl">
     <div className="flex flex-col md:flex-row gap-10 items-center px-12">
       <div className="flex flex-col gap-3">
-        <h2>Enterprise</h2>
+        <h2>企业版</h2>
         <p>
-          Ideal for large companies looking to generate leads and automate
-          customer support at scale
+          适合希望大规模获取线索并自动化客户支持的大型企业
         </p>
       </div>
       <ul className="flex flex-col gap-3 shrink-0">
-        <PerkListItem>Custom chats limit & seats</PerkListItem>
-        <PerkListItem>Contract with SLAs</PerkListItem>
+        <PerkListItem>自定义对话额度与席位数</PerkListItem>
+        <PerkListItem>支持 SLA 服务协议</PerkListItem>
         <PerkListItem>
-          24/7 support with a designated representative
+          7x24 专属客户代表支持
         </PerkListItem>
-        <PerkListItem>SSO & Granular access rights</PerkListItem>
-        <PerkListItem>Dedicated IP address</PerkListItem>
-        <PerkListItem>ISO 27001 Certified Security</PerkListItem>
-        <PerkListItem>Custom Security Questionnaires</PerkListItem>
-        <PerkListItem>Custom Features Development (add-on)</PerkListItem>
+        <PerkListItem>SSO 与精细化权限控制</PerkListItem>
+        <PerkListItem>专属 IP 地址</PerkListItem>
+        <PerkListItem>ISO 27001 认证安全保障</PerkListItem>
+        <PerkListItem>定制安全问卷支持</PerkListItem>
+        <PerkListItem>定制功能开发（附加服务）</PerkListItem>
       </ul>
     </div>
     <PricingCardFooter>
@@ -35,7 +34,7 @@ export const EnterprisePlanCard = () => (
         size="lg"
         href={enterpriseLeadTypebotUrl}
       >
-        Get a quote
+        获取报价
       </CtaButtonLink>
     </PricingCardFooter>
   </PricingCardRoot>

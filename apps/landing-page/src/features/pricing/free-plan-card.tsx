@@ -11,16 +11,16 @@ import {
 export const FreePlanCard = ({ children }: { children?: React.ReactNode }) => (
   <PricingCardRoot>
     <PlanNamePill className="bg-stone-950 text-white absolute top-0">
-      Personal
+      个人版
     </PlanNamePill>
     <div className="flex flex-col gap-10 items-center">
-      <h2>Free</h2>
+      <h2>免费</h2>
       {children}
     </div>
 
     <PricingCardFooter>
       <CtaButtonLink href={registerUrl} variant="secondary" size="lg">
-        Get started
+        立即开始
       </CtaButtonLink>
     </PricingCardFooter>
   </PricingCardRoot>
@@ -28,18 +28,18 @@ export const FreePlanCard = ({ children }: { children?: React.ReactNode }) => (
 
 export const FreePlanPerksList = () => (
   <ul className="flex flex-col gap-3">
-    <PerkListItem>Unlimited typebots</PerkListItem>
+    <PerkListItem>不限 Typebot 数量</PerkListItem>
     <PerkListItem>
       <span>
         <span className="font-bold">
-          {new Intl.NumberFormat().format(chatsLimits.FREE)} chats
+          {new Intl.NumberFormat().format(chatsLimits.FREE)} 次对话
         </span>
-        /months
+        /月
       </span>
     </PerkListItem>
-    <PerkListItem>Native integrations</PerkListItem>
+    <PerkListItem>原生集成</PerkListItem>
     <PerkListItem>Webhooks</PerkListItem>
-    <PerkListItem>Custom Javascript & CSS</PerkListItem>
-    <PerkListItem>Community support & Docs</PerkListItem>
+    <PerkListItem>自定义 Javascript 与 CSS</PerkListItem>
+    <PerkListItem>社区支持与文档</PerkListItem>
   </ul>
 );

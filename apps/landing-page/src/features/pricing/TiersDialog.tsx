@@ -20,15 +20,15 @@ export const TiersDialog = ({
 }) => (
   <Dialog.Root isOpen={open} onClose={onClose}>
     <Dialog.Popup>
-      <Dialog.Title>Chats pricing table</Dialog.Title>
+      <Dialog.Title>对话阶梯价格表</Dialog.Title>
       <Dialog.CloseButton />
       <TableRoot>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Max chats</TableHead>
-              <TableHead>Price per month</TableHead>
-              <TableHead>Price per 1k chats</TableHead>
+              <TableHead>对话上限</TableHead>
+              <TableHead>月费</TableHead>
+              <TableHead>每 1000 次对话价格</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -44,13 +44,13 @@ export const TiersDialog = ({
                       : tier.up_to.toLocaleString()}
                   </TableCell>
                   <TableCell>
-                    {index === 0 ? "included" : formatPrice(pricePerMonth)}
+                    {index === 0 ? "已包含" : formatPrice(pricePerMonth)}
                   </TableCell>
                   <TableCell>
                     {index === proChatTiers.length - 1
                       ? formatPrice(4.42, { maxFractionDigits: 2 })
                       : index === 0
-                        ? "included"
+                        ? "已包含"
                         : formatPrice(
                             (((pricePerMonth * 100) /
                               ((tier.up_to as number) -

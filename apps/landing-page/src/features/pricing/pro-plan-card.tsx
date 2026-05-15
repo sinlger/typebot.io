@@ -20,12 +20,12 @@ import { chatsTooltip } from "./constants";
 export const ProPlanCard = ({ children }: { children?: React.ReactNode }) => (
   <PricingCardRoot className="border-violet-400 border-4">
     <PlanNamePill className="bg-violet-400 text-white absolute top-0 flex flex-col">
-      Pro
+      专业版
     </PlanNamePill>
     <div className="flex flex-col gap-10 items-center">
       <h2>
         {formatPrice(prices.PRO)}
-        <span className="text-lg">/month</span>
+          <span className="text-lg">/月</span>
       </h2>
       {children}
     </div>
@@ -35,7 +35,7 @@ export const ProPlanCard = ({ children }: { children?: React.ReactNode }) => (
         size="lg"
         href={`${registerUrl}?subscribePlan=${Plan.PRO}`}
       >
-        Subscribe now
+        立即订阅
       </CtaButtonLink>
     </PricingCardFooter>
   </PricingCardRoot>
@@ -47,31 +47,31 @@ type ProPerksListProps = {
 
 export const ProPerksList = ({ onChatsTiersClick }: ProPerksListProps) => (
   <ul className="flex flex-col gap-3">
-    <PerkListItem>All Starter plan features and...</PerkListItem>
+    <PerkListItem>包含入门版全部功能，另加...</PerkListItem>
     <PerkListItem>
       <span>
-        <span className="font-bold">{seatsLimits.PRO} seats</span> included
+        含 <span className="font-bold">{seatsLimits.PRO} 个席位</span>
       </span>
     </PerkListItem>
     <PerkListItem>
       <div className="flex flex-col gap-1">
         <span className="inline-flex">
           <span className="font-bold">
-            {new Intl.NumberFormat().format(chatsLimits.PRO)} chats
+            {new Intl.NumberFormat().format(chatsLimits.PRO)} 次对话
           </span>
-          /months
+          /月
           <MoreInfoTooltip>{chatsTooltip}</MoreInfoTooltip>
         </span>
         <span className="text-xs text-muted-foreground">
-          Extra chats:{" "}
+          超出部分:{" "}
           <Button size="xs" variant="outline" onClick={onChatsTiersClick}>
-            See tiers
+            查看阶梯价格
           </Button>
         </span>
       </div>
     </PerkListItem>
-    <PerkListItem>WhatsApp integration</PerkListItem>
-    <PerkListItem>Custom domains</PerkListItem>
-    <PerkListItem>In-depth analytics</PerkListItem>
+    <PerkListItem>WhatsApp 集成</PerkListItem>
+    <PerkListItem>自定义域名</PerkListItem>
+    <PerkListItem>深度分析</PerkListItem>
   </ul>
 );

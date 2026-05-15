@@ -28,49 +28,49 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
         <TableHeader>
           <TableRow>
             <TableHead className="w-[400px] min-w-[150px] pl-6">
-              Usage
+              使用量
             </TableHead>
             <PlanTableHeads className="min-w-[150px]" />
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell className="pl-6">Total bots</TableCell>
+            <TableCell className="pl-6">机器人总数</TableCell>
             <InfinityTableCell />
             <InfinityTableCell />
             <InfinityTableCell />
           </TableRow>
           <TableRow>
-            <TableCell className="pl-6">Guests</TableCell>
+            <TableCell className="pl-6">访客数</TableCell>
             <InfinityTableCell />
             <InfinityTableCell />
             <InfinityTableCell />
           </TableRow>
           <TableRow>
-            <TableCell className="pl-6">Members</TableCell>
-            <TableCell>Just you</TableCell>
-            <TableCell>{seatsLimits.STARTER} seats</TableCell>
-            <TableCell>{seatsLimits.PRO} seats</TableCell>
+            <TableCell className="pl-6">成员</TableCell>
+            <TableCell>仅限你自己</TableCell>
+            <TableCell>{seatsLimits.STARTER} 个席位</TableCell>
+            <TableCell>{seatsLimits.PRO} 个席位</TableCell>
           </TableRow>
           <TableRow>
             <TableCellWithTooltip className="pl-6" tooltip={chatsTooltip}>
-              Chats
+              对话数
             </TableCellWithTooltip>
-            <TableCell>{chatsLimits.FREE} / month</TableCell>
+            <TableCell>{chatsLimits.FREE} / 月</TableCell>
             <TableCell>
-              {parseNumberWithCommas(chatsLimits.STARTER)} / month
+              {parseNumberWithCommas(chatsLimits.STARTER)} / 月
             </TableCell>
             <TableCell>
-              {parseNumberWithCommas(chatsLimits.PRO)} / month
+              {parseNumberWithCommas(chatsLimits.PRO)} / 月
             </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell className="pl-6">Additional Chats</TableCell>
+            <TableCell className="pl-6">额外对话额度</TableCell>
             <TableCell />
-            <TableCell>{formatPrice(10)} per 500 chats</TableCell>
+            <TableCell>{formatPrice(10)} / 500 次对话</TableCell>
             <TableCell>
               <Button variant="outline" size="xs" onClick={onChatsTiersClick}>
-                See tiers
+                查看阶梯价格
               </Button>
             </TableCell>
           </TableRow>
@@ -82,21 +82,21 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[400px] min-w-[200px]">Features</TableHead>
+            <TableHead className="w-[400px] min-w-[200px]">功能</TableHead>
             <PlanTableHeads className="md:min-w-[150px]" />
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCellWithTooltip tooltip="Includes display bubbles (text, image, video, embed), question inputs (email, url, phone number...) and logic blocks (conditions, set variables...)">
-              20+ blocks
+            <TableCellWithTooltip tooltip="包含展示气泡（文本、图片、视频、嵌入内容）、提问输入（邮箱、网址、手机号等）以及逻辑模块（条件、设置变量等）。">
+              20+ 种模块
             </TableCellWithTooltip>
             <CheckedTableCell />
             <CheckedTableCell />
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Starter templates</TableCell>
+            <TableCell>入门模板</TableCell>
             <CheckedTableCell />
             <CheckedTableCell />
             <CheckedTableCell />
@@ -120,7 +120,7 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Send emails</TableCell>
+            <TableCell>发送邮件</TableCell>
             <CheckedTableCell />
             <CheckedTableCell />
             <CheckedTableCell />
@@ -144,33 +144,33 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Custom Javascript & CSS</TableCell>
+            <TableCell>自定义 Javascript 与 CSS</TableCell>
             <CheckedTableCell />
             <CheckedTableCell />
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Export CSV</TableCell>
+            <TableCell>导出 CSV</TableCell>
             <CheckedTableCell />
             <CheckedTableCell />
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>File upload inputs</TableCell>
+            <TableCell>文件上传输入</TableCell>
             <TableCell />
             <CheckedTableCell />
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCellWithTooltip tooltip="Organize your typebots into folders">
-              Folders
+            <TableCellWithTooltip tooltip="将你的 Typebot 按文件夹进行组织管理。">
+              文件夹
             </TableCellWithTooltip>
             <TableCell />
             <InfinityTableCell />
             <InfinityTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Remove branding</TableCell>
+            <TableCell>移除品牌标识</TableCell>
             <TableCell />
             <CheckedTableCell />
             <CheckedTableCell />
@@ -182,14 +182,14 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Custom domains</TableCell>
+            <TableCell>自定义域名</TableCell>
             <TableCell />
             <TableCell />
             <InfinityTableCell />
           </TableRow>
           <TableRow>
-            <TableCellWithTooltip tooltip="Analytics graph that shows your form drop-off rate, submission rate, and more.">
-              In-depth analytics
+            <TableCellWithTooltip tooltip="查看表单流失率、提交率等更深入的分析数据。">
+              深度分析
             </TableCellWithTooltip>
             <TableCell />
             <TableCell />
@@ -203,31 +203,31 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[400px] min-w-[200px]">Support</TableHead>
+            <TableHead className="w-[400px] min-w-[200px]">支持服务</TableHead>
             <PlanTableHeads className="md:min-w-[150px]" />
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell>Community support</TableCell>
+            <TableCell>社区支持</TableCell>
             <CheckedTableCell />
             <CheckedTableCell />
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Direct support channel</TableCell>
+            <TableCell>专属支持渠道</TableCell>
             <TableCell />
             <CheckedTableCell />
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Priority support</TableCell>
+            <TableCell>优先支持</TableCell>
             <TableCell />
             <TableCell />
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>Feature request priority</TableCell>
+            <TableCell>功能请求优先级</TableCell>
             <TableCell />
             <TableCell />
             <CheckedTableCell />
@@ -267,8 +267,8 @@ const TableCellWithTooltip = ({
 
 const PlanTableHeads = ({ className }: { className?: string }) => (
   <>
-    <TableHead className={className}>FREE</TableHead>
-    <TableHead className={cn("text-primary", className)}>STARTER</TableHead>
-    <TableHead className={cn("text-violet-500", className)}>PRO</TableHead>
+    <TableHead className={className}>免费版</TableHead>
+    <TableHead className={cn("text-primary", className)}>入门版</TableHead>
+    <TableHead className={cn("text-violet-500", className)}>专业版</TableHead>
   </>
 );

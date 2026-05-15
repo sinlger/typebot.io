@@ -7,56 +7,49 @@ import { type ReactNode, useState } from "react";
 
 const data = [
   {
-    title: "What is considered a monthly chat?",
+    title: "什么会被计为一次月度对话？",
     content: (
       <>
-        A chat is counted whenever a user starts a discussion. It is independant
-        of the number of messages he sends and receives. For example if a user
-        starts a discussion and sends 10 messages to the bot, it will count as 1
-        chat. If the user chats again later and its session is remembered, it
-        will not be counted as a new chat. <br />
+        只要用户发起一次新的讨论，就会计为 1 次对话。它与该用户收发了多少条消息无关。
+        例如，用户开启一段会话后给机器人发了 10 条消息，仍然只会计为 1 次对话。
+        如果用户稍后再次聊天，且之前的会话仍被系统记住，那么这次不会被计为新的对话。
         <br />
-        An easy way to think about it: 1 chat equals to a row in your Results
-        table
+        <br />
+        你可以简单理解为: 1 次对话，大致对应结果表中的 1 行记录。
       </>
     ),
   },
   {
-    title: "What happens once I reach the included chats limit?",
+    title: "达到套餐内的对话上限后会发生什么？",
     content: (
       <>
-        That's amazing, your bots are working full speed. 🚀
+        这说明你的机器人运行得非常出色。
         <br />
         <br />
-        You will first receive a heads up email when you reach 80% of your
-        included limit. Once you have reached 100%, you will receive another
-        email notification.
+        当你使用到套餐额度的 80% 时，我们会先发一封提醒邮件；当达到 100% 时，
+        你会再次收到邮件通知。
         <br />
         <br />
-        After that, your chat limit be automatically upgraded to the next tier.
+        之后，你的对话额度会自动升级到下一档。
       </>
     ),
   },
   {
-    title: "Can I cancel or change my subscription any time?",
+    title: "我可以随时取消或变更订阅吗？",
     content: (
       <>
-        Yes, you can cancel, upgrade or downgrade your subscription at any time.
-        There is no minimum time commitment or lock-in.
+        可以。你可以随时取消、升级或降级订阅，没有最低承诺期限，也不会被绑定。
         <br />
         <br />
-        When you upgrade or downgrade your subscription, you'll get access to
-        the new options right away. Your next invoice will have a prorated
-        amount.
+        当你升级或降级订阅后，新的功能会立即生效；下一张账单会按比例计算费用。
       </>
     ),
   },
   {
-    title: "Do you offer annual payments?",
+    title: "支持按年付费吗？",
     content: (
       <>
-        No, because subscriptions pricing is based on chats usage, we can only
-        offer monthly plans.
+        暂不支持。由于订阅价格与对话使用量直接相关，目前我们仅提供月付方案。
       </>
     ),
   },
@@ -65,7 +58,7 @@ const data = [
 export const Faq = () => {
   return (
     <div className="flex flex-col gap-8 max-w-4xl w-full">
-      <h2>FAQ</h2>
+      <h2>常见问题</h2>
       <div className="flex flex-col gap-2">
         {data.map(({ title, content }) => (
           <Question key={title} title={title}>

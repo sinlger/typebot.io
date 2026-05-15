@@ -23,12 +23,12 @@ export const StarterPlanCard = ({
 }) => (
   <PricingCardRoot>
     <PlanNamePill className="bg-orange-400 text-white absolute top-0 flex flex-col">
-      Starter
+      入门版
     </PlanNamePill>
     <div className="flex flex-col gap-10 items-center">
       <h2>
         {formatPrice(prices.STARTER)}
-        <span className="text-lg">/month</span>
+          <span className="text-lg">/月</span>
       </h2>
       {children}
     </div>
@@ -38,7 +38,7 @@ export const StarterPlanCard = ({
         size="lg"
         href={`${registerUrl}?subscribePlan=${Plan.STARTER}`}
       >
-        Subscribe now
+        立即订阅
       </CtaButtonLink>
     </PricingCardFooter>
   </PricingCardRoot>
@@ -46,30 +46,30 @@ export const StarterPlanCard = ({
 
 export const StarterPlanPerksList = () => (
   <ul className="flex flex-col gap-3">
-    <PerkListItem>All free plan features and...</PerkListItem>
+    <PerkListItem>包含免费版全部功能，另加...</PerkListItem>
     <PerkListItem>
       <span>
-        <span className="font-bold">{seatsLimits.STARTER} seats</span> included
+        含 <span className="font-bold">{seatsLimits.STARTER} 个席位</span>
       </span>
     </PerkListItem>
     <PerkListItem>
       <div className="flex flex-col gap-1">
         <span className="inline-flex">
           <span className="font-bold">
-            {new Intl.NumberFormat().format(chatsLimits.STARTER)} chats
+            {new Intl.NumberFormat().format(chatsLimits.STARTER)} 次对话
           </span>
-          /months
+          /月
           <MoreInfoTooltip>{chatsTooltip}</MoreInfoTooltip>
         </span>
         <span className="text-xs text-muted-foreground">
-          Extra chats: $10 per 500
+          超出部分: 每 500 次对话 $10
         </span>
       </div>
     </PerkListItem>
-    <PerkListItem>Native integration</PerkListItem>
-    <PerkListItem>Branding removed</PerkListItem>
-    <PerkListItem>Collect files from users</PerkListItem>
-    <PerkListItem>Create folders</PerkListItem>
-    <PerkListItem>Direct priority support</PerkListItem>
+    <PerkListItem>原生集成</PerkListItem>
+    <PerkListItem>移除 Typebot 品牌标识</PerkListItem>
+    <PerkListItem>支持向用户收集文件</PerkListItem>
+    <PerkListItem>支持创建文件夹</PerkListItem>
+    <PerkListItem>专属优先支持</PerkListItem>
   </ul>
 );
