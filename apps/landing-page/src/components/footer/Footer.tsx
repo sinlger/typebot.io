@@ -11,31 +11,31 @@ import gradientSeparatorSrc from "./assets/gradient-separator.png";
 
 const data = [
   {
-    title: "Product",
+    title: "产品",
     links: [
       {
-        label: "Documentation",
+        label: "文档",
         href: docsUrl,
       },
       {
-        label: "Pricing",
+        label: "定价",
         to: "/pricing",
       },
     ],
   },
   {
-    title: "Community",
+    title: "社区",
     links: [
       {
         label: "Discord",
         href: discordUrl,
       },
       {
-        label: "Blog",
+        label: "博客",
         to: "/blog",
       },
       {
-        label: "Templates",
+        label: "模板",
         to: "/templates",
       },
       {
@@ -51,13 +51,13 @@ const data = [
         href: linkedInUrl,
       },
       {
-        label: "OSS Friends",
+        label: "开源伙伴",
         to: "/oss-friends",
       },
     ],
   },
   {
-    title: "Blog",
+    title: "博客",
     links: [
       {
         label: "Lead Generation Chatbot",
@@ -97,28 +97,28 @@ const data = [
     ],
   },
   {
-    title: "Company",
+    title: "公司",
     links: [
       {
-        label: "About",
+        label: "关于我们",
         to: "/about",
       },
       {
-        label: "Terms of Service",
+        label: "服务条款",
         to: "/$slug",
         params: {
           slug: "terms-of-service",
         },
       },
       {
-        label: "Privacy Policy",
+        label: "隐私政策",
         to: "/$slug",
         params: {
           slug: "privacy-policy",
         },
       },
       {
-        label: "Business Continuity",
+        label: "业务连续性",
         to: "/$slug",
         params: {
           slug: "business-continuity",
@@ -131,7 +131,7 @@ const data = [
 export const Footer = () => {
   return (
     <footer className="dark flex flex-col pb-12">
-      <img src={gradientSeparatorSrc} alt="separator" className="w-full h-2" />
+      <img src={gradientSeparatorSrc} alt="分隔线" className="w-full h-2" />
       <div className="flex flex-col max-w-7xl mx-auto px-6 md:px-4 w-full">
         <div className="flex flex-col md:flex-row gap-12 py-12 items-start">
           <TypebotLogoFull className="mt-1" />
@@ -160,7 +160,7 @@ export const Footer = () => {
           </div>
         </div>
         <p className="text-foreground/70 text-sm">
-          All rights reserved 2025 - Typebot
+          版权所有 2025 - Typebot
         </p>
       </div>
     </footer>

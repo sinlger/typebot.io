@@ -23,15 +23,15 @@ import { ButtonLink, CtaButtonLink, TextLink } from "./link";
 
 const links = [
   {
-    label: "Pricing",
+    label: "定价",
     to: "/pricing",
   },
   {
-    label: "Blog",
+    label: "博客",
     to: "/blog",
   },
   {
-    label: "Documentation",
+    label: "文档",
     href: docsUrl,
   },
   {
@@ -39,11 +39,11 @@ const links = [
     href: githubRepoUrl,
   },
   {
-    label: "Community",
+    label: "社区",
     href: discordUrl,
   },
   {
-    label: "About",
+    label: "关于",
     to: "/about",
   },
 ] as const;
@@ -115,13 +115,13 @@ export const Header = ({ isOpened = false, onOpen, onClose }: HeaderProps) => {
         isOpened={isOpened}
         toggleHeaderExpansion={toggleHeaderExpansion}
         className="md:hidden"
-        aria-label="Mobile header navigation"
+        aria-label="移动端导航"
       />
       <Desktop
         ref={headerRef}
         appearance={appearance}
         className="hidden md:flex"
-        aria-label="Mobile header navigation"
+        aria-label="桌面端导航"
       />
     </header>
   );
@@ -158,7 +158,7 @@ const Mobile = React.forwardRef<HTMLElement, Props>(function Mobile(
           <TypebotLogoFull />
         </Link>
         <Button
-          aria-label={isOpened ? "Close menu" : "Open menu"}
+          aria-label={isOpened ? "关闭菜单" : "打开菜单"}
           variant="ghost"
           size="icon"
           onClick={toggleHeaderExpansion}
@@ -195,7 +195,7 @@ const Mobile = React.forwardRef<HTMLElement, Props>(function Mobile(
                 variant: "outline",
               })}
             >
-              Sign in
+              登录
             </CtaButtonLink>
           </motion.nav>
         )}
@@ -206,19 +206,19 @@ const Mobile = React.forwardRef<HTMLElement, Props>(function Mobile(
 
 const desktopLinks = [
   {
-    label: "Blog",
+    label: "博客",
     to: "/blog",
   },
   {
-    label: "Community",
+    label: "社区",
     href: discordUrl,
   },
   {
-    label: "Pricing",
+    label: "定价",
     to: "/pricing",
   },
   {
-    label: "Documentation",
+    label: "文档",
     href: docsUrl,
   },
   {
@@ -302,11 +302,11 @@ const Desktop = React.forwardRef<
         ))}
         {isAuthenticated ? (
           <CtaButtonLink size="sm" href={dashboardUrl}>
-            Go to dashboard
+            进入工作台
           </CtaButtonLink>
         ) : (
           <CtaButtonLink size="sm" href={registerUrl}>
-            Get started free
+            免费开始使用
           </CtaButtonLink>
         )}
       </nav>

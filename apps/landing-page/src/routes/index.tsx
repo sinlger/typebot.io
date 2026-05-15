@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
     meta: createMetaTags({
       title: "Typebot",
       description:
-        "Typebot is a no-code platform that enables you to effortlessly create and integrate advanced chatbots into websites and chat platforms like WhatsApp.",
+        "Typebot 是一个零代码平台，帮助你轻松创建高级聊天机器人，并无缝接入网站、WhatsApp 等聊天渠道。",
       imagePath: "/images/default-og.png",
       path: "",
     }),

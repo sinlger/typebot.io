@@ -25,7 +25,7 @@ export const TopBar = ({ className }: Props) => {
       </Link>
       {pathname === "/" && isAuthenticated && (
         <ButtonLink href={dashboardUrl} variant="outline">
-          Go to dashboard
+          进入工作台
         </ButtonLink>
       )}
     </div>

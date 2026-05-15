@@ -20,21 +20,20 @@ export const Hero = () => (
     <div className="flex flex-col items-center px-2 gap-10 pb-44 md:sticky md:top-[calc(100vh/2-var(--hero-text-height)/2)] shrink-0 pt-32 md:pt-0">
       <h1 className="text-center uppercase font-bold text-balance">
         <span className="animate-in fade-in slide-in-from-bottom-10 blur-in-sm inline-block fill-mode-both duration-800 delay-700">
-          Hack the bot game:
+          重新定义对话体验
         </span>
         <br />
         <span className="animate-in fade-in slide-in-from-bottom-10 blur-in-sm inline-block fill-mode-both delay-1900 duration-300">
-          Build faster,{" "}
+          搭建更快，
         </span>
         <br />
         <span className="animate-in fade-in slide-in-from-bottom-10 blur-in-sm inline-block fill-mode-both delay-2500 duration-300">
-          Chat smarter
+          对话更聪明
         </span>
       </h1>
       <p className="text-center text-foreground/60 font-normal text-balance md:text-xl max-w-3xl animate-in fade-in slide-in-from-bottom-10 blur-in-sm fill-mode-both delay-3000 duration-600">
-        Typebot is a no-code platform that enables you to effortlessly create
-        and integrate advanced chatbots into websites and chat platforms like
-        WhatsApp.
+        Typebot 是一个零代码平台，帮助你轻松创建高级聊天机器人，并无缝接入网站、
+        WhatsApp 等聊天渠道。
       </p>
 
       <CtaButtonLink
@@ -42,7 +41,7 @@ export const Hero = () => (
         size="lg"
         href={registerUrl}
       >
-        Start building
+        立即开始搭建
       </CtaButtonLink>
     </div>
     <div
