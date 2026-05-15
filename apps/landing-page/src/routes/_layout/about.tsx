@@ -10,9 +10,9 @@ import { createMetaTags } from "@/lib/createMetaTags";
 export const Route = createFileRoute("/_layout/about")({
   head: () => ({
     meta: createMetaTags({
-      title: "About | Typebot",
+      title: "关于我们 | Typebot",
       description:
-        "Typebot empowers businesses to craft personalized, interactive experiences that foster deeper connections with users.",
+        "Typebot 帮助企业打造个性化、可互动的对话体验，与用户建立更深层的连接。",
       imagePath: "/images/default-og.png",
       path: "/about",
     }),
@@ -24,55 +24,52 @@ function RouteComponent() {
   return (
     <ContentPageWrapper>
       <div className="max-w-3xl mx-auto gap-16 flex flex-col">
-        <h1>Nice conversations makes good relations</h1>
+        <h1>好的对话，建立更好的关系</h1>
         <div className="flex flex-col gap-10 font-display text-3xl md:text-justify">
           <p>
-            At Typebot, we believe that{" "}
+            在 Typebot，我们始终相信{" "}
             <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-30%">
               <MessageSquareGradientIcon className="size-6 inline-flex group-hover:motion-preset-seesaw-lg" />{" "}
-              great conversations
+              高质量的对话
             </span>{" "}
-            build strong relationships.
+            能建立更稳固的关系。
           </p>
           <p>
-            Every day, people chat with friends, colleagues, and family on
-            messaging apps because it's natural, engaging, and familiar. <br />
-            We think businesses should tap into this same dynamic because where{" "}
+            每一天，人们都会在聊天应用里和朋友、同事、家人交流，因为这种方式自然、投入，
+            也最让人熟悉。<br />
+            我们认为，企业同样应该借助这种沟通方式，因为在{" "}
             <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-20%">
               <HeartGradientIcon className="size-6 inline-flex group-hover:motion-preset-pulse-lg" />{" "}
-              people love to chat
+              用户愿意聊天的地方
             </span>
-            , conversion rates rise.
+            ，转化往往会更高。
           </p>
           <p>
-            Most chatbots today are limited to basic customer support, but we
-            know they can be so much more. We see chatbots as tools for{" "}
+            如今，大多数聊天机器人仍局限于基础客服场景，但我们知道，它们本可以承担更多。
+            在我们看来，聊天机器人应该成为实现{" "}
             <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-50%">
               <ZapGradientIcon className="size-6 inline-flex group-hover:motion-preset-oscillate-lg" />{" "}
-              meaningful interactions
+              有意义互动
             </span>{" "}
-            that go beyond scripted responses. Our mission is to transform cold,
-            transactional chats into lively conversations that reflect the true
-            voice of your brand.
+            的工具，而不只是按照脚本回复。我们的使命，是把冰冷、事务性的对话，
+            转变成真正体现品牌声音的鲜活交流。
           </p>
           <p>
             Typebot{" "}
             <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-70%">
               <BuildingsGradientIcon className="size-6 inline-flex group-hover:motion-preset-bounce" />{" "}
-              empowers businesses
+              帮助企业
             </span>{" "}
-            to craft personalized, interactive experiences that foster deeper
-            connections with users.
+            打造个性化、可互动的体验，与用户建立更深层的连接。
           </p>
           <p>
-            I'm Baptiste, a software engineer passionate about user experience
-            and design.
+            我是 Baptiste，一名热爱用户体验与设计的软件工程师。
           </p>
           <p className="font-bold">
-            That's why I created Typebot—to unlock the full potential of
-            chatbots and make them intuitive, beautiful, and impactful.
+            这也是我创建 Typebot 的原因: 释放聊天机器人的全部潜力，让它们更直观、
+            更好看，也真正产生价值。
           </p>
-          <p>Let's bot!</p>
+          <p>让我们开始打造更好的对话。</p>
         </div>
       </div>
       <WhyTypebotCta />
