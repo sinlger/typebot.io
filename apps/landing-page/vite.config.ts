@@ -6,7 +6,7 @@ import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
 import viteTsConfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig({
+export default defineConfig(() => ({
   server: {
     port: 3003,
   },
@@ -26,7 +26,8 @@ export default defineConfig({
     }),
     contentCollections(),
     tanstackStart(),
-    nitro(),
+    // Nx project graph creation loads Vite configs outside the normal plugin context.
+    ...(globalThis.NX_GRAPH_CREATION ? [] : [nitro()]),
     viteReact(),
   ],
-});
+}));

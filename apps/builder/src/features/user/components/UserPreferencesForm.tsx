@@ -17,6 +17,7 @@ import { GroupTitlesAutoGenForm } from "./GroupTitlesAutoGenForm";
 
 const localeHumanReadable = {
   en: "English",
+  "zh-CN": "简体中文",
   fr: "Français",
   de: "Deutsch",
   pt: "Português",

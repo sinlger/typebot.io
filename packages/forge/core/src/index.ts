@@ -183,10 +183,7 @@ export const option = {
     field: T,
     schemas: J,
   ) =>
-    z.discriminatedUnion(field, [
-      z.object({ [field]: z.undefined() }),
-      ...schemas,
-    ] as const),
+    z.union([z.object({ [field]: z.undefined() }), ...schemas]),
   saveResponseArray: <I extends readonly [string, ...string[]]>(
     items: I,
     layouts?: {

@@ -68,6 +68,9 @@
   "engines": {
     "node": "24.x"
   },
+  "overrides": {
+    "@effect/platform-node-shared": "4.0.0-beta.38"
+  },
   "trustedDependencies": [
     "nx",
     "@biomejs/biome",

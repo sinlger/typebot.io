@@ -53,8 +53,19 @@ const WorkflowEngineLayer = ClusterWorkflowEngine.layer.pipe(
     Layer.unwrap(
       Effect.gen(function* () {
         const config = yield* WorkflowsDatabaseConfig;
+        const databaseUrl = new URL(Redacted.value(config.databaseUrl));
+        const shouldUseSsl =
+          databaseUrl.hostname !== "localhost" &&
+          databaseUrl.hostname !== "127.0.0.1" &&
+          databaseUrl.hostname !== "::1";
+
         return PgClient.layer({
-          url: config.databaseUrl,
+          host: databaseUrl.hostname,
+          port: databaseUrl.port ? Number(databaseUrl.port) : 5432,
+          database: decodeURIComponent(databaseUrl.pathname.slice(1)),
+          username: decodeURIComponent(databaseUrl.username),
+          password: Redacted.make(decodeURIComponent(databaseUrl.password)),
+          ssl: shouldUseSsl ? { rejectUnauthorized: false } : undefined,
         });
       }),
     ),

@@ -15,7 +15,7 @@
   },
   "scripts": {
     "content-collections:build": "bunx @content-collections/cli build --config content-collections.ts",
-    "check-broken-links": "mdx-local-link-checker content public '*/(index.mdx|blog|about|pricing?isTiersModalOpened=true)'"
+    "check-broken-links": "node ./scripts/checkBrokenLinks.mjs content public '*/(index.mdx|blog|about|pricing?isTiersModalOpened=true)'"
   },
   "dependencies": {
     "@tanstack/react-router": "1.167.4",

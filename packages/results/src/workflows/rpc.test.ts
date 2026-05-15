@@ -16,6 +16,8 @@ import { executeExportResultsWorkflowHandler } from "./rpc";
 describe("ExecuteExportResultsWorkflow", () => {
   it("should emit starting, in_progress, and completed messages in sequence", async () => {
     const progressQueue = await Effect.runPromise(Queue.unbounded<string>());
+    const workflowReleaseQueue =
+      await Effect.runPromise(Queue.unbounded<boolean>());
 
     const mockRedisClientLayer = Layer.succeed(RedisClient, {
       get: () =>
@@ -44,7 +46,7 @@ describe("ExecuteExportResultsWorkflow", () => {
 
     const mockWorkflowLayer = ExportResultsWorkflow.toLayer(
       Effect.fn(function* () {
-        yield* Effect.sleep("50 millis");
+        yield* Queue.take(workflowReleaseQueue);
         return {
           fileUrl: new URL("http://example.com/file.csv"),
           typebotName: "Test Typebot",
@@ -72,6 +74,7 @@ describe("ExecuteExportResultsWorkflow", () => {
       yield* Queue.offer(progressQueue, "75");
       yield* Effect.sleep("5 millis");
       yield* Queue.offer(progressQueue, "100");
+      yield* Queue.offer(workflowReleaseQueue, true);
 
       return yield* Fiber.join(streamFiber);
     }).pipe(
