@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { type SVGProps, useEffect, useRef, useState } from "react";
 import { Card } from "@/components/Card";
 import { TextLink } from "@/components/link";
-import { breakpoints } from "../../../constants";
+import { breakpoints, docsUrl } from "../../../constants";
 import { useWindowSize } from "../hooks/useWindowSize";
 import deployVideoSrc from "./assets/deploy.mp4";
 import dragDropVideoSrc from "./assets/drag-drop.mp4";
@@ -72,7 +72,7 @@ const features = [
     description:
       "Typebot 的聊天构建器让你通过 45+ 个模块轻松打造高级对话体验。添加文本、图片、视频，并使用多种输入方式，如文本框、按钮、日期选择器和支付输入。轻松连接 OpenAI、Google Sheets、Zapier 等工具，并通过高级主题与可复用模板，对字体、颜色、形状、阴影等细节进行全方位定制。",
     link: {
-      src: "https://docs.typebot.com/editor/blocks/integrations/google-sheets",
+      src: `${docsUrl}/editor/blocks/integrations/google-sheets`,
       text: "查看所有集成",
     },
     video: {
@@ -88,7 +88,7 @@ const features = [
     description:
       "Typebot 是领先的多渠道聊天构建器：机器人只需搭建一次，就能通过自定义域名、嵌入容器、弹窗、聊天气泡，甚至 WhatsApp 部署到任何地方。你还可以通过 HTTP 请求执行机器人，使其更容易与其他服务集成，或在不同编程语言中使用。",
     link: {
-      src: "https://docs.typebot.com/deploy/web/overview",
+      src: `${docsUrl}/deploy/web/overview`,
       text: "查看文档",
     },
     video: {

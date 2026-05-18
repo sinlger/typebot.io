@@ -162,12 +162,14 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <div className="flex flex-col gap-8 max-w-3xl items-center w-full">
-      <div className="flex flex-col gap-4 md:text-center">
+    <div className="flex w-full max-w-5xl flex-col items-center gap-8 self-center">
+      <div className="flex flex-col items-center gap-3 text-center">
         <h2>用户这样评价 Typebot</h2>
-        <p>团队更高效，客户更满意，品牌更突出。</p>
+        <p className="text-muted-foreground">
+          团队更高效，客户更满意，品牌更突出。
+        </p>
       </div>
-      <div className="flex flex-col rounded-2xl overflow-y-auto max-h-[50vh] md:max-h-[70vh] bg-white border relative isolate w-full">
+      <div className="relative isolate flex w-full flex-col overflow-y-auto rounded-[1.75rem] border bg-muted/40 max-h-[50vh] md:max-h-[70vh]">
         <div
           className="pointer-events-none top-0 h-10 w-full bg-linear-to-t from-background/10 to-background/90 sticky shrink-0 animate-in fade-in"
           style={{
@@ -175,7 +177,7 @@ export const Testimonials = () => {
             animationRange: "0% 10%",
           }}
         />
-        <div className="flex flex-col gap-6 items-center px-4">
+        <div className="flex flex-col gap-6 px-4 py-2 md:px-6">
           {testimonials.map((testimonial) => (
             <Testimonial key={testimonial.name} {...testimonial} />
           ))}
@@ -199,7 +201,7 @@ const Testimonial = ({
   avatarSrc,
 }: (typeof testimonials)[number]) => {
   return (
-    <div className="flex gap-2 max-w-lg">
+    <div className="flex max-w-3xl gap-3">
       <div className="rounded-full size-10 shrink-0">
         {avatarSrc ? (
           <img
@@ -213,7 +215,7 @@ const Testimonial = ({
           </div>
         )}
       </div>
-      <div className="flex flex-col bg-secondary text-secondary-foreground border p-4 rounded-xl gap-4 rounded-tl-md">
+      <div className="flex flex-1 flex-col gap-4 rounded-xl rounded-tl-md border bg-white p-4 text-secondary-foreground shadow-sm">
         <p>{content}</p>
         <hr />
         <span className="text-sm">

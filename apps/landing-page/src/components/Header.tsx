@@ -1,305 +1,96 @@
-import { Link, useLocation, useRouter } from "@tanstack/react-router";
-import { Bubble } from "@typebot.io/react";
-import { Button, buttonVariants } from "@typebot.io/ui/components/Button";
+import { Link, useLocation } from "@tanstack/react-router";
+import { Button } from "@typebot.io/ui/components/Button";
 import { Cancel01Icon } from "@typebot.io/ui/icons/Cancel01Icon";
 import { Menu01Icon } from "@typebot.io/ui/icons/Menu01Icon";
 import { cn } from "@typebot.io/ui/lib/cn";
-import { cx } from "@typebot.io/ui/lib/cva";
 import { AnimatePresence, motion } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { TypebotLogoFull } from "@/components/TypebotLogo";
 import {
-  breakpoints,
   dashboardUrl,
-  discordUrl,
-  docsUrl,
-  githubRepoUrl,
   registerUrl,
   signinUrl,
 } from "@/constants";
-import { useWindowSize } from "@/features/homepage/hooks/useWindowSize";
 import { useIsAuthenticated } from "@/hooks/useIsAuthenticated";
-import { ButtonLink, CtaButtonLink, TextLink } from "./link";
+import { ButtonLink, CtaButtonLink } from "./link";
 
-const links = [
-  {
-    label: "定价",
-    to: "/pricing",
-  },
-  {
-    label: "博客",
-    to: "/blog",
-  },
-  {
-    label: "文档",
-    href: docsUrl,
-  },
-  {
-    label: "GitHub",
-    href: githubRepoUrl,
-  },
-  {
-    label: "社区",
-    href: discordUrl,
-  },
-  {
-    label: "关于",
-    to: "/about",
-  },
+const navLinks = [
+  { label: "首页", to: "/" },
+  { label: "模板", to: "/templates" },
+  { label: "定价", to: "/pricing" },
+  { label: "关于", to: "/about" },
 ] as const;
 
-type HeaderProps = {
-  isOpened?: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-};
-
-export const Header = ({ isOpened = false, onOpen, onClose }: HeaderProps) => {
-  const headerRef = useRef<HTMLDivElement>(null);
-  const [appearance, setAppearance] = useState<"light" | "dark">("dark");
-  const { width: windowWidth, height: windowHeight } = useWindowSize();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!windowWidth || !windowHeight) return;
-    const isMobile = windowWidth < breakpoints.md;
-    const options = {
-      rootMargin: `0px 0px ${isMobile ? -(windowHeight - 50) : -70}px 0px`,
-      threshold: 0,
-    };
-
-    const initializeObserver = () => {
-      const observer = new IntersectionObserver(([entry]) => {
-        entry.target.classList.contains("dark")
-          ? setAppearance(entry.isIntersecting ? "dark" : "light")
-          : setAppearance(entry.isIntersecting ? "light" : "dark");
-      }, options);
-
-      const elementsToObserve = Array.from(
-        document.getElementsByTagName("section"),
-      ).concat(Array.from(document.getElementsByTagName("footer")));
-
-      elementsToObserve.forEach((element) => {
-        observer.observe(element);
-      });
-
-      return observer;
-    };
-
-    let observer = initializeObserver();
-
-    const routerSubscription = router.subscribe("onResolved", () => {
-      observer.disconnect();
-      observer = initializeObserver();
-    });
-
-    return () => {
-      observer.disconnect();
-      routerSubscription();
-    };
-  }, [windowWidth, windowHeight, setAppearance, router]);
-
-  const toggleHeaderExpansion = () => {
-    if (isOpened) {
-      onClose();
-    } else {
-      onOpen();
-    }
-  };
+export const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="flex justify-center">
-      <Mobile
-        ref={headerRef}
-        appearance={appearance}
-        isOpened={isOpened}
-        toggleHeaderExpansion={toggleHeaderExpansion}
-        className="md:hidden"
-        aria-label="移动端导航"
-      />
-      <Desktop
-        ref={headerRef}
-        appearance={appearance}
-        className="hidden md:flex"
-        aria-label="桌面端导航"
-      />
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <TypebotLogoFull />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <DesktopNav />
+
+          {/* Mobile menu button */}
+          <div className="flex md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "关闭菜单" : "打开菜单"}
+            >
+              {mobileMenuOpen ? <Cancel01Icon /> : <Menu01Icon />}
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <MobileNav isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
     </header>
   );
 };
 
-type Props = {
-  appearance: "light" | "dark";
-  isOpened: boolean;
-  toggleHeaderExpansion: () => void;
-  className: string;
-};
-
-const Mobile = React.forwardRef<HTMLElement, Props>(function Mobile(
-  { appearance, isOpened, toggleHeaderExpansion, className },
-  ref,
-) {
-  return (
-    <motion.nav
-      ref={ref}
-      className={cn(
-        "flex flex-col gap-8 justify-start backdrop-blur-md rounded-lg border-2 w-[calc(100%-2rem)] will-change-transform duration-300 transition-colors",
-        appearance === "light"
-          ? "bg-white/50"
-          : isOpened
-            ? "dark bg-black/90 text-foreground"
-            : "dark bg-black/60 text-foreground",
-        className,
-      )}
-      transition={{ duration: 0.4, type: "spring", bounce: 0.15 }}
-      animate={{ height: isOpened ? "calc(100dvh - 2rem)" : "auto" }}
-    >
-      <div className="flex items-center justify-between px-4 py-2">
-        <Link to="/">
-          <TypebotLogoFull />
-        </Link>
-        <Button
-          aria-label={isOpened ? "关闭菜单" : "打开菜单"}
-          variant="ghost"
-          size="icon"
-          onClick={toggleHeaderExpansion}
-          className="transition-none"
-        >
-          {isOpened ? <Cancel01Icon /> : <Menu01Icon />}
-        </Button>
-      </div>
-      <AnimatePresence mode="popLayout">
-        {isOpened && (
-          <motion.nav
-            className="flex flex-col justify-between h-full gap-8 px-4 pb-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <div className="flex flex-col gap-6">
-              {links.map((link) => (
-                <TextLink
-                  key={link.label}
-                  className="no-underline text-xl font-normal"
-                  href={"href" in link ? link.href : undefined}
-                  target={"href" in link ? "_blank" : undefined}
-                  to={"to" in link ? link.to : undefined}
-                >
-                  {link.label}
-                </TextLink>
-              ))}
-            </div>
-            <CtaButtonLink
-              href={signinUrl}
-              className={buttonVariants({
-                size: "lg",
-                variant: "outline",
-              })}
-            >
-              登录
-            </CtaButtonLink>
-          </motion.nav>
-        )}
-      </AnimatePresence>
-    </motion.nav>
-  );
-});
-
-const desktopLinks = [
-  {
-    label: "博客",
-    to: "/blog",
-  },
-  {
-    label: "社区",
-    href: discordUrl,
-  },
-  {
-    label: "定价",
-    to: "/pricing",
-  },
-  {
-    label: "文档",
-    href: docsUrl,
-  },
-  {
-    label: "GitHub",
-    href: githubRepoUrl,
-  },
-] as const;
-
-const Desktop = React.forwardRef<
-  HTMLElement,
-  Pick<Props, "appearance" | "className">
->(function Desktop({ appearance, className }, ref) {
-  const { pathname } = useLocation();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isChatBubbleMounted, setIsChatBubbleMounted] = useState(true);
-  const [isIntersecting, setIsIntersecting] = useState(false);
+const DesktopNav = () => {
   const isAuthenticated = useIsAuthenticated();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY < 50) setIsIntersecting(false);
-      setIsScrolled(window.scrollY > 50);
-      setIsChatBubbleMounted(window.scrollY < 300);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const separator = document.querySelector(
-      "[data-magic-animation-separator]",
-    );
-    if (!separator) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.boundingClientRect.bottom < 0) return;
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.1 },
-    );
-
-    observer.observe(separator);
-    return () => observer.disconnect();
-  }, []);
+  const { pathname } = useLocation();
 
   return (
-    <div
-      className={cx(
-        "flex gap-2 items-center transition-opacity",
-        pathname === "/" && isScrolled && !isIntersecting
-          ? "opacity-0 pointer-events-none"
-          : "opacity-100",
-        className,
-      )}
-    >
-      <nav
-        ref={ref}
-        className={cx(
-          "flex rounded-2xl border px-2 py-2 bg-linear-to-b transition-colors gap-2 items-center",
-          appearance === "dark"
-            ? "dark from-[#393939] to-[#121212]"
-            : "from-white to-[#DEDEDE]",
-        )}
-      >
-        {desktopLinks.map((link) => (
+    <div className="hidden md:flex md:items-center md:gap-8">
+      <nav className="flex items-center gap-1">
+        {navLinks.map((link) => (
           <ButtonLink
             key={link.label}
+            to={link.to}
             variant="ghost"
             size="sm"
-            className="font-normal"
-            href={"href" in link ? link.href : undefined}
-            to={"to" in link ? link.to : undefined}
-            activeProps={{
-              className: "font-medium",
-            }}
+            className={cn(
+              "text-gray-600 hover:text-orange-600",
+              pathname === link.to &&
+                "bg-orange-50 text-orange-600 font-medium hover:bg-orange-100 hover:text-orange-700"
+            )}
           >
             {link.label}
           </ButtonLink>
         ))}
+      </nav>
+
+      <div className="flex items-center gap-2 pl-4 border-l border-gray-200">
+        {!isAuthenticated && (
+          <ButtonLink
+            href={signinUrl}
+            variant="outline"
+            size="sm"
+            className="border-orange-200 bg-orange-50 text-orange-700 hover:border-orange-300 hover:bg-orange-100 hover:text-orange-800"
+          >
+            登录
+          </ButtonLink>
+        )}
         {isAuthenticated ? (
           <CtaButtonLink size="sm" href={dashboardUrl}>
             进入工作台
@@ -309,26 +100,59 @@ const Desktop = React.forwardRef<
             免费开始使用
           </CtaButtonLink>
         )}
-      </nav>
-      {isChatBubbleMounted && pathname === "/" && (
-        <div
-          className={cx(
-            "flex transition-opacity",
-            isScrolled ? "opacity-0 pointer-events-none" : "opacity-100",
-          )}
-        >
-          <Bubble
-            typebot="typebot-demo"
-            theme={{
-              position: "static",
-              chatWindow: {
-                maxHeight: "400px",
-                backgroundColor: "#1D1D1D",
-              },
-            }}
-          />
-        </div>
-      )}
+      </div>
     </div>
   );
-});
+};
+
+const MobileNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+  const isAuthenticated = useIsAuthenticated();
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.2 }}
+          className="md:hidden bg-white border-t border-gray-100"
+        >
+          <div className="px-4 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <ButtonLink
+                key={link.label}
+                to={link.to}
+                variant="ghost"
+                className="w-full justify-start text-gray-600 hover:bg-orange-50 hover:text-orange-700"
+                onClick={onClose}
+              >
+                {link.label}
+              </ButtonLink>
+            ))}
+            <div className="pt-4 border-t border-gray-100 mt-4 space-y-2">
+              {!isAuthenticated && (
+                <ButtonLink
+                  href={signinUrl}
+                  variant="outline"
+                  className="w-full border-orange-200 bg-orange-50 text-orange-700 hover:border-orange-300 hover:bg-orange-100 hover:text-orange-800"
+                >
+                  登录
+                </ButtonLink>
+              )}
+              {isAuthenticated ? (
+                <CtaButtonLink href={dashboardUrl} className="w-full">
+                  进入工作台
+                </CtaButtonLink>
+              ) : (
+                <CtaButtonLink href={registerUrl} className="w-full">
+                  免费开始使用
+                </CtaButtonLink>
+              )}
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};

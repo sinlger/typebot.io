@@ -48,23 +48,8 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
-  const { isHeaderOpened } = Route.useSearch();
-  const navigate = useNavigate({ from: Route.fullPath });
   const { cookieConsentStatus, setCookieConsentStatus } =
     useCookieConsentStatus();
-
-  const openHeader = () => {
-    navigate({
-      search: { isHeaderOpened: true },
-      resetScroll: false,
-    });
-  };
-  const closeHeader = () => {
-    navigate({
-      search: { isHeaderOpened: undefined },
-      resetScroll: false,
-    });
-  };
 
   useTrackPageViewQuery({
     enabled:
@@ -73,20 +58,17 @@ function RootComponent() {
   });
 
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <head>
         <HeadContent />
       </head>
-      <body>
-        <div className="isolate flex flex-col items-stretch">
-          <div className="fixed z-10 top-4 md:bottom-12 md:top-auto w-full">
-            <Header
-              onOpen={openHeader}
-              onClose={closeHeader}
-              isOpened={isHeaderOpened}
-            />
-          </div>
-          <Outlet />
+      <body className="min-h-screen bg-white">
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-1 pt-16">
+            <Outlet />
+          </main>
+          <Footer />
           <CookieConsentBot
             isOpen={cookieConsentStatus === "need-consent"}
             openDelay={HERO_ANIMATION_DELAY}
@@ -95,7 +77,6 @@ function RootComponent() {
               setCookieConsentStatus(response);
             }}
           />
-          <Footer />
         </div>
         <Scripts />
       </body>
