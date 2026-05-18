@@ -59,8 +59,7 @@ export const SignInForm = ({ defaultEmail, className }: Props) => {
     if (authError === "ip-banned") {
       toast({
         type: "info",
-        description:
-          "Your account has suspicious activity and is being reviewed by our team. Feel free to contact us.",
+        description: t("auth.signinErrorToast.accountReview"),
       });
     }
   }, [authError]);
@@ -88,12 +87,12 @@ export const SignInForm = ({ defaultEmail, className }: Props) => {
           });
         else if (response.error.includes("email-not-legit"))
           toast({
-            description: "Please use a valid email address",
+            description: t("auth.signinErrorToast.invalidEmail"),
           });
         else
           toast({
             description: t("errorMessage"),
-            details: "Check server logs to see relevent error message.",
+            details: t("auth.signinErrorToast.serverLogs"),
           });
       } else {
         setIsMagicCodeSent(true);
@@ -101,7 +100,7 @@ export const SignInForm = ({ defaultEmail, className }: Props) => {
     } catch (_e) {
       toast({
         type: "info",
-        description: "An error occured while signing in",
+        description: t("auth.signinErrorToast.generic"),
       });
     }
     setAuthLoading(false);
@@ -176,7 +175,7 @@ export const SignInForm = ({ defaultEmail, className }: Props) => {
             </div>
           </Alert.Root>
           <Field.Root>
-            <Field.Label>Login code:</Field.Label>
+            <Field.Label>{t("auth.magicCode.label")}</Field.Label>
             <Otp.Root maxLength={6} onComplete={redirectToMagicLink}>
               <Otp.Group>
                 <Otp.Slot index={0} />
