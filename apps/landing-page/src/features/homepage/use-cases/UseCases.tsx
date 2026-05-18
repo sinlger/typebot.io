@@ -15,41 +15,41 @@ import supportAndProductBuilderSrc from "./assets/support-builder.png";
 
 const useCases = [
   {
-    label: "Marketing",
+    label: "营销",
     images: {
       builder: {
         src: marketingBuilderSrc,
-        alt: "An example of a marketing bot being built in Typebot",
+        alt: "在 Typebot 中搭建营销机器人示例",
       },
       bot: {
         src: marketingBotSrc,
-        alt: "A WhatsApp screenshot of a marketing bot",
+        alt: "营销机器人在 WhatsApp 中的示例截图",
       },
     },
   },
   {
-    label: "Support & Product",
+    label: "客服与产品",
     images: {
       builder: {
         src: supportAndProductBuilderSrc,
-        alt: "An example of a support bot being built in Typebot",
+        alt: "在 Typebot 中搭建客服机器人示例",
       },
       bot: {
         src: supportAndProductBotSrc,
-        alt: "A web widget screenshot of a support bot",
+        alt: "客服机器人网页组件示例截图",
       },
     },
   },
   {
-    label: "Sales",
+    label: "销售",
     images: {
       builder: {
         src: salesBuilderSrc,
-        alt: "An example of a sales bot being built in Typebot",
+        alt: "在 Typebot 中搭建销售机器人示例",
       },
       bot: {
         src: salesBotSrc,
-        alt: "A WhatsApp screenshot of a automated sales bot",
+        alt: "自动化销售机器人在 WhatsApp 中的示例截图",
       },
     },
   },
@@ -211,21 +211,14 @@ const UsecaseTitle = ({
 export const Cta = () => (
   <div className="flex flex-col gap-6 items-center">
     <p className="text-balance max-w-4xl md:text-center text-lg">
-      Picture{" "}
-      <span className="font-medium">
-        a bot that goes beyond answering questions
-      </span>
-      : it builds relationships, shares content, sparks conversations, and
-      reflects your business's personality and values. With over 3 billion
-      people on messaging apps,{" "}
-      <span className="font-medium">
-        it's time to connect with your customers where they are
-      </span>
-      .
+      想象一个{" "}
+      <span className="font-medium">不止能回答问题</span>的机器人：它能建立关系、分享内容、引发对话，
+      并体现你品牌的个性与价值观。如今有超过 30 亿人活跃在各类聊天应用上，{" "}
+      <span className="font-medium">是时候在客户所在的地方与他们建立连接</span>。
     </p>
     <div className="w-full md:w-auto flex flex-col md:flex-row gap-4">
       <CtaButtonLink size="lg" href={registerUrl}>
-        Get started free
+        免费开始
       </CtaButtonLink>
     </div>
   </div>

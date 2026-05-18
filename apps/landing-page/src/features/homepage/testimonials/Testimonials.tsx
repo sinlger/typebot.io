@@ -13,165 +13,150 @@ import theoPictureSrc from "./assets/theo.jpeg";
 
 const testimonials = [
   {
-    name: "Steve de Jong",
+    name: "章**",
     provider: "email",
     avatarSrc: stevePictureSrc,
-    role: "CEO at Stillio",
+    role: "首席执行官",
     content: (
       <>
-        We built our own onboarding template last December for all signups for
-        Stillio and it works fantastic and reliably.
+        去年 12 月，我们为 Stillio 的所有新注册用户做了自己的引导模板，效果非常棒且稳定可靠。
         <br />
         <br />
-        We send the collected data to Encharge (email drip campaigns) and
-        Pipedrive (CRM).
+        我们把收集的数据发送到 Encharge 和 Pipedrive（CRM）。
         <br />
         <br />
-        We are now working on personalizing the email templates based on the
-        answers (user industry and role) given in the typebot. We are big fan!
+        现在我们正在根据 Typebot 中的回答（用户行业与角色）来个性化邮件模板。我们是忠实粉丝！
       </>
     ),
   },
   {
-    name: "Goran Milic",
-    role: "General Manager, Beefii",
+    name: "民**",
+    role: "总经理",
     provider: "email",
     content: (
       <>
-        I used Typebot at my company and was impressed with how it cut our
-        customer service workload in half. I was able to create a fully
-        functional chatbot in minutes. <br />
-        <br /> You can create a bot to answer frequently asked questions about
-        your business or create a bot that helps promote your business on social
-        media or any other platform.,
+        我在公司使用 Typebot，惊讶地发现它把客服工作量减少了一半。我几分钟内就搭建出了一个完全可用的聊天机器人。
+        <br />
+        <br />
+        你可以创建一个机器人来回答业务中常见问题，或创建一个机器人帮助你在社交媒体或其他平台上推广业务。
       </>
     ),
   },
   {
-    name: "Kurnia Kwik",
-    role: "Founder at DigitalPointer.ID",
+    name: "可**",
+    role: "创始人",
     provider: "email",
     avatarSrc: kurniaPictureSrc,
     content: (
       <>
-        I have several chatbot builders, but Typebot is the one I use the most.
-        It is simple to construct and very intuitive. <br />
-        Integration with third-party applications is simple, and you can create
-        the most sophisticated bots with its simplicity.
+        我用过好几个聊天机器人构建器，但 Typebot 是我用得最多的。搭建简单直观。
+        <br />
+        与第三方应用集成也很轻松，而且你可以用它的简洁性打造最复杂的机器人。
       </>
     ),
   },
   {
-    name: "Laszlo Csömör",
-    role: "Digital Marketing Expert",
+    name: "陈**",
+    role: "数字营销专家",
     provider: "email",
     avatarSrc: laszloPictureSrc,
     content: (
       <>
-        Typebot is one of the best chatbot builders with its intelligent
-        features and drag-and-drop simplicity. Its UI/UX is an earthly
-        paradise...
+        Typebot 是最棒的聊天机器人构建器之一：智能功能 + 拖拽式搭建，让一切变得简单。它的 UI/UX 简直像人间天堂……
         <br />
-        What&apos;s even more important is the person who stands behind it. He
-        guarantees that the platform will work and progress for a long time.
+        更重要的是背后的人。他能保证平台长期稳定迭代。
       </>
     ),
   },
   {
-    name: "Oscar",
-    role: "CEO",
+    name: "欧*",
+    role: "首席执行官",
     provider: "capterra",
     avatarSrc: oscarPictureSrc,
     content:
-      "Within 5 minutes of signing up you can already have your bot running thanks to the templates it comes with. I have used many tools to make bots but none as simple, easy and powerful as Typebot.",
+      "注册后 5 分钟内，你就能借助自带模板让机器人跑起来。我用过很多做机器人的工具，但没有一个像 Typebot 这样简单、易用又强大。",
   },
   {
-    name: "Julien Muratot",
-    role: "Growth Manager @ Hornetwork",
+    name: "米**",
+    role: "增长经理",
     avatarSrc: julienPictureSrc,
     provider: "email",
     content:
-      "I run Google ads all year long on our landing page that contains a typebot. I saw a 2x increase on our conversation rate compared to our old WordPress form.",
+      "我们全年都在含有 Typebot 的落地页上投放 Google 广告。与旧的 WordPress 表单相比，我们的对话转化率提升了 2 倍。",
   },
   {
-    name: "Joshua Lim",
-    role: "Growth Strategist @ Socialhackrs Media",
+    name: "刘*",
+    role: "增长策略师",
     avatarSrc: joshuaPictureSrc,
     provider: "email",
     content:
-      "I upgraded my typeforms to typebots and saw a conversion rate increase from 14% to 43% on my marketing campaigns. I noticed the improvement on day one. That was a game-changer.",
+      "我把 Typeform 升级为 Typebot，在营销活动中的转化率从 14% 提升到 43%。第一天就能感觉到提升，彻底改变了游戏规则。",
   },
   {
-    name: "Mario Barretta",
-    role: "Customer Care Manager",
+    name: "波**",
+    role: "客户服务经理",
     provider: "email",
     content: (
       <>
-        Thanks to typebot I can finally make site forms much more modern and I
-        can collect information that I would have missed before. Also ,thanks to
-        Baptiste, the service is always evolving and has excellent assistance
-        not only in solving but also in listening to suggestions and putting it
-        into action.
+        多亏了 Typebot，我终于可以把网站表单做得更现代，并收集到以前会遗漏的信息。另外也要感谢 Baptiste：服务一直在进化，支持非常到位，
+        不仅帮忙解决问题，还会倾听建议并落地。
         <br />
         <br />
-        Thank you thank you and thank you again .
+        谢谢、谢谢、再谢谢。
       </>
     ),
   },
   {
-    name: "Theo Marechal",
+    name: "Marechal*",
     provider: "productHunt",
     avatarSrc: theoPictureSrc,
-    role: "Nocode expert and content creator",
+    role: "无代码专家 / 内容创作者",
     content: (
       <>
-        Amazing product! I&apos;m using Typebot for everything when it&apos;s
-        about talking with customers.
+        太棒的产品！只要涉及和客户对话，我几乎什么都用 Typebot。
         <br />
         <br />
-        What&apos;s amazing with Typebot is that it makes a &quot;chat interface
-        effect&quot; without the hassle of being behind my computer all day
-        responding to customers. Highly recommend !
+        Typebot 最厉害的是，它能轻松做出“聊天界面”的感觉，而你不用整天守在电脑前回复客户。强烈推荐！
       </>
     ),
   },
   {
-    name: "Nicolai Grut",
-    role: "CEO @ EcommerceNotebook.com",
+    name: "果**",
+    role: "EcommerceNotebook.com 首席执行官",
     avatarSrc: nicolaiPictureSrc,
     provider: "email",
     content:
-      "I am really loving using Typebot! So good. I have used all the top bots and yours is definitely the most user friendly, and yet still so powerful.",
+      "我真的很喜欢用 Typebot！太棒了。我用过所有顶级机器人产品，你们的确是最易用的，同时依然非常强大。",
   },
   {
-    name: "Lucas Barp",
+    name: "Alpha*",
     provider: "email",
     avatarSrc: lucasPictureSrc,
-    role: "Founder at Barp Digital",
+    role: "Barp Digital 创始人",
     content:
-      "The result of your work is incredible and can make life easier for many people.",
+      "你的成果令人难以置信，能让很多人的生活更轻松。",
   },
   {
-    name: "Igor T.",
-    role: "CTO",
+    name: "T*",
+    role: "首席技术官",
     provider: "capterra",
     content:
-      "Nice work. The developer promptly makes changes, which is quite rare. There was a suggestion for improvement and improvement, in 2 days it was implemented. Amazing! Good luck and thanks a lot",
+      "做得很好。开发者会迅速响应并做出改动，这非常罕见。我们提了一个改进建议，两天内就实现了。太惊艳了！祝你好运，也非常感谢。",
   },
   {
-    name: "_Invictuz",
+    name: "Invictuz*",
     provider: "reddit",
     avatarSrc: invictuzPictureSrc,
     content:
-      "This is the sickest open-source project I've ever seen and demoed. The use case is so cool and modern and I can't believe how easy this is to get started using. The feature richness and polish in this project is incredible, it feel like a mature product. Unbelievable that this was built by one person. This is better than the demos of chatbot builders I've seen from full-fledged companies. I'm going to learn Typescript so that I can contribute to this someday. Mind-blowing stuff...",
+      "这是我见过并体验过最炸裂的开源项目。使用场景又酷又现代，我不敢相信上手竟然这么容易。功能丰富、打磨精致，感觉就像成熟产品。难以置信这是一个人做出来的。比我看过那些大公司聊天机器人构建器的演示还要好。我准备去学 TypeScript，以后也想贡献代码。太震撼了……",
   },
   {
-    name: "Abhay Kulkarni",
+    name: "Kulkarni*",
     provider: "productHunt",
     avatarSrc: abhayPictureSrc,
-    role: "Founder at Webisharp",
+    role: "Webisharp 创始人",
     content:
-      "Using this tool for the last 2 hours & built a full lead capture bot. Pretty good experience till now. @baptiste_arnaud All the best for future :)",
+      "过去两小时一直在用这个工具，做出了一个完整的线索收集机器人。目前体验很不错。@baptiste_arnaud 祝你以后一切顺利 :)",
   },
 ];
 
@@ -179,8 +164,8 @@ export const Testimonials = () => {
   return (
     <div className="flex flex-col gap-8 max-w-3xl items-center w-full">
       <div className="flex flex-col gap-4 md:text-center">
-        <h2>Oh my Bot!</h2>
-        <p>The team likes it, customers enjoy it, and the brand stands out.</p>
+        <h2>用户这样评价 Typebot</h2>
+        <p>团队更高效，客户更满意，品牌更突出。</p>
       </div>
       <div className="flex flex-col rounded-2xl overflow-y-auto max-h-[50vh] md:max-h-[70vh] bg-white border relative isolate w-full">
         <div

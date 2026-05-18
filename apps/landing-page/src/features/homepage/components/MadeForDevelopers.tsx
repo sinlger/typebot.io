@@ -10,19 +10,19 @@ import { githubRepoUrl } from "../../../constants";
 const data = [
   {
     Icon: RulerIcon,
-    text: "100% open source. No vendor-locking",
+    text: "100% 开源，无厂商锁定",
   },
   {
     Icon: SourceCodeIcon,
-    text: "Easy-to-use APIs for quick implementation",
+    text: "易用的 API，快速接入",
   },
   {
     Icon: SparklesIcon,
-    text: "Multiple generative AI providers",
+    text: "支持多种AI 服务商",
   },
   {
     Icon: ZapIcon,
-    text: "Fast, reliable, and scalable",
+    text: "快速、可靠、可扩展",
   },
 ];
 
@@ -30,11 +30,11 @@ export const MadeForDevelopers = () => {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col md:items-center gap-4">
-        <h2>Built for everyone, made for developers</h2>
+        <h2>为所有人打造，为开发者而生</h2>
         <div className="flex gap-3 items-center">
           <GithubIcon className="size-4" />
           <TextLink target="_blank" href={githubRepoUrl} hideExternalIcon>
-            See GitHub repository
+            查看 GitHub 仓库
           </TextLink>
         </div>
       </div>

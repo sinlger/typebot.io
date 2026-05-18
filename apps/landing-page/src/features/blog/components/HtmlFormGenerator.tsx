@@ -80,7 +80,7 @@ export const HtmlFormGenerator = () => {
       html += "  </div>\n";
     });
     html +=
-      '  <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Submit</button>\n';
+      '  <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">提交</button>\n';
     html += "</form>";
     return html;
   };
@@ -89,28 +89,28 @@ export const HtmlFormGenerator = () => {
     <div className="px-4 -mx-[calc((100vw-min(100vw,42rem))/2)] py-12">
       <div className="flex flex-col md:flex-row items-stretch md:items-start gap-4 max-w-6xl mx-auto">
         <Card className="p-4">
-          <h2 className="text-lg font-semibold mb-4">Add input</h2>
+          <h2 className="text-lg font-semibold mb-4">添加输入项</h2>
           <ComponentsPalette
             items={[
-              { type: "text", label: "Text Input" },
-              { type: "email", label: "Email Input" },
-              { type: "phone", label: "Phone Input" },
-              { type: "textarea", label: "Text Area" },
+              { type: "text", label: "文本输入" },
+              { type: "email", label: "邮箱输入" },
+              { type: "phone", label: "手机号输入" },
+              { type: "textarea", label: "多行文本" },
               {
                 type: "select",
-                label: "Select Dropdown",
-                options: ["Option 1", "Option 2", "Option 3"],
+                label: "下拉选择",
+                options: ["选项 1", "选项 2", "选项 3"],
               },
-              { type: "checkbox", label: "Checkbox" },
+              { type: "checkbox", label: "复选框" },
               {
                 type: "radio",
-                label: "Radio Buttons",
-                options: ["Option 1", "Option 2", "Option 3"],
+                label: "单选按钮",
+                options: ["选项 1", "选项 2", "选项 3"],
               },
               {
                 type: "multicheck",
-                label: "Multiple Checkboxes",
-                options: ["Option 1", "Option 2", "Option 3"],
+                label: "多选复选框",
+                options: ["选项 1", "选项 2", "选项 3"],
               },
             ]}
             onAddElement={addElement}
@@ -118,17 +118,17 @@ export const HtmlFormGenerator = () => {
         </Card>
         <Card className="p-4 flex-1">
           <div className="flex justify-between items-center">
-            <h2 className="text-lg font-semibold">Layout</h2>
+            <h2 className="text-lg font-semibold">布局</h2>
             <div className="flex flex-col md:flex-row gap-2">
               <Button
                 onClick={() => setShowLivePreview(true)}
                 variant="secondary"
                 size="sm"
               >
-                Live Preview
+                实时预览
               </Button>
               <Button onClick={() => setShowExportModal(true)} size="sm">
-                Generate HTML
+                生成 HTML
               </Button>
             </div>
           </div>
@@ -191,7 +191,7 @@ const ExportModal = ({
   return (
     <Dialog.Root isOpen={isOpen} onClose={onClose}>
       <Dialog.Popup>
-        <Dialog.Title className="text-2xl">Generated HTML</Dialog.Title>
+        <Dialog.Title className="text-2xl">生成的 HTML</Dialog.Title>
         <Dialog.CloseButton />
         <pre className="bg-gray-100 p-4 rounded-md overflow-auto max-h-96 text-sm">
           {html}
@@ -201,7 +201,7 @@ const ExportModal = ({
           variant="secondary"
           className="w-full"
         >
-          Copy to Clipboard
+          复制到剪贴板
         </Button>
       </Dialog.Popup>
     </Dialog.Root>
@@ -259,9 +259,9 @@ const FormCanvas = ({
         ))}
         {elements.length === 0 && (
           <div className="text-center py-16 text-gray-500 border-2 border-dashed rounded-xl">
-            <p className="text-lg mb-2">Your form is empty</p>
+            <p className="text-lg mb-2">表单为空</p>
             <p className="text-sm">
-              Click on components from the left panel to add them here
+              点击左侧面板的组件，将其添加到这里
             </p>
           </div>
         )}
@@ -301,7 +301,7 @@ const FormElement = ({
         variant="ghost"
         size="xs"
         className="absolute top-2 right-2 text-gray-400 hover:text-red-500"
-        title="Remove element"
+        title="移除元素"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -314,7 +314,7 @@ const FormElement = ({
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <title>Html Form Generator</title>
+          <title>HTML 表单生成器</title>
           <path d="M18 6 6 18" />
           <path d="m6 6 12 12" />
         </svg>
@@ -371,7 +371,7 @@ const PropertiesPanel = ({
     return (
       <div className="w-full">
         <p className="text-foreground/60">
-          Select an element to edit its properties
+          选择一个元素以编辑其属性
         </p>
       </div>
     );
@@ -392,7 +392,7 @@ const PropertiesPanel = ({
   const addOption = () => {
     const newOptions = [
       ...(selectedElement.options || []),
-      `Option ${(selectedElement.options?.length || 0) + 1}`,
+      `选项 ${(selectedElement.options?.length || 0) + 1}`,
     ];
     onUpdate({ options: newOptions });
   };
@@ -405,7 +405,7 @@ const PropertiesPanel = ({
 
   return (
     <div className="w-full">
-      <h2 className="text-lg font-semibold mb-4">Properties</h2>
+      <h2 className="text-lg font-semibold mb-4">属性</h2>
       <div className="space-y-4">
         {/* label Field */}
         <div>
@@ -413,7 +413,7 @@ const PropertiesPanel = ({
             htmlFor={labelInputId}
             className="block text-sm font-medium text-foreground/90"
           >
-            Label
+            标签
           </label>
           <Input
             id={labelInputId}
@@ -431,7 +431,7 @@ const PropertiesPanel = ({
               htmlFor={placeholderInputId}
               className="block text-sm font-medium text-foreground/90"
             >
-              Placeholder
+              占位符
             </label>
             <Input
               id={placeholderInputId}
@@ -456,14 +456,14 @@ const PropertiesPanel = ({
             htmlFor={requiredInputId}
             className="text-sm font-medium text-foreground/90"
           >
-            Required
+            必填
           </label>
         </div>
 
         {/* Width Selection */}
         <div>
           <span className="block text-sm font-medium mb-1 text-foreground/90">
-            Width
+            宽度
           </span>
           <Select.Root
             items={WIDTH_OPTIONS}
@@ -493,7 +493,7 @@ const PropertiesPanel = ({
           selectedElement.type === "multicheck") && (
           <div>
             <span className="block text-sm font-medium mb-1 text-foreground/90">
-              Options
+              选项
             </span>
             <div className="space-y-2">
               {optionItems.map((option, index) => (
@@ -521,7 +521,7 @@ const PropertiesPanel = ({
                 size="sm"
                 className="w-full"
               >
-                Add Option
+                添加选项
               </Button>
             </div>
           </div>
@@ -544,7 +544,7 @@ const LivePreviewModal = ({
   return (
     <Dialog.Root isOpen={isOpened} onClose={onClose}>
       <Dialog.Popup>
-        <Dialog.Title className="text-2xl mb-8">Live Form Preview</Dialog.Title>
+        <Dialog.Title className="text-2xl mb-8">表单实时预览</Dialog.Title>
         <Dialog.CloseButton />
 
         <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
@@ -648,7 +648,7 @@ const LivePreviewModal = ({
             );
           })}
           <Button className="w-full" onClick={(e) => e.preventDefault()}>
-            Submit
+            提交
           </Button>
         </form>
       </Dialog.Popup>

@@ -13,15 +13,14 @@ export const TemplatesGrid = ({ templates, onClearFilters }: Props) => {
       <div className="flex flex-col items-center justify-center py-16 text-center w-full gap-4">
         <div className="text-5xl">🔍</div>
         <div className="flex flex-col gap-2">
-          <p className="text-lg font-medium">No templates found</p>
+          <p className="text-lg font-medium">未找到模板</p>
           <p className="text-muted-foreground text-pretty">
-            Try adjusting your search or filters to find what you're looking
-            for.
+            试试调整搜索关键词或筛选条件，以找到你想要的内容。
           </p>
         </div>
         {onClearFilters && (
           <Button variant="ghost" onClick={onClearFilters} className="mt-2">
-            Clear all filters
+            清除所有筛选
           </Button>
         )}
       </div>

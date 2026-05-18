@@ -27,42 +27,42 @@ const bgImageSrcs = [
 const cards = [
   {
     Icon: CodeIcon,
-    title: "Hidden fields",
+    title: "隐藏字段",
     description:
-      "Include data in your form URL to segment your user and use its data directly in your form.",
+      "在表单 URL 中携带数据，用于分组用户，并可在表单中直接使用这些数据。",
     rotateCoeff: -10,
   },
   {
     Icon: UsersIcon,
-    title: "Team collaboration",
+    title: "团队协作",
     description:
-      "Sharing is caring: invite your teammates to work on your typebots with you",
+      "一起协作：邀请队友与你共同编辑 Typebot。",
     rotateCoeff: 12,
   },
   {
     Icon: Link02Icon,
-    title: "Link to sub typebots",
+    title: "链接到子流程",
     description:
-      "For the in-depth analytics lovers who want to see flow with drop-off rate etc.",
+      "适合需要深度分析的人：查看流程的流失率等数据。",
     rotateCoeff: -7,
   },
   {
     Icon: DocumentCodeIcon,
-    title: "Custom code",
-    description: "Customize everything with your own Javascript & CSS Code",
+    title: "自定义代码",
+    description: "用你自己的 JavaScript 与 CSS 代码定制一切。",
     rotateCoeff: -2,
   },
   {
     Icon: ZapIcon,
-    title: "Custom domain",
-    description: "Connect your typebot to the custom URL of your choice",
+    title: "自定义域名",
+    description: "将 Typebot 绑定到你选择的自定义网址。",
     rotateCoeff: 2,
   },
   {
     Icon: DatabaseIcon,
-    title: "Integration platforms",
+    title: "集成平台",
     description:
-      "HTTP requests, OpenAI, Google Sheets, Google Analytics, Meta Pixel, and a lot more",
+      "HTTP 请求、OpenAI、Google Sheets、Google Analytics、Meta Pixel 等等。",
     rotateCoeff: -4,
   },
 ] as const;
@@ -93,14 +93,14 @@ export const AllFeatures = () => {
       <div className="md:overflow-visible flex flex-col items-center md:h-all-features-sticky-container">
         <div className="md:sticky flex flex-col md:justify-between items-center max-w-xl shrink-0 top-(--padding-top) md:h-(--header-height) gap-6 md:gap-0">
           <h2 className="px-4 text-center">
-            All the features you need to hack bots building
+            构建聊天机器人的所有必备功能
           </h2>
           <CtaButtonLink
             size="lg"
             className="hidden md:inline-flex"
             href={registerUrl}
           >
-            Create a bot for free
+            免费创建机器人
           </CtaButtonLink>
         </div>
 
@@ -138,7 +138,7 @@ export const AllFeatures = () => {
       </div>
       <div className="md:hidden px-4">
         <CtaButtonLink size="lg" href={registerUrl}>
-          Create a bot for free
+          免费创建机器人
         </CtaButtonLink>
       </div>
     </div>

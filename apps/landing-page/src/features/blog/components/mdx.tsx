@@ -111,7 +111,7 @@ const components = {
   ),
   Cta: ({
     highlight,
-    buttonLabel = "Create a typebot",
+    buttonLabel = "创建 Typebot",
     children,
   }: {
     highlight?: "default";
@@ -124,7 +124,7 @@ const components = {
     </Cta>
   ),
   Typebot: (props: any) => (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>加载中...</div>}>
       <Typebot
         style={{
           borderRadius: "0.375rem",
@@ -140,7 +140,7 @@ const components = {
     <div className="w-full">
       <div className="relative isolate pb-[64.63195691202873%] h-0 w-full">
         <iframe
-          title="Youtube video"
+          title="YouTube 视频"
           src={`https://www.youtube.com/embed/${id}`}
           allowFullScreen
           className="absolute inset-0 size-full rounded-xl"

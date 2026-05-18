@@ -176,7 +176,7 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             <CheckedTableCell />
           </TableRow>
           <TableRow>
-            <TableCell>WhatsApp integration</TableCell>
+            <TableCell>WhatsApp 集成</TableCell>
             <TableCell />
             <TableCell />
             <CheckedTableCell />

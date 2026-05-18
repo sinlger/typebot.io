@@ -4,16 +4,19 @@ import { Label } from "@typebot.io/ui/components/Label";
 import { Popover } from "@typebot.io/ui/components/Popover";
 
 type FilterCategory = {
+  displayLabel: string;
   label: string;
   options: readonly string[];
 };
 
 const filterCategories: FilterCategory[] = [
   {
+    displayLabel: "使用场景",
     label: "Use Case",
     options: useCases,
   },
   {
+    displayLabel: "功能特性",
     label: "Features",
     options: features,
   },
@@ -46,7 +49,7 @@ export const TemplatesFilterSidebar = ({
                 size="sm"
                 className="gap-2"
               >
-                <span>{category.label}</span>
+                <span>{category.displayLabel}</span>
                 {selectedCount > 0 && (
                   <span className="flex items-center justify-center size-5 text-xs bg-primary text-primary-foreground rounded-full">
                     {selectedCount}
@@ -58,7 +61,7 @@ export const TemplatesFilterSidebar = ({
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <title>Templates Filter Sidebar</title>
+                  <title>模板筛选侧边栏</title>
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -95,11 +98,11 @@ export const TemplatesFilterSidebar = ({
 
   return (
     <aside className="hidden md:flex flex-col gap-4 w-56 shrink-0 bg-background rounded-md p-4 border h-fit">
-      <h2 className="text-lg font-semibold">Filters</h2>
+      <h2 className="text-lg font-semibold">筛选</h2>
       {filterCategories.map((category) => (
         <div key={category.label} className="flex flex-col gap-2">
           <h3 className="text-sm font-medium text-muted-foreground">
-            {category.label}
+            {category.displayLabel}
           </h3>
           <div className="flex flex-col gap-1">
             {category.options.map((option) => {

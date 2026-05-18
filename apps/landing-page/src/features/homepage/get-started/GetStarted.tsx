@@ -7,35 +7,35 @@ const instructions = [
   {
     image: {
       src: signUpButtonSrc,
-      alt: "A button in the center with label 'Sign up'",
+      alt: "居中显示的“注册”按钮",
     },
-    title: "Step 1",
+    title: "步骤 1",
     description:
-      "Create your account and choose your plan—you can sign up for a risk-free trial",
+      "创建账号并选择套餐，可先免费试用，无风险体验",
   },
   {
     image: {
       src: editorMockupSrc,
-      alt: "A mockup of a chatbot editor interface",
+      alt: "聊天机器人编辑器界面示意图",
     },
-    title: "Step 2",
-    description: "Pick a template from our library or start from scratch.",
+    title: "步骤 2",
+    description: "从模板库选择一个模板，或从零开始创建。",
   },
   {
     image: {
       src: publishClickSrc,
-      alt: "A mouse over a 'Publish' button",
+      alt: "鼠标悬停在“发布”按钮上",
     },
-    title: "Step 3",
+    title: "步骤 3",
     description:
-      "Build and test your chat in real-time. Ready to launch? Just click publish!",
+      "实时搭建并测试对话流程。准备上线？点击发布即可！",
   },
 ];
 
 export const GetStarted = () => {
   return (
     <div className="flex flex-col gap-8">
-      <h2>Get started with Typebot</h2>
+      <h2>快速开始使用 Typebot</h2>
       <div className="flex flex-col md:flex-row max-w-7xl gap-2">
         {instructions.map((instruction) => (
           <InstructionCard

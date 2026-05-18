@@ -9,7 +9,7 @@ type Props = {
 
 export const TemplateCard = ({ template }: Props) => {
   const slug = template.slug;
-  const title = `${template.name} Chatbot Template`;
+  const title = `${template.name} 聊天机器人模板`;
 
   return (
     <Link to="/templates/$slug" params={{ slug }}>

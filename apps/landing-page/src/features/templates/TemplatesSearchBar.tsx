@@ -12,7 +12,7 @@ export const TemplatesSearchBar = ({ value, onChange }: Props) => {
       <Search01Icon className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-muted-foreground z-10 pointer-events-none" />
       <Input
         type="text"
-        placeholder="Search templates..."
+        placeholder="搜索模板..."
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className="w-full pl-12 pr-4 rounded-xl bg-white"

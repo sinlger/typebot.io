@@ -7,7 +7,7 @@ import { Card } from "@/components/Card";
 import { whatsAppPricingData } from "../data/whatsAppPricingData";
 
 const countries = [
-  { label: "Select a country", value: null },
+  { label: "选择国家/地区", value: null },
   ...whatsAppPricingData.markets.map((market) => ({
     label: market.market,
     value: market.market,
@@ -15,15 +15,15 @@ const countries = [
 ];
 
 const messageTypes = [
-  { label: "Select a type", value: null },
-  { label: "Marketing", value: "marketing" },
-  { label: "Utility", value: "utility" },
-  { label: "Authentication", value: "authentication" },
+  { label: "选择类型", value: null },
+  { label: "营销", value: "marketing" },
+  { label: "通知", value: "utility" },
+  { label: "身份验证", value: "authentication" },
   {
-    label: "Authentication International",
+    label: "身份验证（国际）",
     value: "authenticationInternational",
   },
-  { label: "Service", value: "service" },
+  { label: "服务", value: "service" },
 ];
 
 export const WhatsAppPricingCalculator = () => {
@@ -59,7 +59,7 @@ export const WhatsAppPricingCalculator = () => {
   return (
     <Card className="not-prose">
       <Field.Root>
-        <Field.Label>Country</Field.Label>
+        <Field.Label>国家/地区</Field.Label>
         <Select.Root
           items={countries}
           value={selectedCountry}
@@ -80,7 +80,7 @@ export const WhatsAppPricingCalculator = () => {
         </Select.Root>
       </Field.Root>
       <Field.Root>
-        <Field.Label>Message type</Field.Label>
+        <Field.Label>消息类型</Field.Label>
         <Select.Root
           items={messageTypes}
           onValueChange={setSelectedMessageType}
@@ -108,7 +108,7 @@ export const WhatsAppPricingCalculator = () => {
         step={100}
         onValueChange={(value) => setTotalMessages(value ?? undefined)}
       >
-        <label htmlFor={numberFieldId}>Total messages</label>
+        <label htmlFor={numberFieldId}>消息总数</label>
         <NumberField.Group>
           <NumberField.Decrement variant="secondary" />
           <NumberField.Input placeholder="0" className="z-10" />
@@ -117,7 +117,7 @@ export const WhatsAppPricingCalculator = () => {
       </NumberField.Root>
       {priceResult && (
         <p className="font-medium">
-          Estimated Price:{" "}
+          预估费用：{" "}
           <span className="text-orange-900">{priceResult}</span>
         </p>
       )}

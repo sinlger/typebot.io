@@ -14,69 +14,69 @@ import type { DepartmentCardData } from "./types";
 
 const departments = [
   {
-    title: "Marketing",
-    sub: "Let your bot drive the conversation and turn leads into customers.",
+    title: "营销",
+    sub: "让机器人主导对话，把线索转化为客户。",
     bulletPoints: [
       {
-        main: "Lead scoring",
-        sub: "Typebot asks questions while automatically scoring and prioritizing new leads.",
+        main: "线索评分",
+        sub: "Typebot 通过提问自动给新线索打分并排序。",
       },
       {
-        main: "Insights",
-        sub: "Engaging quizzes will help you collect visitor emails and provide valuable insights on their needs.",
+        main: "洞察",
+        sub: "用互动测验收集访客邮箱，并了解他们的真实需求。",
       },
       {
-        main: "Lead magnet",
-        sub: "Provide access to valuable content in return for email addresses.",
+        main: "内容引流",
+        sub: "用优质内容换取邮箱地址。",
       },
     ],
     image: {
       src: marketingSrc,
-      alt: "marketing illustration",
+      alt: "营销插画",
     },
   },
   {
-    title: "Support & Product",
-    sub: "Deliver 24/7 multichannel support and make your customers happy.",
+    title: "客服与产品",
+    sub: "提供 7×24 小时多渠道支持，让客户更满意。",
     bulletPoints: [
       {
-        main: "Customer support",
-        sub: "Qualify user requests and redirect them to the right resources.",
+        main: "客户支持",
+        sub: "对用户诉求进行分类，并引导到合适的资源。",
       },
       {
-        main: "NPS Survey",
-        sub: "Easily collect user feedback on your product.",
+        main: "NPS 调研",
+        sub: "轻松收集用户对产品的反馈。",
       },
       {
-        main: "Customer onboarding",
-        sub: "Your bot starts engaging immediately after registration to qualify new customers.",
+        main: "客户引导",
+        sub: "用户注册后立即开始引导与互动，帮助筛选新客户。",
       },
     ],
     image: {
       src: productSrc,
-      alt: "Product illustration",
+      alt: "产品插画",
     },
   },
   {
-    title: "Sales",
-    sub: "Boost meetings and show rates with highly interested leads",
+    title: "销售",
+    sub: "用高意向线索提升预约量与到会率",
     bulletPoints: [
       {
-        main: "Prospect qualification",
-        sub: "Your bot scores leads based on your sales criteria and addresses FAQs 24/7.",
+        main: "商机筛选",
+        sub: "根据你的销售标准为线索打分，并 7×24 小时解答常见问题。",
       },
       {
-        main: "Meetings",
-        sub: "Automate appointment scheduling to simplify the process for customers.",
+        main: "预约会议",
+        sub: "自动化安排日程，让预约更简单。",
       },
       {
-        main: "Lead nurturing",
-        sub: "Send instant follow-ups and other communications to keep leads engaged until they’re ready to purchase.",
+        main: "线索培育",
+        sub: "即时跟进与持续触达，保持线索活跃直到准备购买。",
       },
     ],
     image: {
       src: salesSrc,
-      alt: "sales illustration",
+      alt: "销售插画",
     },
   },
 ] as const satisfies DepartmentCardData[];
@@ -95,9 +95,9 @@ export const ForEveryDepartment = () => {
     <>
       <div className="w-full gap-12 flex flex-col max-w-7xl">
         <div className="flex flex-col gap-4">
-          <h2>Designed for every department</h2>
+          <h2>为每个团队而设计</h2>
           <p className="text-gray-11 font-normal">
-            Automate conversations throughout the entire customer journey.
+            在整个客户旅程中实现对话自动化。
           </p>
         </div>
         <div className="flex isolate flex-col gap-4 md:gap-6 md:flex-row">
@@ -119,7 +119,7 @@ export const ForEveryDepartment = () => {
         <div className="fixed size-full inset-0 flex justify-center items-center">
           <button
             type="button"
-            aria-label="Close department details"
+            aria-label="关闭部门详情"
             className="bg-background/80 absolute inset-0 animate-in fade-in duration-350"
             onClick={() => {
               setLastOpenedDepartmentIndex(openedDepartmentIndex);
@@ -203,7 +203,7 @@ const DepartmentCard = ({
     </div>
     {openedDepartmentIndex !== index && (
       <Button
-        aria-label="Expand department"
+        aria-label="展开部门"
         variant="outline"
         size="icon"
         className="rounded-full p-0 w-6 h-6 absolute bottom-4 right-4"
@@ -231,7 +231,7 @@ const OpenedDepartmentCard = ({
   >
     <div className="gap-4 flex flex-col">
       <Button
-        aria-label="Close department"
+        aria-label="关闭部门"
         variant="secondary"
         size="icon"
         className="absolute top-4 right-4 animate-in slide-in-from-bottom-10 fade-in duration-350 delay-500 fill-mode-both"

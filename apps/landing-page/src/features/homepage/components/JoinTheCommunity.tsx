@@ -12,52 +12,52 @@ import nicolaiSrc from "../testimonials/assets/nicolai.jpg";
 const stats = [
   {
     stat: "2M+",
-    label: "monthly chats",
+    label: "每月对话量",
   },
   {
     stat: "1.5M+",
-    label: "bots published",
+    label: "已发布机器人",
   },
   {
     stat: "3,000+",
-    label: "members on Discord",
+    label: "Discord 社区成员",
   },
 ];
 
 const avatars = [
   {
     src: abhaySrc,
-    alt: "Community member 1 avatar",
+    alt: "社区成员 1 头像",
     position: "top-1 left-36",
   },
   {
     src: laszloSrc,
-    alt: "Community member 2 avatar",
+    alt: "社区成员 2 头像",
     position: "top-32 left-4 delay-500",
   },
   {
     src: joshuaSrc,
-    alt: "Community member 3 avatar",
+    alt: "社区成员 3 头像",
     position: "bottom-8 left-24 delay-300",
   },
   {
     src: lucasSrc,
-    alt: "Community member 4 avatar",
+    alt: "社区成员 4 头像",
     position: "-bottom-7 -left-7 delay-700",
   },
   {
     src: kurniaSrc,
-    alt: "Community member 5 avatar",
+    alt: "社区成员 5 头像",
     position: "top-1 right-36 delay-1000",
   },
   {
     src: nicolaiSrc,
-    alt: "Community member 6 avatar",
+    alt: "社区成员 6 头像",
     position: "top-28 right-4 delay-500",
   },
   {
     src: barrettaSrc,
-    alt: "Community member 7 avatar",
+    alt: "社区成员 7 头像",
     position: "bottom-12 right-32 delay-300",
   },
 ];
@@ -69,19 +69,13 @@ export const JoinTheCommunity = () => (
       <div className="flex flex-col gap-12 md:items-center max-w-4xl">
         <div className="flex flex-col gap-6 text-balance md:text-center">
           <h2 className="text-gray-12">
-            Together, we&apos;re hacking the future of
+            一起重塑
             <br className="hidden md:block" />
-            conversational AI apps
+            对话式 AI 应用的未来
           </h2>
-          <p className="text-gray-11">
-            Join the Typebot community to connect with chatbot enthusiasts,
-            share insights, and learn together to create advanced automations.
-            Get exclusive resources, influence product development, and be part
-            of a network that's shaping the future of conversational apps.
-          </p>
         </div>
         <CtaButtonLink size="lg" href={discordUrl} target="_blank">
-          Join the community
+          加入社区
         </CtaButtonLink>
       </div>
     </div>
