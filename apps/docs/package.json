@@ -12,7 +12,7 @@
         "executor": "nx:run-commands",
         "options": {
           "cwd": "apps/docs",
-          "command": "bunx mintlify dev --port 3004"
+          "command": "bunx mintlify dev --port 8004"
         }
       },
       "mintlify:check-broken-links": {
