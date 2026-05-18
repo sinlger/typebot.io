@@ -15,6 +15,8 @@ import { gmailBlock } from "@typebot.io/gmail-block";
 import { gmailCredentialsSchema } from "@typebot.io/gmail-block/schemas";
 import { groqBlock } from "@typebot.io/groq-block";
 import { groqCredentialsSchema } from "@typebot.io/groq-block/schemas";
+import { kimiBlock } from "@typebot.io/kimi-block";
+import { kimiCredentialsSchema } from "@typebot.io/kimi-block/schemas";
 import { mistralBlock } from "@typebot.io/mistral-block";
 import { mistralCredentialsSchema } from "@typebot.io/mistral-block/schemas";
 import { nocodbBlock } from "@typebot.io/nocodb-block";
@@ -50,6 +52,7 @@ export const forgedCredentialsSchemas = {
   [posthogBlock.id]: posthogCredentialsSchema,
   [perplexityBlock.id]: perplexityCredentialsSchema,
   [deepSeekBlock.id]: deepSeekCredentialsSchema,
+  [kimiBlock.id]: kimiCredentialsSchema,
   [blinkBlock.id]: blinkCredentialsSchema,
   [gmailBlock.id]: gmailCredentialsSchema,
 };

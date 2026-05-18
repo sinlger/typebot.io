@@ -14,6 +14,9 @@
       "path": "../blocks/blink/tsconfig.lib.json"
     },
     {
+      "path": "../blocks/kimi/tsconfig.lib.json"
+    },
+    {
       "path": "../blocks/deepseek/tsconfig.lib.json"
     },
     {

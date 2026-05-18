@@ -1,4 +1,4 @@
-import { createDeepSeek } from "@ai-sdk/deepseek";
+import { createOpenAI } from "@ai-sdk/openai";
 import { runChatCompletion } from "@typebot.io/ai/runChatCompletion";
 import { runChatCompletionStream } from "@typebot.io/ai/runChatCompletionStream";
 import { createActionHandler, createFetcherHandler } from "@typebot.io/forge";
@@ -7,7 +7,7 @@ import {
   createChatCompletion,
   modelsFetcher,
 } from "./actions/createChatCompletions";
-import { deepSeekModels, defaultBaseUrl } from "./constants";
+import { defaultBaseUrl, kimiModels } from "./constants";
 
 export default [
   createActionHandler(createChatCompletion, {
@@ -24,9 +24,10 @@ export default [
       if (!options.messages) return logs.add("No messages provided");
 
       await runChatCompletion({
-        model: createDeepSeek({
+        model: createOpenAI({
           apiKey,
           baseURL: baseUrl ?? undefined,
+          compatibility: "strict",
         })(modelName),
         variables,
         messages: options.messages,
@@ -66,9 +67,10 @@ export default [
           };
 
         return runChatCompletionStream({
-          model: createDeepSeek({
+          model: createOpenAI({
             apiKey,
             baseURL: baseUrl ?? undefined,
+            compatibility: "strict",
           })(modelName),
           variables,
           messages: options.messages,
@@ -87,7 +89,7 @@ export default [
     async ({ credentials }) => {
       if (!credentials?.apiKey)
         return {
-          data: deepSeekModels,
+          data: kimiModels,
         };
 
       try {
@@ -102,9 +104,9 @@ export default [
         return {
           data: response.data.map((model) => model.id),
         };
-      } catch (err) {
+      } catch {
         return {
-          data: deepSeekModels,
+          data: kimiModels,
         };
       }
     },
