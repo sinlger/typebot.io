@@ -51,7 +51,7 @@ services:
     image: grafana/otel-lgtm:latest
     container_name: lgtm
     ports:
-      - "3010:3000"
+      - "4010:3000"
       - "4317:4317"
       - "4318:4318"
     restart: unless-stopped

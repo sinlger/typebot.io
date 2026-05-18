@@ -14,7 +14,10 @@
             ],
             "target": "build"
           }
-        ]
+        ],
+        "options": {
+          "command": "next dev -p 8000"
+        }
       },
       "typecheck": {
         "executor": "nx:run-commands",
