@@ -95,7 +95,7 @@ const enforceFreeTierLimits = async (userId: string) => {
   if (
     mostRecentMembership &&
     Date.now() - mostRecentMembership.createdAt.getTime() <
-      WORKSPACE_CREATION_COOLDOWN_MS
+    WORKSPACE_CREATION_COOLDOWN_MS
   )
     throw new ORPCError("TOO_MANY_REQUESTS", {
       message: "Please wait 24 hours before creating another workspace.",

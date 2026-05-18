@@ -1,0 +1,389 @@
+---
+title: Integration Modules Overview
+icon: puzzle-piece
+---
+
+# 集成模块总览
+
+这份文档用于梳理 Typebot 当前“集成模块”的两套实现方式、现有模块分类，以及新增一个集成时应该走哪条路径。
+
+## 1. 当前有两套集成体系
+
+| 体系 | 主要目录 | 特点 | 适用情况 |
+| --- | --- | --- | --- |
+| 旧版内置集成 | `packages/blocks/integrations` | 每个模块手写 schema，Builder 和运行时也有专门实现 | 历史模块、兼容旧数据 |
+| Forge 集成 | `packages/forge/blocks` | 用 `createBlock` / `createAction` / `createAuth` 定义，Builder 通过 schema 自动渲染表单，运行时统一调度 | 新增模块的默认方案 |
+
+### 旧版内置集成的实现链路
+
+旧版集成的核心特点是“每个模块自己维护一套 schema 和执行器”。
+
+- 类型枚举：`packages/blocks/integrations/src/constants.ts`
+- schema 聚合：`packages/blocks/integrations/src/schema.ts`
+- 运行时分发：`packages/bot-engine/src/executeIntegration.ts`
+- 部分模块还有 Builder 专用设置面板：`apps/builder/src/features/blocks/integrations/**`
+- 部分模块还有 Embed/Web 端执行代码：`packages/embeds/js/src/features/blocks/integrations/**`
+
+这套模式比较“显式”，但扩展成本更高。新增一个模块通常要同时碰 Builder、bot-engine、schema 聚合和可能的 Web runtime。
+
+### Forge 集成的实现链路
+
+Forge 的核心特点是“定义和运行分离，UI 由 schema 驱动，运行时统一执行”。
+
+- 模块定义：`packages/forge/blocks/<block>/src/index.ts`
+- 认证定义：`packages/forge/blocks/<block>/src/auth.ts`
+- 动作定义：`packages/forge/blocks/<block>/src/actions/**`
+- 运行实现：`packages/forge/blocks/<block>/src/handlers.ts` 或 `handlers/**`
+- block schema：`packages/forge/blocks/<block>/src/schemas.ts`
+- 仓库级注册表：`packages/forge/repository/src/{definitions,handlers,schemas,credentials,constants}.ts`
+- Builder 通用设置页：`apps/builder/src/features/forge/components/ForgedBlockSettings.tsx`
+- 运行时统一执行：`packages/bot-engine/src/forge/executeForgedBlock.ts`
+
+Builder 里 Forge 表单不是为每个模块单独写页面，而是读取 Zod schema 上的 `layout` 元数据自动渲染。
+
+## 2. 运行链路怎么串起来
+
+### Builder 侧
+
+1. 左侧模块列表会读取：
+   - 旧版模块：`IntegrationBlockType`
+   - Forge 模块：`@typebot.io/forge-repository/definitions`
+2. 选择 Forge 模块后，设置面板通过 `ForgedBlockSettings` 加载：
+   - block definition
+   - block schema
+   - action schema
+3. 如果某个字段声明了 `fetcher`，Builder 会调用：
+   - `apps/builder/src/features/forge/api/fetchSelectItems.ts`
+4. 如果模块带认证，Builder 会使用通用凭证对话框：
+   - 明文加密凭证：`ForgedCredentialsCreateDialog`
+   - OAuth：`ForgedOAuthCredentialsCreateDialog`
+
+### 运行时侧
+
+1. 所有 block 最终都会进入 `packages/blocks/core/src/schemas/schema.ts`
+2. 旧版集成通过 `executeIntegration()` 的 `switch` 分发
+3. Forge 集成走 `executeForgedBlock()`
+4. `executeForgedBlock()` 会统一处理：
+   - 读取 block definition
+   - 找到 action
+   - 解密/刷新 credentials
+   - 解析变量
+   - 执行 server handler / stream handler / web handler / embed handler
+   - 回写变量、日志、client side actions
+
+## 3. 现有模块分类
+
+下面按“业务能力”分类，而不是按目录分类。
+
+### 3.1 AI / LLM / 语音能力
+
+#### 旧版
+
+| 模块 | 代码目录 | 主要模式 |
+| --- | --- | --- |
+| OpenAI（旧版） | `packages/blocks/integrations/src/openai` | 旧版 schema + bot-engine 专用执行器 |
+
+#### Forge
+
+| 模块 | 代码目录 | 认证方式 | 主要模式 |
+| --- | --- | --- | --- |
+| OpenAI | `packages/forge/blocks/openai` | `encryptedCredentials` | 多 action、stream、fetcher |
+| Anthropic | `packages/forge/blocks/anthropic` | `encryptedCredentials` | stream |
+| DeepSeek | `packages/forge/blocks/deepseek` | `encryptedCredentials` | stream |
+| Groq | `packages/forge/blocks/groq` | `encryptedCredentials` | stream + fetcher |
+| Mistral | `packages/forge/blocks/mistral` | `encryptedCredentials` | stream |
+| OpenRouter | `packages/forge/blocks/openRouter` | `encryptedCredentials` | stream + fetcher |
+| Perplexity | `packages/forge/blocks/perplexity` | `encryptedCredentials` | stream |
+| Together AI | `packages/forge/blocks/togetherAi` | `encryptedCredentials` | stream |
+| Dify AI | `packages/forge/blocks/difyAi` | `encryptedCredentials` | stream + fetcher |
+| ChatNode | `packages/forge/blocks/chatNode` | `encryptedCredentials` | server action |
+| ElevenLabs | `packages/forge/blocks/elevenlabs` | `encryptedCredentials` | server action + fetcher |
+
+这一类的典型特征：
+
+- 几乎都需要 API Key
+- 经常用 `fetcher` 拉模型列表
+- 如果是聊天补全类，通常实现 `stream`
+- 常配合 `responseMapping` 或 `getStreamVariableId`
+
+推荐参考模板：
+
+- 最像通用 LLM：`openai` / `deepseek` / `anthropic`
+- 最像语音服务：`elevenlabs`
+- 最像第三方工作流式 AI：`difyAi`
+
+### 3.2 自动化 / 数据同步 / 外部 API
+
+#### 旧版
+
+| 模块 | 代码目录 | 主要模式 |
+| --- | --- | --- |
+| HTTP Request / Webhook | `packages/blocks/integrations/src/httpRequest` | 通用 HTTP 请求 |
+| Zapier | `packages/blocks/integrations/src/zapier` | 基于 HTTP webhook 的特化包装 |
+| Make.com | `packages/blocks/integrations/src/makeCom` | 基于 HTTP webhook 的特化包装 |
+| Pabbly | `packages/blocks/integrations/src/pabblyConnect` | 基于 HTTP webhook 的特化包装 |
+| Google Sheets | `packages/blocks/integrations/src/googleSheets` | 表格读取 / 插入 / 更新 |
+
+#### Forge
+
+| 模块 | 代码目录 | 认证方式 | 主要模式 |
+| --- | --- | --- | --- |
+| NocoDB | `packages/forge/blocks/nocodb` | `encryptedCredentials` | CRUD + fetcher |
+
+这一类的典型特征：
+
+- 以 server handler 为主
+- 重点是请求构造、返回映射、错误日志
+- 很适合用 `responseMapping` 把外部结果落到变量
+
+推荐参考模板：
+
+- 通用第三方 REST API：旧版 `httpRequest`，或者新建 Forge block
+- 结构化数据源：`nocodb`
+- 表格类：旧版 `googleSheets`
+
+### 3.3 分析 / 埋点 / CDP
+
+#### 旧版
+
+| 模块 | 代码目录 | 主要模式 |
+| --- | --- | --- |
+| Google Analytics | `packages/blocks/integrations/src/googleAnalytics` | 埋点、部分 Web runtime 行为 |
+| Pixel | `packages/blocks/integrations/src/pixel` | 浏览器埋点 |
+
+#### Forge
+
+| 模块 | 代码目录 | 认证方式 | 主要模式 |
+| --- | --- | --- | --- |
+| Segment | `packages/forge/blocks/segment` | `encryptedCredentials` | track / identify / alias |
+| PostHog | `packages/forge/blocks/posthog` | `encryptedCredentials` | capture / identify group |
+
+这一类的典型特征：
+
+- 有些适合 server 发送事件
+- 有些适合 client/web 触发
+- 关注事件名、属性、用户标识、group 标识
+
+推荐参考模板：
+
+- CDP / analytics API：`segment` / `posthog`
+- 浏览器埋点兼容：旧版 `pixel`
+
+### 3.4 邮件 / 沟通 / 客服 / 内部协作
+
+#### 旧版
+
+| 模块 | 代码目录 | 主要模式 |
+| --- | --- | --- |
+| Email | `packages/blocks/integrations/src/sendEmail` | 发送邮件 |
+| Chatwoot | `packages/blocks/integrations/src/chatwoot` | Web widget / 客服入口 |
+
+#### Forge
+
+| 模块 | 代码目录 | 认证方式 | 主要模式 |
+| --- | --- | --- | --- |
+| Gmail | `packages/forge/blocks/gmail` | `oauth` | 发送邮件 + fetch labels |
+| Zendesk | `packages/forge/blocks/zendesk` | `encryptedCredentials` | Web widget / client code |
+| Blink | `packages/forge/blocks/blink` | `encryptedCredentials` | 内部通知 / 用户事件 |
+
+这一类的典型特征：
+
+- 认证方式容易分化：API Key、OAuth、Widget Key
+- 有些只需要 server handler
+- 有些需要 `web.parseFunction` 或 embed 行为
+
+推荐参考模板：
+
+- 标准 OAuth：`gmail`
+- 打开客服 widget：`zendesk`
+- 传统发信：旧版 `sendEmail`
+
+### 3.5 日程 / 嵌入式交互 / 工具型模块
+
+| 模块 | 代码目录 | 认证方式 | 主要模式 |
+| --- | --- | --- | --- |
+| Cal.com | `packages/forge/blocks/calCom` | 无 | `displayEmbedBubble` |
+| QR code | `packages/forge/blocks/qrcode` | 无 | server action |
+
+这一类的典型特征：
+
+- 不一定需要 credentials
+- 如果是嵌入式组件，通常实现 `displayEmbedBubble`
+- 如果是纯工具转换，直接 server action 即可
+
+推荐参考模板：
+
+- 嵌入第三方 Widget：`calCom`
+- 纯工具函数型：`qrcode`
+
+## 4. 两套体系的关键差异
+
+| 维度 | 旧版内置集成 | Forge |
+| --- | --- | --- |
+| 表单渲染 | 常常需要手写 Builder 组件 | 由 schema + layout 元数据自动渲染 |
+| 运行时分发 | `executeIntegration()` 手写 `switch` | `executeForgedBlock()` 统一执行 |
+| 认证抽象 | 各模块各自处理，风格不统一 | `createAuth()` 统一抽象 |
+| 扩展成本 | 较高 | 低很多 |
+| 适合新增模块吗 | 不推荐 | 推荐 |
+
+补充一点：
+
+- 侧边栏里已经把旧版 `OpenAI` 标记为“迁移到 Forge”的遗留模块，所以新模块不应继续照旧版 OpenAI 那条路实现。
+
+## 5. Forge 模块最小骨架
+
+如果你要新增一个模块，推荐直接走 Forge。最小骨架通常长这样：
+
+```text
+packages/forge/blocks/<your-block>/
+  package.json
+  tsconfig.json
+  src/
+    index.ts
+    auth.ts            # 如果需要认证
+    actions/
+      someAction.ts
+    handlers.ts        # 或 handlers/index.ts
+    schemas.ts
+    logo.tsx
+```
+
+### 每个文件负责什么
+
+- `index.ts`
+  - 定义 block id、name、logo、auth、actions
+- `auth.ts`
+  - 用 `createAuth()` 定义认证
+  - 常见是：
+    - `encryptedCredentials`
+    - `oauth`
+- `actions/*.ts`
+  - 用 `createAction()` 定义动作
+  - 定义 options、fetchers、stream 变量、embed 保存变量等
+- `handlers.ts`
+  - 用 `createActionHandler()` / `createFetcherHandler()` 实现运行逻辑
+- `schemas.ts`
+  - 用 `parseBlockSchema()` / `parseBlockCredentials()` 输出 schema
+- `logo.tsx`
+  - 提供侧边栏和节点图标
+
+## 6. 新模块应该怎么选实现模式
+
+### 场景 A：普通 REST API，拿 API Key 调一次接口
+
+推荐：
+
+- `encryptedCredentials`
+- 一个 `createAction()`
+- 一个 `server` handler
+
+参考：
+
+- `deepseek`
+- `segment`
+- `posthog`
+
+### 场景 B：需要下拉框动态拉数据
+
+推荐：
+
+- action 里声明 `fetchers`
+- handler 里实现 `createFetcherHandler`
+
+参考：
+
+- `openai`
+- `groq`
+- `gmail`
+- `elevenlabs`
+
+### 场景 C：要流式输出大模型结果
+
+推荐：
+
+- action 里实现 `getStreamVariableId`
+- handler 里实现 `stream.run`
+
+参考：
+
+- `openai`
+- `anthropic`
+- `deepseek`
+- `mistral`
+- `openRouter`
+
+### 场景 D：要做 OAuth
+
+推荐：
+
+- `createAuth({ type: "oauth" })`
+- 配置 `authUrl`、`tokenUrl`、`scopes`
+
+参考：
+
+- `gmail`
+
+### 场景 E：要打开第三方 widget 或内嵌组件
+
+推荐：
+
+- 如果只是客户端执行脚本：`web.parseFunction`
+- 如果要显示嵌入式 Bubble：`displayEmbedBubble`
+
+参考：
+
+- `zendesk`：client/web widget
+- `calCom`：embed bubble
+
+## 7. 实际新增一个模块的建议步骤
+
+1. 先判断它是不是“新增模块”
+2. 如果是新增模块，优先走 Forge
+3. 执行：
+
+```sh
+bun create-new-block
+```
+
+4. 生成模块骨架后，先补：
+   - `logo.tsx`
+   - `index.ts`
+   - `auth.ts`（如果需要）
+5. 在 `actions/` 定义动作和字段
+6. 在 `handlers.ts` 写运行逻辑
+7. 如果有动态下拉，补 `fetcher`
+8. 如果是 LLM，补 `stream`
+9. 如果是 widget/embed，补 `web` 或 `displayEmbedBubble`
+10. 让 CLI 把模块写入 Forge repository 注册表
+11. 运行项目，在 Builder 左侧验证模块是否出现
+
+## 8. 如果你只是想“看懂现有模块怎么接”
+
+最推荐按下面顺序读代码：
+
+1. 先看一个最简单的 Forge 模块
+   - `packages/forge/blocks/qrcode`
+2. 再看一个标准 API Key 模块
+   - `packages/forge/blocks/deepseek`
+3. 再看一个带 fetcher 的模块
+   - `packages/forge/blocks/gmail`
+   - `packages/forge/blocks/openai`
+4. 再看一个带 stream 的模块
+   - `packages/forge/blocks/openai`
+   - `packages/forge/blocks/anthropic`
+5. 再看一个 embed 类模块
+   - `packages/forge/blocks/calCom`
+6. 最后再回头看旧版内置集成
+   - `packages/blocks/integrations/src/httpRequest`
+   - `packages/bot-engine/src/executeIntegration.ts`
+
+## 9. 结论
+
+- 当前仓库里“集成模块”已经明显分成两代：
+  - 旧版内置集成
+  - Forge 集成
+- 新增模块时，应该优先用 Forge
+- 如果你的目标是“自己增加一个第三方能力”，最需要先决定的是：
+  - 认证类型是什么
+  - 是 server action、stream、fetcher，还是 embed/widget
+- 如果你的目标是“改现有模块”，先确认它属于旧版还是 Forge，再决定入口文件
