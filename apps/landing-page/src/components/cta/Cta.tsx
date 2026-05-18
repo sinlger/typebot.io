@@ -11,8 +11,8 @@ export type CtaProps = {
 };
 export const Cta = ({
   className,
-  children = "Ready to dive into the latest tools and hack your business growth?",
-  buttonLabel = "Get started free",
+  children = "准备好用更先进的工具，让业务增长更轻松了吗？",
+  buttonLabel = "免费开始",
   isLogoDisplayed = true,
 }: CtaProps) => {
   return (
@@ -24,7 +24,7 @@ export const Cta = ({
       )}
     >
       {isLogoDisplayed && (
-        <img src={magicWand} alt="magic wand" className="size-24" />
+        <img src={magicWand} alt="魔法棒" className="size-24" />
       )}
       {children && (
         <h2 className="text-center px-5 text-balance max-w-5xl">{children}</h2>
@@ -39,7 +39,7 @@ export const Cta = ({
           {buttonLabel}
         </CtaButtonLink>
         <p className="text-muted-foreground text-center">
-          No trial. Generous free plan.
+          无需试用期，免费版也足够大方。
         </p>
       </div>
     </div>
