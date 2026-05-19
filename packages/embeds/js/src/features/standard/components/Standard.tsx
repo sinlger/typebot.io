@@ -33,14 +33,18 @@ export const Standard = (props: BotProps, { element }: { element: any }) => {
     }, 1);
   };
 
-  const botLauncherObserver = new IntersectionObserver((intersections) => {
-    if (intersections.some((intersection) => intersection.isIntersecting))
-      launchBot();
-  });
+  const botLauncherObserver =
+    typeof IntersectionObserver === "undefined"
+      ? undefined
+      : new IntersectionObserver((intersections) => {
+          if (intersections.some((intersection) => intersection.isIntersecting))
+            launchBot();
+        });
 
   onMount(() => {
+    launchBot();
     window.addEventListener("message", processIncomingEvent);
-    botLauncherObserver.observe(element);
+    botLauncherObserver?.observe(element);
   });
 
   createEffect(() => {
@@ -83,7 +87,7 @@ export const Standard = (props: BotProps, { element }: { element: any }) => {
   };
 
   onCleanup(() => {
-    botLauncherObserver.disconnect();
+    botLauncherObserver?.disconnect();
   });
 
   return (

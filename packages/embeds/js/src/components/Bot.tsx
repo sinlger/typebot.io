@@ -264,12 +264,12 @@ export const Bot = (props: BotProps & { class?: string }) => {
               storage:
                 initialChatReply.typebot.settings.general?.rememberUser
                   ?.isEnabled &&
-                !(
-                  typeof props.typebot !== "string" ||
-                  (props.isPreview ?? false)
-                )
+                  !(
+                    typeof props.typebot !== "string" ||
+                    (props.isPreview ?? false)
+                  )
                   ? (initialChatReply.typebot.settings.general?.rememberUser
-                      ?.storage ?? defaultSettings.general.rememberUser.storage)
+                    ?.storage ?? defaultSettings.general.rememberUser.storage)
                   : undefined,
             }}
             progressBarRef={props.progressBarRef}

@@ -47,7 +47,7 @@ export const TypebotPageV3 = ({
     if (isMatchingViewerUrl) return;
     return new URL(url).origin;
   }, [isMatchingViewerUrl, url]);
-
+  console.log('apiOrigin', apiOrigin)
   return (
     <div
       style={{
