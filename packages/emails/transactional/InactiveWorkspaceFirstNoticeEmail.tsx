@@ -76,7 +76,7 @@ export const InactiveWorkspaceFirstNoticeEmail = ({
 );
 
 InactiveWorkspaceFirstNoticeEmail.PreviewProps = {
-  workspaceName: "My Workspace",
+  workspaceName: "我的工作区",
 } as Props;
 
 export default InactiveWorkspaceFirstNoticeEmail;

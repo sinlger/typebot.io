@@ -69,7 +69,7 @@ export const GuestInvitationEmail = ({
 };
 
 GuestInvitationEmail.PreviewProps = {
-  workspaceName: "My Workspace",
+  workspaceName: "我的工作区",
   typebotName: "My Typebot",
   url: "https://typebot.io",
   hostEmail: "host@typebot.io",

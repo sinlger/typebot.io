@@ -76,7 +76,7 @@ export const BillingCycleResetEmail = ({
 };
 
 BillingCycleResetEmail.PreviewProps = {
-  workspaceName: "My Workspace",
+  workspaceName: "我的工作区",
   totalChatsUsed: 15000,
   url: "https://typebot.io",
 } as Props;

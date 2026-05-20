@@ -73,7 +73,7 @@ export const BillingCycleResetFailedEmail = ({
 };
 
 BillingCycleResetFailedEmail.PreviewProps = {
-  workspaceName: "My Workspace",
+  workspaceName: "我的工作区",
   totalChatsUsed: 15000,
 } as Props;
 

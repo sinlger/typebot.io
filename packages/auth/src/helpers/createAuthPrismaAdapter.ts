@@ -48,7 +48,7 @@ export const createAuthPrismaAdapter = (p: Prisma.PrismaClient): Adapter => ({
       throw Error("New users are forbidden");
 
     const newWorkspaceData = {
-      name: data.name ? `${data.name}'s workspace` : "My workspace",
+      name: data.name ? `${data.name}的 工作区` : "我的工作区",
       plan: parseWorkspaceDefaultPlan(data.email),
     };
     const createdUser = await p.user.create({
@@ -59,13 +59,13 @@ export const createAuthPrismaAdapter = (p: Prisma.PrismaClient): Adapter => ({
           workspaceInvitations.length > 0
             ? undefined
             : {
-                create: {
-                  role: WorkspaceRole.ADMIN,
-                  workspace: {
-                    create: newWorkspaceData,
-                  },
+              create: {
+                role: WorkspaceRole.ADMIN,
+                workspace: {
+                  create: newWorkspaceData,
                 },
               },
+            },
         onboardingCategories: [],
       },
       include: {

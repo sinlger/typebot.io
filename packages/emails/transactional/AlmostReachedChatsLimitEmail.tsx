@@ -66,7 +66,7 @@ export const AlmostReachedChatsLimitEmail = ({
 };
 
 AlmostReachedChatsLimitEmail.PreviewProps = {
-  workspaceName: "My Workspace",
+  workspaceName: "我的工作区",
   chatsLimit: 2000,
   usagePercent: 95,
 } as Props;
