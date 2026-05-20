@@ -65,7 +65,7 @@ export const WhatsAppPreviewInstructions = ({
       <div className="flex items-center gap-2 justify-end">
         <p className="text-sm">Need help?</p>
         <ButtonLink
-          href="https://docs.typebot.com/deploy/whatsapp/overview"
+          href="https://docs.qingzbot.com/deploy/whatsapp/overview"
           size="sm"
           variant="secondary"
         >

@@ -76,7 +76,7 @@ export const ApiDeployDialog = ({
         <p className="text-sm">
           Check out the{" "}
           <TextLink
-            href="https://docs.typebot.com/api-reference/chat/start-chat"
+            href="https://docs.qingzbot.com/api-reference/chat/start-chat"
             isExternal
           >
             API reference

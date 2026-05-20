@@ -39,7 +39,7 @@ export const TypebotHeader = () => {
     isCloudProdInstance() && workspace?.plan && workspace.plan !== Plan.FREE
       ? onOpen()
       : window.open(
-          "https://docs.typebot.com/guides/how-to-get-help",
+          "https://docs.qingzbot.com/guides/how-to-get-help",
           "_blank",
         );
   };

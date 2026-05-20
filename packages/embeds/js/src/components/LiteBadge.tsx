@@ -95,7 +95,7 @@ export const LiteBadge = (props: Props) => {
   return (
     <a
       ref={liteBadge}
-      href={"https://typebot.io/?utm_source=litebadge"}
+      href={"https://qingzbot.com/?utm_source=litebadge"}
       target="_blank"
       rel="noopener noreferrer"
       class="lite-badge"

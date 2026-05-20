@@ -118,9 +118,9 @@
                 "children": [
                   { "text": "👉 " },
                   {
-                    "url": "https://app.typebot.com/feedback",
+                    "url": "https://app.qingzbot.com/feedback",
                     "type": "a",
-                    "children": [{ "text": "https://app.typebot.com/feedback" }]
+                    "children": [{ "text": "https://app.qingzbot.com/feedback" }]
                   },
                   { "text": "" }
                 ]
@@ -164,7 +164,7 @@
                 "children": [
                   { "text": "First, don't forget to check out the " },
                   {
-                    "url": "https://docs.typebot.com/",
+                    "url": "https://docs.qingzbot.com/",
                     "type": "a",
                     "children": [{ "text": "Documentation 🙏" }]
                   }

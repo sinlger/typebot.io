@@ -76,9 +76,9 @@ const handler = new OpenAPIHandler(appRouter, {
           title: "Builder API",
           version: "1.0.0",
         },
-        servers: [{ url: "https://app.typebot.com/api" }],
+        servers: [{ url: "https://app.qingzbot.com/api" }],
         externalDocs: {
-          url: "https://docs.typebot.com/api-reference",
+          url: "https://docs.qingzbot.com/api-reference",
         },
         components: {
           securitySchemes: {
