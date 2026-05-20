@@ -1,4 +1,5 @@
 import { LoaderCircleIcon } from "@typebot.io/ui/icons/LoaderCircleIcon";
+import { useTranslate } from "@tolgee/react";
 import { useRef } from "react";
 import { Seo } from "@/components/Seo";
 import { Graph } from "@/features/graph/components/Graph";
@@ -17,6 +18,7 @@ import { SuspectedTypebotBanner } from "./SuspectedTypebotBanner";
 import { TypebotHeader } from "./TypebotHeader";
 
 export const EditorPage = () => {
+  const { t } = useTranslate();
   const { typebot, currentUserMode } = useTypebot();
   const { workspace } = useWorkspace();
   const editorContainerRef = useRef<HTMLDivElement>(null);
@@ -29,7 +31,7 @@ export const EditorPage = () => {
 
   return (
     <EditorProvider>
-      <Seo title={typebot?.name ? `${typebot.name} | Editor` : "Editor"} />
+      <Seo title={typebot?.name ? `${typebot.name} | ${t("editor.seo.title")}` : t("editor.seo.title")} />
       <div
         className="flex overflow-clip h-screen flex-col"
         ref={editorContainerRef}

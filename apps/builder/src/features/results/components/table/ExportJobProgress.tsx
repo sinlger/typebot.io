@@ -7,12 +7,14 @@ import { Download01Icon } from "@typebot.io/ui/icons/Download01Icon";
 import { FileEmpty02Icon } from "@typebot.io/ui/icons/FileEmpty02Icon";
 import { TriangleAlertIcon } from "@typebot.io/ui/icons/TriangleAlertIcon";
 import { useEffect, useState } from "react";
+import { useTranslate } from "@tolgee/react";
 
 type Props = {
   chunk: ExportResultsWorkflowStatusChunk;
   error?: string;
 };
 export const ExportJobProgress = ({ chunk, error }: Props) => {
+  const { t } = useTranslate();
   const [showEmailNote, setShowEmailNote] = useState(false);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ export const ExportJobProgress = ({ chunk, error }: Props) => {
         className="animate-in fade-in-0 slide-in-from-bottom-2"
       >
         <TriangleAlertIcon />
-        <Alert.Title>Error exporting results</Alert.Title>
+        <Alert.Title>{t("results.table.errorExportingResults.title")}</Alert.Title>
         <Alert.Description>
           {error || (chunk.status === "error" ? chunk.message : undefined)}
         </Alert.Description>
@@ -68,8 +70,7 @@ export const ExportJobProgress = ({ chunk, error }: Props) => {
         >
           <CheckmarkSquare02Icon />
           <Alert.Description>
-            You can close this dialog. We'll send you the file by email once
-            it's ready.
+            {t("results.table.closeDialogEmailNote.description")}
           </Alert.Description>
         </Alert.Root>
       )}

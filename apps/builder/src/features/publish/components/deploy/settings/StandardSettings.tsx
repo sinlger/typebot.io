@@ -3,6 +3,7 @@ import { Input } from "@typebot.io/ui/components/Input";
 import { Switch } from "@typebot.io/ui/components/Switch";
 import { cn } from "@typebot.io/ui/lib/cn";
 import { useEffect, useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
 
 type Props = {
@@ -17,6 +18,7 @@ export const StandardSettings = ({
   onUpdateWindowSettings,
   className,
 }: Props) => {
+  const { t } = useTranslate();
   const [isFullscreenChecked, setIsFullscreenChecked] = useState(false);
   const [inputValues, setInputValues] = useState({
     widthValue: "100",
@@ -44,19 +46,19 @@ export const StandardSettings = ({
 
   return (
     <div className={cn("flex flex-col gap-4", className)}>
-      <h3>Window settings</h3>
+      <h3>{t("deploy.settings.standard.windowSettings.heading")}</h3>
       <div className="flex flex-col pl-4 gap-4">
         <Field.Root className="flex-row items-center">
           <Switch
             checked={isFullscreenChecked}
             onCheckedChange={() => setIsFullscreenChecked(!isFullscreenChecked)}
           />
-          <Field.Label>Set to fullscreen</Field.Label>
+          <Field.Label>{t("deploy.settings.standard.fullscreen.label")}</Field.Label>
         </Field.Root>
         {!isFullscreenChecked && (
           <>
             <div className="flex justify-between items-center">
-              <p>Width</p>
+              <p>{t("deploy.settings.standard.width.label")}</p>
               <div className="flex items-center gap-2">
                 <Input
                   onValueChange={(value) =>
@@ -76,7 +78,7 @@ export const StandardSettings = ({
               </div>
             </div>
             <div className="flex justify-between items-center">
-              <p>Height</p>
+              <p>{t("deploy.settings.standard.height.label")}</p>
               <div className="flex items-center gap-2">
                 <Input
                   onValueChange={(value) =>

@@ -8,6 +8,7 @@ import { Download01Icon } from "@typebot.io/ui/icons/Download01Icon";
 import { LeftToRightListBulletIcon } from "@typebot.io/ui/icons/LeftToRightListBulletIcon";
 import { MoreHorizontalIcon } from "@typebot.io/ui/icons/MoreHorizontalIcon";
 import { useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { ColumnSettings } from "./ColumnSettings";
 import { ExportAllResultsDialog } from "./ExportAllResultsDialog";
 
@@ -59,6 +60,7 @@ const TableSettingsMenu = ({
   onColumnOrderChange,
   onExportAllClick,
 }: Props & { onExportAllClick: () => void }) => {
+  const { t } = useTranslate();
   const [selectedMenu, setSelectedMenu] = useState<
     "export" | "columnSettings" | null
   >(null);
@@ -86,7 +88,7 @@ const TableSettingsMenu = ({
           >
             <div className="flex items-center gap-2">
               <LeftToRightListBulletIcon />
-              <p>Column settings</p>
+              <p>{t("results.table.columnSettings.label")}</p>
             </div>
             <ArrowRight01Icon />
           </Button>
@@ -97,7 +99,7 @@ const TableSettingsMenu = ({
           >
             <div className="flex items-center gap-2">
               <Download01Icon />
-              <p>Export all</p>
+              <p>{t("results.table.exportAll.label")}</p>
             </div>
           </Button>
         </div>

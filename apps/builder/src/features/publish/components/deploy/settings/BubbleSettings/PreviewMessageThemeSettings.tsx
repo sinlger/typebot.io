@@ -5,6 +5,7 @@ import {
   defaultPreviewMessageCloseButtonIconColor,
   defaultPreviewMessageTextColor,
 } from "@typebot.io/theme/constants";
+import { useTranslate } from "@tolgee/react";
 import { ColorPicker } from "@/components/ColorPicker";
 
 type Props = {
@@ -16,6 +17,7 @@ export const PreviewMessageThemeSettings = ({
   previewMessageTheme,
   onChange,
 }: Props) => {
+  const { t } = useTranslate();
   const updateBackgroundColor = (backgroundColor: string) => {
     onChange({
       ...previewMessageTheme,
@@ -48,10 +50,10 @@ export const PreviewMessageThemeSettings = ({
 
   return (
     <div className="flex flex-col gap-4 border rounded-md p-4">
-      <h3>Preview message</h3>
+      <h3>{t("deploy.settings.bubble.previewMessageTheme.heading")}</h3>
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2 justify-between">
-          <p>Background color</p>
+          <p>{t("deploy.settings.bubble.previewMessageTheme.backgroundColor.label")}</p>
           <ColorPicker
             defaultValue={
               previewMessageTheme?.backgroundColor ??
@@ -61,7 +63,7 @@ export const PreviewMessageThemeSettings = ({
           />
         </div>
         <div className="flex items-center gap-2 justify-between">
-          <p>Text color</p>
+          <p>{t("deploy.settings.bubble.previewMessageTheme.textColor.label")}</p>
           <ColorPicker
             defaultValue={
               previewMessageTheme?.textColor ?? defaultPreviewMessageTextColor
@@ -70,7 +72,7 @@ export const PreviewMessageThemeSettings = ({
           />
         </div>
         <div className="flex items-center gap-2 justify-between">
-          <p>Close button background</p>
+          <p>{t("deploy.settings.bubble.previewMessageTheme.closeButtonBackground.label")}</p>
           <ColorPicker
             defaultValue={
               previewMessageTheme?.closeButtonBackgroundColor ??
@@ -80,7 +82,7 @@ export const PreviewMessageThemeSettings = ({
           />
         </div>
         <div className="flex items-center gap-2 justify-between">
-          <p>Close icon color</p>
+          <p>{t("deploy.settings.bubble.previewMessageTheme.closeButtonIconColor.label")}</p>
           <ColorPicker
             defaultValue={
               previewMessageTheme?.closeButtonIconColor ??

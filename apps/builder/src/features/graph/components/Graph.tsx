@@ -1,4 +1,5 @@
 import { createId } from "@paralleldrive/cuid2";
+import { useTranslate } from "@tolgee/react";
 import { shouldOpenBlockSettingsOnCreation } from "@typebot.io/blocks-core/helpers";
 import type { BlockV6 } from "@typebot.io/blocks-core/schemas/schema";
 import { GraphNavigation } from "@typebot.io/prisma/enum";
@@ -56,6 +57,7 @@ export const Graph = ({
   className?: string;
   editorContainerRef: React.RefObject<HTMLDivElement | null>;
 }) => {
+  const { t } = useTranslate();
   const {
     draggedBlockType,
     setDraggedBlockType,
@@ -429,7 +431,7 @@ export const Graph = ({
         )}
         <Tooltip.Root>
           <Tooltip.TriggerButton
-            aria-label="Open variables drawer"
+            aria-label={t("editor.graph.openVariablesDrawer.label")}
             size="icon"
             onClick={() => setRightPanel("variables")}
             variant="secondary"
@@ -437,12 +439,12 @@ export const Graph = ({
           >
             <CodeIcon />
           </Tooltip.TriggerButton>
-          <Tooltip.Popup>Open variables drawer</Tooltip.Popup>
+          <Tooltip.Popup>{t("editor.graph.openVariablesDrawer.label")}</Tooltip.Popup>
         </Tooltip.Root>
         <div className="flex-1 border-[.5px] border-gray-4 -my-1.5 mx-1.5" />
         <Tooltip.Root>
           <Tooltip.TriggerButton
-            aria-label={"Zoom out"}
+            aria-label={t("editor.graph.zoomOut.label")}
             onClick={zoomOut}
             size="icon"
             variant="secondary"
@@ -450,11 +452,11 @@ export const Graph = ({
           >
             <MinusSignIcon />
           </Tooltip.TriggerButton>
-          <Tooltip.Popup>Zoom out</Tooltip.Popup>
+          <Tooltip.Popup>{t("editor.graph.zoomOut.label")}</Tooltip.Popup>
         </Tooltip.Root>
         <Tooltip.Root>
           <Tooltip.TriggerButton
-            aria-label={"Zoom in"}
+            aria-label={t("editor.graph.zoomIn.label")}
             onClick={zoomIn}
             size="icon"
             variant="secondary"
@@ -462,7 +464,7 @@ export const Graph = ({
           >
             <PlusSignIcon />
           </Tooltip.TriggerButton>
-          <Tooltip.Popup>Zoom in</Tooltip.Popup>
+          <Tooltip.Popup>{t("editor.graph.zoomIn.label")}</Tooltip.Popup>
         </Tooltip.Root>
         <div className="flex-1 border-[.5px] border-gray-4 -my-1.5 mx-1.5" />
         <BoardMenuButton />

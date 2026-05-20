@@ -21,6 +21,7 @@ import { Progress } from "@typebot.io/ui/components/Progress";
 import { Switch } from "@typebot.io/ui/components/Switch";
 import { unparse } from "papaparse";
 import { useRef, useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { TimeFilterSelect } from "@/features/analytics/components/TimeFilterSelect";
 import { useTypebot } from "@/features/editor/providers/TypebotProvider";
 import { orpc, orpcClient } from "@/lib/queryClient";
@@ -42,6 +43,7 @@ export const ExportAllResultsDialog = ({
   onClose,
   timeFilter,
 }: Props) => {
+  const { t } = useTranslate();
   const { typebot, publishedTypebot } = useTypebot();
   const workspaceId = typebot?.workspaceId;
   const typebotId = typebot?.id;
@@ -243,13 +245,13 @@ export const ExportAllResultsDialog = ({
           />
         ) : isExportLoading ? (
           <div className="flex flex-col gap-2">
-            <p>Fetching all results...</p>
+            <p>{t("results.table.fetchingAllResults.label")}</p>
             <Progress.Root value={exportProgressValue} />
           </div>
         ) : (
           <div className="flex flex-col gap-4">
             <Field.Root>
-              <Field.Label>Time period</Field.Label>
+              <Field.Label>{t("results.table.timePeriod.label")}</Field.Label>
               <TimeFilterSelect
                 timeFilter={selectedTimeFilter}
                 onTimeFilterChange={setTimeFilterOverride}
@@ -262,9 +264,9 @@ export const ExportAllResultsDialog = ({
                 onCheckedChange={setAreDeletedBlocksIncluded}
               />
               <Field.Label>
-                Include deleted blocks{" "}
+                {t("results.table.includeDeletedBlocks.label")}{" "}
                 <MoreInfoTooltip>
-                  Blocks from previous bot version that have been deleted
+                  {t("results.table.includeDeletedBlocks.tooltip")}
                 </MoreInfoTooltip>
               </Field.Label>
             </Field.Root>

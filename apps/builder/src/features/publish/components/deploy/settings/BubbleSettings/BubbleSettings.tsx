@@ -2,6 +2,7 @@ import type { BubbleProps } from "@typebot.io/js";
 import { isLight } from "@typebot.io/lib/hexToRgb";
 import { isDefined, isSvgSrc } from "@typebot.io/lib/utils";
 import { cx } from "@typebot.io/ui/lib/cva";
+import { useTranslate } from "@tolgee/react";
 import { PreviewMessageSettings } from "./PreviewMessageSettings";
 import { ThemeSettings } from "./ThemeSettings";
 
@@ -22,6 +23,7 @@ export const BubbleSettings = ({
   onThemeChange,
   onPreviewMessageChange,
 }: Props) => {
+  const { t } = useTranslate();
   const updatePreviewMessage = (
     previewMessage: BubbleProps["previewMessage"],
   ) => {
@@ -40,7 +42,7 @@ export const BubbleSettings = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <h3>Chat bubble settings</h3>
+      <h3>{t("deploy.settings.bubble.heading")}</h3>
       <div className="flex flex-col pl-4 gap-4">
         <PreviewMessageSettings
           defaultAvatar={defaultPreviewMessageAvatar}
@@ -51,7 +53,7 @@ export const BubbleSettings = ({
           onChange={updateTheme}
           isPreviewMessageEnabled={isDefined(previewMessage)}
         />
-        <h4>Preview:</h4>
+        <h4>{t("deploy.settings.bubble.preview.heading")}</h4>
         <div className="flex flex-col gap-2 items-end">
           {isDefined(previewMessage) && (
             <div
@@ -64,7 +66,7 @@ export const BubbleSettings = ({
                 <img
                   className="rounded-full size-10 object-cover"
                   src={previewMessage.avatarUrl}
-                  alt="Preview message avatar"
+                  alt={t("deploy.settings.bubble.previewMessageAvatar.alt")}
                 />
               )}
               <p style={{ color: theme?.previewMessage?.textColor }}>
@@ -108,7 +110,7 @@ const BubbleIcon = ({
         strokeWidth="2px"
         fill="transparent"
       >
-        <title>Bubble Settings</title>
+        <title>{t("deploy.settings.bubble.bubbleSettings.title")}</title>
         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
       </svg>
     );
@@ -128,7 +130,7 @@ const BubbleIcon = ({
               : "size-[28px]"
             : "size-full object-cover rounded-full",
         )}
-        alt="Bubble button icon"
+        alt={t("deploy.settings.bubble.bubbleIcon.alt")}
       />
     );
   return (

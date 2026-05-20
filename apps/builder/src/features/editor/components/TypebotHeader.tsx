@@ -294,7 +294,7 @@ const RightElements = ({
           size="sm"
         >
           <Copy01Icon />
-          Duplicate
+          {t("editor.header.duplicateButton.label")}
         </ButtonLink>
       )}
       {currentUserMode === "write" && <PublishButton size="sm" />}

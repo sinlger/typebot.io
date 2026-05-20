@@ -1,5 +1,6 @@
 import type { ButtonProps } from "@typebot.io/ui/components/Button";
 import { Button } from "@typebot.io/ui/components/Button";
+import { useTranslate } from "@tolgee/react";
 import { motion } from "motion/react";
 import { StandardIllustration } from "./illustrations/StandardIllustration";
 
@@ -7,6 +8,7 @@ export const StandardMenuButton = ({
   className,
   ...props
 }: Omit<ButtonProps, "render" | "size" | "variant" | "iconStyle">) => {
+  const { t } = useTranslate();
   return (
     <Button
       className="flex flex-col font-normal whitespace-normal gap-6 flex-1 h-60 items-center"
@@ -24,9 +26,9 @@ export const StandardMenuButton = ({
     >
       <StandardIllustration />
       <div className="flex flex-col gap-1">
-        <p className="text-lg font-medium">Standard</p>
+        <p className="text-lg font-medium">{t("deploy.embedType.standard.label")}</p>
         <p className="text-sm text-gray-500 leading-[1.2]">
-          Embed in a container on your site
+          {t("deploy.embedType.standard.description")}
         </p>
       </div>
     </Button>

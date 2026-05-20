@@ -6,6 +6,7 @@ import {
 } from "@typebot.io/results/timeFilter";
 import { Badge } from "@typebot.io/ui/components/Badge";
 import { useRouter } from "next/router";
+import { useTranslate } from "@tolgee/react";
 import { useQueryState } from "nuqs";
 import { useMemo } from "react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -21,6 +22,7 @@ import { ResultsTableContainer } from "./ResultsTableContainer";
 const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
 export const ResultsPage = () => {
+  const { t } = useTranslate();
   const router = useRouter();
   const { workspace } = useWorkspace();
   const { typebot, publishedTypebot } = useTypebot();
@@ -61,11 +63,11 @@ export const ResultsPage = () => {
         title={
           router.pathname.endsWith("analytics")
             ? typebot?.name
-              ? `${typebot.name} | Analytics`
-              : "Analytics"
+              ? `${typebot.name} | ${t("results.page.seo.analytics.title")}`
+              : t("results.page.seo.analytics.title")
             : typebot?.name
-              ? `${typebot.name} | Results`
-              : "Results"
+              ? `${typebot.name} | ${t("results.page.seo.results.title")}`
+              : t("results.page.seo.results.title")
         }
       />
       <TypebotHeader />
@@ -86,7 +88,7 @@ export const ResultsPage = () => {
                 },
               }}
             >
-              <p>Submissions</p>
+              <p>{t("results.page.submissions.label")}</p>
               {(stats?.totalStarts ?? 0) > 0 && (
                 <Badge colorScheme="orange" className="ml-1">
                   {stats?.totalStarts}

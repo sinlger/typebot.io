@@ -27,12 +27,13 @@ export const DebouncedTextarea = ({
 export const DebouncedTextareaWithVariablesButton = ({
   debounceTimeout = 1000,
   className,
+  defaultValue,
   ...props
 }: Props) => {
   const ref = useRef<HTMLTextAreaElement>(null);
   const { value, setValue, injectVariable } = useInjectableInputValue({
     ref,
-    defaultValue: props.defaultValue,
+    defaultValue,
   });
 
   const handleChange = (value: string) => {

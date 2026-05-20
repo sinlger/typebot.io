@@ -8,6 +8,7 @@ import { DragDropVerticalIcon } from "@typebot.io/ui/icons/DragDropVerticalIcon"
 import { ViewIcon } from "@typebot.io/ui/icons/ViewIcon";
 import { ViewOffSlashIcon } from "@typebot.io/ui/icons/ViewOffSlashIcon";
 import { cx } from "@typebot.io/ui/lib/cva";
+import { useTranslate } from "@tolgee/react";
 import { HeaderIcon } from "../HeaderIcon";
 
 type Props = {
@@ -25,6 +26,7 @@ export const ColumnSettings = ({
   columnOrder,
   onColumnOrderChange,
 }: Props) => {
+  const { t } = useTranslate();
   const toggleColumnVisibility = (id: string) => () => {
     setColumnVisibility({
       ...columnVisibility,
@@ -38,7 +40,7 @@ export const ColumnSettings = ({
 
   return (
     <div className="flex flex-col gap-2">
-      <p className="font-medium text-sm">Shown in table:</p>
+      <p className="font-medium text-sm">{t("results.table.shownInTable.label")}</p>
       <DragDropProvider
         onDragEnd={(event) => {
           onColumnOrderChange([

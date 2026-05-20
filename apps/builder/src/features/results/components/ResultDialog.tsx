@@ -12,6 +12,7 @@ import { Dialog } from "@typebot.io/ui/components/Dialog";
 import { LoaderCircleIcon } from "@typebot.io/ui/icons/LoaderCircleIcon";
 import { cx } from "@typebot.io/ui/lib/cva";
 import { type JSX, useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { useTypebot } from "@/features/editor/providers/TypebotProvider";
 import { orpc } from "@/lib/queryClient";
 import { useResults } from "../ResultsProvider";
@@ -23,6 +24,7 @@ type Props = {
 };
 
 export const ResultDialog = ({ resultId, onClose }: Props) => {
+  const { t } = useTranslate();
   const [tab, setTab] = useState<"transcript" | "answers">("transcript");
   const { tableData, resultHeader } = useResults();
   const { typebot } = useTypebot();
@@ -33,7 +35,7 @@ export const ResultDialog = ({ resultId, onClose }: Props) => {
   return (
     <Dialog.Root isOpen={isDefined(result)} onClose={onClose}>
       <Dialog.Popup className="max-w-2xl">
-        <Dialog.Title>Result</Dialog.Title>
+        <Dialog.Title>{t("results.dialog.title")}</Dialog.Title>
         <Dialog.CloseButton />
 
         <div className="flex items-center gap-2">
@@ -42,9 +44,9 @@ export const ResultDialog = ({ resultId, onClose }: Props) => {
             onClick={() => setTab("transcript")}
             size="sm"
           >
-            Transcript
+            {t("results.dialog.transcriptTab.label")}
             <Badge colorScheme="orange" className="ml-1">
-              Beta
+              {t("results.dialog.betaBadge.label")}
             </Badge>
           </Button>
           <Button
@@ -52,7 +54,7 @@ export const ResultDialog = ({ resultId, onClose }: Props) => {
             onClick={() => setTab("answers")}
             size="sm"
           >
-            Answers
+            {t("results.dialog.answersTab.label")}
           </Button>
         </div>
         {tab === "transcript" && typebot?.id && resultId && (
@@ -77,6 +79,7 @@ const Transcript = ({
   typebotId: string;
   resultId: string;
 }) => {
+  const { t } = useTranslate();
   const {
     data: transcriptData,
     isLoading: isTranscriptLoading,
@@ -92,14 +95,14 @@ const Transcript = ({
     return (
       <div className="flex flex-col gap-2 items-center py-8">
         <LoaderCircleIcon className="animate-spin" />
-        <p>Loading transcript...</p>
+        <p>{t("results.dialog.loadingTranscript.label")}</p>
       </div>
     );
 
   if (isTranscriptError)
     return (
       <div className="border rounded-md p-4 bg-gray-1 text-sm text-gray-11">
-        <p>Could not load transcript.</p>
+        <p>{t("results.dialog.couldNotLoadTranscript.label")}</p>
         {transcriptError?.message && (
           <p className="mt-1 text-xs">{transcriptError.message}</p>
         )}

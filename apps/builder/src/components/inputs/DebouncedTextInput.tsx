@@ -14,6 +14,7 @@ type Props = Omit<InputProps, "defaultValue"> & {
 export const DebouncedTextInputWithVariablesButton = ({
   debounceTimeout = 1000,
   className,
+  defaultValue,
   ...props
 }: Omit<Props, "onValueChange"> & {
   onValueChange: (value: string, eventDetails?: ChangeEventDetails) => void;
@@ -21,7 +22,7 @@ export const DebouncedTextInputWithVariablesButton = ({
   const ref = useRef<HTMLInputElement>(null);
   const { value, setValue, injectVariable } = useInjectableInputValue({
     ref,
-    defaultValue: props.defaultValue,
+    defaultValue,
   });
 
   const handleChange = (value: string, eventDetails: ChangeEventDetails) => {

@@ -23,6 +23,7 @@ import { Popover } from "@typebot.io/ui/components/Popover";
 import { cx } from "@typebot.io/ui/lib/cva";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { ZodError, type ZodObject } from "zod";
 import { fromZodError } from "zod-validation-error";
 import { TextBubbleEditor } from "@/features/blocks/bubbles/textBubble/components/TextBubbleEditor";
@@ -56,6 +57,7 @@ export const BlockNode = ({
   indices: { blockIndex: number; groupIndex: number };
   onMouseDown?: (blockNodePosition: NodePosition, block: BlockV6) => void;
 }) => {
+  const { t } = useTranslate();
   const { pathname, query } = useRouter();
   const {
     setConnectingIds,
@@ -182,12 +184,12 @@ export const BlockNode = ({
         const validationError = fromZodError(error);
         console.error(validationError);
         toast({
-          title: "Could not convert block",
+          title: t("editor.graph.couldNotConvertBlock.title"),
           description: validationError.toString(),
         });
       } else {
         toast({
-          title: "An error occured while converting the block",
+          title: t("editor.graph.errorConvertingBlock.title"),
           description: error instanceof Error ? error.message : "Unknown error",
         });
       }

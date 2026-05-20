@@ -1,6 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import { omit } from "@typebot.io/lib/utils";
 import { useMemo, useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { useTypebot } from "@/features/editor/providers/TypebotProvider";
 import { useUser } from "@/features/user/hooks/useUser";
 import { useEventListener } from "@/hooks/useEventListener";
@@ -19,6 +20,7 @@ type Props = {
 };
 
 export const DrawingEdge = ({ connectingIds }: Props) => {
+  const { t } = useTranslate();
   const { graphPosition, setConnectingIds } = useGraph();
   const {
     sourceEndpointYOffsets: sourceEndpoints,
@@ -38,7 +40,7 @@ export const DrawingEdge = ({ connectingIds }: Props) => {
       onError: (error) => {
         toast({
           description: error instanceof Error ? error.message : "Unknown error",
-          title: "While generating group title",
+          title: t("editor.graph.whileGeneratingGroupTitle.title"),
         });
         console.error("Failed to generate group title:", error);
       },

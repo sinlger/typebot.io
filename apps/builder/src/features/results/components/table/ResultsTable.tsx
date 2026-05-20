@@ -16,6 +16,7 @@ import { Button } from "@typebot.io/ui/components/Button";
 import { Checkbox } from "@typebot.io/ui/components/Checkbox";
 import { TextAlignLeftIcon } from "@typebot.io/ui/icons/TextAlignLeftIcon";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { TimeFilterSelect } from "@/features/analytics/components/TimeFilterSelect";
 import { useTypebot } from "@/features/editor/providers/TypebotProvider";
 import { HeaderIcon } from "../HeaderIcon";
@@ -48,6 +49,7 @@ export const ResultsTable = ({
   onLogOpenIndex,
   onResultExpandIndex,
 }: ResultsTableProps) => {
+  const { t } = useTranslate();
   const { updateTypebot, currentUserMode } = useTypebot();
   const [rowSelection, setRowSelection] = useState<Record<string, boolean>>({});
   const bottomElement = useRef<HTMLDivElement | null>(null);
@@ -157,7 +159,7 @@ export const ResultsTable = ({
         header: () => (
           <div className="flex items-center gap-2">
             <TextAlignLeftIcon />
-            <p>Logs</p>
+            <p>{t("results.table.logsColumn.label")}</p>
           </div>
         ),
         cell: ({ row }) => (
@@ -166,7 +168,7 @@ export const ResultsTable = ({
             size="sm"
             onClick={onLogOpenIndex(row.index)}
           >
-            See logs
+            {t("results.table.seeLogs.label")}
           </Button>
         ),
       },

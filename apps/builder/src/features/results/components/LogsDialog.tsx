@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { isDefined } from "@typebot.io/lib/utils";
 import type { Log } from "@typebot.io/logs/schemas";
+import { useTranslate } from "@tolgee/react";
 import { Accordion } from "@typebot.io/ui/components/Accordion";
 import { Badge } from "@typebot.io/ui/components/Badge";
 import { Dialog } from "@typebot.io/ui/components/Dialog";
@@ -14,6 +15,7 @@ type Props = {
   onClose: () => void;
 };
 export const LogsDialog = ({ typebotId, resultId, onClose }: Props) => {
+  const { t } = useTranslate();
   const { data, error } = useQuery(
     orpc.results.getResultLogs.queryOptions({
       input: {
@@ -27,13 +29,13 @@ export const LogsDialog = ({ typebotId, resultId, onClose }: Props) => {
   return (
     <Dialog.Root isOpen={isDefined(resultId)} onClose={onClose}>
       <Dialog.Popup className="max-w-xl">
-        <Dialog.Title>Logs</Dialog.Title>
+        <Dialog.Title>{t("results.logsDialog.title")}</Dialog.Title>
         <Dialog.CloseButton />
         {data?.logs?.map((log) => (
           <LogCard key={log.id} log={log} />
         ))}
         {!error && !data && <LoaderCircleIcon className="animate-spin" />}
-        {data && (data.logs ?? []).length === 0 && <p>No logs found.</p>}
+        {data && (data.logs ?? []).length === 0 && <p>{t("results.logsDialog.noLogs.label")}</p>}
       </Dialog.Popup>
     </Dialog.Root>
   );
@@ -81,29 +83,30 @@ const StatusTag = ({
   status: string;
   className?: string;
 }) => {
+  const { t } = useTranslate();
   switch (status) {
     case "error":
       return (
         <Badge colorScheme={"red"} className={className}>
-          Fail
+          {t("results.logsDialog.statusFail.label")}
         </Badge>
       );
     case "warning":
       return (
         <Badge colorScheme={"orange"} className={className}>
-          Warn
+          {t("results.logsDialog.statusWarn.label")}
         </Badge>
       );
     case "info":
       return (
         <Badge colorScheme={"blue"} className={className}>
-          Info
+          {t("results.logsDialog.statusInfo.label")}
         </Badge>
       );
     default:
       return (
         <Badge colorScheme={"green"} className={className}>
-          Ok
+          {t("results.logsDialog.statusOk.label")}
         </Badge>
       );
   }

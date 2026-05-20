@@ -5,6 +5,7 @@ import type {
   PreviewMessageTheme,
 } from "@typebot.io/js";
 import { Accordion } from "@typebot.io/ui/components/Accordion";
+import { useTranslate } from "@tolgee/react";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { ButtonThemeSettings } from "./ButtonThemeSettings";
 import { PreviewMessageThemeSettings } from "./PreviewMessageThemeSettings";
@@ -20,6 +21,7 @@ export const ThemeSettings = ({
   theme,
   onChange,
 }: Props) => {
+  const { t } = useTranslate();
   const updateButtonTheme = (button?: ButtonTheme) => {
     onChange({
       ...theme,
@@ -44,16 +46,16 @@ export const ThemeSettings = ({
   return (
     <Accordion.Root>
       <Accordion.Item>
-        <Accordion.Trigger>Theme</Accordion.Trigger>
+        <Accordion.Trigger>{t("deploy.settings.bubble.theme.label")}</Accordion.Trigger>
         <Accordion.Panel>
           <div className="flex items-center gap-2 justify-between">
-            <p>Placement</p>
+            <p>{t("deploy.settings.bubble.theme.placement.label")}</p>
             <BasicSelect
               value={theme?.placement}
               defaultValue="right"
               items={[
-                { value: "right", label: "Right" },
-                { value: "left", label: "Left" },
+                { value: "right", label: t("deploy.settings.bubble.theme.placement.right") },
+                { value: "left", label: t("deploy.settings.bubble.theme.placement.left") },
               ]}
               onChange={updatePlacement}
             />

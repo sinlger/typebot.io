@@ -11,6 +11,7 @@ import {
 } from "@typebot.io/variables/extractVariablesFromObject";
 import type { Variable } from "@typebot.io/variables/schemas";
 import { useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { useShallow } from "zustand/react/shallow";
 import { useTypebot } from "@/features/editor/providers/TypebotProvider";
 import { useEventListener } from "@/hooks/useEventListener";
@@ -33,6 +34,7 @@ export const ElementsSelectionMenu = ({
   focusedElementIds,
   blurElements,
 }: Props) => {
+  const { t } = useTranslate();
   const [mousePosition, setMousePosition] = useState<Coordinates>();
   const { typebot, deleteGroups, pasteGroups, pasteEvents, deleteEvents } =
     useTypebot();
@@ -133,7 +135,7 @@ export const ElementsSelectionMenu = ({
     copy: () => {
       const clipboard = handleCopy();
       if (!clipboard) return;
-      toast({ description: "Elements copied to clipboard", type: "info" });
+      toast({ description: t("editor.graph.elementsCopied.description"), type: "info" });
     },
     cut: () => {
       handleCopy();
@@ -168,13 +170,13 @@ export const ElementsSelectionMenu = ({
       }}
     >
       <span className="text-sm text-orange-10 font-medium px-2 inline-flex items-center select-none">
-        {focusedElementIds.length} selected
+        {t("editor.graph.selectedCount.label", { count: focusedElementIds.length })}
       </span>
       <Button
-        aria-label="Copy"
+        aria-label={t("copy")}
         onClick={() => {
           handleCopy();
-          toast({ description: "Groups copied to clipboard", type: "info" });
+          toast({ description: t("editor.graph.groupsCopied.description"), type: "info" });
         }}
         className="size-8"
         size="icon"
@@ -184,7 +186,7 @@ export const ElementsSelectionMenu = ({
       </Button>
 
       <Button
-        aria-label="Delete"
+        aria-label={t("delete")}
         className="size-8"
         size="icon"
         variant="secondary"

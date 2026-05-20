@@ -56,7 +56,7 @@ export const SharePage = () => {
 
     if (!isCorrectlyFormatted) {
       toast({
-        description: "Can only contain lowercase letters, numbers and dashes.",
+        description: t("sharePage.toast.lowercaseDashesOnly"),
       });
       return false;
     }
@@ -67,7 +67,7 @@ export const SharePage = () => {
     const isLongerThanAllowed = publicId.length >= 4;
     if (!isLongerThanAllowed && isCloudProdInstance()) {
       toast({
-        description: "Should be longer than 4 characters",
+        description: t("sharePage.toast.tooShort"),
       });
       return false;
     }
@@ -78,7 +78,7 @@ export const SharePage = () => {
       publicId,
     });
     if (!isAvailable) {
-      toast({ description: "ID is already taken" });
+      toast({ description: t("sharePage.toast.idTaken") });
       return false;
     }
 
@@ -92,7 +92,7 @@ export const SharePage = () => {
 
   return (
     <div className="flex flex-col pb-40">
-      <Seo title={typebot?.name ? `${typebot.name} | Share` : "Share"} />
+      <Seo title={typebot?.name ? `${typebot.name} | ${t("sharePage.seo.title")}` : t("sharePage.seo.title")} />
       <TypebotHeader />
       <div className="flex h-full w-full justify-center">
         <div className="flex flex-col max-w-5xl w-full pt-10 gap-10">
@@ -118,7 +118,7 @@ export const SharePage = () => {
                     />
                     <Button
                       className="size-7 [&_svg]:size-3"
-                      aria-label="Remove custom URL"
+                      aria-label={t("sharePage.removeUrl.ariaLabel")}
                       size="icon"
                       onClick={() => handleCustomDomainChange(null)}
                     >
@@ -156,7 +156,7 @@ export const SharePage = () => {
 
             {typebot && (
               <div className="flex flex-col gap-4 flex-1/2">
-                <h2>Site preview metadata</h2>
+                <h2>{t("sharePage.sitePreviewMetadata.heading")}</h2>
                 <LinkPreviewMetadataForm
                   workspaceId={typebot.workspaceId}
                   typebotId={typebot.id}

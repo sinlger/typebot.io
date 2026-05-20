@@ -4,6 +4,7 @@ import { Field } from "@typebot.io/ui/components/Field";
 import { Input } from "@typebot.io/ui/components/Input";
 import { Switch } from "@typebot.io/ui/components/Switch";
 import { useState } from "react";
+import { useTranslate } from "@tolgee/react";
 import { BasicNumberInput } from "@/components/inputs/BasicNumberInput";
 
 type Props = {
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
+  const { t } = useTranslate();
   const [isPreviewMessageEnabled, setIsPreviewMessageEnabled] = useState(false);
   const [previewMessage, setPreviewMessage] = useState<PreviewMessageParams>();
   const [autoShowDelay, setAutoShowDelay] = useState(10);
@@ -68,7 +70,7 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
   return (
     <div className="flex flex-col gap-4">
       <Field.Root className="flex-row justify-between">
-        <Field.Label>Preview message</Field.Label>
+        <Field.Label>{t("deploy.settings.bubble.previewMessage.label")}</Field.Label>
         <Switch
           checked={isPreviewMessageEnabled}
           onCheckedChange={updatePreviewMessageCheck}
@@ -77,29 +79,29 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
       {isPreviewMessageEnabled && (
         <div className="flex flex-col pl-4 gap-4">
           <div className="flex items-center gap-2 justify-between">
-            <p>Avatar URL</p>
+            <p>{t("deploy.settings.bubble.previewMessage.avatarUrl.label")}</p>
             <Input
               onValueChange={updateAvatarUrl}
               value={previewMessage?.avatarUrl}
-              placeholder={"Paste image link (.png, .jpg)"}
+              placeholder={t("deploy.settings.bubble.previewMessage.avatarUrl.placeholder")}
             />
           </div>
           <div className="flex items-center gap-2 justify-between">
-            <p>Message</p>
+            <p>{t("deploy.settings.bubble.previewMessage.message.label")}</p>
             <Input
               onValueChange={updateMessage}
               value={previewMessage?.message}
             />
           </div>
           <div className="flex items-center gap-2">
-            <p>Auto show</p>
+            <p>{t("deploy.settings.bubble.previewMessage.autoShow.label")}</p>
             <Switch
               checked={isAutoShowEnabled}
               onCheckedChange={updateAutoShowDelayCheck}
             />
             {isAutoShowEnabled && (
               <>
-                <p>After</p>
+                <p>{t("deploy.settings.bubble.previewMessage.after.label")}</p>
                 <BasicNumberInput
                   className="max-w-40"
                   defaultValue={autoShowDelay}
@@ -108,7 +110,7 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
                   }
                   withVariableButton={false}
                 />
-                <p>seconds</p>
+                <p>{t("seconds")}</p>
               </>
             )}
           </div>
