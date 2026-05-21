@@ -269,12 +269,12 @@
               {
                 "id": "i522qy1dzn42qy7rkw79uk9n",
                 "role": "user",
-                "content": "You are a marketing agency, and I am a prospect.\n\nAsk simple questions to understand my needs."
+                "content": "你是一家营销机构，而我是一位潜在客户。\n\n请通过提问来了解我的需求。"
               },
               {
                 "id": "d6a2qfsdo251q0iopi77gtpd",
                 "role": "assistant",
-                "content": "What company do you work for?"
+                "content": "你在哪家公司工作？"
               },
               {
                 "id": "ba3objkk8jp8piyxlbe9diu6",
@@ -284,7 +284,7 @@
               {
                 "id": "bqqgavh96n76l9ma987km87y",
                 "role": "assistant",
-                "content": "What services are you interested in?"
+                "content": "你对哪些服务感兴趣？"
               },
               {
                 "id": "zdsbh8wrmhqop24kg3t9b08f",

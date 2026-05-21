@@ -152,11 +152,11 @@
             "messages": [
               {
                 "role": "system",
-                "content": "Your only job is to collect user's business information. Nothing else.\n\nProvide short answers with a casual tone.\n\nTry to reassure the user and always end your message by asking what's the current user's business."
+                "content": "你唯一的任务是收集用户的业务信息，仅此而已。\n\n用随意的语气提供简短的回答。\n\n尽量让用户放心，并始终以询问用户当前的业务来结束你的消息。"
               },
               {
                 "role": "assistant",
-                "content": "What's your current business?"
+                "content": "你当前从事什么业务？"
               },
               { "role": "user", "content": "{{last utterance}}" }
             ],
@@ -194,7 +194,7 @@
             "messages": [
               {
                 "role": "system",
-                "content": "The user provides a short description of the business is in.\n\nReply enthusiastically, with a casual tone a single sentence, without a follow up question"
+                "content": "用户提供了他所在业务的简短描述。\n\n用随意的语气热情地回复一句话，不要追问。"
               },
               { "role": "user", "content": "{{last utterance}}" }
             ],
@@ -280,11 +280,11 @@
             "messages": [
               {
                 "role": "system",
-                "content": "Your only job is to collect user's average revenue per year. Nothing else.\n\nProvide short answers with a casual tone.\n\nTry to reassure the user and always end your message by asking what's the current user's average yearly revenu."
+                "content": "你唯一的任务是收集用户的年平均收入，仅此而已。\n\n用随意的语气提供简短的回答。\n\n尽量让用户放心，并始终以询问用户当前的平均年收入来结束你的消息。"
               },
               {
                 "role": "assistant",
-                "content": "What's your average revenue per year?"
+                "content": "你的年平均收入是多少？"
               },
               { "role": "user", "content": "{{last utterance}}" }
             ],
@@ -322,7 +322,7 @@
             "messages": [
               {
                 "role": "system",
-                "content": "The user provides his average yearly revenue with his business\n\nReply enthusiastically, with a casual tone a single sentence, without a follow up question"
+                "content": "用户提供了他的业务年平均收入\n\n用随意的语气热情地回复一句话，不要追问。"
               },
               { "role": "user", "content": "{{last utterance}}" }
             ],
@@ -399,7 +399,7 @@
             "messages": [
               {
                 "role": "system",
-                "content": "The user tells us the reason why he's interested in SEO\n\nReply enthusiastically, with a casual tone a single sentence, without a follow up question"
+                "content": "用户告诉我们他对 SEO 感兴趣的原因\n\n用随意的语气热情地回复一句话，不要追问。"
               },
               { "role": "user", "content": "{{last utterance}}" }
             ],

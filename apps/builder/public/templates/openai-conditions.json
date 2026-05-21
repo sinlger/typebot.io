@@ -46,11 +46,11 @@
             "messages": [
               {
                 "role": "system",
-                "content": "You are helpful assistant doing customer support for a software called Typebot.\n\nIf the user is asking a question about his account, please say \"ACCOUNT\".\n\nIf the user wants to talk to a human, please say \"HUMAN\".\n\nOtherwise, say \"OK\""
+                "content": "你是一个名为 Typebot 的软件客服助手。\n\n如果用户询问关于账户的问题，请回复 \"ACCOUNT\"。\n\n如果用户想与人工客服交谈，请回复 \"HUMAN\"。\n\n否则，回复 \"OK\""
               },
-              { "role": "user", "content": "Can I talk to a human?" },
+              { "role": "user", "content": "我可以和人工客服交谈吗？" },
               { "role": "assistant", "content": "HUMAN" },
-              { "role": "user", "content": "I need to check my account" },
+              { "role": "user", "content": "我需要查看我的账户" },
               { "role": "assistant", "content": "ACCOUNT" },
               { "role": "user", "content": "{{User Message}}" }
             ],
