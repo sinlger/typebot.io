@@ -140,6 +140,7 @@ function Description({
         "text-muted-foreground *:[a]:hover:text-foreground text-sm text-balance md:text-pretty *:[a]:underline *:[a]:underline-offset-3",
         className,
       )}
+      render={<div />}
       {...props}
     />
   );

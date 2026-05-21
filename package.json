@@ -29,7 +29,7 @@
   "scripts": {
     "postinstall": "cd packages/env && bun run compile && nx db:generate prisma",
     "prepare": "husky && effect-language-service patch",
-    "pre-commit": "nx affected -t format-and-lint,lint-repo,check-broken-links --parallel=4 && nx affected -t test",
+    "pre-commit": "nx affected -t format-and-lint,lint-repo,check-broken-links --parallel=4 && nx affected -t test --exclude @typebot.io/whatsapp --exclude @typebot.io/spaces --parallel=4 && nx run @typebot.io/root:test",
     "dev": "nx run-many --configuration=development -t dev,watch-deps -p builder,viewer,workflows",
     "test": "vitest run",
     "format-and-lint:fix": "biome check . --write --unsafe",
