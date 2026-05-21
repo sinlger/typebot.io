@@ -1,15 +1,12 @@
 import type { ChatCompletionOpenAIOptions } from "@typebot.io/blocks-integrations/openai/schema";
+import { useTranslate } from "@tolgee/react";
 import { Accordion } from "@typebot.io/ui/components/Accordion";
 import { Field } from "@typebot.io/ui/components/Field";
 import { BasicNumberInput } from "@/components/inputs/BasicNumberInput";
 import { TableList } from "@/components/TableList";
-import { TextLink } from "@/components/TextLink";
 import { ModelsDropdown } from "../ModelsDropdown";
 import { ChatCompletionMessageItem } from "./ChatCompletionMessageItem";
 import { ChatCompletionResponseItem } from "./ChatCompletionResponseItem";
-
-const apiReferenceUrl =
-  "https://platform.openai.com/docs/api-reference/chat/create";
 
 type Props = {
   options: ChatCompletionOpenAIOptions;
@@ -20,6 +17,7 @@ export const OpenAIChatCompletionSettings = ({
   options,
   onOptionsChange,
 }: Props) => {
+  const { t } = useTranslate();
   const updateModel = (model: string | undefined) => {
     if (!model) return;
     onOptionsChange({
@@ -59,11 +57,7 @@ export const OpenAIChatCompletionSettings = ({
   return (
     <div className="flex flex-col gap-4 pt-2">
       <p className="text-sm" color="gray.500">
-        Read the{" "}
-        <TextLink href={apiReferenceUrl} isExternal>
-          API reference
-        </TextLink>{" "}
-        to better understand the available options.
+        {t("blocks.integrations.openai.chatCompletion.readReference.label")}
       </p>
       {options.credentialsId && (
         <>
@@ -78,7 +72,7 @@ export const OpenAIChatCompletionSettings = ({
           <Accordion.Root>
             <Accordion.Item>
               <Accordion.Trigger>
-                <p className="w-full text-left">Messages</p>
+                <p className="w-full text-left">{t("blocks.integrations.openai.chatCompletion.messages.label")}</p>
               </Accordion.Trigger>
 
               <Accordion.Panel>
@@ -87,7 +81,7 @@ export const OpenAIChatCompletionSettings = ({
                   onItemsChange={updateMessages}
                   isOrdered
                   hasDefaultItem
-                  addLabel="Add message"
+                  addLabel={t("blocks.integrations.openai.chatCompletion.addMessage.label")}
                 >
                   {(props) => <ChatCompletionMessageItem {...props} />}
                 </TableList>
@@ -95,11 +89,11 @@ export const OpenAIChatCompletionSettings = ({
             </Accordion.Item>
             <Accordion.Item>
               <Accordion.Trigger>
-                <p className="w-full text-left">Advanced settings</p>
+                <p className="w-full text-left">{t("blocks.integrations.openai.chatCompletion.advancedSettings.label")}</p>
               </Accordion.Trigger>
               <Accordion.Panel>
                 <Field.Root>
-                  <Field.Label>Temperature</Field.Label>
+                  <Field.Label>{t("blocks.integrations.openai.chatCompletion.temperature.label")}</Field.Label>
                   <BasicNumberInput
                     placeholder="1"
                     max={2}
@@ -113,7 +107,7 @@ export const OpenAIChatCompletionSettings = ({
             </Accordion.Item>
             <Accordion.Item>
               <Accordion.Trigger>
-                <p className="w-full text-left">Save answer</p>
+                <p className="w-full text-left">{t("blocks.integrations.openai.chatCompletion.saveAnswer.label")}</p>
               </Accordion.Trigger>
               <Accordion.Panel>
                 <TableList

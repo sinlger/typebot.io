@@ -1,5 +1,6 @@
 import type { RowsFilterComparison } from "@typebot.io/blocks-integrations/googleSheets/schema";
 import { ComparisonOperators } from "@typebot.io/conditions/constants";
+import { useTranslate } from "@tolgee/react";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { DebouncedTextInputWithVariablesButton } from "@/components/inputs/DebouncedTextInput";
 import type { TableListItemProps } from "@/components/TableList";
@@ -9,6 +10,7 @@ export const RowsFilterComparisonItem = ({
   columns,
   onItemChange,
 }: TableListItemProps<RowsFilterComparison> & { columns: string[] }) => {
+  const { t } = useTranslate();
   const handleColumnSelect = (column: string | undefined) => {
     if (column === item.column) return;
     onItemChange({ ...item, column });
@@ -33,21 +35,21 @@ export const RowsFilterComparisonItem = ({
         value={item.column}
         onChange={handleColumnSelect}
         items={columns}
-        placeholder="Select a column"
+        placeholder={t("blocks.integrations.common.selectColumn.placeholder")}
       />
       <BasicSelect
         className="w-full"
         value={item.comparisonOperator}
         onChange={handleSelectComparisonOperator}
         items={Object.values(ComparisonOperators)}
-        placeholder="Select an operator"
+        placeholder={t("blocks.integrations.common.selectOperator.placeholder")}
       />
       {item.comparisonOperator !== ComparisonOperators.IS_SET &&
         item.comparisonOperator !== ComparisonOperators.IS_EMPTY && (
           <DebouncedTextInputWithVariablesButton
             defaultValue={item.value ?? ""}
             onValueChange={handleChangeValue}
-            placeholder="Type a value..."
+            placeholder={t("blocks.integrations.common.typeValue.placeholder")}
           />
         )}
     </div>

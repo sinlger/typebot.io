@@ -1,4 +1,5 @@
 import type { ExtractingCell } from "@typebot.io/blocks-integrations/googleSheets/schema";
+import { useTranslate } from "@tolgee/react";
 import type { Variable } from "@typebot.io/variables/schemas";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { VariablesCombobox } from "@/components/inputs/VariablesCombobox";
@@ -9,6 +10,7 @@ export const CellWithVariableIdStack = ({
   onItemChange,
   columns,
 }: TableListItemProps<ExtractingCell> & { columns: string[] }) => {
+  const { t } = useTranslate();
   const handleColumnSelect = (column: string | undefined) => {
     if (item.column === column) return;
     onItemChange({ ...item, column });
@@ -26,7 +28,7 @@ export const CellWithVariableIdStack = ({
         value={item.column}
         onChange={handleColumnSelect}
         items={columns}
-        placeholder="Select a column"
+        placeholder={t("blocks.integrations.common.selectColumn.placeholder")}
       />
       <VariablesCombobox
         initialVariableId={item.variableId}

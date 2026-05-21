@@ -7,6 +7,7 @@ import { Alert } from "@typebot.io/ui/components/Alert";
 import { ArrowUpRight01Icon } from "@typebot.io/ui/icons/ArrowUpRight01Icon";
 import { CheckmarkSquare02Icon } from "@typebot.io/ui/icons/CheckmarkSquare02Icon";
 import { InformationSquareIcon } from "@typebot.io/ui/icons/InformationSquareIcon";
+import { useTranslate } from "@tolgee/react";
 import { useRef } from "react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { HttpRequestAdvancedConfigForm } from "../../httpRequest/components/HttpRequestAdvancedConfigForm";
@@ -20,6 +21,7 @@ export const ZapierSettings = ({
   block: { id: blockId, options },
   onOptionsChange,
 }: Props) => {
+  const { t } = useTranslate();
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const setLocalWebhook = async (newLocalWebhook: HttpRequest) => {
@@ -48,14 +50,14 @@ export const ZapierSettings = ({
           <Alert.Root variant="success">
             <CheckmarkSquare02Icon />
             <Alert.Description>
-              Your zap is correctly configured 🚀
+              {t("blocks.integrations.zapier.settings.successAlert.description")}
             </Alert.Description>
           </Alert.Root>
         ) : (
           <Alert.Root>
             <InformationSquareIcon />
             <Alert.Description>
-              Head up to Zapier to configure this block:
+              {t("blocks.integrations.zapier.settings.infoAlert.description")}
             </Alert.Description>
             <Alert.Action>
               <ButtonLink

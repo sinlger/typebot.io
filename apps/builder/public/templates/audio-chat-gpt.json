@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "qfrz5nwm63g12dajsjxothb5",
-      "title": "User input",
+      "title": "用户输入",
       "graphCoordinates": { "x": 105.17, "y": -56.29 },
       "blocks": [
         {
@@ -61,7 +61,7 @@
     },
     {
       "id": "a6ymhjwtkqwp8t127plz8qmk",
-      "title": "ChatGPT reply",
+      "title": "ChatGPT 回复",
       "graphCoordinates": { "x": 475.42, "y": -56.66 },
       "blocks": [
         {
@@ -121,7 +121,7 @@
     },
     {
       "id": "c5f00f3oclwi1srcz10jjt9u",
-      "title": "Intro",
+      "title": "开场",
       "graphCoordinates": { "x": -222.61, "y": -54.39 },
       "blocks": [
         {
@@ -129,7 +129,7 @@
           "type": "openai",
           "options": {
             "action": "Create speech",
-            "input": "Hi there! How can I help?",
+            "input": "你好！有什么可以帮你的？",
             "voice": "alloy",
             "saveUrlInVariableId": "vxw4quja426402hvhtm33tsp3"
           }

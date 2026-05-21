@@ -3,6 +3,7 @@ import { Accordion } from "@typebot.io/ui/components/Accordion";
 import { Field } from "@typebot.io/ui/components/Field";
 import { MoreInfoTooltip } from "@typebot.io/ui/components/MoreInfoTooltip";
 import { BasicNumberInput } from "@/components/inputs/BasicNumberInput";
+import { useTranslate } from "@tolgee/react";
 import { DebouncedTextInputWithVariablesButton } from "@/components/inputs/DebouncedTextInput";
 
 type Props = {
@@ -14,6 +15,7 @@ export const GoogleAnalyticsSettings = ({
   options,
   onOptionsChange,
 }: Props) => {
+  const { t } = useTranslate();
   const updateTrackingId = (trackingId: string) =>
     onOptionsChange({ ...options, trackingId });
 
@@ -41,66 +43,65 @@ export const GoogleAnalyticsSettings = ({
     <div className="flex flex-col gap-4">
       <Field.Root>
         <Field.Label>
-          Measurement ID:
+          {t("blocks.integrations.googleAnalytics.settings.measurementId.label")}
           <MoreInfoTooltip>
-            Can be found by clicking on your data stream in Google Analytics
-            dashboard
+            {t("blocks.integrations.googleAnalytics.settings.measurementId.tooltip")}
           </MoreInfoTooltip>
         </Field.Label>
         <DebouncedTextInputWithVariablesButton
           defaultValue={options?.trackingId}
-          placeholder="G-123456..."
+          placeholder={t("blocks.integrations.googleAnalytics.settings.measurementId.placeholder")}
           onValueChange={updateTrackingId}
         />
       </Field.Root>
       <Field.Root>
-        <Field.Label>Event action:</Field.Label>
+        <Field.Label>{t("blocks.integrations.googleAnalytics.settings.eventAction.label")}</Field.Label>
         <DebouncedTextInputWithVariablesButton
           defaultValue={options?.action}
-          placeholder="Example: conversion"
+          placeholder={t("blocks.integrations.googleAnalytics.settings.eventAction.placeholder")}
           onValueChange={updateAction}
         />
       </Field.Root>
       <Accordion.Root>
         <Accordion.Item>
           <Accordion.Trigger>
-            <div className="flex-1 text-left">Advanced</div>
+            <div className="flex-1 text-left">{t("blocks.integrations.googleAnalytics.settings.advanced.label")}</div>
           </Accordion.Trigger>
           <Accordion.Panel>
             <Field.Root>
-              <Field.Label>Event category:</Field.Label>
+              <Field.Label>{t("blocks.integrations.googleAnalytics.settings.eventCategory.label")}</Field.Label>
               <DebouncedTextInputWithVariablesButton
                 defaultValue={options?.category}
-                placeholder="Example: Typebot"
+                placeholder={t("blocks.integrations.googleAnalytics.settings.eventCategory.placeholder")}
                 onValueChange={updateCategory}
               />
             </Field.Root>
             <Field.Root>
-              <Field.Label>Event label:</Field.Label>
+              <Field.Label>{t("blocks.integrations.googleAnalytics.settings.eventLabel.label")}</Field.Label>
               <DebouncedTextInputWithVariablesButton
                 defaultValue={options?.label}
-                placeholder="Example: Campaign Z"
+                placeholder={t("blocks.integrations.googleAnalytics.settings.eventLabel.placeholder")}
                 onValueChange={updateLabel}
               />
             </Field.Root>
             <Field.Root>
-              <Field.Label>Event value:</Field.Label>
+              <Field.Label>{t("blocks.integrations.googleAnalytics.settings.eventValue.label")}</Field.Label>
               <BasicNumberInput
                 defaultValue={options?.value}
                 onValueChange={updateValue}
-                placeholder="Example: 0"
+                placeholder={t("blocks.integrations.googleAnalytics.settings.eventValue.placeholder")}
               />
             </Field.Root>
             <Field.Root>
               <Field.Label>
-                Send to:
+                {t("blocks.integrations.googleAnalytics.settings.sendTo.label")}
                 <MoreInfoTooltip>
-                  Useful to send a conversion event to Google Ads
+                  {t("blocks.integrations.googleAnalytics.settings.sendTo.tooltip")}
                 </MoreInfoTooltip>
               </Field.Label>
               <DebouncedTextInputWithVariablesButton
                 defaultValue={options?.sendTo?.toString()}
-                placeholder="Example: AW-123456789"
+                placeholder={t("blocks.integrations.googleAnalytics.settings.sendTo.placeholder")}
                 onValueChange={updateSendTo}
               />
             </Field.Root>

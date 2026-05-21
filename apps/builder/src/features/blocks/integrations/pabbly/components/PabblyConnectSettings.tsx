@@ -5,6 +5,7 @@ import { Input } from "@typebot.io/ui/components/Input";
 import { ArrowUpRight01Icon } from "@typebot.io/ui/icons/ArrowUpRight01Icon";
 import { CheckmarkSquare02Icon } from "@typebot.io/ui/icons/CheckmarkSquare02Icon";
 import { InformationSquareIcon } from "@typebot.io/ui/icons/InformationSquareIcon";
+import { useTranslate } from "@tolgee/react";
 import { useRef } from "react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { HttpRequestAdvancedConfigForm } from "../../httpRequest/components/HttpRequestAdvancedConfigForm";
@@ -18,6 +19,7 @@ export const PabblyConnectSettings = ({
   block: { id: blockId, options },
   onOptionsChange,
 }: Props) => {
+  const { t } = useTranslate();
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const setLocalWebhook = async (newLocalWebhook: HttpRequest) => {
@@ -49,14 +51,14 @@ export const PabblyConnectSettings = ({
           <Alert.Root variant="success">
             <CheckmarkSquare02Icon />
             <Alert.Description>
-              Your scenario is correctly configured 🚀
+              {t("blocks.integrations.pabbly.settings.successAlert.description")}
             </Alert.Description>
           </Alert.Root>
         ) : (
           <Alert.Root>
             <InformationSquareIcon />
             <Alert.Description>
-              Head up to Pabbly Connect to get the webhook URL:
+              {t("blocks.integrations.pabbly.settings.infoAlert.description")}
             </Alert.Description>
             <Alert.Action>
               <ButtonLink
@@ -71,7 +73,7 @@ export const PabblyConnectSettings = ({
           </Alert.Root>
         )}
         <Input
-          placeholder="Paste webhook URL..."
+          placeholder={t("blocks.integrations.pabbly.settings.webhookUrl.placeholder")}
           defaultValue={url ?? ""}
           onValueChange={updateUrl}
         />

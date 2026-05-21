@@ -1,17 +1,17 @@
 export type TemplateUseCase =
-  | "Lead Generation"
-  | "Customer Support"
-  | "AI Chat"
-  | "Quiz & Survey"
-  | "E-commerce"
-  | "Lead Magnets"
-  | "Onboarding"
-  | "Entertainment";
+  | "线索生成"
+  | "客户支持"
+  | "AI 聊天"
+  | "问答与调查"
+  | "电商"
+  | "线索磁铁"
+  | "用户引导"
+  | "娱乐";
 
 export type TemplateFeature =
-  | "AI-powered"
-  | "Payment integration"
-  | "File upload";
+  | "AI 驱动"
+  | "支付集成"
+  | "文件上传";
 
 export type TemplateCategory = "marketing" | "product";
 
@@ -47,654 +47,652 @@ const templateUpdatedAt = "2026-01-05";
 
 const templateDefinitions = [
   {
-    name: "Lead Generation",
+    name: "线索生成",
     emoji: "🤝",
     fileName: "lead-gen.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "Lead Generation",
+    useCase: "线索生成",
     features: [],
-    summary:
-      "A lead generation chatbot template that captures contact details and qualifies prospects fast.",
+    summary: "一个线索生成聊天机器人模板，可快速捕获联系信息并筛选潜在客户。",
     description:
-      "Use this chatbot to greet new visitors and ask short, friendly questions. It collects the right contact details and intent so your sales team can follow up. The flow is short, clear, and easy to customize.",
+      "使用此聊天机器人欢迎新访客，提出简短友好的问题。它收集正确的联系信息和意向，以便您的销售团队跟进。流程简短、清晰且易于自定义。",
     highlights: [
       {
-        title: "Goal",
-        description: "Turn visitors into qualified leads.",
+        title: "目标",
+        description: "将访客转化为合格的线索。",
       },
       {
-        title: "Flow",
-        description: "Warm welcome, quick questions, then contact details.",
+        title: "流程",
+        description: "友好问候、快速提问、收集联系信息。",
       },
       {
-        title: "Result",
-        description: "Cleaner lead data for faster follow up.",
+        title: "成果",
+        description: "更清晰的线索数据，助力快速跟进。",
       },
     ],
-    bestFor: ["B2B websites", "Agency inquiry pages", "Service businesses"],
-    collects: ["Name", "Email", "Company or role", "Project needs"],
+    bestFor: ["B2B 网站", "代理商咨询页", "服务型企业"],
+    collects: ["姓名", "邮箱", "公司或职位", "项目需求"],
   },
   {
-    name: "Customer Support",
+    name: "客户支持",
     emoji: "😍",
     fileName: "customer-support.json",
     updatedAt: templateUpdatedAt,
     category: "product",
-    useCase: "Customer Support",
+    useCase: "客户支持",
     features: [],
     summary:
-      "A customer support chatbot template that answers common questions and routes issues.",
+      "一个客户支持聊天机器人模板，可回答常见问题并分流问题。",
     description:
-      "Handle repeat questions before they reach your inbox. This chatbot shares clear answers and guides people to the right help path. When needed, it routes complex issues to a human.",
+      "在问题到达收件箱之前处理重复提问。此聊天机器人分享清晰的答案并引导用户找到正确的帮助路径。必要时将复杂问题转接给人工客服。",
     highlights: [
       {
-        title: "Goal",
-        description: "Reduce support load while helping users faster.",
+        title: "目标",
+        description: "减轻客服压力，同时更快地帮助用户。",
       },
       {
-        title: "Flow",
-        description:
-          "Pick a topic, get a clear answer, then escalate if needed.",
+        title: "流程",
+        description: "选择主题、获取答案、必要时升级处理。",
       },
       {
-        title: "Result",
-        description: "Fewer tickets and happier customers.",
+        title: "成果",
+        description: "更少的工单和更满意的客户。",
       },
     ],
-    bestFor: ["SaaS help centers", "E-commerce support", "Internal IT"],
-    collects: ["Issue type", "Order or account info", "Contact email"],
+    bestFor: ["SaaS 帮助中心", "电商客服", "内部 IT 支持"],
+    collects: ["问题类型", "订单或账户信息", "联系邮箱"],
   },
   {
-    name: "Quiz",
+    name: "趣味问答",
     emoji: "🕹️",
     fileName: "quiz.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "Quiz & Survey",
+    useCase: "问答与调查",
     features: [],
     summary:
-      "A quiz chatbot template that asks fun questions and shows a clear result.",
+      "一个趣味问答聊天机器人模板，可提出有趣的问题并展示清晰的结果。",
     description:
-      "Run a short quiz that keeps people engaged from start to finish. The chatbot asks one question at a time and shows a result at the end. Use it for education, marketing, or entertainment.",
+      "运行一个简短的问答活动，让用户从头到尾保持参与。聊天机器人每次提问一个问题，最后展示结果。适用于教育、营销或娱乐场景。",
     highlights: [
       {
-        title: "Goal",
-        description: "Engage visitors with a short, friendly quiz.",
+        title: "目标",
+        description: "通过简短有趣的问答吸引访客。",
       },
       {
-        title: "Flow",
-        description: "One question at a time, then a result page.",
+        title: "流程",
+        description: "逐题提问，最后展示结果页。",
       },
       {
-        title: "Result",
-        description: "Higher completion rates and clear outcomes.",
+        title: "成果",
+        description: "更高的完成率和清晰的评估结果。",
       },
     ],
-    bestFor: ["Marketing campaigns", "Course creators", "Communities"],
-    collects: ["Quiz answers", "Score or result", "Optional email"],
+    bestFor: ["营销活动", "课程创作者", "社群运营"],
+    collects: ["问答答案", "得分或结果", "可选邮箱"],
   },
   {
-    name: "Lead Scoring",
+    name: "线索评分",
     emoji: "🏆",
     fileName: "lead-scoring.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "Lead Generation",
+    useCase: "线索生成",
     features: [],
     summary:
-      "A lead scoring chatbot template that qualifies prospects with a simple score.",
+      "一个线索评分聊天机器人模板，通过简单评分筛选潜在客户。",
     description:
-      "Ask the right questions to learn fit, budget, and timing. The chatbot scores each lead so your team knows who to call first. It keeps the experience short and clear for visitors.",
+      "提出合适的问题来了解匹配度、预算和时机。聊天机器人为每条线索评分，让您的团队知道谁应该优先联系。对访客而言体验简短明了。",
     highlights: [
       {
-        title: "Goal",
-        description: "Score leads so sales can focus on the best fits.",
+        title: "目标",
+        description: "对线索进行评分，让销售聚焦最优客户。",
       },
       {
-        title: "Flow",
-        description: "Short qualification questions, then a clear score.",
+        title: "流程",
+        description: "简短筛选问题，输出清晰评分。",
       },
       {
-        title: "Result",
-        description: "Better prioritization and faster response time.",
+        title: "成果",
+        description: "更优的优先级排序和更快的响应时间。",
       },
     ],
-    bestFor: ["Sales teams", "High intent products", "Agencies"],
-    collects: ["Use case", "Budget range", "Timeline", "Contact info"],
+    bestFor: ["销售团队", "高意向产品", "代理商"],
+    collects: ["使用场景", "预算范围", "时间规划", "联系信息"],
   },
   {
-    name: "Lead Magnet",
+    name: "线索磁铁",
     emoji: "🧲",
     fileName: "lead-magnet.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "Lead Magnets",
+    useCase: "线索磁铁",
     features: [],
     summary:
-      "A lead magnet chatbot template that delivers a download in exchange for contact info.",
+      "一个线索磁铁聊天机器人模板，通过交换联系信息提供下载资源。",
     description:
-      "Offer a guide, checklist, or template with a friendly chat. The chatbot asks for an email and delivers the asset right away. It also tags interest so you can follow up with the right message.",
+      "通过友好的对话提供指南、清单或模板。聊天机器人索要邮箱后立即交付资源。同时标记兴趣标签，以便后续发送针对性的跟进信息。",
     highlights: [
       {
-        title: "Goal",
-        description: "Grow your list with a useful asset.",
+        title: "目标",
+        description: "通过有价值的资源扩充邮件列表。",
       },
       {
-        title: "Flow",
-        description: "Offer value, collect email, deliver the file.",
+        title: "流程",
+        description: "提供价值、收集邮箱、交付文件。",
       },
       {
-        title: "Result",
-        description: "More signups with clear intent data.",
+        title: "成果",
+        description: "更多注册量，附带清晰的意向数据。",
       },
     ],
-    bestFor: ["Content marketers", "Creators", "Newsletter growth"],
-    collects: ["Email", "Interest topic"],
+    bestFor: ["内容营销人员", "创作者", "邮件列表增长"],
+    collects: ["邮箱", "感兴趣的话题"],
   },
   {
-    name: "Product Recommendation",
+    name: "产品推荐",
     emoji: "🍫",
     fileName: "product-recommendation.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "E-commerce",
+    useCase: "电商",
     features: [],
     backgroundColor: "#010000",
     summary:
-      "A product recommendation chatbot template that matches shoppers to the right item.",
+      "一个产品推荐聊天机器人模板，帮购物者找到合适的商品。",
     description:
-      "Help shoppers choose by asking a few simple preference questions. The chatbot narrows options and recommends a product that fits. It can also link straight to a product page.",
+      "通过几个简单的偏好问题帮助购物者做出选择。聊天机器人缩小选项范围并推荐匹配的产品。还可以直接链接到产品详情页。",
     highlights: [
       {
-        title: "Goal",
-        description: "Guide shoppers to the best product faster.",
+        title: "目标",
+        description: "更快地引导购物者找到最佳产品。",
       },
       {
-        title: "Flow",
-        description: "Ask preferences, then recommend a match.",
+        title: "流程",
+        description: "询问偏好，推荐匹配项。",
       },
       {
-        title: "Result",
-        description: "Higher conversion and fewer drop offs.",
+        title: "成果",
+        description: "更高的转化率和更低的跳出率。",
       },
     ],
-    bestFor: ["E-commerce stores", "Subscription boxes", "Retail catalogs"],
-    collects: ["Preferences", "Budget", "Use case"],
+    bestFor: ["电商店铺", "订阅盒子", "零售目录"],
+    collects: ["偏好", "预算", "使用场景"],
   },
   {
-    name: "NPS Survey",
+    name: "NPS 调查",
     emoji: "⭐",
     fileName: "nps.json",
     updatedAt: templateUpdatedAt,
     category: "product",
-    useCase: "Quiz & Survey",
+    useCase: "问答与调查",
     features: [],
     summary:
-      "An NPS survey chatbot template that measures loyalty in under a minute.",
+      "一个 NPS 调查聊天机器人模板，一分钟内衡量用户忠诚度。",
     description:
-      "Ask the classic NPS question in a friendly, lightweight flow. The chatbot collects a score and a short reason. Use it to track customer sentiment and spot issues early.",
+      "以友好轻量的互动流程询问经典的 NPS 问题。聊天机器人收集评分和简短原因。可用于追踪客户满意度并及早发现问题。",
     highlights: [
       {
-        title: "Goal",
-        description: "Measure loyalty with a quick NPS flow.",
+        title: "目标",
+        description: "通过快速 NPS 流程衡量用户忠诚度。",
       },
       {
-        title: "Flow",
-        description: "Score first, then ask for a short reason.",
+        title: "流程",
+        description: "先评分，然后询问简短原因。",
       },
       {
-        title: "Result",
-        description: "Clear feedback you can act on fast.",
+        title: "成果",
+        description: "可快速行动的清晰反馈。",
       },
     ],
-    bestFor: ["SaaS teams", "Customer success", "Product feedback"],
-    collects: ["NPS score", "Reason", "Optional contact"],
+    bestFor: ["SaaS 团队", "客户成功", "产品反馈"],
+    collects: ["NPS 评分", "原因", "可选联系方式"],
   },
   {
-    name: "User Onboarding",
+    name: "用户引导",
     emoji: "🧑‍🚀",
     fileName: "onboarding.json",
     updatedAt: templateUpdatedAt,
     category: "product",
-    useCase: "Onboarding",
+    useCase: "用户引导",
     features: [],
     summary:
-      "A user onboarding chatbot template that guides new users through first steps.",
+      "一个用户引导聊天机器人模板，引导新用户完成初始步骤。",
     description:
-      "Welcome new users and show them the key actions to take. The chatbot shares resources and checks progress step by step. It reduces drop off and helps users succeed faster.",
+      "欢迎新用户并展示关键操作。聊天机器人分享资源并逐步检查进度。减少流失并帮助用户更快获得成功。",
     highlights: [
       {
-        title: "Goal",
-        description: "Help new users reach their first win.",
+        title: "目标",
+        description: "帮助新用户达成首次成功。",
       },
       {
-        title: "Flow",
-        description: "Short checklist, links, and progress prompts.",
+        title: "流程",
+        description: "简短清单、链接和进度提醒。",
       },
       {
-        title: "Result",
-        description: "Better activation and lower churn.",
+        title: "成果",
+        description: "更好的激活率和更低的流失率。",
       },
     ],
-    bestFor: ["SaaS products", "New customer training", "Internal tools"],
-    collects: ["Role", "Goal", "Progress status"],
+    bestFor: ["SaaS 产品", "新客户培训", "内部工具"],
+    collects: ["角色", "目标", "进度状态"],
   },
   {
-    name: "Digital Product Payment",
+    name: "数字产品支付",
     emoji: "🖼️",
     fileName: "digital-product-payment.json",
     updatedAt: templateUpdatedAt,
-    useCase: "E-commerce",
-    features: ["Payment integration"],
+    useCase: "电商",
+    features: ["支付集成"],
     summary:
-      "A digital product payment chatbot template that sells a download inside chat.",
+      "一个数字产品支付聊天机器人模板，在对话中完成下载销售。",
     description:
-      "Sell a digital product in a short chat flow. The chatbot explains the offer, collects an email, and takes payment. It is built for a smooth, focused checkout.",
+      "通过简短聊天流程销售数字产品。聊天机器人介绍产品、收集邮箱并完成支付。专为流畅专注的结账体验而设计。",
     highlights: [
       {
-        title: "Goal",
-        description: "Convert interest into a paid download.",
+        title: "目标",
+        description: "将兴趣转化为付费下载。",
       },
       {
-        title: "Flow",
-        description: "Pitch, collect email, then take payment.",
+        title: "流程",
+        description: "介绍产品、收集邮箱、完成支付。",
       },
       {
-        title: "Result",
-        description: "A fast checkout that feels personal.",
+        title: "成果",
+        description: "快速且个性化的结账体验。",
       },
     ],
-    bestFor: ["Creators", "Courses", "Digital downloads"],
-    collects: ["Email", "Payment", "Receipt preference"],
+    bestFor: ["创作者", "在线课程", "数字下载"],
+    collects: ["邮箱", "支付信息", "收据偏好"],
   },
   {
-    name: "FAQ",
+    name: "常见问题",
     emoji: "💬",
     fileName: "faq.json",
     updatedAt: templateUpdatedAt,
     category: "product",
-    useCase: "Customer Support",
+    useCase: "客户支持",
     features: [],
-    summary: "An FAQ chatbot template that surfaces the right answer fast.",
+    summary: "一个常见问题聊天机器人模板，快速呈现正确答案。",
     description:
-      "Turn your top questions into a fast self serve experience. The chatbot guides users to the right topic and shares clear answers. It keeps support tickets low and satisfaction high.",
+      "将您的高频问题转化为快速自助服务体验。聊天机器人引导用户找到正确的主题并分享清晰的答案。降低客服工单量，提高满意度。",
     highlights: [
       {
-        title: "Goal",
-        description: "Answer common questions in seconds.",
+        title: "目标",
+        description: "几秒内回答常见问题。",
       },
       {
-        title: "Flow",
-        description: "Choose a topic, read a clear answer, then continue.",
+        title: "流程",
+        description: "选择主题、阅读答案、继续提问。",
       },
       {
-        title: "Result",
-        description: "Less support load and faster help.",
+        title: "成果",
+        description: "更少的客服压力和更快的帮助。",
       },
     ],
-    bestFor: ["Help centers", "Product teams", "Service businesses"],
-    collects: ["Question topic", "Was this helpful"],
+    bestFor: ["帮助中心", "产品团队", "服务型企业"],
+    collects: ["问题主题", "是否有帮助"],
   },
   {
-    name: "Movie Recommendation",
+    name: "电影推荐",
     emoji: "🍿",
     fileName: "movie-recommendation.json",
     updatedAt: templateUpdatedAt,
-    useCase: "Entertainment",
+    useCase: "娱乐",
     features: [],
     summary:
-      "A movie recommendation chatbot template that suggests films based on taste.",
+      "一个电影推荐聊天机器人模板，根据喜好推荐影片。",
     description:
-      "Ask about mood, genre, and favorites, then suggest a movie. The chatbot keeps it light and fun. Great for demos or entertainment flows.",
+      "询问心情、类型和喜好，然后推荐一部电影。聊天机器人保持轻松有趣的氛围。非常适合演示或娱乐互动。",
     highlights: [
       {
-        title: "Goal",
-        description: "Deliver a fun, fast recommendation.",
+        title: "目标",
+        description: "提供有趣快速的推荐。",
       },
       {
-        title: "Flow",
-        description: "Collect preferences, then suggest a pick.",
+        title: "流程",
+        description: "收集偏好，推荐片单。",
       },
       {
-        title: "Result",
-        description: "A playful experience users can share.",
+        title: "成果",
+        description: "用户乐于分享的有趣体验。",
       },
     ],
-    bestFor: ["Community sites", "Demos", "Entertainment brands"],
-    collects: ["Genre", "Mood", "Favorite movie"],
+    bestFor: ["社区网站", "产品演示", "娱乐品牌"],
+    collects: ["类型", "心情", "喜欢的电影"],
   },
   {
-    name: "Basic ChatGPT",
+    name: "基础 ChatGPT",
     emoji: "🤖",
     fileName: "basic-chat-gpt.json",
     updatedAt: templateUpdatedAt,
-    useCase: "AI Chat",
-    features: ["AI-powered"],
+    useCase: "AI 聊天",
+    features: ["AI 驱动"],
     summary:
-      "A basic AI chatbot template for open ended questions and quick answers.",
+      "一个基础 AI 聊天机器人模板，用于开放式问答和快速回复。",
     description:
-      "Start with a simple AI chat experience powered by ChatGPT. The chatbot answers questions and keeps the conversation open. Use it as a base for more advanced AI flows.",
+      "通过 ChatGPT 提供简单的 AI 聊天体验。聊天机器人回答问题并保持对话开放。可作为高级 AI 流程的基础模板。",
     highlights: [
       {
-        title: "Goal",
-        description: "Launch a fast, flexible AI chat experience.",
+        title: "目标",
+        description: "快速启动灵活 AI 聊天体验。",
       },
       {
-        title: "Flow",
-        description: "User asks, AI responds, repeat.",
+        title: "流程",
+        description: "用户提问，AI 回复，持续对话。",
       },
       {
-        title: "Result",
-        description: "A clean baseline you can extend.",
+        title: "成果",
+        description: "可扩展的纯净基础模板。",
       },
     ],
-    bestFor: ["AI demos", "Internal helpers", "FAQ experiments"],
-    collects: ["User question"],
+    bestFor: ["AI 演示", "内部助手", "FAQ 实验"],
+    collects: ["用户问题"],
   },
   {
-    name: "Audio ChatGPT",
+    name: "音频 ChatGPT",
     emoji: "🤖",
     fileName: "audio-chat-gpt.json",
     updatedAt: templateUpdatedAt,
-    useCase: "AI Chat",
-    features: ["AI-powered", "File upload"],
+    useCase: "AI 聊天",
+    features: ["AI 驱动", "文件上传"],
     summary:
-      "An audio AI chatbot template that lets users talk and hear replies.",
+      "一个音频 AI 聊天机器人模板，支持语音输入和语音回复。",
     description:
-      "Let users send voice input and get spoken output. The chatbot handles audio upload and response in one flow. It is great for hands free or accessibility use cases.",
+      "让用户发送语音输入并获得语音输出。聊天机器人在一个流程中处理音频上传和回复。非常适合免提或无障碍使用场景。",
     highlights: [
       {
-        title: "Goal",
-        description: "Make AI chat work with voice.",
+        title: "目标",
+        description: "让 AI 聊天支持语音交互。",
       },
       {
-        title: "Flow",
-        description: "Record audio, upload, then hear a reply.",
+        title: "流程",
+        description: "录制音频、上传、收听回复。",
       },
       {
-        title: "Result",
-        description: "A friendly voice experience that feels modern.",
+        title: "成果",
+        description: "友好现代的语音体验。",
       },
     ],
-    bestFor: ["Voice experiences", "Accessibility", "Mobile demos"],
-    collects: ["Audio message", "Optional text"],
+    bestFor: ["语音体验", "无障碍场景", "移动端演示"],
+    collects: ["音频消息", "可选文本"],
   },
   {
-    name: "ChatGPT Personas",
+    name: "ChatGPT 角色",
     emoji: "🎭",
     fileName: "chat-gpt-personas.json",
     updatedAt: templateUpdatedAt,
-    useCase: "AI Chat",
-    features: ["AI-powered"],
+    useCase: "AI 聊天",
+    features: ["AI 驱动"],
     summary:
-      "An AI persona chatbot template that lets users pick a personality.",
+      "一个 AI 角色聊天机器人模板，让用户选择不同的个性风格。",
     description:
-      "Offer multiple AI personas with clear styles or roles. The chatbot asks who the user wants to talk to and sets the tone. It is a fun way to explore AI behavior.",
+      "提供多个具有鲜明风格或角色的 AI 角色。聊天机器人询问用户想和谁对话并设定相应语气。这是一种探索 AI 行为的有趣方式。",
     highlights: [
       {
-        title: "Goal",
-        description: "Show how AI tone can change by role.",
+        title: "目标",
+        description: "展示 AI 语气如何随角色变化。",
       },
       {
-        title: "Flow",
-        description: "Pick a persona, then start the chat.",
+        title: "流程",
+        description: "选择角色，开始对话。",
       },
       {
-        title: "Result",
-        description: "A playful, memorable AI demo.",
+        title: "成果",
+        description: "有趣且令人印象深刻的 AI 演示。",
       },
     ],
-    bestFor: ["Demos", "Education", "Brand voices"],
-    collects: ["Persona choice", "User question"],
+    bestFor: ["产品演示", "教育场景", "品牌声音"],
+    collects: ["角色选择", "用户问题"],
   },
   {
-    name: "Lead Gen with AI",
+    name: "AI 线索生成",
     emoji: "🦾",
     fileName: "lead-gen-ai.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "Lead Generation",
-    features: ["AI-powered"],
+    useCase: "线索生成",
+    features: ["AI 驱动"],
     summary:
-      "An AI lead generation chatbot template that qualifies leads with smart follow ups.",
+      "一个 AI 线索生成聊天机器人模板，通过智能跟进筛选潜在客户。",
     description:
-      "Use AI to ask better follow up questions during lead capture. The chatbot adapts based on responses and keeps the flow short. It delivers richer lead context to your team.",
+      "在线索捕获过程中使用 AI 提出更好的跟进问题。聊天机器人根据回答自适应调整，保持流程简短。为团队提供更丰富的线索上下文。",
     highlights: [
       {
-        title: "Goal",
-        description: "Collect leads with more useful context.",
+        title: "目标",
+        description: "收集更有价值的线索信息。",
       },
       {
-        title: "Flow",
-        description: "Short questions with AI follow ups.",
+        title: "流程",
+        description: "简短提问配合 AI 智能跟进。",
       },
       {
-        title: "Result",
-        description: "Higher quality leads and cleaner handoff.",
+        title: "成果",
+        description: "更高质量的线索和更清晰的交接。",
       },
     ],
-    bestFor: ["Sales teams", "B2B products", "Agencies"],
-    collects: ["Goal", "Budget", "Timeline", "Contact info"],
+    bestFor: ["销售团队", "B2B 产品", "代理商"],
+    collects: ["目标", "预算", "时间规划", "联系信息"],
   },
   {
-    name: "Insurance Offer",
+    name: "保险报价",
     emoji: "🐶",
     fileName: "dog-insurance-offer.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "E-commerce",
+    useCase: "电商",
     features: [],
     summary:
-      "An insurance offer chatbot template that matches users to the right plan.",
+      "一个保险报价聊天机器人模板，帮用户找到合适的方案。",
     description:
-      "Gather basic details and recommend the best option. The chatbot keeps questions simple and clear. It works well for quote requests and policy comparisons.",
+      "收集基本信息并推荐最佳方案。聊天机器人保持问题简单明了。适用于报价请求和方案比较。",
     highlights: [
       {
-        title: "Goal",
-        description: "Guide users to the right coverage option.",
+        title: "目标",
+        description: "引导用户选择最合适的保障方案。",
       },
       {
-        title: "Flow",
-        description: "Ask key details, then present an offer.",
+        title: "流程",
+        description: "询问关键信息，呈现推荐方案。",
       },
       {
-        title: "Result",
-        description: "More qualified quote requests.",
+        title: "成果",
+        description: "更多高质量的报价请求。",
       },
     ],
-    bestFor: ["Insurance brokers", "Quote funnels", "Lead capture"],
-    collects: ["Coverage needs", "Household details", "Contact info"],
+    bestFor: ["保险经纪人", "报价漏斗", "线索捕获"],
+    collects: ["保障需求", "家庭信息", "联系信息"],
   },
   {
-    name: "OpenAI Conditions",
+    name: "OpenAI 条件逻辑",
     emoji: "🧠",
     fileName: "openai-conditions.json",
     updatedAt: templateUpdatedAt,
-    useCase: "AI Chat",
-    features: ["AI-powered"],
+    useCase: "AI 聊天",
+    features: ["AI 驱动"],
     summary:
-      "An AI conditional logic chatbot template that routes users based on intent.",
+      "一个 AI 条件逻辑聊天机器人模板，根据用户意图进行分流。",
     description:
-      "Use AI to detect intent and trigger the right path. The chatbot can branch based on natural language instead of rigid rules. It is a good starting point for smart routing.",
+      "使用 AI 检测用户意图并触发正确的对话路径。聊天机器人可根据自然语言进行分支，而非固定规则。是智能路由的良好起点。",
     highlights: [
       {
-        title: "Goal",
-        description: "Route users based on what they ask.",
+        title: "目标",
+        description: "根据用户提问内容进行路由分发。",
       },
       {
-        title: "Flow",
-        description: "Capture intent, then send to the right branch.",
+        title: "流程",
+        description: "捕获意图，分发到正确分支。",
       },
       {
-        title: "Result",
-        description: "Smarter flows with less manual logic.",
+        title: "成果",
+        description: "更智能的流程，更少的手动逻辑。",
       },
     ],
-    bestFor: ["Support triage", "Lead routing", "Product discovery"],
-    collects: ["User message", "Detected intent"],
+    bestFor: ["客服分流", "线索路由", "产品发现"],
+    collects: ["用户消息", "检测到的意图"],
   },
   {
-    name: "High Ticket Lead Follow-up",
+    name: "高价值线索跟进",
     emoji: "📞",
     fileName: "high-ticket-lead-follow-up.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "Lead Generation",
-    features: ["AI-powered"],
+    useCase: "线索生成",
+    features: ["AI 驱动"],
     summary:
-      "A high ticket lead follow up chatbot template that qualifies serious prospects.",
+      "一个高价值线索跟进聊天机器人模板，筛选真正有购买意向的客户。",
     description:
-      "Follow up after a lead magnet or demo request. The chatbot asks deeper questions about budget, needs, and decision process. It filters out low fit leads and saves time.",
+      "在线索磁铁或演示请求之后进行跟进。聊天机器人深入询问预算、需求和决策流程。过滤掉低匹配度的线索，节省时间。",
     highlights: [
       {
-        title: "Goal",
-        description: "Focus on high fit prospects.",
+        title: "目标",
+        description: "聚焦高匹配度的潜在客户。",
       },
       {
-        title: "Flow",
-        description: "Ask budget, needs, and decision timing.",
+        title: "流程",
+        description: "询问预算、需求和决策时间。",
       },
       {
-        title: "Result",
-        description: "Better qualification with fewer calls.",
+        title: "成果",
+        description: "更精准的筛选，更少的电话沟通。",
       },
     ],
-    bestFor: ["High price services", "Agencies", "Consultants"],
-    collects: ["Budget", "Decision timeline", "Pain points", "Contact info"],
+    bestFor: ["高价服务", "代理商", "咨询顾问"],
+    collects: ["预算", "决策时间", "痛点", "联系信息"],
   },
   {
-    name: "Quick Carb Calculator",
+    name: "快速碳水计算器",
     emoji: "🏃‍♂️",
     fileName: "quick-carb-calculator.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "Entertainment",
+    useCase: "娱乐",
     features: [],
     summary:
-      "A carb calculator chatbot template that gives quick fueling guidance.",
+      "一个碳水计算聊天机器人模板，快速提供能量补充建议。",
     description:
-      "Ask a few questions, then share a simple carb intake estimate. The chatbot makes the math feel easy and instant. Great for sports or nutrition brands.",
+      "通过几个简单问题给出碳水摄入估算。聊天机器人让计算变得轻松快捷。非常适合运动或营养品牌。",
     highlights: [
       {
-        title: "Goal",
-        description: "Give a quick, useful calculation.",
+        title: "目标",
+        description: "提供快速实用的计算结果。",
       },
       {
-        title: "Flow",
-        description: "Collect basics, then share the estimate.",
+        title: "流程",
+        description: "收集基本信息，展示估算结果。",
       },
       {
-        title: "Result",
-        description: "A helpful tool users can finish fast.",
+        title: "成果",
+        description: "用户能快速完成的有用工具。",
       },
     ],
-    bestFor: ["Sports brands", "Coaches", "Health content"],
-    collects: ["Weight", "Activity level", "Training duration"],
+    bestFor: ["运动品牌", "教练", "健康内容"],
+    collects: ["体重", "活动水平", "训练时长"],
   },
   {
-    name: "Skin Typology",
+    name: "肤质分析",
     emoji: "💆‍♀️",
     fileName: "skin-typology.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "E-commerce",
-    features: ["AI-powered"],
+    useCase: "电商",
+    features: ["AI 驱动"],
     summary:
-      "A skin typology chatbot template that recommends a routine based on answers.",
+      "一个肤质分析聊天机器人模板，根据回答推荐护肤方案。",
     description:
-      "Ask about skin type, concerns, and goals, then give a tailored recommendation. The chatbot feels like a quick consultation. It is ideal for beauty and skincare brands.",
+      "询问肤质、关注点和目标，然后给出个性化推荐。聊天机器人给人一种快速咨询的感觉。非常适合美妆和护肤品牌。",
     highlights: [
       {
-        title: "Goal",
-        description: "Match users to the right routine.",
+        title: "目标",
+        description: "帮用户匹配最合适的护肤方案。",
       },
       {
-        title: "Flow",
-        description: "Ask skin questions, then recommend products.",
+        title: "流程",
+        description: "询问肤质问题，推荐产品。",
       },
       {
-        title: "Result",
-        description: "More confident shoppers and higher intent.",
+        title: "成果",
+        description: "更自信的购物者和更高的购买意向。",
       },
     ],
-    bestFor: ["Skincare brands", "Beauty retailers", "Lead magnets"],
-    collects: ["Skin type", "Concerns", "Routine goals"],
+    bestFor: ["护肤品牌", "美妆零售商", "线索磁铁"],
+    collects: ["肤质", "关注问题", "护肤目标"],
   },
   {
-    name: "OpenAI Assistant Chat",
+    name: "OpenAI 助手聊天",
     emoji: "🤖",
     fileName: "openai-assistant-chat.json",
     updatedAt: templateUpdatedAt,
-    useCase: "AI Chat",
-    features: ["AI-powered"],
+    useCase: "AI 聊天",
+    features: ["AI 驱动"],
     summary:
-      "An OpenAI assistant chatbot template for task focused AI conversations.",
+      "一个 OpenAI 助手聊天机器人模板，用于任务导向的 AI 对话。",
     description:
-      "Start a direct chat with your OpenAI assistant. The chatbot focuses on quick tasks and clear answers. Use it as a base for a smarter helper.",
+      "与您的 OpenAI 助手直接对话。聊天机器人专注于快速完成任务并给出清晰答案。可作为智能助手的起点。",
     highlights: [
       {
-        title: "Goal",
-        description: "Build a focused AI helper fast.",
+        title: "目标",
+        description: "快速构建一个专注的 AI 助手。",
       },
       {
-        title: "Flow",
-        description: "User asks, assistant replies with a task first answer.",
+        title: "流程",
+        description: "用户提问，助手以任务优先的方式回复。",
       },
       {
-        title: "Result",
-        description: "A clean base for AI workflows.",
+        title: "成果",
+        description: "AI 工作流的纯净基础模板。",
       },
     ],
-    bestFor: ["Internal tools", "AI assistants", "Prototypes"],
-    collects: ["Task request"],
+    bestFor: ["内部工具", "AI 助手", "原型开发"],
+    collects: ["任务请求"],
   },
   {
-    name: "Savings Estimator",
+    name: "省钱计算器",
     emoji: "💰",
     fileName: "savings-estimator.json",
     updatedAt: templateUpdatedAt,
     category: "marketing",
-    useCase: "E-commerce",
+    useCase: "电商",
     features: [],
     summary:
-      "A savings estimator chatbot template that shows users what they can save.",
+      "一个省钱计算聊天机器人模板，向用户展示可以节省多少。",
     description:
-      "Ask a few short questions and calculate a simple savings estimate. The chatbot highlights the value of your product in a clear way. It is great for e-commerce or subscriptions.",
+      "通过几个简短问题计算简单的节省估算。聊天机器人以清晰的方式突出产品的价值。非常适合电商或订阅服务。",
     highlights: [
       {
-        title: "Goal",
-        description: "Show value with a quick estimate.",
+        title: "目标",
+        description: "通过快速估算展示产品价值。",
       },
       {
-        title: "Flow",
-        description: "Collect usage data, then show savings.",
+        title: "流程",
+        description: "收集使用数据，展示节省金额。",
       },
       {
-        title: "Result",
-        description: "Stronger value perception and intent.",
+        title: "成果",
+        description: "更强的价值感知和购买意向。",
       },
     ],
-    bestFor: ["E-commerce brands", "Subscription products", "Value pages"],
-    collects: ["Current spend", "Usage frequency", "Contact info"],
+    bestFor: ["电商品牌", "订阅产品", "价值页面"],
+    collects: ["当前支出", "使用频率", "联系信息"],
   },
 ] satisfies TemplateDefinition[];
 
 export const useCases: TemplateUseCase[] = [
-  "Lead Generation",
-  "Customer Support",
-  "AI Chat",
-  "Quiz & Survey",
-  "E-commerce",
-  "Lead Magnets",
-  "Onboarding",
-  "Entertainment",
+  "线索生成",
+  "客户支持",
+  "AI 聊天",
+  "问答与调查",
+  "电商",
+  "线索磁铁",
+  "用户引导",
+  "娱乐",
 ];
 
 export const features: TemplateFeature[] = [
-  "AI-powered",
-  "Payment integration",
-  "File upload",
+  "AI 驱动",
+  "支付集成",
+  "文件上传",
 ];
 
 export const templates: Template[] = templateDefinitions.map(

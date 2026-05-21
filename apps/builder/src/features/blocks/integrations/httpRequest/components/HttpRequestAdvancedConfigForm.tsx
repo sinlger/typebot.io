@@ -18,6 +18,7 @@ import { Button } from "@typebot.io/ui/components/Button";
 import { Field } from "@typebot.io/ui/components/Field";
 import { MoreInfoTooltip } from "@typebot.io/ui/components/MoreInfoTooltip";
 import { Switch } from "@typebot.io/ui/components/Switch";
+import { useTranslate } from "@tolgee/react";
 import { useMemo, useState } from "react";
 import { BasicNumberInput } from "@/components/inputs/BasicNumberInput";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
@@ -50,6 +51,7 @@ export const HttpRequestAdvancedConfigForm = ({
   onOptionsChange,
   onNewTestResponse,
 }: Props) => {
+  const { t } = useTranslate();
   const { typebot, save } = useTypebot();
   const [testResponse, setTestResponse] = useState<string>();
   const [responseKeys, setResponseKeys] = useState<string[]>([]);
@@ -65,8 +67,8 @@ export const HttpRequestAdvancedConfigForm = ({
         onError: (error) => {
           toast({
             description:
-              error instanceof Error ? error.message : "Unknown error",
-            title: "While testing HTTP request",
+              error instanceof Error ? error.message : t("blocks.integrations.httpRequest.toast.unknownError.label"),
+            title: t("blocks.integrations.httpRequest.toast.testingError.title"),
           });
         },
       }),
@@ -131,7 +133,7 @@ export const HttpRequestAdvancedConfigForm = ({
     <>
       <Accordion.Root>
         <Accordion.Item>
-          <Accordion.Trigger>Advanced configuration</Accordion.Trigger>
+          <Accordion.Trigger>{t("blocks.integrations.httpRequest.settings.advancedConfiguration.label")}</Accordion.Trigger>
           <Accordion.Panel>
             <Field.Root className="flex-row items-center">
               <Switch
@@ -142,16 +144,14 @@ export const HttpRequestAdvancedConfigForm = ({
                 onCheckedChange={updateIsExecutedOnClient}
               />
               <Field.Label>
-                Execute on client{" "}
+                {t("blocks.integrations.httpRequest.settings.executeOnClient.label")}{" "}
                 <MoreInfoTooltip>
-                  If enabled, the httpRequest will be executed on the client. It
-                  means it will be executed in the browser of your visitor. Make
-                  sure to enable CORS and do not expose sensitive data.
+                  {t("blocks.integrations.httpRequest.settings.executeOnClient.tooltip")}
                 </MoreInfoTooltip>
               </Field.Label>
             </Field.Root>
             <div className="flex items-center gap-2 justify-between">
-              <p>Method:</p>
+              <p>{t("blocks.integrations.httpRequest.settings.method.label")}</p>
               <BasicSelect
                 className="w-full"
                 value={httpRequest?.method}
@@ -162,38 +162,38 @@ export const HttpRequestAdvancedConfigForm = ({
             </div>
             <Accordion.Root>
               <Accordion.Item>
-                <Accordion.Trigger>Query params</Accordion.Trigger>
+                <Accordion.Trigger>{t("blocks.integrations.httpRequest.settings.queryParams.label")}</Accordion.Trigger>
                 <Accordion.Panel>
                   <TableList<KeyValue>
                     initialItems={httpRequest?.queryParams}
                     onItemsChange={updateQueryParams}
-                    addLabel="Add a param"
+                    addLabel={t("blocks.integrations.httpRequest.settings.queryParams.add.label")}
                   >
                     {(props) => <QueryParamsInputs {...props} />}
                   </TableList>
                 </Accordion.Panel>
               </Accordion.Item>
               <Accordion.Item>
-                <Accordion.Trigger>Headers</Accordion.Trigger>
+                <Accordion.Trigger>{t("blocks.integrations.httpRequest.settings.headers.label")}</Accordion.Trigger>
                 <Accordion.Panel>
                   <TableList<KeyValue>
                     initialItems={httpRequest?.headers}
                     onItemsChange={updateHeaders}
-                    addLabel="Add a value"
+                    addLabel={t("blocks.integrations.httpRequest.settings.headers.add.label")}
                   >
                     {(props) => <HeadersInputs {...props} />}
                   </TableList>
                 </Accordion.Panel>
               </Accordion.Item>
               <Accordion.Item>
-                <Accordion.Trigger>Body</Accordion.Trigger>
+                <Accordion.Trigger>{t("blocks.integrations.httpRequest.settings.body.label")}</Accordion.Trigger>
                 <Accordion.Panel>
                   <Field.Root className="flex-row items-center">
                     <Switch
                       checked={isCustomBody}
                       onCheckedChange={updateIsCustomBody}
                     />
-                    <Field.Label>Custom body</Field.Label>
+                    <Field.Label>{t("blocks.integrations.httpRequest.settings.customBody.label")}</Field.Label>
                   </Field.Root>
                   {isCustomBody && (
                     <CodeEditor
@@ -207,7 +207,7 @@ export const HttpRequestAdvancedConfigForm = ({
                 </Accordion.Panel>
               </Accordion.Item>
               <Accordion.Item>
-                <Accordion.Trigger>Advanced parameters</Accordion.Trigger>
+                <Accordion.Trigger>{t("blocks.integrations.httpRequest.settings.advancedParameters.label")}</Accordion.Trigger>
                 <Accordion.Panel>
                   {typebot && (
                     <CredentialsDropdown
@@ -224,7 +224,7 @@ export const HttpRequestAdvancedConfigForm = ({
                     />
                   )}
                   <Field.Root className="flex-row">
-                    <Field.Label>Timeout (s)</Field.Label>
+                    <Field.Label>{t("blocks.integrations.httpRequest.settings.timeout.label")}</Field.Label>
                     <BasicNumberInput
                       defaultValue={options?.timeout ?? defaultTimeout}
                       min={1}
@@ -236,12 +236,12 @@ export const HttpRequestAdvancedConfigForm = ({
                 </Accordion.Panel>
               </Accordion.Item>
               <Accordion.Item>
-                <Accordion.Trigger>Variable values for test</Accordion.Trigger>
+                <Accordion.Trigger>{t("blocks.integrations.httpRequest.settings.variableValuesForTest.label")}</Accordion.Trigger>
                 <Accordion.Panel>
                   <TableList<VariableForTest>
                     initialItems={options?.variablesForTest}
                     onItemsChange={updateVariablesForTest}
-                    addLabel="Add an entry"
+                    addLabel={t("blocks.integrations.httpRequest.settings.addEntry.label")}
                   >
                     {(props) => <VariableForTestInputs {...props} />}
                   </TableList>
@@ -253,7 +253,7 @@ export const HttpRequestAdvancedConfigForm = ({
       </Accordion.Root>
       {httpRequest?.url && (
         <Button onClick={executeTestRequest} disabled={isTestResponseLoading}>
-          Test the request
+          {t("blocks.integrations.httpRequest.settings.testRequest.label")}
         </Button>
       )}
       {testResponse && (
@@ -264,7 +264,7 @@ export const HttpRequestAdvancedConfigForm = ({
           options.responseVariableMapping.length > 0)) && (
         <Accordion.Root>
           <Accordion.Item>
-            <Accordion.Trigger>Save in variables</Accordion.Trigger>
+            <Accordion.Trigger>{t("blocks.integrations.httpRequest.settings.saveInVariables.label")}</Accordion.Trigger>
             <Accordion.Panel>
               <TableList<ResponseVariableMapping>
                 initialItems={options?.responseVariableMapping}

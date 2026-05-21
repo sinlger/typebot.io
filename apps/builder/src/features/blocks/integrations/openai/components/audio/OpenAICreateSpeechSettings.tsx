@@ -5,11 +5,8 @@ import type { Variable } from "@typebot.io/variables/schemas";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { DebouncedTextareaWithVariablesButton } from "@/components/inputs/DebouncedTextarea";
 import { VariablesCombobox } from "@/components/inputs/VariablesCombobox";
-import { TextLink } from "@/components/TextLink";
+import { useTranslate } from "@tolgee/react";
 import { ModelsDropdown } from "../ModelsDropdown";
-
-const apiReferenceUrl =
-  "https://platform.openai.com/docs/api-reference/audio/createSpeech";
 
 type Props = {
   options: CreateSpeechOpenAIOptions;
@@ -20,6 +17,7 @@ export const OpenAICreateSpeechSettings = ({
   options,
   onOptionsChange,
 }: Props) => {
+  const { t } = useTranslate();
   const updateModel = (model: string | undefined) => {
     onOptionsChange({
       ...options,
@@ -53,11 +51,7 @@ export const OpenAICreateSpeechSettings = ({
   return (
     <div className="flex flex-col gap-4 pt-2">
       <p className="text-sm" color="gray.500">
-        Read the{" "}
-        <TextLink href={apiReferenceUrl} isExternal>
-          API reference
-        </TextLink>{" "}
-        to better understand the available options.
+        {t("blocks.integrations.openai.createSpeech.readReference.label")}
       </p>
       {options.credentialsId && (
         <>
@@ -70,7 +64,7 @@ export const OpenAICreateSpeechSettings = ({
             onChange={updateModel}
           />
           <Field.Root>
-            <Field.Label>Input:</Field.Label>
+            <Field.Label>{t("blocks.integrations.openai.createSpeech.input.label")}</Field.Label>
             <Field.Control
               render={(props) => (
                 <DebouncedTextareaWithVariablesButton
@@ -82,17 +76,17 @@ export const OpenAICreateSpeechSettings = ({
             />
           </Field.Root>
           <Field.Root>
-            <Field.Label>Voice:</Field.Label>
+            <Field.Label>{t("blocks.integrations.openai.createSpeech.voice.label")}</Field.Label>
             <BasicSelect
               value={options.voice}
               onChange={updateVoice}
               items={openAIVoices}
-              placeholder="Select a voice"
+              placeholder={t("blocks.integrations.openai.createSpeech.selectVoice.placeholder")}
               className="w-full"
             />
           </Field.Root>
           <Field.Root>
-            <Field.Label>Save URL:</Field.Label>
+            <Field.Label>{t("blocks.integrations.openai.createSpeech.saveUrl.label")}</Field.Label>
             <VariablesCombobox
               initialVariableId={options.saveUrlInVariableId}
               onSelectVariable={updateSaveUrlInVariableId}

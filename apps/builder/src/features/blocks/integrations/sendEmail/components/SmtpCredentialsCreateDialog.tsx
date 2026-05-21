@@ -2,6 +2,7 @@ import { ORPCError } from "@orpc/client";
 import { useMutation } from "@tanstack/react-query";
 import type { SmtpCredentials } from "@typebot.io/credentials/schemas";
 import { isNotDefined } from "@typebot.io/lib/utils";
+import { useTranslate } from "@tolgee/react";
 import { Button } from "@typebot.io/ui/components/Button";
 import { Dialog } from "@typebot.io/ui/components/Dialog";
 import type React from "react";
@@ -40,9 +41,10 @@ export const SmtpCredentialsDialogTitle = ({
 }: {
   mode: "create" | "update";
 }) => {
+  const { t } = useTranslate();
   return (
     <Dialog.Title>
-      {mode === "create" ? "Create" : "Update"} SMTP config
+      {mode === "create" ? t("create") : t("update")} {t("blocks.integrations.sendEmail.smtp.dialog.title")}
     </Dialog.Title>
   );
 };
@@ -50,6 +52,7 @@ export const SmtpCredentialsDialogTitle = ({
 export const SmtpCredentialsCreateDialogBody = ({
   onNewCredentials,
 }: Pick<Props, "onNewCredentials">) => {
+  const { t } = useTranslate();
   const { user } = useUser();
   const { workspace } = useWorkspace();
   const [smtpConfig, setSmtpConfig] = useState<SmtpCredentials["data"]>({
@@ -62,8 +65,7 @@ export const SmtpCredentialsCreateDialogBody = ({
       onError: (err) => {
         if (err instanceof ORPCError && err.code === "INTERNAL_SERVER_ERROR") {
           toast({
-            description:
-              "We couldn't send the test email with your configuration",
+            description: t("blocks.integrations.sendEmail.smtp.toast.testError.description"),
             details: err.data?.message,
           });
         }
@@ -134,7 +136,7 @@ export const SmtpCredentialsCreateDialogBody = ({
             isCreating
           }
         >
-          Create
+          {t("create")}
         </Button>
       </Dialog.Footer>
     </Dialog.Popup>

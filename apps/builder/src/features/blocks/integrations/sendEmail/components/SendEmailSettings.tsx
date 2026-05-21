@@ -6,6 +6,7 @@ import { Accordion } from "@typebot.io/ui/components/Accordion";
 import { Field } from "@typebot.io/ui/components/Field";
 import { MoreInfoTooltip } from "@typebot.io/ui/components/MoreInfoTooltip";
 import { Switch } from "@typebot.io/ui/components/Switch";
+import { useTranslate } from "@tolgee/react";
 import { useOpenControls } from "@typebot.io/ui/hooks/useOpenControls";
 import type { Variable } from "@typebot.io/variables/schemas";
 import type { Workspace } from "@typebot.io/workspaces/schemas";
@@ -24,6 +25,7 @@ type Props = {
 };
 
 export const SendEmailSettings = ({ options, onOptionsChange }: Props) => {
+  const { t } = useTranslate();
   const { workspace } = useWorkspace();
   const { isOpen, onOpen, onClose } = useOpenControls();
 
@@ -108,7 +110,7 @@ export const SendEmailSettings = ({ options, onOptionsChange }: Props) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2">
-        <p>From: </p>
+        <p>{t("blocks.integrations.sendEmail.settings.from.label")}</p>
         {workspace && (
           <CredentialsDropdown
             type="smtp"
@@ -129,19 +131,19 @@ export const SendEmailSettings = ({ options, onOptionsChange }: Props) => {
         )}
       </div>
       <Field.Root>
-        <Field.Label>To:</Field.Label>
+        <Field.Label>{t("blocks.integrations.sendEmail.settings.to.label")}</Field.Label>
         <DebouncedTextInputWithVariablesButton
           onValueChange={handleToChange}
           defaultValue={options?.recipients?.join(", ")}
-          placeholder="email1@gmail.com, email2@gmail.com"
+          placeholder={t("blocks.integrations.sendEmail.settings.recipients.placeholder")}
         />
       </Field.Root>
       <Accordion.Root>
         <Accordion.Item>
-          <Accordion.Trigger>Advanced</Accordion.Trigger>
+          <Accordion.Trigger>{t("blocks.integrations.sendEmail.settings.advanced.label")}</Accordion.Trigger>
           <Accordion.Panel>
             <Field.Root>
-              <Field.Label>Reply to:</Field.Label>
+              <Field.Label>{t("blocks.integrations.sendEmail.settings.replyTo.label")}</Field.Label>
               <DebouncedTextInputWithVariablesButton
                 onValueChange={handleReplyToChange}
                 defaultValue={options?.replyTo}
@@ -149,26 +151,26 @@ export const SendEmailSettings = ({ options, onOptionsChange }: Props) => {
               />
             </Field.Root>
             <Field.Root>
-              <Field.Label>Cc:</Field.Label>
+              <Field.Label>{t("blocks.integrations.sendEmail.settings.cc.label")}</Field.Label>
               <DebouncedTextInputWithVariablesButton
                 onValueChange={handleCcChange}
                 defaultValue={options?.cc?.join(", ") ?? ""}
-                placeholder="email1@gmail.com, email2@gmail.com"
+                placeholder={t("blocks.integrations.sendEmail.settings.recipients.placeholder")}
               />
             </Field.Root>
             <Field.Root>
-              <Field.Label>Bcc:</Field.Label>
+              <Field.Label>{t("blocks.integrations.sendEmail.settings.bcc.label")}</Field.Label>
               <DebouncedTextInputWithVariablesButton
                 onValueChange={handleBccChange}
                 defaultValue={options?.bcc?.join(", ") ?? ""}
-                placeholder="email1@gmail.com, email2@gmail.com"
+                placeholder={t("blocks.integrations.sendEmail.settings.recipients.placeholder")}
               />
             </Field.Root>
           </Accordion.Panel>
         </Accordion.Item>
       </Accordion.Root>
       <Field.Root>
-        <Field.Label>Subject:</Field.Label>
+        <Field.Label>{t("blocks.integrations.sendEmail.settings.subject.label")}</Field.Label>
         <DebouncedTextInputWithVariablesButton
           onValueChange={handleSubjectChange}
           defaultValue={options?.subject ?? ""}
@@ -182,26 +184,25 @@ export const SendEmailSettings = ({ options, onOptionsChange }: Props) => {
           onCheckedChange={handleIsCustomBodyChange}
         />
         <Field.Label>
-          Custom content{" "}
+          {t("blocks.integrations.sendEmail.settings.customContent.label")}{" "}
           <MoreInfoTooltip>
-            By default, the email body will be a recap of what has been
-            collected so far. You can override it with this option.
+            {t("blocks.integrations.sendEmail.settings.customContent.tooltip")}
           </MoreInfoTooltip>
         </Field.Label>
       </Field.Root>
       {options?.isCustomBody && (
         <div className="flex flex-col gap-2">
           <div className="flex justify-between">
-            <p>Content: </p>
+            <p>{t("blocks.integrations.sendEmail.settings.content.label")}</p>
             <div className="flex items-center gap-2">
-              <p className="text-sm">Text</p>
+              <p className="text-sm">{t("blocks.integrations.sendEmail.settings.text.label")}</p>
               <Switch
                 checked={
                   options.isBodyCode ?? defaultSendEmailOptions.isBodyCode
                 }
                 onCheckedChange={handleIsBodyCodeChange}
               />
-              <p className="text-sm">Code</p>
+              <p className="text-sm">{t("blocks.integrations.sendEmail.settings.code.label")}</p>
             </div>
           </div>
           {options.isBodyCode ? (
@@ -219,10 +220,9 @@ export const SendEmailSettings = ({ options, onOptionsChange }: Props) => {
           )}
           <Field.Root className="pb-4">
             <Field.Label>
-              Attach files
+              {t("blocks.integrations.sendEmail.settings.attachFiles.label")}
               <MoreInfoTooltip>
-                The selected variable should have previously collected files
-                from the File upload input block.
+                {t("blocks.integrations.sendEmail.settings.attachFiles.tooltip")}
               </MoreInfoTooltip>
             </Field.Label>
             <VariablesCombobox

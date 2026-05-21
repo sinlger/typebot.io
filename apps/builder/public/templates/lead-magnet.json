@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "gr9wedxcqxie11ki9yss1h5o",
-      "title": "Intro",
+      "title": "介绍",
       "graphCoordinates": { "x": 209.12109375, "y": 176.5703125 },
       "blocks": [
         {
@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hi there! 👋" }] }
+              { "type": "p", "children": [{ "text": "你好！👋" }] }
             ]
           }
         },
@@ -33,10 +33,10 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Sign up for the newsletter and " },
+                  { "text": "注册订阅我们的通讯，并" },
                   {
                     "bold": true,
-                    "text": "get free access to our exclusive 'Community Bundle'."
+                    "text": "免费获取独家'社区资料包'。"
                   }
                 ]
               }
@@ -52,7 +52,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This bundle helps you create the best Community possible for your project."
+                    "text": "这个资料包帮助您为项目创建最佳社区。"
                   }
                 ]
               }
@@ -64,7 +64,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your name?" }] }
+              { "type": "p", "children": [{ "text": "您叫什么名字？" }] }
             ]
           }
         },
@@ -73,7 +73,7 @@
           "outgoingEdgeId": "rczh7k3r065okzax6za00lvh",
           "type": "text input",
           "options": {
-            "labels": { "placeholder": "Your first name" },
+            "labels": { "placeholder": "您的名字" },
             "variableId": "vyu4paeim4jcjgmxr26bdk286"
           }
         }
@@ -81,7 +81,7 @@
     },
     {
       "id": "xaloto3qrrbtcdcrob013xcx",
-      "title": "Email",
+      "title": "邮箱",
       "graphCoordinates": { "x": 563.2421875, "y": 177.484375 },
       "blocks": [
         {
@@ -93,7 +93,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Ok, {{Name}}. What email would you like to sign up with?"
+                    "text": "好的，{{Name}}。您想用哪个邮箱注册？"
                   }
                 ]
               }
@@ -111,7 +111,7 @@
     },
     {
       "id": "tp9r95ay5vm9zlgzw8twtxn3",
-      "title": "Goal",
+      "title": "目标",
       "graphCoordinates": { "x": 1243.07421875, "y": 172.2421875 },
       "blocks": [
         {
@@ -121,7 +121,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What's your goal with the community?" }]
+                "children": [{ "text": "您对社区的期望是什么？" }]
               }
             ]
           }
@@ -131,13 +131,13 @@
           "outgoingEdgeId": "on3al6xuczmckpu3roboo9te",
           "type": "choice input",
           "items": [
-            { "id": "ux0ly8ocxfm8i8ivdbwjnmnt", "content": "Win loyal fans" },
+            { "id": "ux0ly8ocxfm8i8ivdbwjnmnt", "content": "赢得忠实粉丝" },
             {
               "id": "izz0nwo2iy2kmlif5fav2oc5",
-              "content": "Competitive advantage"
+              "content": "竞争优势"
             },
-            { "id": "jtkx9v5uqjw84hapq3umqlb5", "content": "Better product" },
-            { "id": "k7a7rkpoigrtrulilap7q6fw", "content": "Support" }
+            { "id": "jtkx9v5uqjw84hapq3umqlb5", "content": "更好的产品" },
+            { "id": "k7a7rkpoigrtrulilap7q6fw", "content": "支持" }
           ],
           "options": {
             "variableId": "vf49immob0ih3kxn5b0nraqkq"
@@ -147,7 +147,7 @@
     },
     {
       "id": "cszciavjonb2qp0ga0pladoj",
-      "title": "Goal",
+      "title": "目标",
       "graphCoordinates": { "x": 1590.85546875, "y": 164.02734375 },
       "blocks": [
         {
@@ -159,7 +159,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Perfect, your bundle will be emailed to you right away 🚀"
+                    "text": "太棒了，您的资料包将立即发送到您的邮箱 🚀"
                   }
                 ]
               }
@@ -232,7 +232,7 @@
     },
     {
       "id": "vvlecgglxadq0x2eg7ozr535",
-      "title": "Send bundle",
+      "title": "发送资料",
       "graphCoordinates": { "x": 901.6953125, "y": 180.0546875 },
       "blocks": [
         {
@@ -250,7 +250,7 @@
     },
     {
       "id": "k2sbuizycrpuyf44v9eebebr",
-      "title": "Win loyal fans video",
+      "title": "赢得忠实粉丝视频",
       "graphCoordinates": { "x": 1969.18359375, "y": -205.76171875 },
       "blocks": [
         {
@@ -260,7 +260,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Want to know how to win loyal fans?" }]
+                "children": [{ "text": "想知道如何赢得忠实粉丝吗？" }]
               }
             ]
           }
@@ -270,7 +270,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "观看这个视频：" }] }
             ]
           }
         },
@@ -287,7 +287,7 @@
     },
     {
       "id": "v6s5yza7kgretdmbke7lg5u7",
-      "title": "Competitive advantage video",
+      "title": "竞争优势视频",
       "graphCoordinates": { "x": 1968.1484375, "y": 181.5703125 },
       "blocks": [
         {
@@ -299,7 +299,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Want to know how to have a great competitive advantage with your community?"
+                    "text": "想知道如何通过社区获得强大的竞争优势吗？"
                   }
                 ]
               }
@@ -311,7 +311,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "观看这个视频：" }] }
             ]
           }
         },
@@ -328,7 +328,7 @@
     },
     {
       "id": "l3pc0992zp0hw8ea83b7aky3",
-      "title": "Better product",
+      "title": "更好的产品",
       "graphCoordinates": { "x": 1968.703125, "y": 600.07421875 },
       "blocks": [
         {
@@ -340,7 +340,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Want to know how to improve your product by leveraging a community?"
+                    "text": "想知道如何利用社区改进产品吗？"
                   }
                 ]
               }
@@ -352,7 +352,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "观看这个视频：" }] }
             ]
           }
         },
@@ -369,7 +369,7 @@
     },
     {
       "id": "f4hlh2oq8viwxrpl9ppq5d42",
-      "title": "Support",
+      "title": "支持",
       "graphCoordinates": { "x": 1970.0234375, "y": 1025.99609375 },
       "blocks": [
         {
@@ -380,7 +380,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Want to offer better support with a community?" }
+                  { "text": "想通过社区提供更好的支持吗？" }
                 ]
               }
             ]
@@ -391,7 +391,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "观看这个视频：" }] }
             ]
           }
         },

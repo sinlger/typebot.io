@@ -4,6 +4,7 @@ import {
   deprecatedRoles,
 } from "@typebot.io/blocks-integrations/openai/constants";
 import type { ChatCompletionOpenAIOptions } from "@typebot.io/blocks-integrations/openai/schema";
+import { useTranslate } from "@tolgee/react";
 import type { Variable } from "@typebot.io/variables/schemas";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { DebouncedTextareaWithVariablesButton } from "@/components/inputs/DebouncedTextarea";
@@ -20,6 +21,7 @@ const roles = [
 ];
 
 export const ChatCompletionMessageItem = ({ item, onItemChange }: Props) => {
+  const { t } = useTranslate();
   const changeRole = (role: (typeof roles)[number] | undefined) => {
     onItemChange({
       ...item,
@@ -56,7 +58,7 @@ export const ChatCompletionMessageItem = ({ item, onItemChange }: Props) => {
           (role) =>
             !deprecatedRoles.includes(role as (typeof deprecatedRoles)[number]),
         )}
-        placeholder="Select type"
+        placeholder={t("blocks.integrations.openai.chatCompletion.selectType.placeholder")}
       />
       <ChatCompletionMessageItemContent
         item={item}
@@ -81,6 +83,7 @@ const ChatCompletionMessageItemContent = ({
   onStartsByChange: (startsBy: "user" | "assistant") => void;
   item: NonNullable<ChatCompletionOpenAIOptions["messages"]>[number];
 }) => {
+  const { t } = useTranslate();
   switch (item.role) {
     case undefined:
     case "assistant":
@@ -90,7 +93,7 @@ const ChatCompletionMessageItemContent = ({
         <DebouncedTextareaWithVariablesButton
           defaultValue={item.content}
           onValueChange={onChangeSingleMessageContent}
-          placeholder="Content"
+          placeholder={t("blocks.integrations.openai.chatCompletion.content.placeholder")}
         />
       );
     case "Dialogue":
@@ -99,10 +102,10 @@ const ChatCompletionMessageItemContent = ({
           <VariablesCombobox
             initialVariableId={item.dialogueVariableId}
             onSelectVariable={onChangeDialogueVariableId}
-            placeholder="Dialogue variable"
+            placeholder={t("blocks.integrations.openai.chatCompletion.dialogueVariable.placeholder")}
           />
           <div className="flex items-center gap-2">
-            <p>starts by</p>
+            <p>{t("blocks.integrations.openai.chatCompletion.startsBy.label")}</p>
             <BasicSelect
               className="w-full"
               value={item.startsBy ?? "user"}

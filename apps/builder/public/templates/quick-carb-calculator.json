@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "x2x6f3wzxrtym647g57e4382",
-      "title": "Sport",
+      "title": "运动",
       "graphCoordinates": { "x": 190.73, "y": 331.22 },
       "blocks": [
         {
@@ -24,7 +24,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Welcome to the Quick Carb Calculator!" }
+                  { "text": "欢迎使用快速碳水化合物计算器！" }
                 ]
               }
             ]
@@ -39,7 +39,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": " I'll help you figure out how much fuel you'll need to perform at your best. Let's get started! 🚴‍♂️🏃"
+                    "text": "我来帮你计算需要多少能量才能发挥最佳状态。我们开始吧！🚴‍♂️🏃"
                   }
                 ]
               }
@@ -53,7 +53,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "First, what are you fueling for?" }]
+                "children": [{ "text": "首先，你为哪项运动补充能量？" }]
               }
             ]
           }
@@ -63,18 +63,18 @@
           "outgoingEdgeId": "gnwha6pow6q6occm6gn3d9o3",
           "type": "choice input",
           "items": [
-            { "id": "omopw9oy3srowddb0o3f4xs5", "content": "Swim 🏊‍♂️" },
-            { "id": "anpwbn8hvolyod2vsh06et68", "content": "Ride 🚴‍♂️" },
-            { "id": "uto1ghh5c6icwygszercxybz", "content": "Run 🏃" },
+            { "id": "omopw9oy3srowddb0o3f4xs5", "content": "游泳 🏊‍♂️" },
+            { "id": "anpwbn8hvolyod2vsh06et68", "content": "骑行 🚴‍♂️" },
+            { "id": "uto1ghh5c6icwygszercxybz", "content": "跑步 🏃" },
             {
               "id": "sau0amab8nmeqfqyhhzle03v",
-              "content": "Triathlon 🏊‍♂️🚴‍♂️🏃"
+              "content": "铁人三项 🏊‍♂️🚴‍♂️🏃"
             },
-            { "id": "tqvjhk0qmvn43h5hyc9ibdd3", "content": "Swimrun 🏊‍♂️🏃" },
+            { "id": "tqvjhk0qmvn43h5hyc9ibdd3", "content": "游泳跑步 🏊‍♂️🏃" },
             {
               "id": "mu0m5v7m55vfikbs29lpcm3h",
               "outgoingEdgeId": "hbh8d8q39wzgy1foclpy15s2",
-              "content": "Other"
+              "content": "其他"
             }
           ],
           "options": { "variableId": "vc5qxl1y2rzmy7uqeasq8bd3q" }
@@ -91,7 +91,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What sport?" }] }
+              { "type": "p", "children": [{ "text": "什么运动？" }] }
             ]
           }
         },
@@ -105,7 +105,7 @@
     },
     {
       "id": "ujeec2r6ph4l0gbdlzvfen9c",
-      "title": "Duration",
+      "title": "时长",
       "graphCoordinates": { "x": 605.2, "y": 329.71 },
       "blocks": [
         {
@@ -116,7 +116,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Great! How long will you be doing this activity?" }
+                  { "text": "太好了！这项活动你会持续多长时间？" }
                 ]
               }
             ]
@@ -132,7 +132,7 @@
     },
     {
       "id": "n45do8ao8c2fzgu107wdsrr3",
-      "title": "Intensity",
+      "title": "强度",
       "graphCoordinates": { "x": 1008.15, "y": 332.34 },
       "blocks": [
         {
@@ -143,7 +143,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Understood! Now, how hard will you be going?" }
+                  { "text": "明白了！现在，你的运动强度有多大？" }
                 ]
               }
             ]
@@ -157,14 +157,14 @@
             "variableId": "vprpht8foqzxv4bs8hlozqoq7",
             "length": 7,
             "startsAt": 1,
-            "labels": { "left": "Easy", "right": "Racing" }
+            "labels": { "left": "轻松", "right": "竞赛" }
           }
         }
       ]
     },
     {
       "id": "er51741iln7nja5jn8qrkyeh",
-      "title": "AI gen",
+      "title": "AI 生成",
       "graphCoordinates": { "x": 1730.53, "y": 325.38 },
       "blocks": [
         {
@@ -207,7 +207,7 @@
     },
     {
       "id": "i477wpsojbu2fbqct541qqa1",
-      "title": "Email",
+      "title": "邮箱",
       "graphCoordinates": { "x": 1370.12, "y": 338.17 },
       "blocks": [
         {
@@ -219,7 +219,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "To keep a record of your carb calculations and for easy future reference, could you please provide your email address? "
+                    "text": "为了保存您的碳水化合物计算记录，方便将来参考，请提供您的邮箱地址？"
                   }
                 ]
               }
@@ -235,7 +235,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This way, I can send you a personalized summary of your fueling plan. 📧"
+                    "text": "这样我就可以将个性化的能量补充方案总结发送给您。📧"
                   }
                 ]
               }
@@ -252,7 +252,7 @@
     },
     {
       "id": "h709w0mid2cu06xe0vu5agj1",
-      "title": "CTA",
+      "title": "行动号召",
       "graphCoordinates": { "x": 2080.11, "y": 324.59 },
       "blocks": [
         {
@@ -264,7 +264,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Now that you know how many carbs you'll need, would you like to check out our selection of top-rated carbohydrate gels and other fueling products? 🛒"
+                    "text": "现在你知道需要多少碳水化合物了，想看看我们精选的高评分碳水化合物凝胶和其他能量补充产品吗？🛒"
                   }
                 ]
               }
@@ -278,7 +278,7 @@
             {
               "id": "y7w3u1i6np6umnwxfs7u7x4a",
               "outgoingEdgeId": "nnaxabsjpk161s6kygdxm68k",
-              "content": "Go shopping"
+              "content": "去购物"
             }
           ]
         }
@@ -312,7 +312,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄"
+                    "text": "你需要添加 OpenAI 凭据才能让此机器人正常工作。🪄"
                   }
                 ]
               }
@@ -328,11 +328,11 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此分组并将 "
                   },
                   { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "Sport group" },
+                  { "text": " 事件连接到 " },
+                  { "bold": true, "text": "运动分组" },
                   { "text": " 🚀" }
                 ]
               }

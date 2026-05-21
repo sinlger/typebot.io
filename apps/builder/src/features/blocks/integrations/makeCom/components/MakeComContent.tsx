@@ -1,3 +1,4 @@
+import { useTranslate } from "@tolgee/react";
 import type { MakeComBlock } from "@typebot.io/blocks-integrations/makeCom/schema";
 import { SetVariableLabel } from "@/components/SetVariableLabel";
 import { useTypebot } from "@/features/editor/providers/TypebotProvider";
@@ -7,13 +8,14 @@ type Props = {
 };
 
 export const MakeComContent = ({ block }: Props) => {
+  const { t } = useTranslate();
   const { typebot } = useTypebot();
 
-  if (!block.options?.webhook?.url) return <p color="gray.500">Configure...</p>;
+  if (!block.options?.webhook?.url) return <p color="gray.500">{t("configure")}</p>;
 
   return (
     <div className="flex flex-col gap-2 w-full">
-      <p className="pr-6 truncate">Trigger scenario</p>
+      <p className="pr-6 truncate">{t("blocks.integrations.makeCom.nodeContent.trigger.label")}</p>
       {block.options?.responseVariableMapping
         ?.filter((mapping) => mapping.variableId)
         .map((mapping) => (

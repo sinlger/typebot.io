@@ -14,6 +14,7 @@ import type {
   GoogleSheetsUpdateRowOptionsV6,
 } from "@typebot.io/blocks-integrations/googleSheets/schema";
 import { isDefined } from "@typebot.io/lib/utils";
+import { useTranslate } from "@tolgee/react";
 import { Accordion } from "@typebot.io/ui/components/Accordion";
 import { useOpenControls } from "@typebot.io/ui/hooks/useOpenControls";
 import { useMemo } from "react";
@@ -42,6 +43,7 @@ export const GoogleSheetsSettings = ({
   onOptionsChange,
   blockId,
 }: Props) => {
+  const { t } = useTranslate();
   const { workspace } = useWorkspace();
   const { typebot } = useTypebot();
   const { save } = useTypebot();
@@ -100,7 +102,7 @@ export const GoogleSheetsSettings = ({
           currentCredentialsId={options?.credentialsId}
           onCredentialsSelect={handleCredentialsIdChange}
           onCreateNewClick={handleCreateNewClick}
-          credentialsName="Sheets account"
+          credentialsName={t("blocks.integrations.googleSheets.credentialsName")}
         />
       )}
       {typebot && (
@@ -135,7 +137,7 @@ export const GoogleSheetsSettings = ({
             value={"action" in options ? options.action : undefined}
             onChange={handleActionChange}
             items={Object.values(GoogleSheetsAction)}
-            placeholder="Select an operation"
+            placeholder={t("blocks.integrations.googleSheets.settings.selectOperation.placeholder")}
           />
         )}
       {options?.action && (
@@ -161,6 +163,7 @@ const ActionOptions = ({
   sheet?: Sheet;
   onOptionsChange: (options: GoogleSheetsBlock["options"]) => void;
 }) => {
+  const { t } = useTranslate();
   const handleInsertColumnsChange = (cellsToInsert: Cell[]) =>
     onOptionsChange({
       ...options,
@@ -196,7 +199,7 @@ const ActionOptions = ({
         <TableList<Cell>
           initialItems={options.cellsToInsert}
           onItemsChange={handleInsertColumnsChange}
-          addLabel="Add a value"
+          addLabel={t("blocks.integrations.googleSheets.settings.addValue.label")}
         >
           {({ item, onItemChange }) => (
             <CellWithValueStack
@@ -212,7 +215,7 @@ const ActionOptions = ({
         <Accordion.Root>
           <Accordion.Item>
             <Accordion.Trigger>
-              <p className="w-full text-left">Row(s) to update</p>
+              <p className="w-full text-left">{t("blocks.integrations.googleSheets.settings.rowsToUpdate.label")}</p>
             </Accordion.Trigger>
 
             <Accordion.Panel>
@@ -225,14 +228,14 @@ const ActionOptions = ({
           </Accordion.Item>
           <Accordion.Item>
             <Accordion.Trigger>
-              <p className="w-full text-left">Cells to update</p>
+              <p className="w-full text-left">{t("blocks.integrations.googleSheets.settings.cellsToUpdate.label")}</p>
             </Accordion.Trigger>
 
             <Accordion.Panel>
               <TableList<Cell>
                 initialItems={options.cellsToUpsert}
                 onItemsChange={handleUpsertColumnsChange}
-                addLabel="Add a value"
+                addLabel={t("blocks.integrations.googleSheets.settings.addValue.label")}
               >
                 {({ item, onItemChange }) => (
                   <CellWithValueStack
@@ -251,7 +254,7 @@ const ActionOptions = ({
         <Accordion.Root>
           <Accordion.Item>
             <Accordion.Trigger>
-              <p className="w-full text-left">Select row(s)</p>
+              <p className="w-full text-left">{t("blocks.integrations.googleSheets.settings.selectRows.label")}</p>
             </Accordion.Trigger>
 
             <Accordion.Panel>
@@ -272,12 +275,12 @@ const ActionOptions = ({
             </Accordion.Panel>
           </Accordion.Item>
           <Accordion.Item>
-            <Accordion.Trigger>Columns to extract</Accordion.Trigger>
+            <Accordion.Trigger>{t("blocks.integrations.googleSheets.settings.columnsToExtract.label")}</Accordion.Trigger>
             <Accordion.Panel>
               <TableList<ExtractingCell>
                 initialItems={options.cellsToExtract}
                 onItemsChange={handleExtractingCellsChange}
-                addLabel="Add a value"
+                addLabel={t("blocks.integrations.googleSheets.settings.addValue.label")}
                 hasDefaultItem
               >
                 {({ item, onItemChange }) => (

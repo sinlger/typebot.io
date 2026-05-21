@@ -2,7 +2,18 @@
   "mcpServers": {
     "gitnexus": {
       "command": "cmd",
-      "args": ["/c", "gitnexus", "mcp"]
+      "args": [
+        "/c",
+        "gitnexus",
+        "mcp"
+      ]
+    },
+    "dbx": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@dbx-app/mcp-server"
+      ]
     }
   }
 }

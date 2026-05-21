@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "buk5exhk13g3npkaiaw87tvs",
-      "title": "Continent",
+      "title": "大洲",
       "graphCoordinates": { "x": 367.8151290581508, "y": 175.39453125 },
       "blocks": [
         {
@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Ok {{Name}}" }] }
+              { "type": "p", "children": [{ "text": "好的 {{Name}}" }] }
             ]
           }
         },
@@ -34,7 +34,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Because all products are not available everywhere, I need to know..."
+                    "text": "由于并非所有产品在任何地方都有售，我需要了解..."
                   }
                 ]
               }
@@ -46,7 +46,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Where do you live?" }] }
+              { "type": "p", "children": [{ "text": "您住在哪里？" }] }
             ]
           }
         },
@@ -55,8 +55,8 @@
           "outgoingEdgeId": "zlab2pp5tfih56jcw6vtjs03",
           "type": "choice input",
           "items": [
-            { "id": "b6mg694wlrmx4k1fgc46co57", "content": "North America" },
-            { "id": "fpey0ohbvgvg7b86y4ol8wr7", "content": "Europe" }
+            { "id": "b6mg694wlrmx4k1fgc46co57", "content": "北美" },
+            { "id": "fpey0ohbvgvg7b86y4ol8wr7", "content": "欧洲" }
           ],
           "options": {
             "variableId": "vma96g9rw8oaosc0ei2iacqig"
@@ -66,7 +66,7 @@
     },
     {
       "id": "gafkgilrandk3cwydpzq21oy",
-      "title": "Name",
+      "title": "姓名",
       "graphCoordinates": { "x": 21.63671875, "y": 176.3203125 },
       "blocks": [
         {
@@ -78,7 +78,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Let's determine what Näak's products suit you best. 💪"
+                    "text": "让我们确定 Näak 的哪些产品最适合您。💪"
                   }
                 ]
               }
@@ -90,7 +90,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your name?" }] }
+              { "type": "p", "children": [{ "text": "您叫什么名字？" }] }
             ]
           }
         },
@@ -106,7 +106,7 @@
     },
     {
       "id": "z40ynhndj5r4038u3ha39c14",
-      "title": "Sport",
+      "title": "运动",
       "graphCoordinates": { "x": 721.140625, "y": 173.953125 },
       "blocks": [
         {
@@ -114,7 +114,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your sport?" }] }
+              { "type": "p", "children": [{ "text": "您做什么运动？" }] }
             ]
           }
         },
@@ -126,22 +126,22 @@
             {
               "id": "l4y5s4rz63g3kl91sq5h6401",
               "pictureSrc": "https://images.unsplash.com/photo-1456613820599-bfe244172af5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw0fHx0cmFpbHxlbnwwfDB8fHwxNjg1MzYyOTQ2fDA&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Running"
+              "title": "跑步"
             },
             {
               "id": "urqlzmsiixatiamg06pexhsn",
               "pictureSrc": "https://images.unsplash.com/photo-1545575439-3261931f52f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw3fHxjeWNsaW5nfGVufDB8MHx8fDE2ODUzNjI5NjJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Cycling"
+              "title": "骑行"
             },
             {
               "id": "go2ko2zs5haeairrtfw7jqb2",
               "pictureSrc": "https://images.unsplash.com/photo-1627900258552-50850df9dbc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw0fHxUcmlhdGhsb258ZW58MHwwfHx8MTY4NTM2Mjk3N3ww&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Triathlon"
+              "title": "铁人三项"
             },
             {
               "id": "ctvsb2gsogkbaj9sxsgw25p9",
               "pictureSrc": "https://images.unsplash.com/photo-1551632811-561732d1e306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHwyfHxIaWtpbmd8ZW58MHwwfHx8MTY4NTM2Mjk5NXww&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Hiking"
+              "title": "徒步"
             }
           ]
         }
@@ -149,14 +149,14 @@
     },
     {
       "id": "mncr0l180vs07gc1difaovjx",
-      "title": "Gender",
+      "title": "性别",
       "graphCoordinates": { "x": 1071, "y": 173.953125 },
       "blocks": [
         {
           "id": "ahuasm8oa058gl4np96qadox",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Nice! 😎" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "太好了！😎" }] }]
           }
         },
         {
@@ -164,7 +164,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your gender?" }] }
+              { "type": "p", "children": [{ "text": "您的性别是？" }] }
             ]
           }
         },
@@ -175,17 +175,17 @@
           "items": [
             {
               "id": "zv2np66vgqoruntfh9h9vidx",
-              "content": "♂️ Men"
+              "content": "♂️ 男性"
             },
-            { "id": "w5e2h4n10u1l2pap1vtm68ma", "content": "♀️ Women" },
-            { "id": "m1t9qrfs4z998ogqd4ttueus", "content": "Other" }
+            { "id": "w5e2h4n10u1l2pap1vtm68ma", "content": "♀️ 女性" },
+            { "id": "m1t9qrfs4z998ogqd4ttueus", "content": "其他" }
           ]
         }
       ]
     },
     {
       "id": "mqt2qcyld5du8ecmbphjxpwu",
-      "title": "Goals",
+      "title": "目标",
       "graphCoordinates": { "x": 1412.34375, "y": 174.76953125 },
       "blocks": [
         {
@@ -196,7 +196,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How can Näak help you achieve your goals?" }
+                  { "text": "Näak 如何帮助您实现目标？" }
                 ]
               }
             ]
@@ -210,17 +210,17 @@
             {
               "id": "fmhwukhd2112743tgrmv85st",
               "pictureSrc": "https://images.unsplash.com/photo-1615845522103-82f98cd2a9de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw5fHxlbmR1cmFuY2V8ZW58MHwwfHx8MTY4NTM2MzY3Nnww&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Energy"
+              "title": "能量"
             },
             {
               "id": "hkzoroc6mf9tt9g2uxppweay",
               "pictureSrc": "https://images.unsplash.com/photo-1536044635785-467d51fc5880?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHwxMnx8ZHJpbmslMjBzcG9ydHxlbnwwfDB8fHwxNjg1MzYzNzIxfDA&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Hydration"
+              "title": "补水"
             },
             {
               "id": "nn5629jaux41qo0fhl1yj3zi",
               "pictureSrc": "https://images.unsplash.com/photo-1531403939386-c08a16cd7eef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw3fHxzdHJldGNofGVufDB8MHx8fDE2ODUzNjM2OTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Recovery"
+              "title": "恢复"
             }
           ],
           "options": {
@@ -232,7 +232,7 @@
     },
     {
       "id": "n3zqahk50kb05th7zbycin5w",
-      "title": "Protein source",
+      "title": "蛋白质来源",
       "graphCoordinates": { "x": 1745.61328125, "y": 183.87109375 },
       "blocks": [
         {
@@ -243,7 +243,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "What protein source are you interested in?" }
+                  { "text": "您对哪种蛋白质来源感兴趣？" }
                 ]
               }
             ]
@@ -254,8 +254,8 @@
           "outgoingEdgeId": "umuilo9l4t27kcpnx5ybnr08",
           "type": "choice input",
           "items": [
-            { "id": "exj60v3j83wx9yjbdsm8gwzj", "content": "Cricket-based" },
-            { "id": "kvqeznudz85jbqwxzfpwz8z8", "content": "Plant-based" }
+            { "id": "exj60v3j83wx9yjbdsm8gwzj", "content": "蟋蟀蛋白" },
+            { "id": "kvqeznudz85jbqwxzfpwz8z8", "content": "植物蛋白" }
           ],
           "options": {
             "variableId": "vlgo7i0r514jkd9a9f24otm4m",
@@ -266,7 +266,7 @@
     },
     {
       "id": "y2jfx62oea6q0rxjby9tzqi6",
-      "title": "Flavours",
+      "title": "口味",
       "graphCoordinates": { "x": 2077.765625, "y": 182.74609375 },
       "blocks": [
         {
@@ -276,7 +276,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What are flavors do you enjoy?" }]
+                "children": [{ "text": "您喜欢什么口味？" }]
               }
             ]
           }
@@ -288,28 +288,28 @@
           "items": [
             {
               "id": "t7fkowjzn7eygfn6q1r4a8l9",
-              "content": "Chocolate"
+              "content": "巧克力"
             },
-            { "id": "b1a0qlhtirnxqaqudskc4hnb", "content": "Vanilla" },
-            { "id": "vef4uodxrj05lp2i5k3uhdd5", "content": "Berries" },
-            { "id": "oyyx5j4j5fee37rc47adb5m8", "content": "Caramel" },
-            { "id": "myapux2pojdtbdy0gyc47rhq", "content": "Nuts" },
-            { "id": "aegltvuw163qqx88rwzjrg3v", "content": "Coffee" },
-            { "id": "zql5o66rry2ab3ofxa1y8kll", "content": "Lime" },
-            { "id": "ecvbkdakesh18zn5bfkylvt1", "content": "Watermelon" },
-            { "id": "b1xcrk5tv1b1rkjy40uhp44d", "content": "Maple Syrup" }
+            { "id": "b1a0qlhtirnxqaqudskc4hnb", "content": "香草" },
+            { "id": "vef4uodxrj05lp2i5k3uhdd5", "content": "浆果" },
+            { "id": "oyyx5j4j5fee37rc47adb5m8", "content": "焦糖" },
+            { "id": "myapux2pojdtbdy0gyc47rhq", "content": "坚果" },
+            { "id": "aegltvuw163qqx88rwzjrg3v", "content": "咖啡" },
+            { "id": "zql5o66rry2ab3ofxa1y8kll", "content": "青柠" },
+            { "id": "ecvbkdakesh18zn5bfkylvt1", "content": "西瓜" },
+            { "id": "b1xcrk5tv1b1rkjy40uhp44d", "content": "枫糖浆" }
           ],
           "options": {
             "variableId": "vhbd5800sc98l1lk8wf7fe742",
             "isMultipleChoice": true,
-            "buttonLabel": "Next"
+            "buttonLabel": "下一步"
           }
         }
       ]
     },
     {
       "id": "x14lejru0gv2c7afc68nuezy",
-      "title": "Diet restrictions",
+      "title": "饮食限制",
       "graphCoordinates": { "x": 2424.828125, "y": 184.4765625 },
       "blocks": [
         {
@@ -317,7 +317,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Great choice 😋" }] }
+              { "type": "p", "children": [{ "text": "好选择 😋" }] }
             ]
           }
         },
@@ -329,7 +329,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Do you have any dietary restrictions?" }
+                  { "text": "您有饮食限制吗？" }
                 ]
               }
             ]
@@ -340,10 +340,10 @@
           "outgoingEdgeId": "erx9wo3svpfxs2cteknbhfaz",
           "type": "choice input",
           "items": [
-            { "id": "u9gi0gnaza6ottid74l82wlm", "content": "Non GMO" },
-            { "id": "yr7q8fcyi6l1sw83t37fjosj", "content": "No palm oil" },
-            { "id": "gckqnnt2but4d6wwsfia3035", "content": "Gluten free" },
-            { "id": "m3qdwzep7uugpejvga0yqorg", "content": "Nut free" }
+            { "id": "u9gi0gnaza6ottid74l82wlm", "content": "非转基因" },
+            { "id": "yr7q8fcyi6l1sw83t37fjosj", "content": "无棕榈油" },
+            { "id": "gckqnnt2but4d6wwsfia3035", "content": "无麸质" },
+            { "id": "m3qdwzep7uugpejvga0yqorg", "content": "无坚果" }
           ],
           "options": {
             "variableId": "vz4fqc40gkk99h0qeus2tjwhx"
@@ -353,7 +353,7 @@
     },
     {
       "id": "q9z4xrzf9z7sgl69rrrhiyoh",
-      "title": "Email",
+      "title": "邮箱",
       "graphCoordinates": { "x": 2765.89453125, "y": 187.64453125 },
       "blocks": [
         {
@@ -365,7 +365,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Alright {{Name}}, I think we know exactly what you need."
+                    "text": "好的 {{Name}}，我想我们完全了解您的需求。"
                   }
                 ]
               }
@@ -381,7 +381,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Sign up to our email list to receive a copy of your product recommendations."
+                    "text": "注册我们的邮件列表，获取您的产品推荐副本。"
                   }
                 ]
               }
@@ -395,7 +395,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "We will also send a little gift 🎁" }]
+                "children": [{ "text": "我们还会送您一份小礼物 🎁" }]
               }
             ]
           }
@@ -409,7 +409,7 @@
     },
     {
       "id": "g27q0psplvzht5xg9erxw738",
-      "title": "If cricket",
+      "title": "如果是蟋蟀蛋白",
       "graphCoordinates": { "x": 3107.953125, "y": 187.3515625 },
       "blocks": [
         {
@@ -443,7 +443,7 @@
     },
     {
       "id": "qjoc17kdjrpkaoxesoeqzmjt",
-      "title": "No cricket in Europe",
+      "title": "欧洲无蟋蟀产品",
       "graphCoordinates": { "x": 3452.45703125, "y": 113.35546875 },
       "blocks": [
         {
@@ -455,7 +455,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Unfortunately, cricket-based products are not available in Europe. 😢"
+                    "text": "很遗憾，蟋蟀蛋白产品在欧洲不可用。😢"
                   }
                 ]
               }
@@ -472,7 +472,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "We'll make sure to let you know once it's available!"
+                    "text": "一旦有货，我们一定通知您！"
                   }
                 ]
               }
@@ -483,7 +483,7 @@
     },
     {
       "id": "b94nqmbqp0ezfazu0kekqioa",
-      "title": "If Energy",
+      "title": "如果是能量",
       "graphCoordinates": { "x": 3646.396113301624, "y": 447.8859463616741 },
       "blocks": [
         {
@@ -511,7 +511,7 @@
     },
     {
       "id": "co7gxaoxtf1xukmgbby73u6v",
-      "title": "If hydration",
+      "title": "如果是补水",
       "graphCoordinates": { "x": 4165.908336104726, "y": 568.072108305734 },
       "blocks": [
         {
@@ -539,7 +539,7 @@
     },
     {
       "id": "rcr9zqm4lnevx5dqf9k23m5u",
-      "title": "If recovery",
+      "title": "如果是恢复",
       "graphCoordinates": { "x": 4634.078450031568, "y": 886.3561931535737 },
       "blocks": [
         {
@@ -566,7 +566,7 @@
     },
     {
       "id": "ho2hskojxz8ac631driot5kh",
-      "title": "Energy",
+      "title": "能量",
       "graphCoordinates": { "x": 4001.801919721875, "y": -860.9371698075208 },
       "blocks": [
         {
@@ -577,8 +577,8 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Let's talk about " },
-                  { "bold": true, "text": "Energy. ⚡" }
+                  { "text": "让我们谈谈 " },
+                  { "bold": true, "text": "能量 ⚡" }
                 ]
               }
             ]
@@ -593,7 +593,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a selection for you based on your answers."
+                    "text": "以下是根据您的答案为您精选的产品。"
                   }
                 ]
               }
@@ -655,7 +655,7 @@
     },
     {
       "id": "w3f8ya4hmkuab55dh2ogsvtz",
-      "title": "Hydration",
+      "title": "补水",
       "graphCoordinates": { "x": 4604.393180386735, "y": 102.6192979908871 },
       "blocks": [
         {
@@ -666,8 +666,8 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "About " },
-                  { "bold": true, "text": "Hydration. 💧" }
+                  { "text": "关于 " },
+                  { "bold": true, "text": "补水 💧" }
                 ]
               }
             ]
@@ -682,7 +682,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a selection for you based on your answers."
+                    "text": "以下是根据您的答案为您精选的产品。"
                   }
                 ]
               }
@@ -697,7 +697,7 @@
             {
               "id": "pkv4omwvnr338lkhwh6jglh6",
               "pictureSrc": "https://www.naak.com/cdn/shop/files/naak-energy-drink-mix-energy-drink-mix-lime-42434407891248_600x.png?v=1692717400",
-              "title": "Lime Energy Drink Mix",
+              "title": "青柠能量饮料",
               "description": "- 250 calories: get all your calories in a liquid form\n- 55g carbohydrates: simple and complex natural carbohydrates\n- 650mg electrolytes: replenish minerals lost in sweat\n- 1300mg BCAAs: prevent muscle breakdown during exercise\n- 8g protein: all essential amino acids to reduce muscle fatigue",
               "displayCondition": {
                 "isEnabled": true,
@@ -716,20 +716,20 @@
             {
               "id": "s6nx86xyuclsjtqmr53ijea1",
               "pictureSrc": "https://eu.naak.com/cdn/shop/files/NewDrinkMixWatermelonBulk-Front_5_600x.png?v=1692716818",
-              "title": "Watermelon Energy Drink Mix",
+              "title": "西瓜能量饮料",
               "description": "- 250 calories: get all your calories in a liquid form\n- 55g carbohydrates: simple and complex natural carbohydrates\n- 650mg electrolytes: replenish minerals lost in sweat\n- 1300mg BCAAs: prevent muscle breakdown during exercise\n- 8g protein: all essential amino acids to reduce muscle fatigue"
             }
           ],
           "options": {
             "isMultipleChoice": true,
-            "buttonLabel": "Next"
+            "buttonLabel": "下一步"
           }
         }
       ]
     },
     {
       "id": "jdd417tfj6hdu4pj6bkksgwa",
-      "title": "Recovery",
+      "title": "恢复",
       "graphCoordinates": { "x": 5092.137492973015, "y": 286.5579598199387 },
       "blocks": [
         {
@@ -740,9 +740,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "bold": true, "text": "Recovery 🧘‍♂️ " },
+                  { "bold": true, "text": "恢复 🧘‍♂️ " },
                   {
-                    "text": "is crucial to perform at your highest level on the field."
+                    "text": "对于在赛场上发挥最佳水平至关重要。"
                   }
                 ]
               }
@@ -758,7 +758,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a selection for you based on your answers."
+                    "text": "以下是根据您的答案为您精选的产品。"
                   }
                 ]
               }
@@ -772,7 +772,7 @@
             {
               "id": "s9nop23fmq55jilo9mntgpn8",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/naak-breakfast-340g-protein-nut-butter-peanut-40637318365488_600x.png?v=1678033822",
-              "title": "Protein Nut Butter",
+              "title": "蛋白坚果酱",
               "description": "- 500mg super fats: promote heart and gut health\n- 640mg BCAAs: reduce muscle damage & soreness\n- 120mg electrolytes: replenish minerals lost in sweat\n- 4.3g protein: build & repair muscle post-workout",
               "displayCondition": {
                 "isEnabled": true,
@@ -797,7 +797,7 @@
             {
               "id": "snr3wam9c0p1f191rf2587wz",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/naak-protein-powder-1-bag-2-75-serving-protein-powder-vanilla-29774755954774_600x.png?v=1677355777",
-              "title": "Vanilla Protein Powder",
+              "title": "香草蛋白粉",
               "description": "- 25g complete protein: build & repair muscle post-workout\n- 4g BCAAs: reduce muscle damage & soreness\n- 430mg electrolytes: replenish minerals lost in sweat\n- 1g carbohydrates: no added sugar"
             }
           ],
@@ -821,7 +821,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Since you like all these flavors you could try our discovery packs"
+                    "text": "既然您喜欢所有这些口味，不妨试试我们的探索套装"
                   }
                 ]
               }
@@ -836,13 +836,13 @@
             {
               "id": "smabu9g31qcovytdu2yyi86n",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/PACKS_8_600x.png?v=1680032168",
-              "title": "Bars - Variety pack",
+              "title": "能量棒 - 混合装",
               "description": "- 180 calories: long-lasting energy with no sugar crash\n- 65mg caffeine: increase focus and stamina\n- 29g carbohydrates: simple and complex natural carbohydrates\n- 480mg electrolytes: replenish minerals lost in sweat\n- 7g protein: essential amino acids to reduce muscle fatigue"
             },
             {
               "id": "f8rm4b7ic73nq92u52717th5",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/PACKS_7_600x.png?v=1680032183",
-              "title": "Waffle - Variety pack",
+              "title": "华夫饼 - 混合装",
               "description": "- 140 calories: quick energy boost from high-quality ingredients\n- 16g carbohydrates: simple and complex natural carbohydrates\n- 200mg electrolytes: replenish minerals lost in sweat\n- 3g protein: all essential amino acids to reduce muscle fatigue"
             }
           ],
@@ -865,7 +865,7 @@
             {
               "id": "zc1c5ahukxhalbu9p6oqz4tw",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/naak-energy-waffle-energy-waffle-chocolate-40633672728880_600x.png?v=1677355844",
-              "title": "Chocolate Energy Waffle",
+              "title": "巧克力能量华夫饼",
               "description": "- 140 calories: quick energy boost from high-quality ingredients\n- 17g carbohydrates: simple and complex natural carbohydrates\n- 200mg electrolytes: replenish minerals lost in sweat\n- 3g protein: all essential amino acids to reduce muscle fatigue",
               "displayCondition": {
                 "isEnabled": true,
@@ -884,7 +884,7 @@
             {
               "id": "j953heg9dx2xzdhwk773fha0",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/naak-energy-waffle-energy-waffle-vanilla-40633799246128_600x.png?v=1677355758",
-              "title": "Vanilla Energy Waffle",
+              "title": "香草能量华夫饼",
               "description": "- 140 calories: quick energy boost from high-quality ingredients\n- 16g carbohydrates: simple and complex natural carbohydrates\n- 210mg electrolytes: replenish minerals lost in sweat\n- 4g protein: all essential amino acids to reduce muscle fatigue",
               "displayCondition": {
                 "isEnabled": true,
@@ -903,7 +903,7 @@
             {
               "id": "z8brrxkvbxfxfwryit6bjqb9",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/naak-energy-waffle-energy-waffle-maple-syrup-40633783877936_600x.png?v=1678034628",
-              "title": "Maple Syrup Energy Waffle",
+              "title": "枫糖浆能量华夫饼",
               "description": "- 140 calories: quick energy boost from high-quality ingredients\n- 16g carbohydrates: simple and complex natural carbohydrates\n- 210mg electrolytes: replenish minerals lost in sweat\n- 4g protein: all essential amino acids to reduce muscle fatigue",
               "displayCondition": {
                 "isEnabled": true,
@@ -922,7 +922,7 @@
             {
               "id": "ex1l3ynwk2iiz6wmavsr3l8y",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/PACKS_600x.png?v=1678223153",
-              "title": "Peanut Butter & Chocolate Bar",
+              "title": "花生酱巧克力棒",
               "description": "- 200 calories: long-lasting energy with no sugar crash\n- 27g carbohydrates: simple and complex natural carbohydrates\n- 445mg electrolytes: replenish minerals lost in sweat\n- 7g protein: essential amino acids to reduce muscle fatigue",
               "displayCondition": {
                 "isEnabled": true,
@@ -947,7 +947,7 @@
             {
               "id": "x2octz0rxe0s8ach4zdf2gch",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/98_600x.png?v=1678223518",
-              "title": "Mocha Energy Bar",
+              "title": "摩卡能量棒",
               "description": "- 180 calories: long-lasting energy with no sugar crash\n- 65mg caffeine: increase focus and stamina\n- 29g carbohydrates: simple and complex natural carbohydrates\n- 480mg electrolytes: replenish minerals lost in sweat\n- 7g protein: essential amino acids to reduce muscle fatigue",
               "displayCondition": {
                 "isEnabled": true,
@@ -966,7 +966,7 @@
             {
               "id": "hxcd05xn9rzhrvreh9bjqdbr",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/101_600x.png?v=1678223652",
-              "title": "Caramel Macchiato Bar",
+              "title": "焦糖玛奇朵棒",
               "description": "- 180 calories: long-lasting energy with no sugar crash\n- 65mg caffeine: increase focus and stamina\n- 29g carbohydrates: simple and complex natural carbohydrates\n- 480mg electrolytes: replenish minerals lost in sweat\n- 7g protein: essential amino acids to reduce muscle fatigue",
               "displayCondition": {
                 "isEnabled": true,
@@ -985,7 +985,7 @@
             {
               "id": "qw9p8xrmvli4xsn019cddxbh",
               "pictureSrc": "https://cdn.shopify.com/s/files/1/0704/1744/9254/products/92_600x.png?v=1678222928",
-              "title": "Berries & Nuts Bar",
+              "title": "浆果坚果棒",
               "description": "- 200 calories: long-lasting energy with no sugar crash\n- 28g carbohydrates: simple and complex natural carbohydrates\n- 405mg electrolytes: replenish minerals lost in sweat\n- 7g protein: essential amino acids to reduce muscle fatigue",
               "displayCondition": {
                 "isEnabled": true,

@@ -2,6 +2,7 @@ import type {
   HttpRequest,
   HttpRequestBlock,
 } from "@typebot.io/blocks-integrations/httpRequest/schema";
+import { useTranslate } from "@tolgee/react";
 import { useRef } from "react";
 import { DebouncedTextInputWithVariablesButton } from "@/components/inputs/DebouncedTextInput";
 import { HttpRequestAdvancedConfigForm } from "./HttpRequestAdvancedConfigForm";
@@ -15,6 +16,7 @@ export const HttpRequestSettings = ({
   block: { id: blockId, options },
   onOptionsChange,
 }: Props) => {
+  const { t } = useTranslate();
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const setLocalWebhook = async (newLocalWebhook: HttpRequest) => {
@@ -38,7 +40,7 @@ export const HttpRequestSettings = ({
     <div className="flex flex-col gap-0">
       <div className="flex flex-col gap-4">
         <DebouncedTextInputWithVariablesButton
-          placeholder="Paste URL..."
+          placeholder={t("blocks.integrations.httpRequest.settings.url.placeholder")}
           defaultValue={options?.webhook?.url}
           onValueChange={updateUrl}
         />

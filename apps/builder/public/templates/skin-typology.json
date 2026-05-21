@@ -6,7 +6,10 @@
     {
       "id": "zi8w5km7bu2ngms13zrv7xak",
       "outgoingEdgeId": "kdyyyj6hynn94ldk3wxxlzoy",
-      "graphCoordinates": { "x": -576.98, "y": 1.75 },
+      "graphCoordinates": {
+        "x": -576.98,
+        "y": 1.75
+      },
       "type": "start"
     }
   ],
@@ -14,7 +17,10 @@
     {
       "id": "f929zr1jbr52rzp28v3susa3",
       "title": "1",
-      "graphCoordinates": { "x": -287.05, "y": -6.77 },
+      "graphCoordinates": {
+        "x": -287.05,
+        "y": -6.77
+      },
       "blocks": [
         {
           "id": "k6gpdpfpmfjt430h0a7wa96t",
@@ -23,7 +29,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What’s your top skin concern?" }]
+                "children": [
+                  {
+                    "text": "你最关心的皮肤问题是什么？"
+                  }
+                ]
               }
             ]
           }
@@ -50,8 +60,11 @@
     },
     {
       "id": "m7v9f7qpr94kgonkcidmc7c1",
-      "title": "Skin problem",
-      "graphCoordinates": { "x": -845.27, "y": 1244.58 },
+      "title": "皮肤问题",
+      "graphCoordinates": {
+        "x": -845.27,
+        "y": 1244.58
+      },
       "blocks": [
         {
           "id": "o9twf6rt9lvgv6vzue8wt8b3",
@@ -60,7 +73,7 @@
             {
               "id": "muzbinpvhlwxsnhka6y14cyk",
               "outgoingEdgeId": "b2lis4t1syk9qd30t3yb6e9a",
-              "content": "Pimples",
+              "content": "痘痘",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -78,7 +91,7 @@
             },
             {
               "id": "fotnwnbfwz1d33w0vjqypu11",
-              "content": "Blackheads",
+              "content": "黑头",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -96,7 +109,7 @@
             },
             {
               "id": "i7zt5rhiv17xtosui349mdgs",
-              "content": "Visible pores",
+              "content": "毛孔粗大",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -114,7 +127,7 @@
             },
             {
               "id": "r5s0sazlv4qzfeq7nvsxo0mb",
-              "content": "Shiny areas",
+              "content": "油光",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -133,7 +146,7 @@
             {
               "id": "szqscovkv1ddnpt8mkt0vvxt",
               "outgoingEdgeId": "e2ol7wfl5ve73b1rdhhzqfk4",
-              "content": "Hyperpigmentation (dark spots/marks)",
+              "content": "色素沉着（黑斑/印记）",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -152,7 +165,7 @@
             {
               "id": "i0rzns61pszrww0y44isqh5v",
               "outgoingEdgeId": "hneunup1qv7md47yoh7544cj",
-              "content": "Wrinkles (prevention or treatment)",
+              "content": "皱纹（预防或治疗）",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -171,7 +184,7 @@
             {
               "id": "u226tpojjg7p16xz3mrxf9x0",
               "outgoingEdgeId": "agd81aldnxptroxm59r6bnmt",
-              "content": "Redness",
+              "content": "泛红",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -190,7 +203,7 @@
             {
               "id": "e8f057alv81bvbnsq7qbvqgc",
               "outgoingEdgeId": "ei2w9q6ozvi8jm4btm0j9pdo",
-              "content": "Dryness and/or dehydration",
+              "content": "干燥和/或缺水",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -208,7 +221,7 @@
             },
             {
               "id": "ccwxganzyrvzlsy67dv3nw1c",
-              "content": "Eye bags/dark circles",
+              "content": "眼袋/黑眼圈",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -227,7 +240,7 @@
             {
               "id": "y9y2zzc68iaxl27si3lumrl6",
               "outgoingEdgeId": "q4zonpkmvkgebxw6mq9xlj6g",
-              "content": "Dullness",
+              "content": "暗沉",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -245,7 +258,7 @@
             },
             {
               "id": "ls05hhlv8ijgze1kfbkpi6ug",
-              "content": "I don't have any particular concerns",
+              "content": "我没有特别的问题",
               "displayCondition": {
                 "isEnabled": false,
                 "condition": {
@@ -261,14 +274,19 @@
               }
             }
           ],
-          "options": { "variableId": "vqvuz8egpkhp3d6y4dquvlomc" }
+          "options": {
+            "variableId": "vqvuz8egpkhp3d6y4dquvlomc"
+          }
         }
       ]
     },
     {
       "id": "od3pji6ymtdrxllffb5d81wn",
       "title": "2",
-      "graphCoordinates": { "x": 107.46, "y": -15.58 },
+      "graphCoordinates": {
+        "x": 107.46,
+        "y": -15.58
+      },
       "blocks": [
         {
           "id": "usa4flws5fa3klgmwsqa4fm7",
@@ -277,7 +295,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Do you have a second concern?" }]
+                "children": [
+                  {
+                    "text": "你还有第二个皮肤问题吗？"
+                  }
+                ]
               }
             ]
           }
@@ -304,15 +326,19 @@
     },
     {
       "id": "kt05yubhbv5f2sh2xe2ps916",
-      "title": "Group #4",
-      "graphCoordinates": { "x": -224.85, "y": 460.3 },
+      "title": "第 4 组",
+      "graphCoordinates": {
+        "x": -224.85,
+        "y": 460.3
+      },
       "blocks": [
         {
           "id": "g3lu22vq7pxex5j44nc5vnwg",
           "type": "Set variable",
           "options": {
             "variableId": "vm8iu1iexkbk01ptkqnfwdva4",
-            "expressionToEvaluate": "{{Sebum score}} + 1"
+            "expressionToEvaluate": "{{Sebum score}} + 1",
+            "type": "Custom"
           }
         },
         {
@@ -322,7 +348,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "When do you break out?" }]
+                "children": [
+                  {
+                    "text": "你什么时候会长痘？"
+                  }
+                ]
               }
             ]
           }
@@ -334,22 +364,31 @@
           "items": [
             {
               "id": "nlep75ws189xkac98ym7sqi9",
-              "content": "Every day or most days"
+              "content": "每天或大多数天"
             },
-            { "id": "a56xhexuvzgh2rj7qg0g2zx2", "content": "Every week" },
+            {
+              "id": "a56xhexuvzgh2rj7qg0g2zx2",
+              "content": "每周"
+            },
             {
               "id": "s40qpkdcid728qzi4o70teeb",
-              "content": "During my menstrual cycle"
+              "content": "经期期间"
             },
-            { "id": "ncd5kjzbqsev653nzkxbb75b", "content": "Occasionally" }
+            {
+              "id": "ncd5kjzbqsev653nzkxbb75b",
+              "content": "偶尔"
+            }
           ]
         }
       ]
     },
     {
       "id": "ar4itsju3ovwti5k1kpdwt74",
-      "title": "Group #5",
-      "graphCoordinates": { "x": 246.8, "y": 418.48 },
+      "title": "第 5 组",
+      "graphCoordinates": {
+        "x": 246.8,
+        "y": 418.48
+      },
       "blocks": [
         {
           "id": "qychn1d8kprdjp2jglqttsko",
@@ -358,7 +397,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What kind of blemishes are they?" }]
+                "children": [
+                  {
+                    "text": "它们是什么样的瑕疵？"
+                  }
+                ]
               }
             ]
           }
@@ -369,17 +412,20 @@
           "items": [
             {
               "id": "krc7t1c11ux52lk7fm9gw1od",
-              "content": "Small red or pink bumps"
+              "content": "红色或粉色小凸起"
             },
             {
               "id": "uf2dm7zi73nx0992xje0iw9p",
-              "content": "Red and inflamed with a whitehead"
+              "content": "红肿并有白头"
             },
             {
               "id": "n2ltb5bb1umw3busctep8776",
-              "content": "Rough, bumpy skin (whiteheads) on the forehead, chin and cheeks"
+              "content": "额头、下巴和脸颊粗糙不平（白头）"
             },
-            { "id": "dasjmu5og82zi8ah549byyg6", "content": "I don't know" }
+            {
+              "id": "dasjmu5og82zi8ah549byyg6",
+              "content": "不知道"
+            }
           ],
           "options": {
             "variableId": "vd5zutxjechfh2ihdzsw2rcc3",
@@ -390,8 +436,11 @@
     },
     {
       "id": "h9kmezz8xhw7my1serv3tefl",
-      "title": "Group #6",
-      "graphCoordinates": { "x": -173.97, "y": 1124.74 },
+      "title": "第 6 组",
+      "graphCoordinates": {
+        "x": -173.97,
+        "y": 1124.74
+      },
       "blocks": [
         {
           "id": "lzm0wj11a5d6ho39nhf1fghv",
@@ -400,7 +449,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Your pigmentation marks occur…" }]
+                "children": [
+                  {
+                    "text": "你的色素沉着出现在……"
+                  }
+                ]
               }
             ]
           }
@@ -412,24 +465,27 @@
           "items": [
             {
               "id": "jkt7vj18r8infhllc788abim",
-              "content": "On areas exposed to the sun"
+              "content": "在阳光照射的区域"
             },
-            { "id": "indtjedkbr4dsiynsymm6xsc", "content": "During pregnancy" },
+            {
+              "id": "indtjedkbr4dsiynsymm6xsc",
+              "content": "怀孕期间"
+            },
             {
               "id": "ihcq3u6hhcva47f45qlavufq",
-              "content": "After taking hormonal contraceptives"
+              "content": "服用激素避孕药后"
             },
             {
               "id": "ssa3xzeabbsmzcv26vkh10et",
-              "content": "After acne breakouts"
+              "content": "痘痘爆发后"
             },
             {
               "id": "e18s16wgx4t8358tq4rjaacs",
-              "content": "After a skin trauma (e.g. scar, burn, damaged skin)"
+              "content": "皮肤创伤后（如疤痕、烧伤、皮肤损伤）"
             },
             {
               "id": "xozv08rwn1d4wbqtxa3ynvau",
-              "content": "I don't know. (Most likely caused by sun exposure)"
+              "content": "不知道（很可能是由日晒引起的）"
             }
           ]
         }
@@ -437,8 +493,11 @@
     },
     {
       "id": "d3whha2i7oa7yl2g5taztdl6",
-      "title": "Group #7",
-      "graphCoordinates": { "x": 245.63, "y": 1112.45 },
+      "title": "第 7 组",
+      "graphCoordinates": {
+        "x": 245.63,
+        "y": 1112.45
+      },
       "blocks": [
         {
           "id": "cu86zbmytiq36lvymnh5lolf",
@@ -447,7 +506,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Where do you have sun spots?" }]
+                "children": [
+                  {
+                    "text": "你的晒斑在什么位置？"
+                  }
+                ]
               }
             ]
           }
@@ -458,15 +521,15 @@
           "items": [
             {
               "id": "fklzqs3jpu8dp5it0xot8i9r",
-              "content": "I have a few, just on my face"
+              "content": "有一些，只在脸上"
             },
             {
               "id": "y9v2l0c4j2n00r32om7hf83x",
-              "content": "I have many on my forehead, temples, cheeks and nose"
+              "content": "额头、太阳穴、脸颊和鼻子上有很多"
             },
             {
               "id": "ivlfhoitcbe2gg27ab3pfjsx",
-              "content": "I have them on my face, chest, and the back of my hands"
+              "content": "脸上、胸前和手背上都有"
             }
           ]
         }
@@ -474,8 +537,11 @@
     },
     {
       "id": "b0wfn809ywofapum1xjk15og",
-      "title": "Group #8",
-      "graphCoordinates": { "x": -135.13, "y": 1966.33 },
+      "title": "第 8 组",
+      "graphCoordinates": {
+        "x": -135.13,
+        "y": 1966.33
+      },
       "blocks": [
         {
           "id": "karskhl36y3hm3sm4hhyb4u1",
@@ -485,7 +551,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Tell us about your wrinkles/fine lines." }
+                  {
+                    "text": "告诉我们你的皱纹/细纹情况。"
+                  }
                 ]
               }
             ]
@@ -497,33 +565,38 @@
           "items": [
             {
               "id": "ju2u3eqjoba95glemoyuct5a",
-              "content": "I have fine lines on my forehead and/or around my eyes"
+              "content": "额头和/或眼睛周围有细纹"
             },
             {
               "id": "fpd8yaz5z6qzjb5s1uc23qet",
-              "content": "I just have expression lines, when I smile"
+              "content": "只有笑的时候有表情纹"
             },
             {
               "id": "c9mrly2xy8owl3v4b2yh94hj",
-              "content": "I have static wrinkles even when my face is at rest"
+              "content": "即使面部放松时也有静态皱纹"
             },
             {
               "id": "s4ogb3nycgkyw4rkwbtnx9m5",
-              "content": "I have deep wrinkles all over the face"
+              "content": "全脸都有深深的皱纹"
             },
             {
               "id": "y2ppxpnbmf21qa9rh94fsxid",
-              "content": "I don’t have fine lines or wrinkles, but I want to prevent them"
+              "content": "我没有细纹或皱纹，但我想预防它们"
             }
           ],
-          "options": { "isMultipleChoice": true }
+          "options": {
+            "isMultipleChoice": true
+          }
         }
       ]
     },
     {
       "id": "ukh9p9xqcrbvjw9y5dx1ae0e",
-      "title": "Group #9",
-      "graphCoordinates": { "x": -70.79, "y": 2835.6 },
+      "title": "第 9 组",
+      "graphCoordinates": {
+        "x": -70.79,
+        "y": 2835.6
+      },
       "blocks": [
         {
           "id": "cmj33qws3awxcvchbp2pimhz",
@@ -534,7 +607,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Could you tell us more about the redness on your skin?"
+                    "text": "能告诉我们更多关于你皮肤泛红的情况吗？"
                   }
                 ]
               }
@@ -547,15 +620,15 @@
           "items": [
             {
               "id": "vg6j2x257gxe3e0w2mxvvtes",
-              "content": "My skin looks irritated and feels tight or itchy"
+              "content": "皮肤看起来发炎，感觉紧绷或发痒"
             },
             {
               "id": "nri9tz8v0uyvqqt65ym7zgrj",
-              "content": "I have redness on my cheeks, and it gets worse when it's hot, when I drink alcohol, or when I'm stressed"
+              "content": "脸颊泛红，在炎热、饮酒或压力大时加重"
             },
             {
               "id": "x2yyqm5m40ypmny91fc9ftoj",
-              "content": "I have red, inflamed spots, as well as redness"
+              "content": "有红色发炎的斑点，以及泛红"
             }
           ]
         }
@@ -563,8 +636,11 @@
     },
     {
       "id": "kxp3lgzl3ilatxs7yub8pvpk",
-      "title": "Group #10",
-      "graphCoordinates": { "x": -319.86, "y": 3489.86 },
+      "title": "第 10 组",
+      "graphCoordinates": {
+        "x": -319.86,
+        "y": 3489.86
+      },
       "blocks": [
         {
           "id": "jir4lah1bvvzn6z2bg9leo07",
@@ -574,7 +650,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "When does your skin feel uncomfortable?" }
+                  {
+                    "text": "你的皮肤在什么时候会感到不舒服？"
+                  }
                 ]
               }
             ]
@@ -587,11 +665,11 @@
           "items": [
             {
               "id": "q7av1ewiha9a64vruv0vzk28",
-              "content": "After cleansing using a dermatological treatment or when the temperature changes"
+              "content": "使用皮肤科产品清洁后或温度变化时"
             },
             {
               "id": "h2vgep3cc1oitclupkcofwti",
-              "content": "All the time even in the summer"
+              "content": "即使在夏天也一直如此"
             }
           ]
         }
@@ -599,8 +677,11 @@
     },
     {
       "id": "j9gcw3ztjmxguvmf1dnxcglf",
-      "title": "Group #11",
-      "graphCoordinates": { "x": 185.52, "y": 3492.18 },
+      "title": "第 11 组",
+      "graphCoordinates": {
+        "x": 185.52,
+        "y": 3492.18
+      },
       "blocks": [
         {
           "id": "oal1ubewv5h2199tidypxdi1",
@@ -611,7 +692,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "When your skin is uncomfortable, how does it feel?"
+                    "text": "当皮肤不舒服时，是什么感觉？"
                   }
                 ]
               }
@@ -624,26 +705,34 @@
           "items": [
             {
               "id": "f02ntm6dw8c5dnz3alba27aj",
-              "content": "My skin feels tight"
+              "content": "皮肤感觉紧绷"
             },
             {
               "id": "fok90m47fj2gizsfq7gkarcz",
-              "content": "My skin feels itchy"
+              "content": "皮肤发痒"
             },
-            { "id": "qtmxm4xay9ggtftp388qter4", "content": "My skin peels" },
+            {
+              "id": "qtmxm4xay9ggtftp388qter4",
+              "content": "皮肤脱皮"
+            },
             {
               "id": "xfvm0lcmajnk85kxzjjaoj2x",
-              "content": "My skin doesn't feel soft"
+              "content": "皮肤感觉不柔软"
             }
           ],
-          "options": { "isMultipleChoice": true }
+          "options": {
+            "isMultipleChoice": true
+          }
         }
       ]
     },
     {
       "id": "sglbdkc4yyr2k6d2jpyifmo5",
-      "title": "Group #12",
-      "graphCoordinates": { "x": -389.81, "y": 4060.6 },
+      "title": "第 12 组",
+      "graphCoordinates": {
+        "x": -389.81,
+        "y": 4060.6
+      },
       "blocks": [
         {
           "id": "jzknl780z9uw1duynj9lwrse",
@@ -654,7 +743,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Help us to understand why your skin lacks radiance."
+                    "text": "请帮我们了解为什么你的皮肤缺乏光泽。"
                   }
                 ]
               }
@@ -667,25 +756,30 @@
           "items": [
             {
               "id": "sn51zr3rvefzgaaqtcskqt5o",
-              "content": "I smoke and/or I live in a polluted environment"
+              "content": "我吸烟和/或生活在污染环境中"
             },
             {
               "id": "smp4ssk1dbpafret89jr52gu",
-              "content": "The surface of my skin is uneven"
+              "content": "我的皮肤表面不平滑"
             },
             {
               "id": "c30mu2o31wb4fxy1c2lg4he5",
-              "content": "My skin needs some sunshine"
+              "content": "我的皮肤需要一些阳光"
             }
           ],
-          "options": { "isMultipleChoice": true }
+          "options": {
+            "isMultipleChoice": true
+          }
         }
       ]
     },
     {
       "id": "x5oenwyua4u0mz2hhfiypt7p",
       "title": "3",
-      "graphCoordinates": { "x": 478.04, "y": -17.21 },
+      "graphCoordinates": {
+        "x": 478.04,
+        "y": -17.21
+      },
       "blocks": [
         {
           "id": "rg3racl6pvin69iupc2ynfay",
@@ -694,7 +788,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Do you have another concern?" }]
+                "children": [
+                  {
+                    "text": "你还有别的皮肤问题吗？"
+                  }
+                ]
               }
             ]
           }
@@ -721,8 +819,11 @@
     },
     {
       "id": "fmjx6wzmn64dn2wi4fmofloi",
-      "title": "Group #14",
-      "graphCoordinates": { "x": 901.5, "y": -38.93 },
+      "title": "第 14 组",
+      "graphCoordinates": {
+        "x": 901.5,
+        "y": -38.93
+      },
       "blocks": [
         {
           "id": "f2yrzqwqr50ytyxo0ix81fvy",
@@ -733,7 +834,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Has a dermatologist diagnosed any of the following skin concerns?"
+                    "text": "皮肤科医生是否诊断过以下任何皮肤问题？"
                   }
                 ]
               }
@@ -747,23 +848,35 @@
           "items": [
             {
               "id": "q7wgxzmlsgsvmggxo1v4f4lu",
-              "content": "Eczema/atopic dermatitis"
+              "content": "湿疹/特应性皮炎"
             },
-            { "id": "rublicdb3i6afz4vey2gxvrp", "content": "Psoriasis" },
-            { "id": "dib7mwjl197qrpfxj5yg3jot", "content": "Rosacea" },
+            {
+              "id": "rublicdb3i6afz4vey2gxvrp",
+              "content": "银屑病"
+            },
+            {
+              "id": "dib7mwjl197qrpfxj5yg3jot",
+              "content": "玫瑰痤疮"
+            },
             {
               "id": "esl7htipishc8d85gvi67jsn",
-              "content": "Seborrheic dermatitis"
+              "content": "脂溢性皮炎"
             },
-            { "id": "ybswy2crnxiesdt8s1b3uufm", "content": "No" }
+            {
+              "id": "ybswy2crnxiesdt8s1b3uufm",
+              "content": "无"
+            }
           ]
         }
       ]
     },
     {
       "id": "lew50rhih9it6fz9u7c0fabi",
-      "title": "Group #15",
-      "graphCoordinates": { "x": 1318.25, "y": -42.99 },
+      "title": "第 15 组",
+      "graphCoordinates": {
+        "x": 1318.25,
+        "y": -42.99
+      },
       "blocks": [
         {
           "id": "qpd3pd6dw3brus2dx39i6qrt",
@@ -772,7 +885,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "How do you describe yourself?" }]
+                "children": [
+                  {
+                    "text": "你如何描述自己？"
+                  }
+                ]
               }
             ]
           }
@@ -782,12 +899,21 @@
           "outgoingEdgeId": "ira3wejjdsnzejby5i31zgng",
           "type": "choice input",
           "items": [
-            { "id": "t63xhbb613uqvzl81qjkqo76", "content": "A woman" },
-            { "id": "p2zvlph9yysxdalxq3b7tfzn", "content": "A man" },
-            { "id": "brh3p7gj7qxwekc76u0k194o", "content": "Non-binary" },
+            {
+              "id": "t63xhbb613uqvzl81qjkqo76",
+              "content": "女性"
+            },
+            {
+              "id": "p2zvlph9yysxdalxq3b7tfzn",
+              "content": "男性"
+            },
+            {
+              "id": "brh3p7gj7qxwekc76u0k194o",
+              "content": "非二元性别"
+            },
             {
               "id": "ufeb3cencrz0yxh9853reyvx",
-              "content": "I don’t wish to define myself"
+              "content": "我不想定义自己"
             }
           ]
         }
@@ -795,8 +921,11 @@
     },
     {
       "id": "ya9rdndrzy273h1zzx2eq82i",
-      "title": "Group #16",
-      "graphCoordinates": { "x": 1696.04, "y": -52.65 },
+      "title": "第 16 组",
+      "graphCoordinates": {
+        "x": 1696.04,
+        "y": -52.65
+      },
       "blocks": [
         {
           "id": "gsupz0i4mh0616u04rjj3ls8",
@@ -807,7 +936,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "How does your skin feel throughout the day if you haven't applied any skincare products or makeup?"
+                    "text": "如果一整天没有使用任何护肤品或化妆品，你的皮肤感觉如何？"
                   }
                 ]
               }
@@ -821,15 +950,15 @@
           "items": [
             {
               "id": "vmzalnc9qvfl667lfoxyfp4o",
-              "content": "If I don't apply a mattifying product, my skin is shiny from the middle of the day onwards"
+              "content": "如果不使用控油产品，我的皮肤从中午开始就会出油"
             },
             {
               "id": "b7vequ8pgco2e0rpnxj0sky3",
-              "content": "If I want my skin to feel comfortable, I need to moisturize morning and evening"
+              "content": "如果想让皮肤感觉舒适，我需要早晚保湿"
             },
             {
               "id": "q8tazj46hwsrcw63kysgh2gt",
-              "content": "I don't have any particular problems (my t-zone is naturally oilier than the rest of my face, that's all)"
+              "content": "我没有特别的问题（我的T区天生比面部其他部位更油，仅此而已）"
             }
           ]
         }
@@ -837,8 +966,11 @@
     },
     {
       "id": "sdar8z8vwxziddba5p07nprv",
-      "title": "Group #17",
-      "graphCoordinates": { "x": 2035.2, "y": -63.94 },
+      "title": "第 17 组",
+      "graphCoordinates": {
+        "x": 2035.2,
+        "y": -63.94
+      },
       "blocks": [
         {
           "id": "vqciagailn22pvgr83l2tu4q",
@@ -848,7 +980,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "What do you see when you look in the mirror?" }
+                  {
+                    "text": "照镜子时你看到了什么？"
+                  }
                 ]
               }
             ]
@@ -861,19 +995,19 @@
           "items": [
             {
               "id": "vs9o2fpleeykcxt9gufaive5",
-              "content": "No wrinkles. My skin is supple and firm"
+              "content": "没有皱纹，皮肤柔软紧致"
             },
             {
               "id": "him733u0w39bvan7ribgcxiw",
-              "content": "Fine lines on my forehead and/or around my eyes"
+              "content": "额头和/或眼睛周围有细纹"
             },
             {
               "id": "a55oyxj5crnkuqoo6948ejg8",
-              "content": "Expression lines, when I smile"
+              "content": "笑的时候有表情纹"
             },
             {
               "id": "os3af3kvgkm6ip59iu85hyzv",
-              "content": "Static wrinkles that are visible all the time, even when my face is at rest"
+              "content": "一直可见的静态皱纹，即使面部放松时也有"
             }
           ]
         }
@@ -881,8 +1015,11 @@
     },
     {
       "id": "j47xycbp95hd9wlvfjqlp3dm",
-      "title": "Group #18",
-      "graphCoordinates": { "x": 2413.54, "y": -71.58 },
+      "title": "第 18 组",
+      "graphCoordinates": {
+        "x": 2413.54,
+        "y": -71.58
+      },
       "blocks": [
         {
           "id": "ty5muam6nlspc7xulm4crs51",
@@ -892,7 +1029,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How does your skin react to cosmetic products?" }
+                  {
+                    "text": "你的皮肤对化妆品有什么反应？"
+                  }
                 ]
               }
             ]
@@ -905,15 +1044,15 @@
           "items": [
             {
               "id": "riidiklh7td0y881rfxd635j",
-              "content": "I've never had a bad reaction"
+              "content": "从未有过不良反应"
             },
             {
               "id": "l9l6wsxrsn2ltq63wwc83zmc",
-              "content": "It gets momentarily red if I use products that are too aggressive for my skin"
+              "content": "如果使用对皮肤过于刺激的产品，会暂时变红"
             },
             {
               "id": "jnud3df8zn0g75uo42qaokm6",
-              "content": "My skin is very reactive and prone to allergic reactions to cosmetics"
+              "content": "我的皮肤非常敏感，容易对化妆品产生过敏反应"
             }
           ]
         }
@@ -921,15 +1060,25 @@
     },
     {
       "id": "yly57wl5horq6h46xlz0pdof",
-      "title": "Group #19",
-      "graphCoordinates": { "x": 2771.21, "y": -71.25 },
+      "title": "第 19 组",
+      "graphCoordinates": {
+        "x": 2771.21,
+        "y": -71.25
+      },
       "blocks": [
         {
           "id": "ajlhkbgdl8kam2l5gumnndm1",
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Do you wear makeup?" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "你化妆吗？"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -938,24 +1087,33 @@
           "outgoingEdgeId": "ovypkxkt0k8w3b9yo0s0libr",
           "type": "choice input",
           "items": [
-            { "id": "ukk542pqy2ltnyi67u94veob", "content": "No, never" },
+            {
+              "id": "ukk542pqy2ltnyi67u94veob",
+              "content": "不，从不"
+            },
             {
               "id": "a4jpqg1k5pzs4ywgzbfw3x0h",
-              "content": "Rarely, just for special occasions"
+              "content": "很少，只在特殊场合"
             },
             {
               "id": "grv94a64xsc5iwxezi200ljl",
-              "content": "Regularly, several times a week"
+              "content": "经常，每周几次"
             },
-            { "id": "ywlbkscrzezw5vkk30wogoje", "content": "Every day" }
+            {
+              "id": "ywlbkscrzezw5vkk30wogoje",
+              "content": "每天"
+            }
           ]
         }
       ]
     },
     {
       "id": "en5pphruiiau597j614ngg3q",
-      "title": "Group #20",
-      "graphCoordinates": { "x": 3129, "y": -74.37 },
+      "title": "第 20 组",
+      "graphCoordinates": {
+        "x": 3129,
+        "y": -74.37
+      },
       "blocks": [
         {
           "id": "dsvi5k6iouka67mosjepfa53",
@@ -964,7 +1122,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Tell us about where you live." }]
+                "children": [
+                  {
+                    "text": "告诉我们你住在哪里。"
+                  }
+                ]
               }
             ]
           }
@@ -976,15 +1138,15 @@
           "items": [
             {
               "id": "p7u13e8zbrybrs9b3sr7jlwm",
-              "content": "There's a lot of pollution"
+              "content": "污染很严重"
             },
             {
               "id": "xl375gwn8kgu6kg7yuyj1qol",
-              "content": "There's some pollution"
+              "content": "有一些污染"
             },
             {
               "id": "e7n697c90shslft6qlpqkk3b",
-              "content": "There isn't much pollution"
+              "content": "污染不太严重"
             }
           ]
         }
@@ -992,15 +1154,25 @@
     },
     {
       "id": "y902leuaeotwv8k1i4gnkf4p",
-      "title": "Group #21",
-      "graphCoordinates": { "x": 3484.44, "y": -67.32 },
+      "title": "第 21 组",
+      "graphCoordinates": {
+        "x": 3484.44,
+        "y": -67.32
+      },
       "blocks": [
         {
           "id": "y41i08ngcmuu9jy6km8qmkcz",
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Do you smoke?" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "你吸烟吗？"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -1009,23 +1181,29 @@
           "outgoingEdgeId": "gkfa620lz2ejdvn890n3vb5y",
           "type": "choice input",
           "items": [
-            { "id": "fqztopzjmce2ohr12xz9gmu3", "content": "No" },
-            { "id": "mcq5lpn493w24q6lcohmc5yr", "content": "Occasionally" },
+            {
+              "id": "fqztopzjmce2ohr12xz9gmu3",
+              "content": "不"
+            },
+            {
+              "id": "mcq5lpn493w24q6lcohmc5yr",
+              "content": "偶尔"
+            },
             {
               "id": "n9urk18o0g9j3y6k74wrnhm5",
-              "content": "1 to 10 cigarettes a day"
+              "content": "每天 1 到 10 支"
             },
             {
               "id": "hj4soju8lmrmqnizsvej442z",
-              "content": "10 to 20 cigarettes a day"
+              "content": "每天 10 到 20 支"
             },
             {
               "id": "sfi7a9booyqoi40fi1pdzavt",
-              "content": "More than a pack a day"
+              "content": "每天一包以上"
             },
             {
               "id": "otve51lvqfrubdbn7ruk3lcn",
-              "content": "I smoke electronic cigarettes"
+              "content": "我吸电子烟"
             }
           ]
         }
@@ -1033,8 +1211,11 @@
     },
     {
       "id": "yke5fhaejaghtgv3qmyv3h74",
-      "title": "Group #22",
-      "graphCoordinates": { "x": 3841.88, "y": -68.48 },
+      "title": "第 22 组",
+      "graphCoordinates": {
+        "x": 3841.88,
+        "y": -68.48
+      },
       "blocks": [
         {
           "id": "us1bb0ah3io3s3kf3ipe71ic",
@@ -1044,7 +1225,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Select the skin tone that best represents you:" }
+                  {
+                    "text": "选择最能代表你的肤色："
+                  }
                 ]
               }
             ]
@@ -1057,27 +1240,27 @@
           "items": [
             {
               "id": "urogsq3r6okpwkn147o4zsjg",
-              "content": "Fair with some freckles. Doesn’t really tan, gets red in the sun"
+              "content": "白皙带有些许雀斑，不太会晒黑，在阳光下会发红"
             },
             {
               "id": "euytvrcv3covqac6c8hlr6qi",
-              "content": "Light with pink or yellow undertones. Tans gradually. Sunburns are common in the beginning of summer"
+              "content": "浅色带粉或黄色底色，逐渐晒黑，初夏容易晒伤"
             },
             {
               "id": "dhinnrwwiokf8myup10vvkco",
-              "content": "Medium with warm or olive undertones. Tans easily but sometimes burns"
+              "content": "中等带暖色或橄榄色底色，容易晒黑但有时会晒伤"
             },
             {
               "id": "nulsi1x0g5n86a04mm6h5bsi",
-              "content": "Matte with bronze undertones. Sunburns occasionally"
+              "content": "哑光带古铜色底色，偶尔晒伤"
             },
             {
               "id": "oznwtn9niiayc72jjh4gjgx4",
-              "content": "Brown. Sunburns are very rare. Tans in the sun"
+              "content": "棕色，很少晒伤，在阳光下会晒黑"
             },
             {
               "id": "pnu9f8osvs3z9my6h4iymk2r",
-              "content": "Dark with cool undertones. Doesn’t sunburn"
+              "content": "深色带冷色底色，不会晒伤"
             }
           ]
         }
@@ -1085,8 +1268,11 @@
     },
     {
       "id": "x7qlgkrl2rk496lywuyaya6d",
-      "title": "Group #23",
-      "graphCoordinates": { "x": 4217.97, "y": -65.72 },
+      "title": "第 23 组",
+      "graphCoordinates": {
+        "x": 4217.97,
+        "y": -65.72
+      },
       "blocks": [
         {
           "id": "qkmmo2ago6qhttf11n64skah",
@@ -1096,7 +1282,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How often do you get strong sun exposure?" }
+                  {
+                    "text": "你多久会暴露在强烈阳光下？"
+                  }
                 ]
               }
             ]
@@ -1107,22 +1295,25 @@
           "outgoingEdgeId": "ff5mm3s3w4y19au133ca5d29",
           "type": "choice input",
           "items": [
-            { "id": "ab58o8ylnquxr7vaovhhtahr", "content": "Almost never" },
+            {
+              "id": "ab58o8ylnquxr7vaovhhtahr",
+              "content": "几乎从不"
+            },
             {
               "id": "dnqdhzaozbh2udu0uq82k1py",
-              "content": "One week per year"
+              "content": "每年一周"
             },
             {
               "id": "se6rgn2uixr72ft4y6mfmnzc",
-              "content": "Several weeks per year"
+              "content": "每年几周"
             },
             {
               "id": "sa8q4ohl8rnn7z7ulvnifsd1",
-              "content": "More than a month per year"
+              "content": "每年一个月以上"
             },
             {
               "id": "e0xypcvrzurygxsncii50c2q",
-              "content": "All year round, more or less"
+              "content": "全年或多或少都有"
             }
           ]
         }
@@ -1130,8 +1321,11 @@
     },
     {
       "id": "ffle7a76hw8wbfshfikyk21c",
-      "title": "Group #24",
-      "graphCoordinates": { "x": 4571.56, "y": -61.58 },
+      "title": "第 24 组",
+      "graphCoordinates": {
+        "x": 4571.56,
+        "y": -61.58
+      },
       "blocks": [
         {
           "id": "t0ts15623sbklxxc6tbh0q84",
@@ -1142,7 +1336,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "To keep a record of your skin diagnostic result, please provide your e-mail address :"
+                    "text": "为了保存您的皮肤诊断结果记录，请提供您的邮箱地址："
                   }
                 ]
               }
@@ -1153,14 +1347,19 @@
           "id": "xc63yyy5eobay5msj26t4dpe",
           "outgoingEdgeId": "dwls95sfkvly3ykdsxu835u8",
           "type": "email input",
-          "options": { "variableId": "vnzqkgmwlwlu7ut6jjelel53w" }
+          "options": {
+            "variableId": "vnzqkgmwlwlu7ut6jjelel53w"
+          }
         }
       ]
     },
     {
       "id": "h5qb2gmhwqctl155fhfqmu7u",
-      "title": "Group #27",
-      "graphCoordinates": { "x": 4905.35, "y": -60.75 },
+      "title": "第 27 组",
+      "graphCoordinates": {
+        "x": 4905.35,
+        "y": -60.75
+      },
       "blocks": [
         {
           "id": "heto2wo9f08d4ypr40hvrfww",
@@ -1183,7 +1382,11 @@
                 "content": "Your job is to provide the skin typology of the user.\n\nYou compute this typology based on 3 metrics and each metric has different levels:\n- Skin aging: A (absent), D (discreet), V (visible), P (pronounced)\n- Oxydation factors: E (exposed), P (protected)\n- Sebum Production: - (low), . (balanced), + (high)\n\nWith these metrics you can categorize the skin.\n\nExamples:\n- \"PP-\" for an aging protected skin with low sebum production\n- \"AE+\" for an exposed non aging skin with lot of sebum production\n\nYou are working for a company called Typology and you are selling skin care products. Your job is to provide the skin typology of the user.\n\nYour answer should be based on the context inside the <context> XML element\n\n<context>\n{{Transcript}}\n</context>\n\nYour report is meant to be read by the user so make it friendly and interesting to read.\n\nFirst provide the typology and then explain it."
               }
             ],
-            "responseMapping": [{ "variableId": "vdpuiv26xmgtrwg1aq8owoxej" }]
+            "responseMapping": [
+              {
+                "variableId": "vdpuiv26xmgtrwg1aq8owoxej"
+              }
+            ]
           }
         },
         {
@@ -1191,7 +1394,14 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "{{Gen AI}}" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{Gen AI}}"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -1200,7 +1410,9 @@
           "type": "Email",
           "options": {
             "isCustomBody": true,
-            "recipients": ["{{Email}}"],
+            "recipients": [
+              "{{Email}}"
+            ],
             "subject": "Your Personalized Skin Typology Diagnosis",
             "body": "Hi,\n\nThank you for taking the time to answer our questions. Based on your responses, we have determined your skin typology. Here is a detailed recap of your diagnosis:\n\n{{Gen AI}}\n\nWe hope you find these recommendations helpful. If you have any further questions or need additional assistance, please do not hesitate to reach out.\n\nBest regards,"
           },
@@ -1210,8 +1422,11 @@
     },
     {
       "id": "iz6tldba9ypmmvqa48j19v86",
-      "title": "CTA",
-      "graphCoordinates": { "x": 5264.79, "y": -52.26 },
+      "title": "行动号召",
+      "graphCoordinates": {
+        "x": 5264.79,
+        "y": -52.26
+      },
       "blocks": [
         {
           "id": "rt3bntjm7x2m6pkz2n47lwvv",
@@ -1222,7 +1437,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Now that you know your skin typology, would you like to check out our selection of top-rated skin-care products? 💆"
+                    "text": "现在你知道了自己的皮肤类型，想看看我们精选的顶级护肤产品吗？💆"
                   }
                 ]
               }
@@ -1236,7 +1451,7 @@
             {
               "id": "hmnuvpvu3ihtflhj5spx5lf3",
               "outgoingEdgeId": "f6zvru644gs2qoc5xavc87vs",
-              "content": "Go shopping"
+              "content": "去购物"
             }
           ]
         }
@@ -1245,12 +1460,17 @@
     {
       "id": "x5u41e030i07cxhbmujx4ngb",
       "title": "",
-      "graphCoordinates": { "x": 5610.1, "y": 214.4 },
+      "graphCoordinates": {
+        "x": 5610.1,
+        "y": 214.4
+      },
       "blocks": [
         {
           "id": "nha5wj8a0czia8yd3qupm7zh",
           "type": "Redirect",
-          "options": { "url": "https://global.typology.com/" }
+          "options": {
+            "url": "https://global.typology.com/"
+          }
         }
       ]
     }
@@ -1258,8 +1478,12 @@
   "edges": [
     {
       "id": "ytel1g0jmiasr5o5ouvnadm1",
-      "from": { "blockId": "zix9zhcgb3km57n5q36zl0ri" },
-      "to": { "groupId": "od3pji6ymtdrxllffb5d81wn" }
+      "from": {
+        "blockId": "zix9zhcgb3km57n5q36zl0ri"
+      },
+      "to": {
+        "groupId": "od3pji6ymtdrxllffb5d81wn"
+      }
     },
     {
       "id": "b2lis4t1syk9qd30t3yb6e9a",
@@ -1267,12 +1491,18 @@
         "blockId": "o9twf6rt9lvgv6vzue8wt8b3",
         "itemId": "muzbinpvhlwxsnhka6y14cyk"
       },
-      "to": { "groupId": "kt05yubhbv5f2sh2xe2ps916" }
+      "to": {
+        "groupId": "kt05yubhbv5f2sh2xe2ps916"
+      }
     },
     {
       "id": "as0kqkyfgbmb6wbjus0lp0h9",
-      "from": { "blockId": "a0czqnu2wrlsty9isaof3mn3" },
-      "to": { "groupId": "ar4itsju3ovwti5k1kpdwt74" }
+      "from": {
+        "blockId": "a0czqnu2wrlsty9isaof3mn3"
+      },
+      "to": {
+        "groupId": "ar4itsju3ovwti5k1kpdwt74"
+      }
     },
     {
       "id": "e2ol7wfl5ve73b1rdhhzqfk4",
@@ -1280,12 +1510,18 @@
         "blockId": "o9twf6rt9lvgv6vzue8wt8b3",
         "itemId": "szqscovkv1ddnpt8mkt0vvxt"
       },
-      "to": { "groupId": "h9kmezz8xhw7my1serv3tefl" }
+      "to": {
+        "groupId": "h9kmezz8xhw7my1serv3tefl"
+      }
     },
     {
       "id": "vix01g2eobwcc805xeesi9yc",
-      "from": { "blockId": "zqy1p2pa6cmmj5574axlm605" },
-      "to": { "groupId": "d3whha2i7oa7yl2g5taztdl6" }
+      "from": {
+        "blockId": "zqy1p2pa6cmmj5574axlm605"
+      },
+      "to": {
+        "groupId": "d3whha2i7oa7yl2g5taztdl6"
+      }
     },
     {
       "id": "hneunup1qv7md47yoh7544cj",
@@ -1293,7 +1529,9 @@
         "blockId": "o9twf6rt9lvgv6vzue8wt8b3",
         "itemId": "i0rzns61pszrww0y44isqh5v"
       },
-      "to": { "groupId": "b0wfn809ywofapum1xjk15og" }
+      "to": {
+        "groupId": "b0wfn809ywofapum1xjk15og"
+      }
     },
     {
       "id": "agd81aldnxptroxm59r6bnmt",
@@ -1301,7 +1539,9 @@
         "blockId": "o9twf6rt9lvgv6vzue8wt8b3",
         "itemId": "u226tpojjg7p16xz3mrxf9x0"
       },
-      "to": { "groupId": "ukh9p9xqcrbvjw9y5dx1ae0e" }
+      "to": {
+        "groupId": "ukh9p9xqcrbvjw9y5dx1ae0e"
+      }
     },
     {
       "id": "ei2w9q6ozvi8jm4btm0j9pdo",
@@ -1309,12 +1549,18 @@
         "blockId": "o9twf6rt9lvgv6vzue8wt8b3",
         "itemId": "e8f057alv81bvbnsq7qbvqgc"
       },
-      "to": { "groupId": "kxp3lgzl3ilatxs7yub8pvpk" }
+      "to": {
+        "groupId": "kxp3lgzl3ilatxs7yub8pvpk"
+      }
     },
     {
       "id": "v97pa9h725258bqelwi0gkai",
-      "from": { "blockId": "tugkxhxqs5cyuno64k29mirj" },
-      "to": { "groupId": "j9gcw3ztjmxguvmf1dnxcglf" }
+      "from": {
+        "blockId": "tugkxhxqs5cyuno64k29mirj"
+      },
+      "to": {
+        "groupId": "j9gcw3ztjmxguvmf1dnxcglf"
+      }
     },
     {
       "id": "q4zonpkmvkgebxw6mq9xlj6g",
@@ -1322,82 +1568,144 @@
         "blockId": "o9twf6rt9lvgv6vzue8wt8b3",
         "itemId": "y9y2zzc68iaxl27si3lumrl6"
       },
-      "to": { "groupId": "sglbdkc4yyr2k6d2jpyifmo5" }
+      "to": {
+        "groupId": "sglbdkc4yyr2k6d2jpyifmo5"
+      }
     },
     {
       "id": "k9iqgr93gy1j7y7wcau0796d",
-      "from": { "blockId": "hkhswiz5jz67hsbee8nyupjo" },
-      "to": { "groupId": "x5oenwyua4u0mz2hhfiypt7p" }
+      "from": {
+        "blockId": "hkhswiz5jz67hsbee8nyupjo"
+      },
+      "to": {
+        "groupId": "x5oenwyua4u0mz2hhfiypt7p"
+      }
     },
     {
       "id": "qlptft5rpnqxdrl5rn818apo",
-      "from": { "blockId": "q1vcfx4rofsof3uv9m8138uk" },
-      "to": { "groupId": "fmjx6wzmn64dn2wi4fmofloi" }
+      "from": {
+        "blockId": "q1vcfx4rofsof3uv9m8138uk"
+      },
+      "to": {
+        "groupId": "fmjx6wzmn64dn2wi4fmofloi"
+      }
     },
     {
       "id": "ira3wejjdsnzejby5i31zgng",
-      "from": { "blockId": "a3ucpz37jr9af6etzwrgpxwa" },
-      "to": { "groupId": "ya9rdndrzy273h1zzx2eq82i" }
+      "from": {
+        "blockId": "a3ucpz37jr9af6etzwrgpxwa"
+      },
+      "to": {
+        "groupId": "ya9rdndrzy273h1zzx2eq82i"
+      }
     },
     {
       "id": "g7tf8a5s5qufdgsbj3a896io",
-      "from": { "blockId": "qcev9xsh8ucgngc8g04zsktk" },
-      "to": { "groupId": "lew50rhih9it6fz9u7c0fabi" }
+      "from": {
+        "blockId": "qcev9xsh8ucgngc8g04zsktk"
+      },
+      "to": {
+        "groupId": "lew50rhih9it6fz9u7c0fabi"
+      }
     },
     {
       "id": "jvv84pjq21xnaqzoq1shk4ts",
-      "from": { "blockId": "txhrcc5ii8wfidw0lj7hhvcx" },
-      "to": { "groupId": "sdar8z8vwxziddba5p07nprv" }
+      "from": {
+        "blockId": "txhrcc5ii8wfidw0lj7hhvcx"
+      },
+      "to": {
+        "groupId": "sdar8z8vwxziddba5p07nprv"
+      }
     },
     {
       "id": "ewgw4tgd11irl5qr24g6fr58",
-      "from": { "blockId": "zse327o8uf7v2vgjefzhmhzw" },
-      "to": { "groupId": "j47xycbp95hd9wlvfjqlp3dm" }
+      "from": {
+        "blockId": "zse327o8uf7v2vgjefzhmhzw"
+      },
+      "to": {
+        "groupId": "j47xycbp95hd9wlvfjqlp3dm"
+      }
     },
     {
       "id": "asquip1jyoa7kn34xsb0jrvu",
-      "from": { "blockId": "r8p3bllvh6902cn9l6wfzjg2" },
-      "to": { "groupId": "yly57wl5horq6h46xlz0pdof" }
+      "from": {
+        "blockId": "r8p3bllvh6902cn9l6wfzjg2"
+      },
+      "to": {
+        "groupId": "yly57wl5horq6h46xlz0pdof"
+      }
     },
     {
       "id": "ovypkxkt0k8w3b9yo0s0libr",
-      "from": { "blockId": "czxq9ogv5t309zwvqf06c0lh" },
-      "to": { "groupId": "en5pphruiiau597j614ngg3q" }
+      "from": {
+        "blockId": "czxq9ogv5t309zwvqf06c0lh"
+      },
+      "to": {
+        "groupId": "en5pphruiiau597j614ngg3q"
+      }
     },
     {
       "id": "fi56xu9q9iqtz399ahn3j9u1",
-      "from": { "blockId": "ffo7dzm08uapuawzp1rbe44a" },
-      "to": { "groupId": "y902leuaeotwv8k1i4gnkf4p" }
+      "from": {
+        "blockId": "ffo7dzm08uapuawzp1rbe44a"
+      },
+      "to": {
+        "groupId": "y902leuaeotwv8k1i4gnkf4p"
+      }
     },
     {
       "id": "gkfa620lz2ejdvn890n3vb5y",
-      "from": { "blockId": "lajq4bpdwcoyjek8hy5o9hhs" },
-      "to": { "groupId": "yke5fhaejaghtgv3qmyv3h74" }
+      "from": {
+        "blockId": "lajq4bpdwcoyjek8hy5o9hhs"
+      },
+      "to": {
+        "groupId": "yke5fhaejaghtgv3qmyv3h74"
+      }
     },
     {
       "id": "iuzkts0oxz0q677cwmjwwokm",
-      "from": { "blockId": "wmysi2qtw69ggq94fx5qnrog" },
-      "to": { "groupId": "x7qlgkrl2rk496lywuyaya6d" }
+      "from": {
+        "blockId": "wmysi2qtw69ggq94fx5qnrog"
+      },
+      "to": {
+        "groupId": "x7qlgkrl2rk496lywuyaya6d"
+      }
     },
     {
       "id": "ff5mm3s3w4y19au133ca5d29",
-      "from": { "blockId": "pujmgbezgnf3xgdmpymhs565" },
-      "to": { "groupId": "ffle7a76hw8wbfshfikyk21c" }
+      "from": {
+        "blockId": "pujmgbezgnf3xgdmpymhs565"
+      },
+      "to": {
+        "groupId": "ffle7a76hw8wbfshfikyk21c"
+      }
     },
     {
       "id": "fn91ar1pog2h9vowmlg123hh",
-      "from": { "blockId": "rozemsgzi7n29kcrgke2pz48" },
-      "to": { "groupId": "f929zr1jbr52rzp28v3susa3" }
+      "from": {
+        "blockId": "rozemsgzi7n29kcrgke2pz48"
+      },
+      "to": {
+        "groupId": "f929zr1jbr52rzp28v3susa3"
+      }
     },
     {
       "id": "kdyyyj6hynn94ldk3wxxlzoy",
-      "from": { "eventId": "zi8w5km7bu2ngms13zrv7xak" },
-      "to": { "groupId": "f929zr1jbr52rzp28v3susa3" }
+      "from": {
+        "eventId": "zi8w5km7bu2ngms13zrv7xak"
+      },
+      "to": {
+        "groupId": "f929zr1jbr52rzp28v3susa3"
+      }
     },
     {
       "id": "dwls95sfkvly3ykdsxu835u8",
-      "from": { "blockId": "xc63yyy5eobay5msj26t4dpe" },
-      "to": { "groupId": "h5qb2gmhwqctl155fhfqmu7u" }
+      "from": {
+        "blockId": "xc63yyy5eobay5msj26t4dpe"
+      },
+      "to": {
+        "groupId": "h5qb2gmhwqctl155fhfqmu7u"
+      }
     },
     {
       "id": "f6zvru644gs2qoc5xavc87vs",
@@ -1405,11 +1713,17 @@
         "blockId": "s10p30kymib9np9wbs3gqwyq",
         "itemId": "hmnuvpvu3ihtflhj5spx5lf3"
       },
-      "to": { "groupId": "x5u41e030i07cxhbmujx4ngb" }
+      "to": {
+        "groupId": "x5u41e030i07cxhbmujx4ngb"
+      }
     },
     {
-      "from": { "blockId": "for2wo573unezh3a2ru5c43x" },
-      "to": { "groupId": "iz6tldba9ypmmvqa48j19v86" },
+      "from": {
+        "blockId": "for2wo573unezh3a2ru5c43x"
+      },
+      "to": {
+        "groupId": "iz6tldba9ypmmvqa48j19v86"
+      },
       "id": "x9uoi6aeb4ui53c6fi7gxtzk"
     }
   ],
@@ -1434,7 +1748,10 @@
       "name": "Selected skin problem",
       "isSessionVariable": true
     },
-    { "id": "vtyvtib894a8eeqgr21yb17tv", "name": "Skin problems" }
+    {
+      "id": "vtyvtib894a8eeqgr21yb17tv",
+      "name": "Skin problems"
+    }
   ],
   "theme": {
     "general": {
@@ -1456,16 +1773,25 @@
         "blur": 5,
         "opacity": 0.5
       },
-      "hostAvatar": { "isEnabled": false },
-      "hostBubbles": { "backgroundColor": "#FBF9F7" },
+      "hostAvatar": {
+        "isEnabled": false
+      },
+      "hostBubbles": {
+        "backgroundColor": "#FBF9F7"
+      },
       "guestBubbles": {
         "backgroundColor": "transparent",
         "color": "#000",
-        "border": { "thickness": 1, "roundeness": "none" }
+        "border": {
+          "thickness": 1,
+          "roundeness": "none"
+        }
       },
       "buttons": {
         "backgroundColor": "#000",
-        "border": { "roundeness": "none" }
+        "border": {
+          "roundeness": "none"
+        }
       }
     }
   },

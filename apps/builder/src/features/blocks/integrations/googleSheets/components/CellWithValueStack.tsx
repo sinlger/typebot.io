@@ -1,4 +1,5 @@
 import type { Cell } from "@typebot.io/blocks-integrations/googleSheets/schema";
+import { useTranslate } from "@tolgee/react";
 import { Button } from "@typebot.io/ui/components/Button";
 import { MoreVerticalIcon } from "@typebot.io/ui/icons/MoreVerticalIcon";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
@@ -10,6 +11,7 @@ export const CellWithValueStack = ({
   onItemChange,
   columns,
 }: TableListItemProps<Cell> & { columns: string[] }) => {
+  const { t } = useTranslate();
   const handleColumnSelect = (column: string | undefined) => {
     if (item.column === column) return;
     onItemChange({ ...item, column });
@@ -32,12 +34,12 @@ export const CellWithValueStack = ({
         value={item.column}
         onChange={handleColumnSelect}
         items={columns}
-        placeholder="Select a column"
+        placeholder={t("blocks.integrations.common.selectColumn.placeholder")}
       />
       <DebouncedTextInputWithVariablesButton
         defaultValue={item.value ?? ""}
         onValueChange={handleValueChange}
-        placeholder="Type a value..."
+        placeholder={t("blocks.integrations.common.typeValue.placeholder")}
       />
     </div>
   );

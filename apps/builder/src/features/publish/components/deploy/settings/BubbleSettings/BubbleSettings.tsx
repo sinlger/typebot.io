@@ -94,6 +94,7 @@ const BubbleIcon = ({
 }: {
   buttonTheme: NonNullable<BubbleProps["theme"]>["button"];
 }) => {
+  const { t } = useTranslate();
   if (!buttonTheme?.customIconSrc)
     return (
       <svg

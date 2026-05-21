@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "cokban593khtw85h0edk89ty",
-      "title": "AI loop",
+      "title": "AI 循环",
       "graphCoordinates": { "x": 287.4, "y": 316.89 },
       "blocks": [
         {
@@ -62,7 +62,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work."
+                    "text": "您需要添加 OpenAI 凭据才能让此机器人正常工作。"
                   }
                 ]
               }
@@ -79,11 +79,11 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此分组并将 "
                   },
                   { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "AI loop" },
+                  { "text": " 事件连接到 " },
+                  { "bold": true, "text": "AI 循环" },
                   { "text": "" }
                 ]
               }

@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "on7ym4flw1hxplw7rdto1jz7",
-      "title": "Welcome",
+      "title": "欢迎",
       "graphCoordinates": { "x": 238.55, "y": -30.7 },
       "blocks": [
         {
@@ -25,7 +25,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Hi there! Are you curious to see how much you can save by switching to reusable sponges and paper towels? 🌱"
+                    "text": "你好！想知道改用可重复使用海绵和纸巾能节省多少钱吗？🌱"
                   }
                 ]
               }
@@ -39,7 +39,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Let's find out together!" }]
+                "children": [{ "text": "让我们一起算算看！" }]
               }
             ]
           }
@@ -49,14 +49,14 @@
           "outgoingEdgeId": "k0ikr8x3bu9s5o86g5njqfts",
           "type": "choice input",
           "items": [
-            { "id": "ih0cv1bnpyc83qwz4qq6ywk3", "content": "Yes, let's go!" }
+            { "id": "ih0cv1bnpyc83qwz4qq6ywk3", "content": "好的，开始吧！" }
           ]
         }
       ]
     },
     {
       "id": "o61u4a9i5p1rhpn6qwinbpo8",
-      "title": "Sponge usage",
+      "title": "海绵使用",
       "graphCoordinates": { "x": 618.58, "y": 4.61 },
       "blocks": [
         {
@@ -68,7 +68,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Where do you typically use sponges in your house?"
+                    "text": "你通常在家里哪些地方使用海绵？"
                   }
                 ]
               }
@@ -82,25 +82,25 @@
           "items": [
             {
               "id": "x10afn6nfah52jsu0avz6br9",
-              "content": "Kitchen - for dishes, counter, and appliances"
+              "content": "厨房 - 洗碗、台面和电器"
             },
             {
               "id": "eeogjc9povplcvgqny1dc6uj",
-              "content": "Bathroom - for sinks, showers, and tubs"
+              "content": "浴室 - 洗手池、淋浴和浴缸"
             },
             {
               "id": "asy0lmqlzprtlfepmz8c6mfz",
-              "content": "Living Room and Bedrooms - for furniture and windows"
+              "content": "客厅和卧室 - 家具和窗户"
             },
             {
               "id": "qqp3qjm4z7r60py4sg21pqd6",
-              "content": "Laundry Room - for cleaning spills and surfaces"
+              "content": "洗衣房 - 清洁溢漏和表面"
             },
             {
               "id": "jk7vgqy5cgfrklnkuddkfj9q",
-              "content": "Garage and Outdoors - for vehicles and garden tools"
+              "content": "车库和户外 - 车辆和园艺工具"
             },
-            { "id": "cnx6lctjxc23opp5gdnvvxbu", "content": "dishes" }
+            { "id": "cnx6lctjxc23opp5gdnvvxbu", "content": "餐具" }
           ],
           "options": { "isMultipleChoice": true }
         }
@@ -108,7 +108,7 @@
     },
     {
       "id": "wawbx9rl4pzy1tkqloxfcb11",
-      "title": "Sponge freq",
+      "title": "更换频率",
       "graphCoordinates": { "x": 957.3, "y": -4.27 },
       "blocks": [
         {
@@ -120,7 +120,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "How often would you say that you are throwing a sponge away?"
+                    "text": "你多久扔掉一块海绵？"
                   }
                 ]
               }
@@ -131,22 +131,22 @@
           "id": "qiayx3hjmo5ef1n3w3uxux4g",
           "type": "choice input",
           "items": [
-            { "id": "huq3z8tuxmumghzu1tvdcxd9", "content": "Once a week" },
-            { "id": "g1ceimdl36gwcfgzf8jpqsbg", "content": "Every 2 weeks" },
+            { "id": "huq3z8tuxmumghzu1tvdcxd9", "content": "每周一次" },
+            { "id": "g1ceimdl36gwcfgzf8jpqsbg", "content": "每两周" },
             {
               "id": "ky6khj0qwt2zteo8ffjg4xdc",
               "outgoingEdgeId": "pyh36n2t83a0ig4edaj461ho",
-              "content": "Once a month"
+              "content": "每月一次"
             },
             {
               "id": "lz0kymgy0nlismoen7rr5mcf",
               "outgoingEdgeId": "cmv8ea1pfiwslctusogdkg9u",
-              "content": "Every 2 months"
+              "content": "每两个月"
             },
             {
               "id": "oaqrb7n82xgzxxwgd12i4z43",
               "outgoingEdgeId": "blsd3tlps0jaq1mu6y91tuca",
-              "content": "Every 3 months or more"
+              "content": "每三个月或更久"
             }
           ]
         }
@@ -154,7 +154,7 @@
     },
     {
       "id": "roilot2p0wynrsw77um4ybvd",
-      "title": "Bacterias heads up",
+      "title": "细菌提醒",
       "graphCoordinates": { "x": 1351.64, "y": -152.89 },
       "blocks": [
         {
@@ -166,7 +166,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Did you know that used sponges can harbor a significant number of bacteria if not replaced regularly?"
+                    "text": "你知道吗，用过的海绵如果不定期更换，可能会滋生大量细菌？"
                   }
                 ]
               }
@@ -183,7 +183,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "We definitely suggest you to change your sponge more frequently ✨"
+                    "text": "我们强烈建议你更频繁地更换海绵 ✨"
                   }
                 ]
               }
@@ -194,7 +194,7 @@
     },
     {
       "id": "naylnhd5qqpbv2l9sh0ey4d3",
-      "title": "Paper towel freq",
+      "title": "纸巾更换频率",
       "graphCoordinates": { "x": 1691.54, "y": 215.99 },
       "blocks": [
         {
@@ -205,7 +205,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Now, let's talk about paper towels. 🧻" }
+                  { "text": "现在，让我们谈谈纸巾。🧻" }
                 ]
               }
             ]
@@ -220,7 +220,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "How often would you say that you are ending a roll?"
+                    "text": "你多久用完一卷纸巾？"
                   }
                 ]
               }
@@ -232,13 +232,13 @@
           "outgoingEdgeId": "yeqwcskb3lut4m5838y64pp2",
           "type": "choice input",
           "items": [
-            { "id": "vywwo2km0q0j1fxu7kpgaaun", "content": "Once a week" },
-            { "id": "wzg1uhu2hdgmkc7tps3wyo3e", "content": "Every 2 weeks" },
-            { "id": "sdx6okf2a2jdypry8yd9vi81", "content": "Once a month" },
-            { "id": "vva4hfgvpx5r3uzyumf2mpjj", "content": "Every 2 months" },
+            { "id": "vywwo2km0q0j1fxu7kpgaaun", "content": "每周一次" },
+            { "id": "wzg1uhu2hdgmkc7tps3wyo3e", "content": "每两周" },
+            { "id": "sdx6okf2a2jdypry8yd9vi81", "content": "每月一次" },
+            { "id": "vva4hfgvpx5r3uzyumf2mpjj", "content": "每两个月" },
             {
               "id": "kvf1ev4hskteaopfnbzoy2xt",
-              "content": "Every 3 months or more"
+              "content": "每三个月或更久"
             }
           ]
         }
@@ -246,7 +246,7 @@
     },
     {
       "id": "pvssa7cigqxwk9c3hd9sacc2",
-      "title": "Gen AI",
+      "title": "AI 生成",
       "graphCoordinates": { "x": 2455.03, "y": 208.82 },
       "blocks": [
         {
@@ -291,7 +291,7 @@
     },
     {
       "id": "ccg2yrs7i23jh2xhfpnm5cm4",
-      "title": "Concerns",
+      "title": "顾虑",
       "graphCoordinates": { "x": 2806.11, "y": 204.6 },
       "blocks": [
         {
@@ -303,7 +303,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Do you have any concerns or hesitations about switching to reusable INGA products?"
+                    "text": "你对改用可重复使用的 INGA 产品有什么顾虑或犹豫吗？"
                   }
                 ]
               }
@@ -317,23 +317,23 @@
           "items": [
             {
               "id": "r4f918h8pxbpkyb2t3943f8h",
-              "content": "Durability and Effectiveness"
+              "content": "耐用性和效果"
             },
-            { "id": "boe0nf1y87sf6o8klmo5sg81", "content": "One-time cost" },
-            { "id": "udz9u4nhyg4zqh1qc6iwqi1x", "content": "Hygiene" },
-            { "id": "uuhrshjb2hxgrs85nvk95uyq", "content": "Convenience" },
+            { "id": "boe0nf1y87sf6o8klmo5sg81", "content": "一次性成本" },
+            { "id": "udz9u4nhyg4zqh1qc6iwqi1x", "content": "卫生" },
+            { "id": "uuhrshjb2hxgrs85nvk95uyq", "content": "便利性" },
             {
               "id": "y9cmigd58j10u8bre90obxpp",
-              "content": "Environmental Impact"
+              "content": "环境影响"
             },
-            { "id": "mkubt8mqhwz34s7xqotbpaw0", "content": "Other" }
+            { "id": "mkubt8mqhwz34s7xqotbpaw0", "content": "其他" }
           ]
         }
       ]
     },
     {
       "id": "ho6yqjmkyklrpqvph5ncgtdx",
-      "title": "Detailed concern",
+      "title": "详细顾虑",
       "graphCoordinates": { "x": 3166.36, "y": 196.44 },
       "blocks": [
         {
@@ -343,7 +343,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Thanks for sharing. 🙏" }]
+                "children": [{ "text": "感谢分享。🙏" }]
               }
             ]
           }
@@ -355,7 +355,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us more about that?" }]
+                "children": [{ "text": "能详细说说吗？" }]
               }
             ]
           }
@@ -370,7 +370,7 @@
     },
     {
       "id": "k5oaquhzu84z6ovv9fumrxze",
-      "title": "CTA",
+      "title": "行动号召",
       "graphCoordinates": { "x": 3509.81, "y": 194.92 },
       "blocks": [
         {
@@ -380,7 +380,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "That's super clear, thank you" }]
+                "children": [{ "text": "非常清楚，谢谢" }]
               }
             ]
           }
@@ -394,7 +394,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Feel free to check out our selection of reusable cleaning products. 🧽"
+                    "text": "欢迎查看我们精选的可重复使用清洁产品。🧽"
                   }
                 ]
               }
@@ -405,14 +405,14 @@
           "id": "z95sfiyhk4mk3y693ku9ugud",
           "type": "choice input",
           "items": [
-            { "id": "vagoik95tnerdxebvdqghipf", "content": "Go shopping" }
+            { "id": "vagoik95tnerdxebvdqghipf", "content": "去购物" }
           ]
         }
       ]
     },
     {
       "id": "gmp7wwwk07ie48to14pnz9bz",
-      "title": "Email",
+      "title": "邮箱",
       "graphCoordinates": { "x": 2087.17, "y": 217.89 },
       "blocks": [
         {
@@ -424,7 +424,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "To keep a record of your carb calculations and for easy future reference, could you please provide your email address? "
+                    "text": "为了保存您的计算记录，方便将来参考，请提供您的邮箱地址？"
                   }
                 ]
               }
@@ -440,7 +440,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This way, I can send you a personalized summary of your fueling plan. 📧"
+                    "text": "这样我就可以将个性化的方案总结发送给您。📧"
                   }
                 ]
               }

@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "cl3u4431400042e6go5nd0euq",
-      "title": "Name",
+      "title": "姓名",
       "graphCoordinates": { "x": 257.86, "y": 0.85 },
       "blocks": [
         {
@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hi there 👋" }] }
+              { "type": "p", "children": [{ "text": "你好 👋" }] }
             ]
           }
         },
@@ -30,7 +30,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your name?" }] }
+              { "type": "p", "children": [{ "text": "怎么称呼你？" }] }
             ]
           }
         },
@@ -39,7 +39,7 @@
           "outgoingEdgeId": "cl3u45j0n000c2e6go4nnaavg",
           "type": "text input",
           "options": {
-            "labels": { "placeholder": "Type your name..." },
+            "labels": { "placeholder": "输入你的名字..." },
             "variableId": "vcl3u45hek000b2e6gkl05z1da"
           }
         }
@@ -47,7 +47,7 @@
     },
     {
       "id": "cl3u45dib00092e6g4q2tdkpu",
-      "title": "Product demo",
+      "title": "产品演示",
       "graphCoordinates": { "x": 613.7, "y": 1.82 },
       "blocks": [
         {
@@ -57,7 +57,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Cool, nice to meet you {{Name}}" }]
+                "children": [{ "text": "太好了，很高兴认识你 {{Name}}" }]
               }
             ]
           }
@@ -71,7 +71,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "I've been working on a Notion template for the last 3 months to help you Grow your business."
+                    "text": "过去 3 个月我一直在开发一个 Notion 模板，帮助你发展业务。"
                   }
                 ]
               }
@@ -86,7 +86,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "It is based on the Bullseye Growth Framework" }
+                  { "text": "它基于 Bullseye 增长框架" }
                 ]
               }
             ]
@@ -105,7 +105,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "It's yours for $9" }] }
+              { "type": "p", "children": [{ "text": "只需 $9 即可拥有" }] }
             ]
           }
         },
@@ -118,7 +118,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Are you interested in receive a copy of this template?"
+                    "text": "你有兴趣获取这份模板吗？"
                   }
                 ]
               }
@@ -132,12 +132,12 @@
             {
               "id": "cl3u4id67000m2e6g3x3do8kd",
               "outgoingEdgeId": "cl3u4l4do00102e6ghd9s5p3f",
-              "content": "Hell yes!"
+              "content": "当然要！"
             },
             {
               "id": "cl3u4iexy000o2e6gbagmrxcc",
               "outgoingEdgeId": "cl3u4jxq2000v2e6gkpwko0uo",
-              "content": "I'm ok, thanks."
+              "content": "不用了，谢谢。"
             }
           ]
         }
@@ -145,7 +145,7 @@
     },
     {
       "id": "cl3u4iw28000s2e6gdmukl6qb",
-      "title": "Bye",
+      "title": "结束",
       "graphCoordinates": { "x": 795.34, "y": 877.43 },
       "blocks": [
         {
@@ -157,7 +157,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Oh ok, feel free to come back when you feel ready {{Name}}!"
+                    "text": "好的，等你准备好了随时回来 {{Name}}！"
                   }
                 ]
               }
@@ -175,7 +175,7 @@
     },
     {
       "id": "cl3u4kblb000w2e6gfflsq56p",
-      "title": "Email",
+      "title": "邮箱",
       "graphCoordinates": { "x": 992.42, "y": 342.36 },
       "blocks": [
         {
@@ -183,7 +183,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "That's awesome!" }] }
+              { "type": "p", "children": [{ "text": "太棒了！" }] }
             ]
           }
         },
@@ -196,7 +196,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "What's the email address where you want to receive the link?"
+                    "text": "你想把链接发到哪个邮箱？"
                   }
                 ]
               }
@@ -215,7 +215,7 @@
     },
     {
       "id": "cl3u4leig00112e6gxbk65r7y",
-      "title": "Payment",
+      "title": "支付",
       "graphCoordinates": { "x": 1338.38, "y": 343.48 },
       "blocks": [
         {
@@ -223,7 +223,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Sounds good." }] }
+              { "type": "p", "children": [{ "text": "听起来不错。" }] }
             ]
           }
         },
@@ -236,7 +236,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You're a step away from implementing proven growth systems to your business 🚀"
+                    "text": "你的企业距离实施经过验证的增长系统仅一步之遥 🚀"
                   }
                 ]
               }
@@ -259,7 +259,7 @@
     },
     {
       "id": "cl3u4vnth00182e6g2hh0gewl",
-      "title": "Send email",
+      "title": "发送邮件",
       "graphCoordinates": { "x": 1683.86, "y": 346.93 },
       "blocks": [
         {
@@ -288,7 +288,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "It's all good, you should have received the email!"
+                    "text": "一切顺利，你应该已经收到邮件了！"
                   }
                 ]
               }
@@ -302,7 +302,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Thanks again for your visit." }]
+                "children": [{ "text": "再次感谢你的访问。" }]
               }
             ]
           }
@@ -311,7 +311,7 @@
           "id": "cl3u51z0o001f2e6gbl96p7bi",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Bye 👋" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "再见 👋" }] }]
           }
         }
       ]

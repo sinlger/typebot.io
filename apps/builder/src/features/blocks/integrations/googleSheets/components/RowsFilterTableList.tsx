@@ -3,6 +3,7 @@ import type {
   RowsFilterComparison,
 } from "@typebot.io/blocks-integrations/googleSheets/schema";
 import { LogicalOperator } from "@typebot.io/conditions/constants";
+import { useTranslate } from "@tolgee/react";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { TableList } from "@/components/TableList";
 import { RowsFilterComparisonItem } from "./RowsFilterComparisonItem";
@@ -18,6 +19,7 @@ export const RowsFilterTableList = ({
   columns,
   onFilterChange,
 }: Props) => {
+  const { t } = useTranslate();
   const updateComparisons = (comparisons: RowsFilterComparison[]) =>
     onFilterChange({
       ...filter,
@@ -43,7 +45,7 @@ export const RowsFilterTableList = ({
           />
         </div>
       )}
-      addLabel="Add filter rule"
+      addLabel={t("blocks.integrations.googleSheets.settings.addFilterRule.label")}
     >
       {(props) => <RowsFilterComparisonItem {...props} columns={columns} />}
     </TableList>

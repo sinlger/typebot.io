@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "cl96ns9qr00043b6ii07bo25o",
-      "title": "Menu",
+      "title": "菜单",
       "graphCoordinates": { "x": 385.68, "y": 86.92 },
       "blocks": [
         {
@@ -25,7 +25,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "If you have a question about our product, you're in the right place 😊"
+                    "text": "如果你对我们的产品有疑问，你来对地方了 😊"
                   }
                 ]
               }
@@ -39,22 +39,22 @@
             {
               "id": "cl96nv877000c3b6idyepv694",
               "outgoingEdgeId": "cl96o2u6h000t3b6izmh4pguj",
-              "content": "What's Analyzr?"
+              "content": "Analyzr 是什么？"
             },
             {
               "id": "cl96nvcwi000d3b6ipyfzcyaw",
               "outgoingEdgeId": "cl96o6hxh00173b6ix83nn581",
-              "content": "Can I use your tool for free?"
+              "content": "你们的工具可以免费使用吗？"
             },
             {
               "id": "cl96obwgy001k3b6ir1a8qk5w",
               "outgoingEdgeId": "cl96ofn4s001q3b6i482xx6jp",
-              "content": "Tell me about the company"
+              "content": "介绍一下公司"
             },
             {
               "id": "cl96nvstv000e3b6itm8cj1s5",
               "outgoingEdgeId": "cl96ogaa0001x3b6izae2alxq",
-              "content": "I have another question"
+              "content": "我还有其他问题"
             }
           ]
         }
@@ -62,7 +62,7 @@
     },
     {
       "id": "cl96nt9ob00063b6ii2pktlxq",
-      "title": "Welcom",
+      "title": "欢迎",
       "graphCoordinates": { "x": 43.5, "y": 89.92 },
       "blocks": [
         {
@@ -70,7 +70,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hey there 👋" }] }
+              { "type": "p", "children": [{ "text": "你好 👋" }] }
             ]
           }
         },
@@ -84,7 +84,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "I'm John, head of the customer success Team at Analyzr"
+                    "text": "我是 John，Analyzr 的客户成功团队负责人"
                   }
                 ]
               }
@@ -95,7 +95,7 @@
     },
     {
       "id": "cl96o2cgi000r3b6iljr1iwdl",
-      "title": "What's Analyzr",
+      "title": "什么是 Analyzr",
       "graphCoordinates": { "x": 774.53, "y": -513.14 },
       "blocks": [
         {
@@ -107,7 +107,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Analyzr is a simple and privacy-friendly analytics tool for your website"
+                    "text": "Analyzr 是一个简单且注重隐私的网站分析工具"
                   }
                 ]
               }
@@ -119,12 +119,12 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "It is:" }] },
-              { "type": "p", "children": [{ "text": "✅ Lightweight" }] },
-              { "type": "p", "children": [{ "text": "✅ Open-source" }] },
+              { "type": "p", "children": [{ "text": "它是：" }] },
+              { "type": "p", "children": [{ "text": "✅ 轻量级" }] },
+              { "type": "p", "children": [{ "text": "✅ 开源" }] },
               {
                 "type": "p",
-                "children": [{ "text": "✅ Fully compliant with GDPR" }]
+                "children": [{ "text": "✅ 完全符合 GDPR 要求" }]
               }
             ]
           }
@@ -133,7 +133,7 @@
           "id": "cl96o55z3000x3b6ikq14g2tu",
           "type": "choice input",
           "items": [
-            { "id": "cl96o55z3000y3b6idpn54byw", "content": "Sounds good!" }
+            { "id": "cl96o55z3000y3b6idpn54byw", "content": "听起来不错！" }
           ]
         },
         {
@@ -148,14 +148,14 @@
     },
     {
       "id": "cl96o6a2700123b6ie4efb6bb",
-      "title": "Use for free",
+      "title": "免费使用",
       "graphCoordinates": { "x": 775.05, "y": 7.42 },
       "blocks": [
         {
           "id": "cl96o6a2700133b6ii5n027h2",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "You can!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "当然可以！" }] }]
           }
         },
         {
@@ -167,7 +167,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Analyzr has a generous free plan that allows you to store 1,000,000 events/mo 🚀"
+                    "text": "Analyzr 提供慷慨的免费方案，每月可存储 1,000,000 个事件 🚀"
                   }
                 ]
               }
@@ -181,12 +181,12 @@
             {
               "id": "cl96o6a2700163b6i818ywnqv",
               "outgoingEdgeId": "n4rgj2fmqrmnkvo9m9ebzak7",
-              "content": "Awesome!"
+              "content": "太棒了！"
             },
             {
               "id": "cl96o83lo00183b6igen42ivq",
               "outgoingEdgeId": "cl96oa83f001h3b6i81wodnjx",
-              "content": "What's an event?"
+              "content": "什么是事件？"
             }
           ]
         }
@@ -194,7 +194,7 @@
     },
     {
       "id": "cl96o8eym001a3b6i3lxh7kw0",
-      "title": "User event",
+      "title": "用户事件",
       "graphCoordinates": { "x": 1158.01, "y": 322.44 },
       "blocks": [
         {
@@ -205,7 +205,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "An event is a user event on your website." }
+                  { "text": "事件就是用户在你的网站上产生的行为。" }
                 ]
               }
             ]
@@ -220,7 +220,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "It can be \"User visited this URL\" or \"User clicked on this button\""
+                    "text": "可以是\"用户访问了某个 URL\"或\"用户点击了某个按钮\""
                   }
                 ]
               }
@@ -231,7 +231,7 @@
           "id": "cl96o9xba001d3b6i9004l33e",
           "type": "choice input",
           "items": [
-            { "id": "cl96o9xbd001e3b6i6ag5ooo7", "content": "Ok, got it!" }
+            { "id": "cl96o9xbd001e3b6i6ag5ooo7", "content": "好的，明白了！" }
           ]
         },
         {
@@ -246,7 +246,7 @@
     },
     {
       "id": "cl96oc274001m3b6ig3beli9v",
-      "title": "Company",
+      "title": "公司",
       "graphCoordinates": { "x": 772.59, "y": 432 },
       "blocks": [
         {
@@ -257,7 +257,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "The company was founded in 2020 by Josh Corn" }
+                  { "text": "公司由 Josh Corn 于 2020 年创立" }
                 ]
               }
             ]
@@ -270,7 +270,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "We are now a team of 15" }]
+                "children": [{ "text": "我们现在有 15 人的团队" }]
               }
             ]
           }
@@ -280,13 +280,13 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Our core values are:" }] },
+              { "type": "p", "children": [{ "text": "我们的核心价值观是：" }] },
               { "type": "p", "children": [{ "text": "" }] },
-              { "type": "p", "children": [{ "text": "🔍 Transparency" }] },
-              { "type": "p", "children": [{ "text": "⚡ Ship fast" }] },
+              { "type": "p", "children": [{ "text": "🔍 透明" }] },
+              { "type": "p", "children": [{ "text": "⚡ 快速交付" }] },
               {
                 "type": "p",
-                "children": [{ "text": "💙 Awesome customer support" }]
+                "children": [{ "text": "💙 出色的客户支持" }]
               }
             ]
           }
@@ -294,7 +294,7 @@
         {
           "id": "cl96oftnv001r3b6ixen8g0bv",
           "type": "choice input",
-          "items": [{ "id": "cl96oftnv001s3b6i7kjyq7me", "content": "Cool!" }]
+          "items": [{ "id": "cl96oftnv001s3b6i7kjyq7me", "content": "酷！" }]
         },
         {
           "id": "js5pbqj76g67yvs6wz99rcbm",
@@ -308,7 +308,7 @@
     },
     {
       "id": "cl96og2yr001v3b6ivhzb1x34",
-      "title": "Question",
+      "title": "提问",
       "graphCoordinates": { "x": 773.69, "y": 1020.26 },
       "blocks": [
         {
@@ -316,7 +316,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Sure, no problem!" }] }
+              { "type": "p", "children": [{ "text": "当然，没问题！" }] }
             ]
           }
         },
@@ -326,7 +326,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your question..."
+              "placeholder": "输入你的问题..."
             },
             "isLong": true
           }
@@ -335,7 +335,7 @@
     },
     {
       "id": "cl96oh3mn001z3b6i2b0no81w",
-      "title": "Bye",
+      "title": "结束",
       "graphCoordinates": { "x": 1174.378083740756, "y": 1049.08556420999 },
       "blocks": [
         {
@@ -347,7 +347,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Alright, we'll reach out to you very soon. Thank you so much 💙"
+                    "text": "好的，我们会尽快联系你。非常感谢 💙"
                   }
                 ]
               }

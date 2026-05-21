@@ -5,6 +5,7 @@ import {
 } from "@typebot.io/blocks-integrations/pixel/constants";
 import type { PixelBlock } from "@typebot.io/blocks-integrations/pixel/schema";
 import { isDefined, isEmpty } from "@typebot.io/lib/utils";
+import { useTranslate } from "@tolgee/react";
 import { DebouncedTextInput } from "@typebot.io/ui/components/DebouncedTextInput";
 import { Field } from "@typebot.io/ui/components/Field";
 import { MoreInfoTooltip } from "@typebot.io/ui/components/MoreInfoTooltip";
@@ -13,10 +14,6 @@ import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { CodeEditor } from "@/components/inputs/CodeEditor";
 import { DebouncedTextInputWithVariablesButton } from "@/components/inputs/DebouncedTextInput";
 import { TableList } from "@/components/TableList";
-import { TextLink } from "@/components/TextLink";
-
-const pixelReferenceUrl =
-  "https://developers.facebook.com/docs/meta-pixel/reference#standard-events";
 
 type Props = {
   options?: PixelBlock["options"];
@@ -26,6 +23,7 @@ type Props = {
 type Item = NonNullable<NonNullable<PixelBlock["options"]>["params"]>[number];
 
 export const PixelSettings = ({ options, onOptionsChange }: Props) => {
+  const { t } = useTranslate();
   const emptyOptions = {
     eventType: undefined,
     pixelId: undefined,
@@ -80,7 +78,7 @@ export const PixelSettings = ({ options, onOptionsChange }: Props) => {
       <DebouncedTextInput
         defaultValue={options?.pixelId ?? ""}
         onValueChange={updatePixelId}
-        placeholder='Pixel ID (e.g. "123456789")'
+        placeholder={t("blocks.integrations.pixel.settings.pixelId.placeholder")}
       />
       <Field.Root className="flex-row items-center">
         <Switch
@@ -88,10 +86,9 @@ export const PixelSettings = ({ options, onOptionsChange }: Props) => {
           onCheckedChange={updateIsInitSkipped}
         />
         <Field.Label>
-          Skip initialization{" "}
+          {t("blocks.integrations.pixel.settings.skipInit.label")}{" "}
           <MoreInfoTooltip>
-            Check this if the bot is embedded in your website and the pixel is
-            already initialized.
+            {t("blocks.integrations.pixel.settings.skipInit.tooltip")}
           </MoreInfoTooltip>
         </Field.Label>
       </Field.Root>
@@ -101,29 +98,25 @@ export const PixelSettings = ({ options, onOptionsChange }: Props) => {
             checked={isDefined(options?.params)}
             onCheckedChange={updateIsTrackingEventEnabled}
           />
-          <Field.Label>Track event</Field.Label>
+          <Field.Label>{t("blocks.integrations.pixel.settings.trackEvent.label")}</Field.Label>
         </Field.Root>
         {isDefined(options?.params) && (
           <>
             <p className="text-sm" color="gray.500">
-              Read the{" "}
-              <TextLink href={pixelReferenceUrl} isExternal>
-                reference
-              </TextLink>{" "}
-              to better understand the available options.
+              {t("blocks.integrations.pixel.settings.readReference.label")}
             </p>
             <BasicSelect
               className="w-full"
               items={["Custom", ...pixelEventTypes]}
               value={options?.eventType}
-              placeholder="Select event type"
+              placeholder={t("blocks.integrations.pixel.settings.selectEventType.placeholder")}
               onChange={updateEventType}
             />
             {options?.eventType === "Custom" && (
               <DebouncedTextInputWithVariablesButton
                 defaultValue={options.name ?? ""}
                 onValueChange={updateEventName}
-                placeholder="Event name"
+                placeholder={t("blocks.integrations.pixel.settings.eventName.placeholder")}
               />
             )}
             {options?.eventType &&
@@ -134,7 +127,7 @@ export const PixelSettings = ({ options, onOptionsChange }: Props) => {
                 <TableList
                   initialItems={options?.params ?? []}
                   onItemsChange={updateParams}
-                  addLabel="Add parameter"
+                  addLabel={t("blocks.integrations.pixel.settings.addParameter.label")}
                 >
                   {(props) => (
                     <ParamItem {...props} eventType={options?.eventType} />
@@ -155,6 +148,7 @@ type ParamItemProps = {
 };
 
 const ParamItem = ({ item, eventType, onItemChange }: ParamItemProps) => {
+  const { t } = useTranslate();
   const possibleObjectProps =
     eventType && eventType !== "Custom"
       ? pixelObjectProperties.filter((prop) =>
@@ -186,7 +180,7 @@ const ParamItem = ({ item, eventType, onItemChange }: ParamItemProps) => {
         <DebouncedTextInputWithVariablesButton
           defaultValue={item.key}
           onValueChange={updateKey}
-          placeholder="Key"
+          placeholder={t("blocks.integrations.pixel.settings.key.placeholder")}
         />
       ) : (
         <BasicSelect
@@ -194,7 +188,7 @@ const ParamItem = ({ item, eventType, onItemChange }: ParamItemProps) => {
           value={item.key}
           items={possibleObjectProps.map((prop) => prop.key)}
           onChange={updateKey}
-          placeholder="Select key"
+          placeholder={t("blocks.integrations.pixel.settings.selectKey.placeholder")}
         />
       )}
       {currentObject?.type === "code" ? (
@@ -207,7 +201,7 @@ const ParamItem = ({ item, eventType, onItemChange }: ParamItemProps) => {
         <DebouncedTextInputWithVariablesButton
           defaultValue={item.value}
           onValueChange={updateValue}
-          placeholder="Value"
+          placeholder={t("blocks.integrations.pixel.settings.value.placeholder")}
         />
       )}
     </div>

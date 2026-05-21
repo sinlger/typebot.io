@@ -3,6 +3,7 @@ import {
   defaultChatwootOptions,
 } from "@typebot.io/blocks-integrations/chatwoot/constants";
 import type { ChatwootBlock } from "@typebot.io/blocks-integrations/chatwoot/schema";
+import { useTranslate } from "@tolgee/react";
 import { Accordion } from "@typebot.io/ui/components/Accordion";
 import { DebouncedTextInput } from "@typebot.io/ui/components/DebouncedTextInput";
 import { Field } from "@typebot.io/ui/components/Field";
@@ -16,6 +17,7 @@ type Props = {
 };
 
 export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
+  const { t } = useTranslate();
   const updateTask = (task: (typeof chatwootTasks)[number] | undefined) => {
     onOptionsChange({ ...options, task });
   };
@@ -34,7 +36,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
       {task === "Show widget" && (
         <>
           <Field.Root>
-            <Field.Label>Base URL</Field.Label>
+            <Field.Label>{t("blocks.integrations.chatwoot.settings.baseUrl.label")}</Field.Label>
             <DebouncedTextInput
               defaultValue={options?.baseUrl ?? defaultChatwootOptions.baseUrl}
               onValueChange={(baseUrl: string) => {
@@ -44,10 +46,9 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
           </Field.Root>
           <Field.Root>
             <Field.Label>
-              Website token
+              {t("blocks.integrations.chatwoot.settings.websiteToken.label")}
               <MoreInfoTooltip>
-                Can be found in Chatwoot under Settings &gt; Inboxes &gt;
-                Settings &gt; Configuration, in the code snippet.
+                {t("blocks.integrations.chatwoot.settings.websiteToken.tooltip")}
               </MoreInfoTooltip>
             </Field.Label>
             <DebouncedTextInputWithVariablesButton
@@ -59,10 +60,10 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
           </Field.Root>
           <Accordion.Root>
             <Accordion.Item>
-              <Accordion.Trigger>Set user details</Accordion.Trigger>
+              <Accordion.Trigger>{t("blocks.integrations.chatwoot.settings.setUserDetails.label")}</Accordion.Trigger>
               <Accordion.Panel>
                 <Field.Root>
-                  <Field.Label>ID</Field.Label>
+                  <Field.Label>{t("blocks.integrations.chatwoot.settings.id.label")}</Field.Label>
                   <DebouncedTextInputWithVariablesButton
                     defaultValue={options?.user?.id}
                     onValueChange={(id: string) => {
@@ -74,7 +75,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                   />
                 </Field.Root>
                 <Field.Root>
-                  <Field.Label>Name</Field.Label>
+                  <Field.Label>{t("blocks.integrations.chatwoot.settings.name.label")}</Field.Label>
                   <DebouncedTextInputWithVariablesButton
                     defaultValue={options?.user?.name}
                     onValueChange={(name: string) => {
@@ -86,7 +87,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                   />
                 </Field.Root>
                 <Field.Root>
-                  <Field.Label>Email</Field.Label>
+                  <Field.Label>{t("blocks.integrations.chatwoot.settings.email.label")}</Field.Label>
                   <DebouncedTextInputWithVariablesButton
                     defaultValue={options?.user?.email}
                     onValueChange={(email: string) => {
@@ -98,7 +99,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                   />
                 </Field.Root>
                 <Field.Root>
-                  <Field.Label>Avatar URL</Field.Label>
+                  <Field.Label>{t("blocks.integrations.chatwoot.settings.avatarUrl.label")}</Field.Label>
                   <DebouncedTextInputWithVariablesButton
                     defaultValue={options?.user?.avatarUrl}
                     onValueChange={(avatarUrl: string) => {
@@ -110,7 +111,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                   />
                 </Field.Root>
                 <Field.Root>
-                  <Field.Label>Phone number</Field.Label>
+                  <Field.Label>{t("blocks.integrations.chatwoot.settings.phoneNumber.label")}</Field.Label>
                   <DebouncedTextInputWithVariablesButton
                     defaultValue={options?.user?.phoneNumber}
                     onValueChange={(phoneNumber: string) => {

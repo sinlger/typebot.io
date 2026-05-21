@@ -2,6 +2,7 @@ import { ORPCError } from "@orpc/client";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import type { SmtpCredentials } from "@typebot.io/credentials/schemas";
 import { isNotDefined } from "@typebot.io/lib/utils";
+import { useTranslate } from "@tolgee/react";
 import { Button } from "@typebot.io/ui/components/Button";
 import { Dialog } from "@typebot.io/ui/components/Dialog";
 import type React from "react";
@@ -21,6 +22,7 @@ export const SmtpCredentialsUpdateDialogBody = ({
   credentialsId,
   onUpdate,
 }: Props) => {
+  const { t } = useTranslate();
   const { user } = useUser();
   const { workspace } = useWorkspace();
   const [smtpConfig, setSmtpConfig] = useState<SmtpCredentials["data"]>();
@@ -46,8 +48,7 @@ export const SmtpCredentialsUpdateDialogBody = ({
       onError: (err) => {
         if (err instanceof ORPCError && err.code === "INTERNAL_SERVER_ERROR") {
           toast({
-            description:
-              "We couldn't send the test email with your configuration",
+            description: t("blocks.integrations.sendEmail.smtp.toast.testError.description"),
             details: err.data?.message,
           });
         }
@@ -116,7 +117,7 @@ export const SmtpCredentialsUpdateDialogBody = ({
             isUpdating
           }
         >
-          Update
+          {t("update")}
         </Button>
       </Dialog.Footer>
     </Dialog.Popup>

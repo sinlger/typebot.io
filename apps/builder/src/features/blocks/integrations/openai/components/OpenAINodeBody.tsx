@@ -1,4 +1,5 @@
 import type { OpenAIBlock } from "@typebot.io/blocks-integrations/openai/schema";
+import { useTranslate } from "@tolgee/react";
 import { cx } from "@typebot.io/ui/lib/cva";
 import { SetVariableLabel } from "@/components/SetVariableLabel";
 import { useTypebot } from "@/features/editor/providers/TypebotProvider";
@@ -8,6 +9,7 @@ type Props = {
 };
 
 export const OpenAINodeBody = ({ options }: Props) => {
+  const { t } = useTranslate();
   const { typebot } = useTypebot();
   const responseMappings =
     options && "responseMapping" in options
@@ -22,7 +24,7 @@ export const OpenAINodeBody = ({ options }: Props) => {
           options?.task ? "text-gray-12" : "text-gray-9",
         )}
       >
-        {options?.task ?? "Configure..."}
+        {options?.task ?? t("configure")}
       </p>
       {typebot &&
         options &&

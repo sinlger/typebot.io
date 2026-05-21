@@ -1,5 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import type { CreatableCredentials } from "@typebot.io/credentials/schemas";
+import { useTranslate } from "@tolgee/react";
 import { Alert } from "@typebot.io/ui/components/Alert";
 import { Button } from "@typebot.io/ui/components/Button";
 import { Dialog } from "@typebot.io/ui/components/Dialog";
@@ -8,12 +9,9 @@ import { Input } from "@typebot.io/ui/components/Input";
 import { TriangleAlertIcon } from "@typebot.io/ui/icons/TriangleAlertIcon";
 import type React from "react";
 import { useState } from "react";
-import { TextLink } from "@/components/TextLink";
 import { useWorkspace } from "@/features/workspace/WorkspaceProvider";
 import { orpc, queryClient } from "@/lib/queryClient";
 import { toast } from "@/lib/toast";
-
-const openAITokensPage = "https://platform.openai.com/account/api-keys";
 
 type Props = {
   isOpen: boolean;
@@ -26,6 +24,7 @@ export const OpenAICredentialsDialog = ({
   onClose,
   onNewCredentials,
 }: Props) => {
+  const { t } = useTranslate();
   const { workspace } = useWorkspace();
   const [apiKey, setApiKey] = useState("");
   const [name, setName] = useState("");
@@ -69,33 +68,28 @@ export const OpenAICredentialsDialog = ({
 
   return (
     <Dialog.Root isOpen={isOpen} onClose={onClose}>
-      <Dialog.Title>Add OpenAI account</Dialog.Title>
+      <Dialog.Title>{t("blocks.integrations.openai.credentials.dialogTitle")}</Dialog.Title>
       <Dialog.CloseButton />
       <Dialog.Popup render={<form onSubmit={createOpenAICredentials} />}>
         <Field.Root>
-          <Field.Label>Name</Field.Label>
-          <Input onValueChange={setName} placeholder="My account" />
+          <Field.Label>{t("blocks.integrations.openai.credentials.name.label")}</Field.Label>
+          <Input onValueChange={setName} placeholder={t("blocks.integrations.openai.credentials.name.placeholder")} />
         </Field.Root>
         <Field.Root>
-          <Field.Label>API key</Field.Label>
+          <Field.Label>{t("blocks.integrations.openai.credentials.apiKey.label")}</Field.Label>
           <Input
             type="password"
             onValueChange={setApiKey}
-            placeholder="sk-..."
+            placeholder={t("blocks.integrations.openai.credentials.apiKey.placeholder")}
           />
           <Field.Description>
-            You can generate an API key{" "}
-            <TextLink href={openAITokensPage} isExternal>
-              here
-            </TextLink>
-            .
+            {t("blocks.integrations.openai.credentials.apiKey.description")}
           </Field.Description>
         </Field.Root>
         <Alert.Root variant="warning">
           <TriangleAlertIcon />
           <Alert.Description>
-            Make sure to add a payment method to your OpenAI account. Otherwise,
-            it will not work after a few messages.
+            {t("blocks.integrations.openai.credentials.paymentWarning")}
           </Alert.Description>
         </Alert.Root>
 
@@ -104,7 +98,7 @@ export const OpenAICredentialsDialog = ({
             type="submit"
             disabled={apiKey === "" || name === "" || isCreating}
           >
-            Create
+            {t("create")}
           </Button>
         </Dialog.Footer>
       </Dialog.Popup>

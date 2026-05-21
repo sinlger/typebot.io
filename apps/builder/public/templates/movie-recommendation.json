@@ -6,22 +6,29 @@
     {
       "id": "u6lpjibfjhyoqij5wjf9kvnl",
       "outgoingEdgeId": "wfec8f4e1jtden2wqna6nrso",
-      "graphCoordinates": { "x": 0, "y": 0 },
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      },
       "type": "start"
     }
   ],
   "groups": [
     {
       "id": "mjnkukpkpvf4ha2g4n5m804v",
-      "title": "Menu",
-      "graphCoordinates": { "x": 243.1, "y": 12.32 },
+      "title": "菜单",
+      "graphCoordinates": {
+        "x": 243.1,
+        "y": 12.32
+      },
       "blocks": [
         {
           "id": "kjlf184vxf0uorniwje28iqb",
           "type": "Set variable",
           "options": {
             "variableId": "vh5bxx07kl3016wr1undh2yb3",
-            "expressionToEvaluate": "2f584d1ffe2b7fb082dd4e05038e9bd7"
+            "expressionToEvaluate": "2f584d1ffe2b7fb082dd4e05038e9bd7",
+            "type": "Custom"
           }
         },
         {
@@ -32,7 +39,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Welcome to our film recommendation bot 👋" }
+                  {
+                    "text": "欢迎使用我们的电影推荐机器人 👋"
+                  }
                 ]
               }
             ]
@@ -52,7 +61,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "It is powered by The Movie DB API 🚀" }]
+                "children": [
+                  {
+                    "text": "由 The Movie DB API 提供支持 🚀"
+                  }
+                ]
               }
             ]
           }
@@ -69,7 +82,14 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can I we help?" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "我能为您做些什么？"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -80,12 +100,12 @@
             {
               "id": "kaimvzg9igdtktgou5m3s1bw",
               "outgoingEdgeId": "t8qyjpigrz7cdl8gxl1wxlwj",
-              "content": "Select a genre 💅"
+              "content": "选择类型 💅"
             },
             {
               "id": "i8ls2f8inq2ovuijj6l7rbcq",
               "outgoingEdgeId": "tjn2ljosqyd4aj9dk8mnifsu",
-              "content": "See what's trending 🔝"
+              "content": "查看热门影片 🔝"
             }
           ]
         }
@@ -93,14 +113,26 @@
     },
     {
       "id": "kq1g5z6pz4buot7sawqdrr3s",
-      "title": "Genre",
-      "graphCoordinates": { "x": 607.85, "y": 295.32 },
+      "title": "类型",
+      "graphCoordinates": {
+        "x": 607.85,
+        "y": 295.32
+      },
       "blocks": [
         {
           "id": "ecwz96cghzp4ji3lyx7taxt1",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Sure!" }] }]
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "好的！"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -147,7 +179,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Select your desired genre 👇" }]
+                "children": [
+                  {
+                    "text": "请选择您喜欢的类型 👇"
+                  }
+                ]
               }
             ]
           }
@@ -156,7 +192,10 @@
           "id": "nwuk2clo78hmnh4d0g31u9xg",
           "type": "choice input",
           "items": [
-            { "id": "ri3avm9p0i96p8gx4028b6ye", "content": "Click to edit" }
+            {
+              "id": "ri3avm9p0i96p8gx4028b6ye",
+              "content": "点击编辑"
+            }
           ],
           "options": {
             "variableId": "vkmbb3rb2hcfd2io1fhf7rz5x",
@@ -181,14 +220,26 @@
     },
     {
       "id": "d6v9lh83c7zuwrhf2mmo6nxo",
-      "title": "Trending",
-      "graphCoordinates": { "x": 599.83, "y": 880.98 },
+      "title": "热门",
+      "graphCoordinates": {
+        "x": 599.83,
+        "y": 880.98
+      },
       "blocks": [
         {
           "id": "edokvbp15ubqeuydw9n7wf4w",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Sure!" }] }]
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "好的！"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -235,7 +286,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Here are popular movies this week 👇" }]
+                "children": [
+                  {
+                    "text": "以下是本周的热门电影 👇"
+                  }
+                ]
               }
             ]
           }
@@ -244,7 +299,10 @@
           "id": "krcvvncnqtn99v0qe1dzudrk",
           "type": "choice input",
           "items": [
-            { "id": "dicb6lnv5kapkq0tygnx1abh", "content": "Click to edit" }
+            {
+              "id": "dicb6lnv5kapkq0tygnx1abh",
+              "content": "点击编辑"
+            }
           ],
           "options": {
             "variableId": "vulnb1om2fk8mvkcesl8s15cr",
@@ -269,8 +327,11 @@
     },
     {
       "id": "v35sky44jzz9fkwwul2qxufl",
-      "title": "Movies by genre",
-      "graphCoordinates": { "x": 952.84, "y": 294.85 },
+      "title": "按类型选电影",
+      "graphCoordinates": {
+        "x": 952.84,
+        "y": 294.85
+      },
       "blocks": [
         {
           "id": "g2pgwx5yr1ou9vkoy6gdwuor",
@@ -281,7 +342,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here are trending movies for the {{Selected genre}} genre"
+                    "text": "以下是为 {{Selected genre}} 类型推荐的热门电影"
                   }
                 ]
               }
@@ -339,7 +400,10 @@
           "id": "tr5y76tx9ca336f8ob9odfa6",
           "type": "choice input",
           "items": [
-            { "id": "uy2xwxoqhqol852cqsq17r9l", "content": "Click to edit" }
+            {
+              "id": "uy2xwxoqhqol852cqsq17r9l",
+              "content": "点击编辑"
+            }
           ],
           "options": {
             "variableId": "vyyr3j2pu76uzvf88laai8snl",
@@ -364,15 +428,25 @@
     },
     {
       "id": "uozlg88loeb8xegu6y4le6k8",
-      "title": "Movie details",
-      "graphCoordinates": { "x": 1151.05, "y": 913.34 },
+      "title": "电影详情",
+      "graphCoordinates": {
+        "x": 1151.05,
+        "y": 913.34
+      },
       "blocks": [
         {
           "id": "ve9m7fromxw4tbm8558n8520",
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Excellent choice 🔥" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "绝佳选择 🔥"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -428,20 +502,30 @@
           "type": "Set variable",
           "options": {
             "variableId": "vwitf3um5uweynypc0hxxwm14",
-            "expressionToEvaluate": "https://image.tmdb.org/t/p/w185{{Poster path}}"
+            "expressionToEvaluate": "https://image.tmdb.org/t/p/w185{{Poster path}}",
+            "type": "Custom"
           }
         },
         {
           "id": "nqnry4c1z3wwcni8rwpduuhe",
           "type": "image",
-          "content": { "url": "{{Poster URL}}" }
+          "content": {
+            "url": "{{Poster URL}}"
+          }
         },
         {
           "id": "lhljw54rdykyqtjiuh6jsl5c",
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "{{Movie Overview}}" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{Movie Overview}}"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -452,12 +536,12 @@
             {
               "id": "n4818dnrb4arw1xh5v0ot8vz",
               "outgoingEdgeId": "fteu5frsbj8wejfhhwzuv8t1",
-              "content": "Watch the movie"
+              "content": "观看电影"
             },
             {
               "id": "j9d1pf2tndax0itezys7t73c",
               "outgoingEdgeId": "zb79atxs2itliks4d00e35uy",
-              "content": "Find something else"
+              "content": "找找别的"
             }
           ]
         }
@@ -465,8 +549,11 @@
     },
     {
       "id": "x4d8cdsyzoqz6vzsurnb8twc",
-      "title": "Redirect to IMDB",
-      "graphCoordinates": { "x": 1523.21, "y": 1433.33 },
+      "title": "跳转到 IMDB",
+      "graphCoordinates": {
+        "x": 1523.21,
+        "y": 1433.33
+      },
       "blocks": [
         {
           "id": "mw0e0bzwiokhndkkncp9niu2",
@@ -480,7 +567,10 @@
     {
       "id": "x9610wtdv125hg56wicm2qmv",
       "title": "",
-      "graphCoordinates": { "x": 1523.2, "y": 1620.1 },
+      "graphCoordinates": {
+        "x": 1523.2,
+        "y": 1620.1
+      },
       "blocks": [
         {
           "id": "efto9jivvcvomj3kltf57hbb",
@@ -496,8 +586,12 @@
   "edges": [
     {
       "id": "wfec8f4e1jtden2wqna6nrso",
-      "from": { "eventId": "u6lpjibfjhyoqij5wjf9kvnl" },
-      "to": { "groupId": "mjnkukpkpvf4ha2g4n5m804v" }
+      "from": {
+        "eventId": "u6lpjibfjhyoqij5wjf9kvnl"
+      },
+      "to": {
+        "groupId": "mjnkukpkpvf4ha2g4n5m804v"
+      }
     },
     {
       "id": "t8qyjpigrz7cdl8gxl1wxlwj",
@@ -505,17 +599,27 @@
         "blockId": "tzf45bvd8iquoxz7qgta8v94",
         "itemId": "kaimvzg9igdtktgou5m3s1bw"
       },
-      "to": { "groupId": "kq1g5z6pz4buot7sawqdrr3s" }
+      "to": {
+        "groupId": "kq1g5z6pz4buot7sawqdrr3s"
+      }
     },
     {
       "id": "tfuuwjnpn7mftd5s65mbhytd",
-      "from": { "blockId": "j7pm34um4piuyabwlobjc356" },
-      "to": { "groupId": "v35sky44jzz9fkwwul2qxufl" }
+      "from": {
+        "blockId": "j7pm34um4piuyabwlobjc356"
+      },
+      "to": {
+        "groupId": "v35sky44jzz9fkwwul2qxufl"
+      }
     },
     {
       "id": "r4wyd2185zhen98r5pmx53g9",
-      "from": { "blockId": "vudr8jrv2k3x0ubemt39tv7a" },
-      "to": { "groupId": "uozlg88loeb8xegu6y4le6k8" }
+      "from": {
+        "blockId": "vudr8jrv2k3x0ubemt39tv7a"
+      },
+      "to": {
+        "groupId": "uozlg88loeb8xegu6y4le6k8"
+      }
     },
     {
       "id": "fteu5frsbj8wejfhhwzuv8t1",
@@ -523,7 +627,9 @@
         "blockId": "yifjhiamifo1y4ay7vols0mm",
         "itemId": "n4818dnrb4arw1xh5v0ot8vz"
       },
-      "to": { "groupId": "x4d8cdsyzoqz6vzsurnb8twc" }
+      "to": {
+        "groupId": "x4d8cdsyzoqz6vzsurnb8twc"
+      }
     },
     {
       "id": "tjn2ljosqyd4aj9dk8mnifsu",
@@ -531,12 +637,18 @@
         "blockId": "tzf45bvd8iquoxz7qgta8v94",
         "itemId": "i8ls2f8inq2ovuijj6l7rbcq"
       },
-      "to": { "groupId": "d6v9lh83c7zuwrhf2mmo6nxo" }
+      "to": {
+        "groupId": "d6v9lh83c7zuwrhf2mmo6nxo"
+      }
     },
     {
       "id": "ual6xszx6tfcxqrnihc6zrvx",
-      "from": { "blockId": "mgn6uuw2yebmengsukjramjx" },
-      "to": { "groupId": "uozlg88loeb8xegu6y4le6k8" }
+      "from": {
+        "blockId": "mgn6uuw2yebmengsukjramjx"
+      },
+      "to": {
+        "groupId": "uozlg88loeb8xegu6y4le6k8"
+      }
     },
     {
       "id": "zb79atxs2itliks4d00e35uy",
@@ -544,7 +656,9 @@
         "blockId": "yifjhiamifo1y4ay7vols0mm",
         "itemId": "j9d1pf2tndax0itezys7t73c"
       },
-      "to": { "groupId": "x9610wtdv125hg56wicm2qmv" }
+      "to": {
+        "groupId": "x9610wtdv125hg56wicm2qmv"
+      }
     }
   ],
   "variables": [

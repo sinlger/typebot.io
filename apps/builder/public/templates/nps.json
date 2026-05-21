@@ -6,21 +6,36 @@
     {
       "id": "yu8qfeteutmum1ghb0wqshu9",
       "outgoingEdgeId": "qtd5p5sya9w8yoknvbhy493i",
-      "graphCoordinates": { "x": 0, "y": 0 },
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      },
       "type": "start"
     }
   ],
   "groups": [
     {
       "id": "g7l1tc86ty1r6x0yn0r2g1xo",
-      "title": "Intro",
-      "graphCoordinates": { "x": 10.99, "y": 85.96 },
+      "title": "介绍",
+      "graphCoordinates": {
+        "x": 10.99,
+        "y": 85.96
+      },
       "blocks": [
         {
           "id": "vep990mmfbe64nqczp66xebw",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hey! 👋" }] }]
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "你好！👋"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -32,10 +47,15 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Since you are part of our daily users, can I ask you "
+                    "text": "既然您是我们日常用户的一员，我能问您"
                   },
-                  { "bold": true, "text": "2 questions" },
-                  { "text": "?" }
+                  {
+                    "bold": true,
+                    "text": "2个问题"
+                  },
+                  {
+                    "text": "吗？"
+                  }
                 ]
               }
             ]
@@ -48,7 +68,7 @@
             {
               "id": "wvjhc2vrkqy8512y0wvmciex",
               "outgoingEdgeId": "sjeyoptun1yu805ry37je1ni",
-              "content": "Sure!"
+              "content": "当然！"
             }
           ]
         }
@@ -56,8 +76,11 @@
     },
     {
       "id": "xgqei015z6d58gefpviz8053",
-      "title": "Recommendation",
-      "graphCoordinates": { "x": 360.5, "y": 86.64 },
+      "title": "推荐",
+      "graphCoordinates": {
+        "x": 360.5,
+        "y": 86.64
+      },
       "blocks": [
         {
           "id": "jcp3qhpb4wf95g0ylrp4e8zb",
@@ -67,9 +90,16 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How likely will you recommend our product" },
-                  { "bold": true, "text": " " },
-                  { "text": "to a friend or colleague?" }
+                  {
+                    "text": "您向朋友或同事推荐我们的产品的可能性有多大"
+                  },
+                  {
+                    "bold": true,
+                    "text": ""
+                  },
+                  {
+                    "text": "？"
+                  }
                 ]
               }
             ]
@@ -81,8 +111,8 @@
           "options": {
             "variableId": "vwqc8tzl0380h30vxh07fekmm",
             "labels": {
-              "left": "Very unlikely",
-              "right": "Very likely"
+              "left": "非常不可能",
+              "right": "非常可能"
             },
             "isOneClickSubmitEnabled": true
           }
@@ -126,8 +156,11 @@
     },
     {
       "id": "rp2r31gn1w5t1aeej96bhjj3",
-      "title": "Good",
-      "graphCoordinates": { "x": 1078.85, "y": 292.9 },
+      "title": "好评",
+      "graphCoordinates": {
+        "x": 1078.85,
+        "y": 292.9
+      },
       "blocks": [
         {
           "id": "izehojk23xug74tylpm0wbib",
@@ -136,7 +169,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "I'm glad to hear that 😍" }]
+                "children": [
+                  {
+                    "text": "很高兴听到这个消息 😍"
+                  }
+                ]
               }
             ]
           }
@@ -149,7 +186,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us why?" }]
+                "children": [
+                  {
+                    "text": "能告诉我们原因吗？"
+                  }
+                ]
               }
             ]
           }
@@ -158,8 +199,11 @@
     },
     {
       "id": "sk1n3wpfit3uvfrh42fgcykm",
-      "title": "Why?",
-      "graphCoordinates": { "x": 1425.22, "y": 445.48 },
+      "title": "为什么？",
+      "graphCoordinates": {
+        "x": 1425.22,
+        "y": 445.48
+      },
       "blocks": [
         {
           "id": "ro6a6dt7j3x99unduh5jm6an",
@@ -173,8 +217,11 @@
     },
     {
       "id": "qj9qgsbfv6u1f5oe1bjnwnu9",
-      "title": "Bad",
-      "graphCoordinates": { "x": 1067.22, "y": 575.86 },
+      "title": "差评",
+      "graphCoordinates": {
+        "x": 1067.22,
+        "y": 575.86
+      },
       "blocks": [
         {
           "id": "ou7airondk1mxm4inzzyyr1x",
@@ -184,7 +231,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us what went wrong?" }]
+                "children": [
+                  {
+                    "text": "能告诉我们出了什么问题吗？"
+                  }
+                ]
               }
             ]
           }
@@ -193,8 +244,11 @@
     },
     {
       "id": "tavt0nuh54ck1hvq74kt74vf",
-      "title": "Set type",
-      "graphCoordinates": { "x": 726.83, "y": 234.02 },
+      "title": "设置类型",
+      "graphCoordinates": {
+        "x": 726.83,
+        "y": 234.02
+      },
       "blocks": [
         {
           "id": "vdythdfi91vr47ipbfalddc6",
@@ -202,15 +256,19 @@
           "type": "Set variable",
           "options": {
             "variableId": "vcgkjbh8intf2cql1oteyj4mu",
-            "expressionToEvaluate": "Promoter"
+            "expressionToEvaluate": "Promoter",
+            "type": "Custom"
           }
         }
       ]
     },
     {
       "id": "e887eoxfamv45hj8bz47jize",
-      "title": "Set type",
-      "graphCoordinates": { "x": 722.39, "y": 399.91 },
+      "title": "设置类型",
+      "graphCoordinates": {
+        "x": 722.39,
+        "y": 399.91
+      },
       "blocks": [
         {
           "id": "w40rjuv0avoetpdj6l5nbiz6",
@@ -218,15 +276,19 @@
           "type": "Set variable",
           "options": {
             "variableId": "vcgkjbh8intf2cql1oteyj4mu",
-            "expressionToEvaluate": "Neutral"
+            "expressionToEvaluate": "Neutral",
+            "type": "Custom"
           }
         }
       ]
     },
     {
       "id": "z4qtvedlz3mzcj4jdnfet2dc",
-      "title": "Set type",
-      "graphCoordinates": { "x": 722.56, "y": 566.11 },
+      "title": "设置类型",
+      "graphCoordinates": {
+        "x": 722.56,
+        "y": 566.11
+      },
       "blocks": [
         {
           "id": "melr0p8nxssxe1qyat748uyy",
@@ -234,15 +296,19 @@
           "type": "Set variable",
           "options": {
             "variableId": "vcgkjbh8intf2cql1oteyj4mu",
-            "expressionToEvaluate": "Detractor"
+            "expressionToEvaluate": "Detractor",
+            "type": "Custom"
           }
         }
       ]
     },
     {
       "id": "l7fupza0yi6os0ix6heyd7jz",
-      "title": "Final segmentation",
-      "graphCoordinates": { "x": 1777.5859375, "y": 396.8453917968819 },
+      "title": "最终分组",
+      "graphCoordinates": {
+        "x": 1777.5859375,
+        "y": 396.8453917968819
+      },
       "blocks": [
         {
           "id": "z4gsshsckqdu6m1umartgxgb",
@@ -296,15 +362,25 @@
     },
     {
       "id": "pp1ncsdaki07pfq5pjl53v6r",
-      "title": "Capterra?",
-      "graphCoordinates": { "x": 2160.71875, "y": 69.58984375 },
+      "title": "Capterra？",
+      "graphCoordinates": {
+        "x": 2160.71875,
+        "y": 69.58984375
+      },
       "blocks": [
         {
           "id": "eixinwxcgsng6v8blw6jdgwy",
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Thank you! 🙏" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "谢谢您！🙏"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -316,7 +392,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Would you be ok to leave a review on Capterra?" }
+                  {
+                    "text": "您愿意在 Capterra 上给我们留个评价吗？"
+                  }
                 ]
               }
             ]
@@ -329,12 +407,12 @@
             {
               "id": "y34d4iij8y9qrt28y240x7vm",
               "outgoingEdgeId": "lw33kviri91z1mvxb87kaew0",
-              "content": "Sure!"
+              "content": "当然！"
             },
             {
               "id": "l7txnq6jtm0niynklcpzb21u",
               "outgoingEdgeId": "wjcvbnj1drs6if1p21a8yokf",
-              "content": "Maybe later"
+              "content": "以后再说"
             }
           ]
         }
@@ -342,8 +420,11 @@
     },
     {
       "id": "znljx8q0q2ggih0ipu28ryby",
-      "title": "Bye cheerful",
-      "graphCoordinates": { "x": 2167.570274174784, "y": 543.712381679639 },
+      "title": "开心结束",
+      "graphCoordinates": {
+        "x": 2167.570274174784,
+        "y": 543.712381679639
+      },
       "blocks": [
         {
           "id": "m1my2b6gqq2hgfecw1vs2vcm",
@@ -353,7 +434,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Thank you for taking the time to answer!" }
+                  {
+                    "text": "感谢您抽出时间回答！"
+                  }
                 ]
               }
             ]
@@ -364,7 +447,14 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Have a beautiful day!" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "祝您有美好的一天！"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -379,8 +469,11 @@
     },
     {
       "id": "vvbtgh5ptk49shyjn3zn6d71",
-      "title": "Bye sad",
-      "graphCoordinates": { "x": 2173.366603864535, "y": 949.7063235658585 },
+      "title": "遗憾结束",
+      "graphCoordinates": {
+        "x": 2173.366603864535,
+        "y": 949.7063235658585
+      },
       "blocks": [
         {
           "id": "dfisk4xq8csn0t2aute6hbsd",
@@ -391,7 +484,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Sorry that your experience hasn't been amazing 🙁"
+                    "text": "很抱歉您的体验不尽如人意 🙁"
                   }
                 ]
               }
@@ -407,9 +500,12 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a promo code if you'd like to give our product another chance: "
+                    "text": "如果您想再次尝试我们的产品，这里有一个促销代码："
                   },
-                  { "bold": true, "text": "PROMO123" }
+                  {
+                    "bold": true,
+                    "text": "PROMO123"
+                  }
                 ]
               }
             ]
@@ -426,15 +522,25 @@
     },
     {
       "id": "mwfu8ot0z37zfq2fbo5rcyrl",
-      "title": "Redirect Capterra",
-      "graphCoordinates": { "x": 2531.28515625, "y": 300.828125 },
+      "title": "跳转 Capterra",
+      "graphCoordinates": {
+        "x": 2531.28515625,
+        "y": 300.828125
+      },
       "blocks": [
         {
           "id": "cd8ftyg6tkjggncxuo242u3j",
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Amazing 🤩" }] }
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "太棒了 🤩"
+                  }
+                ]
+              }
             ]
           }
         },
@@ -445,7 +551,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Let me take you there..." }]
+                "children": [
+                  {
+                    "text": "让我带您去那里..."
+                  }
+                ]
               }
             ]
           }
@@ -453,7 +563,9 @@
         {
           "id": "xr1or6dcptogabyvv6zepmw8",
           "type": "Wait",
-          "options": { "secondsToWaitFor": "1" }
+          "options": {
+            "secondsToWaitFor": "1"
+          }
         },
         {
           "id": "bfyw1eabougkp2aqlrcrf6lz",
@@ -468,18 +580,30 @@
   "edges": [
     {
       "id": "qtd5p5sya9w8yoknvbhy493i",
-      "from": { "eventId": "yu8qfeteutmum1ghb0wqshu9" },
-      "to": { "groupId": "g7l1tc86ty1r6x0yn0r2g1xo" }
+      "from": {
+        "eventId": "yu8qfeteutmum1ghb0wqshu9"
+      },
+      "to": {
+        "groupId": "g7l1tc86ty1r6x0yn0r2g1xo"
+      }
     },
     {
       "id": "glj5ishgke8i6s6eyjnmbel1",
-      "from": { "blockId": "ou7airondk1mxm4inzzyyr1x" },
-      "to": { "groupId": "sk1n3wpfit3uvfrh42fgcykm" }
+      "from": {
+        "blockId": "ou7airondk1mxm4inzzyyr1x"
+      },
+      "to": {
+        "groupId": "sk1n3wpfit3uvfrh42fgcykm"
+      }
     },
     {
       "id": "hycn6wx0j9ug4wf5vzz9aytx",
-      "from": { "blockId": "qj3e1cxwjub800r6g3lfa4ei" },
-      "to": { "groupId": "sk1n3wpfit3uvfrh42fgcykm" }
+      "from": {
+        "blockId": "qj3e1cxwjub800r6g3lfa4ei"
+      },
+      "to": {
+        "groupId": "sk1n3wpfit3uvfrh42fgcykm"
+      }
     },
     {
       "id": "zug5c4jy98sywgp1amtms6oc",
@@ -487,12 +611,18 @@
         "blockId": "z76m5qjuy15sa6b0p1re0nkp",
         "itemId": "xy6ni2aj5dxys27itzbtvdzw"
       },
-      "to": { "groupId": "tavt0nuh54ck1hvq74kt74vf" }
+      "to": {
+        "groupId": "tavt0nuh54ck1hvq74kt74vf"
+      }
     },
     {
       "id": "niec249stbfa2obm9mkd1pgw",
-      "from": { "blockId": "z76m5qjuy15sa6b0p1re0nkp" },
-      "to": { "groupId": "z4qtvedlz3mzcj4jdnfet2dc" }
+      "from": {
+        "blockId": "z76m5qjuy15sa6b0p1re0nkp"
+      },
+      "to": {
+        "groupId": "z4qtvedlz3mzcj4jdnfet2dc"
+      }
     },
     {
       "id": "qb38wjfqzksaujoppzrrto25",
@@ -500,16 +630,24 @@
         "blockId": "z76m5qjuy15sa6b0p1re0nkp",
         "itemId": "vrhf4u4dt6u146eywqybgrk2"
       },
-      "to": { "groupId": "e887eoxfamv45hj8bz47jize" }
+      "to": {
+        "groupId": "e887eoxfamv45hj8bz47jize"
+      }
     },
     {
       "id": "r74zv3gamsln3dbmp1gvxpa2",
-      "from": { "blockId": "vdythdfi91vr47ipbfalddc6" },
-      "to": { "groupId": "rp2r31gn1w5t1aeej96bhjj3" }
+      "from": {
+        "blockId": "vdythdfi91vr47ipbfalddc6"
+      },
+      "to": {
+        "groupId": "rp2r31gn1w5t1aeej96bhjj3"
+      }
     },
     {
       "id": "x62wj4inzidyj03ktiyu0g81",
-      "from": { "blockId": "w40rjuv0avoetpdj6l5nbiz6" },
+      "from": {
+        "blockId": "w40rjuv0avoetpdj6l5nbiz6"
+      },
       "to": {
         "groupId": "rp2r31gn1w5t1aeej96bhjj3",
         "blockId": "qj3e1cxwjub800r6g3lfa4ei"
@@ -517,13 +655,21 @@
     },
     {
       "id": "q5xllqzy4x1q3tdvpr1piwgi",
-      "from": { "blockId": "melr0p8nxssxe1qyat748uyy" },
-      "to": { "groupId": "qj9qgsbfv6u1f5oe1bjnwnu9" }
+      "from": {
+        "blockId": "melr0p8nxssxe1qyat748uyy"
+      },
+      "to": {
+        "groupId": "qj9qgsbfv6u1f5oe1bjnwnu9"
+      }
     },
     {
       "id": "y6gsa6pjrfeu8zi6evtzirs1",
-      "from": { "blockId": "ro6a6dt7j3x99unduh5jm6an" },
-      "to": { "groupId": "l7fupza0yi6os0ix6heyd7jz" }
+      "from": {
+        "blockId": "ro6a6dt7j3x99unduh5jm6an"
+      },
+      "to": {
+        "groupId": "l7fupza0yi6os0ix6heyd7jz"
+      }
     },
     {
       "id": "jjymvdpeyfqu2qpo6hh2zxeo",
@@ -531,7 +677,9 @@
         "blockId": "z4gsshsckqdu6m1umartgxgb",
         "itemId": "cdi4c43wbyi3ajdns5klfg1g"
       },
-      "to": { "groupId": "vvbtgh5ptk49shyjn3zn6d71" }
+      "to": {
+        "groupId": "vvbtgh5ptk49shyjn3zn6d71"
+      }
     },
     {
       "id": "jyen1rcq5cxek118gkio0u6d",
@@ -539,7 +687,9 @@
         "blockId": "z4gsshsckqdu6m1umartgxgb",
         "itemId": "vey2i7kouphj3dgzz1rtwuxb"
       },
-      "to": { "groupId": "znljx8q0q2ggih0ipu28ryby" }
+      "to": {
+        "groupId": "znljx8q0q2ggih0ipu28ryby"
+      }
     },
     {
       "id": "wjcvbnj1drs6if1p21a8yokf",
@@ -547,7 +697,9 @@
         "blockId": "v9pf4n5kcwon4g0yvwwc6vk3",
         "itemId": "l7txnq6jtm0niynklcpzb21u"
       },
-      "to": { "groupId": "znljx8q0q2ggih0ipu28ryby" }
+      "to": {
+        "groupId": "znljx8q0q2ggih0ipu28ryby"
+      }
     },
     {
       "id": "lw33kviri91z1mvxb87kaew0",
@@ -555,7 +707,9 @@
         "blockId": "v9pf4n5kcwon4g0yvwwc6vk3",
         "itemId": "y34d4iij8y9qrt28y240x7vm"
       },
-      "to": { "groupId": "mwfu8ot0z37zfq2fbo5rcyrl" }
+      "to": {
+        "groupId": "mwfu8ot0z37zfq2fbo5rcyrl"
+      }
     },
     {
       "id": "sjeyoptun1yu805ry37je1ni",
@@ -563,7 +717,9 @@
         "blockId": "d3asw3zs2gahpxs3usun6lm5",
         "itemId": "wvjhc2vrkqy8512y0wvmciex"
       },
-      "to": { "groupId": "xgqei015z6d58gefpviz8053" }
+      "to": {
+        "groupId": "xgqei015z6d58gefpviz8053"
+      }
     },
     {
       "id": "fcels3dp2kabntjscmirxtl7",
@@ -571,7 +727,9 @@
         "blockId": "z4gsshsckqdu6m1umartgxgb",
         "itemId": "vd6ls562brvt5kld746ao63x"
       },
-      "to": { "groupId": "pp1ncsdaki07pfq5pjl53v6r" }
+      "to": {
+        "groupId": "pp1ncsdaki07pfq5pjl53v6r"
+      }
     }
   ],
   "variables": [

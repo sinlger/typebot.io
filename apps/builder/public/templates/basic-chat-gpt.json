@@ -56,7 +56,7 @@
     },
     {
       "id": "qfrz5nwm63g12dajsjxothb5",
-      "title": "User input",
+      "title": "用户输入",
       "graphCoordinates": { "x": 198.64, "y": 179.04 },
       "blocks": [
         {
@@ -78,7 +78,7 @@
     },
     {
       "id": "a6ymhjwtkqwp8t127plz8qmk",
-      "title": "ChatGPT reply",
+      "title": "ChatGPT 回复",
       "graphCoordinates": { "x": 624.57, "y": 200.09 },
       "blocks": [
         {
@@ -124,7 +124,7 @@
     },
     {
       "id": "c5f00f3oclwi1srcz10jjt9u",
-      "title": "Intro",
+      "title": "开场",
       "graphCoordinates": { "x": -183.19, "y": 156.03 },
       "blocks": [
         {
@@ -132,7 +132,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hi there 👋" }] }
+              { "type": "p", "children": [{ "text": "你好 👋" }] }
             ]
           }
         },
@@ -142,7 +142,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can I help?" }] }
+              { "type": "p", "children": [{ "text": "有什么可以帮你的？" }] }
             ]
           }
         }

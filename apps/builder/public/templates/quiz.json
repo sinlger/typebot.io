@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "cl1r09bc6000h2e6dqml18p4p",
-      "title": "Q1",
+      "title": "第1题",
       "graphCoordinates": { "x": 3, "y": 180 },
       "blocks": [
         {
@@ -21,7 +21,8 @@
           "type": "Set variable",
           "options": {
             "variableId": "vcl1r0bxdj000z2e6d65u7n41b",
-            "expressionToEvaluate": "0"
+            "expressionToEvaluate": "0",
+            "type": "Custom"
           }
         },
         {
@@ -31,7 +32,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What does SEO stand for?" }]
+                "children": [{ "text": "SEO 代表什么？" }]
               }
             ]
           }
@@ -41,19 +42,19 @@
           "outgoingEdgeId": "cl1r0cfjt00122e6dzwtamycl",
           "type": "choice input",
           "items": [
-            { "id": "cl1r09dl9000k2e6dvf7llzkd", "content": "Send Email Out" },
+            { "id": "cl1r09dl9000k2e6dvf7llzkd", "content": "发送邮件" },
             {
               "id": "cl1r0a80k000l2e6dngppwyhm",
-              "content": "Serial Editorial Output"
+              "content": "系列编辑输出"
             },
             {
               "id": "cl1r0adei000m2e6dfc8w5y4k",
               "outgoingEdgeId": "cl1r0dfip00152e6doo9duexn",
-              "content": "Search Engine Optimization"
+              "content": "搜索引擎优化"
             },
             {
               "id": "cl1r0aiks000n2e6dc31e2db6",
-              "content": "Search Expectation Order"
+              "content": "搜索预期排序"
             }
           ]
         }
@@ -61,7 +62,7 @@
     },
     {
       "id": "cl1r0b3ww000q2e6d4aihat41",
-      "title": "Q2",
+      "title": "第2题",
       "graphCoordinates": { "x": 457.878775226166, "y": 159.8383669682208 },
       "blocks": [
         {
@@ -69,7 +70,8 @@
           "type": "Set variable",
           "options": {
             "variableId": "vcl1r0bxdj000z2e6d65u7n41b",
-            "expressionToEvaluate": "{{Score}} + 5"
+            "expressionToEvaluate": "{{Score}} + 5",
+            "type": "Custom"
           }
         },
         {
@@ -77,7 +79,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
+              { "type": "p", "children": [{ "text": "做得好！" }] }
             ]
           }
         },
@@ -86,7 +88,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What is anchor text?" }] }
+              { "type": "p", "children": [{ "text": "什么是锚文本？" }] }
             ]
           }
         },
@@ -98,19 +100,19 @@
             {
               "id": "cl1r0b3x5000s2e6dyq6bklbf",
               "outgoingEdgeId": "cl1r0i4dj001r2e6dgb96tx9q",
-              "content": "The visible text that is hyperlinked to another page"
+              "content": "可点击跳转到其他页面的可见文本"
             },
             {
               "id": "cl1r0b6jd000t2e6dkp3dxpp9",
-              "content": "The text in the top left of a webpage"
+              "content": "网页左上角的文字"
             },
             {
               "id": "cl1r0b835000u2e6d22rw2gb5",
-              "content": "The most prominent text on a page, used by search engines to assign a title to the page"
+              "content": "页面中最突出的文字，搜索引擎用它来为页面分配标题"
             },
             {
               "id": "cl1r0b9tl000v2e6dkligryj3",
-              "content": "A slogan that sticks in a consumer’s mind"
+              "content": "消费者脑海中挥之不去的口号"
             }
           ]
         }
@@ -118,7 +120,7 @@
     },
     {
       "id": "cl1r0erik00182e6dfzezujj0",
-      "title": "Q3",
+      "title": "第3题",
       "graphCoordinates": { "x": 876.6414289028069, "y": 165.4393876130828 },
       "blocks": [
         {
@@ -126,7 +128,8 @@
           "type": "Set variable",
           "options": {
             "variableId": "vcl1r0bxdj000z2e6d65u7n41b",
-            "expressionToEvaluate": "{{Score}} + 5"
+            "expressionToEvaluate": "{{Score}} + 5",
+            "type": "Custom"
           }
         },
         {
@@ -134,7 +137,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
+              { "type": "p", "children": [{ "text": "做得好！" }] }
             ]
           }
         },
@@ -143,7 +146,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What is a persona ?" }] }
+              { "type": "p", "children": [{ "text": "什么是人物画像？" }] }
             ]
           }
         },
@@ -154,20 +157,20 @@
           "items": [
             {
               "id": "cl1r0erim001g2e6d5zzn8q22",
-              "content": "Your target audience"
+              "content": "你的目标受众"
             },
             {
               "id": "cl1r0erim001h2e6dnwtiturl",
-              "content": "Someone who joins your mailing list"
+              "content": "加入你邮件列表的人"
             },
             {
               "id": "cl1r0erim001i2e6dbfhck09o",
-              "content": "A repeat customer"
+              "content": "重复购买的客户"
             },
             {
               "id": "cl1r0erim001j2e6d2waa3374",
               "outgoingEdgeId": "cl1r0k27y00262e6dflgcp3wa",
-              "content": "A fictional representation of a group of customers"
+              "content": "一群客户的虚构代表"
             }
           ]
         }
@@ -175,7 +178,7 @@
     },
     {
       "id": "cl1r0j8u1001t2e6d42mjfcqo",
-      "title": "Q4",
+      "title": "第4题",
       "graphCoordinates": { "x": 1262.722245418697, "y": 156.2726513569937 },
       "blocks": [
         {
@@ -183,7 +186,8 @@
           "type": "Set variable",
           "options": {
             "variableId": "vcl1r0bxdj000z2e6d65u7n41b",
-            "expressionToEvaluate": "{{Score}} + 5"
+            "expressionToEvaluate": "{{Score}} + 5",
+            "type": "Custom"
           }
         },
         {
@@ -191,7 +195,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
+              { "type": "p", "children": [{ "text": "做得好！" }] }
             ]
           }
         },
@@ -202,7 +206,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What does CTA stand for?" }]
+                "children": [{ "text": "CTA 代表什么？" }]
               }
             ]
           }
@@ -214,20 +218,20 @@
           "items": [
             {
               "id": "cl1r0j8u200212e6dov1xy5m4",
-              "content": "Consequence To Advert"
+              "content": "广告后果"
             },
             {
               "id": "cl1r0j8u300222e6dnj0i5fm8",
               "outgoingEdgeId": "cl1r0lm4e002m2e6d0g3h9pm7",
-              "content": "Call To Action"
+              "content": "行动号召"
             },
             {
               "id": "cl1r0j8u300232e6dxd8abojt",
-              "content": "Computer Tracked Actions"
+              "content": "计算机追踪行为"
             },
             {
               "id": "cl1r0j8u300242e6d0pki60w6",
-              "content": "Characteristic Tracking Advert"
+              "content": "特征追踪广告"
             }
           ]
         }
@@ -235,14 +239,14 @@
     },
     {
       "id": "cl1r0c85100102e6d7uohf0cu",
-      "title": "Q1 - Wrong",
+      "title": "第1题 - 错误",
       "graphCoordinates": { "x": 79.08, "y": 821.49 },
       "blocks": [
         {
           "id": "cl1r0c85i00112e6d8iwtrpvb",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "错误！" }] }]
           }
         },
         {
@@ -254,7 +258,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "SEO stands for Search Engine Optimization" }
+                  { "text": "SEO 代表搜索引擎优化" }
                 ]
               }
             ]
@@ -264,14 +268,14 @@
     },
     {
       "id": "cl1r0exdi001l2e6drdwj3u96",
-      "title": "Q2 - Wrong",
+      "title": "第2题 - 错误",
       "graphCoordinates": { "x": 542.94, "y": 996.75 },
       "blocks": [
         {
           "id": "cl1r0exdi001m2e6d7kge562x",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "错误！" }] }]
           }
         },
         {
@@ -284,7 +288,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Anchor text is the visible text that is hyperlinked to another page"
+                    "text": "锚文本是可点击跳转到其他页面的可见文本"
                   }
                 ]
               }
@@ -295,14 +299,14 @@
     },
     {
       "id": "cl1r0k3tq00272e6d1fwyajjx",
-      "title": "Q3 - Wrong",
+      "title": "第3题 - 错误",
       "graphCoordinates": { "x": 916.73, "y": 925.61 },
       "blocks": [
         {
           "id": "cl1r0k3tq00282e6dl0av81kz",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "错误！" }] }]
           }
         },
         {
@@ -315,7 +319,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "A persona is a fictional representation of a group of customers"
+                    "text": "人物画像是群客户的虚构代表"
                   }
                 ]
               }
@@ -326,14 +330,14 @@
     },
     {
       "id": "cl1r0kqof002d2e6doqhpnuqy",
-      "title": "Q4 - Wrong",
+      "title": "第4题 - 错误",
       "graphCoordinates": { "x": 1316.88, "y": 861.75 },
       "blocks": [
         {
           "id": "cl1r0kqof002e2e6dzjcw0kvs",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "错误！" }] }]
           }
         },
         {
@@ -346,7 +350,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Anchor text is the visible text that is hyperlinked to another page"
+                    "text": "锚文本是可点击跳转到其他页面的可见文本"
                   }
                 ]
               }
@@ -357,7 +361,7 @@
     },
     {
       "id": "cl1r0lfb5002k2e6dd6as5kj5",
-      "title": "Filter",
+      "title": "筛选",
       "graphCoordinates": { "x": 1647.16, "y": 167.69 },
       "blocks": [
         {
@@ -365,7 +369,8 @@
           "type": "Set variable",
           "options": {
             "variableId": "vcl1r0bxdj000z2e6d65u7n41b",
-            "expressionToEvaluate": "{{Score}} + 5"
+            "expressionToEvaluate": "{{Score}} + 5",
+            "type": "Custom"
           }
         },
         {
@@ -415,7 +420,7 @@
     },
     {
       "id": "cl1r0mn2p002p2e6dijqbjzlh",
-      "title": "Result",
+      "title": "结果",
       "graphCoordinates": { "x": 2508.594129051806, "y": 405.664166830421 },
       "blocks": [
         {
@@ -425,7 +430,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Your score is {{Score}}/20." }]
+                "children": [{ "text": "你的得分是 {{Score}}/20。" }]
               }
             ]
           }
@@ -435,7 +440,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Try again?" }] }
+              { "type": "p", "children": [{ "text": "再试一次？" }] }
             ]
           }
         },
@@ -446,16 +451,16 @@
             {
               "id": "cl1r0nt85002t2e6dvb7si7ny",
               "outgoingEdgeId": "cl1r15gko005i2e6dn6rhifwe",
-              "content": "Yes!"
+              "content": "好的！"
             },
-            { "id": "cl1r0nveb002u2e6dotjk6nuf", "content": "No, bye!" }
+            { "id": "cl1r0nveb002u2e6dotjk6nuf", "content": "不了，再见！" }
           ]
         }
       ]
     },
     {
       "id": "cl1r0rgex00382e6dkayjbys6",
-      "title": "Great score",
+      "title": "高分",
       "graphCoordinates": { "x": 1999.325745846056, "y": 159.3910979368924 },
       "blocks": [
         {
@@ -464,7 +469,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done 👏" }] }
+              { "type": "p", "children": [{ "text": "做得好 👏" }] }
             ]
           }
         }
@@ -472,7 +477,7 @@
     },
     {
       "id": "cl1r0rvak003b2e6dejcdrooq",
-      "title": "Medium score",
+      "title": "中分",
       "graphCoordinates": { "x": 2008.44697061989, "y": 315.9721232210492 },
       "blocks": [
         {
@@ -484,7 +489,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "You could do better but that's alright!" }
+                  { "text": "你还可以做得更好，但这也没关系！" }
                 ]
               }
             ]
@@ -494,7 +499,7 @@
     },
     {
       "id": "cl1r0seuj003h2e6dandwc43r",
-      "title": "Bad score",
+      "title": "低分",
       "graphCoordinates": { "x": 2009.967174748862, "y": 499.9168228267089 },
       "blocks": [
         {
@@ -507,7 +512,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Aouch, you need to improve your Digital Marketing game."
+                    "text": "哎呀，你需要提升你的数字营销水平了。"
                   }
                 ]
               }
@@ -518,7 +523,7 @@
     },
     {
       "id": "cl1r15f68005f2e6dvdtal7cp",
-      "title": "Restart",
+      "title": "重新开始",
       "graphCoordinates": { "x": 2850.766985281865, "y": 609.1892251509271 },
       "blocks": [
         {
@@ -534,14 +539,14 @@
     },
     {
       "id": "cl1r15w3o005s2e6dr5l7csao",
-      "title": "Welcome",
+      "title": "欢迎",
       "graphCoordinates": { "x": -361.5512664480758, "y": 166.9921185817542 },
       "blocks": [
         {
           "id": "cl1r16nes005z2e6d3aj23kfz",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hi there!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "你好！" }] }]
           }
         },
         {
@@ -553,7 +558,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You're about to answer a Quiz about Digital Marketing"
+                    "text": "你将回答一个关于数字营销的测验"
                   }
                 ]
               }
@@ -567,7 +572,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "It is composed of only 4 questions." }]
+                "children": [{ "text": "它只有 4 个问题。" }]
               }
             ]
           }
@@ -577,7 +582,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "bold": true, "text": "Ready?" }] }
+              { "type": "p", "children": [{ "bold": true, "text": "准备好了吗？" }] }
             ]
           }
         },
@@ -588,7 +593,7 @@
             {
               "id": "cl1r176e9006a2e6dpvp0974z",
               "outgoingEdgeId": "cl1r17pzv006n2e6dpibxp9th",
-              "content": "Go!"
+              "content": "开始！"
             }
           ]
         }

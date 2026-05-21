@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "qfrz5nwm63g12dajsjxothb5",
-      "title": "User input",
+      "title": "用户输入",
       "graphCoordinates": { "x": -107.01, "y": -53.23 },
       "blocks": [
         {
@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can we help?" }] }
+              { "type": "p", "children": [{ "text": "我们能帮您什么？" }] }
             ]
           }
         },
@@ -35,7 +35,7 @@
     },
     {
       "id": "bh3uva3254p0jgp46gj92way",
-      "title": "Condition 🧠",
+      "title": "条件 🧠",
       "graphCoordinates": { "x": 228.67, "y": -50.67 },
       "blocks": [
         {
@@ -102,7 +102,7 @@
     },
     {
       "id": "flt2vtb4pb6mvlvyrrxonzwf",
-      "title": "Account",
+      "title": "账户",
       "graphCoordinates": { "x": 585.48, "y": -214.13 },
       "blocks": [
         {
@@ -113,7 +113,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Ok feel free to check your account here" }
+                  { "text": "好的，请随时在这里查看您的账户" }
                 ]
               }
             ]
@@ -122,7 +122,7 @@
         {
           "id": "fn0s0ezabail96c5n0xs24aq",
           "type": "choice input",
-          "items": [{ "id": "tslv59v8oqbfpnd21la8qnz4", "content": "Account" }]
+          "items": [{ "id": "tslv59v8oqbfpnd21la8qnz4", "content": "账户" }]
         },
         {
           "id": "r16g3avw7mwzi12srqisuex0",
@@ -133,7 +133,7 @@
     },
     {
       "id": "jn9w80afa6a66czzjfto8tmt",
-      "title": "Human",
+      "title": "人类",
       "graphCoordinates": { "x": 586.68, "y": 153.73 },
       "blocks": [
         {
@@ -141,7 +141,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "I'm a human" }] }
+              { "type": "p", "children": [{ "text": "我是人类" }] }
             ]
           }
         }
@@ -149,14 +149,14 @@
     },
     {
       "id": "el01d0j1db9kp6v8wlrk9dob",
-      "title": "Else",
+      "title": "其他",
       "graphCoordinates": { "x": 581.46, "y": 315.66 },
       "blocks": [
         {
           "id": "tpy9wjrwmhw16xjgs8htao04",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Else" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "其他" }] }]
           }
         }
       ]
@@ -175,7 +175,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄\n"
+                    "text": "您需要添加 OpenAI 凭据才能让此机器人正常工作。🪄\n"
                   }
                 ]
               }
@@ -191,10 +191,10 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此分组并将 "
                   },
                   { "bold": true, "text": "Start" },
-                  { "text": " event with " },
+                  { "text": " 事件连接到 " },
                   { "bold": true, "text": "Intro" },
                   { "text": " 🚀\n" }
                 ]

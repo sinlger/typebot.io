@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { defaultOpenAIOptions } from "@typebot.io/blocks-integrations/openai/constants";
+import { useTranslate } from "@tolgee/react";
 import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { useWorkspace } from "@/features/workspace/WorkspaceProvider";
 import { orpc } from "@/lib/queryClient";
@@ -21,6 +22,7 @@ export const ModelsDropdown = ({
   credentialsId,
   type,
 }: Props) => {
+  const { t } = useTranslate();
   const { workspace } = useWorkspace();
 
   const { data } = useQuery(
@@ -42,7 +44,7 @@ export const ModelsDropdown = ({
       items={data?.models ?? []}
       value={defaultValue}
       onChange={onChange}
-      placeholder="Select a model"
+      placeholder={t("blocks.integrations.openai.settings.selectModel.placeholder")}
     />
   );
 };

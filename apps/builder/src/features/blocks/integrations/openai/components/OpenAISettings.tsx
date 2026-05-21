@@ -8,6 +8,7 @@ import type {
   CreateSpeechOpenAIOptions,
   OpenAIBlock,
 } from "@typebot.io/blocks-integrations/openai/schema";
+import { useTranslate } from "@tolgee/react";
 import { Accordion } from "@typebot.io/ui/components/Accordion";
 import { Field } from "@typebot.io/ui/components/Field";
 import { useOpenControls } from "@typebot.io/ui/hooks/useOpenControls";
@@ -31,6 +32,7 @@ export const OpenAISettings = ({
   block: { options },
   onOptionsChange,
 }: Props) => {
+  const { t } = useTranslate();
   const { workspace } = useWorkspace();
   const { isOpen, onOpen, onClose } = useOpenControls();
   const emptyOptions = {
@@ -91,10 +93,10 @@ export const OpenAISettings = ({
         <>
           <Accordion.Root>
             <Accordion.Item>
-              <Accordion.Trigger>Customize provider</Accordion.Trigger>
+              <Accordion.Trigger>{t("blocks.integrations.openai.settings.customizeProvider.label")}</Accordion.Trigger>
               <Accordion.Panel>
                 <Field.Root>
-                  <Field.Label>Base URL</Field.Label>
+                  <Field.Label>{t("blocks.integrations.openai.settings.baseUrl.label")}</Field.Label>
                   <DebouncedTextInputWithVariablesButton
                     defaultValue={baseUrl}
                     onValueChange={updateBaseUrl}
@@ -102,7 +104,7 @@ export const OpenAISettings = ({
                 </Field.Root>
                 {baseUrl !== defaultOpenAIOptions.baseUrl && (
                   <Field.Root>
-                    <Field.Label>API version</Field.Label>
+                    <Field.Label>{t("blocks.integrations.openai.settings.apiVersion.label")}</Field.Label>
                     <DebouncedTextInputWithVariablesButton
                       defaultValue={options.apiVersion}
                       onValueChange={updateApiVersion}
@@ -118,7 +120,7 @@ export const OpenAISettings = ({
             value={options.task}
             items={openAITasks.slice(0, -1)}
             onChange={updateTask}
-            placeholder="Select task"
+            placeholder={t("blocks.integrations.openai.settings.selectTask.placeholder")}
           />
           {options.task && (
             <OpenAITaskSettings

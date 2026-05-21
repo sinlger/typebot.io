@@ -1,23 +1,30 @@
 import type { KeyValue } from "@typebot.io/blocks-integrations/httpRequest/schema";
+import { useTranslate } from "@tolgee/react";
 import { Field } from "@typebot.io/ui/components/Field";
 import { DebouncedTextInputWithVariablesButton } from "@/components/inputs/DebouncedTextInput";
 import type { TableListItemProps } from "@/components/TableList";
 
-export const QueryParamsInputs = (props: TableListItemProps<KeyValue>) => (
-  <KeyValueInputs
-    {...props}
-    keyPlaceholder="e.g. email"
-    valuePlaceholder="e.g. {{Email}}"
-  />
-);
+export const QueryParamsInputs = (props: TableListItemProps<KeyValue>) => {
+  const { t } = useTranslate();
+  return (
+    <KeyValueInputs
+      {...props}
+      keyPlaceholder={t("blocks.integrations.httpRequest.keyValue.key.placeholder")}
+      valuePlaceholder={t("blocks.integrations.httpRequest.keyValue.value.placeholder")}
+    />
+  );
+};
 
-export const HeadersInputs = (props: TableListItemProps<KeyValue>) => (
-  <KeyValueInputs
-    {...props}
-    keyPlaceholder="e.g. Content-Type"
-    valuePlaceholder="e.g. application/json"
-  />
-);
+export const HeadersInputs = (props: TableListItemProps<KeyValue>) => {
+  const { t } = useTranslate();
+  return (
+    <KeyValueInputs
+      {...props}
+      keyPlaceholder={t("blocks.integrations.httpRequest.keyValue.keyHeader.placeholder")}
+      valuePlaceholder={t("blocks.integrations.httpRequest.keyValue.valueHeader.placeholder")}
+    />
+  );
+};
 
 export const KeyValueInputs = ({
   item,
@@ -28,6 +35,7 @@ export const KeyValueInputs = ({
   keyPlaceholder?: string;
   valuePlaceholder?: string;
 }) => {
+  const { t } = useTranslate();
   const handleKeyChange = (key: string) => {
     if (key === item.key) return;
     onItemChange({ ...item, key });
@@ -39,7 +47,7 @@ export const KeyValueInputs = ({
   return (
     <div className="flex flex-col gap-2 p-4 rounded-md flex-1 border">
       <Field.Root>
-        <Field.Label>Key:</Field.Label>
+        <Field.Label>{t("blocks.integrations.keyValue.key.label")}</Field.Label>
         <DebouncedTextInputWithVariablesButton
           defaultValue={item.key ?? ""}
           onValueChange={handleKeyChange}
@@ -47,7 +55,7 @@ export const KeyValueInputs = ({
         />
       </Field.Root>
       <Field.Root>
-        <Field.Label>Value:</Field.Label>
+        <Field.Label>{t("blocks.integrations.keyValue.value.label")}</Field.Label>
         <DebouncedTextInputWithVariablesButton
           defaultValue={item.value ?? ""}
           onValueChange={handleValueChange}

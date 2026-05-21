@@ -1,3 +1,4 @@
+import { useTranslate } from "@tolgee/react";
 import { Dialog } from "@typebot.io/ui/components/Dialog";
 import { ButtonLink } from "@/components/ButtonLink";
 import { GoogleLogo } from "@/components/GoogleLogo";
@@ -31,19 +32,19 @@ export const GoogleSheetConnectDialogBody = ({
   typebotId?: string;
   blockId?: string;
 }) => {
+  const { t } = useTranslate();
   const { workspace } = useWorkspace();
 
   return (
     <Dialog.Popup>
-      <Dialog.Title>Connect Spreadsheets</Dialog.Title>
+      <Dialog.Title>{t("blocks.integrations.googleSheets.connectDialog.title")}</Dialog.Title>
       <p>
-        Make sure to check all the permissions so that the integration works as
-        expected:
+        {t("blocks.integrations.googleSheets.connectDialog.description")}
       </p>
       <img
         className="rounded-md"
         src="/images/google-spreadsheets-scopes.png"
-        alt="Google Spreadsheets checkboxes"
+        alt={t("blocks.integrations.googleSheets.connectDialog.imageAlt")}
       />
       <Dialog.Footer>
         {workspace?.id && (
@@ -60,7 +61,7 @@ export const GoogleSheetConnectDialogBody = ({
             className="mx-auto"
           >
             <GoogleLogo />
-            Continue with Google
+            {t("blocks.integrations.googleSheets.connectDialog.continueWithGoogle.label")}
           </ButtonLink>
         )}
       </Dialog.Footer>

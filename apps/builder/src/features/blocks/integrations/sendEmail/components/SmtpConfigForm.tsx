@@ -1,5 +1,6 @@
 import type { SmtpCredentials } from "@typebot.io/credentials/schemas";
 import { isDefined } from "@typebot.io/lib/utils";
+import { useTranslate } from "@tolgee/react";
 import { DebouncedTextInput } from "@typebot.io/ui/components/DebouncedTextInput";
 import { Field } from "@typebot.io/ui/components/Field";
 import { MoreInfoTooltip } from "@typebot.io/ui/components/MoreInfoTooltip";
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export const SmtpConfigForm = ({ config, onConfigChange }: Props) => {
+  const { t } = useTranslate();
   const handleFromEmailChange = (email: string) =>
     config && onConfigChange({ ...config, from: { ...config.from, email } });
 
@@ -36,34 +38,34 @@ export const SmtpConfigForm = ({ config, onConfigChange }: Props) => {
   return (
     <div className="flex flex-col gap-4">
       <Field.Root>
-        <Field.Label>From email</Field.Label>
+        <Field.Label>{t("blocks.integrations.sendEmail.smtp.fromEmail.label")}</Field.Label>
         <DebouncedTextInput
           defaultValue={config?.from.email}
           onValueChange={handleFromEmailChange}
-          placeholder="notifications@provider.com"
+          placeholder={t("blocks.integrations.sendEmail.smtp.fromEmail.placeholder")}
           disabled={!config}
         />
       </Field.Root>
       <Field.Root>
-        <Field.Label>From name</Field.Label>
+        <Field.Label>{t("blocks.integrations.sendEmail.smtp.fromName.label")}</Field.Label>
         <DebouncedTextInput
           defaultValue={config?.from.name}
           onValueChange={handleFromNameChange}
-          placeholder="John Smith"
+          placeholder={t("blocks.integrations.sendEmail.smtp.fromName.placeholder")}
           disabled={!config}
         />
       </Field.Root>
       <Field.Root>
-        <Field.Label>Host</Field.Label>
+        <Field.Label>{t("blocks.integrations.sendEmail.smtp.host.label")}</Field.Label>
         <DebouncedTextInput
           defaultValue={config?.host}
           onValueChange={handleHostChange}
-          placeholder="mail.provider.com"
+          placeholder={t("blocks.integrations.sendEmail.smtp.host.placeholder")}
           disabled={!config}
         />
       </Field.Root>
       <Field.Root>
-        <Field.Label>Username</Field.Label>
+        <Field.Label>{t("blocks.integrations.sendEmail.smtp.username.label")}</Field.Label>
         <DebouncedTextInput
           defaultValue={config?.username}
           onValueChange={handleUsernameChange}
@@ -71,7 +73,7 @@ export const SmtpConfigForm = ({ config, onConfigChange }: Props) => {
         />
       </Field.Root>
       <Field.Root>
-        <Field.Label>Password</Field.Label>
+        <Field.Label>{t("blocks.integrations.sendEmail.smtp.password.label")}</Field.Label>
         <DebouncedTextInput
           type="password"
           defaultValue={config?.password}
@@ -85,17 +87,14 @@ export const SmtpConfigForm = ({ config, onConfigChange }: Props) => {
           onCheckedChange={handleTlsCheck}
         />
         <Field.Label>
-          Secure{" "}
+          {t("blocks.integrations.sendEmail.smtp.secure.label")}{" "}
           <MoreInfoTooltip>
-            If enabled, the connection will use TLS when connecting to server.
-            If disabled then TLS is used if server supports the STARTTLS
-            extension. In most cases enable it if you are connecting to port
-            465. For port 587 or 25 keep it disabled.
+            {t("blocks.integrations.sendEmail.smtp.secure.tooltip")}
           </MoreInfoTooltip>
         </Field.Label>
       </Field.Root>
       <Field.Root className="flex-row">
-        <Field.Label>Port number:</Field.Label>
+        <Field.Label>{t("blocks.integrations.sendEmail.smtp.portNumber.label")}</Field.Label>
         <BasicNumberInput
           defaultValue={config?.port}
           onValueChange={handlePortNumberChange}
