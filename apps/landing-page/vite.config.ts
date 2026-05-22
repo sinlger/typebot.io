@@ -24,10 +24,9 @@ export default defineConfig(() => ({
     viteTsConfigPaths({
       projects: ["tsconfig.app.json"],
     }),
-    contentCollections(),
     tanstackStart(),
     // Nx project graph creation loads Vite configs outside the normal plugin context.
-    ...(globalThis.NX_GRAPH_CREATION ? [] : [nitro()]),
+    ...(globalThis.NX_GRAPH_CREATION ? [] : [contentCollections(), nitro()]),
     viteReact(),
   ],
 }));
