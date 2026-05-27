@@ -5,9 +5,94 @@
 
 @plugin "@tailwindcss/typography";
 
+/* ── Color overrides: orange→blue (primary) + accent (CTA orange) ── */
+@theme {
+  --color-orange-50: oklch(0.97 0.01 255);
+  --color-orange-100: oklch(0.93 0.03 255);
+  --color-orange-200: oklch(0.88 0.06 255);
+  --color-orange-300: oklch(0.81 0.10 255);
+  --color-orange-400: oklch(0.71 0.15 255);
+  --color-orange-500: oklch(0.62 0.19 255);
+  --color-orange-600: oklch(0.55 0.22 255);
+  --color-orange-700: oklch(0.44 0.18 255);
+  --color-orange-800: oklch(0.32 0.13 255);
+  --color-orange-900: oklch(0.22 0.09 255);
+  --color-orange-950: oklch(0.15 0.06 255);
+
+  --color-accent-50: oklch(0.97 0.02 55);
+  --color-accent-100: oklch(0.93 0.04 55);
+  --color-accent-200: oklch(0.87 0.08 55);
+  --color-accent-300: oklch(0.78 0.13 55);
+  --color-accent-400: oklch(0.71 0.17 55);
+  --color-accent-500: oklch(0.65 0.20 55);
+  --color-accent-600: oklch(0.57 0.19 50);
+  --color-accent-700: oklch(0.45 0.15 45);
+  --color-accent-800: oklch(0.33 0.11 40);
+  --color-accent-900: oklch(0.23 0.07 35);
+  --color-accent-950: oklch(0.16 0.05 30);
+}
+
+/* Override RGB CSS variables from colors.css for the landing page */
+:root,
+.light {
+  --orange-1: rgb(239 246 255);
+  --orange-2: rgb(219 234 254);
+  --orange-3: rgb(191 219 254);
+  --orange-4: rgb(147 197 253);
+  --orange-5: rgb(96 165 250);
+  --orange-6: rgb(59 130 246);
+  --orange-7: rgb(37 99 235);
+  --orange-8: rgb(29 78 216);
+  --orange-9: rgb(37 99 235);
+  --orange-10: rgb(29 78 216);
+  --orange-11: rgb(30 64 175);
+  --orange-12: rgb(23 37 84);
+}
+
+.dark {
+  --orange-1: rgb(15 23 42);
+  --orange-2: rgb(23 37 84);
+  --orange-3: rgb(30 58 138);
+  --orange-4: rgb(30 64 175);
+  --orange-5: rgb(29 78 216);
+  --orange-6: rgb(37 99 235);
+  --orange-7: rgb(59 130 246);
+  --orange-8: rgb(96 165 250);
+  --orange-9: rgb(59 130 246);
+  --orange-10: rgb(96 165 250);
+  --orange-11: rgb(147 197 253);
+  --orange-12: rgb(219 234 254);
+}
+
+/* Update semantic tokens for landing page */
+:root {
+  --background: var(--color-gray-50);
+  --foreground: var(--color-gray-800);
+  --card-foreground: var(--color-gray-800);
+  --muted: var(--color-gray-100);
+  --muted-foreground: var(--color-gray-500);
+  --border: var(--color-gray-200);
+  --accent: var(--color-accent-600);
+  --accent-foreground: var(--color-white);
+}
+
+.dark {
+  --background: #111827;
+  --foreground: var(--color-gray-100);
+  --card: var(--color-gray-800);
+  --card-foreground: var(--color-gray-100);
+  --primary: var(--color-orange-500);
+  --muted: var(--color-gray-800);
+  --muted-foreground: var(--color-gray-400);
+  --border: var(--color-gray-700);
+  --accent: var(--color-accent-500);
+  --accent-foreground: var(--color-white);
+}
+
 @layer base {
   body {
-    @apply text-foreground bg-[#F1F1F1];
+    @apply text-foreground bg-gray-50;
+    font-size: 15px;
   }
 
   section,
@@ -16,19 +101,19 @@
   }
 
   section:not(.dark) {
-    @apply bg-[#F1F1F1];
+    @apply bg-gray-50;
   }
 
   h1 {
-    @apply text-4xl md:text-6xl font-bold;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
   }
 
   h2 {
-    @apply text-4xl;
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
   }
 
   h3 {
-    @apply text-2xl;
+    @apply text-lg font-semibold;
   }
 
   h1,
@@ -37,7 +122,7 @@
   h4,
   h5,
   h6 {
-    @apply font-display font-medium;
+    @apply font-display;
   }
 }
 
@@ -89,11 +174,11 @@
     height: 200%;
     background: conic-gradient(
       from 179.91deg at 50% 50%,
-      #ff5924 -72.48deg,
-      #ffd79a 44.64deg,
-      #8f00ff 145.15deg,
-      #ff5924 287.52deg,
-      #ffd79a 404.64deg
+      #2563EB -72.48deg,
+      #7C3AED 44.64deg,
+      #06B6D4 145.15deg,
+      #2563EB 287.52deg,
+      #7C3AED 404.64deg
     );
     opacity: 0.4;
     mix-blend-mode: plus-lighter;

@@ -1,6 +1,6 @@
-import type { z } from "zod";
+import { z } from "zod";
 
-export const getZodInnerSchema = (schema: z.ZodTypeAny): z.ZodTypeAny => {
+export const getZodInnerSchema = (schema: z.ZodType): z.ZodType => {
   if (isZodWrapper(schema)) {
     const innerSchema = getZodInnerSchema(schema.unwrap());
     return mergeLayoutMeta(schema, innerSchema);
@@ -27,7 +27,7 @@ export const getZodInnerSchema = (schema: z.ZodTypeAny): z.ZodTypeAny => {
   return schema;
 };
 
-const mergeLayoutMeta = (source: z.ZodTypeAny, target: z.ZodTypeAny) => {
+const mergeLayoutMeta = (source: z.ZodType, target: z.ZodType) => {
   const layout = source.meta?.()?.layout;
   if (!layout) return target;
   const innerMeta = target.meta?.();
@@ -38,13 +38,13 @@ const mergeLayoutMeta = (source: z.ZodTypeAny, target: z.ZodTypeAny) => {
 };
 
 const isZodWrapper = (
-  schema: z.ZodTypeAny,
+  schema: z.ZodType,
 ): schema is
-  | z.ZodOptional<z.ZodTypeAny>
-  | z.ZodNullable<z.ZodTypeAny>
-  | z.ZodDefault<z.ZodTypeAny>
-  | z.ZodCatch<z.ZodTypeAny>
-  | z.ZodReadonly<z.ZodTypeAny> =>
+  | z.ZodOptional<z.ZodType>
+  | z.ZodNullable<z.ZodType>
+  | z.ZodDefault<z.ZodType>
+  | z.ZodCatch<z.ZodType>
+  | z.ZodReadonly<z.ZodType> =>
   schema.type === "optional" ||
   schema.type === "nullable" ||
   schema.type === "default" ||
@@ -52,12 +52,12 @@ const isZodWrapper = (
   schema.type === "readonly";
 
 const isZodPipe = (
-  schema: z.ZodTypeAny,
-): schema is z.ZodPipe<z.ZodTypeAny, z.ZodTypeAny> => schema.type === "pipe";
+  schema: z.ZodType,
+): schema is z.ZodPipe<z.ZodType, z.ZodType> => schema.type === "pipe";
 
-const isZodLazy = (schema: z.ZodTypeAny): schema is z.ZodLazy<z.ZodTypeAny> =>
+const isZodLazy = (schema: z.ZodType): schema is z.ZodLazy<z.ZodType> =>
   schema.type === "lazy";
 
 const isZodTransform = (
-  schema: z.ZodTypeAny | undefined,
+  schema: z.ZodType | undefined,
 ): schema is z.ZodTransform => schema?.type === "transform";

@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快境 TypeFlow | 专为国内小企业定制的 AI 对话式留资与私域获客 SaaS 系统</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f6ff',
+                            100: '#e0edff',
+                            200: '#bae6fd',
+                            500: '#3B82F6', /* 活泼清新明亮蓝 */
+                            600: '#2563EB',
+                            900: '#1e3a8a',
+                            950: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 渐变文本 */
+        .gradient-text {
+            background: linear-gradient(135deg, #1e293b 30%, #3b82f6 70%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* 浅色细网格背景 */
+        .grid-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.015) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(15, 23, 42, 0.015) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        /* 柔和浅色马卡龙光晕 */
+        .aurora {
+            filter: blur(100px);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        /* 自定义过渡 */
+        .smooth-transition {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        /* 卡片轻投影与悬浮效果 */
+        .glow-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 20px -2px rgba(148, 163, 184, 0.08);
+        }
+        .glow-card:hover {
+            box-shadow: 0 12px 30px -4px rgba(59, 130, 246, 0.12);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        /* FAQ 折叠过渡 */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50/50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- 柔和浅色背景光效 -->
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-sky-200/50 rounded-full aurora"></div>
+    <div class="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-100/60 rounded-full aurora"></div>
+    <div class="absolute top-2/3 left-10 w-[600px] h-[600px] bg-emerald-50/80 rounded-full aurora"></div>
+
+    <!-- 顶部导航栏 -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-100 smooth-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- 品牌 Logo -->
+            <div class="flex items-center space-x-2.5">
+                <div class="w-9 h-9 bg-brand-500 rounded-xl flex items-center justify-center shadow-md shadow-brand-500/10">
+                    <i class="fa-solid fa-comments text-white text-base"></i>
+                </div>
+                <div>
+                    <span class="text-base font-extrabold tracking-tight text-slate-900">快境 <span class="text-brand-500">TypeFlow</span></span>
+                    <span class="block text-[8px] text-slate-400 uppercase tracking-widest font-bold leading-none mt-0.5">轻量获客·私域转化</span>
+                </div>
+            </div>
+
+            <!-- PC 导航链接 -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold text-slate-500">
+                <a href="#features" class="hover:text-brand-500 transition">核心功能</a>
+                <a href="#how-it-works" class="hover:text-brand-500 transition">如何运作</a>
+                <a href="#get-started-flow" class="hover:text-brand-500 transition">使用流程</a>
+                <a href="#calculator" class="hover:text-brand-500 transition">收益测算</a>
+                <a href="#demo" class="hover:text-brand-500 transition">真机模拟</a>
+                <a href="#pricing" class="hover:text-brand-500 transition">极简定价</a>
+                <a href="#faq" class="hover:text-brand-500 transition">常见问题</a>
+            </nav>
+
+            <!-- 右侧操作 -->
+            <div class="flex items-center space-x-3">
+                <a href="#demo" class="hidden sm:inline-flex text-xs font-semibold text-slate-600 hover:text-brand-500 transition">
+                    登录系统
+                </a>
+                <a href="#demo" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-xl transition shadow-sm shadow-brand-500/10 hover:shadow-lg hover:shadow-brand-500/20">
+                    免费注册体验
+                    <i class="fa-solid fa-chevron-right ml-1 text-[9px]"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首屏 Banner 区域 -->
+    <section class="relative pt-12 pb-20 md:pt-16 md:pb-24 grid-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- 左侧广告语与行动呼吁 -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-semibold">
+                        <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                        全面对齐 Typebot 标准 · 国内中小企业专属版
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-snug text-slate-900">
+                        像拼积木一样，<br class="hidden sm:inline">
+                        搭建 <span class="gradient-text">高转化率</span> 的 AI 微信获客留资流
+                    </h1>
+                    <p class="text-sm sm:text-base text-slate-500 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        快境 TypeFlow 完美引入 Typebot 清新视觉构建逻辑。针对国情深度调优，打通<b>微信客服、企微扫码一键唤醒、手机格式验证、无感未完成留资实时捕获</b>。把高成本引来的流量，锁定在您的私域蓄水池。
+                    </p>
+                    
+                    <!-- 行动的纽带 -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3.5 pt-2">
+                        <a href="#demo" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl smooth-transition shadow-md shadow-brand-500/10 hover:shadow-lg hover:shadow-brand-500/20 group text-sm">
+                            零门槛，免费创建第一个对话流
+                            <i class="fa-solid fa-arrow-right ml-1.5 group-hover:translate-x-1 smooth-transition text-xs"></i>
+                        </a>
+                        <a href="#calculator" class="inline-flex items-center justify-center px-6 py-3.5 bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 rounded-xl smooth-transition text-sm shadow-sm">
+                            <i class="fa-solid fa-calculator mr-1.5 text-brand-500"></i>
+                            模拟获客 ROI
+                        </a>
+                    </div>
+
+                    <!-- 信任支持 -->
+                    <div class="pt-6 space-y-2">
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">国内 2000+ 网店商家、本地生活、获客小团队的选择</p>
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-slate-500 text-xs font-medium">
+                            <span><i class="fa-solid fa-shield-halved text-brand-500 mr-1"></i> 全面对齐 Typebot 格式</span>
+                            <span><i class="fa-brands fa-weixin text-emerald-500 mr-1"></i> 企业微信/微信客服官方集成</span>
+                            <span><i class="fa-solid fa-circle-check text-indigo-500 mr-1"></i> 100% 数据本地加密安全</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：【图片留空 1】可视化拖拽画布界面占位器 -->
+                <div class="lg:col-span-6 relative">
+                    <!-- 卡片阴影光效 -->
+                    <div class="absolute -inset-2 bg-gradient-to-r from-brand-100 to-indigo-100 rounded-2xl blur-lg opacity-40"></div>
+                    
+                    <!-- 仿真图片占位器结构 -->
+                    <div class="relative bg-white/90 border-2 border-dashed border-slate-200/80 rounded-2xl shadow-xl overflow-hidden min-h-[420px] flex flex-col justify-between p-6">
+                        <!-- 占位器顶部头 (仿编辑器样式) -->
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3 w-full">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3 h-3 rounded-full bg-slate-200"></span>
+                                <span class="text-[11px] text-slate-400 font-mono">TypeFlow Visual Builder</span>
+                            </div>
+                            <span class="text-[9px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded font-bold">1200 x 850 (推荐尺寸)</span>
+                        </div>
+
+                        <!-- 占位核心引导语 -->
+                        <div class="my-auto text-center space-y-4 px-4 py-8">
+                            <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center mx-auto text-3xl shadow-sm">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                            <div class="space-y-1">
+                                <h4 class="text-sm font-bold text-slate-800">【图片留空 1】TypeFlow 中文可视化拖拽工作流画布截图</h4>
+                                <p class="text-[11px] text-slate-400 max-w-sm mx-auto leading-relaxed">
+                                    这里适合放置：展示拼木拖拽面板、条件连线，以及包含微信客服跳转节点、手机验证输入组件的中文高保真界面截图。
+                                </p>
+                            </div>
+                            <div class="inline-flex gap-2 text-[10px] text-slate-400 bg-slate-50 border border-slate-200/50 px-3 py-1.5 rounded-lg">
+                                <span><i class="fa-solid fa-image mr-1"></i> 推荐 PNG / 静态图</span>
+                                <span>|</span>
+                                <span><i class="fa-solid fa-palette mr-1"></i> 浅色干净风设计风格</span>
+                            </div>
+                        </div>
+
+                        <!-- 占位器底部模拟状态 -->
+                        <div class="bg-slate-50/50 p-2.5 rounded-xl border border-slate-100 flex items-center justify-between text-[11px]">
+                            <span class="text-slate-400">💡 提示：找一张具有多个分支连线，且末端有“企业微信客服分配”图标的精美中文后台截图。</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势与痛点攻克 -->
+    <section id="features" class="py-16 md:py-24 bg-white relative border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- 标题头部 -->
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-brand-500 text-xs font-bold tracking-widest uppercase">
+                    全面解决国内获客流失痛点
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                    告别冰冷生硬的传统表单
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    国内流量成本高，客户点开就走？这里有对齐 Typebot 核心的数据输入区块 and 极其丰富的本土私域闭环积木。
+                </p>
+            </div>
+
+            <!-- 四大优势卡片 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- 卡片 1: 拼图积木区块 -->
+                <div class="glow-card p-6 rounded-2xl smooth-transition">
+                    <div class="w-10 h-10 bg-brand-50 text-brand-500 rounded-xl flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-800 mb-2">拼图式积木库 (Rich Blocks)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        提供文本引导、图片选项、国内手机、微信号、省市区级联选择、文件上传等20余种组件。零门槛通过连线拼接即可上线。
+                    </p>
+                </div>
+
+                <!-- 卡片 2: 无感部分保存 -->
+                <div class="glow-card p-6 rounded-2xl smooth-transition">
+                    <div class="w-10 h-10 bg-indigo-50 text-indigo-500 rounded-xl flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-800 mb-2">流失挽回 (Partial Submissions)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        国内独创！客户在第一步只输入了名字，即使中途关闭落地页，输入的数据也已秒级存盘。您可以直接进行后续跟进。
+                    </p>
+                </div>
+
+                <!-- 卡片 3: 微信客服无缝路由 -->
+                <div class="glow-card p-6 rounded-2xl smooth-transition">
+                    <div class="w-10 h-10 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center text-lg mb-4">
+                        <i class="fa-brands fa-weixin"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-800 mb-2">一键复制与企微拉起</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        内置智能复制逻辑，完美实现“一键拷贝顾问微信号”并同步拉起微信客户端，极大缩短加粉路径。
+                    </p>
+                </div>
+
+                <!-- 卡片 4: 多渠道无缝嵌入 -->
+                <div class="glow-card p-6 rounded-2xl smooth-transition">
+                    <div class="w-10 h-10 bg-amber-50 text-amber-500 rounded-xl flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-800 mb-2">多渠道弹窗与内嵌</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        一键生成代码。支持以气泡、内嵌组件、全屏弹窗形式放入您的网站，或直接与微信小程序、公众号菜单绑定。
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 如何运作 / 核心功能深度拆解 -->
+    <section id="how-it-works" class="py-16 md:py-20 bg-slate-50/20 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-brand-500 text-xs font-bold tracking-widest uppercase">
+                    为降本增效而生
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                    为什么 TypeFlow 转化率明显高于传统表单？
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm">
+                    对齐国内中小企业的真实营销场景，每一个细节均为了帮您挽回流失、省下广告开支。
+                </p>
+            </div>
+
+            <!-- 特色细节 1: 实时部分保存演示 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                <!-- 左侧图片留空占位 2 -->
+                <div class="lg:col-span-6">
+                    <div class="relative bg-white border-2 border-dashed border-slate-200/80 rounded-2xl p-6 min-h-[300px] flex flex-col justify-between">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                            <span class="text-[10px] text-slate-400 font-mono">Real-time Lead Capture Analytics</span>
+                            <span class="text-[9px] bg-slate-100 text-slate-500 px-2 rounded">1000 x 600</span>
+                        </div>
+                        <div class="my-auto text-center space-y-3">
+                            <div class="w-12 h-12 bg-indigo-50 text-indigo-500 rounded-xl flex items-center justify-center mx-auto text-xl shadow-sm">
+                                <i class="fa-solid fa-hourglass-half"></i>
+                            </div>
+                            <h4 class="text-xs font-bold text-slate-800">【图片留空 2】流失步骤分析与“未完成留资”捕获数据表</h4>
+                            <p class="text-[10px] text-slate-400 max-w-sm mx-auto leading-relaxed">
+                                这里适合放置：SaaS 后台的数据统计分析图。可以展示每个提问节点的流失率柱状图，以及正在输入中、未点最后提交就关闭网页的用户的微信号、电话列表。
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-2 rounded-lg text-[10px] text-slate-400">
+                            ⭐ 推荐寻找：中文版的数据漏斗图表、线索收集列表界面。
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧文本 -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="w-8 h-8 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-sm font-bold">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">不再因为中途跳出，错失任何意向线索</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        TypeFlow 继承了 TypeBot 对话式表单的核心优势：通过分步、自然的对话引导，大幅降低用户填写压力，从根源上减少中途跳出。区别于传统表单 “必须提交才算成功” 的逻辑，TypeBot 的每一步交互都在降低用户心理负担，而 TypeFlow 在此基础上，进一步适配国内营销场景，让对话式流程的高转化优势真正落地。
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 实时无感保存已填字段</li>
+                        <li><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 精准诊断并找出让客户感到反感的提问步骤</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 特色细节 2: 内置 AI Agent 对话分支 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- 左侧文本 -->
+                <div class="lg:col-span-6 space-y-4 order-2 lg:order-1">
+                    <div class="w-8 h-8 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center text-sm font-bold">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">直连国产/海外大模型，用 AI Agent 替代高昂的客服人力</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        TypeFlow 基于 TypeBot 原生的大模型集成能力，做了更贴合国内用户的深度优化。TypeBot 支持 OpenAI、Anthropic 等海外大模型，而 TypeFlow 在此之上，新增了国产 AI 模型直连、微信生态适配、中文知识库上传等本土化功能，让企业无需复杂配置，就能用 AI Agent 替代重复客服工作，降低中小商家的人力成本。
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i> 内置 AI 深度学习知识库与 Prompt 配置</li>
+                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i> 实时自动判别无效白嫖党，专为精准线索打标</li>
+                    </ul>
+                </div>
+                <!-- 右侧图片留空占位 3 -->
+                <div class="lg:col-span-6 order-1 lg:order-2">
+                    <div class="relative bg-white border-2 border-dashed border-slate-200/80 rounded-2xl p-6 min-h-[300px] flex flex-col justify-between">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                            <span class="text-[10px] text-slate-400 font-mono">AI Knowledge Base Settings Panel</span>
+                            <span class="text-[9px] bg-slate-100 text-slate-500 px-2 rounded">1000 x 600</span>
+                        </div>
+                        <div class="my-auto text-center space-y-3">
+                            <div class="w-12 h-12 bg-brand-50 text-brand-500 rounded-2xl flex items-center justify-center mx-auto text-xl shadow-sm">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <h4 class="text-xs font-bold text-slate-800">【图片留空 3】AI 智能回复话术设置与中文文档上传后台</h4>
+                            <p class="text-[10px] text-slate-400 max-w-sm mx-auto leading-relaxed">
+                                这里适合放置：展示如何为 AI 机器人喂养企业自己的 Word、PDF、或 FAQ 常见问题，并设置“意图分类”和变量写入的侧边栏截图。
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-2 rounded-lg text-[10px] text-slate-400">
+                            ⭐ 推荐寻找：中文版带有“上传文档/知识库配置”的简洁大模型对话节点后台。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 开始使用流程模块 (对齐图片 1 image_ad4b25.jpg) -->
+    <section id="get-started-flow" class="py-16 md:py-24 bg-slate-50/50 border-t border-slate-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- 标题头部 -->
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+                <span class="text-brand-500 text-xs font-bold tracking-widest uppercase">
+                    SIMPLE THREE STEPS
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                    开始使用 TypeFlow
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    极其简单、开箱即用的配置逻辑，仅需三步即可构建完备的私域留资雷达。
+                </p>
+            </div>
+
+            <!-- 三步法卡片网络 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- 第一步 -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm flex flex-col justify-between smooth-transition hover:shadow-md">
+                    <!-- 上方高拟真图片占位器 (模仿 Sign up) -->
+                    <div class="relative w-full h-44 rounded-xl overflow-hidden bg-gradient-to-tr from-pink-400 via-rose-400 to-pink-500 flex items-center justify-center border border-pink-200">
+                        <!-- 按钮装饰 -->
+                        <div class="px-6 py-2.5 bg-orange-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-orange-500/30 flex items-center gap-1">
+                            <span>Sign up</span>
+                        </div>
+                        <!-- 鼠标手势光标模拟 -->
+                        <div class="absolute bottom-12 right-24 text-slate-900 text-lg drop-shadow">
+                            <i class="fa-solid fa-mouse-pointer animate-bounce"></i>
+                        </div>
+                    </div>
+                    <!-- 下方文本 -->
+                    <div class="mt-6 space-y-2">
+                        <h4 class="text-sm font-bold text-slate-900">第一步</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            创建您的账户并选择套餐——您可以注册无风险试用
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 第二步 -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm flex flex-col justify-between smooth-transition hover:shadow-md">
+                    <!-- 上方高拟真图片占位器 (模仿 Canvas Flow Blocks) -->
+                    <div class="relative w-full h-44 rounded-xl overflow-hidden bg-gradient-to-tr from-slate-950 to-slate-900 flex items-center justify-center p-4 border border-slate-800">
+                        <!-- 简易节点流模块图示 -->
+                        <div class="flex items-center space-x-4 w-full justify-center">
+                            <div class="px-2.5 py-1.5 bg-slate-800 rounded-md border border-slate-700 text-[9px] text-slate-400 font-mono">
+                                💬 Start
+                            </div>
+                            <div class="h-0.5 w-6 bg-brand-500 relative">
+                                <span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-brand-500"></span>
+                            </div>
+                            <div class="px-2.5 py-1.5 bg-brand-500/20 rounded-md border border-brand-500/40 text-[9px] text-brand-400 font-mono">
+                                📱 Phone Verify
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 下方文本 -->
+                    <div class="mt-6 space-y-2">
+                        <h4 class="text-sm font-bold text-slate-900">第二步</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            从我们的库中选择模板，或者从头开始。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 第三步 -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm flex flex-col justify-between smooth-transition hover:shadow-md">
+                    <!-- 上方高拟真图片占位器 (模仿 Publish) -->
+                    <div class="relative w-full h-44 rounded-xl overflow-hidden bg-gradient-to-tr from-purple-500 via-pink-400 to-rose-400 flex items-center justify-center border border-purple-200">
+                        <!-- 按钮装饰 -->
+                        <div class="px-6 py-2.5 bg-orange-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-orange-500/30">
+                            Publish
+                        </div>
+                        <!-- 鼠标手势光标模拟 -->
+                        <div class="absolute bottom-12 right-24 text-slate-900 text-lg drop-shadow">
+                            <i class="fa-solid fa-mouse-pointer animate-bounce"></i>
+                        </div>
+                    </div>
+                    <!-- 下方文本 -->
+                    <div class="mt-6 space-y-2">
+                        <h4 class="text-sm font-bold text-slate-900">第三步</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            实时构建和测试你的聊天内容。准备好发射了吗？只需点击发布即可！
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 收益计算器 -->
+    <section id="calculator" class="py-16 md:py-20 bg-white relative border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- 左侧文本 -->
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-brand-500 text-xs font-bold tracking-widest uppercase">
+                        算算性价比
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                        拒绝虚高开支：<br>
+                        算一算能挽回多少点击损耗？
+                    </h2>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                        国内如腾讯、巨量信息流点击一次可能高达几元甚至几十元。普通的静态网页表单因为加载慢或设计冷冰冰，流失率往往大于 90%。而 TypeFlow 让每一次点击都极富交互生命力。
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 text-[11px] text-slate-500 space-y-1 shadow-sm">
+                        <p>💡 <span class="font-bold text-slate-700">普通静态表单：</span>转化率往往徘徊在 <span class="text-rose-500 font-bold">3% - 5%</span> 左右</p>
+                        <p>💡 <span class="font-bold text-brand-500">快境 TypeFlow：</span>对话式无感流存率最高可至 <span class="text-brand-500 font-bold">20% - 30%</span></p>
+                    </div>
+                </div>
+
+                <!-- 右侧：动态计算器卡片 -->
+                <div class="lg:col-span-7 bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-lg shadow-slate-100/60">
+                    <div class="space-y-6">
+                        
+                        <!-- 变量一：月访问量 -->
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between items-center text-xs font-bold">
+                                <span class="text-slate-600">📅 估算每月广告进站点击量 (UV)</span>
+                                <span class="text-brand-500 font-mono text-sm font-extrabold" id="val-uv">10,000</span>
+                            </div>
+                            <input type="range" id="range-uv" min="1000" max="50000" step="1000" value="10000" oninput="calculateROI()" class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                        </div>
+
+                        <!-- 变量二：平均客单价 -->
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between items-center text-xs font-bold">
+                                <span class="text-slate-600">💰 您的平均产品客单价 (元/RMB)</span>
+                                <span class="text-brand-500 font-mono text-sm font-extrabold" id="val-price">¥ 500</span>
+                            </div>
+                            <input type="range" id="range-price" min="50" max="5000" step="50" value="500" oninput="calculateROI()" class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                        </div>
+
+                        <!-- 转换对比 -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                            
+                            <!-- 传统 -->
+                            <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/50">
+                                <span class="text-[10px] text-slate-400 block mb-1 font-bold">普通落地页表单 (4% 留存)</span>
+                                <div class="text-xs font-bold text-slate-500 font-mono space-y-1">
+                                    <p>获客留资数：<span class="text-slate-700" id="trad-leads">400</span> 个</p>
+                                    <p>预计月度营收：<span class="text-rose-500" id="trad-revenue">¥200,000</span></p>
+                                </div>
+                            </div>
+
+                            <!-- TypeFlow 优化后 -->
+                            <div class="bg-brand-50/30 p-4 rounded-xl border border-brand-100">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] text-brand-600 font-bold">TypeFlow 对话式 (24% 留存)</span>
+                                    <span class="text-[8px] bg-brand-500 text-white font-extrabold px-1 rounded">推荐</span>
+                                </div>
+                                <div class="text-xs font-bold text-slate-600 font-mono space-y-1">
+                                    <p>获客留资数：<span class="text-brand-500" id="flow-leads">2,400</span> 个</p>
+                                    <p>预计月度营收：<span class="text-brand-500" id="flow-revenue">¥1,200,000</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 利润增长气泡 -->
+                        <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/80 flex items-center justify-between text-center sm:text-left flex-col sm:flex-row gap-3">
+                            <div>
+                                <span class="text-[10px] text-slate-400 block font-bold">💡 预计月度额外纯收益增长</span>
+                                <span class="text-xl font-black text-emerald-600 font-mono" id="profit-added">¥ 1,000,000</span>
+                            </div>
+                            <a href="#demo" class="bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs px-4 py-2.5 rounded-xl smooth-transition">
+                                获取免费模板
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 真机模拟沙盒 -->
+    <section id="demo" class="py-16 md:py-24 bg-slate-50/20 border-t border-slate-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+                <span class="text-indigo-500 text-xs font-bold tracking-widest uppercase">
+                    真实沙盒仿真
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                    亲手试一试：体验高转化极速留资
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm">
+                    左侧为您模拟了国内最常见的广告渠道参数注入，右侧则是生成的仿真极简对话流程。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- 左侧：控制参数注入器 (5 cols) -->
+                <div class="lg:col-span-5 flex flex-col space-y-6">
+                    
+                    <div class="bg-slate-50/50 border border-slate-200/80 rounded-2xl p-5 space-y-4">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                            <h3 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                                <i class="fa-solid fa-circle-nodes text-brand-500"></i>
+                                第一步：模拟改变不同的国内推广渠道
+                            </h3>
+                            <span class="text-[9px] text-slate-400 font-mono">Parameters</span>
+                        </div>
+                        
+                        <div class="space-y-3 text-xs">
+                            <div>
+                                <label class="block text-[10px] font-bold text-slate-500 mb-1">广告流量平台 (utm_source)</label>
+                                <select id="demo-source" onchange="syncDemoUrl()" class="w-full text-xs px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 text-slate-700 transition">
+                                    <option value="tencent_ads">腾讯广告 (朋友圈 / 公众号 / 视频号)</option>
+                                    <option value="ocean_engine">巨量引擎 (抖音推广 / 巨量千川)</option>
+                                    <option value="baidu_ads">百度推广 (搜索推广 / 竞价关键词)</option>
+                                    <option value="red_search">小红书信息流 (KOL / 蒲公英获客)</option>
+                                    <option value="direct">Direct (扫码或微信直接访问)</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[10px] font-bold text-slate-500 mb-1">推广形式 (medium)</label>
+                                    <input type="text" id="demo-medium" value="feed" oninput="syncDemoUrl()" class="w-full text-xs px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 text-slate-700 transition">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold text-slate-500 mb-1">计划名称 (campaign)</label>
+                                    <input type="text" id="demo-campaign" value="xiaoxitong_2026" oninput="syncDemoUrl()" class="w-full text-xs px-3 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 text-slate-700 transition">
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-3 rounded-xl border border-slate-200/50 shadow-inner">
+                                <span class="text-[9px] text-slate-400 block mb-0.5 font-bold">🔗 动态捕获并注入对话的落地 URL：</span>
+                                <div class="flex items-center justify-between gap-1.5">
+                                    <span id="demo-url" class="font-mono text-[9px] text-brand-600 truncate select-all">https://ads.kuaijing.cn/typeflow?utm_source=tencent_ads...</span>
+                                    <button onclick="copyDemoUrl()" class="text-slate-400 hover:text-brand-500 transition text-xs" title="复制链接"><i class="fa-regular fa-copy"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 开发者轻量日志 -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex-1 flex flex-col justify-between min-h-[220px] shadow-lg shadow-slate-900/10">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                            <span class="text-xs font-bold text-slate-200 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                TypeFlow 数据流日志分析器
+                            </span>
+                            <button onclick="clearDemoLogs()" class="text-[9px] text-slate-500 hover:text-slate-300">清空</button>
+                        </div>
+                        <div id="demo-terminal" class="flex-1 font-mono text-[10px] text-slate-400 py-3 space-y-2 h-40 overflow-y-auto">
+                            <div class="text-slate-600">[18:15:00] 🔍 TypeFlow 探针就绪，等待注入...</div>
+                            <div class="text-emerald-400">[18:15:01] 成功导入全局 CSS 打字动画分发器。</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 右侧：仿真 AI 对话浮窗组件 (7 cols - 清新柔和白) -->
+                <div class="lg:col-span-7 bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-xl flex flex-col min-h-[480px]">
+                    
+                    <!-- 对话窗口 header -->
+                    <div class="bg-slate-50 px-4 py-3 border-b border-slate-100 flex items-center justify-between">
+                        <div class="flex items-center space-x-2.5">
+                            <div class="relative">
+                                <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white text-xs font-bold">
+                                    <i class="fa-solid fa-comment-dots"></i>
+                                </div>
+                                <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-slate-50"></span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xs text-slate-800 leading-none mb-0.5">在线客服 AI 助理</h3>
+                                <p class="text-[9px] text-slate-400">⚡️ 清新交互 · 专为国内小企业设计</p>
+                            </div>
+                        </div>
+                        <button onclick="resetDemoChat()" class="text-slate-500 hover:text-brand-600 text-xs bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 transition flex items-center gap-1">
+                            <i class="fa-solid fa-rotate-left text-[9px]"></i>
+                            <span>重置</span>
+                        </button>
+                    </div>
+
+                    <!-- 聊天展现窗口 -->
+                    <div id="demo-chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-slate-50/30 min-h-[250px] flex flex-col">
+                        <!-- 动态对话信息 -->
+                    </div>
+
+                    <!-- 输入控制反馈区 -->
+                    <div id="demo-chat-input-area" class="p-3 bg-white border-t border-slate-100 flex flex-col justify-center min-h-[60px]">
+                        <!-- 按钮与输入框交互 -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 价格方案表 -->
+    <section id="pricing" class="py-16 md:py-24 bg-white border-t border-slate-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-brand-500 text-xs font-bold tracking-widest uppercase">
+                    良心透明资费 · 对齐 Typebot 标准
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                    轻松选，灵活搭，随时升级与降级
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm">
+                    每一个套餐均完全公开透明。绝无任何隐性强制付费陷阱。
+                </p>
+            </div>
+
+            <!-- 三个核心并排卡片 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto mb-10">
+                
+                <!-- 1. PERSONAL (FREE) 卡片 -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm relative">
+                    <div class="space-y-6">
+                        <!-- 黑色微缩药丸标签 -->
+                        <div class="flex justify-start">
+                            <span class="bg-slate-900 text-white text-[9px] font-extrabold px-3 py-1 rounded-full uppercase tracking-widest">
+                                PERSONAL
+                            </span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-black text-slate-900 font-sans">Free</h3>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed min-h-[32px]">
+                            极适合小微项目冷启动或开发测试，完全免费体验功能。
+                        </p>
+                        
+                        <!-- 核心勾选功能区 -->
+                        <div class="border-t border-slate-100 pt-6 space-y-3.5 text-xs text-slate-700">
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>无限制创建对话流 (Unlimited typebots)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span><b>200 次/月</b> 免费对话量</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>支持通用平台原生接口集成</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>开放标准 Webhooks 接口</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>支持自定义 CSS 与 Javascript 编写</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>中文文档库支持 & 社区问答</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#demo" class="mt-8 w-full py-3 bg-slate-950 hover:bg-slate-800 text-white font-bold rounded-xl text-xs text-center smooth-transition shadow-sm">
+                        免费开始使用 (Get started)
+                    </a>
+                </div>
+
+                <!-- 2. STARTER 卡片 -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm relative">
+                    <div class="space-y-6">
+                        <!-- 珊瑚橙微缩药丸标签 -->
+                        <div class="flex justify-start">
+                            <span class="bg-[#F97316] text-white text-[9px] font-extrabold px-3 py-1 rounded-full uppercase tracking-widest">
+                                STARTER
+                            </span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-baseline">
+                                <span class="text-3xl font-black text-slate-900 font-sans">¥280</span>
+                                <span class="text-xs text-slate-400 font-semibold ml-1">/ 月 (~$39)</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed min-h-[32px]">
+                            最适合成长中的独立小项目，解锁对话额度与官方水印。
+                        </p>
+                        
+                        <!-- 核心勾选功能区 -->
+                        <div class="border-t border-slate-100 pt-6 space-y-3.5 text-xs text-slate-700">
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>包含 Free 免费版的所有基础功能</span>
+                            </div>
+                            <div class="flex items-start font-semibold">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>包含 <b>2 个</b> 协作席位 (Seats)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span><b>2,000 次/月</b> 核心对话量 (超额仅 ¥70/500次)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>去除快境官方品牌水印 (Branding removed)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>允许用户通过对话框直传文件</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>支持创建多层文件夹管理画布</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>享有工作日 1V1 专属技术客服优先支持</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#demo" class="mt-8 w-full py-3 bg-slate-950 hover:bg-slate-800 text-white font-bold rounded-xl text-xs text-center smooth-transition shadow-sm">
+                        立即订购 (Subscribe now)
+                    </a>
+                </div>
+
+                <!-- 3. PRO 卡片 (最热门，标志性紫色环绕微发光边框) -->
+                <div class="bg-white border-2 border-indigo-400 rounded-3xl p-8 flex flex-col justify-between shadow-lg shadow-indigo-100 relative ring-2 ring-indigo-400/30">
+                    <!-- 最热门 PRO 紫色标签 -->
+                    <div class="absolute -top-3 right-8">
+                        <span class="bg-indigo-50 text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
+                            PRO 推荐
+                        </span>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- 紫色微缩药丸标签 -->
+                        <div class="flex justify-start">
+                            <span class="bg-indigo-50 text-white text-[9px] font-extrabold px-3 py-1 rounded-full uppercase tracking-widest">
+                                PRO
+                            </span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-baseline">
+                                <span class="text-3xl font-black text-slate-900 font-sans">¥640</span>
+                                <span class="text-xs text-indigo-500 font-semibold ml-1">/ 月 (~$89)</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed min-h-[32px]">
+                            极力推荐！支持打通微信私域生态、绑定独立域名，是爆单获客不二之选。
+                        </p>
+                        
+                        <!-- 核心勾选功能区 -->
+                        <div class="border-t border-indigo-100 pt-6 space-y-3.5 text-xs text-slate-700">
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>包含 Starter 起步版的所有核心功能</span>
+                            </div>
+                            <div class="flex items-start font-semibold text-indigo-600">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>包含 <b>5 个</b> 团队席位 (5 seats)</span>
+                            </div>
+                            <div class="flex items-start font-semibold text-indigo-600">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span><b>10,000 次/月</b> 超大对话流量</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>企业微信与微信客服官方直连对接</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>支持绑定自定义独立域名 & SSL (Domains)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>多层深度漏斗转化归因与行为分析 (Analytics)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>全天候 7x24 小时社群极速响应支持</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#demo" class="mt-8 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs text-center smooth-transition shadow-md shadow-indigo-200">
+                        立即升级专业版 (Subscribe now)
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- 4. ENTERPRISE 下方通栏定制卡片 -->
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-10 max-w-6xl mx-auto shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- 左侧：主要信息、介绍与大按钮 -->
+                    <div class="lg:col-span-5 space-y-5">
+                        <h3 class="text-3xl font-black text-slate-950 font-sans tracking-tight">Enterprise</h3>
+                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                            非常适合国内大型品牌商、有极高并发量或需要大规模获取线索、并提供自动化复杂智能客服分配的高要求企业客户。
+                        </p>
+                        <div>
+                            <a href="https://ads.kuaijing.cn" target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-slate-950 hover:bg-slate-800 text-white font-bold rounded-xl text-xs smooth-transition">
+                                联系销售获取报价 (Get a quote)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 右侧：两列网格精美排版的功能点 -->
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>定制超大对话额度与席位上限</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>正式签署具有法律效力的 SLA 服务协议</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>24/7 专属架构师团队技术跟进支持</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>支持企业级 SSO 统一登录与精细权限控制</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>提供专享独占的独立专用 IP 物理地址</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>国内三级等保安全合规与数据双向强加密</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>协助完成定制化系统级安全问卷评估</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-slate-900 mr-2.5 mt-0.5"></i>
+                                <span>支持专享高级接口（如自建CRM）功能开发</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ 折叠组件 -->
+    <section id="faq" class="py-16 md:py-24 bg-slate-50/50 border-t border-slate-100 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+            <!-- 标题头部 -->
+            <div class="text-left mb-10">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                    常见问题
+                </h2>
+            </div>
+
+            <!-- FAQ 折叠问答列表 -->
+            <div class="space-y-3.5">
+                
+                <!-- 问题 1 -->
+                <div class="faq-item bg-white border border-slate-200/60 rounded-xl transition smooth-transition">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-5 py-4 flex items-center justify-between text-slate-800 font-bold text-xs sm:text-sm select-none hover:text-brand-500 transition">
+                        <span>有哪些定价方案？免费套餐包含哪些功能？</span>
+                        <span class="faq-icon transition duration-300 ml-4 shrink-0 text-slate-400">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer px-5 border-t border-slate-50 text-[11px] sm:text-xs text-slate-500 leading-relaxed bg-slate-50/30">
+                        <div class="py-4 space-y-2">
+                            <p>我们提供三种主流的基础定价方案：永久免费版 (Free)、标准起步版 (¥280/月) 和专业增长版 (¥640/月)。此外还有支持深度定制的 Enterprise 套餐。</p>
+                            <p><b>免费版支持：</b>无限制创建对话流画布、200次/月免费对话额度、集成第三方系统、标准 Webhook 回调、允许插入和修改自定义 Javascript/CSS 脚本，以及访问国内中文问答库支持。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题 2 -->
+                <div class="faq-item bg-white border border-slate-200/60 rounded-xl transition smooth-transition">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-5 py-4 flex items-center justify-between text-slate-800 font-bold text-xs sm:text-sm select-none hover:text-brand-500 transition">
+                        <span>将Typebot与我现有的系统和平台整合起来有多容易？</span>
+                        <span class="faq-icon transition duration-300 ml-4 shrink-0 text-slate-400">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer px-5 border-t border-slate-50 text-[11px] sm:text-xs text-slate-500 leading-relaxed bg-slate-50/30">
+                        <div class="py-4 space-y-2">
+                            <p>非常容易。快境 TypeFlow 完全对齐标准原生的 Webhook 和 API，支持通过零代码连接工具（如 Zapier, Make 等）在几分钟内与您的自建后端、CRM 或表格应用对接。</p>
+                            <p>我们同时深度集成国内本土私域生态，提供<b>企业微信、官方微信客服、小程序跳转的一键呼出</b>，只需复制一段超轻量级的 Javascript SDK 到您的任意网页即可渲染上线。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题 3 -->
+                <div class="faq-item bg-white border border-slate-200/60 rounded-xl transition smooth-transition">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-5 py-4 flex items-center justify-between text-slate-800 font-bold text-xs sm:text-sm select-none hover:text-brand-500 transition">
+                        <span>Typebot 提供哪些 AI 和机器学习功能？</span>
+                        <span class="faq-icon transition duration-300 ml-4 shrink-0 text-slate-400">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer px-5 border-t border-slate-50 text-[11px] sm:text-xs text-slate-500 leading-relaxed bg-slate-50/30">
+                        <div class="py-4 space-y-2">
+                            <p>我们内置了主流的大语言模型 (LLM) 和 AI 开发积木。支持一键集成 <b>Gemini、OpenAI 节点</b>，允许将多轮对话托管给 AI 模型。</p>
+                            <p>AI 模块允许您自由编写 System Prompt 设定角色、上传本地文档（知识库 PDF/TXT），实现自动分类用户意图并提取关键变量（如姓名、意向、手机号），彻底免除枯燥复杂的传统规则配置。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题 4 -->
+                <div class="faq-item bg-white border border-slate-200/60 rounded-xl transition smooth-transition">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-5 py-4 flex items-center justify-between text-slate-800 font-bold text-xs sm:text-sm select-none hover:text-brand-500 transition">
+                        <span>如果我遇到问题或需要帮助，有哪些支持和资源可用？</span>
+                        <span class="faq-icon transition duration-300 ml-4 shrink-0 text-slate-400">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer px-5 border-t border-slate-50 text-[11px] sm:text-xs text-slate-500 leading-relaxed bg-slate-50/30">
+                        <div class="py-4 space-y-2">
+                            <p>对于不同档位的用户，我们提供全方位的中文本地支持：</p>
+                            <p><b>免费版/新用户：</b>提供全面的中文详细配置文档、使用手册以及在线问答技术社区；</p>
+                            <p><b>付费版/高潜用户：</b>享有工作日优先邮件支持，而 <b>PRO 套餐</b>更提供专属社群 7x24 快速通道支持；Enterprise 级别直接配备大客户专属架构师。有任何关于代码集成、私域唤起、广告转化的问题均可获得即时解答。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题 5 -->
+                <div class="faq-item bg-white border border-slate-200/60 rounded-xl transition smooth-transition">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-5 py-4 flex items-center justify-between text-slate-800 font-bold text-xs sm:text-sm select-none hover:text-brand-500 transition">
+                        <span>Typebot 的安全性如何？你们是如何处理数据隐私的？</span>
+                        <span class="faq-icon transition duration-300 ml-4 shrink-0 text-slate-400">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer px-5 border-t border-slate-50 text-[11px] sm:text-xs text-slate-500 leading-relaxed bg-slate-50/30">
+                        <div class="py-4 space-y-2">
+                            <p>数据安全与合规是我们的基石。快境 TypeFlow 全站使用 HTTPS 加密，对话数据存储于国内高安全、多可用区的数据云物理服务器，并进行高级 TLS 1.3 双向动态传输加密保护。</p>
+                            <p>我们完全符合海外严格的 <b>GDPR 用户隐私保护条例</b> 规范，同时也针对国内中小企业客户定制了最省心、合规的数据脱敏安全审计，确保您收集到的微信号 and 手机号绝不泄露。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 客户评价 瀑布流反馈墙 -->
+    <section id="testimonials" class="py-16 md:py-24 bg-white relative border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- 标题头部 -->
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-brand-500 text-xs font-bold tracking-widest uppercase">
+                    USER SUCCESS STORIES
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                    听听他们怎么说
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    加入 2,000+ 已通过 TypeFlow 对话流将加粉和询盘率拉爆的国内中小团队。
+                </p>
+            </div>
+
+            <!-- 评价网格 (瀑布流卡片) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- 评价 1 -->
+                <div class="glow-card p-6 rounded-2xl smooth-transition space-y-4 flex flex-col justify-between">
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        “以前抖音和视频号引流，在落地页放静态表单，一天进几百人只有几个留电话的，还经常有空号。换上快境 TypeFlow 极简对话流后，<b>第一步输入姓名就自动部分提交</b>，漏斗损耗降低超 60%，获客微信加粉率直接狂飙！”
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-slate-50">
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-xs font-extrabold text-brand-500">
+                            陈
+                        </div>
+                        <div>
+                            <h5 class="text-xs font-bold text-slate-800">陈经理</h5>
+                            <span class="text-[10px] text-slate-400">某潮牌男装跨境/电商负责人</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评价 2 -->
+                <div class="glow-card p-6 rounded-2xl smooth-transition space-y-4 flex flex-col justify-between">
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        “作为独立小产品开发者，平时夜间有大量用户咨询，人工客服根本忙不过来。使用了快境 TypeFlow，<b>内置 Gemini AI 知识库</b>能 24 小时精准作答，不仅转化好几个大定单，一键复制微信拉起的交互也帮我们省去了大量截图教育流程。”
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-slate-50">
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-xs font-extrabold text-brand-500">
+                            阿
+                        </div>
+                        <div>
+                            <h5 class="text-xs font-bold text-slate-800">阿杰</h5>
+                            <span class="text-[10px] text-slate-400">SaaS 独立开发者 / 个人创业者</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评价 3 -->
+                <div class="glow-card p-6 rounded-2xl smooth-transition space-y-4 flex flex-col justify-between">
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        “我们做本地生活同城配送的。客户以前最嫌烦琐填表。TypeFlow 马卡龙浅色交互太舒服了，客户跟朋友聊天一样就留下了地址和手机。数据还能<b>秒级推送到我们飞书表格分配销售</b>，完美对齐我们的整个私域跟进流程。”
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-slate-50">
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-xs font-extrabold text-brand-500">
+                            林
+                        </div>
+                        <div>
+                            <h5 class="text-xs font-bold text-slate-800">林雨轩</h5>
+                            <span class="text-[10px] text-slate-400">本地生鲜连锁私域运营总监</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 清新简洁的尾部 -->
+    <footer class="bg-slate-50 border-t border-slate-200/60 text-slate-500 py-12 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+            
+            <div class="space-y-3">
+                <div class="flex items-center space-x-2">
+                    <div class="w-7 h-7 bg-brand-500 rounded-lg flex items-center justify-center text-white text-xs">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <span class="text-xs font-bold text-slate-800">快境 TypeFlow</span>
+                </div>
+                <p class="text-slate-400 leading-relaxed text-[11px]">
+                    属于快境营销智能触达获客生态圈。通过温馨柔和的 AI 气泡对话替代冰冷表单，为小企业和电商小商户解决广告获客转化难题。
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-2.5">转化功能</h4>
+                <ul class="space-y-1.5 text-[11px] text-slate-400">
+                    <li><a href="#features" class="hover:text-slate-600 transition">未提交无感部分保存</a></li>
+                    <li><a href="#features" class="hover:text-slate-600 transition">企业微信一键拉起</a></li>
+                    <li><a href="#features" class="hover:text-slate-600 transition">手机号码格式智能核查</a></li>
+                    <li><a href="#features" class="hover:text-slate-600 transition">国内 BGP 多线边缘加速</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-2.5">好用工具</h4>
+                <ul class="space-y-1.5 text-[11px] text-slate-400">
+                    <li><a href="#calculator" class="hover:text-slate-600 transition">动态 ROI 收益计算器</a></li>
+                    <li><a href="#demo" class="hover:text-slate-600 transition">TypeFlow 沙盒在线仿真</a></li>
+                    <li><a href="https://ads.kuaijing.cn" target="_blank" class="hover:text-slate-600 transition">快境营销主站</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-2.5">数据安全</h4>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    全站及对话信息均基于国内多可用区、HTTPS/TLS 1.3 级强加密进行安全存储。100% 确保您私域线索数据的私密安全性。
+                </p>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200/50 pt-6 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-400 gap-4">
+            <p>&copy; 2026 快境 TypeFlow 科技. 基于国内中小企业营销转化场景设计研发.</p>
+            <div class="flex space-x-4 text-[10px]">
+                <a href="https://ads.kuaijing.cn" target="_blank" class="hover:text-slate-600">服务条款</a>
+                <a href="https://ads.kuaijing.cn" target="_blank" class="hover:text-slate-600">隐私声明</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 微信一键拉起模拟弹窗 -->
+    <div id="demo-wechat-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 max-w-xs w-full mx-4 shadow-2xl text-center space-y-4">
+            <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center mx-auto text-emerald-500 text-2xl">
+                <i class="fa-brands fa-weixin"></i>
+            </div>
+            <div class="space-y-1">
+                <h3 class="text-sm font-bold text-slate-900">成功尝试拉起微信</h3>
+                <p class="text-[11px] text-slate-400">专属顾问微信号已拷贝至您的剪切板</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 font-mono text-xs font-bold text-brand-600 select-all flex items-center justify-between">
+                <span id="demo-modal-wechat-id">TypeFlow_VIP_998</span>
+                <span class="text-[9px] bg-brand-500 text-white font-extrabold px-1.5 py-0.5 rounded">已复制</span>
+            </div>
+            <div class="text-[10px] text-slate-400 text-left bg-emerald-50/40 p-3 rounded-xl border border-emerald-100/50 leading-relaxed">
+                💡 <span class="font-bold text-emerald-800">下一步指引：</span> 微信客户端已为您在后台唤醒。请进入微信搜索框，<strong>长按粘贴微信号</strong>即可直接添加专属顾问，免费领取《专属获客增倍方案》！
+            </div>
+            <button onclick="closeDemoWechatModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white py-2.5 rounded-xl font-bold text-xs smooth-transition">
+                知道了，前往添加
+            </button>
+        </div>
+    </div>
+
+    <!-- 复制成功的 Toast 轻反馈 -->
+    <div id="demo-toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[11px] px-4 py-2.5 rounded-full shadow-lg font-bold z-50 pointer-events-none opacity-0 transform translate-y-2 transition-all duration-300 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="demo-toast-text">微信号复制成功！</span>
+    </div>
+
+    <!-- 交互驱动 JavaScript 控制代码 -->
+    <script>
+        // FAQ 折叠交互控制
+        function toggleFaq(button) {
+            const currentItem = button.parentElement;
+            const isActive = currentItem.classList.contains('active');
+
+            // 切换当前点击项
+            if (isActive) {
+                currentItem.classList.remove('active');
+            } else {
+                currentItem.classList.add('active');
+            }
+        }
+
+        // 1. ROI 计算器算法
+        function calculateROI() {
+            const uv = parseInt(document.getElementById('range-uv').value);
+            const price = parseInt(document.getElementById('range-price').value);
+
+            // 变量回显
+            document.getElementById('val-uv').innerText = uv.toLocaleString();
+            document.getElementById('val-price').innerText = "¥ " + price.toLocaleString();
+
+            const tradConvRate = 0.04;
+            const flowConvRate = 0.24;
+
+            const tradLeads = Math.round(uv * tradConvRate);
+            const flowLeads = Math.round(uv * flowConvRate);
+
+            const tradRev = tradLeads * price;
+            const flowRev = flowLeads * price;
+            const netAdded = flowRev - tradRev;
+
+            document.getElementById('trad-leads').innerText = tradLeads.toLocaleString();
+            document.getElementById('flow-leads').innerText = flowLeads.toLocaleString();
+            document.getElementById('trad-revenue').innerText = "¥" + tradRev.toLocaleString();
+            document.getElementById('flow-revenue').innerText = "¥" + flowRev.toLocaleString();
+            document.getElementById('profit-added').innerText = "¥ " + netAdded.toLocaleString();
+        }
+
+        // 2. 仿真沙盒模型控制 (改为腾讯、巨量、百度等国内渠道)
+        let demoUtmParams = {
+            utm_source: 'tencent_ads',
+            utm_medium: 'feed',
+            utm_campaign: 'xiaoxitong_2026'
+        };
+
+        let demoUserLead = {
+            name: '',
+            phone: '',
+            intent: '',
+            assignedWechat: 'TypeFlow_SaaS_99'
+        };
+
+        // 动态拼装展示链接
+        function syncDemoUrl() {
+            demoUtmParams.utm_source = document.getElementById('demo-source').value;
+            demoUtmParams.utm_medium = document.getElementById('demo-medium').value;
+            demoUtmParams.utm_campaign = document.getElementById('demo-campaign').value;
+
+            const fullUrl = `https://ads.kuaijing.cn/typeflow?utm_source=${demoUtmParams.utm_source}&utm_medium=${demoUtmParams.utm_medium}&utm_campaign=${demoUtmParams.utm_campaign}`;
+            document.getElementById('demo-url').innerText = fullUrl;
+
+            logDemoEvent(`发现流量变量转移。已成功捕捉渠道参数：[${demoUtmParams.utm_source}]`);
+        }
+
+        // 复制代码到剪切板
+        function copyDemoUrl() {
+            const val = document.getElementById('demo-url').innerText;
+            navigator.clipboard.writeText(val).then(() => {
+                showDemoToast("🔗 注入链接已拷贝到粘贴板！");
+            });
+        }
+
+        // 仿真沙盒开发者黑屏日志
+        function logDemoEvent(msg, type = 'info') {
+            const terminal = document.getElementById('demo-terminal');
+            const now = new Date();
+            const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+            
+            let color = 'text-slate-400';
+            if (type === 'success') color = 'text-emerald-400 font-semibold';
+            if (type === 'api') color = 'text-sky-400';
+            if (type === 'warn') color = 'text-amber-500';
+
+            const line = document.createElement('div');
+            line.className = color;
+            line.innerHTML = `<span class="text-slate-600">[${timeStr}]</span> ${msg}`;
+            terminal.appendChild(line);
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function clearDemoLogs() {
+            document.getElementById('demo-terminal').innerHTML = '<div class="text-slate-600">[系统就绪] 请在上方切换或运行对话流，在此处读取分析。</div>';
+            showDemoToast("日志已清空");
+        }
+
+        function showDemoToast(msg) {
+            const toast = document.getElementById('demo-toast');
+            document.getElementById('demo-toast-text').innerText = msg;
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0) translateX(-50%)';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(10px) translateX(-50%)';
+            }, 3000);
+        }
+
+        // 3. 对话渲染内核 (国内本地痛点设定)
+        const demoChatMessages = document.getElementById('demo-chat-messages');
+        const demoInputArea = document.getElementById('demo-chat-input-area');
+
+        function showDemoTyping() {
+            const html = `
+                <div id="demo-typing" class="flex items-start space-x-2.5">
+                    <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white text-xs font-bold shrink-0">
+                        <i class="fa-solid fa-comment-dots animate-pulse"></i>
+                    </div>
+                    <div class="bg-white border border-slate-200/80 text-slate-300 px-3.5 py-2.5 rounded-2xl rounded-tl-none flex items-center space-x-1 shadow-sm">
+                        <span class="w-1.5 h-1.5 bg-slate-400 rounded-full typing-dot"></span>
+                        <span class="w-1.5 h-1.5 bg-slate-400 rounded-full typing-dot"></span>
+                        <span class="w-1.5 h-1.5 bg-slate-400 rounded-full typing-dot"></span>
+                    </div>
+                </div>
+            `;
+            demoChatMessages.insertAdjacentHTML('beforeend', html);
+            demoChatMessages.scrollTop = demoChatMessages.scrollHeight;
+        }
+
+        function removeDemoTyping() {
+            const el = document.getElementById('demo-typing');
+            if (el) el.remove();
+        }
+
+        function appendDemoBot(text, card = '') {
+            const html = `
+                <div class="flex items-start space-x-2.5">
+                    <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                    <div class="bg-white border border-slate-200/80 text-slate-700 px-3.5 py-2.5 rounded-2xl rounded-tl-none text-xs leading-relaxed max-w-[85%] shadow-sm space-y-2">
+                        <p>${text}</p>
+                        ${card ? `<div class="mt-2 p-2 bg-slate-50 border border-slate-100 rounded-lg text-[10px] text-slate-400">${card}</div>` : ''}
+                    </div>
+                </div>
+            `;
+            demoChatMessages.insertAdjacentHTML('beforeend', html);
+            demoChatMessages.scrollTop = demoChatMessages.scrollHeight;
+        }
+
+        function appendDemoUser(text) {
+            const html = `
+                <div class="flex items-start justify-end space-x-2.5">
+                    <div class="bg-brand-500 text-white px-3.5 py-2.5 rounded-2xl rounded-tr-none text-xs leading-relaxed max-w-[85%] shadow-md shadow-brand-500/10">
+                        <p>${text}</p>
+                    </div>
+                </div>
+            `;
+            demoChatMessages.insertAdjacentHTML('beforeend', html);
+            demoChatMessages.scrollTop = demoChatMessages.scrollHeight;
+        }
+
+        function resetDemoChat() {
+            demoChatMessages.innerHTML = '';
+            demoInputArea.innerHTML = '';
+            demoUserLead = { name: '', phone: '', intent: '', assignedWechat: 'TypeFlow_SaaS_99' };
+            logDemoEvent("🧹 沙盒交互环境已重置！");
+            runDemoFlow();
+        }
+
+        function runDemoFlow() {
+            showDemoTyping();
+            setTimeout(() => {
+                removeDemoTyping();
+
+                const nameMap = {
+                    'tencent_ads': '腾讯社交朋友圈广告',
+                    'ocean_engine': '抖音/巨量引擎推广信息流',
+                    'baidu_ads': '百度搜索竞价推荐',
+                    'red_search': '小红书种草精准搜索',
+                    'direct': '微信直接访问/朋友圈分享'
+                };
+                const sourceText = nameMap[demoUtmParams.utm_source] || '快境营销渠道';
+                logDemoEvent(`[智能欢迎] 自动感应客户进站渠道：【${sourceText}】`);
+
+                appendDemoBot(`您好！发现您是从 <b>${sourceText}</b> 点击咨询的。我是您的数字化转型获客助手。<br><br>在过去 30 天，我们成功帮助 100+ 家本地商户、小企业降低了 45% 的点击流失，并提升了 6.2 倍的企微加粉量。<br><br><b>在广告获客上，您目前面临的最大痛点是什么？</b>`);
+
+                // 选项
+                const html = `
+                    <div class="flex flex-col space-y-1.5 w-full text-xs">
+                        <button onclick="selectDemoPain('A', '国内点击单价越来越高，加微信/拨打电话的转化率很低')" class="w-full text-left px-3 py-2.5 bg-slate-50 hover:bg-slate-100 text-brand-600 rounded-xl border border-slate-200 transition flex items-center justify-between">
+                            <span>A. 推广点击单价贵，获客转化极低</span>
+                            <i class="fa-solid fa-chevron-right text-[8px] text-slate-400"></i>
+                        </button>
+                        <button onclick="selectDemoPain('B', '客户填完表单经常联系不上、电话空号或乱填，损耗极大')" class="w-full text-left px-3 py-2.5 bg-slate-50 hover:bg-slate-100 text-brand-600 rounded-xl border border-slate-200 transition flex items-center justify-between">
+                            <span>B. 销售跟进流失大，虚假电话号码多</span>
+                            <i class="fa-solid fa-chevron-right text-[8px] text-slate-400"></i>
+                        </button>
+                    </div>
+                `;
+                demoInputArea.innerHTML = html;
+            }, 600);
+        }
+
+        function selectDemoPain(code, text) {
+            appendDemoUser(text);
+            demoInputArea.innerHTML = '';
+            demoUserLead.intent = code;
+            logDemoEvent(`[意图标签] 归因归类此用户的痛点为：【国内典型场景 ${code}】`, 'success');
+
+            showDemoTyping();
+            setTimeout(() => {
+                removeDemoTyping();
+
+                let reply = '';
+                if (code === 'A') {
+                    reply = `<b>确实！点击成本太贵，而生硬的静态广告页面最容易被无情关闭。</b><br><br>快境 TypeFlow 重构版能够让每一级选项进行静默部分提交。即便客户中途流失，之前输入的手机号等数据也能实时保存入库，直接为企业止损。`;
+                } else {
+                    reply = `<b>这是典型痛点：很多客户习惯乱填表单或者由于销售跟进太慢而反悔。</b><br><br>我们提供手机号段格式验证、一键呼出企业微信客服。让客户无缝添加销售微信，将留资用户秒级沉淀在您的私域，避免无效号码浪费精力。`;
+                }
+
+                appendDemoBot(reply);
+                askDemoName();
+            }, 800);
+        }
+
+        function askDemoName() {
+            showDemoTyping();
+            setTimeout(() => {
+                removeDemoTyping();
+                appendDemoBot(`为方便系统调取您对应行业的方案报告，请问怎么称呼您呢？`);
+
+                const html = `
+                    <div class="flex items-center space-x-2 w-full text-xs">
+                        <input type="text" id="demoin-name" placeholder="您的称呼 (如: 陈经理)" class="flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 text-slate-700">
+                        <button onclick="submitDemoName()" class="bg-brand-500 hover:bg-brand-600 text-white font-bold px-4 py-2 rounded-lg transition">确认</button>
+                    </div>
+                `;
+                demoInputArea.innerHTML = html;
+                document.getElementById('demoin-name').focus();
+            }, 600);
+        }
+
+        // 提交姓名并模拟暂存
+        function submitDemoName() {
+            const name = document.getElementById('demoin-name').value.trim();
+            if (!name) return;
+            demoUserLead.name = name;
+            appendDemoUser(`在下：${name}`);
+            demoInputArea.innerHTML = '';
+            
+            // 写入日志
+            logDemoEvent(`[无感部分暂存] 已提前记录字段：【姓名 = ${name}】。即便用户现在关闭页面，此数据也不会流失！`, 'warn');
+
+            askDemoPhone();
+        }
+
+        function askDemoPhone() {
+            showDemoTyping();
+            setTimeout(() => {
+                removeDemoTyping();
+                appendDemoBot(`谢谢，${demoUserLead.name}。最后请留下您的<b>微信或手机号</b>，系统分配的获客顾问老师会将定制化的《小企业获客破局方案》直接微信发给您：`);
+
+                const html = `
+                    <div class="flex flex-col space-y-2 w-full text-xs">
+                        <div class="flex items-center space-x-2">
+                            <input type="text" id="demoin-phone" placeholder="微信号或11位手机号" class="flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 text-slate-700">
+                            <button onclick="submitDemoPhone()" class="bg-brand-500 hover:bg-brand-600 text-white font-bold px-4 py-2 rounded-lg transition">完成并提交</button>
+                        </div>
+                    </div>
+                `;
+                demoInputArea.innerHTML = html;
+                document.getElementById('demoin-phone').focus();
+            }, 600);
+        }
+
+        function submitDemoPhone() {
+            const phone = document.getElementById('demoin-phone').value.trim();
+            if (!phone) return;
+            demoUserLead.phone = phone;
+            appendDemoUser(`联系方式：${phone}`);
+            demoInputArea.innerHTML = '';
+
+            triggerWebhookDemo();
+        }
+
+        function triggerWebhookDemo() {
+            showDemoTyping();
+            logDemoEvent(`[触发国内 Webhook] 将归因数据 and 联系方式秒级投递至企业后端...`, 'api');
+
+            const payload = {
+                "event": "domestic_typeflow_conversion",
+                "timestamp": Math.floor(Date.now() / 1000),
+                "data": {
+                    "lead_name": demoUserLead.name,
+                    "lead_phone": demoUserLead.phone,
+                    "intent": demoUserLead.intent
+                },
+                "attribution": {
+                    "utm_source": demoUtmParams.utm_source,
+                    "utm_medium": demoUtmParams.utm_medium,
+                    "utm_campaign": demoUtmParams.utm_campaign
+                }
+            };
+
+            setTimeout(() => {
+                logDemoEvent(`⚡️ 接口响应成功 (HTTP 200 OK)! 线索已同步入库！`, 'success');
+                logDemoEvent(`发送载荷: \n${JSON.stringify(payload, null, 2)}`, 'api');
+
+                removeDemoTyping();
+
+                const serviceWechat = "kuaijing_SaaS_service";
+                demoUserLead.assignedWechat = serviceWechat;
+
+                appendDemoBot(`<b>恭喜您，${demoUserLead.name}！专属对接顾问分配成功！</b><br><br>系统已为您秒级智能分配了我们官方大客户顾问。您可以点击下方按钮一键复制微信号并直接拉起微信添加，即刻领取解决方案：`, `
+                    <div class="text-center py-2 bg-slate-50 border border-slate-100 rounded-xl space-y-1 text-[10px] text-slate-400">
+                        <span>分配顾问微信号</span>
+                        <p class="text-xs font-bold font-mono text-brand-500 bg-white border border-slate-200 px-2.5 py-0.5 rounded inline-block select-all">${serviceWechat}</p>
+                    </div>
+                `);
+
+                const html = `
+                    <button onclick="executeRedirect('${serviceWechat}')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-1.5 shadow-md shadow-emerald-500/10">
+                        <i class="fa-brands fa-weixin text-sm"></i>
+                        <span>一键复制并唤醒微信</span>
+                    </button>
+                `;
+                demoInputArea.innerHTML = html;
+
+            }, 1000);
+        }
+
+        function executeRedirect(wechatId) {
+            const el = document.createElement('input');
+            el.value = wechatId;
+            document.body.appendChild(el);
+            el.select();
+            try {
+                document.execCommand('copy');
+                logDemoEvent(`[剪贴板成功] 微信：[${wechatId}] 已经写入用户剪切板。`, 'success');
+                showDemoToast("微信号复制成功！");
+                
+                setTimeout(() => {
+                    document.getElementById('demo-modal-wechat-id').innerText = wechatId;
+                    document.getElementById('demo-wechat-modal').classList.remove('hidden');
+                    logDemoEvent(`[微信重定向] 已尝试向操作系统发出唤醒指令: weixin://`, 'warn');
+                }, 600);
+            } catch(e) {
+                showDemoToast("复制失败");
+            } finally {
+                document.body.removeChild(el);
+            }
+        }
+
+        function closeDemoWechatModal() {
+            document.getElementById('demo-wechat-modal').classList.add('hidden');
+        }
+
+        window.onload = function() {
+            calculateROI();
+            syncDemoUrl();
+            runDemoFlow();
+        };
+    </script>
+</body>
+</html>

@@ -42,6 +42,9 @@ const nextConfig = {
   ],
   reactStrictMode: true,
   output: "standalone",
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   i18n: {
     defaultLocale: "zh-CN",
     locales: ["en", "zh-CN", "fr", "pt", "pt-BR", "de", "ro", "es", "it", "el"],

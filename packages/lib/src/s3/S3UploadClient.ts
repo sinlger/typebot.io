@@ -45,6 +45,9 @@ export class S3UploadClient extends ServiceMap.Service<
       const ssl = yield* Config.boolean("S3_SSL").pipe(
         Config.withDefault(true),
       );
+      const pathStyle = yield* Config.boolean("S3_PATH_STYLE").pipe(
+        Config.withDefault(true),
+      );
       const bucket = yield* Config.string("S3_BUCKET");
       const port = Option.isSome(portOption) ? portOption.value : undefined;
 
@@ -55,6 +58,7 @@ export class S3UploadClient extends ServiceMap.Service<
         accessKey,
         secretKey: Redacted.value(secretKey),
         region,
+        pathStyle,
       });
 
       const uploadObject = Effect.fn("S3UploadClient.uploadObject")(function* ({

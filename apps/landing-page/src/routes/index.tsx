@@ -1,80 +1,104 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Badge } from "@typebot.io/ui/components/Badge";
-import { ChatIcon } from "@typebot.io/ui/icons/ChatIcon";
 import { CustomerSupportIcon } from "@typebot.io/ui/icons/CustomerSupportIcon";
 import { FilterIcon } from "@typebot.io/ui/icons/FilterIcon";
-import { GridViewIcon } from "@typebot.io/ui/icons/GridViewIcon";
 import { HeadphonesIcon } from "@typebot.io/ui/icons/HeadphonesIcon";
 import { Image02Icon } from "@typebot.io/ui/icons/Image02Icon";
 import { LayoutBottomIcon } from "@typebot.io/ui/icons/LayoutBottomIcon";
 import { Megaphone03Icon } from "@typebot.io/ui/icons/Megaphone03Icon";
 import { SparklesIcon } from "@typebot.io/ui/icons/SparklesIcon";
-import { UsersIcon } from "@typebot.io/ui/icons/UsersIcon";
 import { WebhookIcon } from "@typebot.io/ui/icons/WebhookIcon";
-import { cn } from "@typebot.io/ui/lib/cn";
 import type { ComponentType } from "react";
 import { Section } from "@/components/Section";
+import { Cta } from "@/components/cta/Cta";
 import { ButtonLink, CtaButtonLink, TextLink } from "@/components/link";
-import { discordUrl, docsUrl, githubRepoUrl, registerUrl } from "@/constants";
+import {
+  discordUrl,
+  docsUrl,
+  githubRepoUrl,
+  registerUrl,
+} from "@/constants";
+import { SectionLead } from "@/features/homepage/SectionLead";
 import { Companies } from "@/features/homepage/companies/components/Companies";
+import { Faq } from "@/features/homepage/components/Faq";
 import { ForEveryDepartment } from "@/features/homepage/departments/ForEveryDepartment";
 import { MainFeatures } from "@/features/homepage/main-features/MainFeatures";
 import { Testimonials } from "@/features/homepage/testimonials/Testimonials";
 import { createMetaTags } from "@/lib/createMetaTags";
 
+// ── Hero ──────────────────────────────────────────────────────────────
+
 const heroBadges = ["AI 获客", "线索转化", "自动化交付"];
 
 const heroMetrics = [
+  { value: "200 万+", label: "月均对话处理量" },
+  { value: "15 万+", label: "已创建对话机器人" },
+  { value: "3,000+", label: "Discord 社区成员" },
+  { value: "650+", label: "企业客户信赖" },
+];
+
+// ── Pain Points & Solutions ──────────────────────────────────────────
+
+const painPoints = [
   {
-    value: "10 分钟",
-    label: "搭起第一个对话流程",
+    problem: "表单转化率不足 2%，流量白白流失",
+    detail: "传统静态表单让用户望而却步，填写意愿逐年下降，大量广告预算被浪费。",
   },
   {
-    value: "多渠道",
-    label: "网站、飞书、微信 与嵌入式表单",
+    problem: "人工客服成本居高不下，响应速度跟不上",
+    detail: "重复性问题占据客服 60% 的时间，团队难以规模化支撑业务增长。",
   },
   {
-    value: "可扩展",
-    label: "API、Webhook、独立部署",
+    problem: "营销工具与业务系统割裂，数据孤岛难打通",
+    detail: "获客数据散落在不同工具中，无法形成统一视图，营销 ROI 难以衡量。",
   },
 ];
 
-const capabilityColumns = [
+const solutions = [
+  {
+    solution: "对话式体验将转化率提升至 40%+",
+    detail:
+      "用自然的一对一对话代替死板表单，用户参与意愿显著提高，留资率翻倍。",
+  },
+  {
+    solution: "7×24 小时 AI 自动应答，降低 50% 人工投入",
+    detail:
+      "常见问题由 AI 自动处理，客服团队聚焦高价值服务，响应速度从小时级降到秒级。",
+  },
+  {
+    solution: "Webhook + API 一键打通 CRM 与自动化流程",
+    detail:
+      "对话数据实时同步至 CRM、表格与企业系统，打通从获客到成交的完整链路。",
+  },
+];
+
+// ── Core Capabilities ────────────────────────────────────────────────
+
+const capabilities = [
   {
     title: "营销获客",
-    description: "把广告、内容、社媒和官网入口统一成可追踪的转化路径。",
-    items: ["嵌入咨询与留资", "活动报名收集"],
-    imageLabel: "营销场景图",
-    imageHint: "投放页与对话式留资组合展示",
+    description:
+      "把广告投放、内容营销和社交流量统一转化为可追踪的对话线索，实时衡量每个渠道的转化效果。",
+    features: ["智能留资表单", "活动报名收集", "广告落地页承接"],
     icon: Megaphone03Icon,
-    link: {
-      type: "internal",
-      label: "查看模板库",
-      to: "/templates",
-    },
+    link: { type: "internal" as const, label: "查看模板库", to: "/templates" as const },
   },
   {
     title: "销售转化",
-    description: "用分支逻辑自动筛选客户，把更高质量的线索送进团队。",
-    items: ["自动资格判断", "预约演示分流"],
-    imageLabel: "销售流程图",
-    imageHint: "筛选、分流与 CRM 同步路径",
+    description:
+      "通过分支逻辑自动筛选高意向线索，减少销售团队无效跟进时间，只把高质量商机送入 CRM。",
+    features: ["自动线索评分", "预约演示分流", "CRM 双向同步"],
     icon: FilterIcon,
-    link: {
-      type: "external",
-      label: "了解集成能力",
-      href: docsUrl,
-    },
+    link: { type: "external" as const, label: "了解集成能力", href: docsUrl },
   },
   {
     title: "客户运营",
-    description: "把咨询、支持、回访沉淀成标准化对话，持续降低人工成本。",
-    items: ["客服分流", "用户回访"],
-    imageLabel: "运营支持图",
-    imageHint: "7x24 自助服务与回访闭环",
+    description:
+      "将咨询回复、工单支持和用户回访沉淀为标准化对话流程，持续降低人工客服成本。",
+    features: ["智能客服分流", "NPS 满意度调研", "用户自动回访"],
     icon: CustomerSupportIcon,
     link: {
-      type: "external",
+      type: "external" as const,
       label: "查看开源能力",
       href: githubRepoUrl,
     },
@@ -82,115 +106,76 @@ const capabilityColumns = [
 ] satisfies Array<{
   title: string;
   description: string;
-  items: string[];
-  imageLabel: string;
-  imageHint: string;
+  features: string[];
   icon: ComponentType<{ className?: string }>;
   link:
-    | {
-        type: "internal";
-        label: string;
-        to: "/templates";
-      }
-    | {
-        type: "external";
-        label: string;
-        href: string;
-      };
+    | { type: "internal"; label: string; to: "/templates" }
+    | { type: "external"; label: string; href: string };
 }>;
+
+// ── Solution Scenarios ───────────────────────────────────────────────
 
 const solutionCards = [
   {
     eyebrow: "官网转化",
     title: "AI 对话式落地页",
-    description: "替代传统表单页，让咨询、留资和分流在一段对话里完成。",
-    imageLabel: "落地页主图",
-    imageHint: "对话式组件与转化路径预览",
+    description:
+      "替代传统表单，让咨询、留资和分流在一段自然对话中完成，访客参与度提升数倍。",
     icon: LayoutBottomIcon,
   },
   {
     eyebrow: "广告承接",
     title: "投放线索自动筛选",
-    description: "让广告流量先经过对话分诊，再同步到 CRM 或销售。",
-    imageLabel: "广告承接图",
-    imageHint: "漏斗筛选与线索归因展示",
+    description:
+      "广告流量先经对话分诊，按意向评分自动分流至销售或 CRM，显著提高广告 ROI。",
     icon: FilterIcon,
   },
   {
     eyebrow: "客户支持",
-    title: "客服与自助服务",
-    description: "把常见问题、资料领取和售后入口整合成 7x24 小时自助体验。",
-    imageLabel: "客服场景图",
-    imageHint: "FAQ、资料与工单入口整合",
+    title: "7×24 智能客服",
+    description:
+      "常见问题自助解决、资料领取、售后工单一站式整合，客户无需排队等待。",
     icon: HeadphonesIcon,
   },
   {
     eyebrow: "自动化",
-    title: "Webhook 与业务联动",
-    description: "提交后自动触发邮件、企业系统、表格、工单或下游自动化流程。",
-    imageLabel: "自动化流程图",
-    imageHint: "事件触发与系统联动路径",
+    title: "Webhook 业务联动",
+    description:
+      "对话提交后自动触发邮件通知、企微消息、表格写入或下游自动化流程。",
     icon: WebhookIcon,
   },
 ];
+
+// ── Quick Start Steps ────────────────────────────────────────────────
 
 const journeySteps = [
   {
     step: "01",
     title: "选模板",
-    description: "从成熟模板开始，快速确认第一版方向。",
+    description:
+      "从行业模板库中选择适合你场景的对话模板，一键复用，无需从零设计。",
   },
   {
     step: "02",
-    title: "改文案",
-    description: "按品牌语气和业务规则调整问题与分支。",
+    title: "调内容",
+    description:
+      "按品牌语气和业务规则修改问题、分支逻辑与视觉风格，所见即所得。",
   },
   {
     step: "03",
     title: "接系统",
-    description: "把数据送进 CRM、表格或自动化流程。",
+    description:
+      "通过 Webhook 或 API 将对话数据实时同步至 CRM、表格或内部业务系统。",
   },
   {
     step: "04",
-    title: "持续优化",
-    description: "根据转化数据迭代问题顺序和路径设计。",
+    title: "看数据优化",
+    description:
+      "基于转化率、流失点等数据分析对话表现，持续迭代提升效果。",
   },
 ];
 
-const nextStepCards = [
-  {
-    title: "模板库",
-    description: "快速选择线索收集、客服、问卷与预约模板。",
-    to: "/templates",
-  },
-  {
-    title: "开发文档",
-    description: "查看 API、Webhook 与更深度的接入方式。",
-    href: docsUrl,
-  },
-  {
-    title: "开源仓库",
-    description: "了解自部署、源码能力与可控性边界。",
-    href: githubRepoUrl,
-  },
-  {
-    title: "社区交流",
-    description: "加入社区获取最佳实践、模板灵感与案例。",
-    href: discordUrl,
-  },
-] satisfies Array<
-  | {
-      title: string;
-      description: string;
-      to: "/templates";
-    }
-  | {
-      title: string;
-      description: string;
-      href: string;
-    }
->;
-
+// ── Route ─────────────────────────────────────────────────────────────
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -208,133 +193,176 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="relative isolate flex flex-col items-stretch overflow-hidden">
+      {/* ── Ambient glows ──────────────────────────────── */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(249,115,22,0.18),transparent)]"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(37,99,235,0.15),transparent)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 left-1/2 -z-10 h-80 w-[46rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(250,204,21,0.14),transparent_70%)] blur-3xl"
+        className="pointer-events-none absolute -bottom-40 left-1/2 -z-10 h-80 w-[46rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.08),transparent_70%)] blur-3xl"
       />
-      <Section className="dark gap-10 py-6 md:py-10">
-        <div className="relative flex w-full max-w-7xl flex-col gap-7 overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top,#2B2B2B,transparent_45%),linear-gradient(180deg,#171717_0%,#0B0B0B_100%)] p-5 shadow-[0_32px_90px_rgba(0,0,0,0.45)] md:p-8">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-orange-500/20 blur-3xl"
+
+      {/* ── 1. Hero ───────────────────────────────────── */}
+      <Section className="gap-10 py-10 md:py-24">
+        <div className="flex w-full max-w-7xl flex-col gap-7 md:flex-row md:items-center">
+          {/* Left — copy */}
+          <div className="flex flex-1 flex-col gap-5">
+            <div className="flex flex-wrap gap-1.5">
+              {heroBadges.map((badge) => (
+                <Badge key={badge} variant="solid" colorScheme="blue">
+                  {badge}
+                </Badge>
+              ))}
+            </div>
+            <div className="flex flex-col gap-3">
+              <h1 className="max-w-2xl text-balance text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+                打造高转化对话体验
+                <br />
+                让每一次互动都产生价值
+              </h1>
+              <p className="max-w-xl text-sm leading-6 text-muted-foreground md:text-base">
+                Typebot
+                是新一代开源 AI 对话式营销平台，帮助企业轻松搭建智能聊天机器人，
+                在官网、飞书、微信等渠道实现自动化获客、转化与客户运营。
+              </p>
+            </div>
+            <div className="flex flex-col gap-2.5 sm:flex-row">
+              <CtaButtonLink
+                size="lg"
+                href={registerUrl}
+                className="shadow-[0_4px_14px_rgba(234,88,12,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(234,88,12,0.35)]"
+              >
+                免费开始搭建
+              </CtaButtonLink>
+              <ButtonLink
+                size="lg"
+                variant="outline"
+                to="/templates"
+                className="border-blue-300 bg-blue-50 text-blue-700 transition-colors hover:border-blue-400 hover:bg-blue-100 hover:text-blue-800"
+              >
+                查看模板方案
+              </ButtonLink>
+            </div>
+          </div>
+          {/* Right — visual */}
+          <ImagePlaceholder
+            label="产品主视觉"
+            hint="对话式落地页与流程编辑器预览"
+            tone="light"
+            icon={SparklesIcon}
+            className="min-h-[240px] flex-1 shadow-[0_24px_80px_rgba(0,0,0,0.08)] md:min-h-[400px]"
           />
-          <div className="relative flex flex-col gap-7 md:flex-row md:items-center">
-            <div className="flex flex-1 flex-col gap-5">
-              <div className="flex flex-wrap gap-1.5">
-                {heroBadges.map((badge) => (
-                  <Badge key={badge} variant="solid" colorScheme="orange">
-                    {badge}
-                  </Badge>
-                ))}
+        </div>
+
+        {/* Metrics bar */}
+        <div className="grid w-full max-w-7xl grid-cols-2 gap-3 lg:grid-cols-4">
+          {heroMetrics.map((metric) => (
+            <div
+              key={metric.label}
+              className="flex flex-col gap-1 rounded-2xl border bg-white p-5 text-center shadow-sm"
+            >
+              <div className="text-2xl font-bold md:text-3xl">
+                {metric.value}
               </div>
-              <div className="flex flex-col gap-3">
-                <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  用对话式体验升级你的落地页
-                  <br />
-                  把流量更快变成线索与成交
-                </h1>
-                <p className="max-w-2xl text-sm leading-6 text-foreground/70 md:text-base">
-                  用更少文字把价值讲清楚，把更多空间留给界面与转化路径。
-                </p>
-              </div>
-              <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
-                <CtaButtonLink
-                  size="lg"
-                  href={registerUrl}
-                  className="shadow-[0_18px_50px_rgba(255,112,63,0.35)] transition-transform hover:-translate-y-0.5"
-                >
-                  免费开始搭建
-                </CtaButtonLink>
-                <ButtonLink
-                  size="lg"
-                  variant="outline"
-                  to="/templates"
-                  className="border-orange-300 bg-orange-50 text-orange-700 transition-colors hover:border-orange-400 hover:bg-orange-100 hover:text-orange-800"
-                >
-                  查看模板方案
-                </ButtonLink>
+              <div className="text-sm leading-6 text-muted-foreground">
+                {metric.label}
               </div>
             </div>
-            <ImagePlaceholder
-              label="首页主视觉"
-              hint="对话式落地页与流程预览"
-              tone="dark"
-              icon={SparklesIcon}
-              className="min-h-[240px] flex-1 shadow-[0_24px_80px_rgba(0,0,0,0.35)] md:min-h-[360px]"
-            />
-          </div>
-          <div className="grid gap-3 md:grid-cols-3">
-            {heroMetrics.map((metric) => (
+          ))}
+        </div>
+      </Section>
+
+      {/* ── 2. Pain Points → Solutions ────────────────── */}
+      <Section className="gap-10 bg-white py-10 md:py-24">
+        <SectionLead
+          eyebrow="为什么选择 Typebot"
+          title="传统获客方式正在拖慢你的增长"
+          description="表单填写率低、人工回复成本高、数据系统难以打通——Typebot 用对话式 AI 重新定义获客与转化流程。"
+        />
+        <div className="grid w-full max-w-7xl gap-6 md:grid-cols-2">
+          {/* Pain points */}
+          <div className="flex flex-col gap-4 rounded-2xl border bg-white p-6 shadow-sm">
+            <div className="text-sm font-medium text-foreground/50">
+              面临的问题
+            </div>
+            {painPoints.map((item) => (
               <div
-                key={metric.label}
-                className="flex flex-col gap-1.5 rounded-[1.5rem] border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-transform hover:-translate-y-0.5"
+                key={item.problem}
+                className="flex flex-col gap-1.5 rounded-2xl border-l-4 border-gray-200 bg-gray-50/50 p-4"
               >
-                <div className="text-2xl font-semibold md:text-3xl">
-                  {metric.value}
-                </div>
-                <div className="text-sm leading-6 text-foreground/65">
-                  {metric.label}
-                </div>
+                <div className="font-semibold">{item.problem}</div>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+          {/* Solutions */}
+          <div className="flex flex-col gap-4 rounded-2xl border bg-white p-6 shadow-sm">
+            <div className="text-sm font-medium text-blue-600">
+              Typebot 的解决方案
+            </div>
+            {solutions.map((item) => (
+              <div
+                key={item.solution}
+                className="flex flex-col gap-1.5 rounded-2xl border-l-4 border-blue-500 bg-blue-50/50 p-4"
+              >
+                <div className="font-semibold">{item.solution}</div>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  {item.detail}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </Section>
 
-      <Section className="gap-10 py-6 md:py-10">
-        <VisualSectionLead
-          eyebrow="能力总览"
-          title="一套 Typebot，覆盖获客、转化、支持与自动化"
-          description="用更紧凑的结构把关键能力铺开，让访问者快速理解能做什么。"
-          imageLabel="能力总览图"
-          imageHint="模块总览与关键路径展示"
-          icon={GridViewIcon}
+      {/* ── 3. Core Capabilities ──────────────────────── */}
+      <Section className="gap-10 py-10 md:py-24">
+        <SectionLead
+          eyebrow="核心能力"
+          title="三大核心场景，覆盖完整客户旅程"
+          description="从获客到转化再到运营，Typebot 在每个环节都提供专业级对话能力，帮助企业用一套工具打通客户生命周期。"
         />
-        <div className="grid w-full max-w-7xl gap-4 lg:grid-cols-3">
-          {capabilityColumns.map((column) => (
+        <div className="grid w-full max-w-7xl gap-6 lg:grid-cols-3">
+          {capabilities.map((cap) => (
             <div
-              key={column.title}
-              className="flex flex-col gap-4 rounded-[1.75rem] border bg-white p-4 shadow-[0_12px_40px_rgba(15,23,42,0.06)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(15,23,42,0.12)]"
+              key={cap.title}
+              className="flex flex-col gap-5 rounded-2xl border bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
-              <ImagePlaceholder
-                label={column.imageLabel}
-                hint={column.imageHint}
-                icon={column.icon}
-                className="min-h-[156px]"
-              />
+              <div className="flex size-14 items-center justify-center rounded-2xl bg-blue-50">
+                <cap.icon className="size-7 text-blue-600" />
+              </div>
               <div className="flex flex-col gap-2.5">
-                <div className="text-lg font-semibold">{column.title}</div>
+                <div className="text-lg font-semibold">{cap.title}</div>
                 <p className="text-sm leading-6 text-muted-foreground">
-                  {column.description}
+                  {cap.description}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-2">
-                {column.items.map((item) => (
-                  <Badge key={item} colorScheme="orange">
-                    {item}
+                {cap.features.map((f) => (
+                  <Badge key={f} colorScheme="blue">
+                    {f}
                   </Badge>
                 ))}
               </div>
-              {column.link.type === "internal" ? (
+              {cap.link.type === "internal" ? (
                 <ButtonLink
-                  to={column.link.to}
+                  to={cap.link.to}
                   variant="outline"
-                  className="w-fit border-orange-300 bg-orange-50 text-orange-700 hover:border-orange-400 hover:bg-orange-100 hover:text-orange-800"
+                  className="w-fit border-blue-300 bg-blue-50 text-blue-700 hover:border-blue-400 hover:bg-blue-100 hover:text-blue-800"
                 >
-                  {column.link.label}
+                  {cap.link.label}
                 </ButtonLink>
               ) : (
                 <ButtonLink
-                  href={column.link.href}
+                  href={cap.link.href}
                   target="_blank"
                   variant="outline"
-                  className="w-fit border-orange-300 bg-orange-50 text-orange-700 hover:border-orange-400 hover:bg-orange-100 hover:text-orange-800"
+                  className="w-fit border-blue-300 bg-blue-50 text-blue-700 hover:border-blue-400 hover:bg-blue-100 hover:text-blue-800"
                 >
-                  {column.link.label}
+                  {cap.link.label}
                 </ButtonLink>
               )}
             </div>
@@ -342,167 +370,124 @@ function Home() {
         </div>
       </Section>
 
-      <Section className="gap-10 py-6 md:py-10">
-        <VisualSectionLead
-          eyebrow="解决方案矩阵"
-          title="把首页升级成更像业务总入口"
-          description="用矩阵化卡片把场景分清楚，让用户直接点到关心的入口。"
-          imageLabel="解决方案总览图"
-          imageHint="解决方案拼图与场景入口"
-          icon={ChatIcon}
-          reverse
+      {/* ── 4. Solution Scenarios + MainFeatures ──────── */}
+      <Section className="gap-10 bg-white py-10 md:py-24">
+        <SectionLead
+          eyebrow="解决方案"
+          title="无论业务场景如何变化，Typebot 都能灵活应对"
+          description="从官网营销到广告承接，从客服支持到业务自动化，一个平台满足所有对话需求，无需在多个工具间切换。"
         />
         <div className="grid w-full max-w-7xl gap-4 md:grid-cols-2">
           {solutionCards.map((card) => (
             <div
               key={card.title}
-              className="flex min-h-52 flex-col gap-3.5 rounded-[1.75rem] border bg-[linear-gradient(180deg,#FFFFFF_0%,#F6F6F6_100%)] p-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(15,23,42,0.12)]"
+              className="flex min-h-52 flex-col gap-3.5 rounded-2xl border bg-[linear-gradient(180deg,#FFFFFF_0%,#F9FAFB_100%)] p-5 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
-              <ImagePlaceholder
-                label={card.imageLabel}
-                hint={card.imageHint}
-                icon={card.icon}
-                className="min-h-[140px]"
-              />
+              <div className="flex size-11 items-center justify-center rounded-xl bg-blue-50">
+                <card.icon className="size-5 text-blue-600" />
+              </div>
               <div className="text-sm font-medium text-foreground/50">
                 {card.eyebrow}
               </div>
-              <div className="text-xl font-semibold">{card.title}</div>
+              <div className="text-lg font-bold">{card.title}</div>
               <p className="text-sm leading-6 text-muted-foreground">
                 {card.description}
               </p>
             </div>
           ))}
         </div>
-        <div className="flex w-full max-w-7xl flex-col gap-5 rounded-[2rem] border bg-white p-5 md:p-7">
+
+        {/* MainFeatures (unchanged) */}
+        <div className="flex w-full max-w-7xl flex-col gap-5 rounded-2xl border bg-white p-5 md:p-7">
           <div className="flex flex-col gap-2.5 md:max-w-3xl">
             <div className="text-sm font-medium text-foreground/50">
               核心产品能力
             </div>
-            <h2 className="text-3xl md:text-4xl">
-              从搭建到交付，每个环节都围绕转化效率设计
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+              从搭建到交付，每一个环节都围绕转化效率设计
             </h2>
           </div>
           <MainFeatures />
         </div>
       </Section>
 
-      <Section className="gap-12 py-6 md:py-10">
-        <VisualSectionLead
+      {/* ── 5. Business Scenarios ─────────────────────── */}
+      <Section className="gap-12 bg-white py-10 md:py-24">
+        <SectionLead
           eyebrow="业务场景"
-          title="不同团队，都能用同一套对话能力完成目标"
-          description="营销、销售与客服团队都能复用同一套对话能力。"
-          imageLabel="团队场景图"
-          imageHint="典型团队场景与入口"
-          icon={UsersIcon}
+          title="一个平台，多个团队协同提效"
+          description="营销、销售、客服团队都能用同一套对话能力，在不同阶段推动客户旅程向前，打破部门间的工具壁垒。"
         />
         <ForEveryDepartment />
       </Section>
 
-      <Section className="gap-12 py-6 md:py-10">
-        <VisualSectionLead
-          eyebrow="落地路径"
-          title="比传统落地页更进一步，把后续动作也设计好"
-          description="从模板搭建到系统联动，再到持续优化，形成完整上线闭环。"
-          imageLabel="落地流程图"
-          imageHint="实施路径与上线步骤"
-          icon={SparklesIcon}
-          reverse
+      {/* ── 6. Social Proof ───────────────────────────── */}
+      <Section className="gap-10 bg-white py-10 md:py-24">
+        <div className="flex w-full max-w-7xl flex-col gap-8 rounded-2xl border bg-white p-5 md:p-8 shadow-sm">
+          <Companies />
+          <Testimonials />
+        </div>
+      </Section>
+
+      {/* ── 7. Quick Start + Mid-page CTA ─────────────── */}
+      <Section className="gap-10 py-10 md:py-24">
+        <SectionLead
+          eyebrow="快速上手"
+          title="从零到上线，四步完成对话体验搭建"
+          description="无需技术背景，半天即可完成从设计到发布的全流程，每个环节都为你准备好了模板与工具。"
         />
         <div className="grid w-full max-w-7xl gap-4 xl:grid-cols-4">
           {journeySteps.map((step) => (
             <div
               key={step.step}
-              className="flex flex-col gap-3.5 rounded-[1.75rem] border bg-white p-5 transition-colors hover:bg-orange-50/50"
+              className="flex flex-col gap-3.5 rounded-2xl border bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md hover:bg-blue-50/30"
             >
               <div className="text-sm font-semibold text-foreground/40">
                 {step.step}
               </div>
-              <div className="text-xl font-semibold">{step.title}</div>
+              <div className="text-base font-bold">{step.title}</div>
               <p className="text-sm leading-6 text-muted-foreground">
                 {step.description}
               </p>
             </div>
           ))}
         </div>
+
+        <div className="flex flex-col items-center gap-4 pt-4">
+          <CtaButtonLink
+            size="lg"
+            href={registerUrl}
+            className="shadow-[0_4px_14px_rgba(234,88,12,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(234,88,12,0.35)]"
+          >
+            免费开始搭建
+          </CtaButtonLink>
+          <p className="text-sm text-muted-foreground">
+            无需试用期，基础版永久免费
+          </p>
+        </div>
       </Section>
 
-      <Section className="gap-10 py-6 md:py-10">
-        <div className="flex w-full max-w-7xl flex-col gap-8 rounded-[2rem] border bg-white p-5 md:p-8">
-          <Companies />
-          <Testimonials />
-        </div>
+      {/* ── 8. FAQ ────────────────────────────────────── */}
+      <Section className="gap-10 bg-white py-10 md:py-24">
+        <Faq />
       </Section>
 
-      <Section className="gap-10 py-6 md:py-10">
-        <div className="flex w-full max-w-5xl flex-col items-center gap-3 text-center">
-          <div className="text-sm font-medium text-foreground/50">下一步行动</div>
-          <h2 className="text-3xl md:text-4xl">
-            让访问者快速找到下一步，而不是继续读大段说明
-          </h2>
-        </div>
-        <div className="grid w-full max-w-7xl gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {nextStepCards.map((card) => (
-            <ActionCard
-              key={card.title}
-              title={card.title}
-              description={card.description}
-              to={"to" in card ? card.to : undefined}
-              href={"href" in card ? card.href : undefined}
-            />
-          ))}
-        </div>
+      {/* ── 9. Bottom CTA ─────────────────────────────── */}
+      <Section className="gap-10 py-10 md:py-24">
+        <Cta buttonLabel="免费开始使用">
+          准备好用更智能的方式，让每一次对话都创造价值了吗？
+        </Cta>
       </Section>
     </div>
   );
 }
 
-const VisualSectionLead = ({
-  eyebrow,
-  title,
-  description,
-  imageLabel,
-  imageHint,
-  icon,
-  reverse,
-}: {
-  eyebrow: string;
-  title: string;
-  description: string;
-  imageLabel: string;
-  imageHint: string;
-  icon?: ComponentType<{ className?: string }>;
-  reverse?: boolean;
-}) => (
-  <div
-    className={cn(
-      "flex w-full max-w-7xl flex-col gap-5 rounded-[2rem] border bg-white/95 p-5 shadow-[0_14px_44px_rgba(15,23,42,0.08)] backdrop-blur-sm md:items-center md:gap-6 md:p-6",
-      reverse ? "md:flex-row-reverse" : "md:flex-row",
-    )}
-  >
-    <div className="flex flex-1 flex-col gap-4">
-      <Badge colorScheme="orange">{eyebrow}</Badge>
-      <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-        {title}
-      </h2>
-      <p className="max-w-2xl text-sm leading-6 text-muted-foreground md:text-base">
-        {description}
-      </p>
-    </div>
-    <ImagePlaceholder
-      label={imageLabel}
-      hint={imageHint}
-      icon={icon}
-      className="min-h-[200px] flex-1 md:min-h-[260px]"
-    />
-  </div>
-);
+// ── ImagePlaceholder (used only in Hero) ──────────────────────────────
 
 const ImagePlaceholder = ({
   label,
   hint,
   className,
-  tone = "light",
   icon: IconComponent = Image02Icon,
 }: {
   label: string;
@@ -512,123 +497,18 @@ const ImagePlaceholder = ({
   icon?: ComponentType<{ className?: string }>;
 }) => (
   <div
-    className={cn(
-      "relative flex w-full overflow-hidden rounded-[1.5rem] border p-4",
-      tone === "dark"
-        ? "border-white/10 bg-white/5 text-foreground/80"
-        : "border-border bg-muted/30 text-foreground/70",
-      className,
-    )}
+    className={`relative flex w-full overflow-hidden rounded-xl border bg-linear-to-br from-blue-50/50 to-white p-6 ${
+      className ?? ""
+    }`}
   >
-    <div
-      className={cn(
-        "pointer-events-none absolute inset-0 opacity-70",
-        tone === "dark"
-          ? "bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_55%)]"
-          : "bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.12),transparent_55%)]",
-      )}
-    />
-    <div className="relative flex flex-1 flex-col justify-between gap-5">
-      <div className="flex items-start justify-between gap-4">
-        <div className="text-sm font-medium">{label}</div>
-        <div
-          className={cn(
-            "rounded-full border px-2 py-0.5 text-xs font-medium",
-            tone === "dark"
-              ? "border-white/10 bg-white/5 text-foreground/70"
-              : "border-border bg-white/60 text-foreground/60",
-          )}
-        >
-          预览
-        </div>
+    <div className="relative flex flex-1 flex-col justify-center items-center gap-5">
+      <div className="flex items-center justify-center rounded-2xl bg-blue-50 p-4">
+        <IconComponent className="size-12 text-blue-500" />
       </div>
-      <div className="relative flex flex-1 items-center justify-center">
-        <div className="pointer-events-none absolute inset-x-2 top-1 flex gap-2 opacity-70">
-          <div
-            className={cn(
-              "h-1.5 flex-1 rounded-full",
-              tone === "dark" ? "bg-white/15" : "bg-foreground/10",
-            )}
-          />
-          <div
-            className={cn(
-              "h-1.5 w-16 rounded-full",
-              tone === "dark" ? "bg-white/10" : "bg-foreground/5",
-            )}
-          />
-        </div>
-        <div
-          className={cn(
-            "flex items-center justify-center rounded-2xl border backdrop-blur-sm",
-            tone === "dark"
-              ? "border-white/10 bg-black/20"
-              : "border-border bg-white/70",
-          )}
-          style={{
-            width: 72,
-            height: 72,
-          }}
-        >
-          <IconComponent className="size-7 opacity-80" />
-        </div>
-        <div
-          className={cn(
-            "pointer-events-none absolute inset-x-2 bottom-1 rounded-xl border p-2",
-            tone === "dark"
-              ? "border-white/10 bg-white/[0.03]"
-              : "border-border bg-white/65",
-          )}
-        >
-          <div className="flex items-center gap-2">
-            <div
-              className={cn(
-                "h-2.5 flex-1 rounded-full",
-                tone === "dark" ? "bg-white/12" : "bg-foreground/10",
-              )}
-            />
-            <div
-              className={cn(
-                "h-2.5 w-10 rounded-full",
-                tone === "dark" ? "bg-white/10" : "bg-foreground/5",
-              )}
-            />
-          </div>
-        </div>
+      <div className="text-center">
+        <div className="text-lg font-bold text-foreground">{label}</div>
+        <div className="mt-1 text-sm text-muted-foreground">{hint}</div>
       </div>
-      <div className="text-xs leading-5 opacity-70">{hint}</div>
     </div>
   </div>
 );
-
-const ActionCard = ({
-  title,
-  description,
-  to,
-  href,
-}: {
-  title: string;
-  description: string;
-  to?: "/templates";
-  href?: string;
-}) => {
-  const content = (
-    <div className="flex h-full flex-col gap-2.5 rounded-[1.5rem] border bg-white px-4 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:shadow-[0_14px_36px_rgba(15,23,42,0.12)]">
-      <div className="text-lg font-semibold">{title}</div>
-      <div className="text-sm leading-6 text-muted-foreground">
-        {description}
-      </div>
-    </div>
-  );
-
-  if (to) {
-    return <TextLink to={to}>{content}</TextLink>;
-  }
-
-  if (!href) return null;
-
-  return (
-    <TextLink href={href} target="_blank" hideExternalIcon>
-      {content}
-    </TextLink>
-  );
-};

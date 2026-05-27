@@ -169,7 +169,7 @@ export const Testimonials = () => {
           团队更高效，客户更满意，品牌更突出。
         </p>
       </div>
-      <div className="relative isolate flex w-full flex-col overflow-y-auto rounded-[1.75rem] border bg-muted/40 max-h-[50vh] md:max-h-[70vh]">
+      <div className="relative isolate flex w-full flex-col overflow-y-auto rounded-2xl border bg-muted/40 max-h-[50vh] md:max-h-[70vh]">
         <div
           className="pointer-events-none top-0 h-10 w-full bg-linear-to-t from-background/10 to-background/90 sticky shrink-0 animate-in fade-in"
           style={{

@@ -1,8 +1,8 @@
+import { z } from "zod";
 import type { ZodLayoutMetadata } from "@typebot.io/forge/zodLayout";
-import type { ZodTypeAny } from "zod";
 
 export const getZodLayoutMetadata = (
-  schema: ZodTypeAny,
+  schema: z.ZodType,
 ): ZodLayoutMetadata | undefined => {
   const meta = schema.meta?.();
   if (!meta) return;

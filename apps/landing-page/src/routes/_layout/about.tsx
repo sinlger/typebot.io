@@ -28,7 +28,7 @@ function RouteComponent() {
         <div className="flex flex-col gap-10 font-display text-3xl md:text-justify">
           <p>
             在 Typebot，我们始终相信{" "}
-            <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-30%">
+            <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#2563EB] to-[#7C3AED] to-30%">
               <MessageSquareGradientIcon className="size-6 inline-flex group-hover:motion-preset-seesaw-lg" />{" "}
               高质量的对话
             </span>{" "}
@@ -38,7 +38,7 @@ function RouteComponent() {
             每一天，人们都会在聊天应用里和朋友、同事、家人交流，因为这种方式自然、投入，
             也最让人熟悉。<br />
             我们认为，企业同样应该借助这种沟通方式，因为在{" "}
-            <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-20%">
+            <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#2563EB] to-[#7C3AED] to-20%">
               <HeartGradientIcon className="size-6 inline-flex group-hover:motion-preset-pulse-lg" />{" "}
               用户愿意聊天的地方
             </span>
@@ -47,7 +47,7 @@ function RouteComponent() {
           <p>
             如今，大多数聊天机器人仍局限于基础客服场景，但我们知道，它们本可以承担更多。
             在我们看来，聊天机器人应该成为实现{" "}
-            <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-50%">
+            <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#2563EB] to-[#7C3AED] to-50%">
               <ZapGradientIcon className="size-6 inline-flex group-hover:motion-preset-oscillate-lg" />{" "}
               有意义互动
             </span>{" "}
@@ -56,7 +56,7 @@ function RouteComponent() {
           </p>
           <p>
             Typebot{" "}
-            <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-70%">
+            <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#2563EB] to-[#7C3AED] to-70%">
               <BuildingsGradientIcon className="size-6 inline-flex group-hover:motion-preset-bounce" />{" "}
               帮助企业
             </span>{" "}

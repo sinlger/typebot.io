@@ -54,7 +54,8 @@ export const BasicNumberInput = <HasVariable extends boolean>({
   );
 
   const handleValueChange = (value: number | null) => {
-    if (value === null) return onValueChangeDebounced(undefined);
+    if (value === null || Number.isNaN(value))
+      return onValueChangeDebounced(undefined);
     onValueChangeDebounced(value);
   };
 

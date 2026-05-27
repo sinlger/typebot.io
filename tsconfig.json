@@ -233,6 +233,9 @@
     },
     {
       "path": "./packages/forge/blocks/kimi"
+    },
+    {
+      "path": "./apps/landing-page-v2"
     }
   ]
 }

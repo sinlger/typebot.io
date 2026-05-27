@@ -28,7 +28,7 @@ import { ForgeSelectInput } from "../ForgeSelectInput";
 import { ZodDiscriminatedUnionLayout } from "./ZodDiscriminatedUnionLayout";
 import { ZodObjectLayout } from "./ZodObjectLayout";
 
-const parseEnumItems = (schema: z.ZodTypeAny, layout?: ZodLayoutMetadata) => {
+const parseEnumItems = (schema: z.ZodType, layout?: ZodLayoutMetadata) => {
   if (!isZodEnum(schema)) return [];
   const rawValues = schema.options.filter(isString);
   const values = layout?.hiddenItems
@@ -66,7 +66,7 @@ export const ZodFieldLayout = ({
   onDataChange,
 }: {
   data: any;
-  schema: z.ZodTypeAny;
+  schema: z.ZodType;
   isInAccordion?: boolean;
   blockDef?: ForgedBlockDefinition;
   blockOptions?: ForgedBlock["options"];
@@ -133,6 +133,40 @@ export const ZodFieldLayout = ({
             }
             onDataChange={onDataChange}
           />
+        );
+      }
+      const pseudoInfo = getPseudoDiscriminatedUnionInfo(innerSchema);
+      if (pseudoInfo) {
+        const { discriminator, optionsMap } = pseudoInfo;
+        const currentDiscriminantValue = data?.[discriminator];
+        const currentOptionsSchema =
+          typeof currentDiscriminantValue === "string"
+            ? optionsMap.get(currentDiscriminantValue)
+            : undefined;
+        return (
+          <>
+            <BasicSelect
+              className="w-full"
+              value={currentDiscriminantValue}
+              onChange={(value) =>
+                onDataChange({ ...data, [discriminator]: value })
+              }
+              items={[...optionsMap.keys()]}
+              placeholder={
+                layout?.placeholder ?? `Select a ${discriminator}`
+              }
+            />
+            {currentOptionsSchema && (
+              <ZodObjectLayout
+                schema={currentOptionsSchema}
+                data={data}
+                blockDef={blockDef}
+                blockOptions={blockOptions}
+                onDataChange={onDataChange}
+                ignoreKeys={[discriminator]}
+              />
+            )}
+          </>
         );
       }
       return (
@@ -453,7 +487,7 @@ const ZodArrayContent = ({
   isInAccordion,
   onDataChange,
 }: {
-  schema: z.ZodArray<z.ZodTypeAny>;
+  schema: z.ZodArray<z.ZodType>;
   data: any;
   blockDef?: ForgedBlockDefinition;
   blockOptions?: ForgedBlock["options"];
@@ -534,17 +568,63 @@ const ZodArrayContent = ({
 
 const isString = (value: unknown): value is string => typeof value === "string";
 
-const isZodEnum = (schema: z.ZodTypeAny): schema is z.ZodEnum =>
+const isZodEnum = (schema: z.ZodType): schema is z.ZodEnum =>
   schema.type === "enum";
 
 const isZodObject = (
-  schema: z.ZodTypeAny,
+  schema: z.ZodType,
 ): schema is z.ZodObject<z.ZodRawShape> => schema.type === "object";
 
-const isZodArray = (schema: z.ZodTypeAny): schema is z.ZodArray<z.ZodTypeAny> =>
+const isZodArray = (schema: z.ZodType): schema is z.ZodArray<z.ZodType> =>
   schema.type === "array";
 
 const isZodDiscriminatedUnion = (
-  schema: z.ZodTypeAny,
+  schema: z.ZodType,
 ): schema is z.ZodDiscriminatedUnion<readonly z.ZodObject<any>[], string> =>
   schema instanceof z.ZodDiscriminatedUnion;
+
+const getPseudoDiscriminatedUnionInfo = (
+  schema: z.ZodType,
+): {
+  discriminator: string;
+  optionsMap: Map<string, z.ZodObject<z.ZodRawShape>>;
+} | null => {
+  if (!(schema instanceof z.ZodUnion)) return null;
+  const unionOptions = schema.options;
+
+  const objects: z.ZodObject<z.ZodRawShape>[] = [];
+  for (const opt of unionOptions) {
+    const inner = getZodInnerSchema(opt);
+    if (!isZodObject(inner)) return null;
+    objects.push(inner);
+  }
+
+  if (objects.length === 0) return null;
+
+  const firstShape = objects[0].shape;
+  const discriminator = Object.keys(firstShape).find((field) =>
+    objects.every((obj) => obj.shape[field] !== undefined),
+  );
+  if (!discriminator) return null;
+
+  const optionsMap = new Map<string, z.ZodObject<z.ZodRawShape>>();
+  for (const obj of objects) {
+    const fieldSchema = obj.shape[discriminator];
+    if (!fieldSchema) continue;
+    const innerField = getZodInnerSchema(fieldSchema);
+
+    if (innerField.type === "literal") {
+      const literalSchema = innerField as z.ZodLiteral;
+      const val = literalSchema.value;
+      if (typeof val === "string") optionsMap.set(val, obj);
+    } else if (innerField.type === "enum") {
+      const enumSchema = innerField as z.ZodEnum;
+      for (const val of enumSchema.options) {
+        if (typeof val === "string") optionsMap.set(val, obj);
+      }
+    }
+  }
+
+  if (optionsMap.size === 0) return null;
+  return { discriminator, optionsMap };
+};

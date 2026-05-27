@@ -70,9 +70,9 @@ const DesktopNav = () => {
             variant="ghost"
             size="sm"
             className={cn(
-              "text-gray-600 hover:text-orange-600",
+              "text-gray-600 hover:text-blue-600",
               pathname === link.to &&
-                "bg-orange-50 text-orange-600 font-medium hover:bg-orange-100 hover:text-orange-700"
+                "bg-blue-50 text-blue-600 font-medium hover:bg-blue-100 hover:text-blue-700"
             )}
           >
             {link.label}
@@ -86,7 +86,7 @@ const DesktopNav = () => {
             href={signinUrl}
             variant="outline"
             size="sm"
-            className="border-orange-200 bg-orange-50 text-orange-700 hover:border-orange-300 hover:bg-orange-100 hover:text-orange-800"
+            className="border-blue-200 bg-blue-50 text-blue-700 hover:border-blue-300 hover:bg-blue-100 hover:text-blue-800"
           >
             登录
           </ButtonLink>
@@ -124,7 +124,7 @@ const MobileNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
                 key={link.label}
                 to={link.to}
                 variant="ghost"
-                className="w-full justify-start text-gray-600 hover:bg-orange-50 hover:text-orange-700"
+                className="w-full justify-start text-gray-600 hover:bg-blue-50 hover:text-blue-700"
                 onClick={onClose}
               >
                 {link.label}
@@ -135,7 +135,7 @@ const MobileNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
                 <ButtonLink
                   href={signinUrl}
                   variant="outline"
-                  className="w-full border-orange-200 bg-orange-50 text-orange-700 hover:border-orange-300 hover:bg-orange-100 hover:text-orange-800"
+                  className="w-full border-blue-200 bg-blue-50 text-blue-700 hover:border-blue-300 hover:bg-blue-100 hover:text-blue-800"
                 >
                   登录
                 </ButtonLink>

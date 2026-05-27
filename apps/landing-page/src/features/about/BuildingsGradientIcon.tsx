@@ -19,8 +19,8 @@ export const BuildingsGradientIcon = (props: SVGProps<SVGSVGElement>) => {
           y2="8.95231"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FF491F" />
-          <stop offset="1" stopColor="#C13EAA" />
+          <stop stopColor="#2563EB" />
+          <stop offset="1" stopColor="#7C3AED" />
         </linearGradient>
       </defs>
     </svg>

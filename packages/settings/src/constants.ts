@@ -30,16 +30,16 @@ export const defaultSettings = {
 export const maxTypingEmulationMaxDelay = 5;
 
 export const defaultSystemMessages = {
-  invalidMessage: "Invalid message. Please, try again.",
-  botClosed: "This bot is now closed",
-  networkErrorTitle: "Network Error",
-  networkErrorMessage: "Please check your internet connection and try again.",
-  popupBlockedTitle: "Popup blocked",
+  invalidMessage: "消息无效，请重试.",
+  botClosed: "该机器人已关闭",
+  networkErrorTitle: "网络错误",
+  networkErrorMessage: "请检查网络连接后重试",
+  popupBlockedTitle: "弹窗已拦截",
   popupBlockedDescription:
-    "The bot wants to open a new tab but it was blocked by your browser. It needs a manual approval.",
-  popupBlockedButtonLabel: "Continue in new tab",
-  fileUploadError: "An error occured while uploading the files",
-  fileUploadSizeError: "[[file]] is larger than [[limit]]MB",
+    "机器人尝试新建标签页，已被浏览器阻止，需手动允许.",
+  popupBlockedButtonLabel: "在新标签页继续",
+  fileUploadError: "文件上传出现错误",
+  fileUploadSizeError: "[[file]] 超出 [[limit]]MB 大小限制",
   whatsAppPictureChoiceSelectLabel: "Select",
 } as const satisfies NonNullable<Settings["general"]>["systemMessages"];
 
