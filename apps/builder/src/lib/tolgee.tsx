@@ -10,14 +10,16 @@ import it from "../i18n/it.json";
 import pt from "../i18n/pt.json";
 import ptBR from "../i18n/pt-BR.json";
 import ro from "../i18n/ro.json";
+import zhCN from "../i18n/zh-CN.json";
 
 export const tolgee = Tolgee()
   .use(FormatIcu())
   .init({
     apiKey: env.NEXT_PUBLIC_TOLGEE_API_KEY,
     apiUrl: env.NEXT_PUBLIC_TOLGEE_API_URL,
-    defaultLanguage: "en",
+    defaultLanguage: "zh-CN",
     availableLanguages: [
+      "zh-CN",
       "en",
       "fr",
       "de",
@@ -30,6 +32,7 @@ export const tolgee = Tolgee()
     ],
     fallbackLanguage: "en",
     staticData: {
+      "zh-CN": zhCN,
       en,
       fr,
       de,

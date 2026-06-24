@@ -16,6 +16,7 @@ import { GraphNavigationRadioGroup } from "./GraphNavigationRadioGroup";
 import { GroupTitlesAutoGenForm } from "./GroupTitlesAutoGenForm";
 
 const localeHumanReadable = {
+  "zh-CN": "中文",
   en: "English",
   fr: "Français",
   de: "Deutsch",
