@@ -14,6 +14,7 @@ export const initClient = () => {
     accessKey: env.S3_ACCESS_KEY,
     secretKey: env.S3_SECRET_KEY,
     region: env.S3_REGION,
+    pathStyle: env.S3_PATH_STYLE,
   });
 
   return minioClient;

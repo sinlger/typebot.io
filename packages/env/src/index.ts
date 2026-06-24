@@ -307,6 +307,7 @@ const s3Env = {
     S3_SSL: boolean.optional().default(true),
     S3_REGION: z.string().min(1).optional(),
     S3_PUBLIC_CUSTOM_DOMAIN: z.string().url().optional(),
+    S3_PATH_STYLE: boolean.optional().default(true),
   },
 };
 
