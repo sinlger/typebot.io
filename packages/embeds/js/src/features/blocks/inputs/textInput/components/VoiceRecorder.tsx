@@ -172,7 +172,7 @@ export const VoiceRecorder = (props: Props) => {
         class="p-0.5 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={props.isAbortDisabled}
         on:click={stopRecording}
-        aria-label="Stop recording"
+        aria-label="停止录音"
       >
         <CloseIcon class="w-4" />
       </button>

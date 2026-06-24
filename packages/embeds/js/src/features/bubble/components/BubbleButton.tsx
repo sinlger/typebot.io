@@ -28,7 +28,7 @@ export const BubbleButton = (props: Props) => (
       "background-color": props.backgroundColor ?? colors.gray.dark["2"],
       color: resolveButtonIconColor(props),
     }}
-    aria-label={props.isBotOpen ? "Close chatbot" : "Open chatbot"}
+    aria-label={props.isBotOpen ? "关闭聊天机器人" : "打开聊天机器人"}
     aria-pressed={props.isBotOpen}
   >
     <OpenIcon {...props} />

@@ -414,7 +414,7 @@ export const TextInput = (props: Props) => {
             isDisabled={isUploading()}
             class="h-14 flex items-center"
             on:click={recordVoice}
-            aria-label="Record voice"
+            aria-label="录音"
           >
             <MicrophoneIcon class="flex w-6 h-6" />
           </Button>

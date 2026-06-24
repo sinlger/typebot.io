@@ -76,7 +76,7 @@ const TextGuestBubble = (props: { answer: TextInputSubmitContent }) => {
               <button
                 type="button"
                 class="border-none bg-transparent p-0"
-                aria-label={`Open attachment ${idx() + 1}`}
+                aria-label={`打开附件 ${idx() + 1}`}
                 onClick={() =>
                   setClickedImageSrc(attachment.blobUrl ?? attachment.url)
                 }

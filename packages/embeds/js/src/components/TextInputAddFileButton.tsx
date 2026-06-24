@@ -41,7 +41,7 @@ export const TextInputAddFileButton = (props: Props) => {
       />
 
       <label
-        aria-label="Add attachments"
+        aria-label="添加附件"
         for={documentUploadId}
         class={cx(
           "filter data-[state=open]:backdrop-brightness-90 hover:backdrop-brightness-95 transition rounded-md p-2 focus:outline-none @xs:hidden",
@@ -56,7 +56,7 @@ export const TextInputAddFileButton = (props: Props) => {
             "filter data-[state=open]:backdrop-brightness-90 hover:backdrop-brightness-95 transition rounded-md p-2 focus:outline-none @xs:block hidden",
             props.class,
           )}
-          aria-label="Add attachments"
+          aria-label="添加附件"
         >
           <PaperClipIcon class="w-5" />
         </Menu.Trigger>
