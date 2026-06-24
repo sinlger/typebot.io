@@ -1,4 +1,5 @@
 import { env } from "@typebot.io/env";
+import { t } from "@/lib/i18n";
 
 export const ErrorPage = ({ error }: { error: Error }) => {
   return (
@@ -15,14 +16,14 @@ export const ErrorPage = ({ error }: { error: Error }) => {
       {!env.NEXT_PUBLIC_VIEWER_URL[0] ? (
         <>
           <h1 style={{ fontWeight: "bold", fontSize: "30px" }}>
-            NEXT_PUBLIC_VIEWER_URL is missing
+            {t("errorPage.viewerUrlMissing")}
           </h1>
           <h2>
-            Make sure to configure the app properly (
-            <a href="https://docs.typebot.com/self-hosting/configuration">
-              https://docs.typebot.com/self-hosting/configuration
+            {t("errorPage.configureHint")}
+            <a href={t("errorPage.configureHint.documentation")}>
+              {t("errorPage.configureHint.documentation")}
             </a>
-            )
+            {t("errorPage.configureHint.closing")}
           </h2>
         </>
       ) : (

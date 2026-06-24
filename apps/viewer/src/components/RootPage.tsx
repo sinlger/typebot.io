@@ -1,3 +1,5 @@
+import { t } from "@/lib/i18n";
+
 export const RootPage = ({ dashboardUrl }: { dashboardUrl: string }) => (
   <div
     style={{
@@ -10,15 +12,11 @@ export const RootPage = ({ dashboardUrl }: { dashboardUrl: string }) => (
   >
     <div>
       <h1 style={{ fontWeight: "bold", fontSize: "30px" }}>
-        Welcome to Typebot
+        {t("rootPage.welcomeHeading")}
       </h1>
+      <p>{t("rootPage.intro")}</p>
       <p>
-        Typebot is a no-code platform that enables you to effortlessly create
-        and integrate advanced chatbots into websites and chat platforms like
-        WhatsApp.
-      </p>
-      <p>
-        Go to the <a href={dashboardUrl}>dashboard</a>.
+        <a href={dashboardUrl}>{t("rootPage.goToDashboard")}</a>
       </p>
     </div>
   </div>

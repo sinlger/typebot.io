@@ -1,4 +1,5 @@
 import { TypebotLogo } from "@/components/TypebotLogo";
+import { t } from "@/lib/i18n";
 import "../assets/styles.css";
 
 export default function NotFound() {
@@ -26,7 +27,7 @@ export default function NotFound() {
         </a>
 
         <h1 style={{ margin: 0, fontSize: "24px", fontWeight: "normal" }}>
-          The bot you're looking for doesn't exist
+          {t("notFoundPage.title")}
         </h1>
       </div>
     </div>
