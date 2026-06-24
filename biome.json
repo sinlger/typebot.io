@@ -54,7 +54,8 @@
     }
   },
   "formatter": {
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "lineEnding": "crlf"
   },
   "vcs": {
     "enabled": true,
