@@ -107,7 +107,7 @@ const List = ({
                   buttonVariants({ variant: "secondary", size: "icon" }),
                   "absolute top-2 right-2 size-6",
                 )}
-                aria-label="Close"
+                aria-label="关闭"
               >
                 <Cancel01Icon />
               </ToastPrimitive.Close>
