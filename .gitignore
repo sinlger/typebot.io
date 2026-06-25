@@ -81,7 +81,7 @@ vitest.config.*.timestamp*
 content-collections.d.ts.map
 content-collections.d.ts
 **/next-env.d.ts
-
+*.pem
 .pi
 
 .agents/skills/typebot-customer-support
@@ -98,3 +98,4 @@ content-collections.d.ts
 .claude/skills/typebot-sentry
 .claude/skills/typebot-stripe
 .claude/skills/vercel
+ECS_CONNECTION.md
