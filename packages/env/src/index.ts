@@ -139,6 +139,24 @@ const baseEnv = {
       .string()
       .optional()
       .default("The bot you're looking for doesn't exist"),
+    /**
+     * Comma-separated block IDs to hide from the flow editor's left sidebar.
+     * IDs are the raw enum / forge id strings, case-sensitive. See .env.example.
+     * Naming collisions:
+     *   "openai"  → Forge OpenAI block;  "OpenAI"  → legacy Integration block.
+     *   "webhook" → Logic Webhook block; "Webhook" → Integration HTTP request block.
+     */
+    NEXT_PUBLIC_HIDDEN_BLOCKS: z
+      .string()
+      .optional()
+      .transform((val) =>
+        val
+          ? val
+              .split(",")
+              .map((s) => s.trim())
+              .filter(Boolean)
+          : undefined,
+      ),
   },
   runtimeEnv: {
     NEXT_PUBLIC_VIEWER_URL: getRuntimeVariable("NEXT_PUBLIC_VIEWER_URL"),
@@ -158,6 +176,7 @@ const baseEnv = {
     NEXT_PUBLIC_VIEWER_404_SUBTITLE: getRuntimeVariable(
       "NEXT_PUBLIC_VIEWER_404_SUBTITLE",
     ),
+    NEXT_PUBLIC_HIDDEN_BLOCKS: getRuntimeVariable("NEXT_PUBLIC_HIDDEN_BLOCKS"),
   },
 };
 const githubEnv = {

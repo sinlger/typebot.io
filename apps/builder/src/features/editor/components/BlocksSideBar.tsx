@@ -24,6 +24,7 @@ import { EventCard } from "../../events/components/EventCard";
 import { EventCardOverlay } from "../../events/components/EventCardOverlay";
 import { getEventBlockLabel } from "../../events/components/EventLabel";
 import { leftSidebarLockedStorageKey } from "../constants";
+import { getHiddenBlockSet } from "../helpers/hiddenBlocks";
 import { BlockCard } from "./BlockCard";
 import { BlockCardOverlay } from "./BlockCardOverlay";
 import {
@@ -136,14 +137,17 @@ export const BlocksSideBar = () => {
     setSearchInput(event.target.value);
   };
 
+  const hiddenBlocks = getHiddenBlockSet();
+
   const filteredForgedBlockIds = Object.values(forgedBlocks)
     .filter((block) => {
       return (
-        block.id.toLowerCase().includes(searchInput.toLowerCase()) ||
-        block.tags?.some((tag: string) =>
-          tag.toLowerCase().includes(searchInput.toLowerCase()),
-        ) ||
-        block.name.toLowerCase().includes(searchInput.toLowerCase())
+        (block.id.toLowerCase().includes(searchInput.toLowerCase()) ||
+          block.tags?.some((tag: string) =>
+            tag.toLowerCase().includes(searchInput.toLowerCase()),
+          ) ||
+          block.name.toLowerCase().includes(searchInput.toLowerCase())) &&
+        !hiddenBlocks.has(block.id)
       );
     })
     .map((block) => block.id);
@@ -152,31 +156,34 @@ export const BlocksSideBar = () => {
     (type) =>
       getBubbleBlockLabel(t)
         [type].toLowerCase()
-        .includes(searchInput.toLowerCase()),
+        .includes(searchInput.toLowerCase()) && !hiddenBlocks.has(type),
   );
 
   const filteredInputBlockTypes = Object.values(InputBlockType).filter(
     (type) => {
-      return getInputBlockLabel(t)
-        [type].toLowerCase()
-        .includes(searchInput.toLowerCase());
+      return (
+        getInputBlockLabel(t)
+          [type].toLowerCase()
+          .includes(searchInput.toLowerCase()) && !hiddenBlocks.has(type)
+      );
     },
   );
 
   const filteredLogicBlockTypes = Object.values(LogicBlockType).filter(
     (type) =>
-      type === LogicBlockType.WEBHOOK
+      (type === LogicBlockType.WEBHOOK
         ? isDefined(env.NEXT_PUBLIC_PARTYKIT_HOST)
         : true &&
           getLogicBlockLabel(t)
             [type].toLowerCase()
-            .includes(searchInput.toLowerCase()),
+            .includes(searchInput.toLowerCase())) && !hiddenBlocks.has(type),
   );
 
-  const filteredEventBlockTypes = Object.values(EventType).filter((type) =>
-    getEventBlockLabel(t)
-      [type].toLowerCase()
-      .includes(searchInput.toLowerCase()),
+  const filteredEventBlockTypes = Object.values(EventType).filter(
+    (type) =>
+      getEventBlockLabel(t)
+        [type].toLowerCase()
+        .includes(searchInput.toLowerCase()) && !hiddenBlocks.has(type),
   );
 
   const filteredIntegrationBlockTypes = Object.values(
@@ -186,7 +193,8 @@ export const BlocksSideBar = () => {
       getIntegrationBlockLabel(t)
         [type].toLowerCase()
         .includes(searchInput.toLowerCase()) &&
-      !legacyIntegrationBlocks.includes(type),
+      !legacyIntegrationBlocks.includes(type) &&
+      !hiddenBlocks.has(type),
   );
 
   return (
@@ -226,82 +234,93 @@ export const BlocksSideBar = () => {
           </Tooltip.Root>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <h4 className="text-sm">
-            {t("editor.sidebarBlocks.blockType.bubbles.heading")}
-          </h4>
-          <div className="grid gap-3 grid-cols-2">
-            {filteredBubbleBlockTypes.map((type) => (
-              <BlockCard
-                key={type}
-                type={type}
-                onMouseDown={initBlockDragging}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h4 className="text-sm">
-            {t("editor.sidebarBlocks.blockType.inputs.heading")}
-          </h4>
-          <div className="grid gap-3 grid-cols-2">
-            {filteredInputBlockTypes.map((type) => (
-              <BlockCard
-                key={type}
-                type={type}
-                onMouseDown={initBlockDragging}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h4 className="text-sm">
-            {t("editor.sidebarBlocks.blockType.logic.heading")}
-          </h4>
-          <div className="grid gap-3 grid-cols-2">
-            {filteredLogicBlockTypes.map((type) => (
-              <BlockCard
-                key={type}
-                type={type}
-                onMouseDown={initBlockDragging}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h4 className="text-sm">
-            {t("editor.sidebarBlocks.blockType.events.heading")}
-          </h4>
-          <div className="grid gap-3 grid-cols-2">
-            {filteredEventBlockTypes.map((type) => (
-              <EventCard
-                key={type}
-                type={type}
-                onMouseDown={initEventDragging}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h4 className="text-sm">
-            {t("editor.sidebarBlocks.blockType.integrations.heading")}
-          </h4>
-          <div className="grid gap-3 grid-cols-2">
-            {filteredIntegrationBlockTypes
-              .concat(filteredForgedBlockIds as any)
-              .map((type) => (
+        {filteredBubbleBlockTypes.length > 0 && (
+          <div className="flex flex-col gap-2">
+            <h4 className="text-sm">
+              {t("editor.sidebarBlocks.blockType.bubbles.heading")}
+            </h4>
+            <div className="grid gap-3 grid-cols-2">
+              {filteredBubbleBlockTypes.map((type) => (
                 <BlockCard
                   key={type}
                   type={type}
                   onMouseDown={initBlockDragging}
                 />
               ))}
+            </div>
           </div>
-        </div>
+        )}
+
+        {filteredInputBlockTypes.length > 0 && (
+          <div className="flex flex-col gap-2">
+            <h4 className="text-sm">
+              {t("editor.sidebarBlocks.blockType.inputs.heading")}
+            </h4>
+            <div className="grid gap-3 grid-cols-2">
+              {filteredInputBlockTypes.map((type) => (
+                <BlockCard
+                  key={type}
+                  type={type}
+                  onMouseDown={initBlockDragging}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {filteredLogicBlockTypes.length > 0 && (
+          <div className="flex flex-col gap-2">
+            <h4 className="text-sm">
+              {t("editor.sidebarBlocks.blockType.logic.heading")}
+            </h4>
+            <div className="grid gap-3 grid-cols-2">
+              {filteredLogicBlockTypes.map((type) => (
+                <BlockCard
+                  key={type}
+                  type={type}
+                  onMouseDown={initBlockDragging}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {filteredEventBlockTypes.length > 0 && (
+          <div className="flex flex-col gap-2">
+            <h4 className="text-sm">
+              {t("editor.sidebarBlocks.blockType.events.heading")}
+            </h4>
+            <div className="grid gap-3 grid-cols-2">
+              {filteredEventBlockTypes.map((type) => (
+                <EventCard
+                  key={type}
+                  type={type}
+                  onMouseDown={initEventDragging}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {filteredIntegrationBlockTypes.length + filteredForgedBlockIds.length >
+          0 && (
+          <div className="flex flex-col gap-2">
+            <h4 className="text-sm">
+              {t("editor.sidebarBlocks.blockType.integrations.heading")}
+            </h4>
+            <div className="grid gap-3 grid-cols-2">
+              {filteredIntegrationBlockTypes
+                .concat(filteredForgedBlockIds as any)
+                .map((type) => (
+                  <BlockCard
+                    key={type}
+                    type={type}
+                    onMouseDown={initBlockDragging}
+                  />
+                ))}
+            </div>
+          </div>
+        )}
 
         {draggedBlockType && (
           <Portal>
