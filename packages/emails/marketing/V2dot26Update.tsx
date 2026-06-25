@@ -10,89 +10,74 @@ void React;
 const imagesBaseUrl = `${env.NEXTAUTH_URL}/images/emails/V2dot26Update`;
 
 export const V2dot26Update = () => (
-  <NewsletterLayout preview="Unveiling Typebot's Latest Innovations - v2.26 Update! 🌟">
+  <NewsletterLayout preview="Typebot v2.26 更新发布，最新创新功能一览！🌟">
     <Text style={text}>
-      Heya, <br />
+      您好， <br />
       <br />
-      Typebot v2.26 was just released. It comes with cool new stuff.
+      Typebot v2.26 刚刚发布，带来了一些酷炫的新功能。
       <br />
       <br />
-      Let's dive into what's new! 🔥
+      让我们一起来看看有什么新变化！🔥
     </Text>
 
     <NewsletterSection
-      title="NocoDB block"
+      title="NocoDB 区块"
       image={{
         src: `${imagesBaseUrl}/nocodb.jpg`,
-        alt: "New NocoDB block",
+        alt: "全新的 NocoDB 区块",
       }}
     >
-      The NocoDB block is a new block that allows you to store and retrieve data
-      from a NocoDB database. It's a powerful tool for building applications
-      that require data storage and retrieval.
+      NocoDB 区块是一个全新的区块，允许您从 NocoDB 数据库中存储和检索数据。这是构建需要数据存储和检索的应用的强大工具。
       <br />
       <br />
-      Finally, a great open-source alternative to existing Google Sheets block.
+      终于有了一个优秀的开源替代方案，可以作为现有 Google Sheets 区块的补充。
     </NewsletterSection>
 
     <NewsletterSection
-      title="Variables panel"
+      title="变量面板"
       image={{
-        alt: "Variables panel",
+        alt: "变量面板",
         src: `${imagesBaseUrl}/variablesPanel.gif`,
       }}
     >
-      Allows you to see all your variables at a glance and edit them with much
-      more comfort 💆
+      让您能够一目了然地查看所有变量，并更轻松地编辑它们 💆
     </NewsletterSection>
 
-    <NewsletterSection title="Transcript variable">
-      The "Set variable" block now has a "Transcript" value option. This injects
-      the entire conversation transcript in a variable. This is useful if you
-      need to provide context for an AI block. <br />
+    <NewsletterSection title="对话记录变量">
+      "设置变量" 区块现在有一个 "对话记录" 值选项。这会将整个对话记录注入到一个变量中。如果您需要为 AI 区块提供上下文，这将非常有用。<br />
       <br />
-      For example you could add in a system prompt:
+      例如，您可以在系统提示中加入：
       <br />
       <br />
-      "Your answer should be based on the context inside the &lt;context&gt; XML
-      element:
+      "您的回答应基于 &lt;context&gt; XML 元素中的上下文：
       <br />
       &lt;context&gt;{"{{"}Transcript{"}}"}&lt;/context&gt;"
     </NewsletterSection>
 
     <NewsletterSection
-      title="New container theme options"
+      title="全新的容器主题选项"
       image={{
-        alt: "Chat window theme options demo",
+        alt: "聊天窗口主题选项演示",
         src: `${imagesBaseUrl}/chatContainerThemeOptions.gif`,
       }}
     >
-      You can now customize the chat window theme with the new container theme
-      options. This allows you to change the background color, border color, and
-      text color of the chat window.
+      您现在可以使用新的容器主题选项自定义聊天窗口主题。您可更改聊天窗口的背景色、边框色和文本颜色。
     </NewsletterSection>
 
-    <NewsletterSection title="New templates">
-      🏃 Quick Carb Calculator - Designed specifically for athlete fueling
-      brands looking to attract and engage active audiences, this chatbot serves
-      as an effective lead magnet by providing instant, customized carbohydrate
-      intake recommendations based on user input.
+    <NewsletterSection title="新模板">
+      🏃 快速碳水计算器 - 专为希望吸引活跃受众的运动营养品牌设计，该聊天机器人根据用户输入即时提供个性化碳水化合物摄入建议，是一个高效的获客工具。
       <br />
       <br />
-      💆‍♀️ Skin Typology - A skin typology expert bot designed as a lead magnet
-      for Typology, this bot asks a series of personalized questions to
-      determine the user's unique skin type. He then receives a detailed
-      diagnosis and tailored skincare AI-based recommendations.
+      💆‍♀️ 肤质类型分析 - 一款专为 Typology 设计的肤质专家机器人，作为获客工具，该机器人会提出一系列个性化问题来确定用户独特的肤质类型，随后提供详细的诊断结果和基于 AI 的个性化护肤建议。
     </NewsletterSection>
 
     <Hr style={hr} />
 
     <Text style={{ ...text, marginBottom: "60px" }}>
-      As always, your feedback is invaluable, so please don't hesitate to share
-      your thoughts.
+      与往常一样，您的反馈对我们至关重要，请随时分享您的想法。
       <br />
       <br />
-      Baptiste.
+      Baptiste。
     </Text>
   </NewsletterLayout>
 );

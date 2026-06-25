@@ -36,7 +36,7 @@ const imagesBaseUrl = `${env.NEXTAUTH_URL}/images/emails/V2dot24Update`;
 export const V2dot24Update = (_: Props) => (
   <Html>
     <Head />
-    <Preview>Unveiling Typebot's Latest Innovations - v2.24 Update! 🌟</Preview>
+    <Preview>Typebot v2.24 更新发布，最新创新功能一览！🌟</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
@@ -49,101 +49,89 @@ export const V2dot24Update = (_: Props) => (
           }}
         />
         <Text style={text}>
-          Hey, <br />
+          您好， <br />
           <br />
-          Typebot v2.24 was just released. This update introduces powerful new
-          blocks and improved tool stability.
+          Typebot v2.24 刚刚发布。本次更新引入了强大的新区块和更稳定的工具性能。
           <br />
           <br />
-          Let's dive into what's new!
+          让我们一起来看看有什么新变化！
         </Text>
 
         <Section style={featureSection}>
-          <Heading style={heading}>2 New AI completion blocks</Heading>
+          <Heading style={heading}>两个新的 AI 生成区块</Heading>
           <Text style={text}>
-            Boost your chatbots with AI-powered responses using the new
-            Anthropic and OpenRouter blocks.
+            使用全新的 Anthropic 和 OpenRouter 区块，以 AI 驱动的回复来增强您的聊天机器人。
             <br />
             <br />
-            With OpenRouter, you can query literaly any AI model you want at the
-            best price
+            借助 OpenRouter，您可以以最优价格调用几乎任何 AI 模型。
             <br />
             <br />
-            With Anthropic, you can generate responses with the latest
-            groundbreaking Claude AI models.
+            借助 Anthropic，您可以使用最新、最具突破性的 Claude AI 模型生成回复。
           </Text>
           <Img
             src={`${imagesBaseUrl}/aiBlocks.jpg`}
-            alt="New AI blocks"
+            alt="全新 AI 区块"
             style={image}
           />
         </Section>
 
         <Section style={featureSection}>
           <Heading style={heading}>
-            Persist chat state between sessions.
+            跨会话保持聊天状态
           </Heading>
           <Text style={text}>
-            Now, if you enable the "Remember user" option, if the user comes
-            back to the typebot, it will display the previous chat state.
+            现在，如果您启用"记住用户"选项，当用户再次回到 typebot 时，它将显示之前的聊天状态。
             <br />
             <br />
-            It also works magically when your bot is embedded 🔥
+            当您的机器人嵌入到页面中时，该功能同样有效 🔥
           </Text>
           <Img
             src={`${imagesBaseUrl}/saveChatState.gif`}
-            alt="Persist chat state demonstration"
+            alt="聊天状态保持演示"
             style={image}
           />
         </Section>
 
         <Section style={featureSection}>
           <Heading style={heading}>
-            Turn Into Option for AI Generation Blocks
+            AI 生成区块的"转为"选项
           </Heading>
           <Text style={text}>
-            Easily switch between different AI services with the new "Turn into"
-            option on AI generation blocks. This convenient feature allows you
-            to experiment with various AI models and choose the best fit for
-            your chatbot.
+            通过 AI 生成区块上的全新"转为"选项，轻松切换不同的 AI 服务。这一便捷功能使您能够尝试各种 AI 模型，并为您的聊天机器人选择最合适的方案。
           </Text>
           <Img
             src={`${imagesBaseUrl}/turnInto.gif`}
-            alt="Turn into option demonstration"
+            alt="转为选项演示"
             style={image}
           />
         </Section>
 
         <Section style={featureSection}>
           <Heading style={heading}>
-            Bug Fixes and Reliability Improvements
+            错误修复与稳定性改进
           </Heading>
           <Text style={text}>
-            We all hate bugs, right? Well, this month I've decided to fixing
-            literaly all of the known issues and reported bugs to make Typebot
-            more reliable.
+            我们都讨厌错误，对吧？本月我决定修复几乎所有已知问题和已报告的错误，让 Typebot 更加可靠。
             <br />
             <br />
-            And from now on I've decided to always focus fixing newly reported
-            bugs. That's that kind of standard I want to set for Typebot.
+            从现在开始，我会始终重点修复新报告的错误。这正是我想要为 Typebot 设定的标准。
             <br />
             <br />
-            Check out the full changelog{" "}
+            查看完整更新日志{" "}
             <Link href="https://github.com/baptisteArno/typebot.io/releases/tag/v2.24.0">
-              here
+              点击此处
             </Link>
-            !
+            ！
           </Text>
         </Section>
 
         <Hr style={hr} />
 
         <Text style={{ ...text, marginBottom: "60px" }}>
-          As always, your feedback is invaluable, so please don't hesitate to
-          share your thoughts.
+          与往常一样，您的反馈对我们至关重要，请随时分享您的想法。
           <br />
           <br />
-          Baptiste.
+          Baptiste。
         </Text>
         <Img
           src={`${env.NEXTAUTH_URL}/images/logo.png`}
@@ -161,7 +149,7 @@ export const V2dot24Update = (_: Props) => (
           target="_blank"
           style={{ ...link, color: "#898989", fontSize: "12px" }}
         >
-          Unsubscribe
+          取消订阅
         </Link>
       </Container>
     </Body>

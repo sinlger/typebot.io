@@ -36,7 +36,7 @@ const imagesBaseUrl = `${env.NEXTAUTH_URL}/images/emails/V2dot23Update`;
 export const V2dot23Update = (_: Props) => (
   <Html>
     <Head />
-    <Preview>Unveiling Typebot's Latest Innovations - v2.23 Update! 🌟</Preview>
+    <Preview>Typebot v2.23 更新发布，最新创新功能一览！🌟</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
@@ -49,96 +49,80 @@ export const V2dot23Update = (_: Props) => (
           }}
         />
         <Text style={text}>
-          Hey, <br />
+          您好， <br />
           <br />
-          I'm thrilled to announce the release of Typebot v2.23, packed with
-          features that enrich your chatbot experience. This update introduces
-          powerful new blocks and enhanced customizability.
+          我很激动地宣布 Typebot v2.23 的发布，它包含了丰富的功能，进一步提升您的聊天机器人体验。本次更新引入了强大的新区块和增强的自定义功能。
           <br />
           <br />
-          Let's dive into what's new!
+          让我们一起来看看有什么新变化！
         </Text>
 
         <Section style={featureSection}>
-          <Heading style={heading}>ElevenLabs Block - Text to Speech</Heading>
+          <Heading style={heading}>ElevenLabs 区块 - 文字转语音</Heading>
           <Text style={text}>
-            Elevate your chatbots with life-like voice outputs. The ElevenLabs
-            block simplifies converting text to realistic voices, making your
-            bots more interactive and engaging.
+            通过逼真的语音输出提升您的聊天机器人体验。ElevenLabs 区块简化了将文字转换为真实语音的过程，使您的机器人更具互动性和吸引力。
           </Text>
           <Img
             src={`${imagesBaseUrl}/elevenlabs.gif`}
-            alt="ElevenLabs Block demo"
+            alt="ElevenLabs 区块演示"
             style={image}
           />
         </Section>
 
         <Section style={featureSection}>
-          <Heading style={heading}>Custom Fonts</Heading>
+          <Heading style={heading}>自定义字体</Heading>
           <Text style={text}>
-            Personalize your bots even further by defining your own custom
-            fonts. This new feature allows you to match your chatbot's
-            typography with your brand identity seamlessly.
+            通过定义您自己的自定义字体，进一步个性化您的机器人。此新功能使您能够将聊天机器人的字体与品牌形象无缝匹配。
           </Text>
         </Section>
 
         <Section style={featureSection}>
-          <Heading style={heading}>Progress Bar</Heading>
+          <Heading style={heading}>进度条</Heading>
           <Text style={text}>
-            Improve user experience with a progress bar. Now, users can easily
-            track their conversation progress, enhancing engagement and
-            completion rates.
+            通过进度条改善用户体验。现在，用户可以轻松追踪对话进度，提高参与度和完成率。
           </Text>
           <Img
             src={`${imagesBaseUrl}/progressBar.gif`}
-            alt="Progress Bar demonstration"
+            alt="进度条演示"
             style={image}
           />
         </Section>
 
         <Section style={featureSection}>
-          <Heading style={heading}>Enhanced Button Inputs</Heading>
+          <Heading style={heading}>增强的按钮输入</Heading>
           <Text style={text}>
-            Speed up your setup with the ability to paste multiple items into
-            the Buttons input. Lists are automatically detected and populated,
-            streamlining the creation process.
+            现在您可以将多个项目粘贴到按钮输入中，加快设置速度。列表将被自动检测并填充，简化创建流程。
           </Text>
         </Section>
 
         <Section style={featureSection}>
           <Heading style={heading}>
-            Advanced Time Filtering in Analytics
+            分析中的高级时间筛选
           </Heading>
           <Text style={text}>
-            Gain deeper insights with the new time filtering options for the
-            Results table and analytics view. This feature allows for more
-            precise data analysis over specific time periods.
+            通过新的时间筛选选项，获得更深入的洞察。该功能可用于结果表格和分析视图，支持在特定时间段内进行更精确的数据分析。
           </Text>
           <Img
             src={`${imagesBaseUrl}/timeFiltering.jpg`}
-            alt="Time filtering option"
+            alt="时间筛选选项"
             style={image}
           />
         </Section>
 
         <Section style={featureSection}>
-          <Heading style={heading}>Together AI Block</Heading>
+          <Heading style={heading}>Together AI 区块</Heading>
           <Text style={text}>
-            Explore new AI possibilities with the Together AI block. This
-            addition lets you harness their OpenAI-like API for even more
-            dynamic and intelligent chatbot interactions.
+            通过 Together AI 区块探索新的 AI 可能性。这一新增功能让您可以利用其类 OpenAI 的 API，实现更动态、更智能的聊天机器人交互。
           </Text>
         </Section>
 
         <Hr style={hr} />
 
         <Text style={{ ...text, marginBottom: "60px" }}>
-          I'm excited for you to try these new features and see how they can
-          enhance your chatbot projects. As always, I'm here to support your
-          journey and look forward to your feedback. 💬
+          我很期待您尝试这些新功能，看看它们如何提升您的聊天机器人项目。与往常一样，我将一直支持您的探索之旅，并期待您的反馈。💬
           <br />
           <br />
-          Baptiste.
+          Baptiste。
         </Text>
         <Img
           src={`${env.NEXTAUTH_URL}/images/logo.png`}
@@ -156,7 +140,7 @@ export const V2dot23Update = (_: Props) => (
           target="_blank"
           style={{ ...link, color: "#898989", fontSize: "12px" }}
         >
-          Unsubscribe
+          取消订阅
         </Link>
       </Container>
     </Body>

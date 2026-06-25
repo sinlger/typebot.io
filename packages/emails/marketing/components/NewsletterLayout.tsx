@@ -46,7 +46,7 @@ export const NewsletterLayout = ({ preview, children }: Props) => (
           target="_blank"
           style={{ ...link, color: "#898989", fontSize: "12px" }}
         >
-          Unsubscribe
+          取消订阅
         </Link>
       </Container>
     </Body>

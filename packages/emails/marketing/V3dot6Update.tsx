@@ -10,154 +10,121 @@ void React;
 const imagesBaseUrl = `${env.NEXTAUTH_URL}/images/emails/V3dot6Update`;
 
 export const V3dot6Update = () => (
-  <NewsletterLayout preview="Typebot v3.6.0 is here with a fresh new brand and exciting features! 🚀">
+  <NewsletterLayout preview="Typebot v3.6.0 发布：全新品牌形象与激动人心的新功能！🚀">
     <Text style={text}>
-      Hey there, <br />
+      您好， <br />
       <br />
-      I'm thrilled to announce that Typebot v3.6.0 has just been released with a
-      brand new look and a ton of powerful features!
+      我很激动地宣布 Typebot v3.6.0 刚刚发布，带来了全新的外观和大量强大的功能！
       <br />
       <br />
-      Let's dive into what's new! 🔥
+      让我们一起来看看有什么新变化！🔥
     </Text>
 
     <NewsletterSection
-      title="Introducing the New Typebot Brand"
+      title="全新 Typebot 品牌形象"
       image={{
         src: `${imagesBaseUrl}/bento.gif`,
-        alt: "New Typebot Brand",
+        alt: "全新 Typebot 品牌",
       }}
     >
-      We've unveiled a fresh new brand identity that perfectly reflects what
-      Typebot is today: a powerful no-code tool for tinkerers and hackers who
-      want to push the concept of chatbots to its full potential. This new look
-      represents our commitment to innovation and flexibility while staying true
-      to our roots.
+      我们推出了全新的品牌标识，完美地反映了 Typebot 当前的定位：一款专为喜欢探索和创新的用户打造的强大无代码工具，让他们能够将聊天机器人的概念发挥到极致。这一新形象代表了我们对创新和灵活性的承诺，同时坚守我们的初心。
     </NewsletterSection>
 
-    <NewsletterSection title="New blocks: PostHog, Deepseek, and Perplexity">
-      <strong>PostHog:</strong> Send events to PostHog and trigger your PostHog
-      workflows. This integration works server-side, ensuring compatibility with
-      non-web browser devices.
+    <NewsletterSection title="新集成区块：PostHog、Deepseek 和 Perplexity">
+      <strong>PostHog：</strong>将事件发送到 PostHog 并触发您的 PostHog 工作流。此集成在服务端运行，确保与非浏览器设备兼容。
       <br />
       <br />
-      <strong>Deepseek & Perplexity:</strong> Similar to our OpenAI block, these
-      new integrations let you chat with Deepseek's and Perplexity's AI models,
-      giving you more options for creating intelligent conversational
-      experiences.
+      <strong>Deepseek 和 Perplexity：</strong>与我们的 OpenAI 区块类似，这些新的集成让您可以与 Deepseek 和 Perplexity 的 AI 模型对话，为您创建智能对话体验提供更多选择。
     </NewsletterSection>
 
     <NewsletterSection
-      title="New Cards Input Block"
+      title="全新卡片输入区块"
       image={{
         src: `${imagesBaseUrl}/cards.gif`,
-        alt: "Cards Input Block Demo",
+        alt: "卡片输入区块演示",
       }}
     >
-      The new Cards input block allows you to display a list of cards in a
-      carousel format. Each card can contain an image, a title, a description,
-      and several buttons - perfect for showcasing products, services, or
-      options in an engaging visual format.
+      新的卡片输入区块允许您以轮播格式展示一系列卡片。每张卡片可包含一张图片、一个标题、一段描述和多个按钮——非常适合以引人入胜的视觉形式展示产品、服务或选项。
     </NewsletterSection>
 
-    <NewsletterSection title="Query Knowledge Base with Dify.AI">
-      The Dify.AI block now includes a "Query knowledge base" action that
-      retrieves the most relevant documents based on a query. This is perfect
-      for creating context-aware AI responses - you can search for content
-      relevant to the user's message and feed those chunks into your AI block
-      for more accurate and informed answers.
+    <NewsletterSection title="使用 Dify.AI 查询知识库">
+      Dify.AI 区块现在包含"查询知识库"操作，可根据查询检索最相关的文档。这非常适合创建具有上下文感知能力的 AI 回复——您可以搜索与用户消息相关的内容，并将这些片段提供给您的 AI 区块，从而获得更准确、更有见地的答案。
     </NewsletterSection>
 
     <NewsletterSection
-      title="Group Auto-Gen Titles with AI"
+      title="AI 自动生成分组标题"
       image={{
         src: `${imagesBaseUrl}/group-gen-titles.gif`,
-        alt: "AI-Generated Group Titles",
+        alt: "AI 生成的分组标题",
       }}
     >
-      Say goodbye to generic "Group #" titles! Once enabled and configured, this
-      feature automatically generates meaningful titles for your groups as you
-      connect new blocks or groups, making your workflow more organized and
-      easier to navigate.
+      告别千篇一律的"Group #"标题！启用并配置后，该功能会在您连接新区块或分组时自动生成有意义的标题，使您的工作流程更有条理、更易于导航。
     </NewsletterSection>
 
     <NewsletterSection
-      title="Internal Values for Buttons and Picture Choices"
+      title="按钮和图片选择的内部值"
       image={{
         src: `${imagesBaseUrl}/internal-value.png`,
-        alt: "Internal Values Demo",
+        alt: "内部值演示",
       }}
     >
-      You can now assign internal values to buttons and picture choices that
-      differ from what's displayed to the user. When a user selects an option,
-      the internal value is saved to your specified variable, giving you more
-      flexibility in data collection and processing.
+      您现在可以为按钮和图片选择分配与展示给用户的内容不同的内部值。当用户选择一个选项时，内部值将保存到您指定的变量中，为数据收集和处理提供更大的灵活性。
     </NewsletterSection>
 
-    <NewsletterSection title="Notable improvements">
-      <strong>Number Format Options:</strong> Format captured numbers as
-      currency, percentage, scientific notation, and more in the Number input
-      block.
+    <NewsletterSection title="其他重要改进">
+      <strong>数字格式选项：</strong>在数字输入区块中将捕获的数字格式化为货币、百分比、科学计数法等。
       <br />
       <br />
-      <strong>File Type Restrictions:</strong> Limit accepted file types in the
-      File upload block by setting up a whitelist of file extensions.
+      <strong>文件类型限制：</strong>通过设置文件扩展名白名单来限制文件上传区块中接受的文件类型。
       <br />
       <br />
-      <strong>Button Layout Options:</strong> Choose between wrap and vertical
-      layouts for your buttons.
+      <strong>按钮布局选项：</strong>为按钮选择换行布局或垂直布局。
       <br />
       <br />
-      <strong>Customizable System Messages:</strong> Overwrite any system
-      message in your bot, including error messages and notifications.
+      <strong>可自定义的系统消息：</strong>可覆盖机器人中的任何系统消息，包括错误消息和通知。
       <br />
       <br />
-      <strong>Device Type Detection:</strong> The Set Variable block now
-      includes a "Device type" option that automatically detects and saves
-      whether your user is on desktop, tablet, or mobile.
+      <strong>设备类型检测：</strong>设置变量区块现在包含"设备类型"选项，可自动检测并保存用户当前使用的设备类型（桌面端、平板或手机）。
       <br />
       <br />
-      <strong>Expandable Images:</strong> Users can now click on images in your
-      bot to view them in fullscreen.
+      <strong>图片放大查看：</strong>用户现在可以点击机器人中的图片进行全屏查看。
     </NewsletterSection>
 
-    <NewsletterSection title="Content and Community Highlights">
-      <strong>From the Typebot Blog:</strong>
+    <NewsletterSection title="内容与社区亮点">
+      <strong>来自 Typebot 博客：</strong>
       <br />•{" "}
       <Link href="https://typebot.io/blog/faq-chatbot">
-        FAQ Chatbot: A Complete Guide to Building One
+        完整指南：如何搭建 FAQ 聊天机器人
       </Link>
       <br />•{" "}
       <Link href="https://typebot.io/blog/whatsapp-chatbot-use-cases">
-        10 Powerful WhatsApp Chatbot Use Cases You Need to Know
+        您需要了解的 10 个强大 WhatsApp 聊天机器人用例
       </Link>
       <br />•{" "}
       <Link href="https://typebot.io/blog/how-to-accept-payment-on-whatsapp-business">
-        How to Accept Payment on WhatsApp Business: A Complete Guide
+        完整指南：如何在 WhatsApp Business 上接受付款
       </Link>
       <br />
       <br />
-      <strong>Amazing Community Creations:</strong>
-      <br />• World's first Visual Novel made with Typebot - by Anthony
-      <br />• Personal Business Strategy Advisor AI Agent - by Anthony
-      <br />• Pop confettis on user chatbot completion - by nefer_l <br />
+      <strong>精彩社区作品：</strong>
+      <br />• 全球首款用 Typebot 制作的视觉小说 - by Anthony
+      <br />• 个人商业策略顾问 AI 智能体 - by Anthony
+      <br />• 用户完成聊天后弹出五彩纸屑 - by nefer_l <br />
       <br />
-      Head over to the awesome-typebots channel in the{" "}
-      <Link href="https://typebot.io/discord">community</Link> to check this all
-      out!
+      前往{" "}
+      <Link href="https://typebot.io/discord">社区</Link>的 awesome-typebots 频道查看所有精彩内容！
     </NewsletterSection>
 
     <Hr style={hr} />
 
     <Text style={text}>
-      Thank you for being part of the Typebot journey.
+      感谢您成为 Typebot 旅程的一部分。
       <br />
       <br />
-      As always, your feedback is invaluable, so please don't hesitate to share
-      your thoughts!
+      与往常一样，您的反馈对我们至关重要，请随时分享您的想法！
       <br />
       <br />
-      Happy bot hacking,
+      祝您机器人构建愉快，
       <br />
       Baptiste
     </Text>
