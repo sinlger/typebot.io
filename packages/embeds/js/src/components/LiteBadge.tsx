@@ -12,7 +12,7 @@ export const LiteBadge = (props: Props) => {
   let attributeObserver: MutationObserver | undefined;
 
   const defaultStyles = {
-    display: "flex",
+    display: "none",
     opacity: "1",
     visibility: "visible",
     "pointer-events": "auto",
@@ -95,7 +95,7 @@ export const LiteBadge = (props: Props) => {
   return (
     <a
       ref={liteBadge}
-      href={"https://typebot.io/?utm_source=litebadge"}
+      href={"#"}
       target="_blank"
       rel="noopener noreferrer"
       class="lite-badge"

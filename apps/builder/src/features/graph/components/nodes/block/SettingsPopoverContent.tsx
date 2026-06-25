@@ -91,6 +91,7 @@ export const SettingsPopoverContent = (props: Props) => {
         type={props.node.type}
         blockDef={blockDef}
         offset={20}
+        isEnabled={false}
       >
         {({ onToggle }) => (
           <div className="flex flex-col gap-3">

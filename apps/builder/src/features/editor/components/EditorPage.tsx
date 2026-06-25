@@ -34,7 +34,7 @@ export const EditorPage = () => {
         className="flex overflow-clip h-screen flex-col"
         ref={editorContainerRef}
       >
-        <VideoOnboardingFloatingWindow type="editor" />
+        {/* <VideoOnboardingFloatingWindow type="editor" /> */}
         {isSuspicious && <SuspectedTypebotBanner typebotId={typebot.id} />}
         <TypebotHeader />
         <div
