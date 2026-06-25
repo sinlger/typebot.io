@@ -22,7 +22,7 @@ interface Props {
 export const UserOnboardingEmail = ({ unsubscribeUrl }: Props) => (
   <Html>
     <Head />
-    <Preview>Welcome to Typebot!</Preview>
+    <Preview>欢迎使用 Typebot！</Preview>
     <Body style={main}>
       <Container
         align="left"
@@ -34,37 +34,33 @@ export const UserOnboardingEmail = ({ unsubscribeUrl }: Props) => (
         }}
       >
         <Text style={bodyText}>
-          Hi,
+          您好，
           <br />
           <br />
-          Thanks for trying out Typebot! I&apos;m Baptiste, the founder. 🙌
+          感谢您试用 Typebot！我是创始人 Baptiste。🙌
           <br />
           <br />
-          I&apos;ve created Typebot because I think it should be easy to create
-          beautiful and engaging chat experiences.
+          我创建 Typebot 的初衷是认为创建美观、引人入胜的聊天体验应该非常简单。
           <br />
           <br />
-          Typebot has been designed to give you all the freedom you need to
-          create the perfect bots for your business while still being super easy
-          to use.
+          Typebot 旨在为您提供充分的自由度，让您轻松为您的业务打造完美的机器人。
           <br />
           <br />
-          Watch this quick 5-minute overview video to get started:
+          观看这段 5 分钟的快速概览视频，开始上手：
           <br />
           <Link href="https://www.youtube.com/watch?v=jp3ggg_42-M">
             https://www.youtube.com/watch?v=jp3ggg_42-M
           </Link>
           <br />
           <br />
-          Join our community on Discord to connect with others and get instant
-          help:
+          加入我们的 Discord 社区，与其他人交流并获得即时帮助：
           <br />
           <Link href="https://typebot.io/discord">
             https://typebot.io/discord
           </Link>
           <br />
           <br />
-          See you soon!
+          期待与您再见！
           <br />
           <br />
           Baptiste.
@@ -72,7 +68,7 @@ export const UserOnboardingEmail = ({ unsubscribeUrl }: Props) => (
         <Hr />
         {unsubscribeUrl ? (
           <Text style={{ ...footerText, marginTop: "24px" }}>
-            <Link href={unsubscribeUrl}>Click here to unsubscribe</Link>
+            <Link href={unsubscribeUrl}>点击此处取消订阅</Link>
           </Text>
         ) : null}
       </Container>

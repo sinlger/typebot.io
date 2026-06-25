@@ -22,11 +22,10 @@ export const ResultsExportLinkEmail = ({ typebotName, fileUrl }: Props) => {
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            You've requested a results export for <strong>{typebotName}</strong>
-            . It was processed and is now ready.
+            您已为 <strong>{typebotName}</strong> 请求了结果导出，已处理完毕。
             <br />
             <br />
-            You can download it <a href={fileUrl}>here</a>.
+            您可以<a href={fileUrl}>在此下载</a>。
           </Text>
           <Hr style={hr} />
           <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
@@ -52,6 +51,6 @@ export const sendResultsExportLinkEmail = async (
 ) =>
   sendEmail({
     to: props.email,
-    subject: "Your results export is ready",
+    subject: "您的结果导出已就绪",
     html: await render(<ResultsExportLinkEmail {...props} />),
   });

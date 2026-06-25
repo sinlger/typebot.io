@@ -80,6 +80,6 @@ export const sendAlmostReachedChatsLimitEmail = async ({
   ComponentProps<typeof AlmostReachedChatsLimitEmail>) =>
   sendEmail({
     to,
-    subject: `You're close to your included monthly chats`,
+    subject: `您即将达到本月包含的会话额度`,
     html: await render(<AlmostReachedChatsLimitEmail {...props} />),
   });

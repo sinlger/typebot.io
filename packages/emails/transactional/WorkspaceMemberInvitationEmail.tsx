@@ -43,18 +43,18 @@ export const WorkspaceMemberInvitationEmail = ({
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            You have been invited by {hostEmail} to collaborate on his workspace{" "}
-            <strong>{workspaceName}</strong> as a team member.
+            {hostEmail} 邀请您作为团队成员协作他的工作区{" "}
+            <strong>{workspaceName}</strong>。
             <br />
             <br />
-            From now on you will see this workspace in your dashboard 👍
+            此后，您将在仪表盘中看到此工作区 👍
             <br />
             <br />
-            Make sure to log in as <i>{guestEmail}</i>.
+            请确保以 <i>{guestEmail}</i> 账户登录。
           </Text>
 
           <Button href={url} style={primaryButton}>
-            Go to workspace
+            前往工作区
           </Button>
 
           <Hr style={hr} />
@@ -79,7 +79,7 @@ export const sendWorkspaceMemberInvitationEmail = async (
 ) =>
   sendEmail({
     to: props.guestEmail,
-    subject: `You've been invited to collaborate`,
+    subject: `您已被邀请协作`,
     html: await render(<WorkspaceMemberInvitationEmail {...props} />),
     replyTo: props.hostEmail,
   });

@@ -43,25 +43,20 @@ export const BillingCycleResetFailedEmail = ({
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            Your workspace <strong>{workspaceName}</strong> has been temporarily
-            paused due to a payment issue.
+            因支付问题，您的工作区 <strong>{workspaceName}</strong> 已被暂时暂停。
             <br />
             <br />
-            We detected {readableChatsUsed} chats in a short period, which
-            exceeded our fraud prevention threshold. We attempted to charge your
-            account and reset your billing cycle, but the payment failed.
+            我们检测到短时间内 <strong>{readableChatsUsed}</strong> 次会话，超出了防欺诈阈值。我们尝试向您的账户扣费并重置计费周期，但付款失败。
             <br />
             <br />
-            Your workspace has been paused to prevent further charges. Your bots
-            will not respond to new conversations until this is resolved.
+            为避免产生更多费用，您的工作区已被暂停。问题解决之前，您的机器人将不会响应新的对话。
             <br />
             <br />
-            Please contact our support team to resolve this issue and restore
-            access to your workspace.
+            请联系我们的支持团队以解决此问题并恢复工作区的访问权限。
           </Text>
 
           <Button href="mailto:support@typebot.io" style={primaryButton}>
-            Contact support
+            联系客服
           </Button>
 
           <Hr style={hr} />
@@ -86,6 +81,6 @@ export const sendBillingCycleResetFailedEmail = async ({
   ComponentProps<typeof BillingCycleResetFailedEmail>) =>
   sendEmail({
     to,
-    subject: "Action required: Your workspace has been paused",
+    subject: "需要处理：您的工作区已暂停",
     html: await render(<BillingCycleResetFailedEmail {...props} />),
   });

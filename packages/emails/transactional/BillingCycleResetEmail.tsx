@@ -90,6 +90,6 @@ export const sendBillingCycleResetEmail = async ({
   ComponentProps<typeof BillingCycleResetEmail>) =>
   sendEmail({
     to,
-    subject: "Your billing cycle has been reset early",
+    subject: "您的计费周期已被提前重置",
     html: await render(<BillingCycleResetEmail {...props} />),
   });

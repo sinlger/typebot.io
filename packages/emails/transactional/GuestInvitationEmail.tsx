@@ -45,19 +45,18 @@ export const GuestInvitationEmail = ({
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            You have been invited by {hostEmail} to collaborate on his typebot{" "}
-            <strong>{typebotName}</strong>.
+            {hostEmail} 邀请您协作编辑他的 typebot{" "}
+            <strong>{typebotName}</strong>。
             <br />
             <br />
-            From now on you will see this typebot in your dashboard under his
-            workspace &quot;{workspaceName}&quot; 👍
+            此后，您将在仪表盘中他的工作区 &quot;{workspaceName}&quot; 下看到此 typebot 👍
             <br />
             <br />
-            Make sure to log in as <i>{guestEmail}</i>.
+            请确保以 <i>{guestEmail}</i> 账户登录。
           </Text>
 
           <Button href={url} style={primaryButton}>
-            Go to typebot
+            前往 typebot
           </Button>
 
           <Hr style={hr} />
@@ -83,7 +82,7 @@ export const sendGuestInvitationEmail = async (
 ) =>
   sendEmail({
     to: props.guestEmail,
-    subject: `You've been invited to collaborate`,
+    subject: `您已被邀请协作`,
     html: await render(<GuestInvitationEmail {...props} />),
     replyTo: props.hostEmail,
   });

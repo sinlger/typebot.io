@@ -67,6 +67,6 @@ export const sendLoginCodeEmail = async ({
 }: Pick<SendMailOptions, "to"> & ComponentProps<typeof LoginCodeEmail>) =>
   sendEmail({
     to,
-    subject: "Sign in to Typebot",
+    subject: "登录 Typebot",
     html: await render(<LoginCodeEmail {...props} />),
   });

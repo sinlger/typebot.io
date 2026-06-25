@@ -49,7 +49,7 @@ export const DefaultBotNotificationEmail = ({ resultsUrl, answers }: Props) => {
             );
           })}
           <Button style={primaryButton} href={resultsUrl}>
-            Go to results
+            前往结果页
           </Button>
         </Container>
       </Body>

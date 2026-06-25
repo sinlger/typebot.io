@@ -43,15 +43,14 @@ export const ReachedChatsLimitEmail = ({ chatsLimit, url }: Props) => {
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            You&apos;ve reached your {readableChatsLimit} monthly chats limit.
+            您已达到月度 {readableChatsLimit} 次会话的上限。
             <br />
             <br />
-            If you&apos;d like your bots to continue chatting with your users
-            this month, then you need to upgrade your plan. 🚀
+            如果您希望机器人本月继续与用户对话，需要升级您的套餐。🚀
           </Text>
 
           <Button href={url} style={primaryButton}>
-            Upgrade workspace
+            升级工作区
           </Button>
 
           <Hr style={hr} />
@@ -76,6 +75,6 @@ export const sendReachedChatsLimitEmail = async ({
   ComponentProps<typeof ReachedChatsLimitEmail>) =>
   sendEmail({
     to,
-    subject: `You've reached your monthly chats limit`,
+    subject: `您已达到月度会话上限`,
     html: await render(<ReachedChatsLimitEmail {...props} />),
   });

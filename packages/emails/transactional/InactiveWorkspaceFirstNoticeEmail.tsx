@@ -34,32 +34,27 @@ export const InactiveWorkspaceFirstNoticeEmail = ({
       <Container style={container}>
         <Logo />
         <Text style={paragraph}>
-          It's been at least 60+ days since <strong>{workspaceName}</strong>{" "}
-          workspace has been inactive. Meaning you did not log in or your
-          typebots did not get any traffic in the last 60 days. <br />
+          <strong>{workspaceName}</strong> 工作区已经超过 60 天没有活动了。这意味着您在过去 60 天内没有登录，或者您的 typebot 没有收到任何流量。<br />
           <br />
           <strong>
-            We’ve automatically scheduled it for deletion in 30 days.
+            我们已自动将其安排在 30 天后删除。
           </strong>{" "}
-          All its typebots and collected results will be permanently deleted.
+          其中的所有 typebot 和收集的结果数据都将被永久删除。
         </Text>
         <Text>
-          You are receiving this email because you are an admin of that
-          workspace.
+          您收到此邮件是因为您是该工作区的管理员。
         </Text>
         <Text style={paragraph}>
-          To keep your workspace active, just{" "}
+          要保持工作区活跃，只需{" "}
           <Link
             href={`${env.NEXTAUTH_URL}/typebots?redirectPath=${encodeURIComponent(`/w/${workspaceId}/typebots`)}`}
           >
-            log in to your Typebot account
+            登录您的 Typebot 账户
           </Link>{" "}
-          and it will be marked as active again.
+          即可将其重新标记为活跃状态。
         </Text>
         <Text style={paragraph}>
-          This can be a good opportunity to re-explore Typebot! A lot of new
-          features have been added since you last logged in including new
-          blocks, more AI integrations and a ton of other improvements.
+          这也是重新探索 Typebot 的好机会！自您上次登录以来，我们添加了许多新功能，包括新的区块、更多的 AI 集成以及大量其他改进。
         </Text>
         <Hr style={hr} />
         <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
@@ -68,7 +63,7 @@ export const InactiveWorkspaceFirstNoticeEmail = ({
           target="_blank"
           style={{ ...link, color: "#898989", fontSize: "12px" }}
         >
-          Unsubscribe
+          取消订阅
         </Link>
       </Container>
     </Body>
@@ -88,6 +83,6 @@ export const sendInactiveWorkspaceFirstNoticeEmail = async ({
   ComponentProps<typeof InactiveWorkspaceFirstNoticeEmail>) =>
   sendEmail({
     to,
-    subject: `Your '${props.workspaceName}' workspace in Typebot is inactive and will be deleted soon`,
+    subject: `您在 Typebot 中的 '${props.workspaceName}' 工作区已不活跃，即将被删除`,
     html: await render(<InactiveWorkspaceFirstNoticeEmail {...props} />),
   });
