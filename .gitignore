@@ -39,6 +39,7 @@ typebotsToFix.json
 snapshots
 
 .env
+.env.prod
 .typebot-build
 
 .tolgee
@@ -99,3 +100,11 @@ content-collections.d.ts
 .claude/skills/typebot-stripe
 .claude/skills/vercel
 ECS_CONNECTION.md
+*tar.gz
+
+# 本机部署产物与脚手架(只手写的 ecosystem.config.js / nginx-*.conf 入库)
+deploy/dist/
+deploy/ecs/
+
+# Claude Code 本机工具白名单
+.claude/settings.json
