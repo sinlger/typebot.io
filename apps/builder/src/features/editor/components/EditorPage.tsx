@@ -4,7 +4,6 @@ import { Seo } from "@/components/Seo";
 import { Graph } from "@/features/graph/components/Graph";
 import { GraphDndProvider } from "@/features/graph/providers/GraphDndProvider";
 import { GraphProvider } from "@/features/graph/providers/GraphProvider";
-import { VideoOnboardingFloatingWindow } from "@/features/onboarding/components/VideoOnboardingFloatingWindow";
 import { PreviewDrawer } from "@/features/preview/components/PreviewDrawer";
 import { VariablesDrawer } from "@/features/preview/components/VariablesDrawer";
 import { useWorkspace } from "@/features/workspace/WorkspaceProvider";
