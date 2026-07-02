@@ -115,7 +115,7 @@ export const GroupTitlesAutoGenForm = ({
               />
             )}
             <MoreInfoTooltip>
-              We recommend choosing a small model for this feature
+              针对这个功能，我们建议使用较小的模型。
             </MoreInfoTooltip>
           </div>
         )}
