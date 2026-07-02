@@ -71,7 +71,7 @@ export async function* handleStreamExportJob({
     },
   });
   if (!typebot || (await isReadTypebotForbidden(typebot, user)))
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 
   const queue = await Effect.runPromise(
     Queue.unbounded<ExportResultsWorkflowStatusChunk | null>(),

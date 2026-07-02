@@ -52,7 +52,7 @@ export const handleGetResult = async ({
     },
   });
   if (!typebot || (await isReadTypebotForbidden(typebot, user)))
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
   const results = await prisma.result.findMany({
     where: {
       id: input.resultId,

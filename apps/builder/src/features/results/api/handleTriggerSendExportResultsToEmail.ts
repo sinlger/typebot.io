@@ -56,7 +56,7 @@ export const handleTriggerSendExportResultsToEmail = async ({
     },
   });
   if (!typebot || (await isReadTypebotForbidden(typebot, user)))
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 
   const program = Effect.gen(function* () {
     const client = yield* ResultsWorkflowsRpcClient;

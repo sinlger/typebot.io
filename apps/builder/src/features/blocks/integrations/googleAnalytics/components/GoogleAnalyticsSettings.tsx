@@ -71,7 +71,7 @@ export const GoogleAnalyticsSettings = ({
               <Field.Label>Event category:</Field.Label>
               <DebouncedTextInputWithVariablesButton
                 defaultValue={options?.category}
-                placeholder="Example: Typebot"
+                placeholder="Example: QinglBot"
                 onValueChange={updateCategory}
               />
             </Field.Root>

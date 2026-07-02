@@ -55,7 +55,7 @@ export const generateGroupTitle = authenticatedProcedure
       });
 
       if (!typebot || (await isWriteTypebotForbidden(typebot, user)))
-        throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+        throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 
       const groupTitlesAutoGeneration = groupTitlesAutoGenerationSchema.parse(
         user.groupTitlesAutoGeneration,

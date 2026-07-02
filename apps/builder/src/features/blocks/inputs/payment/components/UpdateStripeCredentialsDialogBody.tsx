@@ -130,7 +130,7 @@ export const UpdateStripeCredentialsDialogBody = ({
           <Input
             defaultValue={stripeConfig?.name}
             onValueChange={handleNameChange}
-            placeholder="Typebot"
+            placeholder="QinglBot"
           />
         </Field.Root>
         <Field.Root>

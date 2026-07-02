@@ -74,7 +74,7 @@ export const trackClientEvents = authenticatedProcedure
       if ("typebotId" in event) {
         const typebot = typebots.find((t) => t.id === event.typebotId);
         if (!typebot || (await isWriteTypebotForbidden(typebot, user)))
-          throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+          throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
       }
     }
 

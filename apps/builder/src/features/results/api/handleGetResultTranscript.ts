@@ -66,7 +66,7 @@ export const handleGetResultTranscript = async ({
     !typebot?.publishedTypebot ||
     (await isReadTypebotForbidden(typebot, user))
   )
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 
   const result = await prisma.result.findUnique({
     where: {

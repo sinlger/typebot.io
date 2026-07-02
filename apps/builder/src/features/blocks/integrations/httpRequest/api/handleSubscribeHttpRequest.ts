@@ -32,7 +32,7 @@ export const handleSubscribeHttpRequest = async ({
   });
 
   if (!typebot)
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 
   const groups = parseGroups(typebot.groups, {
     typebotVersion: typebot.version,

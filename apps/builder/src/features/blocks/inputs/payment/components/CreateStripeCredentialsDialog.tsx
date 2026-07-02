@@ -133,7 +133,7 @@ export const CreateStripeCredentialsDialogBody = ({
         <Field.Label>
           {t("blocks.inputs.payment.settings.stripeConfig.accountName.label")}
         </Field.Label>
-        <Input onValueChange={handleNameChange} placeholder="Typebot" />
+        <Input onValueChange={handleNameChange} placeholder="QinglBot" />
       </Field.Root>
       <Field.Root>
         <Field.Label>

@@ -57,7 +57,7 @@ export const handleDeleteResults = async ({
     },
   });
   if (!typebot || (await isWriteTypebotForbidden(typebot, user)))
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
   const { success } = await archiveResults(prisma)({
     typebot: {
       id: typebotId,
@@ -71,5 +71,5 @@ export const handleDeleteResults = async ({
   });
 
   if (!success)
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 };

@@ -33,7 +33,7 @@ export const handleGetResultExample = async ({
   });
 
   if (!typebotResult)
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 
   const typebot = {
     groups: parseGroups(typebotResult.groups, {

@@ -106,7 +106,7 @@ export const handleUpdateTypebot = async ({
     (await isWriteTypebotForbidden(existingTypebot, user))
   )
     throw new ORPCError("NOT_FOUND", {
-      message: "Typebot not found",
+      message: "QinglBot not found",
     });
 
   const conflictMarginMs = 5 * 1000;

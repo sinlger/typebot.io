@@ -58,7 +58,7 @@ export const handleGetTypebot = async ({
     (await isReadTypebotForbidden(existingTypebot, user))
   )
     throw new ORPCError("NOT_FOUND", {
-      message: "Typebot not found",
+      message: "QinglBot not found",
     });
 
   try {

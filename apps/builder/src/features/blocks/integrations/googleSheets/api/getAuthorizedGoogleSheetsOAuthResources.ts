@@ -58,7 +58,7 @@ export const getAuthorizedGoogleSheetsOAuthResources = async ({
   });
 
   if (!typebot || (await isWriteTypebotForbidden(typebot, user)))
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 
   return { workspace, typebot };
 };

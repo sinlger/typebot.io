@@ -179,7 +179,7 @@ const parseFilePath = async ({
       id: authenticatedUserId,
     }))
   )
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
   if (!("blockId" in input)) {
     return createUploadSlotFilePath({
       prefix: `public/workspaces/${typebot.workspaceId}/typebots/${input.typebotId}`,

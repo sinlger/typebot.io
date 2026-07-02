@@ -21,7 +21,7 @@ export const handleGetTypebotBlocks = async ({
   });
 
   if (!typebot)
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "QinglBot not found" });
 
   return { groups: typebot.groups };
 };
