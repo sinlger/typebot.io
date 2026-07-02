@@ -14,6 +14,7 @@ export const icp = {
 
 export const navLinks = [
   { label: "核心优势", href: "#features" },
+  { label: "使用场景", href: "#use-cases" },
   { label: "可视化画布", href: "#editor-preview" },
   { label: "互动体验", href: "#chat-simulator" },
   { label: "资费方案", href: "#pricing" },

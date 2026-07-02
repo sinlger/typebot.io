@@ -1,6 +1,7 @@
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
+import { UseCases } from "@/components/sections/UseCases";
 import { EditorPreview } from "@/components/sections/EditorPreview";
 import { ChatSimulator } from "@/components/sections/ChatSimulator";
 import { Pricing } from "@/components/sections/Pricing";
@@ -15,6 +16,7 @@ export default function App() {
       <main>
         <Hero />
         <Features />
+        <UseCases />
         <EditorPreview />
         <ChatSimulator />
         <Pricing />
