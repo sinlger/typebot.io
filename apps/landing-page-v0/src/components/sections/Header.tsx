@@ -27,16 +27,10 @@ export function Header() {
         {/* 桌面操作按钮 */}
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href={signinUrl}
-            className="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors px-3 py-2"
-          >
-            进入控制台
-          </a>
-          <a
             href={registerUrl}
             className="text-sm font-semibold text-white bg-linear-to-r from-brand-600 to-cyan-600 hover:from-brand-700 hover:to-cyan-700 px-5 py-2.5 rounded-xl shadow-lg shadow-brand-500/20 transition-all hover:-translate-y-0.5"
           >
-            免费体验
+            进入控制台
           </a>
         </div>
 
@@ -68,16 +62,9 @@ export function Header() {
             <a
               href={signinUrl}
               onClick={() => setOpen(false)}
-              className="text-center text-sm font-medium text-slate-700 px-3 py-2.5 rounded-lg border border-slate-200"
-            >
-              进入控制台
-            </a>
-            <a
-              href={registerUrl}
-              onClick={() => setOpen(false)}
               className="text-center text-sm font-semibold text-white bg-linear-to-r from-brand-600 to-cyan-600 px-3 py-2.5 rounded-xl"
             >
-              免费注册
+              进入控制台
             </a>
           </div>
         </div>
