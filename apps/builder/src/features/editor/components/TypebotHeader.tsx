@@ -38,10 +38,7 @@ export const TypebotHeader = () => {
   const handleHelpClick = () => {
     isCloudProdInstance() && workspace?.plan && workspace.plan !== Plan.FREE
       ? onOpen()
-      : window.open(
-          "https://docs.typebot.com/guides/how-to-get-help",
-          "_blank",
-        );
+      : onOpen()
   };
 
   if (currentUserMode === "guest") return <GuestTypebotHeader />;
@@ -225,12 +222,12 @@ const LeftElements = ({
             </Tooltip.Root>
           </div>
         )}
-        <Button onClick={onHelpClick} variant="secondary" size="sm">
+        {/* <Button onClick={onHelpClick} variant="secondary" size="sm">
           <CustomerSupportIcon />
           <span className="hidden xl:inline">
             {t("editor.header.helpButton.label")}
           </span>
-        </Button>
+        </Button> */}
       </div>
       {isSavingLoading && (
         <div className="flex items-center gap-2">
