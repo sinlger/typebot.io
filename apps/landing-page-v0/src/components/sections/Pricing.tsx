@@ -49,7 +49,7 @@ export function Pricing() {
         </div>
 
         {/* 套餐卡片 */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {pricingPlans.map((plan) => {
             const price =
               cycle === "monthly" ? plan.monthly : plan.yearly;
@@ -66,7 +66,7 @@ export function Pricing() {
               return (
                 <div
                   key={plan.name}
-                  className="relative -translate-y-2 rounded-3xl bg-linear-to-b from-brand-600 to-teal-700 border-2 border-brand-300 p-8 shadow-2xl shadow-brand-500/20"
+                  className="relative flex flex-col h-full rounded-3xl bg-linear-to-b from-brand-600 to-teal-700 border-2 border-brand-300 p-8 shadow-2xl shadow-brand-500/20"
                 >
                   {plan.badge && (
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-brand-700 text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">
@@ -78,7 +78,7 @@ export function Pricing() {
                     <span className="text-4xl font-bold text-white">{priceDisplay}</span>
                     <span className="text-sm text-brand-100">{plan.unit}</span>
                   </div>
-                  <ul className="mt-6 space-y-3">
+                  <ul className="mt-6 space-y-3 flex-1">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-start gap-2 text-sm text-white/90">
                         <Check className="w-4 h-4 text-brand-100 shrink-0 mt-0.5" />
@@ -101,14 +101,14 @@ export function Pricing() {
               return (
                 <div
                   key={plan.name}
-                  className="rounded-3xl bg-dark-950 border border-slate-800 p-8 shadow-xl"
+                  className="flex flex-col h-full rounded-3xl bg-dark-950 border border-slate-800 p-8 shadow-xl"
                 >
                   <h3 className="text-lg font-bold text-white">{plan.name}</h3>
                   <div className="mt-4">
                     <span className="text-3xl font-bold text-white">{plan.priceLabel}</span>
                     <span className="block text-sm text-slate-400 mt-1">{plan.unit}</span>
                   </div>
-                  <ul className="mt-6 space-y-3">
+                  <ul className="mt-6 space-y-3 flex-1">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-start gap-2 text-sm text-slate-300">
                         <Check className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
@@ -130,14 +130,14 @@ export function Pricing() {
             return (
               <div
                 key={plan.name}
-                className="rounded-3xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:border-brand-200 transition-all"
+                className="flex flex-col h-full rounded-3xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:border-brand-200 transition-all"
               >
                 <h3 className="text-lg font-bold text-slate-900">{plan.name}</h3>
                 <div className="mt-4 flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-slate-900">{priceDisplay}</span>
                   <span className="text-sm text-slate-500">{plan.unit}</span>
                 </div>
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-6 space-y-3 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-slate-600">
                       <Check className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
