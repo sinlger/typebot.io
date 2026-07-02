@@ -1,8 +1,10 @@
 import { createDeepSeek } from "@ai-sdk/deepseek";
 import { runChatCompletion } from "@typebot.io/ai/runChatCompletion";
 import { runChatCompletionStream } from "@typebot.io/ai/runChatCompletionStream";
+import { runGenerateVariables } from "@typebot.io/ai/runGenerateVariables";
 import { createActionHandler } from "@typebot.io/forge";
 import { createChatCompletion } from "./actions/createChatCompletions";
+import { generateVariables } from "./actions/generateVariables";
 
 export default [
   createActionHandler(createChatCompletion, {
@@ -74,6 +76,25 @@ export default [
           sessionStore,
         });
       },
+    },
+  }),
+  createActionHandler(generateVariables, {
+    server: ({ credentials, options, variables, logs }) => {
+      if (credentials?.apiKey === undefined)
+        return logs.add("No API key provided");
+
+      if (options.model === undefined) return logs.add("No model provided");
+
+      return runGenerateVariables({
+        model: createDeepSeek({
+          apiKey: credentials.apiKey,
+          baseURL: credentials.baseUrl ?? undefined,
+        })(options.model),
+        variablesToExtract: options.variablesToExtract,
+        prompt: options.prompt,
+        variables,
+        logs,
+      });
     },
   }),
 ];
