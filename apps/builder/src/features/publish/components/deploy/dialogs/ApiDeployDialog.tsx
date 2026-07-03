@@ -17,7 +17,7 @@ export const ApiDeployDialog = ({
   const { typebot } = useTypebot();
 
   const replyBody = `{
-  "message": "This is my reply"
+  "message": "这是我的回复"
 }`;
 
   return (
@@ -29,7 +29,7 @@ export const ApiDeployDialog = ({
           <Alert.Root>
             <InformationSquareIcon />
             <Alert.Description>
-              You need to publish your bot first.
+              你需要先发布你的机器人
             </Alert.Description>
           </Alert.Root>
         )}
@@ -37,7 +37,7 @@ export const ApiDeployDialog = ({
           <li>
             <div className="flex flex-col gap-2">
               <p>
-                To start the chat, send a <code>POST</code> request to
+                要开始聊天，请向以下地址发送 <code>POST</code> 请求：
               </p>
               <CodeEditor
                 isReadOnly
@@ -49,13 +49,12 @@ export const ApiDeployDialog = ({
             </div>
           </li>
           <li>
-            The first response will contain a <code>sessionId</code> that you
-            will need for subsequent requests.
+            首次响应将包含一个 <code>sessionId</code>，您在后续请求中需要使用它。
           </li>
           <li>
             <div className="flex flex-col gap-2">
               <p>
-                To send replies, send <code>POST</code> requests to
+                要发送回复，请向以下地址发送 <code>POST</code> 请求：
               </p>
               <CodeEditor
                 isReadOnly
@@ -64,24 +63,23 @@ export const ApiDeployDialog = ({
                   typebot?.customDomain,
                 )}/api/v1/sessions/<ID_FROM_FIRST_RESPONSE>/continueChat`}
               />
-              <p>With the following JSON body:</p>
+              <p>并附带以下 JSON 请求体：</p>
               <CodeEditor isReadOnly lang={"json"} value={replyBody} />
               <p>
-                Replace <code>{"<ID_FROM_FIRST_RESPONSE>"}</code> with{" "}
-                <code>sessionId</code>.
+                请将 <code>{"<ID_FROM_FIRST_RESPONSE>"}</code> 替换为 <code>sessionId</code>。
               </p>
             </div>
           </li>
         </ol>
         <p className="text-sm">
-          Check out the{" "}
+          查看{" "}
           <TextLink
             href="https://docs.typebot.com/api-reference/chat/start-chat"
             isExternal
           >
-            API reference
+            API 参考
           </TextLink>{" "}
-          for more information
+          以获取更多信息
         </p>
       </Dialog.Popup>
     </Dialog.Root>

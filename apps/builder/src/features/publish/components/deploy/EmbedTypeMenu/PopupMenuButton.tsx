@@ -30,7 +30,7 @@ export const PopupMenuButton = ({
       <div className="flex flex-col gap-1">
         <p className="text-lg font-medium">Popup</p>
         <p className="text-sm text-gray-500 leading-[1.2]">
-          Embed in a popup on top of your website
+          以弹窗的形式嵌入在您的网站
         </p>
       </div>
     </Button>

@@ -25,7 +25,7 @@ export const ApiPreviewInstructions = ({
         : undefined;
 
   const replyBody = `{
-  "message": "This is my reply"
+  "message": "这是我的回复"
 }`;
 
   return (
@@ -34,16 +34,16 @@ export const ApiPreviewInstructions = ({
     >
       <ol className="flex flex-col gap-6 px-1">
         <li>
-          All your requests need to be authenticated with an API token.{" "}
+          所有请求都需要使用 API 令牌进行身份验证。{" "}
           <TextLink href="https://docs.typebot.com/api-reference/authentication">
-            See instructions
+            查看说明
           </TextLink>
           .
         </li>
         <li>
           <div className="flex flex-col gap-2">
             <p>
-              To start the chat, send a <code>POST</code> request to
+              要开始聊天，请向以下地址发送 <code>POST</code> 请求：
             </p>
             <CodeEditor
               isReadOnly
@@ -54,20 +54,19 @@ export const ApiPreviewInstructions = ({
             />
             {startPreviewFrom && (
               <>
-                <p>with the following JSON body:</p>
+                <p>并附带以下 JSON 请求体：</p>
                 <CodeEditor isReadOnly lang={"json"} value={startParamsBody} />
               </>
             )}
           </div>
         </li>
         <li>
-          The first response will contain a <code>sessionId</code> that you will
-          need for subsequent requests.
+          首次响应将包含一个 <code>sessionId</code>，您在后续请求中需要使用它。
         </li>
         <li>
           <div className="flex flex-col gap-2">
             <p>
-              To send replies, send <code>POST</code> requests to
+              要发送回复，请向以下地址发送 <code>POST</code> 请求：
             </p>
             <CodeEditor
               isReadOnly
@@ -76,24 +75,23 @@ export const ApiPreviewInstructions = ({
                 typebot?.customDomain,
               )}/api/v1/sessions/<ID_FROM_FIRST_RESPONSE>/continueChat`}
             />
-            <p>With the following JSON body:</p>
+            <p>并附带以下 JSON 请求体：</p>
             <CodeEditor isReadOnly lang={"json"} value={replyBody} />
             <p>
-              Replace <code>{"<ID_FROM_FIRST_RESPONSE>"}</code> with{" "}
-              <code>sessionId</code>.
+              请将 <code>{"<ID_FROM_FIRST_RESPONSE>"}</code> 替换为 <code>sessionId</code>。
             </p>
           </div>
         </li>
       </ol>
       <p className="text-sm pl-1">
-        Check out the{" "}
+        查看{" "}
         <TextLink
           href="https://docs.typebot.com/api-reference/chat/start-preview-chat"
           isExternal
         >
-          API reference
+          API 参考
         </TextLink>{" "}
-        for more information
+        以获取更多信息
       </p>
     </div>
   );

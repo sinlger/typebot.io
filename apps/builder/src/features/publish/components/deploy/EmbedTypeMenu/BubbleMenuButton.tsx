@@ -29,7 +29,7 @@ export const BubbleMenuButton = ({
       <div className="flex flex-col gap-1">
         <p className="text-lg font-medium">Bubble</p>
         <p className="text-sm text-gray-500 leading-[1.2]">
-          Embed in a chat bubble
+          将其嵌入到聊天气泡中
         </p>
       </div>
     </Button>

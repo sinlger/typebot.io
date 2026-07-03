@@ -28,7 +28,7 @@ export const IframeDeployDialog = ({
           <Alert.Root>
             <InformationSquareIcon />
             <Alert.Description>
-              You need to publish your bot first.
+              你需要先发布你的机器人
             </Alert.Description>
           </Alert.Root>
         )}

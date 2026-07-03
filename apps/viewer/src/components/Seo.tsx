@@ -49,7 +49,7 @@ export const SEO = ({
           name="description"
           content={
             description ??
-            "Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form."
+            "无需编写任何代码，就能构建精美的对话式表单，并直接嵌入你的应用中。不仅能让回复率翻三倍，收集到的反馈也比传统表单更有价值。"
           }
         />
 
@@ -61,7 +61,7 @@ export const SEO = ({
           property="og:description"
           content={
             description ??
-            "Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form."
+            "无需编写任何代码，就能构建精美的对话式表单，并直接嵌入你的应用中。不仅能让回复率翻三倍，收集到的反馈也比传统表单更有价值。"
           }
         />
         <meta
@@ -83,7 +83,7 @@ export const SEO = ({
           property="twitter:description"
           content={
             description ??
-            "Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form."
+            "无需编写任何代码，就能构建精美的对话式表单，并直接嵌入你的应用中。不仅能让回复率翻三倍，收集到的反馈也比传统表单更有价值。"
           }
         />
         <meta

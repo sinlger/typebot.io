@@ -26,7 +26,7 @@ export const StandardMenuButton = ({
       <div className="flex flex-col gap-1">
         <p className="text-lg font-medium">Standard</p>
         <p className="text-sm text-gray-500 leading-[1.2]">
-          Embed in a container on your site
+          将表单作为一个区块（或容器）直接嵌入到您的网站中
         </p>
       </div>
     </Button>

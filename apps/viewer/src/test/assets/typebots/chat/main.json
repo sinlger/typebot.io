@@ -415,7 +415,7 @@
     },
     "typingEmulation": { "enabled": true, "speed": 300, "maxDelay": 1.5 },
     "metadata": {
-      "description": "Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form."
+      "description": "无需编写任何代码，就能构建精美的对话式表单，并直接嵌入你的应用中。不仅能让回复率翻三倍，收集到的反馈也比传统表单更有价值。"
     }
   },
   "createdAt": "2024-07-16T12:38:39.850Z",
