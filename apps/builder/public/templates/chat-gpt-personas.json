@@ -25,7 +25,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄"
+                    "text": "您需要添加您的OpenAI凭证才能使此机器人正常工作。🪄"
                   }
                 ]
               }
@@ -41,11 +41,11 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此群组并将 "
                   },
-                  { "bold": true, "text": "Start" },
-                  { "text": " block with " },
-                  { "bold": true, "text": "Intro" },
+                  { "bold": true, "text": "开始" },
+                  { "text": " 事件与 " },
+                  { "bold": true, "text": "介绍" },
                   { "text": " 🚀" }
                 ]
               }
@@ -108,12 +108,12 @@
             {
               "id": "x18iwzwmbzi9jjpnwij1861i",
               "outgoingEdgeId": "mxl8lftsj3pbmj4g24ymxajo",
-              "content": "Continue"
+              "content": "继续"
             },
             {
               "id": "imx7otsonvm0takr02b4ulyo",
               "outgoingEdgeId": "ny44r5sp69gne7obgshidhph",
-              "content": "Menu"
+              "content": "菜单"
             }
           ]
         }
@@ -173,12 +173,12 @@
             {
               "id": "zaylo8bstqx0wp6bpdbd1rak",
               "outgoingEdgeId": "q6o0cbyzxtvgls3jtz7rpdgw",
-              "content": "Continue"
+              "content": "继续"
             },
             {
               "id": "d5jv3sjpzobsrnhcp055mxkv",
               "outgoingEdgeId": "xjv7pkpgpwh169448t8pepg4",
-              "content": "Back to menu"
+              "content": "返回菜单"
             }
           ]
         }
@@ -238,12 +238,12 @@
             {
               "id": "b6zif4xxe2cuiddc2oqayaxi",
               "outgoingEdgeId": "jwydpoxngp2gvwanaruphe6s",
-              "content": "Continue"
+              "content": "继续"
             },
             {
               "id": "ooib3mqlfkazta6iol1ocloe",
               "outgoingEdgeId": "gfrpgowch879p1qaj9jzsh01",
-              "content": "Back to menu"
+              "content": "返回菜单"
             }
           ]
         }
@@ -269,7 +269,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Who would you want to talk to?" }]
+                "children": [{ "text": "您想和谁对话？" }]
               }
             ]
           }
@@ -281,17 +281,17 @@
             {
               "id": "rn0lqz1wvsg9lmc0jcl6ps8j",
               "outgoingEdgeId": "ry7l8wcaidxw5izm7zoy83kj",
-              "content": "English professor"
+              "content": "英语教授"
             },
             {
               "id": "le84cls9vkmrxquvqw8bhp7h",
               "outgoingEdgeId": "iy2htkuup0l908fsosg6d2qz",
-              "content": "Copywriter"
+              "content": "文案撰稿人"
             },
             {
               "id": "mx4kgfgena53mxf87piwu1j2",
               "outgoingEdgeId": "kmex71jzzzekni4louuy3xbf",
-              "content": "Concept explainer"
+              "content": "概念解释者"
             }
           ],
           "options": { "variableId": "vs7wwz29yyd21pfl4syeptdgi" }
@@ -358,7 +358,7 @@
           "id": "qm3v36qb93ijnghdjgy9mcwf",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hi 👋" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "你好 👋" }] }]
           }
         },
         {
@@ -370,7 +370,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "I can help you translate things and perfect your English."
+                    "text": "我可以帮助您翻译内容并完善您的英语。"
                   }
                 ]
               }
@@ -383,7 +383,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can I help?" }] }
+              { "type": "p", "children": [{ "text": "我能帮您什么？" }] }
             ]
           }
         }
@@ -398,7 +398,7 @@
           "id": "bbeedootn9m8eass0mqu3w4t",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hi 👋" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "你好 👋" }] }]
           }
         },
         {
@@ -408,7 +408,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "I'm an expert in copywriting." }]
+                "children": [{ "text": "我是文案写作方面的专家。" }]
               }
             ]
           }
@@ -419,7 +419,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can I help?" }] }
+              { "type": "p", "children": [{ "text": "我能帮您什么？" }] }
             ]
           }
         }
@@ -434,7 +434,7 @@
           "id": "n96j3pf3m87aufcapx2ulr2n",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hi 👋" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "你好 👋" }] }]
           }
         },
         {
@@ -445,7 +445,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "I can explain concept with very simple terms." }
+                  { "text": "我可以用非常简单的术语解释概念。" }
                 ]
               }
             ]
@@ -460,7 +460,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "What concept would you like me to explain?" }
+                  { "text": "您想让我解释什么概念？" }
                 ]
               }
             ]

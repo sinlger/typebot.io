@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Ok {{Name}}" }] }
+              { "type": "p", "children": [{ "text": "好的 {{Name}}" }] }
             ]
           }
         },
@@ -34,7 +34,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Because all products are not available everywhere, I need to know..."
+                    "text": "因为并非所有产品都在所有地区可用，我需要知道..."
                   }
                 ]
               }
@@ -46,7 +46,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Where do you live?" }] }
+              { "type": "p", "children": [{ "text": "你住在哪里？" }] }
             ]
           }
         },
@@ -55,8 +55,8 @@
           "outgoingEdgeId": "zlab2pp5tfih56jcw6vtjs03",
           "type": "choice input",
           "items": [
-            { "id": "b6mg694wlrmx4k1fgc46co57", "content": "North America" },
-            { "id": "fpey0ohbvgvg7b86y4ol8wr7", "content": "Europe" }
+            { "id": "b6mg694wlrmx4k1fgc46co57", "content": "北美" },
+            { "id": "fpey0ohbvgvg7b86y4ol8wr7", "content": "欧洲" }
           ],
           "options": {
             "variableId": "vma96g9rw8oaosc0ei2iacqig"
@@ -78,7 +78,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Let's determine what Näak's products suit you best. 💪"
+                    "text": "让我们确定 Näak 的产品最适合你。💪"
                   }
                 ]
               }
@@ -90,7 +90,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your name?" }] }
+              { "type": "p", "children": [{ "text": "你叫什么名字？" }] }
             ]
           }
         },
@@ -114,7 +114,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your sport?" }] }
+              { "type": "p", "children": [{ "text": "你从事什么运动？" }] }
             ]
           }
         },
@@ -156,7 +156,7 @@
           "id": "ahuasm8oa058gl4np96qadox",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Nice! 😎" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "不错！😎" }] }]
           }
         },
         {
@@ -164,7 +164,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your gender?" }] }
+              { "type": "p", "children": [{ "text": "你的性别是什么？" }] }
             ]
           }
         },
@@ -175,10 +175,10 @@
           "items": [
             {
               "id": "zv2np66vgqoruntfh9h9vidx",
-              "content": "♂️ Men"
+              "content": "♂️ 男"
             },
-            { "id": "w5e2h4n10u1l2pap1vtm68ma", "content": "♀️ Women" },
-            { "id": "m1t9qrfs4z998ogqd4ttueus", "content": "Other" }
+            { "id": "w5e2h4n10u1l2pap1vtm68ma", "content": "♀️ 女" },
+            { "id": "m1t9qrfs4z998ogqd4ttueus", "content": "其他" }
           ]
         }
       ]
@@ -196,7 +196,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How can Näak help you achieve your goals?" }
+                  { "text": "Näak 如何帮助你实现目标？" }
                 ]
               }
             ]
@@ -243,7 +243,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "What protein source are you interested in?" }
+                  { "text": "你对哪种蛋白质来源感兴趣？" }
                 ]
               }
             ]
@@ -254,8 +254,8 @@
           "outgoingEdgeId": "umuilo9l4t27kcpnx5ybnr08",
           "type": "choice input",
           "items": [
-            { "id": "exj60v3j83wx9yjbdsm8gwzj", "content": "Cricket-based" },
-            { "id": "kvqeznudz85jbqwxzfpwz8z8", "content": "Plant-based" }
+            { "id": "exj60v3j83wx9yjbdsm8gwzj", "content": "昆虫蛋白" },
+            { "id": "kvqeznudz85jbqwxzfpwz8z8", "content": "植物蛋白" }
           ],
           "options": {
             "variableId": "vlgo7i0r514jkd9a9f24otm4m",
@@ -276,7 +276,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What are flavors do you enjoy?" }]
+                "children": [{ "text": "你喜欢什么口味？" }]
               }
             ]
           }
@@ -288,16 +288,16 @@
           "items": [
             {
               "id": "t7fkowjzn7eygfn6q1r4a8l9",
-              "content": "Chocolate"
+              "content": "巧克力"
             },
-            { "id": "b1a0qlhtirnxqaqudskc4hnb", "content": "Vanilla" },
-            { "id": "vef4uodxrj05lp2i5k3uhdd5", "content": "Berries" },
-            { "id": "oyyx5j4j5fee37rc47adb5m8", "content": "Caramel" },
-            { "id": "myapux2pojdtbdy0gyc47rhq", "content": "Nuts" },
-            { "id": "aegltvuw163qqx88rwzjrg3v", "content": "Coffee" },
-            { "id": "zql5o66rry2ab3ofxa1y8kll", "content": "Lime" },
-            { "id": "ecvbkdakesh18zn5bfkylvt1", "content": "Watermelon" },
-            { "id": "b1xcrk5tv1b1rkjy40uhp44d", "content": "Maple Syrup" }
+            { "id": "b1a0qlhtirnxqaqudskc4hnb", "content": "香草" },
+            { "id": "vef4uodxrj05lp2i5k3uhdd5", "content": "浆果" },
+            { "id": "oyyx5j4j5fee37rc47adb5m8", "content": "焦糖" },
+            { "id": "myapux2pojdtbdy0gyc47rhq", "content": "坚果" },
+            { "id": "aegltvuw163qqx88rwzjrg3v", "content": "咖啡" },
+            { "id": "zql5o66rry2ab3ofxa1y8kll", "content": "青柠" },
+            { "id": "ecvbkdakesh18zn5bfkylvt1", "content": "西瓜" },
+            { "id": "b1xcrk5tv1b1rkjy40uhp44d", "content": "枫糖浆" }
           ],
           "options": {
             "variableId": "vhbd5800sc98l1lk8wf7fe742",
@@ -316,9 +316,7 @@
           "id": "bwqiy7w4x6egwozthsvraeup",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "Great choice 😋" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "好选择 😋" }] }]
           }
         },
         {
@@ -329,7 +327,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Do you have any dietary restrictions?" }
+                  { "text": "你有任何饮食限制吗？" }
                 ]
               }
             ]
@@ -340,10 +338,10 @@
           "outgoingEdgeId": "erx9wo3svpfxs2cteknbhfaz",
           "type": "choice input",
           "items": [
-            { "id": "u9gi0gnaza6ottid74l82wlm", "content": "Non GMO" },
-            { "id": "yr7q8fcyi6l1sw83t37fjosj", "content": "No palm oil" },
-            { "id": "gckqnnt2but4d6wwsfia3035", "content": "Gluten free" },
-            { "id": "m3qdwzep7uugpejvga0yqorg", "content": "Nut free" }
+            { "id": "u9gi0gnaza6ottid74l82wlm", "content": "非转基因" },
+            { "id": "yr7q8fcyi6l1sw83t37fjosj", "content": "无棕榈油" },
+            { "id": "gckqnnt2but4d6wwsfia3035", "content": "无麸质" },
+            { "id": "m3qdwzep7uugpejvga0yqorg", "content": "无坚果" }
           ],
           "options": {
             "variableId": "vz4fqc40gkk99h0qeus2tjwhx"
@@ -365,7 +363,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Alright {{Name}}, I think we know exactly what you need."
+                    "text": "好的 {{Name}}，我想我们确切知道你需要什么。"
                   }
                 ]
               }
@@ -381,7 +379,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Sign up to our email list to receive a copy of your product recommendations."
+                    "text": "注册我们的邮件列表，获取你的产品推荐副本。"
                   }
                 ]
               }
@@ -395,7 +393,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "We will also send a little gift 🎁" }]
+                "children": [
+                  { "text": "我们还会送一份小礼物 🎁" }
+                ]
               }
             ]
           }
@@ -455,7 +455,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Unfortunately, cricket-based products are not available in Europe. 😢"
+                    "text": "遗憾的是，昆虫蛋白产品在欧洲不可用。😢"
                   }
                 ]
               }
@@ -472,7 +472,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "We'll make sure to let you know once it's available!"
+                    "text": "一旦可用，我们会确保通知你！"
                   }
                 ]
               }
@@ -577,8 +577,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Let's talk about " },
-                  { "bold": true, "text": "Energy. ⚡" }
+                  { "text": "让我们谈谈能量。⚡" }
                 ]
               }
             ]
@@ -593,7 +592,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a selection for you based on your answers."
+                    "text": "这是根据你的回答为你挑选的。"
                   }
                 ]
               }
@@ -666,8 +665,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "About " },
-                  { "bold": true, "text": "Hydration. 💧" }
+                  { "text": "关于补水。💧" }
                 ]
               }
             ]
@@ -682,7 +680,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a selection for you based on your answers."
+                    "text": "这是根据你的回答为你挑选的。"
                   }
                 ]
               }
@@ -740,10 +738,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "bold": true, "text": "Recovery 🧘‍♂️ " },
-                  {
-                    "text": "is crucial to perform at your highest level on the field."
-                  }
+                  { "text": "恢复 🧘‍♂️ 对于在场地上发挥最佳水平至关重要。" }
                 ]
               }
             ]
@@ -758,7 +753,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a selection for you based on your answers."
+                    "text": "这是根据你的回答为你挑选的。"
                   }
                 ]
               }
@@ -821,7 +816,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Since you like all these flavors you could try our discovery packs"
+                    "text": "既然你喜欢所有这些口味，你可以尝试我们的发现包"
                   }
                 ]
               }

@@ -28,7 +28,7 @@
           "id": "wza92in5v03w0oiaa1y3k68x",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hey 👋" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "嘿 👋" }] }]
           }
         },
         {
@@ -36,7 +36,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "I'm John from Dogz" }] }
+              { "type": "p", "children": [{ "text": "我是来自Dogz的John" }] }
             ]
           }
         },
@@ -49,7 +49,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Let's determine what would be the best insurance offer you can have for your dog 🐶"
+                    "text": "让我们来确定一下您能为您的狗获得的最佳保险方案 🐶"
                   }
                 ]
               }
@@ -63,7 +63,7 @@
             {
               "id": "m7l8u4y5vmwozvdtsmhq3q49",
               "outgoingEdgeId": "vl23l0ak8w2qxj9wrgxhznz3",
-              "content": "Let's go!"
+              "content": "我们开始吧！"
             }
           ]
         }
@@ -81,7 +81,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What breed is your dog?" }]
+                "children": [{ "text": "您的狗是什么品种？" }]
               }
             ]
           }
@@ -91,12 +91,12 @@
           "outgoingEdgeId": "moj9ezfl6bvpr4aj76cztkiu",
           "type": "choice input",
           "items": [
-            { "id": "q7ydcwda7rsfn1w5ep9ur4y3", "content": "Crossbreed" },
-            { "id": "q33qu26t8uhtp63rl7th4p0u", "content": "Labrador" },
-            { "id": "c9fy5o23cuanywze536ie071", "content": "Golden Retriever" },
-            { "id": "xmozt619ao4pn3lcovs6e1wp", "content": "Jack Russel" },
-            { "id": "qhc245vs9s3vhq8oz9sur4jy", "content": "Husky" },
-            { "id": "bqt7o8aotn5wwye98vw2u8is", "content": "Other" }
+            { "id": "q7ydcwda7rsfn1w5ep9ur4y3", "content": "混种犬" },
+            { "id": "q33qu26t8uhtp63rl7th4p0u", "content": "拉布拉多" },
+            { "id": "c9fy5o23cuanywze536ie071", "content": "金毛寻回犬" },
+            { "id": "xmozt619ao4pn3lcovs6e1wp", "content": "杰克罗素梗" },
+            { "id": "qhc245vs9s3vhq8oz9sur4jy", "content": "哈士奇" },
+            { "id": "bqt7o8aotn5wwye98vw2u8is", "content": "其他" }
           ]
         }
       ]
@@ -113,7 +113,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Is it a male or a female?" }]
+                "children": [{ "text": "它是公的还是母的？" }]
               }
             ]
           }
@@ -125,12 +125,12 @@
             {
               "id": "mrca2ini7z81ik4k1o9g3a1s",
               "outgoingEdgeId": "wciafstvwt3m4lhrejlgl0s0",
-              "content": "♂️ Male"
+              "content": "♂️ 公"
             },
             {
               "id": "ymxxgoxxbfcmnhudwmerfgbx",
               "outgoingEdgeId": "f60ldz2g58kfkvsfmnf39fjb",
-              "content": "♀️ Female"
+              "content": "♀️ 母"
             }
           ]
         }
@@ -155,7 +155,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's his name?" }] }
+              { "type": "p", "children": [{ "text": "它叫什么名字？" }] }
             ]
           }
         }
@@ -180,7 +180,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's her name?" }] }
+              { "type": "p", "children": [{ "text": "它叫什么名字？" }] }
             ]
           }
         }
@@ -211,7 +211,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How cute 😊" }] }
+              { "type": "p", "children": [{ "text": "真可爱 😊" }] }
             ]
           }
         },
@@ -220,7 +220,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How old is {{Name}}?" }] }
+              { "type": "p", "children": [{ "text": "{{Name}}多大了？" }] }
             ]
           }
         },
@@ -232,25 +232,25 @@
               "id": "vliolql8p4vo58pvsz7olf5w",
               "outgoingEdgeId": "pehpu3fo38ofsgh6b9dli0i4",
               "pictureSrc": "https://images.unsplash.com/photo-1592924728350-f7d4fd5d1655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw0MjU2MDR8MHwxfHNlYXJjaHwxNXx8cHVwcHl8ZW58MHwwfHx8MTY4MzIyNDMxOA&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Less than 1 year"
+              "title": "不到1岁"
             },
             {
               "id": "b3ci3fpppgsu312gsl4hs6au",
               "outgoingEdgeId": "ilvu55d6cmembesg0askzgzh",
               "pictureSrc": "https://images.unsplash.com/photo-1672363340663-37526fffa24d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw0MjU2MDR8MHwxfHNlYXJjaHwxMHx8eW91bmclMjBkb2d8ZW58MHwwfHx8MTY4MzIyNDM0OA&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "1-5 years"
+              "title": "1-5岁"
             },
             {
               "id": "asi8dmhlwnysvm4tmvoipglz",
               "outgoingEdgeId": "kvlz0ly8o4h99997ijiejwe8",
               "pictureSrc": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw0MjU2MDR8MHwxfHNlYXJjaHwzfHxkb2d8ZW58MHwwfHx8MTY4MzIyNDEwNg&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "5-10 years"
+              "title": "5-10岁"
             },
             {
               "id": "w9eeiclycv7nm0ennaxbxo1d",
               "outgoingEdgeId": "y8v7vkh236e4o4f2latpb7mr",
               "pictureSrc": "https://images.unsplash.com/photo-1553531009-7e4b807a0673?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw0MjU2MDR8MHwxfHNlYXJjaHw4fHxvbGQlMjBkb2d8ZW58MHwwfHx8MTY4MzIyNDQxNw&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Above 10 years"
+              "title": "10岁以上"
             }
           ]
         }
@@ -268,7 +268,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Is {{Pronoun}} spayed or neutered" }]
+                "children": [{ "text": "{{Pronoun}}做过绝育手术吗？" }]
               }
             ]
           }
@@ -280,12 +280,12 @@
             {
               "id": "njc0kol8iicj5xo06gezhl52",
               "outgoingEdgeId": "bindxs5p6lbkszkuw7rhpvh1",
-              "content": "❌ No"
+              "content": "❌ 没有"
             },
             {
               "id": "jp5k0mx1drijt7k1v4a2z6t8",
               "outgoingEdgeId": "igwjs895n7q48h47xhpc90wc",
-              "content": "✅ Yes"
+              "content": "✅ 是的"
             }
           ]
         }
@@ -303,7 +303,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Thank you for all this information." }]
+                "children": [{ "text": "感谢您提供所有这些信息。" }]
               }
             ]
           }
@@ -317,7 +317,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "We can provide the best insurance for {{Name}} 👍"
+                    "text": "我们可以为{{Name}}提供最佳的保险方案 👍"
                   }
                 ]
               }
@@ -332,7 +332,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "On what email should we send the offer?" }
+                  { "text": "我们应该把报价发送到哪个邮箱？" }
                 ]
               }
             ]
@@ -438,7 +438,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Perfect 👌" }] }
+              { "type": "p", "children": [{ "text": "完美 👌" }] }
             ]
           }
         },
@@ -451,7 +451,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "In the mean time feel free to check out what other services we are offering at Dogz"
+                    "text": "与此同时，欢迎查看我们在Dogz提供的其他服务"
                   }
                 ]
               }

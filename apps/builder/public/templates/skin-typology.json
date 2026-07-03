@@ -23,7 +23,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What’s your top skin concern?" }]
+                "children": [{ "text": "您最关心的皮肤问题是什么？" }]
               }
             ]
           }
@@ -60,7 +60,7 @@
             {
               "id": "muzbinpvhlwxsnhka6y14cyk",
               "outgoingEdgeId": "b2lis4t1syk9qd30t3yb6e9a",
-              "content": "Pimples",
+              "content": "痘痘",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -78,7 +78,7 @@
             },
             {
               "id": "fotnwnbfwz1d33w0vjqypu11",
-              "content": "Blackheads",
+              "content": "黑头",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -96,7 +96,7 @@
             },
             {
               "id": "i7zt5rhiv17xtosui349mdgs",
-              "content": "Visible pores",
+              "content": "毛孔粗大",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -114,7 +114,7 @@
             },
             {
               "id": "r5s0sazlv4qzfeq7nvsxo0mb",
-              "content": "Shiny areas",
+              "content": "油光区域",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -133,7 +133,7 @@
             {
               "id": "szqscovkv1ddnpt8mkt0vvxt",
               "outgoingEdgeId": "e2ol7wfl5ve73b1rdhhzqfk4",
-              "content": "Hyperpigmentation (dark spots/marks)",
+              "content": "色素沉着（暗斑/印记）",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -152,7 +152,7 @@
             {
               "id": "i0rzns61pszrww0y44isqh5v",
               "outgoingEdgeId": "hneunup1qv7md47yoh7544cj",
-              "content": "Wrinkles (prevention or treatment)",
+              "content": "皱纹（预防或治疗）",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -171,7 +171,7 @@
             {
               "id": "u226tpojjg7p16xz3mrxf9x0",
               "outgoingEdgeId": "agd81aldnxptroxm59r6bnmt",
-              "content": "Redness",
+              "content": "泛红",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -190,7 +190,7 @@
             {
               "id": "e8f057alv81bvbnsq7qbvqgc",
               "outgoingEdgeId": "ei2w9q6ozvi8jm4btm0j9pdo",
-              "content": "Dryness and/or dehydration",
+              "content": "干燥和/或脱水",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -208,7 +208,7 @@
             },
             {
               "id": "ccwxganzyrvzlsy67dv3nw1c",
-              "content": "Eye bags/dark circles",
+              "content": "眼袋/黑眼圈",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -227,7 +227,7 @@
             {
               "id": "y9y2zzc68iaxl27si3lumrl6",
               "outgoingEdgeId": "q4zonpkmvkgebxw6mq9xlj6g",
-              "content": "Dullness",
+              "content": "暗沉",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -245,7 +245,7 @@
             },
             {
               "id": "ls05hhlv8ijgze1kfbkpi6ug",
-              "content": "I don't have any particular concerns",
+              "content": "我没有任何特别的问题",
               "displayCondition": {
                 "isEnabled": false,
                 "condition": {
@@ -277,7 +277,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Do you have a second concern?" }]
+                "children": [{ "text": "您还有第二个问题吗？" }]
               }
             ]
           }
@@ -322,7 +322,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "When do you break out?" }]
+                "children": [{ "text": "您什么时候会爆痘？" }]
               }
             ]
           }
@@ -334,14 +334,14 @@
           "items": [
             {
               "id": "nlep75ws189xkac98ym7sqi9",
-              "content": "Every day or most days"
+              "content": "每天或大多数日子"
             },
-            { "id": "a56xhexuvzgh2rj7qg0g2zx2", "content": "Every week" },
+            { "id": "a56xhexuvzgh2rj7qg0g2zx2", "content": "每周" },
             {
               "id": "s40qpkdcid728qzi4o70teeb",
-              "content": "During my menstrual cycle"
+              "content": "经期期间"
             },
-            { "id": "ncd5kjzbqsev653nzkxbb75b", "content": "Occasionally" }
+            { "id": "ncd5kjzbqsev653nzkxbb75b", "content": "偶尔" }
           ]
         }
       ]
@@ -358,7 +358,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What kind of blemishes are they?" }]
+                "children": [{ "text": "它们是什么样的瑕疵？" }]
               }
             ]
           }
@@ -369,17 +369,17 @@
           "items": [
             {
               "id": "krc7t1c11ux52lk7fm9gw1od",
-              "content": "Small red or pink bumps"
+              "content": "小的红色或粉色凸起"
             },
             {
               "id": "uf2dm7zi73nx0992xje0iw9p",
-              "content": "Red and inflamed with a whitehead"
+              "content": "红色、发炎且带有白头"
             },
             {
               "id": "n2ltb5bb1umw3busctep8776",
-              "content": "Rough, bumpy skin (whiteheads) on the forehead, chin and cheeks"
+              "content": "额头、下巴和脸颊上有粗糙、凹凸不平的皮肤（白头粉刺）"
             },
-            { "id": "dasjmu5og82zi8ah549byyg6", "content": "I don't know" }
+            { "id": "dasjmu5og82zi8ah549byyg6", "content": "我不知道" }
           ],
           "options": {
             "variableId": "vd5zutxjechfh2ihdzsw2rcc3",
@@ -400,7 +400,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Your pigmentation marks occur…" }]
+                "children": [{ "text": "您的色素沉着出现在……" }]
               }
             ]
           }
@@ -412,24 +412,24 @@
           "items": [
             {
               "id": "jkt7vj18r8infhllc788abim",
-              "content": "On areas exposed to the sun"
+              "content": "暴露在阳光下的区域"
             },
-            { "id": "indtjedkbr4dsiynsymm6xsc", "content": "During pregnancy" },
+            { "id": "indtjedkbr4dsiynsymm6xsc", "content": "怀孕期间" },
             {
               "id": "ihcq3u6hhcva47f45qlavufq",
-              "content": "After taking hormonal contraceptives"
+              "content": "服用激素避孕药后"
             },
             {
               "id": "ssa3xzeabbsmzcv26vkh10et",
-              "content": "After acne breakouts"
+              "content": "痘痘爆发后"
             },
             {
               "id": "e18s16wgx4t8358tq4rjaacs",
-              "content": "After a skin trauma (e.g. scar, burn, damaged skin)"
+              "content": "皮肤创伤后（如疤痕、烧伤、受损皮肤）"
             },
             {
               "id": "xozv08rwn1d4wbqtxa3ynvau",
-              "content": "I don't know. (Most likely caused by sun exposure)"
+              "content": "我不知道。（很可能是由日晒引起的）"
             }
           ]
         }
@@ -447,7 +447,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Where do you have sun spots?" }]
+                "children": [{ "text": "您在哪里有日晒斑？" }]
               }
             ]
           }
@@ -458,15 +458,15 @@
           "items": [
             {
               "id": "fklzqs3jpu8dp5it0xot8i9r",
-              "content": "I have a few, just on my face"
+              "content": "我只有几个，就在脸上"
             },
             {
               "id": "y9v2l0c4j2n00r32om7hf83x",
-              "content": "I have many on my forehead, temples, cheeks and nose"
+              "content": "我的额头、太阳穴、脸颊和鼻子上有很多"
             },
             {
               "id": "ivlfhoitcbe2gg27ab3pfjsx",
-              "content": "I have them on my face, chest, and the back of my hands"
+              "content": "我的脸上、胸部和手背上都有"
             }
           ]
         }
@@ -484,9 +484,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Tell us about your wrinkles/fine lines." }
-                ]
+                "children": [{ "text": "请告诉我们您的皱纹/细纹情况。" }]
               }
             ]
           }
@@ -497,23 +495,23 @@
           "items": [
             {
               "id": "ju2u3eqjoba95glemoyuct5a",
-              "content": "I have fine lines on my forehead and/or around my eyes"
+              "content": "我的额头和/或眼睛周围有细纹"
             },
             {
               "id": "fpd8yaz5z6qzjb5s1uc23qet",
-              "content": "I just have expression lines, when I smile"
+              "content": "我只有表情纹，微笑时出现"
             },
             {
               "id": "c9mrly2xy8owl3v4b2yh94hj",
-              "content": "I have static wrinkles even when my face is at rest"
+              "content": "即使面部静止时也有静态皱纹"
             },
             {
               "id": "s4ogb3nycgkyw4rkwbtnx9m5",
-              "content": "I have deep wrinkles all over the face"
+              "content": "全脸都有深皱纹"
             },
             {
               "id": "y2ppxpnbmf21qa9rh94fsxid",
-              "content": "I don’t have fine lines or wrinkles, but I want to prevent them"
+              "content": "我没有细纹或皱纹，但我想预防"
             }
           ],
           "options": { "isMultipleChoice": true }
@@ -532,11 +530,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "Could you tell us more about the redness on your skin?"
-                  }
-                ]
+                "children": [{ "text": "您能更多地告诉我们您皮肤上的泛红情况吗？" }]
               }
             ]
           }
@@ -547,15 +541,15 @@
           "items": [
             {
               "id": "vg6j2x257gxe3e0w2mxvvtes",
-              "content": "My skin looks irritated and feels tight or itchy"
+              "content": "我的皮肤看起来受刺激，感觉紧绷或瘙痒"
             },
             {
               "id": "nri9tz8v0uyvqqt65ym7zgrj",
-              "content": "I have redness on my cheeks, and it gets worse when it's hot, when I drink alcohol, or when I'm stressed"
+              "content": "我的脸颊泛红，天气热、喝酒或压力大时加重"
             },
             {
               "id": "x2yyqm5m40ypmny91fc9ftoj",
-              "content": "I have red, inflamed spots, as well as redness"
+              "content": "我有红色、发炎的斑点，以及泛红"
             }
           ]
         }
@@ -573,9 +567,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "When does your skin feel uncomfortable?" }
-                ]
+                "children": [{ "text": "您的皮肤什么时候会感到不适？" }]
               }
             ]
           }
@@ -587,11 +579,11 @@
           "items": [
             {
               "id": "q7av1ewiha9a64vruv0vzk28",
-              "content": "After cleansing using a dermatological treatment or when the temperature changes"
+              "content": "使用皮肤科治疗或温度变化后清洁时"
             },
             {
               "id": "h2vgep3cc1oitclupkcofwti",
-              "content": "All the time even in the summer"
+              "content": "一直如此，即使在夏天"
             }
           ]
         }
@@ -609,11 +601,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "When your skin is uncomfortable, how does it feel?"
-                  }
-                ]
+                "children": [{ "text": "当您的皮肤不适时，感觉如何？" }]
               }
             ]
           }
@@ -624,16 +612,16 @@
           "items": [
             {
               "id": "f02ntm6dw8c5dnz3alba27aj",
-              "content": "My skin feels tight"
+              "content": "我的皮肤感觉紧绷"
             },
             {
               "id": "fok90m47fj2gizsfq7gkarcz",
-              "content": "My skin feels itchy"
+              "content": "我的皮肤发痒"
             },
-            { "id": "qtmxm4xay9ggtftp388qter4", "content": "My skin peels" },
+            { "id": "qtmxm4xay9ggtftp388qter4", "content": "我的皮肤脱皮" },
             {
               "id": "xfvm0lcmajnk85kxzjjaoj2x",
-              "content": "My skin doesn't feel soft"
+              "content": "我的皮肤不柔软"
             }
           ],
           "options": { "isMultipleChoice": true }
@@ -652,11 +640,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "Help us to understand why your skin lacks radiance."
-                  }
-                ]
+                "children": [{ "text": "请帮助我们了解为什么您的皮肤缺乏光泽。" }]
               }
             ]
           }
@@ -667,15 +651,15 @@
           "items": [
             {
               "id": "sn51zr3rvefzgaaqtcskqt5o",
-              "content": "I smoke and/or I live in a polluted environment"
+              "content": "我吸烟和/或生活在污染环境中"
             },
             {
               "id": "smp4ssk1dbpafret89jr52gu",
-              "content": "The surface of my skin is uneven"
+              "content": "我的皮肤表面不均匀"
             },
             {
               "id": "c30mu2o31wb4fxy1c2lg4he5",
-              "content": "My skin needs some sunshine"
+              "content": "我的皮肤需要一些阳光"
             }
           ],
           "options": { "isMultipleChoice": true }
@@ -694,7 +678,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Do you have another concern?" }]
+                "children": [{ "text": "您还有其他的问题吗？" }]
               }
             ]
           }
@@ -731,11 +715,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "Has a dermatologist diagnosed any of the following skin concerns?"
-                  }
-                ]
+                "children": [{ "text": "皮肤科医生是否诊断过以下任何皮肤问题？" }]
               }
             ]
           }
@@ -747,15 +727,15 @@
           "items": [
             {
               "id": "q7wgxzmlsgsvmggxo1v4f4lu",
-              "content": "Eczema/atopic dermatitis"
+              "content": "湿疹/特应性皮炎"
             },
-            { "id": "rublicdb3i6afz4vey2gxvrp", "content": "Psoriasis" },
-            { "id": "dib7mwjl197qrpfxj5yg3jot", "content": "Rosacea" },
+            { "id": "rublicdb3i6afz4vey2gxvrp", "content": "银屑病" },
+            { "id": "dib7mwjl197qrpfxj5yg3jot", "content": "红斑痤疮" },
             {
               "id": "esl7htipishc8d85gvi67jsn",
-              "content": "Seborrheic dermatitis"
+              "content": "脂溢性皮炎"
             },
-            { "id": "ybswy2crnxiesdt8s1b3uufm", "content": "No" }
+            { "id": "ybswy2crnxiesdt8s1b3uufm", "content": "没有" }
           ]
         }
       ]
@@ -772,7 +752,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "How do you describe yourself?" }]
+                "children": [{ "text": "您如何描述自己？" }]
               }
             ]
           }
@@ -782,12 +762,12 @@
           "outgoingEdgeId": "ira3wejjdsnzejby5i31zgng",
           "type": "choice input",
           "items": [
-            { "id": "t63xhbb613uqvzl81qjkqo76", "content": "A woman" },
-            { "id": "p2zvlph9yysxdalxq3b7tfzn", "content": "A man" },
-            { "id": "brh3p7gj7qxwekc76u0k194o", "content": "Non-binary" },
+            { "id": "t63xhbb613uqvzl81qjkqo76", "content": "女性" },
+            { "id": "p2zvlph9yysxdalxq3b7tfzn", "content": "男性" },
+            { "id": "brh3p7gj7qxwekc76u0k194o", "content": "非二元性别" },
             {
               "id": "ufeb3cencrz0yxh9853reyvx",
-              "content": "I don’t wish to define myself"
+              "content": "我不想定义自己"
             }
           ]
         }
@@ -805,11 +785,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "How does your skin feel throughout the day if you haven't applied any skincare products or makeup?"
-                  }
-                ]
+                "children": [{ "text": "如果您没有使用任何护肤品或化妆品，您的皮肤一整天感觉如何？" }]
               }
             ]
           }
@@ -821,15 +797,15 @@
           "items": [
             {
               "id": "vmzalnc9qvfl667lfoxyfp4o",
-              "content": "If I don't apply a mattifying product, my skin is shiny from the middle of the day onwards"
+              "content": "如果我不使用控油产品，从中午开始皮肤就出油"
             },
             {
               "id": "b7vequ8pgco2e0rpnxj0sky3",
-              "content": "If I want my skin to feel comfortable, I need to moisturize morning and evening"
+              "content": "如果我想要皮肤舒适，早晚都需要保湿"
             },
             {
               "id": "q8tazj46hwsrcw63kysgh2gt",
-              "content": "I don't have any particular problems (my t-zone is naturally oilier than the rest of my face, that's all)"
+              "content": "我没有任何特殊问题（我的T区自然比其他部位油，仅此而已）"
             }
           ]
         }
@@ -847,9 +823,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "What do you see when you look in the mirror?" }
-                ]
+                "children": [{ "text": "您照镜子时看到了什么？" }]
               }
             ]
           }
@@ -861,19 +835,19 @@
           "items": [
             {
               "id": "vs9o2fpleeykcxt9gufaive5",
-              "content": "No wrinkles. My skin is supple and firm"
+              "content": "没有皱纹。我的皮肤柔韧紧致"
             },
             {
               "id": "him733u0w39bvan7ribgcxiw",
-              "content": "Fine lines on my forehead and/or around my eyes"
+              "content": "额头和/或眼睛周围有细纹"
             },
             {
               "id": "a55oyxj5crnkuqoo6948ejg8",
-              "content": "Expression lines, when I smile"
+              "content": "表情纹，微笑时出现"
             },
             {
               "id": "os3af3kvgkm6ip59iu85hyzv",
-              "content": "Static wrinkles that are visible all the time, even when my face is at rest"
+              "content": "静态皱纹，即使面部静止也始终可见"
             }
           ]
         }
@@ -891,9 +865,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "How does your skin react to cosmetic products?" }
-                ]
+                "children": [{ "text": "您的皮肤对化妆品有什么反应？" }]
               }
             ]
           }
@@ -905,15 +877,15 @@
           "items": [
             {
               "id": "riidiklh7td0y881rfxd635j",
-              "content": "I've never had a bad reaction"
+              "content": "我从未有过不良反应"
             },
             {
               "id": "l9l6wsxrsn2ltq63wwc83zmc",
-              "content": "It gets momentarily red if I use products that are too aggressive for my skin"
+              "content": "如果使用对皮肤过于刺激的产品，它会暂时变红"
             },
             {
               "id": "jnud3df8zn0g75uo42qaokm6",
-              "content": "My skin is very reactive and prone to allergic reactions to cosmetics"
+              "content": "我的皮肤非常敏感，容易对化妆品产生过敏反应"
             }
           ]
         }
@@ -929,7 +901,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Do you wear makeup?" }] }
+              { "type": "p", "children": [{ "text": "您化妆吗？" }] }
             ]
           }
         },
@@ -938,16 +910,16 @@
           "outgoingEdgeId": "ovypkxkt0k8w3b9yo0s0libr",
           "type": "choice input",
           "items": [
-            { "id": "ukk542pqy2ltnyi67u94veob", "content": "No, never" },
+            { "id": "ukk542pqy2ltnyi67u94veob", "content": "不，从不" },
             {
               "id": "a4jpqg1k5pzs4ywgzbfw3x0h",
-              "content": "Rarely, just for special occasions"
+              "content": "很少，只在特殊场合"
             },
             {
               "id": "grv94a64xsc5iwxezi200ljl",
-              "content": "Regularly, several times a week"
+              "content": "经常，每周几次"
             },
-            { "id": "ywlbkscrzezw5vkk30wogoje", "content": "Every day" }
+            { "id": "ywlbkscrzezw5vkk30wogoje", "content": "每天" }
           ]
         }
       ]
@@ -964,7 +936,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Tell us about where you live." }]
+                "children": [{ "text": "请告诉我们您住在哪里。" }]
               }
             ]
           }
@@ -976,15 +948,15 @@
           "items": [
             {
               "id": "p7u13e8zbrybrs9b3sr7jlwm",
-              "content": "There's a lot of pollution"
+              "content": "污染严重"
             },
             {
               "id": "xl375gwn8kgu6kg7yuyj1qol",
-              "content": "There's some pollution"
+              "content": "有一定污染"
             },
             {
               "id": "e7n697c90shslft6qlpqkk3b",
-              "content": "There isn't much pollution"
+              "content": "污染不多"
             }
           ]
         }
@@ -1000,7 +972,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Do you smoke?" }] }
+              { "type": "p", "children": [{ "text": "您吸烟吗？" }] }
             ]
           }
         },
@@ -1009,23 +981,23 @@
           "outgoingEdgeId": "gkfa620lz2ejdvn890n3vb5y",
           "type": "choice input",
           "items": [
-            { "id": "fqztopzjmce2ohr12xz9gmu3", "content": "No" },
-            { "id": "mcq5lpn493w24q6lcohmc5yr", "content": "Occasionally" },
+            { "id": "fqztopzjmce2ohr12xz9gmu3", "content": "不" },
+            { "id": "mcq5lpn493w24q6lcohmc5yr", "content": "偶尔" },
             {
               "id": "n9urk18o0g9j3y6k74wrnhm5",
-              "content": "1 to 10 cigarettes a day"
+              "content": "每天1到10支"
             },
             {
               "id": "hj4soju8lmrmqnizsvej442z",
-              "content": "10 to 20 cigarettes a day"
+              "content": "每天10到20支"
             },
             {
               "id": "sfi7a9booyqoi40fi1pdzavt",
-              "content": "More than a pack a day"
+              "content": "每天超过一包"
             },
             {
               "id": "otve51lvqfrubdbn7ruk3lcn",
-              "content": "I smoke electronic cigarettes"
+              "content": "我抽电子烟"
             }
           ]
         }
@@ -1043,9 +1015,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Select the skin tone that best represents you:" }
-                ]
+                "children": [{ "text": "选择最能代表您的肤色：" }]
               }
             ]
           }
@@ -1057,27 +1027,27 @@
           "items": [
             {
               "id": "urogsq3r6okpwkn147o4zsjg",
-              "content": "Fair with some freckles. Doesn’t really tan, gets red in the sun"
+              "content": "白皙带些雀斑。不容易晒黑，日晒会发红"
             },
             {
               "id": "euytvrcv3covqac6c8hlr6qi",
-              "content": "Light with pink or yellow undertones. Tans gradually. Sunburns are common in the beginning of summer"
+              "content": "浅色带粉色或黄色底色。逐渐晒黑。夏初容易晒伤"
             },
             {
               "id": "dhinnrwwiokf8myup10vvkco",
-              "content": "Medium with warm or olive undertones. Tans easily but sometimes burns"
+              "content": "中等肤色，带暖色或橄榄色底色。容易晒黑，但有时会晒伤"
             },
             {
               "id": "nulsi1x0g5n86a04mm6h5bsi",
-              "content": "Matte with bronze undertones. Sunburns occasionally"
+              "content": "哑光带古铜色底色。偶尔晒伤"
             },
             {
               "id": "oznwtn9niiayc72jjh4gjgx4",
-              "content": "Brown. Sunburns are very rare. Tans in the sun"
+              "content": "棕色。非常罕见晒伤。在阳光下会晒黑"
             },
             {
               "id": "pnu9f8osvs3z9my6h4iymk2r",
-              "content": "Dark with cool undertones. Doesn’t sunburn"
+              "content": "深色带冷色底色。不会晒伤"
             }
           ]
         }
@@ -1095,9 +1065,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "How often do you get strong sun exposure?" }
-                ]
+                "children": [{ "text": "您多久暴露在强烈的阳光下？" }]
               }
             ]
           }
@@ -1107,22 +1075,22 @@
           "outgoingEdgeId": "ff5mm3s3w4y19au133ca5d29",
           "type": "choice input",
           "items": [
-            { "id": "ab58o8ylnquxr7vaovhhtahr", "content": "Almost never" },
+            { "id": "ab58o8ylnquxr7vaovhhtahr", "content": "几乎没有" },
             {
               "id": "dnqdhzaozbh2udu0uq82k1py",
-              "content": "One week per year"
+              "content": "每年一周"
             },
             {
               "id": "se6rgn2uixr72ft4y6mfmnzc",
-              "content": "Several weeks per year"
+              "content": "每年几周"
             },
             {
               "id": "sa8q4ohl8rnn7z7ulvnifsd1",
-              "content": "More than a month per year"
+              "content": "每年超过一个月"
             },
             {
               "id": "e0xypcvrzurygxsncii50c2q",
-              "content": "All year round, more or less"
+              "content": "全年或多或少"
             }
           ]
         }
@@ -1140,11 +1108,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "To keep a record of your skin diagnostic result, please provide your e-mail address :"
-                  }
-                ]
+                "children": [{ "text": "为了记录您的皮肤诊断结果，请提供您的电子邮箱地址：" }]
               }
             ]
           }
@@ -1220,11 +1184,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "Now that you know your skin typology, would you like to check out our selection of top-rated skin-care products? 💆"
-                  }
-                ]
+                "children": [{ "text": "既然您知道了自己的皮肤类型，您想看看我们精选的高评分护肤品吗？💆" }]
               }
             ]
           }
@@ -1236,7 +1196,7 @@
             {
               "id": "hmnuvpvu3ihtflhj5spx5lf3",
               "outgoingEdgeId": "f6zvru644gs2qoc5xavc87vs",
-              "content": "Go shopping"
+              "content": "去购物"
             }
           ]
         }

@@ -25,7 +25,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Hi there! Are you curious to see how much you can save by switching to reusable sponges and paper towels? 🌱"
+                    "text": "你好！你想知道通过改用可重复使用的海绵和纸巾可以节省多少钱吗？🌱"
                   }
                 ]
               }
@@ -39,7 +39,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Let's find out together!" }]
+                "children": [{ "text": "让我们一起看看吧！" }]
               }
             ]
           }
@@ -49,7 +49,7 @@
           "outgoingEdgeId": "k0ikr8x3bu9s5o86g5njqfts",
           "type": "choice input",
           "items": [
-            { "id": "ih0cv1bnpyc83qwz4qq6ywk3", "content": "Yes, let's go!" }
+            { "id": "ih0cv1bnpyc83qwz4qq6ywk3", "content": "是的，我们开始吧！" }
           ]
         }
       ]
@@ -68,7 +68,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Where do you typically use sponges in your house?"
+                    "text": "你通常在家里哪些地方使用海绵？"
                   }
                 ]
               }
@@ -82,25 +82,25 @@
           "items": [
             {
               "id": "x10afn6nfah52jsu0avz6br9",
-              "content": "Kitchen - for dishes, counter, and appliances"
+              "content": "厨房 - 用于餐具、台面和电器"
             },
             {
               "id": "eeogjc9povplcvgqny1dc6uj",
-              "content": "Bathroom - for sinks, showers, and tubs"
+              "content": "浴室 - 用于洗手池、淋浴和浴缸"
             },
             {
               "id": "asy0lmqlzprtlfepmz8c6mfz",
-              "content": "Living Room and Bedrooms - for furniture and windows"
+              "content": "客厅和卧室 - 用于家具和窗户"
             },
             {
               "id": "qqp3qjm4z7r60py4sg21pqd6",
-              "content": "Laundry Room - for cleaning spills and surfaces"
+              "content": "洗衣房 - 用于清洁溢出物和表面"
             },
             {
               "id": "jk7vgqy5cgfrklnkuddkfj9q",
-              "content": "Garage and Outdoors - for vehicles and garden tools"
+              "content": "车库和户外 - 用于车辆和园艺工具"
             },
-            { "id": "cnx6lctjxc23opp5gdnvvxbu", "content": "dishes" }
+            { "id": "cnx6lctjxc23opp5gdnvvxbu", "content": "餐具" }
           ],
           "options": { "isMultipleChoice": true }
         }
@@ -120,7 +120,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "How often would you say that you are throwing a sponge away?"
+                    "text": "你大概多久丢弃一次海绵？"
                   }
                 ]
               }
@@ -131,22 +131,22 @@
           "id": "qiayx3hjmo5ef1n3w3uxux4g",
           "type": "choice input",
           "items": [
-            { "id": "huq3z8tuxmumghzu1tvdcxd9", "content": "Once a week" },
-            { "id": "g1ceimdl36gwcfgzf8jpqsbg", "content": "Every 2 weeks" },
+            { "id": "huq3z8tuxmumghzu1tvdcxd9", "content": "每周一次" },
+            { "id": "g1ceimdl36gwcfgzf8jpqsbg", "content": "每两周一次" },
             {
               "id": "ky6khj0qwt2zteo8ffjg4xdc",
               "outgoingEdgeId": "pyh36n2t83a0ig4edaj461ho",
-              "content": "Once a month"
+              "content": "每月一次"
             },
             {
               "id": "lz0kymgy0nlismoen7rr5mcf",
               "outgoingEdgeId": "cmv8ea1pfiwslctusogdkg9u",
-              "content": "Every 2 months"
+              "content": "每两个月一次"
             },
             {
               "id": "oaqrb7n82xgzxxwgd12i4z43",
               "outgoingEdgeId": "blsd3tlps0jaq1mu6y91tuca",
-              "content": "Every 3 months or more"
+              "content": "每三个月或更久"
             }
           ]
         }
@@ -166,7 +166,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Did you know that used sponges can harbor a significant number of bacteria if not replaced regularly?"
+                    "text": "你知道如果不定期更换，用过的海绵会滋生大量细菌吗？"
                   }
                 ]
               }
@@ -183,7 +183,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "We definitely suggest you to change your sponge more frequently ✨"
+                    "text": "我们绝对建议你更频繁地更换海绵 ✨"
                   }
                 ]
               }
@@ -205,7 +205,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Now, let's talk about paper towels. 🧻" }
+                  { "text": "现在，让我们谈谈纸巾。🧻" }
                 ]
               }
             ]
@@ -220,7 +220,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "How often would you say that you are ending a roll?"
+                    "text": "你大概多久用完一卷？"
                   }
                 ]
               }
@@ -232,13 +232,13 @@
           "outgoingEdgeId": "yeqwcskb3lut4m5838y64pp2",
           "type": "choice input",
           "items": [
-            { "id": "vywwo2km0q0j1fxu7kpgaaun", "content": "Once a week" },
-            { "id": "wzg1uhu2hdgmkc7tps3wyo3e", "content": "Every 2 weeks" },
-            { "id": "sdx6okf2a2jdypry8yd9vi81", "content": "Once a month" },
-            { "id": "vva4hfgvpx5r3uzyumf2mpjj", "content": "Every 2 months" },
+            { "id": "vywwo2km0q0j1fxu7kpgaaun", "content": "每周一次" },
+            { "id": "wzg1uhu2hdgmkc7tps3wyo3e", "content": "每两周一次" },
+            { "id": "sdx6okf2a2jdypry8yd9vi81", "content": "每月一次" },
+            { "id": "vva4hfgvpx5r3uzyumf2mpjj", "content": "每两个月一次" },
             {
               "id": "kvf1ev4hskteaopfnbzoy2xt",
-              "content": "Every 3 months or more"
+              "content": "每三个月或更久"
             }
           ]
         }
@@ -303,7 +303,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Do you have any concerns or hesitations about switching to reusable INGA products?"
+                    "text": "您对改用可重复使用的INGA产品有任何顾虑或犹豫吗？"
                   }
                 ]
               }
@@ -317,16 +317,16 @@
           "items": [
             {
               "id": "r4f918h8pxbpkyb2t3943f8h",
-              "content": "Durability and Effectiveness"
+              "content": "耐用性和有效性"
             },
-            { "id": "boe0nf1y87sf6o8klmo5sg81", "content": "One-time cost" },
-            { "id": "udz9u4nhyg4zqh1qc6iwqi1x", "content": "Hygiene" },
-            { "id": "uuhrshjb2hxgrs85nvk95uyq", "content": "Convenience" },
+            { "id": "boe0nf1y87sf6o8klmo5sg81", "content": "一次性成本" },
+            { "id": "udz9u4nhyg4zqh1qc6iwqi1x", "content": "卫生" },
+            { "id": "uuhrshjb2hxgrs85nvk95uyq", "content": "便利性" },
             {
               "id": "y9cmigd58j10u8bre90obxpp",
-              "content": "Environmental Impact"
+              "content": "环境影响"
             },
-            { "id": "mkubt8mqhwz34s7xqotbpaw0", "content": "Other" }
+            { "id": "mkubt8mqhwz34s7xqotbpaw0", "content": "其他" }
           ]
         }
       ]
@@ -343,7 +343,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Thanks for sharing. 🙏" }]
+                "children": [{ "text": "感谢分享。🙏" }]
               }
             ]
           }
@@ -355,7 +355,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us more about that?" }]
+                "children": [{ "text": "你能告诉我们更多吗？" }]
               }
             ]
           }
@@ -380,7 +380,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "That's super clear, thank you" }]
+                "children": [{ "text": "非常清楚，谢谢" }]
               }
             ]
           }
@@ -394,7 +394,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Feel free to check out our selection of reusable cleaning products. 🧽"
+                    "text": "欢迎查看我们精选的可重复使用清洁产品。🧽"
                   }
                 ]
               }
@@ -405,7 +405,7 @@
           "id": "z95sfiyhk4mk3y693ku9ugud",
           "type": "choice input",
           "items": [
-            { "id": "vagoik95tnerdxebvdqghipf", "content": "Go shopping" }
+            { "id": "vagoik95tnerdxebvdqghipf", "content": "去购物" }
           ]
         }
       ]
@@ -424,7 +424,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "To keep a record of your carb calculations and for easy future reference, could you please provide your email address? "
+                    "text": "为了记录您的碳计算并方便将来参考，您能提供您的电子邮件地址吗？"
                   }
                 ]
               }
@@ -440,7 +440,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This way, I can send you a personalized summary of your fueling plan. 📧"
+                    "text": "这样，我就可以向您发送您的燃料计划的个性化摘要。📧"
                   }
                 ]
               }

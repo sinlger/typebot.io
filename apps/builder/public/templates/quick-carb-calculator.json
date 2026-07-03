@@ -24,7 +24,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Welcome to the Quick Carb Calculator!" }
+                  { "text": "欢迎使用快速碳水化合物计算器！" }
                 ]
               }
             ]
@@ -39,7 +39,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": " I'll help you figure out how much fuel you'll need to perform at your best. Let's get started! 🚴‍♂️🏃"
+                    "text": "我会帮你计算出你需要多少燃料才能发挥最佳水平。让我们开始吧！🚴‍♂️🏃"
                   }
                 ]
               }
@@ -53,7 +53,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "First, what are you fueling for?" }]
+                "children": [{ "text": "首先，你正在为哪项运动补充能量？" }]
               }
             ]
           }
@@ -63,18 +63,18 @@
           "outgoingEdgeId": "gnwha6pow6q6occm6gn3d9o3",
           "type": "choice input",
           "items": [
-            { "id": "omopw9oy3srowddb0o3f4xs5", "content": "Swim 🏊‍♂️" },
-            { "id": "anpwbn8hvolyod2vsh06et68", "content": "Ride 🚴‍♂️" },
-            { "id": "uto1ghh5c6icwygszercxybz", "content": "Run 🏃" },
+            { "id": "omopw9oy3srowddb0o3f4xs5", "content": "游泳 🏊‍♂️" },
+            { "id": "anpwbn8hvolyod2vsh06et68", "content": "骑行 🚴‍♂️" },
+            { "id": "uto1ghh5c6icwygszercxybz", "content": "跑步 🏃" },
             {
               "id": "sau0amab8nmeqfqyhhzle03v",
-              "content": "Triathlon 🏊‍♂️🚴‍♂️🏃"
+              "content": "铁人三项 🏊‍♂️🚴‍♂️🏃"
             },
-            { "id": "tqvjhk0qmvn43h5hyc9ibdd3", "content": "Swimrun 🏊‍♂️🏃" },
+            { "id": "tqvjhk0qmvn43h5hyc9ibdd3", "content": "游泳跑步 🏊‍♂️🏃" },
             {
               "id": "mu0m5v7m55vfikbs29lpcm3h",
               "outgoingEdgeId": "hbh8d8q39wzgy1foclpy15s2",
-              "content": "Other"
+              "content": "其他"
             }
           ],
           "options": { "variableId": "vc5qxl1y2rzmy7uqeasq8bd3q" }
@@ -91,7 +91,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What sport?" }] }
+              { "type": "p", "children": [{ "text": "什么运动？" }] }
             ]
           }
         },
@@ -116,7 +116,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Great! How long will you be doing this activity?" }
+                  { "text": "很好！这项活动你会持续多长时间？" }
                 ]
               }
             ]
@@ -143,7 +143,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Understood! Now, how hard will you be going?" }
+                  { "text": "明白了！那么，你的强度会是多大？" }
                 ]
               }
             ]
@@ -157,7 +157,7 @@
             "variableId": "vprpht8foqzxv4bs8hlozqoq7",
             "length": 7,
             "startsAt": 1,
-            "labels": { "left": "Easy", "right": "Racing" }
+            "labels": { "left": "轻松", "right": "竞赛" }
           }
         }
       ]
@@ -219,7 +219,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "To keep a record of your carb calculations and for easy future reference, could you please provide your email address? "
+                    "text": "为了记录您的碳水化合物计算数据并方便将来参考，您能提供您的电子邮件地址吗？"
                   }
                 ]
               }
@@ -235,7 +235,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This way, I can send you a personalized summary of your fueling plan. 📧"
+                    "text": "这样，我就可以向您发送您的补给计划的个性化摘要。📧"
                   }
                 ]
               }
@@ -264,7 +264,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Now that you know how many carbs you'll need, would you like to check out our selection of top-rated carbohydrate gels and other fueling products? 🛒"
+                    "text": "既然您知道需要多少碳水化合物，您想看看我们精选的高评价碳水化合物凝胶和其他补给产品吗？🛒"
                   }
                 ]
               }
@@ -278,7 +278,7 @@
             {
               "id": "y7w3u1i6np6umnwxfs7u7x4a",
               "outgoingEdgeId": "nnaxabsjpk161s6kygdxm68k",
-              "content": "Go shopping"
+              "content": "去购物"
             }
           ]
         }
@@ -312,7 +312,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄"
+                    "text": "您需要添加您的OpenAI凭证才能使此机器人正常工作。🪄"
                   }
                 ]
               }
@@ -328,11 +328,11 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此群组并将 "
                   },
-                  { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "Sport group" },
+                  { "bold": true, "text": "开始" },
+                  { "text": " 事件与 " },
+                  { "bold": true, "text": "运动组" },
                   { "text": " 🚀" }
                 ]
               }

@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can we help?" }] }
+              { "type": "p", "children": [{ "text": "我们能帮您什么？" }] }
             ]
           }
         },
@@ -113,7 +113,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Ok feel free to check your account here" }
+                  { "text": "好的，您可以在这里查看您的账户" }
                 ]
               }
             ]
@@ -122,7 +122,7 @@
         {
           "id": "fn0s0ezabail96c5n0xs24aq",
           "type": "choice input",
-          "items": [{ "id": "tslv59v8oqbfpnd21la8qnz4", "content": "Account" }]
+          "items": [{ "id": "tslv59v8oqbfpnd21la8qnz4", "content": "账户" }]
         },
         {
           "id": "r16g3avw7mwzi12srqisuex0",
@@ -141,7 +141,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "I'm a human" }] }
+              { "type": "p", "children": [{ "text": "我是真人" }] }
             ]
           }
         }
@@ -156,7 +156,7 @@
           "id": "tpy9wjrwmhw16xjgs8htao04",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Else" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "其他" }] }]
           }
         }
       ]
@@ -175,7 +175,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄\n"
+                    "text": "您需要添加您的OpenAI凭证才能使此机器人正常工作。🪄\n"
                   }
                 ]
               }
@@ -191,11 +191,11 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此群组并将 "
                   },
-                  { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "Intro" },
+                  { "bold": true, "text": "开始" },
+                  { "text": " 事件与 " },
+                  { "bold": true, "text": "介绍" },
                   { "text": " 🚀\n" }
                 ]
               }

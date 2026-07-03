@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hey there 👋" }] }
+              { "type": "p", "children": [{ "text": "你好 👋" }] }
             ]
           }
         },
@@ -32,7 +32,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Baptiste from AgenZ here." }]
+                "children": [{ "text": "我是AgenZ的Baptiste。" }]
               }
             ]
           }
@@ -44,7 +44,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Thank you for downloading the ebook!" }]
+                "children": [{ "text": "感谢您下载电子书！" }]
               }
             ]
           }
@@ -57,7 +57,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "I have a few questions, do you have a minute?" }
+                  { "text": "我有几个问题，您有时间吗？" }
                 ]
               }
             ]
@@ -70,7 +70,7 @@
             {
               "id": "g1g24q5d198iv7gtqm5ics7k",
               "outgoingEdgeId": "ybsw3vxq9dubcsfnlrf54a7p",
-              "content": "Sure!"
+              "content": "当然！"
             }
           ]
         }
@@ -85,7 +85,7 @@
           "id": "rowpy0lwuecc83xecbb8tzcn",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Awesome!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "太棒了！" }] }]
           }
         },
         {
@@ -95,7 +95,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What's your current business?" }]
+                "children": [{ "text": "您目前从事什么业务？" }]
               }
             ]
           }
@@ -224,7 +224,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "To give me an idea, what's your average revenue per year?"
+                    "text": "为了让我有个概念，您每年的平均收入是多少？"
                   }
                 ]
               }
@@ -351,7 +351,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "So why are you interested in SEO right now?" }
+                  { "text": "那么，您现在为什么对SEO感兴趣？" }
                 ]
               }
             ]
@@ -427,13 +427,13 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Would you be up for a quick meeting?" }]
+                "children": [{ "text": "您愿意安排一次简短的会议吗？" }]
               },
               { "type": "p", "children": [{ "text": "" }] },
               {
                 "type": "p",
                 "children": [
-                  { "text": "I can offer you a free consulting call." }
+                  { "text": "我可以为您提供一次免费咨询通话。" }
                 ]
               }
             ]
@@ -446,7 +446,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "<INSERT YOUR CAL.COM BLOCK HERE>" }]
+                "children": [{ "text": "<在此处插入您的CAL.COM块>" }]
               }
             ]
           }
@@ -467,7 +467,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your Mistral AI credentials to make this bot work. 🪄"
+                    "text": "您需要添加您的Mistral AI凭证才能使此机器人正常工作。🪄"
                   }
                 ]
               }
@@ -483,7 +483,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You can also convert the Mistral blocks to any AI compatible blocks."
+                    "text": "您也可以将Mistral块转换为任何AI兼容块。"
                   }
                 ]
               }
@@ -499,11 +499,11 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此群组并将 "
                   },
-                  { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "Intro" },
+                  { "bold": true, "text": "开始" },
+                  { "text": " 事件与 " },
+                  { "bold": true, "text": "介绍" },
                   { "text": " 🚀" }
                 ]
               }

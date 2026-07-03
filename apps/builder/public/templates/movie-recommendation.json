@@ -32,7 +32,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Welcome to our film recommendation bot 👋" }
+                  { "text": "欢迎来到我们的电影推荐机器人 👋" }
                 ]
               }
             ]
@@ -52,7 +52,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "It is powered by The Movie DB API 🚀" }]
+                "children": [{ "text": "它由The Movie DB API提供支持 🚀" }]
               }
             ]
           }
@@ -69,7 +69,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can I we help?" }] }
+              { "type": "p", "children": [{ "text": "我能帮你什么？" }] }
             ]
           }
         },
@@ -80,12 +80,12 @@
             {
               "id": "kaimvzg9igdtktgou5m3s1bw",
               "outgoingEdgeId": "t8qyjpigrz7cdl8gxl1wxlwj",
-              "content": "Select a genre 💅"
+              "content": "选择一个类型 💅"
             },
             {
               "id": "i8ls2f8inq2ovuijj6l7rbcq",
               "outgoingEdgeId": "tjn2ljosqyd4aj9dk8mnifsu",
-              "content": "See what's trending 🔝"
+              "content": "看看热门推荐 🔝"
             }
           ]
         }
@@ -100,7 +100,7 @@
           "id": "ecwz96cghzp4ji3lyx7taxt1",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Sure!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "当然！" }] }]
           }
         },
         {
@@ -147,7 +147,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Select your desired genre 👇" }]
+                "children": [{ "text": "选择你想要的类型 👇" }]
               }
             ]
           }
@@ -156,7 +156,7 @@
           "id": "nwuk2clo78hmnh4d0g31u9xg",
           "type": "choice input",
           "items": [
-            { "id": "ri3avm9p0i96p8gx4028b6ye", "content": "Click to edit" }
+            { "id": "ri3avm9p0i96p8gx4028b6ye", "content": "点击编辑" }
           ],
           "options": {
             "variableId": "vkmbb3rb2hcfd2io1fhf7rz5x",
@@ -188,7 +188,7 @@
           "id": "edokvbp15ubqeuydw9n7wf4w",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Sure!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "当然！" }] }]
           }
         },
         {
@@ -235,7 +235,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Here are popular movies this week 👇" }]
+                "children": [{ "text": "这是本周热门电影 👇" }]
               }
             ]
           }
@@ -244,7 +244,7 @@
           "id": "krcvvncnqtn99v0qe1dzudrk",
           "type": "choice input",
           "items": [
-            { "id": "dicb6lnv5kapkq0tygnx1abh", "content": "Click to edit" }
+            { "id": "dicb6lnv5kapkq0tygnx1abh", "content": "点击编辑" }
           ],
           "options": {
             "variableId": "vulnb1om2fk8mvkcesl8s15cr",
@@ -281,7 +281,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here are trending movies for the {{Selected genre}} genre"
+                    "text": "这是 {{Selected genre}} 类型的趋势电影"
                   }
                 ]
               }
@@ -339,7 +339,7 @@
           "id": "tr5y76tx9ca336f8ob9odfa6",
           "type": "choice input",
           "items": [
-            { "id": "uy2xwxoqhqol852cqsq17r9l", "content": "Click to edit" }
+            { "id": "uy2xwxoqhqol852cqsq17r9l", "content": "点击编辑" }
           ],
           "options": {
             "variableId": "vyyr3j2pu76uzvf88laai8snl",
@@ -372,7 +372,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Excellent choice 🔥" }] }
+              { "type": "p", "children": [{ "text": "绝佳选择 🔥" }] }
             ]
           }
         },
@@ -452,12 +452,12 @@
             {
               "id": "n4818dnrb4arw1xh5v0ot8vz",
               "outgoingEdgeId": "fteu5frsbj8wejfhhwzuv8t1",
-              "content": "Watch the movie"
+              "content": "观看电影"
             },
             {
               "id": "j9d1pf2tndax0itezys7t73c",
               "outgoingEdgeId": "zb79atxs2itliks4d00e35uy",
-              "content": "Find something else"
+              "content": "找其他电影"
             }
           ]
         }

@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hi there! 👋" }] }
+              { "type": "p", "children": [{ "text": "你好！👋" }] }
             ]
           }
         },
@@ -33,10 +33,10 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Sign up for the newsletter and " },
+                  { "text": "订阅新闻通讯，即可免费获取我们的专属“社区礼包”。" },
                   {
                     "bold": true,
-                    "text": "get free access to our exclusive 'Community Bundle'."
+                    "text": ""
                   }
                 ]
               }
@@ -52,7 +52,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This bundle helps you create the best Community possible for your project."
+                    "text": "这个礼包可以帮助您为您的项目创建最好的社区。"
                   }
                 ]
               }
@@ -64,7 +64,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your name?" }] }
+              { "type": "p", "children": [{ "text": "你叫什么名字？" }] }
             ]
           }
         },
@@ -73,7 +73,7 @@
           "outgoingEdgeId": "rczh7k3r065okzax6za00lvh",
           "type": "text input",
           "options": {
-            "labels": { "placeholder": "Your first name" },
+            "labels": { "placeholder": "你的名字" },
             "variableId": "vyu4paeim4jcjgmxr26bdk286"
           }
         }
@@ -93,7 +93,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Ok, {{Name}}. What email would you like to sign up with?"
+                    "text": "好的，{{Name}}。您想用哪个邮箱注册？"
                   }
                 ]
               }
@@ -121,7 +121,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What's your goal with the community?" }]
+                "children": [{ "text": "您创建社区的目标是什么？" }]
               }
             ]
           }
@@ -159,7 +159,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Perfect, your bundle will be emailed to you right away 🚀"
+                    "text": "完美，您的礼包将立即发送到您的邮箱 🚀"
                   }
                 ]
               }
@@ -242,8 +242,8 @@
           "options": {
             "isCustomBody": true,
             "recipients": ["{{Email}}"],
-            "subject": "Here is your community bundle ✨",
-            "body": "Hey {{Name}},\n\nHere is a link to download the community bundle:\n\nhttps://typebot.io\n\nI hope it will help you create the right community for your project 🚀\n\nBest,\nTypebot team."
+            "subject": "这是您的社区礼包 ✨",
+            "body": "嘿 {{Name}}，\n\n这是下载社区礼包的链接：\n\nhttps://typebot.io\n\n希望它能帮助您为您的项目创建合适的社区 🚀\n\n祝好，\nTypebot团队。"
           }
         }
       ]
@@ -260,7 +260,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Want to know how to win loyal fans?" }]
+                "children": [{ "text": "想知道如何赢得忠实粉丝吗？" }]
               }
             ]
           }
@@ -270,7 +270,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "看看这个视频：" }] }
             ]
           }
         },
@@ -299,7 +299,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Want to know how to have a great competitive advantage with your community?"
+                    "text": "想知道如何通过社区获得强大的竞争优势吗？"
                   }
                 ]
               }
@@ -311,7 +311,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "看看这个视频：" }] }
             ]
           }
         },
@@ -340,7 +340,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Want to know how to improve your product by leveraging a community?"
+                    "text": "想知道如何利用社区来改进您的产品吗？"
                   }
                 ]
               }
@@ -352,7 +352,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "看看这个视频：" }] }
             ]
           }
         },
@@ -380,7 +380,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Want to offer better support with a community?" }
+                  { "text": "想通过社区提供更好的支持吗？" }
                 ]
               }
             ]
@@ -391,7 +391,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "看看这个视频：" }] }
             ]
           }
         },

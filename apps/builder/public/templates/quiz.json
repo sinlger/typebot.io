@@ -31,7 +31,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What does SEO stand for?" }]
+                "children": [{ "text": "SEO 代表什么？" }]
               }
             ]
           }
@@ -41,19 +41,19 @@
           "outgoingEdgeId": "cl1r0cfjt00122e6dzwtamycl",
           "type": "choice input",
           "items": [
-            { "id": "cl1r09dl9000k2e6dvf7llzkd", "content": "Send Email Out" },
+            { "id": "cl1r09dl9000k2e6dvf7llzkd", "content": "发送电子邮件" },
             {
               "id": "cl1r0a80k000l2e6dngppwyhm",
-              "content": "Serial Editorial Output"
+              "content": "系列编辑输出"
             },
             {
               "id": "cl1r0adei000m2e6dfc8w5y4k",
               "outgoingEdgeId": "cl1r0dfip00152e6doo9duexn",
-              "content": "Search Engine Optimization"
+              "content": "搜索引擎优化"
             },
             {
               "id": "cl1r0aiks000n2e6dc31e2db6",
-              "content": "Search Expectation Order"
+              "content": "搜索期望顺序"
             }
           ]
         }
@@ -77,7 +77,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
+              { "type": "p", "children": [{ "text": "做得好！" }] }
             ]
           }
         },
@@ -86,7 +86,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What is anchor text?" }] }
+              { "type": "p", "children": [{ "text": "什么是锚文本？" }] }
             ]
           }
         },
@@ -98,19 +98,19 @@
             {
               "id": "cl1r0b3x5000s2e6dyq6bklbf",
               "outgoingEdgeId": "cl1r0i4dj001r2e6dgb96tx9q",
-              "content": "The visible text that is hyperlinked to another page"
+              "content": "超链接到另一个页面的可见文本"
             },
             {
               "id": "cl1r0b6jd000t2e6dkp3dxpp9",
-              "content": "The text in the top left of a webpage"
+              "content": "网页左上角的文本"
             },
             {
               "id": "cl1r0b835000u2e6d22rw2gb5",
-              "content": "The most prominent text on a page, used by search engines to assign a title to the page"
+              "content": "页面上最突出的文本，搜索引擎用来分配页面标题"
             },
             {
               "id": "cl1r0b9tl000v2e6dkligryj3",
-              "content": "A slogan that sticks in a consumer’s mind"
+              "content": "在消费者心中留下印象的口号"
             }
           ]
         }
@@ -134,7 +134,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
+              { "type": "p", "children": [{ "text": "做得好！" }] }
             ]
           }
         },
@@ -143,7 +143,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What is a persona ?" }] }
+              { "type": "p", "children": [{ "text": "什么是人物画像？" }] }
             ]
           }
         },
@@ -154,20 +154,20 @@
           "items": [
             {
               "id": "cl1r0erim001g2e6d5zzn8q22",
-              "content": "Your target audience"
+              "content": "你的目标受众"
             },
             {
               "id": "cl1r0erim001h2e6dnwtiturl",
-              "content": "Someone who joins your mailing list"
+              "content": "加入你邮件列表的人"
             },
             {
               "id": "cl1r0erim001i2e6dbfhck09o",
-              "content": "A repeat customer"
+              "content": "回头客"
             },
             {
               "id": "cl1r0erim001j2e6d2waa3374",
               "outgoingEdgeId": "cl1r0k27y00262e6dflgcp3wa",
-              "content": "A fictional representation of a group of customers"
+              "content": "一群客户的虚构代表"
             }
           ]
         }
@@ -191,7 +191,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
+              { "type": "p", "children": [{ "text": "做得好！" }] }
             ]
           }
         },
@@ -202,7 +202,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What does CTA stand for?" }]
+                "children": [{ "text": "CTA 代表什么？" }]
               }
             ]
           }
@@ -214,20 +214,20 @@
           "items": [
             {
               "id": "cl1r0j8u200212e6dov1xy5m4",
-              "content": "Consequence To Advert"
+              "content": "广告后果"
             },
             {
               "id": "cl1r0j8u300222e6dnj0i5fm8",
               "outgoingEdgeId": "cl1r0lm4e002m2e6d0g3h9pm7",
-              "content": "Call To Action"
+              "content": "行动号召"
             },
             {
               "id": "cl1r0j8u300232e6dxd8abojt",
-              "content": "Computer Tracked Actions"
+              "content": "计算机跟踪操作"
             },
             {
               "id": "cl1r0j8u300242e6d0pki60w6",
-              "content": "Characteristic Tracking Advert"
+              "content": "特征跟踪广告"
             }
           ]
         }
@@ -242,7 +242,7 @@
           "id": "cl1r0c85i00112e6d8iwtrpvb",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "错误！" }] }]
           }
         },
         {
@@ -254,7 +254,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "SEO stands for Search Engine Optimization" }
+                  { "text": "SEO 代表搜索引擎优化" }
                 ]
               }
             ]
@@ -271,7 +271,7 @@
           "id": "cl1r0exdi001m2e6d7kge562x",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "错误！" }] }]
           }
         },
         {
@@ -284,7 +284,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Anchor text is the visible text that is hyperlinked to another page"
+                    "text": "锚文本是超链接到另一个页面的可见文本"
                   }
                 ]
               }
@@ -302,7 +302,7 @@
           "id": "cl1r0k3tq00282e6dl0av81kz",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "错误！" }] }]
           }
         },
         {
@@ -315,7 +315,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "A persona is a fictional representation of a group of customers"
+                    "text": "人物画像是客户的虚构代表"
                   }
                 ]
               }
@@ -333,7 +333,7 @@
           "id": "cl1r0kqof002e2e6dzjcw0kvs",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "错误！" }] }]
           }
         },
         {
@@ -346,7 +346,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Anchor text is the visible text that is hyperlinked to another page"
+                    "text": "CTA 代表行动号召"
                   }
                 ]
               }
@@ -425,7 +425,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Your score is {{Score}}/20." }]
+                "children": [{ "text": "你的得分是 {{Score}}/20。" }]
               }
             ]
           }
@@ -435,7 +435,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Try again?" }] }
+              { "type": "p", "children": [{ "text": "再试一次？" }] }
             ]
           }
         },
@@ -446,9 +446,9 @@
             {
               "id": "cl1r0nt85002t2e6dvb7si7ny",
               "outgoingEdgeId": "cl1r15gko005i2e6dn6rhifwe",
-              "content": "Yes!"
+              "content": "是的！"
             },
-            { "id": "cl1r0nveb002u2e6dotjk6nuf", "content": "No, bye!" }
+            { "id": "cl1r0nveb002u2e6dotjk6nuf", "content": "不，再见！" }
           ]
         }
       ]
@@ -464,7 +464,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done 👏" }] }
+              { "type": "p", "children": [{ "text": "做得好 👏" }] }
             ]
           }
         }
@@ -484,7 +484,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "You could do better but that's alright!" }
+                  { "text": "你可以做得更好，但没关系！" }
                 ]
               }
             ]
@@ -507,7 +507,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Aouch, you need to improve your Digital Marketing game."
+                    "text": "哎呀，你需要提高你的数字营销水平。"
                   }
                 ]
               }
@@ -541,7 +541,7 @@
           "id": "cl1r16nes005z2e6d3aj23kfz",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hi there!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "你好！" }] }]
           }
         },
         {
@@ -553,7 +553,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You're about to answer a Quiz about Digital Marketing"
+                    "text": "你将要回答一个关于数字营销的测验"
                   }
                 ]
               }
@@ -567,7 +567,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "It is composed of only 4 questions." }]
+                "children": [{ "text": "它只包含4个问题。" }]
               }
             ]
           }
@@ -577,7 +577,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "bold": true, "text": "Ready?" }] }
+              { "type": "p", "children": [{ "bold": true, "text": "准备好了吗？" }] }
             ]
           }
         },
@@ -588,7 +588,7 @@
             {
               "id": "cl1r176e9006a2e6dpvp0974z",
               "outgoingEdgeId": "cl1r17pzv006n2e6dpibxp9th",
-              "content": "Go!"
+              "content": "开始！"
             }
           ]
         }

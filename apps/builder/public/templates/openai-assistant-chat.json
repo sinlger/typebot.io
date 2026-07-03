@@ -62,7 +62,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work."
+                    "text": "您需要添加您的OpenAI凭证才能使此机器人正常工作。"
                   }
                 ]
               }
@@ -79,11 +79,11 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此群组并将 "
                   },
-                  { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "AI loop" },
+                  { "bold": true, "text": "开始" },
+                  { "text": " 事件与 " },
+                  { "bold": true, "text": "AI循环" },
                   { "text": "" }
                 ]
               }

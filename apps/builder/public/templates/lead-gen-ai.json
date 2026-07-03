@@ -20,7 +20,7 @@
           "id": "sc1y8VwDabNJgiVTBi4qtif",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hey 👋" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "嘿 👋" }] }]
           }
         },
         {
@@ -39,7 +39,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Thank you for your interest in our marketing services."
+                    "text": "感谢您对我们的营销服务感兴趣。"
                   }
                 ]
               }
@@ -55,7 +55,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Let's have a quick chat about your current situation 🙏"
+                    "text": "让我们快速聊聊您目前的状况 🙏"
                   }
                 ]
               }
@@ -66,14 +66,14 @@
           "id": "vw9s76hgwu749gw15bqk4vd3",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Ready?" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "准备好了吗？" }] }]
           }
         },
         {
           "id": "sbjZWLJGVkHAkDqS4JQeGow",
           "outgoingEdgeId": "vgi4r3yjle17balwlhpas25t",
           "type": "choice input",
-          "items": [{ "id": "hQw2zbp7FDX7XYK9cFpbgC", "content": "Yes!" }]
+          "items": [{ "id": "hQw2zbp7FDX7XYK9cFpbgC", "content": "好的！" }]
         }
       ]
     },
@@ -90,7 +90,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "What's the best email we can reach you at?" }
+                  { "text": "我们可以通过哪个邮箱联系您最好？" }
                 ]
               }
             ]
@@ -118,7 +118,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What company do you work for?" }]
+                "children": [{ "text": "您在哪个公司工作？" }]
               }
             ]
           }
@@ -129,8 +129,8 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
-              "button": "Send"
+              "placeholder": "输入您的答案...",
+              "button": "发送"
             },
             "variableId": "giiLFGw5xXBCHzvp1qAbdX"
           }
@@ -149,7 +149,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What services are you interested in?" }]
+                "children": [{ "text": "您对哪些服务感兴趣？" }]
               }
             ]
           }
@@ -159,10 +159,10 @@
           "outgoingEdgeId": "wtw2lm86g46ehgvp43fcfks6",
           "type": "choice input",
           "items": [
-            { "id": "fnLCBF4NdraSwcubnBhk8H", "content": "Website dev" },
-            { "id": "a782h8ynMouY84QjH7XSnR", "content": "Content Marketing" },
-            { "id": "jGvh94zBByvVFpSS3w97zY", "content": "Social Media" },
-            { "id": "6PRLbKUezuFmwWtLVbvAQ7", "content": "UI / UX Design" }
+            { "id": "fnLCBF4NdraSwcubnBhk8H", "content": "网站开发" },
+            { "id": "a782h8ynMouY84QjH7XSnR", "content": "内容营销" },
+            { "id": "jGvh94zBByvVFpSS3w97zY", "content": "社交媒体" },
+            { "id": "6PRLbKUezuFmwWtLVbvAQ7", "content": "UI / UX 设计" }
           ],
           "options": {
             "variableId": "vi0mmx9o2m4s8z9cccsjcvpj5",
@@ -268,8 +268,8 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
-              "button": "Send"
+              "placeholder": "输入您的答案...",
+              "button": "发送"
             },
             "variableId": "vhp0ymgwq4id82l97g0kliglf"
           }
@@ -295,7 +295,7 @@
           "id": "seLegenCgUwMopRFeAefqZ7",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Perfect!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "完美！" }] }]
           }
         },
         {
@@ -305,7 +305,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "We'll get back to you at {{Email}}" }]
+                "children": [{ "text": "我们会通过 {{Email}} 联系您" }]
               }
             ]
           }
@@ -326,7 +326,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄"
+                    "text": "您需要添加您的OpenAI凭证才能使此机器人正常工作。🪄"
                   }
                 ]
               }
@@ -342,11 +342,11 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "完成后，删除此群组并将 "
                   },
-                  { "bold": true, "text": "Services" },
-                  { "text": " group with " },
-                  { "bold": true, "text": "[AI] Additional Information" },
+                  { "bold": true, "text": "服务" },
+                  { "text": " 群组与 " },
+                  { "bold": true, "text": "[AI] 附加信息" },
                   { "text": " 🚀" }
                 ]
               }

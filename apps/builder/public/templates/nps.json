@@ -20,7 +20,7 @@
           "id": "vep990mmfbe64nqczp66xebw",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hey! 👋" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "嘿！👋" }] }]
           }
         },
         {
@@ -32,10 +32,10 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Since you are part of our daily users, can I ask you "
+                    "text": "既然您是我们日常用户的一员，我可以问您 "
                   },
-                  { "bold": true, "text": "2 questions" },
-                  { "text": "?" }
+                  { "bold": true, "text": "2个问题" },
+                  { "text": "吗？" }
                 ]
               }
             ]
@@ -48,7 +48,7 @@
             {
               "id": "wvjhc2vrkqy8512y0wvmciex",
               "outgoingEdgeId": "sjeyoptun1yu805ry37je1ni",
-              "content": "Sure!"
+              "content": "当然！"
             }
           ]
         }
@@ -67,9 +67,8 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How likely will you recommend our product" },
-                  { "bold": true, "text": " " },
-                  { "text": "to a friend or colleague?" }
+                  { "text": "您有多大可能向朋友或同事推荐我们的产品？" },
+                  { "bold": true, "text": " " }
                 ]
               }
             ]
@@ -81,8 +80,8 @@
           "options": {
             "variableId": "vwqc8tzl0380h30vxh07fekmm",
             "labels": {
-              "left": "Very unlikely",
-              "right": "Very likely"
+              "left": "非常不可能",
+              "right": "非常可能"
             },
             "isOneClickSubmitEnabled": true
           }
@@ -136,7 +135,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "I'm glad to hear that 😍" }]
+                "children": [{ "text": "很高兴听到这个 😍" }]
               }
             ]
           }
@@ -149,7 +148,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us why?" }]
+                "children": [{ "text": "您能告诉我们为什么吗？" }]
               }
             ]
           }
@@ -184,7 +183,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us what went wrong?" }]
+                "children": [{ "text": "您能告诉我们哪里出了问题吗？" }]
               }
             ]
           }
@@ -304,7 +303,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Thank you! 🙏" }] }
+              { "type": "p", "children": [{ "text": "谢谢！🙏" }] }
             ]
           }
         },
@@ -316,7 +315,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Would you be ok to leave a review on Capterra?" }
+                  { "text": "您愿意在Capterra上留下评论吗？" }
                 ]
               }
             ]
@@ -329,12 +328,12 @@
             {
               "id": "y34d4iij8y9qrt28y240x7vm",
               "outgoingEdgeId": "lw33kviri91z1mvxb87kaew0",
-              "content": "Sure!"
+              "content": "当然！"
             },
             {
               "id": "l7txnq6jtm0niynklcpzb21u",
               "outgoingEdgeId": "wjcvbnj1drs6if1p21a8yokf",
-              "content": "Maybe later"
+              "content": "稍后再说"
             }
           ]
         }
@@ -353,7 +352,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Thank you for taking the time to answer!" }
+                  { "text": "感谢您抽出时间回答！" }
                 ]
               }
             ]
@@ -364,7 +363,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Have a beautiful day!" }] }
+              { "type": "p", "children": [{ "text": "祝您今天愉快！" }] }
             ]
           }
         },
@@ -391,7 +390,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Sorry that your experience hasn't been amazing 🙁"
+                    "text": "很抱歉您的体验不太理想 🙁"
                   }
                 ]
               }
@@ -407,7 +406,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a promo code if you'd like to give our product another chance: "
+                    "text": "如果您想再给我们的产品一次机会，这里有一个促销码： "
                   },
                   { "bold": true, "text": "PROMO123" }
                 ]
@@ -434,7 +433,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Amazing 🤩" }] }
+              { "type": "p", "children": [{ "text": "太棒了 🤩" }] }
             ]
           }
         },
@@ -445,7 +444,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Let me take you there..." }]
+                "children": [{ "text": "让我带您去那里..." }]
               }
             ]
           }
