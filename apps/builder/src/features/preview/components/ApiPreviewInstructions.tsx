@@ -48,9 +48,8 @@ export const ApiPreviewInstructions = ({
             <CodeEditor
               isReadOnly
               lang="sh"
-              value={`${parseApiHost(typebot?.customDomain)}/api/v1/typebots/${
-                typebot?.id
-              }/preview/startChat`}
+              value={`${parseApiHost(typebot?.customDomain)}/api/v1/typebots/${typebot?.id
+                }/preview/startChat`}
             />
             {startPreviewFrom && (
               <>
