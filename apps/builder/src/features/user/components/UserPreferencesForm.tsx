@@ -78,7 +78,7 @@ export const UserPreferencesForm = () => {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="flex items-center gap-4">
+      {/* <div className="flex items-center gap-4">
         <h3>{t("account.preferences.language.heading")}</h3>
         <div className="flex items-center">
           <BasicSelect
@@ -95,7 +95,7 @@ export const UserPreferencesForm = () => {
             </MoreInfoTooltip>
           )}
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-col gap-6">
         <h3>{t("account.preferences.graphNavigation.heading")}</h3>
         <GraphNavigationRadioGroup
