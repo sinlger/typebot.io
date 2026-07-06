@@ -1,4 +1,16 @@
+import { useState } from "react";
+
+const tabs = [
+  { key: "qa", label: "产品问答", image: "/images/GaDrKw5p31cO4okm.png" },
+  { key: "support", label: "智能客服", image: "/images/VvXricTVwTAJeng6.png" },
+  { key: "recommend", label: "产品推荐", image: "/images/huix7Mj53zn9Elki.png" },
+  { key: "survey", label: "问卷调查", image: "/images/Xo7AF4DUTg4hLd7o.png" },
+];
+
 export function EditorPreview() {
+  const [active, setActive] = useState(tabs[0].key);
+  const activeTab = tabs.find((t) => t.key === active) ?? tabs[0];
+
   return (
     <section id="editor-preview" className="py-20 md:py-28 bg-linear-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,12 +24,37 @@ export function EditorPreview() {
           </p>
         </div>
 
-        {/* 动画占位区：此处将内嵌编排画布动画 */}
+        {/* 场景 Tab 切换 */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
+          {tabs.map((t) => (
+            <button
+              key={t.key}
+              type="button"
+              onClick={() => setActive(t.key)}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${active === t.key
+                ? "bg-brand-600 text-white shadow-md shadow-brand-500/20"
+                : "bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-800"
+                }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+
+        {/* 画布截图展示区：image 留空时显示占位 */}
         <div
-          className="mt-14 flex items-center justify-center rounded-3xl border-2 border-dashed border-slate-200 bg-slate-50/50 min-h-105 md:min-h-130"
+          className="mt-8 relative rounded-3xl border-2 border-dashed border-slate-200 bg-slate-50/50 min-h-105 md:min-h-150 overflow-hidden"
           data-slot="editor-preview-mount"
         >
-          <span className="text-sm text-slate-400">编排画布动画将内嵌于此处</span>
+          <div key={active} className="absolute inset-0 animate-in fade-in duration-300">
+            {activeTab.image ? (
+              <img src={activeTab.image} alt={activeTab.label} className="w-full h-full object-cover" />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <span className="text-sm text-slate-400">「{activeTab.label}」流程截图（待补充）</span>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

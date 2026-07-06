@@ -133,8 +133,8 @@ export const SharePage = () => {
                   </div>
                 )}
                 {currentUserMode === "write" &&
-                isNotDefined(typebot?.customDomain) &&
-                env.NEXT_PUBLIC_VERCEL_VIEWER_PROJECT_NAME ? (
+                  isNotDefined(typebot?.customDomain) &&
+                  env.NEXT_PUBLIC_VERCEL_VIEWER_PROJECT_NAME ? (
                   hasProPerks(workspace) ? (
                     <CustomDomainsDropdown
                       onCustomDomainSelect={handleCustomDomainChange}
@@ -156,7 +156,7 @@ export const SharePage = () => {
 
             {typebot && (
               <div className="flex flex-col gap-4 flex-1/2">
-                <h2>Site preview metadata</h2>
+                <h2>网站元数据预览</h2>
                 <LinkPreviewMetadataForm
                   workspaceId={typebot.workspaceId}
                   typebotId={typebot.id}

@@ -56,7 +56,7 @@ export const pricingPlans: PricingPlan[] = [
     features: [
       "2,000 次 / 月 互动对话回复",
       "完全去除 擎流官方出厂水印",
-      "支持添加高级 API/Webhook 连接",
+      "支持添加高级 API/Webhook 连接"
     ],
     cta: { label: "立即订阅", href: registerPlanUrl("starter") },
   },
@@ -70,7 +70,7 @@ export const pricingPlans: PricingPlan[] = [
     features: [
       "10,000 次 / 月 互动对话回复",
       "5 名 团队核心成员协作管理席位",
-      "高级统计分析看板，线索数据一键导出",
+      "高级统计分析看板，线索数据一键导出"
     ],
     cta: { label: "立即订购", href: registerPlanUrl("pro") },
   },

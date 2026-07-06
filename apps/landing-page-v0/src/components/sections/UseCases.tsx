@@ -1,14 +1,7 @@
-import {
-  Megaphone,
-  Headphones,
-  ClipboardList,
-  ShoppingCart,
-  GraduationCap,
-  CalendarCheck,
-} from "lucide-react";
+
 
 type UseCase = {
-  icon: typeof Megaphone;
+  image: string;
   title: string;
   desc: string;
   tag: string;
@@ -17,42 +10,42 @@ type UseCase = {
 
 const useCases: UseCase[] = [
   {
-    icon: Megaphone,
+    image: '/images/austin-distel-Imc-IoZDMXc.jpg',
     title: "线索留资获客",
     desc: "在落地页、公众号菜单植入智能问答流，逐问逐答收集客户行业、规模、预算，比传统表单留资率提升 3 倍。",
     tag: "市场推广",
     accent: "bg-brand-100 text-brand-700",
   },
   {
-    icon: Headphones,
+    image: '/images/mohamed-nohassi-2iUrK025cec.jpg',
     title: "7×24 智能客服",
     desc: "用多分支画布搭建常见问题应答树，自动处理 80% 重复咨询，复杂问题无缝转接人工，夜间不再漏回。",
     tag: "客户服务",
     accent: "bg-cyan-100 text-cyan-700",
   },
   {
-    icon: ClipboardList,
+    image: '/images/kobu-agency-Yyd_WQWyIyI.jpg',
     title: "问卷与 NPS 调研",
     desc: "把枯燥问卷变成对话，按作答动态跳转下一题，完成率较静态表单翻倍，数据实时回传 CRM。",
     tag: "用户洞察",
     accent: "bg-emerald-100 text-emerald-700",
   },
   {
-    icon: ShoppingCart,
+    image: '/images/shutter-speed-BQ9usyzHx_w.jpg',
     title: "电商导购与追单",
     desc: "根据用户偏好推荐商品、解答规格疑问，下单后自动推送物流提醒，弃单客户一键唤回。",
     tag: "电商运营",
     accent: "bg-teal-100 text-teal-700",
   },
   {
-    icon: GraduationCap,
+    image: '/images/markus-winkler-7iSEHWsxPLw.jpg',
     title: "在线教育与选课",
     desc: "新生通过问答流完成能力测评、匹配课程方案，自动生成学习路径并引导报名付费。",
     tag: "教育培训",
     accent: "bg-indigo-100 text-indigo-700",
   },
   {
-    icon: CalendarCheck,
+    image: '/images/ed-hardie-4BnNnEtAGP0.jpg',
     title: "预约挂号与排期",
     desc: "诊所、美容、培训机构用画布引导客户选项目、选时段、确认信息，自动写入预约系统并发送提醒。",
     tag: "预约服务",
@@ -76,20 +69,23 @@ export function UseCases() {
           {useCases.map((uc) => (
             <div
               key={uc.title}
-              className="group bg-white rounded-3xl p-7 border border-slate-100 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-500/5 transition-all hover:-translate-y-1"
+              className="group bg-white rounded-3xl border border-slate-100 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-500/5 transition-all hover:-translate-y-1 overflow-hidden"
             >
-              <div className="flex items-center justify-between mb-5">
-                <div
-                  className={`w-12 h-12 rounded-2xl ${uc.accent} flex items-center justify-center transition-transform group-hover:scale-110`}
-                >
-                  <uc.icon className="w-6 h-6" />
-                </div>
-                <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
+              <div className="aspect-16/10 overflow-hidden bg-slate-100">
+                <img
+                  src={uc.image}
+                  alt={uc.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <span className={`inline-block text-xs font-medium px-2.5 py-1 rounded-full mb-3 ${uc.accent}`}>
                   {uc.tag}
                 </span>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{uc.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{uc.desc}</p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">{uc.title}</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">{uc.desc}</p>
             </div>
           ))}
         </div>

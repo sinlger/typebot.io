@@ -12,33 +12,34 @@ export function Pricing() {
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-xs font-bold text-brand-600 uppercase tracking-widest">高性价比服务</h2>
           <p className="mt-3 text-3xl md:text-4xl font-bold text-slate-900">透明且极具弹性的资费套餐</p>
-          <p className="mt-4 text-slate-600 leading-relaxed">
-            美元价按比例人民币直接折算乘以2，拒绝高昂中间价及代扣代缴税率。提供省心的独立部署服务。
-          </p>
+
         </div>
 
         {/* 月/年付切换 */}
         <div className="mt-10 flex items-center justify-center gap-3">
-          <div className="inline-flex items-center bg-slate-100 rounded-xl p-1">
+          <div className="relative inline-flex items-center bg-slate-100 rounded-xl p-1">
+            <span
+              aria-hidden="true"
+              className={`pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] rounded-lg bg-white shadow-sm transition-transform duration-300 ease-out ${cycle === "yearly" ? "translate-x-full" : "translate-x-0"
+                }`}
+            />
             <button
               type="button"
               onClick={() => setCycle("monthly")}
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all ${
-                cycle === "monthly"
-                  ? "bg-white text-slate-800 shadow-sm"
+              className={`relative z-10 px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${cycle === "monthly"
+                  ? "text-slate-800"
                   : "text-slate-500 hover:text-slate-700"
-              }`}
+                }`}
             >
               按月付
             </button>
             <button
               type="button"
               onClick={() => setCycle("yearly")}
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all ${
-                cycle === "yearly"
-                  ? "bg-white text-slate-800 shadow-sm"
+              className={`relative z-10 px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${cycle === "yearly"
+                  ? "text-slate-800"
                   : "text-slate-500 hover:text-slate-700"
-              }`}
+                }`}
             >
               按年付
             </button>
@@ -66,7 +67,7 @@ export function Pricing() {
               return (
                 <div
                   key={plan.name}
-                  className="relative flex flex-col h-full rounded-3xl bg-linear-to-b from-brand-600 to-teal-700 border-2 border-brand-300 p-8 shadow-2xl shadow-brand-500/20"
+                  className="relative flex flex-col h-full rounded-3xl bg-linear-to-b from-brand-600 to-teal-700 border-2 border-brand-300 p-8 shadow-2xl shadow-brand-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-500/40"
                 >
                   {plan.badge && (
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-brand-700 text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">
@@ -88,7 +89,7 @@ export function Pricing() {
                   </ul>
                   <a
                     href={plan.cta.href}
-                    className="mt-8 block text-center text-sm font-semibold text-brand-700 bg-white hover:bg-brand-50 px-5 py-3 rounded-xl shadow-sm transition-all"
+                    className="mt-8 block text-center text-sm font-semibold text-brand-700 bg-white hover:bg-brand-50 px-5 py-3 rounded-xl shadow-sm hover:scale-[1.03] active:scale-95 transition-all duration-300"
                   >
                     {plan.cta.label}
                   </a>
@@ -101,7 +102,7 @@ export function Pricing() {
               return (
                 <div
                   key={plan.name}
-                  className="flex flex-col h-full rounded-3xl bg-dark-950 border border-slate-800 p-8 shadow-xl"
+                  className="flex flex-col h-full rounded-3xl bg-dark-950 border border-slate-800 p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:shadow-2xl"
                 >
                   <h3 className="text-lg font-bold text-white">{plan.name}</h3>
                   <div className="mt-4">
@@ -118,7 +119,7 @@ export function Pricing() {
                   </ul>
                   <a
                     href={plan.cta.href}
-                    className="mt-8 block text-center text-sm font-semibold text-white border border-slate-700 hover:bg-slate-800 px-5 py-3 rounded-xl transition-all"
+                    className="mt-8 block text-center text-sm font-semibold text-white border border-slate-700 hover:bg-slate-800 px-5 py-3 rounded-xl hover:scale-[1.03] active:scale-95 transition-all duration-300"
                   >
                     {plan.cta.label}
                   </a>
@@ -130,7 +131,7 @@ export function Pricing() {
             return (
               <div
                 key={plan.name}
-                className="flex flex-col h-full rounded-3xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:border-brand-200 transition-all"
+                className="flex flex-col h-full rounded-3xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:border-brand-200 hover:-translate-y-1 transition-all duration-300"
               >
                 <h3 className="text-lg font-bold text-slate-900">{plan.name}</h3>
                 <div className="mt-4 flex items-baseline gap-1">
@@ -156,7 +157,7 @@ export function Pricing() {
                 </ul>
                 <a
                   href={plan.cta.href}
-                  className="mt-8 block text-center text-sm font-semibold text-brand-700 bg-brand-50 hover:bg-brand-100 px-5 py-3 rounded-xl border border-brand-200/60 transition-all"
+                  className="mt-8 block text-center text-sm font-semibold text-brand-700 bg-brand-50 hover:bg-brand-100 px-5 py-3 rounded-xl border border-brand-200/60 hover:scale-[1.03] active:scale-95 transition-all duration-300"
                 >
                   {plan.cta.label}
                 </a>
