@@ -57,7 +57,7 @@ export const InactiveWorkspaceFirstNoticeEmail = ({
           这也是重新探索 Typebot 的好机会！自您上次登录以来，我们添加了许多新功能，包括新的区块、更多的 AI 集成以及大量其他改进。
         </Text>
         <Hr style={hr} />
-        <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+        <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
         <Link
           href="{{unsubscribe}}"
           target="_blank"

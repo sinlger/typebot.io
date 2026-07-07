@@ -43,7 +43,7 @@ export const VerificationCodeEmail = ({ code }: Props) => (
           此验证码仅 1 小时内有效。
         </Text>
         <Hr style={hr} />
-        <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+        <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
       </Container>
     </Body>
   </Html>

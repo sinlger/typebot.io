@@ -93,15 +93,15 @@ export const V3dot6Update = () => (
     <NewsletterSection title="内容与社区亮点">
       <strong>来自 Typebot 博客：</strong>
       <br />•{" "}
-      <Link href="https://typebot.io/blog/faq-chatbot">
+      <Link href="https://qinglbot.com/blog/faq-chatbot">
         完整指南：如何搭建 FAQ 聊天机器人
       </Link>
       <br />•{" "}
-      <Link href="https://typebot.io/blog/whatsapp-chatbot-use-cases">
+      <Link href="https://qinglbot.com/blog/whatsapp-chatbot-use-cases">
         您需要了解的 10 个强大 WhatsApp 聊天机器人用例
       </Link>
       <br />•{" "}
-      <Link href="https://typebot.io/blog/how-to-accept-payment-on-whatsapp-business">
+      <Link href="https://qinglbot.com/blog/how-to-accept-payment-on-whatsapp-business">
         完整指南：如何在 WhatsApp Business 上接受付款
       </Link>
       <br />
@@ -112,7 +112,7 @@ export const V3dot6Update = () => (
       <br />• 用户完成聊天后弹出五彩纸屑 - by nefer_l <br />
       <br />
       前往{" "}
-      <Link href="https://typebot.io/discord">社区</Link>的 awesome-typebots 频道查看所有精彩内容！
+      <Link href="https://qinglbot.com/discord">社区</Link>的 awesome-typebots 频道查看所有精彩内容！
     </NewsletterSection>
 
     <Hr style={hr} />

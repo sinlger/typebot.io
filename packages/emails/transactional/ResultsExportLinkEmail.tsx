@@ -28,7 +28,7 @@ export const ResultsExportLinkEmail = ({ typebotName, fileUrl }: Props) => {
             您可以<a href={fileUrl}>在此下载</a>。
           </Text>
           <Hr style={hr} />
-          <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+          <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
         </Container>
       </Body>
     </Html>
@@ -37,7 +37,7 @@ export const ResultsExportLinkEmail = ({ typebotName, fileUrl }: Props) => {
 
 ResultsExportLinkEmail.PreviewProps = {
   typebotName: "My Typebot",
-  fileUrl: "https://typebot.io/results.csv",
+  fileUrl: "https://qinglbot.com/results.csv",
 } as Props;
 
 export default ResultsExportLinkEmail;

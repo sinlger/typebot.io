@@ -60,7 +60,7 @@ export const GuestInvitationEmail = ({
           </Button>
 
           <Hr style={hr} />
-          <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+          <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
         </Container>
       </Body>
     </Html>
@@ -70,7 +70,7 @@ export const GuestInvitationEmail = ({
 GuestInvitationEmail.PreviewProps = {
   workspaceName: "My Workspace",
   typebotName: "My Typebot",
-  url: "https://typebot.io",
+  url: "https://qinglbot.com",
   hostEmail: "host@typebot.io",
   guestEmail: "guest@typebot.io",
 } as Props;

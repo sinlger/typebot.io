@@ -100,6 +100,8 @@ content-collections.d.ts
 .claude/skills/typebot-stripe
 .claude/skills/vercel
 ECS_CONNECTION.md
+ECS_DEPLOY.md
+deploy.ps1
 *tar.gz
 
 # 本机部署产物与脚手架(只手写的 ecosystem.config.js / nginx-*.conf 入库)

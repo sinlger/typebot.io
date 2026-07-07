@@ -60,7 +60,7 @@ export const BillingCycleResetFailedEmail = ({
           </Button>
 
           <Hr style={hr} />
-          <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+          <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
         </Container>
       </Body>
     </Html>

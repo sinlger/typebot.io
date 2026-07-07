@@ -6,7 +6,6 @@ import { Tooltip } from "@typebot.io/ui/components/Tooltip";
 import { useOpenControls } from "@typebot.io/ui/hooks/useOpenControls";
 import { ArrowLeft01Icon } from "@typebot.io/ui/icons/ArrowLeft01Icon";
 import { Copy01Icon } from "@typebot.io/ui/icons/Copy01Icon";
-import { CustomerSupportIcon } from "@typebot.io/ui/icons/CustomerSupportIcon";
 import { LayoutBottomIcon } from "@typebot.io/ui/icons/LayoutBottomIcon";
 import { LoaderCircleIcon } from "@typebot.io/ui/icons/LoaderCircleIcon";
 import { PlayIcon } from "@typebot.io/ui/icons/PlayIcon";

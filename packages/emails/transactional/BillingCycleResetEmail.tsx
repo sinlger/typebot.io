@@ -45,30 +45,24 @@ export const BillingCycleResetEmail = ({
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            Your workspace <strong>{workspaceName}</strong> has experienced
-            unusually high usage this billing cycle.
+            您的工作区  <strong>{workspaceName}</strong> 在本计费周期内出现了异常高的使用量.
             <br />
             <br />
-            We detected {readableChatsUsed} chats in a short period, which
-            exceeded our fraud prevention threshold. To protect your account, we
-            have reset your billing cycle early and charged you for the usage
-            this period.
+            您短时内发起 {readableChatsUsed} 次对话，触发了防欺诈机制。账户已受保护，计费周期已提前重置并扣费。
             <br />
             <br />
-            Your new billing cycle has started, and you now have access to your
-            full monthly chat allowance again.
+            您的新计费周期已开始，现已恢复完整的月度聊天额度，可供正常使用。
             <br />
             <br />
-            You can view your invoice and usage details in your workspace
-            billing settings.
+            在计费设置中查看账单和使用情况。
           </Text>
 
           <Button href={url} style={primaryButton}>
-            View billing details
+            计费详情
           </Button>
 
           <Hr style={hr} />
-          <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+          <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
         </Container>
       </Body>
     </Html>
@@ -78,7 +72,7 @@ export const BillingCycleResetEmail = ({
 BillingCycleResetEmail.PreviewProps = {
   workspaceName: "My Workspace",
   totalChatsUsed: 15000,
-  url: "https://typebot.io",
+  url: "https://qinglbot.com",
 } as Props;
 
 export default BillingCycleResetEmail;

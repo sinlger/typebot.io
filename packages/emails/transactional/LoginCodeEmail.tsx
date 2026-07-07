@@ -35,27 +35,27 @@ interface Props {
 export const LoginCodeEmail = ({ url, code }: Props) => (
   <Html>
     <Head />
-    <Preview>Your login code for Typebot</Preview>
+    <Preview>您的 QinglBot 登录验证码</Preview>
     <Body style={main}>
       <Container style={container}>
         <Logo />
-        <Heading style={heading}>Your login code for Typebot</Heading>
+        <Heading style={heading}>您的 QinglBot 登录验证码</Heading>
         <code style={codeStyle}>{code}</code>
         <Text style={paragraph}>
-          This code will only be valid for the next 5 minutes.
+          这个验证码只在 5 分钟内有效。
         </Text>
         <Text style={paragraph}>
-          You can also sign in by <Link href={url}>clicking here</Link>.
+          您也可以通过 <Link href={url}>点击这里</Link>登录.
         </Text>
         <Hr style={hr} />
-        <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+        <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
       </Container>
     </Body>
   </Html>
 );
 
 LoginCodeEmail.PreviewProps = {
-  url: "https://typebot.io",
+  url: "https://qinglbot.com",
   code: "654778",
 } as Props;
 
@@ -67,6 +67,6 @@ export const sendLoginCodeEmail = async ({
 }: Pick<SendMailOptions, "to"> & ComponentProps<typeof LoginCodeEmail>) =>
   sendEmail({
     to,
-    subject: "登录 Typebot",
+    subject: "登录 QinglBot",
     html: await render(<LoginCodeEmail {...props} />),
   });

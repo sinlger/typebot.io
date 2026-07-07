@@ -54,7 +54,7 @@ export const ReachedChatsLimitEmail = ({ chatsLimit, url }: Props) => {
           </Button>
 
           <Hr style={hr} />
-          <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+          <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
         </Container>
       </Body>
     </Html>
@@ -63,7 +63,7 @@ export const ReachedChatsLimitEmail = ({ chatsLimit, url }: Props) => {
 
 ReachedChatsLimitEmail.PreviewProps = {
   chatsLimit: 10000,
-  url: "https://typebot.io",
+  url: "https://qinglbot.com",
 } as Props;
 
 export default ReachedChatsLimitEmail;

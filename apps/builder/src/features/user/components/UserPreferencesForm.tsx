@@ -1,35 +1,17 @@
-import { useTolgee, useTranslate } from "@tolgee/react";
+import { useTranslate } from "@tolgee/react";
 import { GraphNavigation } from "@typebot.io/prisma/enum";
 import { Field } from "@typebot.io/ui/components/Field";
-import { MoreInfoTooltip } from "@typebot.io/ui/components/MoreInfoTooltip";
 import { Switch } from "@typebot.io/ui/components/Switch";
 import type { GroupTitlesAutoGeneration } from "@typebot.io/user/schemas";
-import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import { BasicSelect } from "@/components/inputs/BasicSelect";
 import { VideoOnboardingPopover } from "@/features/onboarding/components/VideoOnboardingPopover";
-import { setLocaleInCookies } from "../helpers/setLocaleInCookies";
 import { useUser } from "../hooks/useUser";
 import { AppearanceRadioGroup } from "./AppearanceRadioGroup";
 import { GraphNavigationRadioGroup } from "./GraphNavigationRadioGroup";
 import { GroupTitlesAutoGenForm } from "./GroupTitlesAutoGenForm";
 
-const localeHumanReadable = {
-  "zh-CN": "中文",
-  en: "English",
-  fr: "Français",
-  de: "Deutsch",
-  pt: "Português",
-  "pt-BR": "Português (BR)",
-  ro: "Română",
-  es: "Español",
-  it: "Italiano",
-} as const;
-
 export const UserPreferencesForm = () => {
-  const { getLanguage } = useTolgee();
-  const router = useRouter();
   const { t } = useTranslate();
   const { user, updateUser } = useUser();
   const { setTheme } = useTheme();
@@ -43,26 +25,10 @@ export const UserPreferencesForm = () => {
     updateUser({ preferredAppAppearance: value });
   };
 
-  const updateLocale = (locale: keyof typeof localeHumanReadable) => {
-    updateUser({ preferredLanguage: locale });
-
-    void setLocaleInCookies(locale).catch(console.error);
-    router.replace(
-      {
-        pathname: router.pathname,
-        query: router.query,
-      },
-      undefined,
-      { locale },
-    );
-  };
-
   const changeGraphNavigation = async (value: string) => {
     setTheme(value);
     updateUser({ graphNavigation: value as GraphNavigation });
   };
-
-  const currentLanguage = getLanguage();
 
   const updateGroupTitlesGenParams = (
     params: Partial<GroupTitlesAutoGeneration>,

@@ -55,8 +55,8 @@ export const UserOnboardingEmail = ({ unsubscribeUrl }: Props) => (
           <br />
           加入我们的 Discord 社区，与其他人交流并获得即时帮助：
           <br />
-          <Link href="https://typebot.io/discord">
-            https://typebot.io/discord
+          <Link href="https://qinglbot.com/discord">
+            https://qinglbot.com/discord
           </Link>
           <br />
           <br />
@@ -77,7 +77,7 @@ export const UserOnboardingEmail = ({ unsubscribeUrl }: Props) => (
 );
 
 UserOnboardingEmail.PreviewProps = {
-  unsubscribeUrl: "https://typebot.io/emails/unsubscribe",
+  unsubscribeUrl: "https://qinglbot.com/emails/unsubscribe",
 } satisfies Props;
 
 export default UserOnboardingEmail;
