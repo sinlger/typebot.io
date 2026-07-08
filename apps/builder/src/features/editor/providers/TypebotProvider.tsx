@@ -82,12 +82,12 @@ const typebotContext = createContext<
     }) => Promise<TypebotV6 | undefined>;
     restorePublishedTypebot: () => void;
   } & GroupsActions &
-    BlocksActions &
-    ItemsActions &
-    VariablesActions &
-    EdgesActions &
-    EventsActions
-  //@ts-expect-error
+  BlocksActions &
+  ItemsActions &
+  VariablesActions &
+  EdgesActions &
+  EventsActions
+//@ts-expect-error
 >({});
 
 export const TypebotProvider = ({
@@ -133,7 +133,7 @@ export const TypebotProvider = ({
             toast({
               title: "Could not update the typebot",
               description:
-                "We detected that the typebot was updated since you last saved it so we couldn't save your current changes. If it is not expected, we suggest you overwrite the changes.",
+                "我们检测到该 Qinglbot 自您上次保存后已被更新，因此无法保存您当前的更改。如果这并非您预期的情况，建议您覆盖现有更改。",
               actionProps: {
                 disabled: updateTypebotStatus === "pending",
                 children: "Overwrite",
@@ -145,7 +145,7 @@ export const TypebotProvider = ({
             return;
           }
           toast({
-            title: "Error while updating typebot",
+            title: "更新 QinglBot 时出错",
             description: error.message,
           });
         },
@@ -201,7 +201,7 @@ export const TypebotProvider = ({
     if (
       typebot.id !== localTypebot?.id ||
       new Date(typebot.updatedAt).getTime() >
-        new Date(localTypebot.updatedAt).getTime()
+      new Date(localTypebot.updatedAt).getTime()
     ) {
       setLocalTypebot({ ...typebot });
       setElementsCoordinates({

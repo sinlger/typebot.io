@@ -59,19 +59,19 @@ export const generateUploadUrl = authenticatedProcedure
       if (!env.S3_ENDPOINT || !env.S3_ACCESS_KEY || !env.S3_SECRET_KEY)
         throw new ORPCError("INTERNAL_SERVER_ERROR", {
           message:
-            "S3 not properly configured. Missing one of those variables: S3_ENDPOINT, S3_ACCESS_KEY, S3_SECRET_KEY",
+            "S3 配置不正确。缺少以下变量之一：S3_ENDPOINT、S3_ACCESS_KEY、S3_SECRET_KEY。",
         });
 
       const resolvedFileType = resolveUploadFileType(fileType);
       if (isUnsafeUploadFileType(resolvedFileType))
         throw new ORPCError("BAD_REQUEST", {
           message:
-            "File type not allowed. SVG, HTML, XML, and JavaScript files cannot be uploaded.",
+            "文件类型不被允许。请上传除 SVG、HTML、XML 和 JavaScript 之外的文件。",
         });
 
       if ("resultId" in filePathProps && !user)
         throw new ORPCError("UNAUTHORIZED", {
-          message: "You must be logged in to upload a file",
+          message: "您必须登录才能上传文件",
         });
 
       const filePath = await parseFilePath({
@@ -102,12 +102,12 @@ const parseFilePath = async ({
 }: Props): Promise<string> => {
   if (!authenticatedUserId)
     throw new ORPCError("UNAUTHORIZED", {
-      message: "You must be logged in to upload this type of file",
+      message: "您必须登录才能上传此类文件。",
     });
   if ("userId" in input) {
     if (input.userId !== authenticatedUserId)
       throw new ORPCError("UNAUTHORIZED", {
-        message: "You are not authorized to upload a file for this user",
+        message: "您没有权限为该用户上传文件。",
       });
     return createUploadSlotFilePath({
       prefix: `public/users/${input.userId}`,
@@ -115,7 +115,7 @@ const parseFilePath = async ({
     });
   }
   if (!("workspaceId" in input))
-    throw new ORPCError("BAD_REQUEST", { message: "workspaceId is missing" });
+    throw new ORPCError("BAD_REQUEST", { message: "缺少 workspaceId。" });
   if (!("typebotId" in input)) {
     const workspace = await prisma.workspace.findUnique({
       where: {
@@ -198,7 +198,7 @@ const parsePathSegment = (pathSegment: string) => {
     return parseUploadPathSegment(pathSegment);
   } catch {
     throw new ORPCError("BAD_REQUEST", {
-      message: "Invalid upload path segment",
+      message: "找不到工作区。",
     });
   }
 };

@@ -14,15 +14,15 @@ const webhookUrlPaths = [
 const expectedWhatsAppWebhookValidationErrors = [
   {
     code: "UNAUTHORIZED",
-    message: "Invalid WhatsApp webhook secret",
+    message: "WhatsApp webhook 密钥无效。",
   },
   {
     code: "UNAUTHORIZED",
-    message: "Invalid WhatsApp webhook signature",
+    message: "WhatsApp webhook 签名无效。",
   },
   {
     code: "BAD_REQUEST",
-    message: "Invalid WhatsApp webhook payload",
+    message: "WhatsApp webhook 负载无效。",
   },
 ];
 
@@ -86,7 +86,7 @@ const requireAuth = oo.spec(
       });
     }
     throw new ORPCError("UNAUTHORIZED", {
-      message: "You must be authenticated to access this resource",
+      message: "您必须通过身份验证才能访问此资源。",
     });
   }),
   {

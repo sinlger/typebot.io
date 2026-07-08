@@ -57,7 +57,7 @@ const requireAuth = oo.spec(
       });
     }
     throw new ORPCError("UNAUTHORIZED", {
-      message: "You must be logged in to access this resource",
+      message: "您必须登录才能访问此资源。",
     });
   }),
   {

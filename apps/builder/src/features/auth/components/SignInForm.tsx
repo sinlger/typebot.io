@@ -60,7 +60,7 @@ export const SignInForm = ({ defaultEmail, className }: Props) => {
       toast({
         type: "info",
         description:
-          "Your account has suspicious activity and is being reviewed by our team. Feel free to contact us.",
+          "您的账户存在可疑活动，我们团队正在审核中。如有疑问，欢迎随时联系我们。",
       });
     }
   }, [authError]);
@@ -88,12 +88,12 @@ export const SignInForm = ({ defaultEmail, className }: Props) => {
           });
         else if (response.error.includes("email-not-legit"))
           toast({
-            description: "Please use a valid email address",
+            description: "请使用有效的电子邮件地址。",
           });
         else
           toast({
             description: t("errorMessage"),
-            details: "Check server logs to see relevent error message.",
+            details: "请查看服务器日志，获取对应的错误消息。",
           });
       } else {
         setIsMagicCodeSent(true);
@@ -101,7 +101,7 @@ export const SignInForm = ({ defaultEmail, className }: Props) => {
     } catch (_e) {
       toast({
         type: "info",
-        description: "An error occured while signing in",
+        description: "登录时发生错误",
       });
     }
     setAuthLoading(false);
