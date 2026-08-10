@@ -28,7 +28,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href={registerUrl}
-            className="text-sm font-semibold text-white bg-linear-to-r from-brand-600 to-cyan-600 hover:from-brand-700 hover:to-cyan-700 px-5 py-2.5 rounded-xl shadow-lg shadow-brand-500/20 transition-all hover:-translate-y-0.5"
+            className="text-sm font-semibold text-white bg-linear-to-r from-brand-600 to-cyan-600 hover:from-brand-700 hover:to-cyan-700 px-5 py-2.5 rounded-sm shadow-lg shadow-brand-500/20 transition-all hover:-translate-y-0.5"
           >
             进入控制台
           </a>
@@ -62,7 +62,7 @@ export function Header() {
             <a
               href={signinUrl}
               onClick={() => setOpen(false)}
-              className="text-center text-sm font-semibold text-white bg-linear-to-r from-brand-600 to-cyan-600 px-3 py-2.5 rounded-xl"
+              className="text-center text-sm font-semibold text-white bg-linear-to-r from-brand-600 to-cyan-600 px-3 py-2.5 rounded-sm"
             >
               进入控制台
             </a>

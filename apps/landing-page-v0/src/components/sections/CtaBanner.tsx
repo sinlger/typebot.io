@@ -23,13 +23,13 @@ export function CtaBanner() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href={registerUrl}
-                className="text-base font-semibold text-brand-700 bg-white hover:bg-brand-50 px-7 py-3.5 rounded-xl shadow-lg transition-all hover:-translate-y-0.5"
+                className="text-base font-semibold text-brand-700 bg-white hover:bg-brand-50 px-7 py-3.5 rounded-sm shadow-lg transition-all hover:-translate-y-0.5"
               >
                 免费创建我的第一个流
               </a>
               <a
                 href="#pricing"
-                className="text-base font-semibold text-white border border-white/60 hover:bg-white/10 px-7 py-3.5 rounded-xl transition-all"
+                className="text-base font-semibold text-white border border-white/60 hover:bg-white/10 px-7 py-3.5 rounded-sm transition-all"
               >
                 资费方案
               </a>

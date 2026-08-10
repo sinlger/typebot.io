@@ -1,11 +1,21 @@
 // 擎流站点全局常量 —— 所有外链集中管理
 
-export const signinUrl = "https://builder.qinglbot.com/signin";
-export const registerUrl = "https://builder.qinglbot.com/register";
+// 环境相关源地址：本地开发 (vite dev) 走 localhost，线上构建走正式域名。
+// 端口取自仓库 .env / nx 配置（builder:8080 / viewer:8081 / landing:6173，均为 strictPort 固定值）。
+const isDev = import.meta.env.DEV;
+const builderOrigin = isDev ? "http://localhost:8080" : "https://builder.qinglbot.com";
+const viewerOrigin = isDev ? "http://localhost:8081" : "https://viewer.qinglbot.com";
+const homeOrigin = isDev ? "http://localhost:6173" : "https://qinglbot.com";
+
+export const signinUrl = `${builderOrigin}/signin`;
+export const registerUrl = `${builderOrigin}/register`;
 export const registerPlanUrl = (plan: string) => `${registerUrl}?plan=${plan}`;
 export const contactEmail = "support@qinglbot.com";
 export const contactMailto = `mailto:${contactEmail}`;
-export const homeUrl = "https://qinglbot.com";
+export const homeUrl = homeOrigin;
+
+// 互动体验区内嵌的真实擎流对话流（viewer 端）
+export const chatSimulatorUrl = `${viewerOrigin}/faq-bax18sd`;
 
 export const icp = {
   number: "冀ICP备2026020393号",

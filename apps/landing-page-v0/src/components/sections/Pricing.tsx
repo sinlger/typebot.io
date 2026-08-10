@@ -17,7 +17,7 @@ export function Pricing() {
 
         {/* 月/年付切换 */}
         <div className="mt-10 flex items-center justify-center gap-3">
-          <div className="relative inline-flex items-center bg-slate-100 rounded-xl p-1">
+          <div className="relative inline-flex items-center bg-slate-100 rounded-sm p-1">
             <span
               aria-hidden="true"
               className={`pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] rounded-lg bg-white shadow-sm transition-transform duration-300 ease-out ${cycle === "yearly" ? "translate-x-full" : "translate-x-0"
@@ -27,8 +27,8 @@ export function Pricing() {
               type="button"
               onClick={() => setCycle("monthly")}
               className={`relative z-10 px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${cycle === "monthly"
-                  ? "text-slate-800"
-                  : "text-slate-500 hover:text-slate-700"
+                ? "text-slate-800"
+                : "text-slate-500 hover:text-slate-700"
                 }`}
             >
               按月付
@@ -37,8 +37,8 @@ export function Pricing() {
               type="button"
               onClick={() => setCycle("yearly")}
               className={`relative z-10 px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${cycle === "yearly"
-                  ? "text-slate-800"
-                  : "text-slate-500 hover:text-slate-700"
+                ? "text-slate-800"
+                : "text-slate-500 hover:text-slate-700"
                 }`}
             >
               按年付
@@ -89,7 +89,7 @@ export function Pricing() {
                   </ul>
                   <a
                     href={plan.cta.href}
-                    className="mt-8 block text-center text-sm font-semibold text-brand-700 bg-white hover:bg-brand-50 px-5 py-3 rounded-xl shadow-sm hover:scale-[1.03] active:scale-95 transition-all duration-300"
+                    className="mt-8 block text-center text-sm font-semibold text-brand-700 bg-white hover:bg-brand-50 px-5 py-3 rounded-sm shadow-sm hover:scale-[1.03] active:scale-95 transition-all duration-300"
                   >
                     {plan.cta.label}
                   </a>
@@ -119,7 +119,7 @@ export function Pricing() {
                   </ul>
                   <a
                     href={plan.cta.href}
-                    className="mt-8 block text-center text-sm font-semibold text-white border border-slate-700 hover:bg-slate-800 px-5 py-3 rounded-xl hover:scale-[1.03] active:scale-95 transition-all duration-300"
+                    className="mt-8 block text-center text-sm font-semibold text-white border border-slate-700 hover:bg-slate-800 px-5 py-3 rounded-sm hover:scale-[1.03] active:scale-95 transition-all duration-300"
                   >
                     {plan.cta.label}
                   </a>
@@ -157,7 +157,7 @@ export function Pricing() {
                 </ul>
                 <a
                   href={plan.cta.href}
-                  className="mt-8 block text-center text-sm font-semibold text-brand-700 bg-brand-50 hover:bg-brand-100 px-5 py-3 rounded-xl border border-brand-200/60 hover:scale-[1.03] active:scale-95 transition-all duration-300"
+                  className="mt-8 block text-center text-sm font-semibold text-brand-700 bg-brand-50 hover:bg-brand-100 px-5 py-3 rounded-sm border border-brand-200/60 hover:scale-[1.03] active:scale-95 transition-all duration-300"
                 >
                   {plan.cta.label}
                 </a>

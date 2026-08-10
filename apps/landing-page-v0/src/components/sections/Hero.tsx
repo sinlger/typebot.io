@@ -35,14 +35,14 @@ export function Hero() {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={registerUrl}
-            className="group inline-flex items-center gap-2 text-base font-semibold text-white bg-linear-to-r from-brand-600 to-cyan-600 hover:from-brand-700 hover:to-cyan-700 px-7 py-3.5 rounded-xl shadow-xl shadow-brand-500/25 transition-all hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 text-base font-semibold text-white bg-linear-to-r from-brand-600 to-cyan-600 hover:from-brand-700 hover:to-cyan-700 px-7 py-3.5 rounded-sm shadow-xl shadow-brand-500/25 transition-all hover:-translate-y-0.5"
           >
             免费开始创建
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="#editor-preview"
-            className="inline-flex items-center gap-2 text-base font-semibold text-slate-700 bg-white border border-slate-200 hover:border-brand-300 hover:text-brand-600 px-7 py-3.5 rounded-xl shadow-sm transition-all"
+            className="inline-flex items-center gap-2 text-base font-semibold text-slate-700 bg-white border border-slate-200 hover:border-brand-300 hover:text-brand-600 px-7 py-3.5 rounded-sm shadow-sm transition-all"
           >
             预览工作流编辑器
           </a>

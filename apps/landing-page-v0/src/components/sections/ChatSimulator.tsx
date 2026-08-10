@@ -1,4 +1,5 @@
 import { Lightbulb } from "lucide-react";
+import { chatSimulatorUrl } from "@/lib/site";
 
 export function ChatSimulator() {
   return (
@@ -28,7 +29,7 @@ export function ChatSimulator() {
           <div className="lg:col-span-7 flex justify-center">
             <iframe
               title="Typebot"
-              src="https://viewer.qinglbot.com/faq-bax18sd"
+              src={chatSimulatorUrl}
               className="w-full max-w-sm flex items-center justify-center rounded-[1rem] border-2 border-dashed border-slate-200 bg-slate-50/50 min-h-120"
             ></iframe>
           </div>
