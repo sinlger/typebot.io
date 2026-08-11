@@ -1,6 +1,4 @@
 import { T, useTranslate } from "@tolgee/react";
-import { prices } from "@typebot.io/billing/constants";
-import { formatPrice } from "@typebot.io/billing/helpers/formatPrice";
 import { Plan } from "@typebot.io/prisma/enum";
 import { Button } from "@typebot.io/ui/components/Button";
 import { MoreInfoTooltip } from "@typebot.io/ui/components/MoreInfoTooltip";
@@ -8,7 +6,6 @@ import { TickIcon } from "@typebot.io/ui/icons/TickIcon";
 
 type Props = {
   currentPlan: Plan;
-  currency?: "eur" | "usd";
   isLoading?: boolean;
   onPayClick: () => void;
 };
@@ -16,7 +13,6 @@ type Props = {
 export const StarterPlanPricingCard = ({
   currentPlan,
   isLoading,
-  currency,
   onPayClick,
 }: Props) => {
   const { t } = useTranslate();
@@ -43,12 +39,6 @@ export const StarterPlanPricingCard = ({
             </h2>
             <p>{t("billing.pricingCard.starter.description")}</p>
           </div>
-          <h2>
-            {formatPrice(prices.STARTER, { currency })}
-            <span className="text-base">
-              {t("billing.pricingCard.perMonth")}
-            </span>
-          </h2>
         </div>
 
         <ul className="list-none gap-2 flex flex-col">

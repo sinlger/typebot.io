@@ -73,10 +73,10 @@ const handler = new OpenAPIHandler(appRouter, {
           title: "Chat API",
           version: "3.0.0",
         },
-        servers: [{ url: "https://typebot.io/api" }],
-        externalDocs: {
-          url: "https://docs.typebot.com/api-reference",
-        },
+        servers: [{ url: "https://qinglbot.io/api" }],
+        // externalDocs: {
+        //   url: "https://docs.qinglbot.com/api-reference",
+        // },
         components: {
           securitySchemes: {
             bearerAuth: {

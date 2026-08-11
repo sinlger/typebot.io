@@ -22,7 +22,7 @@ export default function NotFound() {
           alignItems: "center",
         }}
       >
-        <a href="https://typebot.io" style={{ color: "inherit" }}>
+        <a href="https://qinglbot.com" style={{ color: "inherit" }}>
           <TypebotLogo style={{ fontSize: "32px" }} />
         </a>
 

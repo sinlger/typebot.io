@@ -95,3 +95,5 @@ This project is indexed by GitNexus as **typebot.io** (22295 symbols, 40559 rela
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
+<!-- [https://qinglbot.com/enterprise-lead-form](https://qinglbot.com/enterprise-lead-form)
+https://qinglbot.com/terms-of-service -->

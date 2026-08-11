@@ -58,7 +58,7 @@ const nextConfig = {
       ...landingPagePaths.map((path) => ({
         source: path,
         has: [{ type: "host", value: "typebot.io" }],
-        destination: `https://typebot.com${path}`,
+        destination: `https://qinglbot.com${path}`,
         permanent: true,
       })),
     ];

@@ -1,7 +1,6 @@
 import { useWorkspace } from "@/features/workspace/WorkspaceProvider";
 import { ChangePlanForm } from "./ChangePlanForm";
 import { CurrentSubscriptionSummary } from "./CurrentSubscriptionSummary";
-import { InvoicesList } from "./InvoicesList";
 import { UsageProgressBars } from "./UsageProgressBars";
 
 export const BillingSettingsLayout = () => {
@@ -18,7 +17,6 @@ export const BillingSettingsLayout = () => {
           currentUserMode={currentUserMode}
         />
       </div>
-      {workspace.stripeId && <InvoicesList workspaceId={workspace.id} />}
     </div>
   );
 };

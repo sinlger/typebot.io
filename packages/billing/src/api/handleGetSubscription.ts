@@ -20,10 +20,6 @@ export const handleGetSubscription = async ({
 }) => {
   const { workspaceId } = input;
 
-  if (!env.STRIPE_SECRET_KEY)
-    throw new ORPCError("INTERNAL_SERVER_ERROR", {
-      message: "Stripe environment variables are missing",
-    });
   const workspace = await prisma.workspace.findFirst({
     where: {
       id: workspaceId,
@@ -41,7 +37,7 @@ export const handleGetSubscription = async ({
     throw new ORPCError("NOT_FOUND", {
       message: "Workspace not found",
     });
-  if (!workspace?.stripeId)
+  if (!env.STRIPE_SECRET_KEY || !workspace.stripeId)
     return {
       subscription: null,
     };

@@ -17,11 +17,11 @@ export default function Page() {
     <>
       <DashboardHeader />
       <div className="flex flex-col items-center w-full h-[calc(100vh - 64px)] justify-center gap-4">
-        <h2>Your workspace has been suspended.</h2>
+        <h2>您的工作区已被暂停使用.</h2>
         <p>
-          We detected that one of your typebots does not comply with our{" "}
+          我们发现您的其中一个聊天机器人不符合我们的要求{" "}
           <TextLink
-            href="https://typebot.io/terms-of-service#scam-typebots"
+            href="https://qinglbot.com/terms-of-service"
             isExternal
           >
             terms of service

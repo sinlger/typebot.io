@@ -45,7 +45,7 @@
   "auth.error.oauthNotLinked": "为确认您的身份，请使用您最初登录时所用的账户登录。",
   "auth.error.unknown": "发生错误，请重试。",
   "auth.magicLink.description": "请检查您的垃圾邮件文件夹。",
-  "auth.magicLink.title": "已发送一封魔法链接邮件。",
+  "auth.magicLink.title": "已发送登录验证码至您的邮件。",
   "auth.noProvider.link": "至少配置一种登录方式（邮箱、Google、GitHub、Facebook 或 Azure AD）。",
   "auth.noProvider.preLink": "您需要",
   "auth.orEmailLabel": "或使用您的邮箱",
