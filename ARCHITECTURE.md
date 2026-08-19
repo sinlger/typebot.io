@@ -65,10 +65,8 @@ declared in the root `package.json`: `apps/*`, `packages/*`,
 - `viewer/` - The runtime that serves and executes published bots for end
   users. Next.js, port 3001 (dev command uses 8081). Exposes the public chat
   API and embed-facing endpoints.
-- `landing-page/` - Marketing site built with TanStack Start + Vite +
-  content-collections (MDX-style content under `content/`).
-- `landing-page-v0/` - An older/static landing build (the one shipped by
-  `deploy.ps1` as `landing-v0`).
+- `landing-page-v0/` - 官网落地页（Vite + React 静态站，`deploy.ps1` 以 `landing-v0`
+  构建产物部署，由 Nginx 静态托管于 qinglbot.com）。
 - `workflows/` - A standalone Bun server built entirely on **Effect** (v4 beta)
   and its cluster workflow engine. Runs durable background workflows such as
   results export and user onboarding emails. Deployed to Fly.io

@@ -6,7 +6,7 @@ This is a Nx monorepo with Bun package manager.
 
 - `apps/builder/` - Visual flow editor (Running on port 3000)
 - `apps/viewer/` - Runtime that executes bots (Running on port 3001)
-- `apps/landing-page/` - Commercial website landing page
+- `apps/landing-page-v0/` - 官网落地页（Vite + React 静态站，已部署）
 - `apps/workflows/` - Durable workflows server
 - `apps/docs/` - Documentation
 - `packages/` - All feature-driven modules, shared libs, schemas, UI package.

@@ -1,15 +1,7 @@
 import { FormatIcu } from "@tolgee/format-icu";
 import { Tolgee } from "@tolgee/react";
 import { env } from "@typebot.io/env";
-import de from "../i18n/de.json";
-import el from "../i18n/el.json";
 import en from "../i18n/en.json";
-import es from "../i18n/es.json";
-import fr from "../i18n/fr.json";
-import it from "../i18n/it.json";
-import pt from "../i18n/pt.json";
-import ptBR from "../i18n/pt-BR.json";
-import ro from "../i18n/ro.json";
 import zhCN from "../i18n/zh-CN.json";
 
 export const tolgee = Tolgee()
@@ -18,29 +10,10 @@ export const tolgee = Tolgee()
     apiKey: env.NEXT_PUBLIC_TOLGEE_API_KEY,
     apiUrl: env.NEXT_PUBLIC_TOLGEE_API_URL,
     defaultLanguage: "zh-CN",
-    availableLanguages: [
-      "zh-CN",
-      "en",
-      "fr",
-      "de",
-      "pt",
-      "pt-BR",
-      "es",
-      "ro",
-      "it",
-      "el",
-    ],
+    availableLanguages: ["zh-CN", "en"],
     fallbackLanguage: "en",
     staticData: {
       "zh-CN": zhCN,
       en,
-      fr,
-      de,
-      pt,
-      "pt-BR": ptBR,
-      es,
-      ro,
-      it,
-      el,
     },
   });

@@ -81,25 +81,30 @@
 
 ## 二、已发现但未改动（需你决策）
 
+> **2024-xx 已执行用户决策**：
+> 1. **维持原有计费体系** → 已撤销 `DEFAULT_WORKSPACE_PLAN=UNLIMITED`，恢复默认 FREE（三个 env 文件），不做存量 SQL 改写。
+> 2. **删除旧英文官网** → 已删除 `apps/landing-page` 及 tsconfig/文档引用。
+> 3. **不隐藏账单与用量菜单** → 保持现状，不做改动。
+> 4. **i18n 只保留中文** → 已删除 9 个非中文 Tolgee JSON（de/el/en/es/fr/it/pt/pt-BR/ro 中除 en 保留为回退），`availableLanguages` 仅留 zh-CN + en。
+
 ### P0 决策项
 
 1. **存量工作区仍是 FREE（200 对话/月/1 席位）**：`DEFAULT_WORKSPACE_PLAN` 只影响之后新建的。线上已有用户若是在 FREE，仍会被限流（虽然 `checkAndReportLastHourResults` 限制执行脚本当前未接入任何 app，实际可能没强制，但 UI 会显示"升级/限额"提示）。
-   - 建议：上线前执行
+   - ✅ 已决策：**维持原有计费体系**（默认 FREE），不执行存量改写。若将来接入支付前要免费放开，再执行
      ```sql
      UPDATE "Workspace" SET "plan"='UNLIMITED' WHERE "plan"='FREE';
      ```
-   - 或接入上游的限额 cron（暂不建议，先免费）。
 
-2. **`apps/landing-page`（旧英文 Typebot 站）**：不在部署流程内（deploy 用的是 landing-page-v0），仓库内整站仍是 typebot.com 品牌 + 128 篇英文 content + `constants.ts` 12 条 typebot 域名。
-   - 建议：从 nx 配置中移除/归档，避免误部署；或彻底品牌化（工作量大）。
+2. **`apps/landing-page`（旧英文 Typebot 站）**：不在部署流程内（deploy 用的是 landing-page-v0）。
+   - ✅ 已决策：**删除**。已从仓库移除（含 tsconfig.json 引用、AGENTS.md/ARCHITECTURE.md 文档更新）。
 
 3. **`apps/docs`（Mintlify 文档站）**：`mint.json` 品牌名 Typebot Docs + 大量 app.typebot.io / github.com/baptisteArno/typebot.io 链接（735 处）。ECS_DEPLOY.md 标注"当前未部署"。
-   - 建议：未部署前可先归档或排期品牌化。
+   - ⏳ 未决策：未部署前可先归档或排期品牌化。
 
 ### P1 建议项
 
 4. **「账单与用量」菜单仍展示**：Stripe 已移除，但工作区设置里的"账单与用量"入口 + 套餐卡片 + 使用进度条仍在（免费阶段会给用户"要收费"的错觉）。
-   - 建议：免费阶段隐藏 `WorkspaceSettingsDialog.tsx` 的 billingAndUsage 菜单项，或改成一个说明性页面。
+   - ✅ 已决策：**不隐藏**，保持可见。
 
 5. **营销邮件（marketing/*Update.tsx）整套休眠**：仓库内无调用点，仍是 Typebot 品牌 + 英文页脚 + app.typebot.io 链接。
    - 建议：删除或全面改牌（决定后我再改）。
@@ -115,18 +120,19 @@
 10. **测试资产 `apps/viewer/src/test/assets/typebots/*.json`** 里 name/块类型含 typebot，不影响生产。
 11. **`galleryTemplates.ts` 的 id（typebot-light 等）**：存库值，保留（只改了显示名）。
 12. **`cards` 块 `cardMappableFields`（"Image URL"/"Title"…）**：下拉值=存储值，翻译会破坏已存数据，保留。
-13. **i18n 其他 9 语言**：已统一品牌词（Typebot→QinglBot），但各语言的"机器人"术语可能还需校对（非目标市场，低优先）。
+13. **i18n 其他语言**：✅ 已按决策**只保留中文**——删除 9 个非中文 Tolgee JSON，`en.json` 仅作为缺失 key 的技术回退（语言选择器已隐藏，用户界面只显示中文）。
+14. **`packages/scripts` 预存 typecheck 错误**（**与本次改动无关**，源自 Stripe 清理 commit 536a7dfcb 删除模块后遗留）：`formatChurnAgentDiscordMessages.ts` 引用已删的 `./getYesterdayChurnSummary`、`generateWorkspaceSummary.ts` 引用已删的 `./helpers/stripe/getTotalPaidForSubscription`。`bunx nx typecheck`（root）因此失败；不影响 builder/viewer。需清理这些死引用（或还原被删模块）。
 
 ---
 
 ## 三、优化建议（为 SaaS 化铺路）
 
 1. **术语统一**：全站把"typebot"作为产品名词的 UI/邮件统一为"机器人"（zh）或 "QinglBot"（en）。目前 zh-CN 混用「机器人」「QinglBot」两种说法，建议后续统一（可在 i18n 里定一个术语表）。
-2. **i18n 体积**：Tolgee 静态导入了 10 个语言 JSON（约 400KB+），而语言选择器已隐藏、默认 zh-CN。建议只保留 zh-CN + en（兜底），其余 8 个从 `tolgee.tsx` 移除 → 减小首屏 bundle。**（需确认你不再提供多语言）**
-3. **限额/用量是未来收费点**：免费阶段虽设为 UNLIMITED，但 `chatsLimits`/`seatsLimits`/`prices` 常量都在，将来接入支付只需：改 `DEFAULT_WORKSPACE_PLAN` 回 FREE + 接入 `checkAndReportLastHourResults` cron + 恢复 ChangePlanForm。建议把"免费额度"设计（如每月免费对话数）现在就定下来。
+2. **i18n 体积**：✅ 已按决策**只保留中文**——已删除 9 个非中文 Tolgee JSON，`tolgee.tsx` 仅导入 zh-CN + en，首屏 bundle 显著减小。
+3. **限额/用量是未来收费点**：维持原有计费体系（默认 FREE）。`chatsLimits`/`seatsLimits`/`prices` 常量都在，将来接入支付只需：接入 `checkAndReportLastHourResults` cron + 恢复 ChangePlanForm 的 Stripe 流程。建议把"免费额度"设计（如每月免费对话数）现在就定下来。
 4. **`NEXT_PUBLIC_TOLGEE_API_KEY`**：当前 tolgee 用静态数据。若 `.env` 配了线上 Tolgee key，会从远程拉翻译并可能覆盖静态中文，建议免费阶段确认静态 zh-CN 生效。
 5. **安全**：`ecs.pem` 私钥、`.env`（含数据库/Redis 密码）在仓库里。建议确认 `.gitignore` 已排除，且不要在 git 提交中带上密码。
-6. **隐藏语言选择**的 commit 已做，但 `tolgee.tsx` 的 `availableLanguages` 仍列出 10 语言——若浏览器 localStorage 曾有旧语言选择，可能显示非中文。建议在 tolgee 初始化强制 zh-CN 或清理旧 key。
+6. **语言选择**：✅ 语言选择器已隐藏，`availableLanguages` 仅 zh-CN + en，`defaultLanguage: "zh-CN"` 强制中文。若浏览器 localStorage 曾有旧语言选择，建议清理旧 key（可选）。
 
 ---
 
