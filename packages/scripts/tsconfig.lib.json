@@ -29,9 +29,6 @@
       "path": "../bot-engine/tsconfig.lib.json"
     },
     {
-      "path": "../ai/tsconfig.lib.json"
-    },
-    {
       "path": "../credentials/tsconfig.lib.json"
     },
     {

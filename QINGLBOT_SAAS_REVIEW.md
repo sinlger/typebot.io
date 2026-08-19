@@ -121,7 +121,7 @@
 11. **`galleryTemplates.ts` 的 id（typebot-light 等）**：存库值，保留（只改了显示名）。
 12. **`cards` 块 `cardMappableFields`（"Image URL"/"Title"…）**：下拉值=存储值，翻译会破坏已存数据，保留。
 13. **i18n 其他语言**：✅ 已按决策**只保留中文**——删除 9 个非中文 Tolgee JSON，`en.json` 仅作为缺失 key 的技术回退（语言选择器已隐藏，用户界面只显示中文）。
-14. **`packages/scripts` 预存 typecheck 错误**（**与本次改动无关**，源自 Stripe 清理 commit 536a7dfcb 删除模块后遗留）：`formatChurnAgentDiscordMessages.ts` 引用已删的 `./getYesterdayChurnSummary`、`generateWorkspaceSummary.ts` 引用已删的 `./helpers/stripe/getTotalPaidForSubscription`。`bunx nx typecheck`（root）因此失败；不影响 builder/viewer。需清理这些死引用（或还原被删模块）。
+14. **`packages/scripts` 预存 typecheck 错误**：✅ **已修复**——删除因 Stripe 清理（commit 536a7dfcb）损坏的两个脚本 `generateWorkspaceSummary.ts`（引用已删的 `./helpers/stripe/getTotalPaidForSubscription`）与 `churnAgent/formatChurnAgentDiscordMessages.ts`（引用已删的 `./getYesterdayChurnSummary`），并移除 package.json 中失效的 `generateWorkspaceSummary` script 入口。现 `bunx nx typecheck` 全仓通过。
 
 ---
 
