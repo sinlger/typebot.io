@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import type { User } from "@typebot.io/user/schemas";
 import { z } from "zod";
@@ -26,12 +26,11 @@ export const handleUpdateWorkspace = async ({
     include: { members: true },
   });
 
-  if (!workspace)
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+  if (!workspace) throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   if (isAdminWriteWorkspaceForbidden(workspace, user))
     throw new ORPCError("FORBIDDEN", {
-      message: "You are not allowed to update this workspace",
+      message: "您无权更新此工作区",
     });
 
   const updatedWorkspace = await prisma.workspace.update({

@@ -21,18 +21,17 @@ export const ChangePlanForm = ({
   if (currentUserMode !== "write")
     return (
       <p>
-        Only workspace admins can change the subscription plan. Contact the
-        admin at <a href={`mailto:${adminEmail}`}>{adminEmail}</a> to change the
-        plan.
+        只有工作区管理员可以更改订阅方案。如需更改方案，请联系管理员：
+        <a href={`mailto:${adminEmail}`}>{adminEmail}</a>。
       </p>
     );
 
   return (
     <div className="flex flex-col gap-6">
       <p>
-        Plan upgrades are managed manually. Please contact the admin at{" "}
-        <a href={`mailto:${adminEmail}`}>{adminEmail}</a> to upgrade your
-        workspace from <strong>{workspace.plan}</strong>.
+        目前方案升级由管理员手动处理。如需将您的工作区从{" "}
+        <strong>{workspace.plan}</strong> 方案升级，请联系管理员：
+        <a href={`mailto:${adminEmail}`}>{adminEmail}</a>。
       </p>
       <p>
         {t("billing.customLimit.preLink")}{" "}

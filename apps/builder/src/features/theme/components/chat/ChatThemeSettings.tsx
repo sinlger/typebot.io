@@ -87,7 +87,7 @@ export const ChatThemeSettings = ({
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col border rounded-md p-4 gap-4">
-        <h3>Container</h3>
+        <h3>容器</h3>
         <ChatContainerForm
           generalBackground={generalBackground}
           container={chatTheme?.container}
@@ -197,9 +197,9 @@ export const ChatThemeSettings = ({
         />
       </div>
       <div className="flex flex-col border rounded-md p-4 gap-4">
-        <h3>Buttons input</h3>
+        <h3>按钮输入框</h3>
         <Field.Root className="flex-row">
-          <Field.Label>Layout:</Field.Label>
+          <Field.Label>布局：</Field.Label>
           <div className="flex items-center gap-2">
             <BasicSelect
               value={chatTheme?.buttonsInput?.layout}

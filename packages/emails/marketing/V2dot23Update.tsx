@@ -51,7 +51,8 @@ export const V2dot23Update = (_: Props) => (
         <Text style={text}>
           您好， <br />
           <br />
-          我很激动地宣布 Typebot v2.23 的发布，它包含了丰富的功能，进一步提升您的聊天机器人体验。本次更新引入了强大的新区块和增强的自定义功能。
+          我很激动地宣布 Typebot v2.23
+          的发布，它包含了丰富的功能，进一步提升您的聊天机器人体验。本次更新引入了强大的新区块和增强的自定义功能。
           <br />
           <br />
           让我们一起来看看有什么新变化！
@@ -60,7 +61,8 @@ export const V2dot23Update = (_: Props) => (
         <Section style={featureSection}>
           <Heading style={heading}>ElevenLabs 区块 - 文字转语音</Heading>
           <Text style={text}>
-            通过逼真的语音输出提升您的聊天机器人体验。ElevenLabs 区块简化了将文字转换为真实语音的过程，使您的机器人更具互动性和吸引力。
+            通过逼真的语音输出提升您的聊天机器人体验。ElevenLabs
+            区块简化了将文字转换为真实语音的过程，使您的机器人更具互动性和吸引力。
           </Text>
           <Img
             src={`${imagesBaseUrl}/elevenlabs.gif`}
@@ -96,9 +98,7 @@ export const V2dot23Update = (_: Props) => (
         </Section>
 
         <Section style={featureSection}>
-          <Heading style={heading}>
-            分析中的高级时间筛选
-          </Heading>
+          <Heading style={heading}>分析中的高级时间筛选</Heading>
           <Text style={text}>
             通过新的时间筛选选项，获得更深入的洞察。该功能可用于结果表格和分析视图，支持在特定时间段内进行更精确的数据分析。
           </Text>
@@ -112,7 +112,9 @@ export const V2dot23Update = (_: Props) => (
         <Section style={featureSection}>
           <Heading style={heading}>Together AI 区块</Heading>
           <Text style={text}>
-            通过 Together AI 区块探索新的 AI 可能性。这一新增功能让您可以利用其类 OpenAI 的 API，实现更动态、更智能的聊天机器人交互。
+            通过 Together AI 区块探索新的 AI
+            可能性。这一新增功能让您可以利用其类 OpenAI 的
+            API，实现更动态、更智能的聊天机器人交互。
           </Text>
         </Section>
 

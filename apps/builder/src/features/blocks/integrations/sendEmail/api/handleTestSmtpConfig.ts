@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { createTransport } from "nodemailer";
 import { z } from "zod";
 
@@ -38,11 +38,11 @@ export const handleTestSmtpConfig = async ({
       subject: "Your SMTP configuration is working 🤩",
       text: "This email has been sent to test out your SMTP config.\n\nIf your read this then it has been successful.🚀",
     });
-    return { message: "Email sent!", info };
+    return { message: "邮件已发送！", info };
   } catch (err) {
     console.error(err);
     throw new ORPCError("INTERNAL_SERVER_ERROR", {
-      message: "Failed to send email",
+      message: "发送邮件失败",
       cause: err,
     });
   }

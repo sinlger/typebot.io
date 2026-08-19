@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { env } from "@typebot.io/env";
 import { ky } from "@typebot.io/lib/ky";
 import prisma from "@typebot.io/prisma";
@@ -32,7 +32,7 @@ export const handleDeleteCustomDomain = async ({
   });
 
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   try {
     await deleteDomainOnVercel(name);
@@ -40,12 +40,12 @@ export const handleDeleteCustomDomain = async ({
     console.error(error);
     if (error instanceof HTTPError)
       throw new ORPCError("INTERNAL_SERVER_ERROR", {
-        message: "Failed to delete domain on Vercel",
+        message: "在 Vercel 上删除域名失败",
         cause: await error.response.text(),
       });
 
     throw new ORPCError("INTERNAL_SERVER_ERROR", {
-      message: "Failed to delete domain on Vercel",
+      message: "在 Vercel 上删除域名失败",
     });
   }
   await prisma.customDomain.deleteMany({

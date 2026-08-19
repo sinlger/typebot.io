@@ -34,27 +34,28 @@ export const InactiveWorkspaceFirstNoticeEmail = ({
       <Container style={container}>
         <Logo />
         <Text style={paragraph}>
-          <strong>{workspaceName}</strong> 工作区已经超过 60 天没有活动了。这意味着您在过去 60 天内没有登录，或者您的 typebot 没有收到任何流量。<br />
+          <strong>{workspaceName}</strong> 工作区已经超过 60
+          天没有活动了。这意味着您在过去 60
+          天内没有登录，或者您的机器人没有收到任何流量。
           <br />
-          <strong>
-            我们已自动将其安排在 30 天后删除。
-          </strong>{" "}
-          其中的所有 typebot 和收集的结果数据都将被永久删除。
+          <br />
+          <strong>我们已自动将其安排在 30 天后删除。</strong>{" "}
+          其中的所有机器人和收集的结果数据都将被永久删除。
         </Text>
-        <Text>
-          您收到此邮件是因为您是该工作区的管理员。
-        </Text>
+        <Text>您收到此邮件是因为您是该工作区的管理员。</Text>
         <Text style={paragraph}>
           要保持工作区活跃，只需{" "}
           <Link
             href={`${env.NEXTAUTH_URL}/typebots?redirectPath=${encodeURIComponent(`/w/${workspaceId}/typebots`)}`}
           >
-            登录您的 Typebot 账户
+            登录您的 QinglBot 账户
           </Link>{" "}
           即可将其重新标记为活跃状态。
         </Text>
         <Text style={paragraph}>
-          这也是重新探索 Typebot 的好机会！自您上次登录以来，我们添加了许多新功能，包括新的区块、更多的 AI 集成以及大量其他改进。
+          这也是重新探索 QinglBot
+          的好机会！自您上次登录以来，我们添加了许多新功能，包括新的区块、更多的
+          AI 集成以及大量其他改进。
         </Text>
         <Hr style={hr} />
         <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
@@ -83,6 +84,6 @@ export const sendInactiveWorkspaceFirstNoticeEmail = async ({
   ComponentProps<typeof InactiveWorkspaceFirstNoticeEmail>) =>
   sendEmail({
     to,
-    subject: `您在 Typebot 中的 '${props.workspaceName}' 工作区已不活跃，即将被删除`,
+    subject: `您在 QinglBot 中的 '${props.workspaceName}' 工作区已不活跃，即将被删除`,
     html: await render(<InactiveWorkspaceFirstNoticeEmail {...props} />),
   });

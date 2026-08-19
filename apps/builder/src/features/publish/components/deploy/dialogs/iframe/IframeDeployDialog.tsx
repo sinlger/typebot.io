@@ -27,9 +27,7 @@ export const IframeDeployDialog = ({
         {!isPublished && (
           <Alert.Root>
             <InformationSquareIcon />
-            <Alert.Description>
-              你需要先发布你的机器人
-            </Alert.Description>
+            <Alert.Description>你需要先发布你的机器人</Alert.Description>
           </Alert.Root>
         )}
         <StandardSettings

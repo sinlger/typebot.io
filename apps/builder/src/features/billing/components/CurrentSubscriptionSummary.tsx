@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import { useTranslate } from "@tolgee/react";
 import type { Workspace } from "@typebot.io/workspaces/schemas";
 import { PlanBadge } from "./PlanTag";

@@ -61,11 +61,11 @@ export const ResultsPage = () => {
         title={
           router.pathname.endsWith("analytics")
             ? typebot?.name
-              ? `${typebot.name} | Analytics`
-              : "Analytics"
+              ? `${typebot.name} | 分析`
+              : "分析"
             : typebot?.name
-              ? `${typebot.name} | Results`
-              : "Results"
+              ? `${typebot.name} | 结果`
+              : "结果"
         }
       />
       <TypebotHeader />
@@ -86,7 +86,7 @@ export const ResultsPage = () => {
                 },
               }}
             >
-              <p>Submissions</p>
+              <p>提交记录</p>
               {(stats?.totalStarts ?? 0) > 0 && (
                 <Badge colorScheme="orange" className="ml-1">
                   {stats?.totalStarts}
@@ -107,7 +107,7 @@ export const ResultsPage = () => {
               }}
               size="sm"
             >
-              Analytics
+              分析
             </ButtonLink>
           </div>
         </div>

@@ -10,7 +10,7 @@ export const SettingsPage = () => {
 
   return (
     <div className="flex overflow-hidden h-screen flex-col">
-      <Seo title={typebot?.name ? `${typebot.name} | Settings` : "Settings"} />
+      <Seo title={typebot?.name ? `${typebot.name} | 设置` : "设置"} />
       <TypebotHeader />
       <div className="flex items-center w-full gap-4 h-[calc(100vh-var(--header-height))]">
         <SettingsSideMenu />

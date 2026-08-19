@@ -47,8 +47,8 @@ const App = ({ Component, pageProps }: AppProps) => {
     if (newPlan === Plan.STARTER || newPlan === Plan.PRO)
       toast({
         type: "success",
-        title: "Upgrade success!",
-        description: `Workspace upgraded to ${toTitleCase(newPlan)} 🎉`,
+        title: "升级成功！",
+        description: `工作区已升级至 ${toTitleCase(newPlan)} 🎉`,
       });
   }, [router.query.stripe]);
 

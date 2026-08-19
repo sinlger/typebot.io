@@ -33,7 +33,7 @@ export const ResultDialog = ({ resultId, onClose }: Props) => {
   return (
     <Dialog.Root isOpen={isDefined(result)} onClose={onClose}>
       <Dialog.Popup className="max-w-2xl">
-        <Dialog.Title>Result</Dialog.Title>
+        <Dialog.Title>结果</Dialog.Title>
         <Dialog.CloseButton />
 
         <div className="flex items-center gap-2">
@@ -42,7 +42,7 @@ export const ResultDialog = ({ resultId, onClose }: Props) => {
             onClick={() => setTab("transcript")}
             size="sm"
           >
-            Transcript
+            对话记录
             <Badge colorScheme="orange" className="ml-1">
               Beta
             </Badge>
@@ -52,7 +52,7 @@ export const ResultDialog = ({ resultId, onClose }: Props) => {
             onClick={() => setTab("answers")}
             size="sm"
           >
-            Answers
+            回答
           </Button>
         </div>
         {tab === "transcript" && typebot?.id && resultId && (
@@ -92,14 +92,14 @@ const Transcript = ({
     return (
       <div className="flex flex-col gap-2 items-center py-8">
         <LoaderCircleIcon className="animate-spin" />
-        <p>Loading transcript...</p>
+        <p>正在加载对话记录...</p>
       </div>
     );
 
   if (isTranscriptError)
     return (
       <div className="border rounded-md p-4 bg-gray-1 text-sm text-gray-11">
-        <p>Could not load transcript.</p>
+        <p>无法加载对话记录。</p>
         {transcriptError?.message && (
           <p className="mt-1 text-xs">{transcriptError.message}</p>
         )}

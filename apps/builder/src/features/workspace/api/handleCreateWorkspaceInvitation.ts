@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import gentleRateLimiter from "@typebot.io/auth/lib/gentleRateLimiter";
 import { getSeatsLimit } from "@typebot.io/billing/helpers/getSeatsLimit";
 import { sendWorkspaceMemberInvitationEmail } from "@typebot.io/emails/transactional/WorkspaceMemberInvitationEmail";
@@ -39,7 +39,7 @@ export const handleCreateWorkspaceInvitation = async ({
 
   if (!workspace)
     throw new ORPCError("FORBIDDEN", {
-      message: "You don't have permission to invite members to this workspace",
+      message: "您没有权限向此工作区邀请成员",
     });
 
   const [existingMembersCount, existingInvitationsCount] =
@@ -60,7 +60,7 @@ export const handleCreateWorkspaceInvitation = async ({
     seatsLimit !== "inf" &&
     seatsLimit <= existingMembersCount + existingInvitationsCount
   )
-    throw new ORPCError("BAD_REQUEST", { message: "Seats limit reached" });
+    throw new ORPCError("BAD_REQUEST", { message: "已达席位上限" });
 
   if (existingUser) {
     await prisma.memberInWorkspace.create({

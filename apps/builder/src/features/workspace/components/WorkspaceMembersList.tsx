@@ -128,7 +128,7 @@ export const WorkspaceMembersList = () => {
       {!canInviteNewMember && (
         <Alert.Root>
           <InformationSquareIcon />
-          <Alert.Title>Unlock more members</Alert.Title>
+          <Alert.Title>解锁更多成员席位</Alert.Title>
           <Alert.Description>
             {t("workspace.membersList.unlockBanner.label")}
           </Alert.Description>
@@ -138,7 +138,7 @@ export const WorkspaceMembersList = () => {
               onClick={onChangePlanDialogOpen}
               size="sm"
             >
-              Upgrade
+              升级
             </Button>
             <ChangePlanDialog
               isOpen={isChangePlanDialogOpen}

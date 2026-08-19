@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { env } from "@typebot.io/env";
 import { ky } from "@typebot.io/lib/ky";
 import prisma from "@typebot.io/prisma";
@@ -33,7 +33,7 @@ export const handleCreateCustomDomain = async ({
   });
 
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const existingCustomDomain = await prisma.customDomain.findFirst({
     where: { name },
@@ -41,7 +41,7 @@ export const handleCreateCustomDomain = async ({
 
   if (existingCustomDomain)
     throw new ORPCError("CONFLICT", {
-      message: "Custom domain already registered",
+      message: "自定义域名已注册",
     });
 
   try {
@@ -49,7 +49,7 @@ export const handleCreateCustomDomain = async ({
   } catch (err) {
     if (err instanceof HTTPError && err.response.status !== 409) {
       throw new ORPCError("INTERNAL_SERVER_ERROR", {
-        message: "Failed to create custom domain on Vercel",
+        message: "在 Vercel 上创建自定义域名失败",
         cause: await err.response.text(),
       });
     }

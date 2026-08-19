@@ -27,11 +27,11 @@ test.beforeAll(async () => {
 
 test("should work as expected", async ({ page }) => {
   await page.goto(`/${publicTypebot1.id}`);
-  await page.getByPlaceholder("Type your answer...").fill("Start");
-  await page.getByPlaceholder("Type your answer...").press("Enter");
+  await page.getByPlaceholder("请输入您的回答...").fill("Start");
+  await page.getByPlaceholder("请输入您的回答...").press("Enter");
   await expect(page.getByText("First test message")).toBeVisible();
-  await page.getByPlaceholder("Type your answer...").fill("Hello there!");
-  await page.getByPlaceholder("Type your answer...").press("Enter");
+  await page.getByPlaceholder("请输入您的回答...").fill("Hello there!");
+  await page.getByPlaceholder("请输入您的回答...").press("Enter");
   await expect(page.getByText("Cheers!")).toBeVisible();
   await expect(page.getByText("end 3")).toBeVisible();
   await expect(page.getByText("End", { exact: true })).toBeVisible();
@@ -44,8 +44,8 @@ test("should work as expected", async ({ page }) => {
 test.describe("Merge disabled", () => {
   test("should work as expected", async ({ page }) => {
     await page.goto(`/${publicTypebot1MergeDisabled.id}`);
-    await page.getByPlaceholder("Type your answer...").fill("Hello there!");
-    await page.getByPlaceholder("Type your answer...").press("Enter");
+    await page.getByPlaceholder("请输入您的回答...").fill("Hello there!");
+    await page.getByPlaceholder("请输入您的回答...").press("Enter");
     await expect(page.getByText("Cheers!")).toBeVisible();
     await page.goto(
       `${process.env.NEXTAUTH_URL}/typebots/${publicTypebot1MergeDisabled.typebotId}/results`,

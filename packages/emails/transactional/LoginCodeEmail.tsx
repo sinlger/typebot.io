@@ -41,11 +41,9 @@ export const LoginCodeEmail = ({ url, code }: Props) => (
         <Logo />
         <Heading style={heading}>您的 QinglBot 登录验证码</Heading>
         <code style={codeStyle}>{code}</code>
+        <Text style={paragraph}>这个验证码只在 5 分钟内有效。</Text>
         <Text style={paragraph}>
-          这个验证码只在 5 分钟内有效。
-        </Text>
-        <Text style={paragraph}>
-          您也可以通过 <Link href={url}>点击这里</Link>登录.
+          您也可以通过 <Link href={url}>点击这里</Link> 登录。
         </Text>
         <Hr style={hr} />
         <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>

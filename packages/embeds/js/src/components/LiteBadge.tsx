@@ -73,7 +73,7 @@ export const LiteBadge = (props: Props) => {
             liteBadge.className = "lite-badge";
           }
           if (mutation.attributeName === "href") {
-            liteBadge.href = "https://typebot.io/?utm_source=litebadge";
+            liteBadge.href = "https://qinglbot.com/?utm_source=litebadge";
           }
           if (mutation.attributeName === "id") {
             liteBadge.id = liteBadgeId;
@@ -95,7 +95,7 @@ export const LiteBadge = (props: Props) => {
   return (
     <a
       ref={liteBadge}
-      href={"#"}
+      href="https://qinglbot.com/"
       target="_blank"
       rel="noopener noreferrer"
       class="lite-badge"
@@ -103,7 +103,7 @@ export const LiteBadge = (props: Props) => {
       style={defaultStyles}
     >
       <TypebotLogo />
-      <span>Made with Typebot</span>
+      <span>由 QinglBot 驱动</span>
     </a>
   );
 };

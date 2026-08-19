@@ -6,15 +6,15 @@ export const defaultFileInputOptions = {
   visibility: "Auto",
   labels: {
     placeholder: `<strong>
-      Click to upload
-    </strong> or drag and drop<br>
-    (size limit: 10MB)`,
-    button: "Upload",
-    clear: "Clear",
-    skip: "Skip",
+      点击上传
+    </strong> 或拖拽文件到此处<br>
+    （大小限制：10MB）`,
+    button: "上传",
+    clear: "清空",
+    skip: "跳过",
     success: {
-      single: "File uploaded",
-      multiple: "{total} files uploaded",
+      single: "文件已上传",
+      multiple: "已上传 {total} 个文件",
     },
   },
 } as const satisfies FileInputBlock["options"];

@@ -38,7 +38,7 @@ export const ColumnSettings = ({
 
   return (
     <div className="flex flex-col gap-2">
-      <p className="font-medium text-sm">Shown in table:</p>
+      <p className="font-medium text-sm">在表格中显示：</p>
       <DragDropProvider
         onDragEnd={(event) => {
           onColumnOrderChange([
@@ -95,7 +95,7 @@ const SortableColumns = ({
         <Button
           size="icon"
           className="cursor-grab size-7"
-          aria-label="Drag"
+          aria-label="拖动"
           variant="ghost"
           ref={handleRef}
         >
@@ -106,7 +106,7 @@ const SortableColumns = ({
       </div>
       <Button
         size="icon"
-        aria-label="Hide column"
+        aria-label="隐藏列"
         onClick={toggleColumnVisibility(header.id)}
         className="size-7"
         variant="secondary"

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import type { Stats } from "@typebot.io/results/schemas/answers";
 import {
@@ -30,7 +30,7 @@ export const handleGetStats = async ({
   });
   if (!typebot?.publishedTypebot)
     throw new ORPCError("NOT_FOUND", {
-      message: "Published typebot not found",
+      message: "未找到已发布的机器人",
     });
 
   const fromDate = parseFromDateFromTimeFilter(timeFilter, timeZone);

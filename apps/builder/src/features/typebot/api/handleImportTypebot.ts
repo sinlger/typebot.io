@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { createId } from "@paralleldrive/cuid2";
 import { copyObjects } from "@typebot.io/lib/s3/copyObjects";
 import { replaceTypebotUploadUrlsWithNewIds } from "@typebot.io/lib/s3/replaceTypebotUploadUrlsWithNewIds";
@@ -106,7 +106,7 @@ export const handleImportTypebot = async ({
   });
   const userRole = getUserModeInWorkspace(user.id, workspace?.members);
   if (userRole === "guest" || !workspace)
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const newBotId = createId();
 

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import type { ThemeTemplate } from "@typebot.io/theme/schemas";
 import type { User } from "@typebot.io/user/schemas";
@@ -24,7 +24,7 @@ export const handleListThemeTemplates = async ({
   });
   const userRole = getUserModeInWorkspace(user.id, workspace?.members);
   if (userRole === "guest")
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
   const themeTemplates = (await prisma.themeTemplate.findMany({
     where: {
       workspaceId,

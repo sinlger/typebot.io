@@ -14,6 +14,6 @@ test("should work as expected", async ({ page }) => {
   await page.getByRole("button", { name: "Hi!" }).click();
   await expect(page.getByText("What's your name?")).toBeVisible();
   await expect(
-    page.getByRole("textbox", { name: "Type your answer..." }),
+    page.getByRole("textbox", { name: "请输入您的回答..." }),
   ).toBeVisible();
 });

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { decrypt } from "@typebot.io/credentials/decrypt";
 import prisma from "@typebot.io/prisma";
 import type { User } from "@typebot.io/user/schemas";
@@ -32,7 +32,7 @@ export const handleGetCredentials = async ({
       },
     });
     if (!credentials)
-      throw new ORPCError("NOT_FOUND", { message: "Credentials not found" });
+      throw new ORPCError("NOT_FOUND", { message: "未找到凭据" });
     const credentialsData = await decrypt(credentials.data, credentials.iv);
     return {
       name: credentials.name,
@@ -49,7 +49,7 @@ export const handleGetCredentials = async ({
     },
   });
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const credentials = await prisma.credentials.findFirst({
     where: {
@@ -63,8 +63,7 @@ export const handleGetCredentials = async ({
     },
   });
 
-  if (!credentials)
-    throw new ORPCError("NOT_FOUND", { message: "Credentials not found" });
+  if (!credentials) throw new ORPCError("NOT_FOUND", { message: "未找到凭据" });
 
   const credentialsData = await decrypt(credentials.data, credentials.iv);
 

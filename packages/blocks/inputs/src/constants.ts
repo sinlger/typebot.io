@@ -1,4 +1,4 @@
-export const defaultButtonLabel = "Send";
+export const defaultButtonLabel = "发送";
 
 export enum InputBlockType {
   TEXT = "text input",

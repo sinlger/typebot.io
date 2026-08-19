@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { authenticatedProcedure } from "@typebot.io/config/orpc/builder/middlewares";
 import prisma from "@typebot.io/prisma";
 import { clientSideCreateEventSchema } from "@typebot.io/telemetry/schemas";
@@ -68,7 +68,7 @@ export const trackClientEvents = authenticatedProcedure
         const workspace = workspaces.find((w) => w.id === event.workspaceId);
         const userRole = getUserModeInWorkspace(user.id, workspace?.members);
         if (userRole === "guest" || !workspace)
-          throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+          throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
       }
 
       if ("typebotId" in event) {

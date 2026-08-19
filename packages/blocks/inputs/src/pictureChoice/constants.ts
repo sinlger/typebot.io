@@ -3,7 +3,7 @@ import type { PictureChoiceBlock } from "./schema";
 
 export const defaultPictureChoiceOptions = {
   buttonLabel: defaultButtonLabel,
-  searchInputPlaceholder: "Filter the options...",
+  searchInputPlaceholder: "筛选选项...",
   isMultipleChoice: false,
   isSearchable: false,
   dynamicItems: {

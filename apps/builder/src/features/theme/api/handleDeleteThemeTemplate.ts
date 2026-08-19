@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import type { ThemeTemplate } from "@typebot.io/theme/schemas";
 import type { User } from "@typebot.io/user/schemas";
@@ -30,7 +30,7 @@ export const handleDeleteThemeTemplate = async ({
   });
 
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const themeTemplate = await prisma.themeTemplate.findFirst({
     where: {
@@ -40,7 +40,7 @@ export const handleDeleteThemeTemplate = async ({
   });
 
   if (!themeTemplate)
-    throw new ORPCError("NOT_FOUND", { message: "Theme template not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到主题模板" });
 
   await prisma.themeTemplate.deleteMany({
     where: {

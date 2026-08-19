@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { runRecordTransientGeneralBounces } from "@typebot.io/emails/helpers/suppressedEmails";
 import { env } from "@typebot.io/env";
 import { Webhook } from "svix";
@@ -42,16 +42,16 @@ export const handleResendWebhook = async ({
   } catch (error) {
     console.error("Resend webhook signature verification failed", error);
     throw new ORPCError("BAD_REQUEST", {
-      message: "Invalid webhook signature",
+      message: "无效的 Webhook 签名",
     });
   }
 
   const parsed = resendBounceSchema.safeParse(payload);
-  if (!parsed.success) return { message: "Ignored event" };
+  if (!parsed.success) return { message: "已忽略事件" };
 
   const { to, bounce } = parsed.data.data;
   if (!isTransientGeneralBounce(bounce.type))
-    return { message: "Ignored bounce type" };
+    return { message: "已忽略退信类型" };
 
   await runRecordTransientGeneralBounces(to, headers["svix-id"]);
 

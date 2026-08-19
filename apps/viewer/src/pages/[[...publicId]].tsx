@@ -53,7 +53,7 @@ export const getServerSideProps: GetServerSideProps = async (
       // Early return, will just show a root page
       return {
         props: {
-          dashboardUrl: `${env.NEXTAUTH_URL ?? "https://app.typebot.com"}/typebots`,
+          dashboardUrl: `${env.NEXTAUTH_URL ?? "https://builder.qinglbot.com"}/typebots`,
         },
       };
     }
@@ -282,10 +282,8 @@ const App = ({
       <ErrorPage
         error={
           errorCode === "OUTDATED"
-            ? new Error(
-                "This bot is outdated. Please contact the administrator.",
-              )
-            : new Error("The typebot was not found")
+            ? new Error("该机器人版本过旧，请联系管理员重新发布。")
+            : new Error("您要查找的机器人不存在")
         }
       />
     );

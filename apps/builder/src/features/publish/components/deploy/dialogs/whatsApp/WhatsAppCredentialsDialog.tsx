@@ -28,13 +28,13 @@ import { orpc, orpcClient, queryClient } from "@/lib/queryClient";
 import { toast } from "@/lib/toast";
 
 const metaSteps = [
-  { title: "Requirements" },
-  { title: "App Credentials" },
-  { title: "Phone Number" },
+  { title: "前置要求" },
+  { title: "应用凭据" },
+  { title: "手机号" },
   { title: "Webhook" },
 ];
 
-const dialog360Steps = [{ title: "Phone Number" }, { title: "Webhook" }];
+const dialog360Steps = [{ title: "手机号" }, { title: "Webhook" }];
 
 type Props = {
   isOpen: boolean;
@@ -204,7 +204,7 @@ export const WhatsAppCreateDialogBody = ({
         )
       ) {
         toast({
-          description: "Token does not have all the necessary scopes",
+          description: "令牌缺少必要的权限范围",
         });
         return false;
       }
@@ -243,7 +243,7 @@ export const WhatsAppCreateDialogBody = ({
         if (message === "taken") {
           setIsVerifying(false);
           toast({
-            description: "Phone number is already registered on Typebot",
+            description: "该手机号已注册在 QinglBot 上",
           });
           return false;
         }
@@ -254,7 +254,7 @@ export const WhatsAppCreateDialogBody = ({
         console.error(err);
         setIsVerifying(false);
         toast({
-          description: "Could not verify if phone number is available",
+          description: "无法确认手机号是否可用",
         });
         return false;
       }
@@ -296,7 +296,7 @@ export const WhatsAppCreateDialogBody = ({
         {(activeStep > 0 || provider) && (
           <Button
             size="icon"
-            aria-label={"Go back"}
+            aria-label={"返回"}
             variant="ghost"
             onClick={goToPrevious}
           >
@@ -305,10 +305,10 @@ export const WhatsAppCreateDialogBody = ({
         )}
         <h2 className="text-md">
           {!provider
-            ? "Choose WhatsApp Provider"
+            ? "选择 WhatsApp 服务商"
             : provider === "meta"
-              ? "Add Meta WhatsApp number"
-              : "Add 360Dialog Integration"}
+              ? "添加 Meta WhatsApp 手机号"
+              : "添加 360Dialog 集成"}
         </h2>
       </div>
       {!provider ? (
@@ -408,7 +408,7 @@ export const WhatsAppCreateDialogBody = ({
               (provider === "360dialog" && activeStep === 0 && isEmpty(apiKey))
             }
           >
-            {activeStep === steps.length - 1 ? "Submit" : "Continue"}
+            {activeStep === steps.length - 1 ? "提交" : "继续"}
           </Button>
         )}
       </Dialog.Footer>
@@ -419,19 +419,19 @@ export const WhatsAppCreateDialogBody = ({
 const Requirements = () => (
   <div className="flex flex-col gap-4">
     <p>
-      Make sure you have{" "}
+      请确保您已经{" "}
       <TextLink
         href="https://docs.typebot.com/deploy/whatsapp/create-meta-app"
         isExternal
       >
-        created a WhatsApp Meta app
+        创建了一个 WhatsApp Meta 应用
       </TextLink>
-      . You should be able to get to this page:
+      。您应该可以访问到此页面：
     </p>
     <img
       className="rounded-md"
       src="/images/whatsapp-quickstart-page.png"
-      alt="WhatsApp quickstart page"
+      alt="WhatsApp 快速开始页面"
     />
   </div>
 );
@@ -449,11 +449,11 @@ const SystemUserToken = ({
 }) => (
   <ol>
     <li>
-      In your Meta app dashboard, go to <code>App settings → Basic</code> and
-      copy your app secret.
+      在您的 Meta 应用后台，前往 <code>应用设置 → 基本</code> 并复制您的应用
+      密钥。
     </li>
     <Field.Root>
-      <Field.Label>App secret</Field.Label>
+      <Field.Label>应用密钥</Field.Label>
       <Input
         type="password"
         defaultValue={initialAppSecret}
@@ -461,57 +461,56 @@ const SystemUserToken = ({
       />
     </Field.Root>
     <li>
-      Go to your{" "}
+      前往您的{" "}
       <ButtonLink
         href="https://business.facebook.com/settings/system-users"
         target="_blank"
         variant="secondary"
         size="sm"
       >
-        System users page
+        系统用户页面
         <ArrowUpRight01Icon />
       </ButtonLink>
     </li>
     <li>
-      Create a new user by clicking on <code>Add</code>
+      点击 <code>添加</code> 创建新用户
     </li>
     <li>
-      Fill it with any name and give it the <code>Admin</code> role
+      填入任意名称，并为其赋予 <code>管理员</code> 角色
     </li>
     <li>
       <div className="flex flex-col gap-2">
         <p>
-          Click on <code>Add assets</code>. Under <code>Apps</code>, look for
-          your previously created app, select it and check{" "}
-          <code>Manage app</code>. Under <code>WhatsApp Accounts</code>, select
-          your account and allow management access.
+          点击 <code>添加资产</code>。在 <code>应用</code>{" "}
+          下找到您之前创建的应用， 选中它并勾选 <code>管理应用</code>。在{" "}
+          <code>WhatsApp 账户</code> 下 选择您的账户并允许管理访问。
         </p>
         <img
           className="rounded-md"
           src="/images/meta-system-user-assets.png"
-          alt="Meta system user assets"
+          alt="Meta 系统用户资产"
         />
       </div>
     </li>
     <li>
       <div className="flex flex-col gap-4">
         <p>
-          Now, click on <code>Generate new token</code>. Select your app.
+          现在，点击 <code>生成新令牌</code>。选择您的应用。
         </p>
         <ul>
           <li>
-            Token expiration: <code>Never</code>
+            令牌过期：<code>永不过期</code>
           </li>
           <li>
-            Available Permissions: <code>whatsapp_business_messaging</code>,{" "}
+            可用权限：<code>whatsapp_business_messaging</code>、{" "}
             <code>whatsapp_business_management</code>{" "}
           </li>
         </ul>
       </div>
     </li>
-    <li>Copy and paste the generated token:</li>
+    <li>复制并粘贴生成的令牌：</li>
     <Field.Root>
-      <Field.Label>System User Token</Field.Label>
+      <Field.Label>系统用户令牌</Field.Label>
       <Input
         type="password"
         defaultValue={initialToken}
@@ -538,39 +537,37 @@ const PhoneNumber = ({
     <li>
       <div className="flex items-center gap-2">
         <p>
-          Go to your{" "}
+          前往您的{" "}
           <ButtonLink
             href={`https://developers.facebook.com/apps/${appId}/whatsapp-business/wa-dev-console`}
             target="_blank"
             variant="secondary"
             size="sm"
           >
-            WhatsApp Dev Console <ArrowUpRight01Icon />
+            WhatsApp 开发者控制台 <ArrowUpRight01Icon />
           </ButtonLink>
         </p>
       </div>
     </li>
     <li>
-      Add your phone number by clicking on the <code>Add phone number</code>{" "}
-      button.
+      点击 <code>添加手机号</code> 按钮来添加您的手机号。
     </li>
     <li>
       <div className="flex flex-col gap-2">
         <p>
-          Select a phone number and paste the associated{" "}
-          <code>WhatsApp Business Account ID</code> and{" "}
-          <code>Phone number ID</code>
+          选择一个手机号，并粘贴关联的 <code>WhatsApp 商务账户 ID</code> 和{" "}
+          <code>手机号 ID</code>
         </p>
         <div className="flex items-center gap-2">
           <Field.Root>
-            <Field.Label>WhatsApp Business Account ID</Field.Label>
+            <Field.Label>WhatsApp 商务账户 ID</Field.Label>
             <Input
               defaultValue={initialWabaId}
               onValueChange={(value) => setWabaId(value.trim())}
             />
           </Field.Root>
           <Field.Root>
-            <Field.Label>Phone number ID</Field.Label>
+            <Field.Label>手机号 ID</Field.Label>
             <Input
               defaultValue={initialPhoneNumberId}
               onValueChange={setPhoneNumberId}
@@ -579,7 +576,7 @@ const PhoneNumber = ({
         </div>
         <img
           src="/images/whatsapp-phone-selection.png"
-          alt="WA phone selection"
+          alt="WhatsApp 手机号选择"
         />
       </div>
     </li>
@@ -603,43 +600,42 @@ const Webhook = ({
   return (
     <div className="flex flex-col gap-6">
       <p>
-        In your{" "}
+        在您的{" "}
         <ButtonLink
           href={`https://developers.facebook.com/apps/${appId}/whatsapp-business/wa-settings`}
           target="_blank"
           variant="secondary"
           size="sm"
         >
-          WhatsApp Settings page
+          WhatsApp 设置页面
           <ArrowUpRight01Icon />
         </ButtonLink>
-        , click on the Edit button and insert the following values:
+        ，点击编辑按钮并填入以下值：
       </p>
       <ul>
         <li>
           <div className="flex items-center gap-2">
-            <p className="shrink-0">Callback URL:</p>
+            <p className="shrink-0">回调链接：</p>
             <CopyInput value={webhookUrl} />
           </div>
         </li>
         <li>
           <div className="flex items-center gap-2">
-            <p className="shrink-0">Verify Token:</p>
+            <p className="shrink-0">验证令牌：</p>
             <CopyInput value={verificationToken} />
           </div>
         </li>
         <li>
           <div className="flex items-center gap-2">
             <p className="shrink-0">
-              Webhook fields: Next to <code>messages</code>, click on
-              "Subscribe"
+              Webhook 字段：在 <code>messages</code> 旁边，点击"订阅"
             </p>
           </div>
         </li>
       </ul>
       <p>
-        After saving these settings in Meta, click Submit. Typebot will
-        subscribe this app to the WhatsApp Business Account automatically.
+        在 Meta 中保存这些设置后，点击提交。QinglBot 会自动将此应用订阅到
+        WhatsApp 商务账户。
       </p>
     </div>
   );
@@ -789,39 +785,39 @@ export const WhatsAppUpdateDialogBody = ({
 
   return (
     <Dialog.Popup className="max-w-xl">
-      <Dialog.Title>Update WhatsApp credentials</Dialog.Title>
+      <Dialog.Title>更新 WhatsApp 凭据</Dialog.Title>
       {isDialog360Credentials ? (
         <Field.Root>
-          <Field.Label>Webhook secret</Field.Label>
+          <Field.Label>Webhook 密钥</Field.Label>
           <SecretInput
             value={webhookSecretValue}
             onValueChange={(value) => setWebhookSecret(value.trim())}
           />
           <Field.Description>
             <p>
-              When set, incoming 360Dialog webhook payloads must include the{" "}
-              <code>{dialog360WebhookSecretHeaderName}</code> header with this
-              value.
+              设置后，传入的 360Dialog Webhook 负载必须包含{" "}
+              <code>{dialog360WebhookSecretHeaderName}</code> 请求头且值为该
+              密钥。
             </p>
           </Field.Description>
         </Field.Root>
       ) : (
         <div className="flex flex-col gap-4">
           <Field.Root>
-            <Field.Label>WhatsApp Business Account ID</Field.Label>
+            <Field.Label>WhatsApp 商务账户 ID</Field.Label>
             <Input
               value={wabaIdValue}
               onValueChange={(value) => setWabaId(value.trim())}
             />
             <Field.Description>
               <p>
-                When set, Typebot verifies that this WABA contains the phone
-                number and subscribes the Meta app to its webhooks.
+                设置后，QinglBot 会验证该 WABA 是否包含此手机号，并将 Meta
+                应用订阅到其 Webhook。
               </p>
             </Field.Description>
           </Field.Root>
           <Field.Root>
-            <Field.Label>App secret</Field.Label>
+            <Field.Label>应用密钥</Field.Label>
             <Input
               type="password"
               value={appSecretValue}
@@ -829,8 +825,8 @@ export const WhatsAppUpdateDialogBody = ({
             />
             <Field.Description>
               <p>
-                When set, incoming Meta webhook payloads are verified with the{" "}
-                <code>x-hub-signature-256</code> header.
+                设置后，传入的 Meta Webhook 负载将通过{" "}
+                <code>x-hub-signature-256</code> 请求头进行验证。
               </p>
             </Field.Description>
           </Field.Root>
@@ -846,7 +842,7 @@ export const WhatsAppUpdateDialogBody = ({
           }
           onClick={updateWhatsAppCredentials}
         >
-          {isValidatingCredentials ? "Validating..." : "Update"}
+          {isValidatingCredentials ? "正在验证..." : "更新"}
         </Button>
       </Dialog.Footer>
     </Dialog.Popup>
@@ -888,14 +884,13 @@ const ProviderSelection = ({
     >
       <MetaLogo className="size-10" />
       <div className="flex flex-col gap-2">
-        <p className="font-bold">Meta (Facebook)</p>
+        <p className="font-bold">Meta（Facebook）</p>
         <p className="text-sm" color="gray.600">
-          Official Meta WhatsApp Business API
+          Meta 官方 WhatsApp 商务 API
         </p>
       </div>
       <p className="text-xs" color="gray.500">
-        Requires Meta Developer account, system user token, and phone number
-        setup
+        需要 Meta 开发者账户、系统用户令牌和手机号设置
       </p>
     </button>
     <button
@@ -909,11 +904,11 @@ const ProviderSelection = ({
           360Dialog <Badge colorScheme="orange">Beta</Badge>
         </p>
         <p className="text-sm" color="gray.600">
-          Third-party WhatsApp Business Solution Provider
+          第三方 WhatsApp 商务解决方案提供商
         </p>
       </div>
       <p className="text-xs" color="gray.500">
-        Simple setup with API key only
+        只需 API 密钥即可快速配置
       </p>
     </button>
   </div>
@@ -936,7 +931,7 @@ const Dialog360PhoneNumber = ({
 }) => (
   <div className="flex flex-col gap-4">
     <Field.Root>
-      <Field.Label>Phone number</Field.Label>
+      <Field.Label>手机号</Field.Label>
       <Input
         defaultValue={initialPhoneNumber}
         onValueChange={(val) => setPhoneNumber(val.trim())}
@@ -944,7 +939,7 @@ const Dialog360PhoneNumber = ({
       />
     </Field.Root>
     <Field.Root>
-      <Field.Label>API Key</Field.Label>
+      <Field.Label>API 密钥</Field.Label>
       <Input
         type="password"
         defaultValue={initialApiKey}
@@ -952,24 +947,24 @@ const Dialog360PhoneNumber = ({
       />
       <Field.Description>
         <p>
-          You can find this in your{" "}
+          您可以在{" "}
           <TextLink href="https://hub.360dialog.com/" isExternal>
-            360Dialog Hub dashboard
+            360Dialog Hub 后台
           </TextLink>
-          .
+          中找到它。
         </p>
       </Field.Description>
     </Field.Root>
     <Field.Root>
-      <Field.Label>Webhook secret</Field.Label>
+      <Field.Label>Webhook 密钥</Field.Label>
       <SecretInput
         value={initialWebhookSecret}
         onValueChange={(value) => setWebhookSecret(value.trim())}
       />
       <Field.Description>
         <p>
-          This secret will be required in the{" "}
-          <code>{dialog360WebhookSecretHeaderName}</code> custom header.
+          此密钥将需要在 <code>{dialog360WebhookSecretHeaderName}</code>{" "}
+          自定义请求头中提供。
         </p>
       </Field.Description>
     </Field.Root>
@@ -991,26 +986,25 @@ const Dialog360Webhook = ({
   return (
     <div className="flex flex-col gap-6">
       <p>
-        In your{" "}
+        在您的{" "}
         <TextLink href="https://hub.360dialog.com/" isExternal>
-          360Dialog Hub dashboard
+          360Dialog Hub 后台
         </TextLink>
-        , go to <code>Channels → WhatsApp → Webhooks</code> and add the
-        following webhook URL:
+        中，前往 <code>渠道 → WhatsApp → Webhooks</code> 并添加以下 Webhook
+        链接：
       </p>
       <div className="flex flex-col gap-2">
         <CopyInput value={webhookUrl} />
         <p className="text-sm" color="gray.600">
-          Make sure to enable webhooks for message events in your 360Dialog
-          configuration.
+          请确保在您的 360Dialog 配置中为消息事件启用了 Webhook。
         </p>
       </div>
       <div className="flex flex-col gap-2">
-        <p>Custom header name:</p>
+        <p>自定义请求头名称：</p>
         <CopyInput value={dialog360WebhookSecretHeaderName} />
       </div>
       <div className="flex flex-col gap-2">
-        <p>Custom header value:</p>
+        <p>自定义请求头值：</p>
         <CopyInput value={webhookSecret} />
       </div>
     </div>

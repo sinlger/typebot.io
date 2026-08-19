@@ -48,7 +48,7 @@ export const UnsubscribePageClient = ({ email, token, isValid }: Props) => {
         <div className="flex flex-col p-8 rounded-lg gap-6 bg-gray-1">
           <div className="flex flex-col gap-3">
             <h1 className="text-base font-semibold text-balance">
-              Email preferences
+              邮件偏好设置
             </h1>
             <p className="text-sm leading-relaxed text-pretty">{message}</p>
             {helperText ? (
@@ -63,7 +63,7 @@ export const UnsubscribePageClient = ({ email, token, isValid }: Props) => {
               disabled={isPending}
               className="self-start"
             >
-              Unsubscribe
+              取消订阅
             </Button>
           ) : null}
           {showResubscribe ? (
@@ -72,7 +72,7 @@ export const UnsubscribePageClient = ({ email, token, isValid }: Props) => {
               disabled={isPending}
               className="self-start"
             >
-              Resubscribe
+              重新订阅
             </Button>
           ) : null}
         </div>
@@ -112,34 +112,32 @@ const triggerResubscribe = async (
 };
 
 const getCopy = (status: Status) => {
-  if (status === "invalid")
-    return { message: "This unsubscribe link is invalid." };
+  if (status === "invalid") return { message: "该退订链接无效。" };
   if (status === "confirm")
     return {
-      message: "Confirm unsubscribe.",
-      helperText: "Click the button below to stop receiving these emails.",
+      message: "确认退订？",
+      helperText: "点击下方按钮以停止接收这些邮件。",
     };
   if (status === "unsubscribed")
     return {
-      message: "Successfully unsubscribed.",
-      helperText: "You will stop receiving these emails within 48 hours.",
+      message: "已成功退订。",
+      helperText: "您将在 48 小时内停止接收这些邮件。",
     };
   if (status === "resubscribed")
     return {
-      message: "You are resubscribed.",
-      helperText: "It can take up to 48 hours for emails to resume.",
+      message: "您已重新订阅。",
+      helperText: "邮件恢复可能需要最多 48 小时。",
     };
   if (status === "blocked")
     return {
-      message: "We could not resubscribe this email.",
-      helperText:
-        "This address had multiple bounces, so resubscribe is disabled.",
+      message: "无法重新订阅此邮箱。",
+      helperText: "该地址曾多次退信，因此已禁用重新订阅。",
     };
   if (status === "already-subscribed")
     return {
-      message: "You are already subscribed.",
+      message: "您已处于订阅状态。",
     };
   return {
-    message: "We could not update your email preferences.",
+    message: "无法更新您的邮件偏好设置。",
   };
 };

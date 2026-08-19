@@ -157,7 +157,7 @@ export const ResultsTable = ({
         header: () => (
           <div className="flex items-center gap-2">
             <TextAlignLeftIcon />
-            <p>Logs</p>
+            <p>日志</p>
           </div>
         ),
         cell: ({ row }) => (
@@ -166,7 +166,7 @@ export const ResultsTable = ({
             size="sm"
             onClick={onLogOpenIndex(row.index)}
           >
-            See logs
+            查看日志
           </Button>
         ),
       },

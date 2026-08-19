@@ -67,7 +67,7 @@ export const handleStartWhatsAppPreview = async ({
     !existingTypebot?.id ||
     (await isReadTypebotForbidden(existingTypebot, user))
   )
-    throw new ORPCError("NOT_FOUND", { message: "Typebot not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到机器人" });
 
   const sessionId = `${WHATSAPP_PREVIEW_SESSION_ID_PREFIX}${to}`;
 

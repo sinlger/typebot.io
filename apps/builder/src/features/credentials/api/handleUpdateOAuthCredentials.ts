@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { encrypt } from "@typebot.io/credentials/encrypt";
 import { env } from "@typebot.io/env";
 import { getRuntimeVariable } from "@typebot.io/env/getRuntimeVariable";
@@ -39,7 +39,7 @@ export const handleUpdateOAuthCredentials = async ({
     select: { id: true, members: { select: { userId: true, role: true } } },
   });
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const blockDef = getOAuthBlockDefinition(input.blockType);
 
@@ -47,7 +47,7 @@ export const handleUpdateOAuthCredentials = async ({
 
   if (!client)
     throw new ORPCError("BAD_REQUEST", {
-      message: "No client ID or secret provided or default client not set",
+      message: "未提供客户端 ID 或密钥，或未设置默认客户端",
     });
 
   const tokens = await exchangeCodeForTokens({
@@ -70,7 +70,7 @@ export const handleUpdateOAuthCredentials = async ({
 
   if (!existingCredentials)
     throw new ORPCError("NOT_FOUND", {
-      message: "Credentials not found in this workspace",
+      message: "未在此工作区找到凭据",
     });
 
   const updatedCredentials = await prisma.credentials.update({
@@ -125,7 +125,7 @@ const exchangeCodeForTokens = async ({
       typeof tokens.expires_in !== "number"
     )
       throw new ORPCError("BAD_REQUEST", {
-        message: "Invalid tokens returned from the auth provider",
+        message: "认证提供方返回的令牌无效",
       });
 
     if (!tokens.refresh_token) {

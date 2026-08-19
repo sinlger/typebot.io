@@ -28,9 +28,7 @@ export const ApiDeployDialog = ({
         {!isPublished && (
           <Alert.Root>
             <InformationSquareIcon />
-            <Alert.Description>
-              你需要先发布你的机器人
-            </Alert.Description>
+            <Alert.Description>你需要先发布你的机器人</Alert.Description>
           </Alert.Root>
         )}
         <ol>
@@ -49,7 +47,8 @@ export const ApiDeployDialog = ({
             </div>
           </li>
           <li>
-            首次响应将包含一个 <code>sessionId</code>，您在后续请求中需要使用它。
+            首次响应将包含一个 <code>sessionId</code>
+            ，您在后续请求中需要使用它。
           </li>
           <li>
             <div className="flex flex-col gap-2">
@@ -66,7 +65,8 @@ export const ApiDeployDialog = ({
               <p>并附带以下 JSON 请求体：</p>
               <CodeEditor isReadOnly lang={"json"} value={replyBody} />
               <p>
-                请将 <code>{"<ID_FROM_FIRST_RESPONSE>"}</code> 替换为 <code>sessionId</code>。
+                请将 <code>{"<ID_FROM_FIRST_RESPONSE>"}</code> 替换为{" "}
+                <code>sessionId</code>。
               </p>
             </div>
           </li>

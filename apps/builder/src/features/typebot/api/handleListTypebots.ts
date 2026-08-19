@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import { getTypebotAccessRight } from "@typebot.io/typebot/helpers/getTypebotAccessRight";
 import type { User } from "@typebot.io/user/schemas";
@@ -34,7 +34,7 @@ export const handleListTypebots = async ({
   });
   const userRole = getUserModeInWorkspace(user.id, workspace?.members);
   if (!workspace || userRole === undefined)
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
   const typebots = await prisma.typebot.findMany({
     where: {
       isArchived: { not: true },

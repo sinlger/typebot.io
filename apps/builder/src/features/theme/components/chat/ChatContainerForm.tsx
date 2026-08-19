@@ -58,7 +58,7 @@ export const ChatContainerForm = ({
   return (
     <div className="flex flex-col gap-2">
       <Field.Root className="flex-row">
-        <Field.Label>Max width:</Field.Label>
+        <Field.Label>最大宽度：</Field.Label>
         <div className="flex items-center gap-2">
           <BasicNumberInput
             className="max-w-40"
@@ -76,7 +76,7 @@ export const ChatContainerForm = ({
         </div>
       </Field.Root>
       <Field.Root className="flex-row">
-        <Field.Label>Max height:</Field.Label>
+        <Field.Label>最大高度：</Field.Label>
         <div className="flex items-center gap-2">
           <BasicNumberInput
             className="max-w-40"

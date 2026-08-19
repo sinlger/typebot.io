@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import { DbNull } from "@typebot.io/prisma/enum";
 import { getTypebotAccessRight } from "@typebot.io/typebot/helpers/getTypebotAccessRight";
@@ -107,7 +107,7 @@ export const handleGetTypebot = async ({
     };
   } catch (err) {
     throw new ORPCError("INTERNAL_SERVER_ERROR", {
-      message: "Failed to parse typebot",
+      message: "解析机器人失败",
       cause: err,
     });
   }

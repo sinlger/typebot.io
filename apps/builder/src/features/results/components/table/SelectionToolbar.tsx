@@ -126,12 +126,12 @@ export const SelectionToolbar = ({
         onClick={onClearSelection}
         size="sm"
       >
-        {totalSelected} selected
+        已选 {totalSelected} 项
       </Button>
       <Button
         variant="secondary"
         className="border-r rounded-r-none rounded-l-none size-8"
-        aria-label="Export"
+        aria-label="导出"
         onClick={exportResultsToCSV}
         disabled={isExportLoading}
         size="icon"
@@ -142,7 +142,7 @@ export const SelectionToolbar = ({
         <>
           <Button
             variant="secondary"
-            aria-label="Delete"
+            aria-label="删除"
             className="rounded-l-none size-8"
             onClick={onOpen}
             disabled={isDeleteLoading}
@@ -157,12 +157,8 @@ export const SelectionToolbar = ({
                   {t("confirmModal.defaultTitle")}
                 </AlertDialog.Title>
                 <AlertDialog.Description>
-                  You are about to delete{" "}
-                  <strong>
-                    {totalSelected} submission
-                    {totalSelected > 1 ? "s" : ""}
-                  </strong>
-                  . Are you sure you wish to continue?
+                  您即将删除 <strong>{totalSelected} 条提交记录</strong>
+                  。确定要继续吗？
                 </AlertDialog.Description>
               </AlertDialog.Header>
               <AlertDialog.Footer>
@@ -176,7 +172,7 @@ export const SelectionToolbar = ({
                     onClose();
                   }}
                 >
-                  Delete
+                  删除
                 </AlertDialog.Action>
               </AlertDialog.Footer>
             </AlertDialog.Content>

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import type { User } from "@typebot.io/user/schemas";
 import { z } from "zod";
@@ -31,7 +31,7 @@ export const handleListMembersInWorkspace = async ({
   });
 
   if (!workspace || isReadWorkspaceFobidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   return {
     members: workspace.members.map((member) => ({

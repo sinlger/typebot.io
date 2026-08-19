@@ -45,10 +45,12 @@ export const BillingCycleResetEmail = ({
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            您的工作区  <strong>{workspaceName}</strong> 在本计费周期内出现了异常高的使用量.
+            您的工作区 <strong>{workspaceName}</strong>{" "}
+            在本计费周期内出现了异常高的使用量。
             <br />
             <br />
-            您短时内发起 {readableChatsUsed} 次对话，触发了防欺诈机制。账户已受保护，计费周期已提前重置并扣费。
+            您短时内发起 {readableChatsUsed}{" "}
+            次对话，触发了防欺诈机制。账户已受保护，计费周期已提前重置并扣费。
             <br />
             <br />
             您的新计费周期已开始，现已恢复完整的月度聊天额度，可供正常使用。

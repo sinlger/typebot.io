@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import { Plan } from "@typebot.io/prisma/enum";
 import type { Prisma } from "@typebot.io/prisma/types";
@@ -28,11 +28,11 @@ export const handleCreateFolder = async ({
   });
   const userRole = getUserModeInWorkspace(user.id, workspace?.members);
   if (userRole === "guest" || !workspace)
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   if (workspace.plan === Plan.FREE)
     throw new ORPCError("FORBIDDEN", {
-      message: "You need to upgrade to a paid plan to create folders",
+      message: "您需要升级到付费套餐才能创建文件夹",
     });
 
   const newFolder = await prisma.dashboardFolder.create({

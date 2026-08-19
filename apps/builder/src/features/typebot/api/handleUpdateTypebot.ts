@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import { DbNull } from "@typebot.io/prisma/enum";
 import { settingsSchema } from "@typebot.io/settings/schemas";
@@ -117,7 +117,7 @@ export const handleUpdateTypebot = async ({
     !overwrite
   )
     throw new ORPCError("CONFLICT", {
-      message: "Found newer version of the typebot in database",
+      message: "数据库中已有更新版本的机器人",
     });
 
   if (
@@ -129,20 +129,20 @@ export const handleUpdateTypebot = async ({
     }))
   )
     throw new ORPCError("BAD_REQUEST", {
-      message: "Domain + pathname already in use",
+      message: "域名 + 路径已被占用",
     });
 
   if (typebot.publicId) {
     if (isCloudProdInstance() && typebot.publicId.length < 4)
       throw new ORPCError("BAD_REQUEST", {
-        message: "Public id should be at least 4 characters long",
+        message: "公开 ID 至少需要 4 个字符",
       });
     if (
       existingTypebot.publicId !== typebot.publicId &&
       (await isPublicIdNotAvailable(typebot.publicId))
     )
       throw new ORPCError("BAD_REQUEST", {
-        message: "Public id not available",
+        message: "公开 ID 不可用",
       });
   }
 

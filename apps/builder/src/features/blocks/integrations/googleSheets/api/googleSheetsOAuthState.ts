@@ -1,4 +1,4 @@
-import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
+﻿import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import { ORPCError } from "@orpc/server";
 import { env } from "@typebot.io/env";
 import { z } from "zod";
@@ -16,7 +16,7 @@ export const googleSheetsOAuthContextSchema = z
     blockId: z.string().optional(),
   })
   .refine(({ typebotId, blockId }) => Boolean(typebotId) === Boolean(blockId), {
-    message: "typebotId and blockId should be provided together",
+    message: "typebotId 与 blockId 应同时提供",
   });
 
 const googleSheetsOAuthStatePayloadSchema = z
@@ -33,7 +33,7 @@ const googleSheetsOAuthStatePayloadSchema = z
     expiresAt: z.number().int().positive(),
   })
   .refine(({ typebotId, blockId }) => Boolean(typebotId) === Boolean(blockId), {
-    message: "typebotId and blockId should be provided together",
+    message: "typebotId 与 blockId 应同时提供",
   });
 
 type GoogleSheetsOAuthStatePayload = z.infer<
@@ -140,5 +140,5 @@ const getSecureCookieAttribute = () =>
   new URL(env.NEXTAUTH_URL).protocol === "https:" ? "Secure" : "";
 
 const throwInvalidOAuthState = (): never => {
-  throw new ORPCError("BAD_REQUEST", { message: "Invalid OAuth state" });
+  throw new ORPCError("BAD_REQUEST", { message: "无效的 OAuth 状态" });
 };

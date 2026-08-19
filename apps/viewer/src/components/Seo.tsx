@@ -54,7 +54,14 @@ export const SEO = ({
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={url ?? "https://bot.typebot.io"} />
+        <meta
+          property="og:url"
+          content={
+            url ??
+            env.NEXT_PUBLIC_VIEWER_URL[0] ??
+            "https://viewer.qinglbot.com"
+          }
+        />
         <meta property="og:title" content={title ?? typebotName} />
         <meta property="og:site_name" content={title ?? typebotName} />
         <meta
@@ -76,7 +83,11 @@ export const SEO = ({
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={url ?? "https://bot.typebot.io"}
+          content={
+            url ??
+            env.NEXT_PUBLIC_VIEWER_URL[0] ??
+            "https://viewer.qinglbot.com"
+          }
         />
         <meta property="twitter:title" content={title ?? typebotName} />
         <meta

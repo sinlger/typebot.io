@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { authenticatedProcedure } from "@typebot.io/config/orpc/builder/middlewares";
 import { env } from "@typebot.io/env";
 import {
@@ -134,7 +134,7 @@ const parseFilePath = async ({
       !workspace ||
       isWriteWorkspaceForbidden(workspace, { id: authenticatedUserId })
     )
-      throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+      throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
     if (input.spaceId) {
       return createUploadSlotFilePath({
         prefix: `public/workspaces/${input.workspaceId}/spaces/${parsePathSegment(input.spaceId)}`,

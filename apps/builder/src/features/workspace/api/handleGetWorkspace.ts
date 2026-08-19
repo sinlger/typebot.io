@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { datesAreOnSameDay } from "@typebot.io/lib/datesAreOnSameDay";
 import prisma from "@typebot.io/prisma";
 import type { User } from "@typebot.io/user/schemas";
@@ -53,7 +53,7 @@ export const handleGetWorkspace = async ({
   }
 
   if (!workspace || isReadWorkspaceFobidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const currentUserMode = getUserModeInWorkspace(user.id, workspace.members);
 

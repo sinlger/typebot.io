@@ -10,11 +10,11 @@ export const NotFoundPage = ({ resourceName }: Props) => {
       <div className="flex flex-col items-center gap-6">
         <div className="flex flex-col items-center gap-2">
           <h2>404</h2>
-          <p className="text-xl">{resourceName} not found.</p>
+          <p className="text-xl">未找到{resourceName}</p>
         </div>
         <ButtonLink href="/typebots">
           <ArrowLeft01Icon />
-          Dashboard
+          返回控制台
         </ButtonLink>
       </div>
     </div>

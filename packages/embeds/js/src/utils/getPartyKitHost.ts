@@ -1,6 +1,6 @@
 import { getRuntimeVariable } from "@typebot.io/env/getRuntimeVariable";
 
-const cloudFallback = "partykit.typebot.io";
+const cloudFallback = "partykit.qinglbot.com";
 
 export const getPartyKitHost = (hostFromContext?: string) =>
   hostFromContext ??

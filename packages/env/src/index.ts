@@ -138,7 +138,7 @@ const baseEnv = {
     NEXT_PUBLIC_VIEWER_404_SUBTITLE: z
       .string()
       .optional()
-      .default("The bot you're looking for doesn't exist"),
+      .default("您要查找的机器人不存在"),
     /**
      * Comma-separated block IDs to hide from the flow editor's left sidebar.
      * IDs are the raw enum / forge id strings, case-sensitive. See .env.example.

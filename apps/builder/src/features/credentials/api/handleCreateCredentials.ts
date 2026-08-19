@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { encrypt } from "@typebot.io/credentials/encrypt";
 import type { Credentials } from "@typebot.io/credentials/schemas";
 import {
@@ -71,7 +71,7 @@ export const handleCreateCredentials = async ({
     )
   )
     throw new ORPCError("CONFLICT", {
-      message: "Credentials already exist.",
+      message: "凭据已存在。",
     });
   const workspace = await prisma.workspace.findFirst({
     where: {
@@ -80,7 +80,7 @@ export const handleCreateCredentials = async ({
     select: { id: true, members: { select: { userId: true, role: true } } },
   });
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const { encryptedData, iv } = await encrypt(input.credentials.data);
   const createdCredentials = await prisma.credentials.create({

@@ -1,6 +1,6 @@
 import { getRuntimeVariable } from "@typebot.io/env/getRuntimeVariable";
 
-const chatApiCloudFallbackHost = "https://typebot.io";
+const chatApiCloudFallbackHost = "https://viewer.qinglbot.com";
 
 type Params = {
   ignoreChatApiUrl?: boolean;

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { env } from "@typebot.io/env";
 import prisma from "@typebot.io/prisma";
 import type {
@@ -38,7 +38,7 @@ export const handleVerifyCustomDomain = async ({
   });
 
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   let status: DomainVerificationStatus = "Valid Configuration";
 

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import type { User } from "@typebot.io/user/schemas";
 import { z } from "zod";
@@ -42,7 +42,7 @@ export const handleUnpublishTypebot = async ({
   });
   if (!existingTypebot?.publishedTypebot)
     throw new ORPCError("NOT_FOUND", {
-      message: "Published typebot not found",
+      message: "未找到已发布的机器人",
     });
 
   if (

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { env } from "@typebot.io/env";
 import { removeObjectsFromWorkspace } from "@typebot.io/lib/s3/removeObjectsRecursively";
 import { isNotEmpty } from "@typebot.io/lib/utils";
@@ -29,7 +29,7 @@ export const handleDeleteWorkspace = async ({
   });
 
   if (!workspace || isAdminWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   await prisma.workspace.deleteMany({
     where: { id: workspaceId },
@@ -52,6 +52,6 @@ export const handleDeleteWorkspace = async ({
   }
 
   return {
-    message: "Workspace deleted",
+    message: "工作区已删除",
   };
 };

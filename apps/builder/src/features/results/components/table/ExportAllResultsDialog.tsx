@@ -219,8 +219,8 @@ export const ExportAllResultsDialog = ({
 
   const exportTitle =
     selectedTimeFilter === "allTime"
-      ? "Export all results"
-      : `Export results from ${timeFilterLabels[selectedTimeFilter].toLowerCase()}`;
+      ? "导出全部结果"
+      : `导出自 ${timeFilterLabels[selectedTimeFilter].toLowerCase()} 的结果`;
 
   return (
     <Dialog.Root
@@ -247,13 +247,13 @@ export const ExportAllResultsDialog = ({
           />
         ) : isExportLoading ? (
           <div className="flex flex-col gap-2">
-            <p>Fetching all results...</p>
+            <p>正在获取全部结果...</p>
             <Progress.Root value={exportProgressValue} />
           </div>
         ) : (
           <div className="flex flex-col gap-4">
             <Field.Root>
-              <Field.Label>Time period</Field.Label>
+              <Field.Label>时间段</Field.Label>
               <TimeFilterSelect
                 timeFilter={selectedTimeFilter}
                 onTimeFilterChange={setTimeFilterOverride}
@@ -266,9 +266,9 @@ export const ExportAllResultsDialog = ({
                 onCheckedChange={setAreDeletedBlocksIncluded}
               />
               <Field.Label>
-                Include deleted blocks{" "}
+                包含已删除的积木{" "}
                 <MoreInfoTooltip>
-                  Blocks from previous bot version that have been deleted
+                  之前版本机器人中已被删除的积木
                 </MoreInfoTooltip>
               </Field.Label>
             </Field.Root>
@@ -277,14 +277,14 @@ export const ExportAllResultsDialog = ({
         {!lastExportWorkflowChunk && (
           <Dialog.Footer>
             <Button onClick={onClose} variant="ghost" size="sm">
-              Cancel
+              取消
             </Button>
             <Button
               onClick={exportAllResultsToCSV}
               size="sm"
               disabled={isExportLoading}
             >
-              Export
+              导出
             </Button>
           </Dialog.Footer>
         )}

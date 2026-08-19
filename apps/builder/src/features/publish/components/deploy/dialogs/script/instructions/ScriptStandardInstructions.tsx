@@ -37,11 +37,11 @@ ${parseInitStandardCode({
         onUpdateWindowSettings={(settings) => setInputValues({ ...settings })}
       />
       <p>
-        Make sure you have this <code>typebot-standard</code> element in your{" "}
-        <code>{"<body>"}</code>:
+        请确保在页面的 <code>{"<body>"}</code> 中包含{" "}
+        <code>typebot-standard</code> 元素：
       </p>
       <CodeEditor isReadOnly value={standardElementSnippet} lang="html" />
-      <p>Then, run this script to initialize the typebot:</p>
+      <p>然后，运行以下脚本来初始化机器人：</p>
       <CodeEditor isReadOnly value={scriptSnippet} lang="js" />
     </div>
   );

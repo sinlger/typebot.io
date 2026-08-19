@@ -66,7 +66,7 @@ export enum NumberInputUnit {
 
 export const defaultNumberInputStyle = NumberInputStyle.DECIMAL;
 export const defaultNumberInputButtonLabel = defaultButtonLabel;
-export const defaultNumberInputPlaceholder = "Type a number...";
+export const defaultNumberInputPlaceholder = "请输入数字...";
 
 // Map unit types to translation keys
 export const unitTranslationKeys: Record<NumberInputUnit, string> = {

@@ -1,4 +1,4 @@
-import prisma from "@typebot.io/prisma";
+﻿import prisma from "@typebot.io/prisma";
 import { normalizeEmail } from "@typebot.io/user/normalizeEmail";
 import { verifyUnsubscribeToken } from "@typebot.io/user/verifyUnsubscribeToken";
 import { z } from "zod";
@@ -19,13 +19,13 @@ export const handleUnsubscribeEmail = async ({
 }) => {
   const email = input.query?.email ?? "";
   const token = input.query?.token ?? "";
-  if (!email || !token) return { message: "Ignored request" };
+  if (!email || !token) return { message: "已忽略请求" };
   if (!verifyUnsubscribeToken(email, token))
-    return { message: "Invalid unsubscribe token" };
+    return { message: "无效的退订令牌" };
 
   await suppressEmail(email);
 
-  return { message: "Unsubscribed" };
+  return { message: "已退订" };
 };
 
 const suppressEmail = async (email: string) => {

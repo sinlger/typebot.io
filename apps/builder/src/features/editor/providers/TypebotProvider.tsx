@@ -82,12 +82,12 @@ const typebotContext = createContext<
     }) => Promise<TypebotV6 | undefined>;
     restorePublishedTypebot: () => void;
   } & GroupsActions &
-  BlocksActions &
-  ItemsActions &
-  VariablesActions &
-  EdgesActions &
-  EventsActions
-//@ts-expect-error
+    BlocksActions &
+    ItemsActions &
+    VariablesActions &
+    EdgesActions &
+    EventsActions
+  //@ts-expect-error
 >({});
 
 export const TypebotProvider = ({
@@ -201,7 +201,7 @@ export const TypebotProvider = ({
     if (
       typebot.id !== localTypebot?.id ||
       new Date(typebot.updatedAt).getTime() >
-      new Date(localTypebot.updatedAt).getTime()
+        new Date(localTypebot.updatedAt).getTime()
     ) {
       setLocalTypebot({ ...typebot });
       setElementsCoordinates({
@@ -324,7 +324,7 @@ export const TypebotProvider = ({
   };
 
   if (typebotError instanceof ORPCError && typebotError.code === "NOT_FOUND")
-    return <NotFoundPage resourceName="Typebot" />;
+    return <NotFoundPage resourceName="机器人" />;
   return (
     <typebotContext.Provider
       value={{

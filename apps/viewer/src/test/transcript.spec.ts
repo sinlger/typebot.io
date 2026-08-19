@@ -13,15 +13,15 @@ test("Transcript set variable should be correctly computed", async ({
   });
 
   await page.goto(`/${typebotId}-public`);
-  await page.getByPlaceholder("Type your answer...").fill("hey");
+  await page.getByPlaceholder("请输入您的回答...").fill("hey");
   await page.getByLabel("Send").click();
   await expect(page.getByTestId("guest-bubble").getByText("hey")).toBeVisible();
-  await page.getByPlaceholder("Type your answer...").fill("hey 2");
+  await page.getByPlaceholder("请输入您的回答...").fill("hey 2");
   await page.getByLabel("Send").click();
   await expect(
     page.getByTestId("guest-bubble").getByText("hey 2"),
   ).toBeVisible();
-  await page.getByPlaceholder("Type your answer...").fill("hey 3");
+  await page.getByPlaceholder("请输入您的回答...").fill("hey 3");
   await page.getByLabel("Send").click();
   await expect(
     page.getByText(
@@ -50,7 +50,7 @@ test("Transcript set variable should work in loop example", async ({
   await expect(
     page.getByText('Assistant: "How can I help?"', { exact: true }),
   ).toBeVisible();
-  await page.getByRole("textbox", { name: "Type your answer..." }).fill("Hey");
+  await page.getByRole("textbox", { name: "请输入您的回答..." }).fill("Hey");
   await page.getByRole("button", { name: "Send" }).click();
   await expect(page.getByText('Assistant: "Assistant: "Hi')).toBeVisible();
   await expect(page.getByText('User: "Hey"', { exact: true })).toBeVisible();

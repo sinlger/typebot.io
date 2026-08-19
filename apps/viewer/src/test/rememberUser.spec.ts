@@ -14,7 +14,7 @@ test("should be able to resume chat after a refresh", async ({ page }) => {
   await expect(page.getByText("What's your name?")).toBeVisible();
   await page.reload();
   await page
-    .getByRole("textbox", { name: "Type your answer..." })
+    .getByRole("textbox", { name: "请输入您的回答..." })
     .fill("Baptiste");
   await page.getByRole("button", { name: "Send" }).click();
   await expect(

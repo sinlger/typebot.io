@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import { isReadTypebotForbidden } from "@typebot.io/typebot/helpers/isReadTypebotForbidden";
 import { migratePublicTypebot } from "@typebot.io/typebot/migrations/migrateTypebot";
@@ -75,7 +75,7 @@ export const handleGetPublishedTypebot = async ({
     };
   } catch (err) {
     throw new ORPCError("INTERNAL_SERVER_ERROR", {
-      message: "Failed to parse published typebot",
+      message: "解析已发布机器人失败",
       cause: err,
     });
   }

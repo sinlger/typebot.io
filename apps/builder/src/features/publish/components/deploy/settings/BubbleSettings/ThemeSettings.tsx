@@ -44,16 +44,16 @@ export const ThemeSettings = ({
   return (
     <Accordion.Root>
       <Accordion.Item>
-        <Accordion.Trigger>Theme</Accordion.Trigger>
+        <Accordion.Trigger>主题</Accordion.Trigger>
         <Accordion.Panel>
           <div className="flex items-center gap-2 justify-between">
-            <p>Placement</p>
+            <p>位置</p>
             <BasicSelect
               value={theme?.placement}
               defaultValue="right"
               items={[
-                { value: "right", label: "Right" },
-                { value: "left", label: "Left" },
+                { value: "right", label: "右侧" },
+                { value: "left", label: "左侧" },
               ]}
               onChange={updatePlacement}
             />

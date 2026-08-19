@@ -9,7 +9,7 @@ type PageProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Email preferences",
+  title: "邮件偏好设置",
   icons: {
     icon: "/favicon.svg",
   },

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import {
   type ThemeTemplate,
@@ -35,7 +35,7 @@ export const handleSaveThemeTemplate = async ({
   });
 
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const existingThemeTemplate = await prisma.themeTemplate.findFirst({
     where: {

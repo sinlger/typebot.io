@@ -56,7 +56,7 @@ export const SharePage = () => {
 
     if (!isCorrectlyFormatted) {
       toast({
-        description: "Can only contain lowercase letters, numbers and dashes.",
+        description: "只能包含小写字母、数字和短横线。",
       });
       return false;
     }
@@ -67,7 +67,7 @@ export const SharePage = () => {
     const isLongerThanAllowed = publicId.length >= 4;
     if (!isLongerThanAllowed && isCloudProdInstance()) {
       toast({
-        description: "Should be longer than 4 characters",
+        description: "长度应超过 4 个字符",
       });
       return false;
     }
@@ -78,7 +78,7 @@ export const SharePage = () => {
       publicId,
     });
     if (!isAvailable) {
-      toast({ description: "ID is already taken" });
+      toast({ description: "该 ID 已被占用" });
       return false;
     }
 
@@ -92,7 +92,7 @@ export const SharePage = () => {
 
   return (
     <div className="flex flex-col pb-40">
-      <Seo title={typebot?.name ? `${typebot.name} | Share` : "Share"} />
+      <Seo title={typebot?.name ? `${typebot.name} | 分享` : "分享"} />
       <TypebotHeader />
       <div className="flex h-full w-full justify-center">
         <div className="flex flex-col max-w-5xl w-full pt-10 gap-10">
@@ -133,8 +133,8 @@ export const SharePage = () => {
                   </div>
                 )}
                 {currentUserMode === "write" &&
-                  isNotDefined(typebot?.customDomain) &&
-                  env.NEXT_PUBLIC_VERCEL_VIEWER_PROJECT_NAME ? (
+                isNotDefined(typebot?.customDomain) &&
+                env.NEXT_PUBLIC_VERCEL_VIEWER_PROJECT_NAME ? (
                   hasProPerks(workspace) ? (
                     <CustomDomainsDropdown
                       onCustomDomainSelect={handleCustomDomainChange}

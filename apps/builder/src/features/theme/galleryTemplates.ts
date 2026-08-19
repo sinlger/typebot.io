@@ -24,13 +24,13 @@ export const galleryTemplates: (Pick<ThemeTemplate, "id" | "name" | "theme"> & {
 })[] = [
   {
     id: "typebot-light",
-    name: "Typebot Light",
+    name: "QinglBot 浅色",
     theme: {},
     isVisible: (typebotVersion) => Number(typebotVersion) >= 6.1,
   },
   {
     id: "typebot-dark",
-    name: "Typebot Dark",
+    name: "QinglBot 深色",
     theme: {
       general: {
         background: {
@@ -70,7 +70,7 @@ export const galleryTemplates: (Pick<ThemeTemplate, "id" | "name" | "theme"> & {
   },
   {
     id: "typebot-light-legacy",
-    name: "Typebot Light Legacy",
+    name: "QinglBot 浅色（经典）",
     theme: {
       chat: {
         hostBubbles: {
@@ -108,7 +108,7 @@ export const galleryTemplates: (Pick<ThemeTemplate, "id" | "name" | "theme"> & {
   },
   {
     id: "typebot-dark-legacy",
-    name: "Typebot Dark Legacy",
+    name: "QinglBot 深色（经典）",
     theme: {
       chat: {
         inputs: {

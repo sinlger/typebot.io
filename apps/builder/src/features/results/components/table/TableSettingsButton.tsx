@@ -30,7 +30,7 @@ export const TableSettingsButton = (props: Props) => {
         <Popover.TriggerButton
           variant="secondary"
           size="icon"
-          aria-label="Open table settings"
+          aria-label="打开表格设置"
           className="size-8"
         >
           <MoreHorizontalIcon />
@@ -86,7 +86,7 @@ const TableSettingsMenu = ({
           >
             <div className="flex items-center gap-2">
               <LeftToRightListBulletIcon />
-              <p>Column settings</p>
+              <p>列设置</p>
             </div>
             <ArrowRight01Icon />
           </Button>
@@ -97,7 +97,7 @@ const TableSettingsMenu = ({
           >
             <div className="flex items-center gap-2">
               <Download01Icon />
-              <p>Export all</p>
+              <p>导出全部</p>
             </div>
           </Button>
         </div>

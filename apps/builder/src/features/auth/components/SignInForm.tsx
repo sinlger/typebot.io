@@ -176,7 +176,7 @@ export const SignInForm = ({ defaultEmail, className }: Props) => {
             </div>
           </Alert.Root>
           <Field.Root>
-            <Field.Label>Login code:</Field.Label>
+            <Field.Label>登录验证码：</Field.Label>
             <Otp.Root maxLength={6} onComplete={redirectToMagicLink}>
               <Otp.Group>
                 <Otp.Slot index={0} />

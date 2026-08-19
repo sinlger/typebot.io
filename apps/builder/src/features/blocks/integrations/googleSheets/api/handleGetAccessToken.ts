@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { decrypt } from "@typebot.io/credentials/decrypt";
 import type { GoogleSheetsCredentials } from "@typebot.io/credentials/schemas";
 import { env } from "@typebot.io/env";
@@ -39,11 +39,10 @@ export const handleGetAccessToken = async ({
     },
   });
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const credentials = workspace.credentials[0];
-  if (!credentials)
-    throw new ORPCError("NOT_FOUND", { message: "Credentials not found" });
+  if (!credentials) throw new ORPCError("NOT_FOUND", { message: "未找到凭据" });
   const decryptedCredentials = (await decrypt(
     credentials.data,
     credentials.iv,

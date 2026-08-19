@@ -68,8 +68,8 @@ export const WorkspaceMemberInvitationEmail = ({
 WorkspaceMemberInvitationEmail.PreviewProps = {
   workspaceName: "My Workspace",
   url: "https://qinglbot.com",
-  hostEmail: "host@typebot.io",
-  guestEmail: "guest@typebot.io",
+  hostEmail: "host@qinglbot.com",
+  guestEmail: "guest@qinglbot.com",
 } as Props;
 
 export default WorkspaceMemberInvitationEmail;

@@ -4,8 +4,7 @@ import type { UrlInputBlock } from "./schema";
 export const defaultUrlInputOptions = {
   labels: {
     button: defaultButtonLabel,
-    placeholder: "Type a URL...",
+    placeholder: "请输入链接...",
   },
-  retryMessageContent:
-    "This URL doesn't seem to be valid. Can you type it again?",
+  retryMessageContent: "该链接似乎无效，请重新输入。",
 } as const satisfies UrlInputBlock["options"];

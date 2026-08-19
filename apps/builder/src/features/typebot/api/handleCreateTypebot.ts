@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { createId } from "@paralleldrive/cuid2";
 import { EventType } from "@typebot.io/events/constants";
 import prisma from "@typebot.io/prisma";
@@ -54,12 +54,12 @@ export const handleCreateTypebot = async ({
   const userRole = getUserModeInWorkspace(user.id, workspace?.members);
   if (userRole === "guest" || !workspace)
     throw new ORPCError("NOT_FOUND", {
-      message: "Workspace not found",
+      message: "未找到工作区",
     });
 
   if (typebot.publicId && (await isPublicIdNotAvailable(typebot.publicId)))
     throw new ORPCError("BAD_REQUEST", {
-      message: "Public id not available",
+      message: "公开 ID 不可用",
     });
 
   if (typebot.folderId) {

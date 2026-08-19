@@ -48,8 +48,9 @@ export const ApiPreviewInstructions = ({
             <CodeEditor
               isReadOnly
               lang="sh"
-              value={`${parseApiHost(typebot?.customDomain)}/api/v1/typebots/${typebot?.id
-                }/preview/startChat`}
+              value={`${parseApiHost(typebot?.customDomain)}/api/v1/typebots/${
+                typebot?.id
+              }/preview/startChat`}
             />
             {startPreviewFrom && (
               <>
@@ -77,7 +78,8 @@ export const ApiPreviewInstructions = ({
             <p>并附带以下 JSON 请求体：</p>
             <CodeEditor isReadOnly lang={"json"} value={replyBody} />
             <p>
-              请将 <code>{"<ID_FROM_FIRST_RESPONSE>"}</code> 替换为 <code>sessionId</code>。
+              请将 <code>{"<ID_FROM_FIRST_RESPONSE>"}</code> 替换为{" "}
+              <code>sessionId</code>。
             </p>
           </div>
         </li>

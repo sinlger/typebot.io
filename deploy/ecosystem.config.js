@@ -39,18 +39,6 @@ module.exports = {
       max_memory_restart: "400M",
     },
     {
-      name: "typebot-landing",
-      cwd: "/opt/typebot-landing",
-      script: "server/index.mjs",
-      interpreter: "/usr/bin/node",
-      env: {
-        NODE_ENV: "production",
-        HOST: "0.0.0.0",
-        PORT: 3004,
-      },
-      max_memory_restart: "300M",
-    },
-    {
       name: "typebot-partykit",
       cwd: "/opt/typebot-partykit",
       script: "/root/.bun/bin/bunx",

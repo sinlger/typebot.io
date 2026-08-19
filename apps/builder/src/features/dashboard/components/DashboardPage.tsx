@@ -1,7 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { useTranslate } from "@tolgee/react";
 import { sendRequest } from "@typebot.io/lib/utils";
-import type { Plan } from "@typebot.io/prisma/enum";
 import type { Typebot } from "@typebot.io/typebot/schemas/typebot";
 import { LoaderCircleIcon } from "@typebot.io/ui/icons/LoaderCircleIcon";
 import { useRouter } from "next/router";
@@ -22,20 +21,6 @@ export const DashboardPage = () => {
   const { user } = useUser();
   const { workspace } = useWorkspace();
   const isImportingTemplateRef = useRef(false);
-  const { mutate: createCheckoutSession } = useMutation(
-    orpc.billing.createCheckoutSession.mutationOptions({
-      onSuccess: (data) => {
-        router.push(data.checkoutUrl);
-      },
-    }),
-  );
-  const { mutate: createCustomCheckoutSession } = useMutation(
-    orpc.billing.createCustomCheckoutSession.mutationOptions({
-      onSuccess: (data) => {
-        router.push(data.checkoutUrl);
-      },
-    }),
-  );
   const { mutate: importTypebot } = useMutation(
     orpc.typebot.importTypebot.mutationOptions({
       onSuccess: (data) => {
@@ -53,36 +38,6 @@ export const DashboardPage = () => {
   );
 
   useEffect(() => {
-    const { subscribePlan, claimCustomPlan } = router.query as {
-      subscribePlan: Plan | undefined;
-      chats: string | undefined;
-      claimCustomPlan: string | undefined;
-    };
-    if (claimCustomPlan && user?.email && workspace) {
-      setIsLoading(true);
-      createCustomCheckoutSession({
-        email: user.email,
-        workspaceId: workspace.id,
-        returnUrl: `${window.location.origin}/typebots`,
-      });
-    }
-    if (
-      workspace &&
-      !workspace.stripeId &&
-      subscribePlan &&
-      user &&
-      workspace.plan === "FREE"
-    ) {
-      setIsLoading(true);
-      createCheckoutSession({
-        workspaceId: workspace.id,
-        returnUrl: `${window.location.origin}/typebots`,
-        plan: subscribePlan as "PRO" | "STARTER",
-      });
-    }
-  }, [createCustomCheckoutSession, router.query, user, workspace]);
-
-  useEffect(() => {
     const template = router.query.template as string | undefined;
     if (!template || !workspace?.id || !user || isImportingTemplateRef.current)
       return;
@@ -98,7 +53,7 @@ export const DashboardPage = () => {
     if (error || !data) {
       toast({
         title: t("errorMessage"),
-        description: error?.message ?? "Template not found",
+        description: error?.message ?? "未找到模板",
       });
       setIsLoading(false);
       isImportingTemplateRef.current = false;

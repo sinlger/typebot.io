@@ -6,7 +6,7 @@ export enum PaymentProvider {
 
 export const defaultPaymentInputOptions = {
   provider: PaymentProvider.STRIPE,
-  labels: { button: "Pay", success: "Success" },
-  retryMessageContent: "Payment failed. Please, try again.",
+  labels: { button: "支付", success: "支付成功" },
+  retryMessageContent: "支付失败，请重试。",
   currency: "USD",
 } as const satisfies PaymentInputBlock["options"];

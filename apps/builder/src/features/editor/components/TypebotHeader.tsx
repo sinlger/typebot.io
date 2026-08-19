@@ -1,6 +1,5 @@
 import { useTranslate } from "@tolgee/react";
 import { isDefined, isNotDefined } from "@typebot.io/lib/utils";
-import { Plan } from "@typebot.io/prisma/enum";
 import { Button } from "@typebot.io/ui/components/Button";
 import { Tooltip } from "@typebot.io/ui/components/Tooltip";
 import { useOpenControls } from "@typebot.io/ui/hooks/useOpenControls";
@@ -17,11 +16,8 @@ import { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import { ButtonLink } from "@/components/ButtonLink";
 import { EditableEmojiOrImageIcon } from "@/components/EditableEmojiOrImageIcon";
-import { SupportBubble } from "@/components/SupportBubble";
 import { PublishButton } from "@/features/publish/components/PublishButton";
 import { ShareTypebotButton } from "@/features/share/components/ShareTypebotButton";
-import { useWorkspace } from "@/features/workspace/WorkspaceProvider";
-import { isCloudProdInstance } from "@/helpers/isCloudProdInstance";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useRightPanel } from "@/hooks/useRightPanel";
 import { useEditor } from "../providers/EditorProvider";
@@ -31,20 +27,11 @@ import { GuestTypebotHeader } from "./UnauthenticatedTypebotHeader";
 
 export const TypebotHeader = () => {
   const { typebot, publishedTypebot, currentUserMode } = useTypebot();
-  const { workspace } = useWorkspace();
-  const { isOpen, onOpen } = useOpenControls();
-
-  const handleHelpClick = () => {
-    isCloudProdInstance() && workspace?.plan && workspace.plan !== Plan.FREE
-      ? onOpen()
-      : onOpen()
-  };
 
   if (currentUserMode === "guest") return <GuestTypebotHeader />;
   return (
     <div className="flex w-full border-b justify-center items-center relative h-(--header-height) bg-gray-1 shrink-0">
-      {isOpen && <SupportBubble autoShowDelay={0} />}
-      <LeftElements className="absolute left-4" onHelpClick={handleHelpClick} />
+      <LeftElements className="absolute left-4" />
       <TypebotNav
         className="absolute hidden xl:flex"
         typebotId={typebot?.id}
@@ -58,13 +45,7 @@ export const TypebotHeader = () => {
   );
 };
 
-const LeftElements = ({
-  onHelpClick,
-  className,
-}: {
-  onHelpClick: () => void;
-  className?: string;
-}) => {
+const LeftElements = ({ className }: { className?: string }) => {
   const { t } = useTranslate();
   const router = useRouter();
   const {
@@ -139,7 +120,7 @@ const LeftElements = ({
     <div className={cn("flex items-center justify-center gap-6", className)}>
       <div className="flex items-center gap-3">
         <ButtonLink
-          aria-label="Navigate back"
+          aria-label="返回上一页"
           href={{
             pathname: router.query.parentId
               ? "/typebots/[typebotId]/edit"

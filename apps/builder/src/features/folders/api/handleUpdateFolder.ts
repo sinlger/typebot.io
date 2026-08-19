@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import { Plan, PrismaClientKnownRequestError } from "@typebot.io/prisma/enum";
 import { folderSchema } from "@typebot.io/schemas/features/folder";
@@ -30,7 +30,7 @@ export const handleUpdateFolder = async ({
   });
   const userRole = getUserModeInWorkspace(user.id, workspace?.members);
   if (userRole === "guest" || !workspace)
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   if (workspace.plan === Plan.FREE)
     throw new ORPCError("FORBIDDEN", {

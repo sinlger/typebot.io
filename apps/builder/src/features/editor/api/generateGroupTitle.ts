@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { zodToSchema } from "@typebot.io/ai/zodToSchema";
 import { authenticatedProcedure } from "@typebot.io/config/orpc/builder/middlewares";
 import { decrypt } from "@typebot.io/credentials/decrypt";
@@ -66,7 +66,7 @@ export const generateGroupTitle = authenticatedProcedure
         !groupTitlesAutoGeneration.credentialsId
       ) {
         throw new ORPCError("BAD_REQUEST", {
-          message: "Group title auto-generation is not enabled",
+          message: "未启用分组标题自动生成",
         });
       }
 
@@ -82,7 +82,7 @@ export const generateGroupTitle = authenticatedProcedure
       });
 
       if (!credentials)
-        throw new ORPCError("NOT_FOUND", { message: "Credentials not found" });
+        throw new ORPCError("NOT_FOUND", { message: "未找到凭据" });
 
       const credentialsData = await decrypt(credentials.data, credentials.iv);
       const apiKey = (credentialsData as { apiKey: string }).apiKey;
@@ -92,11 +92,11 @@ export const generateGroupTitle = authenticatedProcedure
           groupTitlesAutoGeneration.provider as unknown as keyof typeof forgedBlocks
         ];
       if (!blockDef)
-        throw new ORPCError("BAD_REQUEST", { message: "Provider not found" });
+        throw new ORPCError("BAD_REQUEST", { message: "未找到提供商" });
       const action = blockDef.actions.find((a) => a.aiGenerate);
       if (!action)
         throw new ORPCError("BAD_REQUEST", {
-          message: "Provider does not support AI generate",
+          message: "提供商不支持 AI 生成",
         });
       const aiModel = action?.aiGenerate?.getModel?.({
         credentials: {
@@ -105,7 +105,7 @@ export const generateGroupTitle = authenticatedProcedure
         model,
       });
       if (!aiModel)
-        throw new ORPCError("BAD_REQUEST", { message: "Model not found" });
+        throw new ORPCError("BAD_REQUEST", { message: "未找到模型" });
       const titleSchema = z.object({
         title: z.string(),
       });

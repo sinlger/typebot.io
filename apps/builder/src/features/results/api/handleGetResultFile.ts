@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { getFileTempUrl } from "@typebot.io/lib/s3/getFileTempUrl";
 import prisma from "@typebot.io/prisma";
 import { isReadTypebotForbidden } from "@typebot.io/typebot/helpers/isReadTypebotForbidden";
@@ -45,7 +45,7 @@ export const handleGetResultFile = async ({
   });
 
   if (!typebot?.workspace || (await isReadTypebotForbidden(typebot, user)))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const tmpUrl = await getFileTempUrl({
     key: `private/workspaces/${typebot.workspace.id}/typebots/${typebotId}/results/${resultId}/${fileName}`,

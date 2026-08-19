@@ -14,7 +14,7 @@ test("should display AI chat completion response", async ({ page }) => {
   );
   await page.goto(`/${typebotId}-public`);
   await page
-    .getByRole("textbox", { name: "Type your answer..." })
+    .getByRole("textbox", { name: "请输入您的回答..." })
     .fill("In a single sentence, what can you do?");
   await page.getByRole("button", { name: "Send" }).click();
   await expect(page.getByTestId("host-bubble").nth(2)).toBeVisible();

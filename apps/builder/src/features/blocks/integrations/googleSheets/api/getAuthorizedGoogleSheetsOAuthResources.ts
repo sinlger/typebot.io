@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import type { User } from "@typebot.io/user/schemas";
 import { isWriteTypebotForbidden } from "@/features/typebot/helpers/isWriteTypebotForbidden";
@@ -24,7 +24,7 @@ export const getAuthorizedGoogleSheetsOAuthResources = async ({
   });
 
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   if (!typebotId) return { workspace, typebot: null };
 

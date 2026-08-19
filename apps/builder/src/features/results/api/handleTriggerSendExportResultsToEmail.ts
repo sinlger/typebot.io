@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { WorkflowsRpcClientConfig } from "@typebot.io/config";
 import prisma from "@typebot.io/prisma";
 import { ResultsWorkflowsRpcClient } from "@typebot.io/results/workflows/rpc";
@@ -79,5 +79,5 @@ export const handleTriggerSendExportResultsToEmail = async ({
 
   await Effect.runPromise(program.pipe(Effect.provide(MainLayer)));
 
-  return { message: "Workflow sent to email" };
+  return { message: "工作流已发送至邮箱" };
 };

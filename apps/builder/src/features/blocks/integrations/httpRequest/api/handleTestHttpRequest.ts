@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { isHttpRequestBlock } from "@typebot.io/blocks-core/helpers";
 import type { Block } from "@typebot.io/blocks-core/schemas/schema";
 import { httpRequestV5Schema } from "@typebot.io/blocks-integrations/httpRequest/schema";
@@ -89,8 +89,7 @@ export const handleTestHttpRequest = async ({
         }),
     );
 
-  if (!webhook)
-    throw new ORPCError("NOT_FOUND", { message: "Couldn't find webhook" });
+  if (!webhook) throw new ORPCError("NOT_FOUND", { message: "找不到 Webhook" });
 
   const { group } = getBlockById(blockId, parsedTypebot.groups);
   const linkedTypebots = await fetchLinkedChildTypebots({
@@ -138,7 +137,7 @@ export const handleTestHttpRequest = async ({
 
   if (!parsedWebhook)
     throw new ORPCError("INTERNAL_SERVER_ERROR", {
-      message: "Couldn't parse webhook attributes",
+      message: "无法解析 Webhook 属性",
     });
 
   const { response } = await executeHttpRequest(parsedWebhook, {

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { encrypt } from "@typebot.io/credentials/encrypt";
 import {
   googleSheetsCredentialsSchema,
@@ -74,7 +74,7 @@ export const handleUpdateCredentials = async ({
     },
   });
   if (!workspace || isWriteWorkspaceForbidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const { encryptedData, iv } = await encrypt(input.credentials.data);
   const updatedCredentials = await prisma.credentials.update({

@@ -21,13 +21,13 @@ export const WhatsAppComparisonItem = ({
 
   return (
     <div className="flex items-center gap-2 p-4 rounded-md flex-1 border">
-      <p className="shrink-0">User message</p>
+      <p className="shrink-0">用户消息</p>
       <BasicSelect
         className="w-full"
         value={item.comparisonOperator}
         onChange={handleSelectComparisonOperator}
         items={Object.values(ComparisonOperators)}
-        placeholder="Select an operator"
+        placeholder="选择一个运算符"
       />
       {item.comparisonOperator !== ComparisonOperators.IS_SET &&
         item.comparisonOperator !== ComparisonOperators.IS_EMPTY && (
@@ -53,12 +53,12 @@ const parseValuePlaceholder = (
     case ComparisonOperators.ENDS_WITH:
     case ComparisonOperators.NOT_CONTAINS:
     case undefined:
-      return "Type a value...";
+      return "输入值...";
     case ComparisonOperators.LESS:
     case ComparisonOperators.GREATER:
     case ComparisonOperators.LESS_OR_EQUAL:
     case ComparisonOperators.GREATER_OR_EQUAL:
-      return "Type a number...";
+      return "输入数字...";
     case ComparisonOperators.IS_SET:
     case ComparisonOperators.IS_EMPTY:
       return "";

@@ -41,20 +41,18 @@ export const AlmostReachedChatsLimitEmail = ({
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            Your workspace <strong>{workspaceName}</strong> has used{" "}
-            {usagePercent}% of the included chats this month. Once you hit{" "}
-            {readableChatsLimit} chats, you will pay as you go for additional
-            chats.
+            您的工作区 <strong>{workspaceName}</strong> 本月已使用{" "}
+            {usagePercent}% 的包含会话额度。达到 {readableChatsLimit}{" "}
+            次会话后，超出部分将按量计费。
             <br />
             <br />
-            Your progress can be monitored on your workspace dashboard settings.{" "}
+            您可以在工作区设置的账单与用量页面查看使用进度。 <br />
+            <br />
+            访问<a href="https://qinglbot.com/#pricing">定价页</a>
+            了解按量计费的详细档位。
             <br />
             <br />
-            Check out the <a href="https://qinglbot.com/pricing">pricing page</a>{" "}
-            for information about the pay as you go tiers.
-            <br />
-            <br />
-            As a reminder, your billing cycle ends on {readableResetDate}.
+            提醒：您的计费周期将于 {readableResetDate} 结束。
           </Text>
 
           <Hr style={hr} />

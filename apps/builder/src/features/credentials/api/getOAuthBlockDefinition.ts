@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import type { OAuthDefinition } from "@typebot.io/forge/types";
 import {
   type ForgedBlockDefinition,
@@ -12,7 +12,7 @@ export const getOAuthBlockDefinition = (blockType: string) => {
 
   if (!blockDefinition || !isOAuthDefinition(blockDefinition.auth))
     throw new ORPCError("BAD_REQUEST", {
-      message: "Block is not an OAuth block",
+      message: "该积木不是 OAuth 积木",
     });
 
   return { ...blockDefinition, auth: blockDefinition.auth };

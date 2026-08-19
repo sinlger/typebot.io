@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { encrypt } from "@typebot.io/credentials/encrypt";
 import { env } from "@typebot.io/env";
 import { parseGroups } from "@typebot.io/groups/helpers/parseGroups";
@@ -33,7 +33,7 @@ export const handleHandleCallback = async ({
 
   if (oauthState.userId !== user.id || stateCookie?.value !== oauthState.nonce)
     throw new ORPCError("BAD_REQUEST", {
-      message: "Invalid OAuth state",
+      message: "无效的 OAuth 状态",
     });
 
   const { typebot } = await getAuthorizedGoogleSheetsOAuthResources({

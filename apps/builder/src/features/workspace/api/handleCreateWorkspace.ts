@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import { trackEvents } from "@typebot.io/telemetry/trackEvents";
 import type { User } from "@typebot.io/user/schemas";
@@ -38,7 +38,7 @@ export const handleCreateWorkspace = async ({
 
   if (existingWorkspaceNames.some((workspace) => workspace.name === name))
     throw new ORPCError("BAD_REQUEST", {
-      message: "Workspace with same name already exists",
+      message: "已存在同名工作区",
     });
 
   const newWorkspace = (await prisma.workspace.create({
@@ -98,6 +98,6 @@ const enforceFreeTierLimits = async (userId: string) => {
       WORKSPACE_CREATION_COOLDOWN_MS
   )
     throw new ORPCError("TOO_MANY_REQUESTS", {
-      message: "Please wait 24 hours before creating another workspace.",
+      message: "请等待 24 小时后再创建下一个工作区。",
     });
 };

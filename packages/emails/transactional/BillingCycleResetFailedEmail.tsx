@@ -43,10 +43,12 @@ export const BillingCycleResetFailedEmail = ({
         <Container style={container}>
           <Logo />
           <Text style={paragraph}>
-            因支付问题，您的工作区 <strong>{workspaceName}</strong> 已被暂时暂停。
+            因支付问题，您的工作区 <strong>{workspaceName}</strong>{" "}
+            已被暂时暂停。
             <br />
             <br />
-            我们检测到短时间内 <strong>{readableChatsUsed}</strong> 次会话，超出了防欺诈阈值。我们尝试向您的账户扣费并重置计费周期，但付款失败。
+            我们检测到短时间内 <strong>{readableChatsUsed}</strong>{" "}
+            次会话，超出了防欺诈阈值。我们尝试向您的账户扣费并重置计费周期，但付款失败。
             <br />
             <br />
             为避免产生更多费用，您的工作区已被暂停。问题解决之前，您的机器人将不会响应新的对话。
@@ -55,7 +57,7 @@ export const BillingCycleResetFailedEmail = ({
             请联系我们的支持团队以解决此问题并恢复工作区的访问权限。
           </Text>
 
-          <Button href="mailto:support@typebot.io" style={primaryButton}>
+          <Button href="mailto:support@qinglbot.com" style={primaryButton}>
             联系客服
           </Button>
 

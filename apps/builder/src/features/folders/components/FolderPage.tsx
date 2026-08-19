@@ -28,7 +28,7 @@ export const FolderPage = () => {
   );
 
   if (error instanceof ORPCError && error.code === "NOT_FOUND")
-    return <NotFoundPage resourceName="Folder" />;
+    return <NotFoundPage resourceName="文件夹" />;
 
   return (
     <div className="flex flex-col gap-2 min-h-screen">

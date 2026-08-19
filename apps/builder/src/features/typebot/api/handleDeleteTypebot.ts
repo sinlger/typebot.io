@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { removeObjectsFromTypebot } from "@typebot.io/lib/s3/removeObjectsRecursively";
 import prisma from "@typebot.io/prisma";
 import { archiveResults } from "@typebot.io/results/archiveResults";
@@ -66,7 +66,7 @@ export const handleDeleteTypebot = async ({
   });
   if (!success)
     throw new ORPCError("INTERNAL_SERVER_ERROR", {
-      message: "Failed to archive results",
+      message: "归档结果失败",
     });
   await prisma.publicTypebot.deleteMany({
     where: { typebotId },

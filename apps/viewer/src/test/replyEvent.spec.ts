@@ -15,13 +15,11 @@ test("should work as expected", async ({ page }) => {
   await expect(page.getByText("Hi!").nth(1)).toBeVisible();
   await expect(page.getByText("buttons")).toBeVisible();
   await expect(page.getByText("Welcome", { exact: true })).toBeVisible();
-  await page.getByRole("textbox", { name: "Type your answer..." }).click();
+  await page.getByRole("textbox", { name: "请输入您的回答..." }).click();
   await page
-    .getByRole("textbox", { name: "Type your answer..." })
+    .getByRole("textbox", { name: "请输入您的回答..." })
     .fill("Baptiste");
-  await page
-    .getByRole("textbox", { name: "Type your answer..." })
-    .press("Enter");
+  await page.getByRole("textbox", { name: "请输入您的回答..." }).press("Enter");
   await expect(page.getByText("Baptiste").nth(1)).toBeVisible();
   await page
     .getByRole("textbox", { name: "Type your email..." })
@@ -34,14 +32,10 @@ test("should work as expected", async ({ page }) => {
 
   await page.reload();
   await page.getByRole("button", { name: "Hi!" }).click();
-  await page
-    .getByRole("textbox", { name: "Type your answer..." })
-    .fill("leave");
-  await page
-    .getByRole("textbox", { name: "Type your answer..." })
-    .press("Enter");
+  await page.getByRole("textbox", { name: "请输入您的回答..." }).fill("leave");
+  await page.getByRole("textbox", { name: "请输入您的回答..." }).press("Enter");
   await page.waitForTimeout(3000);
   await expect(
-    page.getByRole("textbox", { name: "Type your answer..." }),
+    page.getByRole("textbox", { name: "请输入您的回答..." }),
   ).toBeHidden();
 });

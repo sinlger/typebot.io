@@ -20,10 +20,7 @@ export default function Page() {
         <h2>您的工作区已被暂停使用.</h2>
         <p>
           我们发现您的其中一个聊天机器人不符合我们的要求{" "}
-          <TextLink
-            href="https://qinglbot.com/terms-of-service"
-            isExternal
-          >
+          <TextLink href="https://qinglbot.com/terms-of-service" isExternal>
             terms of service
           </TextLink>
         </p>

@@ -28,7 +28,7 @@ export const NewsletterLayout = ({ preview, children }: Props) => (
           src={`${env.NEXTAUTH_URL}/images/logo.png`}
           width="32"
           height="32"
-          alt="Typebot's Logo"
+          alt="QinglBot Logo"
           style={logo}
         />
         {children}
@@ -36,11 +36,11 @@ export const NewsletterLayout = ({ preview, children }: Props) => (
           src={`${env.NEXTAUTH_URL}/images/logo.png`}
           width="32"
           height="32"
-          alt="Typebot's Logo"
+          alt="QinglBot Logo"
           style={logo}
         />
 
-        <Text style={footer}>Typebot.io - Build Faster, Chat Smarter</Text>
+        <Text style={footer}>QinglBot - 构建更快，聊天更智能</Text>
         <Link
           href="{{unsubscribe}}"
           target="_blank"

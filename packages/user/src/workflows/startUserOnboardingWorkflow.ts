@@ -102,7 +102,7 @@ export const StartUserOnboardingWorkflowLayer =
               : undefined;
             yield* emailClient.sendMail({
               to: normalizedEmail,
-              subject: "Welcome to Typebot!",
+              subject: "欢迎使用 QinglBot！",
               html,
               headers,
             });

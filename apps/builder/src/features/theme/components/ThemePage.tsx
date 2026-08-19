@@ -10,7 +10,7 @@ export const ThemePage = () => {
 
   return (
     <div className="flex overflow-hidden h-screen flex-col">
-      <Seo title={typebot?.name ? `${typebot.name} | Theme` : "Theme"} />
+      <Seo title={typebot?.name ? `${typebot.name} | 主题` : "主题"} />
       <TypebotHeader />
       <div className="flex items-center w-full gap-4 h-[calc(100vh-var(--header-height))]">
         <ThemeSideMenu />

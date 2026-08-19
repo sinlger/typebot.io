@@ -12,7 +12,7 @@ export const EmailRedirectPage = () => {
 
   const redirectToMagicLink = () => {
     if (!token || !email) {
-      toast({ description: "Missing token or email query params" });
+      toast({ description: "缺少 token 或 email 查询参数" });
       return;
     }
     window.location.assign(
@@ -24,15 +24,15 @@ export const EmailRedirectPage = () => {
 
   return (
     <div className="flex flex-col items-center gap-2 h-screen justify-center">
-      <Seo title={"Email auth confirmation"} />
+      <Seo title={"邮箱认证确认"} />
       <div className="flex flex-col p-10 rounded-8 border gap-6 bg-gray-1">
         <div className="flex flex-col gap-4">
-          <h2>Email authentication</h2>
+          <h2>邮箱认证</h2>
           <p>
-            You are about to login with <Badge>{email}</Badge>
+            您即将以 <Badge>{email}</Badge> 登录
           </p>
         </div>
-        <Button onClick={redirectToMagicLink}>Continue</Button>
+        <Button onClick={redirectToMagicLink}>继续</Button>
       </div>
     </div>
   );

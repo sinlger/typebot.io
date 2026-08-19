@@ -52,7 +52,8 @@ export const V2dot22Update = (_: Props) => (
         <Text style={text}>
           您好， <br />
           <br />
-          我们以火热的状态开启了 2024 年。这是多么高效的一个月！其中一些成果得益于新的内部框架，用于构建新的区块：{" "}
+          我们以火热的状态开启了 2024
+          年。这是多么高效的一个月！其中一些成果得益于新的内部框架，用于构建新的区块：{" "}
           <Link
             href="https://docs.typebot.io/contribute/guides/create-block"
             target="_blank"
@@ -84,7 +85,8 @@ export const V2dot22Update = (_: Props) => (
         <Section style={featureSection}>
           <Heading style={heading}>全新的图谱手势操作</Heading>
           <Text style={text}>
-            终于来了！您现在可以在所有 typebot 中选择多个分组，一起移动并复制它们。
+            终于来了！您现在可以在所有 typebot
+            中选择多个分组，一起移动并复制它们。
           </Text>
           <Img
             src={`${imagesBaseUrl}/groupSelection.gif`}
@@ -99,13 +101,17 @@ export const V2dot22Update = (_: Props) => (
             我们向区块库中添加了三个新成员：
             <br />
             <br />
-            <span style={{ fontWeight: "bold" }}>二维码</span>：即时生成二维码图片 URL 以在聊天中使用。这对于在实体店或活动现场展示的 typebot 尤其有用。
+            <span style={{ fontWeight: "bold" }}>二维码</span>
+            ：即时生成二维码图片 URL
+            以在聊天中使用。这对于在实体店或活动现场展示的 typebot 尤其有用。
             <br />
             <br />
-            <span style={{ fontWeight: "bold" }}>Mistral</span>：作为 OpenAI 区块的替代方案。它使用相同的参数。该区块允许您调用 Mistral AI 模型。
+            <span style={{ fontWeight: "bold" }}>Mistral</span>：作为 OpenAI
+            区块的替代方案。它使用相同的参数。该区块允许您调用 Mistral AI 模型。
             <br />
             <br />
-            <span style={{ fontWeight: "bold" }}>Dify.AI</span>：在 Dify 上打造您自己的 AI 智能体，并直接在 Typebot 上使用它，实现两全其美。
+            <span style={{ fontWeight: "bold" }}>Dify.AI</span>：在 Dify
+            上打造您自己的 AI 智能体，并直接在 Typebot 上使用它，实现两全其美。
           </Text>
           <Img
             src={`${imagesBaseUrl}/newblocks.jpg`}
@@ -118,7 +124,8 @@ export const V2dot22Update = (_: Props) => (
         <Section style={featureSection}>
           <Heading style={heading}>OpenAI 区块：提问助手</Heading>
           <Text style={text}>
-            这可能是使用 OpenAI 新助手功能的最简单方式。拖放一个区块，配置几个参数，即可立即使用 ✨
+            这可能是使用 OpenAI
+            新助手功能的最简单方式。拖放一个区块，配置几个参数，即可立即使用 ✨
           </Text>
           <Img
             src={`${imagesBaseUrl}/openaiAssistantGif.gif`}
@@ -138,13 +145,16 @@ export const V2dot22Update = (_: Props) => (
             <br />
             <br />🧠 在 OpenAI 区块中支持 Tools/Functions
             <br />
-            <br />🔒 新增"允许的来源"typebot 设置，确保您的 typebot 只能从您的域名运行。
+            <br />🔒 新增"允许的来源"typebot 设置，确保您的 typebot
+            只能从您的域名运行。
             <br />
             <br />
-            🗄️ 文件上传区块新增可见性选项。您现在可以将上传的文件 URL 设置为私有。
+            🗄️ 文件上传区块新增可见性选项。您现在可以将上传的文件 URL
+            设置为私有。
             <br />
             <br />
-            👨‍💻 您现在可以在任何自定义代码中使用 `setVariable` 函数来设置特定变量的值。
+            👨‍💻 您现在可以在任何自定义代码中使用 `setVariable`
+            函数来设置特定变量的值。
           </Text>
         </Section>
 

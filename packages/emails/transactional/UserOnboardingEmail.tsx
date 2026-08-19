@@ -22,7 +22,7 @@ interface Props {
 export const UserOnboardingEmail = ({ unsubscribeUrl }: Props) => (
   <Html>
     <Head />
-    <Preview>欢迎使用 Typebot！</Preview>
+    <Preview>欢迎使用 QinglBot！</Preview>
     <Body style={main}>
       <Container
         align="left"
@@ -37,33 +37,26 @@ export const UserOnboardingEmail = ({ unsubscribeUrl }: Props) => (
           您好，
           <br />
           <br />
-          感谢您试用 Typebot！我是创始人 Baptiste。🙌
+          感谢您注册 QinglBot！🙌
           <br />
           <br />
-          我创建 Typebot 的初衷是认为创建美观、引人入胜的聊天体验应该非常简单。
+          QinglBot
+          是一个无代码平台，让您无需编写任何代码，就能创建美观、引人入胜的聊天机器人，并将其嵌入网站或
+          WhatsApp 等聊天平台。
           <br />
           <br />
-          Typebot 旨在为您提供充分的自由度，让您轻松为您的业务打造完美的机器人。
+          前往控制台，从空白画布或现成模板开始，创建您的第一个机器人：
+          <br />
+          <Link href="https://qinglbot.com">https://qinglbot.com</Link>
           <br />
           <br />
-          观看这段 5 分钟的快速概览视频，开始上手：
-          <br />
-          <Link href="https://www.youtube.com/watch?v=jp3ggg_42-M">
-            https://www.youtube.com/watch?v=jp3ggg_42-M
-          </Link>
+          如需帮助，欢迎通过 support@qinglbot.com 与我们联系。
           <br />
           <br />
-          加入我们的 Discord 社区，与其他人交流并获得即时帮助：
-          <br />
-          <Link href="https://qinglbot.com/discord">
-            https://qinglbot.com/discord
-          </Link>
+          祝您使用愉快！
           <br />
           <br />
-          期待与您再见！
-          <br />
-          <br />
-          Baptiste.
+          QinglBot 团队
         </Text>
         <Hr />
         {unsubscribeUrl ? (

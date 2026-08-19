@@ -28,7 +28,7 @@ export const EditorPage = () => {
 
   return (
     <EditorProvider>
-      <Seo title={typebot?.name ? `${typebot.name} | Editor` : "Editor"} />
+      <Seo title={typebot?.name ? `${typebot.name} | 编辑器` : "编辑器"} />
       <div
         className="flex overflow-clip h-screen flex-col"
         ref={editorContainerRef}

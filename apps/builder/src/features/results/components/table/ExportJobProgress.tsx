@@ -27,7 +27,7 @@ export const ExportJobProgress = ({ chunk, error }: Props) => {
         className="animate-in fade-in-0 slide-in-from-bottom-2"
       >
         <TriangleAlertIcon />
-        <Alert.Title>Error exporting results</Alert.Title>
+        <Alert.Title>导出结果时出错</Alert.Title>
         <Alert.Description>
           {error || (chunk.status === "error" ? chunk.message : undefined)}
         </Alert.Description>
@@ -68,8 +68,7 @@ export const ExportJobProgress = ({ chunk, error }: Props) => {
         >
           <CheckmarkSquare02Icon />
           <Alert.Description>
-            You can close this dialog. We'll send you the file by email once
-            it's ready.
+            您可以关闭此对话框，文件就绪后我们会通过邮件发送给您。
           </Alert.Description>
         </Alert.Root>
       )}

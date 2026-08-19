@@ -20,18 +20,16 @@ export const NotionDeployDialog = ({
         {!isPublished && (
           <Alert.Root>
             <InformationSquareIcon />
-            <Alert.Description>
-              你需要先发布你的机器人
-            </Alert.Description>
+            <Alert.Description>你需要先发布你的机器人</Alert.Description>
           </Alert.Root>
         )}
         <ol>
           <li>
-            Type <code>/embed</code>
+            输入 <code>/embed</code>
           </li>
           <li>
             <div className="flex flex-col gap-2">
-              <p>Paste your typebot URL</p>
+              <p>粘贴你的机器人链接</p>
               <CopyInput
                 value={`${env.NEXT_PUBLIC_VIEWER_URL[0]}/${publicId}`}
               />

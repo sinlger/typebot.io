@@ -33,15 +33,13 @@ interface Props {
 export const VerificationCodeEmail = ({ code }: Props) => (
   <Html>
     <Head />
-    <Preview>您的 Typebot 验证码</Preview>
+    <Preview>您的 QinglBot 验证码</Preview>
     <Body style={main}>
       <Container style={container}>
         <Logo />
-        <Heading style={heading}>您的 Typebot 验证码</Heading>
+        <Heading style={heading}>您的 QinglBot 验证码</Heading>
         <code style={codeStyle}>{code}</code>
-        <Text style={paragraph}>
-          此验证码仅 1 小时内有效。
-        </Text>
+        <Text style={paragraph}>此验证码仅 1 小时内有效。</Text>
         <Hr style={hr} />
         <Text style={footerText}>QinglBot - 构建更快，聊天更智能</Text>
       </Container>
@@ -62,6 +60,6 @@ export const sendVerificationCodeEmail = async ({
   ComponentProps<typeof VerificationCodeEmail>) =>
   sendEmail({
     to,
-    subject: "您的 Typebot 验证码",
+    subject: "您的 QinglBot 验证码",
     html: await render(<VerificationCodeEmail {...props} />),
   });

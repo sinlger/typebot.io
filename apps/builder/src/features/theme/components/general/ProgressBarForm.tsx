@@ -55,12 +55,12 @@ export const ProgressBarForm = ({
           checked={progressBar?.isEnabled ?? defaultProgressBarIsEnabled}
           onCheckedChange={updateEnabled}
         />
-        <Field.Label>Enable progress bar</Field.Label>
+        <Field.Label>启用进度条</Field.Label>
       </Field.Root>
       {(progressBar?.isEnabled ?? defaultProgressBarIsEnabled) && (
         <>
           <Field.Root className="flex-row">
-            <Field.Label>Placement:</Field.Label>
+            <Field.Label>位置：</Field.Label>
             <BasicSelect
               value={progressBar?.placement}
               defaultValue={defaultProgressBarPlacement}
@@ -70,7 +70,7 @@ export const ProgressBarForm = ({
           </Field.Root>
 
           <Field.Root className="flex-row">
-            <Field.Label>Background color:</Field.Label>
+            <Field.Label>背景颜色：</Field.Label>
             <ColorPicker
               defaultValue={
                 progressBar?.backgroundColor ??
@@ -80,7 +80,7 @@ export const ProgressBarForm = ({
             />
           </Field.Root>
           <Field.Root className="flex-row">
-            <Field.Label>Color:</Field.Label>
+            <Field.Label>颜色：</Field.Label>
             <ColorPicker
               defaultValue={
                 progressBar?.color ?? defaultProgressBarColor[typebotVersion]
@@ -89,7 +89,7 @@ export const ProgressBarForm = ({
             />
           </Field.Root>
           <Field.Root className="flex-row">
-            <Field.Label>Thickness:</Field.Label>
+            <Field.Label>厚度：</Field.Label>
             <BasicNumberInput
               withVariableButton={false}
               defaultValue={
@@ -100,11 +100,11 @@ export const ProgressBarForm = ({
           </Field.Root>
           <Field.Root>
             <Field.Label>
-              Position when embedded
+              嵌入时的位置
               <MoreInfoTooltip>
-                Select "fixed" to always position the progress bar at the top of
-                the window even though your bot is embedded. Select "absolute"
-                to position the progress bar at the top of the chat container.
+                选择 "fixed"
+                可让进度条始终固定在窗口顶部，即使您的机器人是被嵌入的。选择
+                "absolute" 则将进度条定位在聊天容器顶部。
               </MoreInfoTooltip>
             </Field.Label>
             <BasicSelect

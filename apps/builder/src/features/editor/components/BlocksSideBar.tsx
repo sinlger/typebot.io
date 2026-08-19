@@ -208,7 +208,7 @@ export const BlocksSideBar = () => {
       <div className="flex flex-col w-full rounded-lg border pt-4 pb-10 px-4 gap-6 overflow-y-auto bg-gray-1 select-none">
         <div className="flex justify-between w-full items-center gap-3">
           <Input
-            placeholder="Search"
+            placeholder="搜索"
             value={searchInput}
             onChange={handleSearchInputChange}
           />
@@ -349,7 +349,7 @@ export const BlocksSideBar = () => {
         <button
           ref={dockBarRef}
           type="button"
-          aria-label="Open blocks sidebar"
+          aria-label="打开积木侧栏"
           className="flex animate-in fade-in-0 absolute h-full w-[450px] justify-end pr-10 items-center -right-[70px] top-0 -z-10"
           onFocus={() => {
             closeSideBar.flush();

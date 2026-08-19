@@ -27,7 +27,7 @@ ${parseInitPopupCode({
       <PopupSettings
         onUpdateSettings={(settings) => setInputValue(settings.autoShowDelay)}
       />
-      <p>Run this script to initialize the typebot:</p>
+      <p>运行以下脚本来初始化机器人：</p>
       <CodeEditor isReadOnly value={scriptSnippet} lang="js" />
     </div>
   );

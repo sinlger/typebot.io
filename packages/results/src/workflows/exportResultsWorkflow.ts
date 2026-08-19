@@ -311,7 +311,7 @@ export const SendExportToEmailWorkflowLayer = SendExportToEmailWorkflow.toLayer(
           });
           yield* emailClient.sendMail({
             to: payload.email,
-            subject: "Your results export is ready",
+            subject: "您的结果导出已就绪",
             html,
           });
         }),

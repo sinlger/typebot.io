@@ -348,15 +348,13 @@ export const WhatsAppDeployDialog = ({
         {!isPublished && phoneNumberData && (
           <Alert.Root>
             <InformationSquareIcon />
-            <Alert.Description>
-              You have modifications that can be published.
-            </Alert.Description>
+            <Alert.Description>您有未发布的修改。</Alert.Description>
           </Alert.Root>
         )}
         <ol>
           <li>
             <div className="flex items-center gap-2">
-              <p>Select a phone number:</p>
+              <p>选择一个手机号：</p>
               {workspace && (
                 <>
                   <WhatsAppCredentialsDialog
@@ -382,17 +380,15 @@ export const WhatsAppDeployDialog = ({
               <li>
                 <Accordion.Root>
                   <Accordion.Item>
-                    <Accordion.Trigger>Configure integration</Accordion.Trigger>
+                    <Accordion.Trigger>配置集成</Accordion.Trigger>
                     <Accordion.Panel>
                       <Field.Root className="inline-flex flex-row items-center">
                         <Field.Label>
-                          Session expire timeout
+                          会话过期超时
                           <MoreInfoTooltip>
-                            A number between 0 and 48 that represents the time
-                            in hours after which the session will expire if the
-                            user does not interact with the bot. The
-                            conversation restarts if the user sends a message
-                            after that expiration time.
+                            一个 0 到 48 之间的数字，表示用户未与机器人互动
+                            后会话过期的小时数。如果用户在此过期时间后发送
+                            消息，对话将重新开始。
                           </MoreInfoTooltip>
                         </Field.Label>
                         <BasicNumberInput
@@ -403,7 +399,7 @@ export const WhatsAppDeployDialog = ({
                           onValueChange={updateSessionExpiryTimeout}
                           withVariableButton={false}
                         />
-                        hours
+                        小时
                       </Field.Root>
                       <Field.Container>
                         <Field.Root className="flex-row items-center">
@@ -413,7 +409,7 @@ export const WhatsAppDeployDialog = ({
                             )}
                             onCheckedChange={updateIsStartConditionEnabled}
                           />
-                          <Field.Label>Start bot condition</Field.Label>
+                          <Field.Label>机器人启动条件</Field.Label>
                         </Field.Root>
                         {isDefined(whatsAppSettings?.startCondition) && (
                           <TableList<Comparison>
@@ -435,7 +431,7 @@ export const WhatsAppDeployDialog = ({
                                 />
                               </div>
                             )}
-                            addLabel="Add a comparison"
+                            addLabel="添加一个比较条件"
                           >
                             {(props) => <WhatsAppComparisonItem {...props} />}
                           </TableList>
@@ -447,12 +443,12 @@ export const WhatsAppDeployDialog = ({
                             checked={isWebhookForwardingEnabled}
                             onCheckedChange={updateIsWebhookForwardingEnabled}
                           />
-                          <Field.Label>Forward webhooks</Field.Label>
+                          <Field.Label>转发 Webhook</Field.Label>
                         </Field.Root>
                         {isWebhookForwardingEnabled && (
                           <>
                             <Field.Root>
-                              <Field.Label>Forwarded events</Field.Label>
+                              <Field.Label>转发的事件</Field.Label>
                               <Select.Root
                                 multiple
                                 value={selectedWebhookForwardingEventTypes}
@@ -493,10 +489,9 @@ export const WhatsAppDeployDialog = ({
                             </Field.Root>
                             <Field.Root>
                               <Field.Label>
-                                URL
+                                链接
                                 <MoreInfoTooltip>
-                                  The selected WhatsApp webhook events will be
-                                  forwarded to this URL.
+                                  选定的 WhatsApp Webhook 事件将转发到此链接。
                                 </MoreInfoTooltip>
                               </Field.Label>
                               <DebouncedTextInput
@@ -509,7 +504,7 @@ export const WhatsAppDeployDialog = ({
                               <Field.Error
                                 match={isWebhookForwardingUrlInvalid}
                               >
-                                Enter a valid HTTP(S) URL.
+                                请输入有效的 HTTP(S) 链接。
                               </Field.Error>
                             </Field.Root>
                           </>
@@ -527,12 +522,12 @@ export const WhatsAppDeployDialog = ({
                     disabled={!hasProPerks(workspace)}
                     onCheckedChange={toggleEnableWhatsApp}
                   />
-                  <Field.Label>Enable WhatsApp integration</Field.Label>
+                  <Field.Label>启用 WhatsApp 集成</Field.Label>
                 </Field.Root>
               </li>
               <li>
                 <div className="flex items-center gap-2">
-                  <p>Publish your bot:</p>
+                  <p>发布您的机器人：</p>
                   <PublishButton size="sm" isMoreMenuDisabled />
                 </div>
               </li>
@@ -542,7 +537,7 @@ export const WhatsAppDeployDialog = ({
                     href={`https://wa.me/${phoneNumberData.name}?text=Start`}
                     isExternal
                   >
-                    Try it out
+                    试试看
                   </TextLink>
                 </li>
               )}

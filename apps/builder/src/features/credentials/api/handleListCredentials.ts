@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { credentialsTypeSchema } from "@typebot.io/credentials/schemas";
 import { isDefined } from "@typebot.io/lib/utils";
 import prisma from "@typebot.io/prisma";
@@ -75,7 +75,7 @@ export const handleListCredentials = async ({
     },
   });
   if (!workspace || isReadWorkspaceFobidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   return {
     credentials: outputCredentialsSchema.parse(

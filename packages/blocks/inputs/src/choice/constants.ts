@@ -3,7 +3,7 @@ import type { ChoiceInputBlock } from "./schema";
 
 export const defaultChoiceInputOptions = {
   buttonLabel: defaultButtonLabel,
-  searchInputPlaceholder: "Filter the options...",
+  searchInputPlaceholder: "筛选选项...",
   isMultipleChoice: false,
   isSearchable: false,
   areInitialSearchButtonsVisible: true,

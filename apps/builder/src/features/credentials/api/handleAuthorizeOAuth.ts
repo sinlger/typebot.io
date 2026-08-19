@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { env } from "@typebot.io/env";
 import { getRuntimeVariable } from "@typebot.io/env/getRuntimeVariable";
 import { z } from "zod";
@@ -24,7 +24,7 @@ export const handleAuthorizeOAuth = async ({
       : undefined);
 
   if (!resolvedClientId)
-    throw new ORPCError("BAD_REQUEST", { message: "Client ID is required" });
+    throw new ORPCError("BAD_REQUEST", { message: "缺少客户端 ID" });
 
   const url = new URL(authConfig.authUrl);
   const urlParams = {

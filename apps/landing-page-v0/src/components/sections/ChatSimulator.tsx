@@ -28,7 +28,7 @@ export function ChatSimulator() {
           {/* 右侧对话流占位区：此处将内嵌真实的擎流对话流 */}
           <div className="lg:col-span-7 flex justify-center">
             <iframe
-              title="Typebot"
+              title="擎流对话演示"
               src={chatSimulatorUrl}
               className="w-full max-w-sm flex items-center justify-center rounded-[1rem] border-2 border-dashed border-slate-200 bg-slate-50/50 min-h-120"
             ></iframe>

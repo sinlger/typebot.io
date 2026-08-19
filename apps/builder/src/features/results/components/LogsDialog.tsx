@@ -27,13 +27,13 @@ export const LogsDialog = ({ typebotId, resultId, onClose }: Props) => {
   return (
     <Dialog.Root isOpen={isDefined(resultId)} onClose={onClose}>
       <Dialog.Popup className="max-w-xl">
-        <Dialog.Title>Logs</Dialog.Title>
+        <Dialog.Title>日志</Dialog.Title>
         <Dialog.CloseButton />
         {data?.logs?.map((log) => (
           <LogCard key={log.id} log={log} />
         ))}
         {!error && !data && <LoaderCircleIcon className="animate-spin" />}
-        {data && (data.logs ?? []).length === 0 && <p>No logs found.</p>}
+        {data && (data.logs ?? []).length === 0 && <p>暂无日志。</p>}
       </Dialog.Popup>
     </Dialog.Root>
   );
@@ -85,25 +85,25 @@ const StatusTag = ({
     case "error":
       return (
         <Badge colorScheme={"red"} className={className}>
-          Fail
+          失败
         </Badge>
       );
     case "warning":
       return (
         <Badge colorScheme={"orange"} className={className}>
-          Warn
+          警告
         </Badge>
       );
     case "info":
       return (
         <Badge colorScheme={"blue"} className={className}>
-          Info
+          信息
         </Badge>
       );
     default:
       return (
         <Badge colorScheme={"green"} className={className}>
-          Ok
+          成功
         </Badge>
       );
   }

@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import prisma from "@typebot.io/prisma";
 import type { User } from "@typebot.io/user/schemas";
 
@@ -13,7 +13,7 @@ export const handleListWorkspaces = async ({
   });
 
   if (!workspaces)
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   return { workspaces };
 };

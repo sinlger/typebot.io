@@ -1,4 +1,4 @@
-import { ORPCError } from "@orpc/server";
+﻿import { ORPCError } from "@orpc/server";
 import { getGoogleSpreadsheet } from "@typebot.io/credentials/getGoogleSpreadsheet";
 import { isDefined } from "@typebot.io/lib/utils";
 import prisma from "@typebot.io/prisma";
@@ -29,7 +29,7 @@ export const handleGetSheets = async ({
     },
   });
   if (!workspace || isReadWorkspaceFobidden(workspace, user))
-    throw new ORPCError("NOT_FOUND", { message: "Workspace not found" });
+    throw new ORPCError("NOT_FOUND", { message: "未找到工作区" });
 
   const docResponse = await getGoogleSpreadsheet({
     credentialsId,

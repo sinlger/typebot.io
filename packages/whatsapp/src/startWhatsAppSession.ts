@@ -85,10 +85,8 @@ export const startWhatsAppSession = async ({
 
   if (isNotDefined(publicTypebot)) {
     if (botsWithWhatsAppEnabled.length > 0)
-      throw new WhatsAppError("Message did not matched any condition");
-    throw new WhatsAppError(
-      "No public typebot with WhatsApp integration found",
-    );
+      throw new WhatsAppError("消息未匹配任何条件");
+    throw new WhatsAppError("未找到启用 WhatsApp 集成的机器人");
   }
 
   const sessionExpiryTimeoutHours =
