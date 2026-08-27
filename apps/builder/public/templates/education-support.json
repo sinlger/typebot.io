@@ -1,0 +1,562 @@
+{
+    "version":  "6.1",
+    "id":  "clnedu00001ab02support0001",
+    "name":  "教育机构客服",
+    "events":  [
+                   {
+                       "id":  "evedu000001start00001",
+                       "outgoingEdgeId":  "ededu000001menu000001",
+                       "graphCoordinates":  {
+                                                "x":  -300,
+                                                "y":  -90
+                                            },
+                       "type":  "start"
+                   }
+               ],
+    "groups":  [
+                   {
+                       "id":  "gredu000001menu000001",
+                       "title":  "欢迎菜单",
+                       "graphCoordinates":  {
+                                                "x":  -40,
+                                                "y":  -90
+                                            },
+                       "blocks":  [
+                                      {
+                                          "id":  "bledu000001hello000001",
+                                          "type":  "text",
+                                          "content":  {
+                                                          "richText":  [
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "您好，欢迎来到 XX 教育 👋"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "我是课程顾问小助手，请问想了解哪方面呢？"
+                                                                                                }
+                                                                                            ]
+                                                                           }
+                                                                       ]
+                                                      }
+                                      },
+                                      {
+                                          "id":  "bledu000002menu000001",
+                                          "type":  "choice input",
+                                          "items":  [
+                                                        {
+                                                            "id":  "itedu000001course0001",
+                                                            "outgoingEdgeId":  "ededu000001course0001",
+                                                            "content":  "课程咨询 📚"
+                                                        },
+                                                        {
+                                                            "id":  "itedu000002enroll00001",
+                                                            "outgoingEdgeId":  "ededu000001enroll0001",
+                                                            "content":  "报名与缴费 💳"
+                                                        },
+                                                        {
+                                                            "id":  "itedu000003schedule01",
+                                                            "outgoingEdgeId":  "ededu000001schedule01",
+                                                            "content":  "开课时间 🗓️"
+                                                        },
+                                                        {
+                                                            "id":  "itedu000004human00001",
+                                                            "outgoingEdgeId":  "ededu000001human00001",
+                                                            "content":  "联系人工顾问 👩‍🏫"
+                                                        }
+                                                    ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "gredu000001course0001",
+                       "title":  "课程咨询",
+                       "graphCoordinates":  {
+                                                "x":  380,
+                                                "y":  -400
+                                            },
+                       "blocks":  [
+                                      {
+                                          "id":  "bledu000001course0001",
+                                          "type":  "text",
+                                          "content":  {
+                                                          "richText":  [
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "我们提供以下课程方向："
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "• 少儿编程 🧩"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "• 学科辅导 📖"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "• 艺术素养 🎨"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "• 成人技能提升 💼"
+                                                                                                }
+                                                                                            ]
+                                                                           }
+                                                                       ]
+                                                      }
+                                      },
+                                      {
+                                          "id":  "bledu000002course0001",
+                                          "outgoingEdgeId":  "ededu000001collect001",
+                                          "type":  "text input",
+                                          "options":  {
+                                                          "labels":  {
+                                                                         "placeholder":  "请输入您想了解的课程或孩子的年级..."
+                                                                     },
+                                                          "variableId":  "vedu000001question01",
+                                                          "isLong":  true
+                                                      }
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "gredu000001enroll0001",
+                       "title":  "报名与缴费",
+                       "graphCoordinates":  {
+                                                "x":  380,
+                                                "y":  -180
+                                            },
+                       "blocks":  [
+                                      {
+                                          "id":  "bledu000001enroll0001",
+                                          "type":  "text",
+                                          "content":  {
+                                                          "richText":  [
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "报名流程很简单：选课 → 提交信息 → 缴费 → 开班通知 ✍️"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "现在就可以为您登记报名意向，方便留下孩子姓名和家长联系方式吗？"
+                                                                                                }
+                                                                                            ]
+                                                                           }
+                                                                       ]
+                                                      }
+                                      },
+                                      {
+                                          "id":  "bledu000002enroll0001",
+                                          "outgoingEdgeId":  "ededu000001collect001",
+                                          "type":  "text input",
+                                          "options":  {
+                                                          "labels":  {
+                                                                         "placeholder":  "请输入孩子姓名和家长电话..."
+                                                                     },
+                                                          "variableId":  "vedu000002enrollinfo"
+                                                      }
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "gredu000001schedule01",
+                       "title":  "开课时间",
+                       "graphCoordinates":  {
+                                                "x":  380,
+                                                "y":  40
+                                            },
+                       "blocks":  [
+                                      {
+                                          "id":  "bledu000001schedule01",
+                                          "type":  "text",
+                                          "content":  {
+                                                          "richText":  [
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "我们的常规排课如下："
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "• 工作日 19:00-21:00"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "• 周末 9:00-18:00（按课程滚动开班）"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "• 寒暑假设有集训班"
+                                                                                                }
+                                                                                            ]
+                                                                           }
+                                                                       ]
+                                                      }
+                                      },
+                                      {
+                                          "id":  "bledu000002schedule01",
+                                          "type":  "choice input",
+                                          "items":  [
+                                                        {
+                                                            "id":  "itedu000001scheduleask",
+                                                            "outgoingEdgeId":  "ededu000001human00001",
+                                                            "content":  "查询具体开班时间"
+                                                        },
+                                                        {
+                                                            "id":  "itedu000002scheduleback",
+                                                            "outgoingEdgeId":  "ededu000001backmenu01",
+                                                            "content":  "返回主菜单"
+                                                        }
+                                                    ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "gredu000001human00001",
+                       "title":  "转人工顾问",
+                       "graphCoordinates":  {
+                                                "x":  780,
+                                                "y":  -180
+                                            },
+                       "blocks":  [
+                                      {
+                                          "id":  "bledu000001human00001",
+                                          "type":  "text",
+                                          "content":  {
+                                                          "richText":  [
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "好的，我为您转接课程顾问 🙌"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "请留下您的联系方式，顾问老师会尽快联系您："
+                                                                                                }
+                                                                                            ]
+                                                                           }
+                                                                       ]
+                                                      }
+                                      },
+                                      {
+                                          "id":  "bledu000002human00001",
+                                          "outgoingEdgeId":  "ededu000001collect001",
+                                          "type":  "phone number input",
+                                          "options":  {
+                                                          "labels":  {
+                                                                         "placeholder":  "请输入手机号"
+                                                                     },
+                                                          "variableId":  "vedu000003phone0001"
+                                                      }
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "gredu000001collect001",
+                       "title":  "收集信息",
+                       "graphCoordinates":  {
+                                                "x":  780,
+                                                "y":  40
+                                            },
+                       "blocks":  [
+                                      {
+                                          "id":  "bledu000001collect001",
+                                          "type":  "text",
+                                          "content":  {
+                                                          "richText":  [
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "方便留下您的联系方式吗？顾问老师会尽快与您联系 📝"
+                                                                                                }
+                                                                                            ]
+                                                                           }
+                                                                       ]
+                                                      }
+                                      },
+                                      {
+                                          "id":  "bledu000002collect001",
+                                          "outgoingEdgeId":  "ededu000001done000001",
+                                          "type":  "email input",
+                                          "options":  {
+                                                          "labels":  {
+                                                                         "placeholder":  "请输入手机号或邮箱"
+                                                                     },
+                                                          "variableId":  "vedu000004contact01"
+                                                      }
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "gredu000001done000001",
+                       "title":  "结束",
+                       "graphCoordinates":  {
+                                                "x":  1180,
+                                                "y":  0
+                                            },
+                       "blocks":  [
+                                      {
+                                          "id":  "bledu000001done000001",
+                                          "type":  "text",
+                                          "content":  {
+                                                          "richText":  [
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "感谢您的咨询！顾问老师会尽快与您联系 💙"
+                                                                                                }
+                                                                                            ]
+                                                                           },
+                                                                           {
+                                                                               "type":  "p",
+                                                                               "children":  [
+                                                                                                {
+                                                                                                    "text":  "如有其它问题，欢迎随时再来。"
+                                                                                                }
+                                                                                            ]
+                                                                           }
+                                                                       ]
+                                                      }
+                                      },
+                                      {
+                                          "id":  "bledu000002done000001",
+                                          "type":  "choice input",
+                                          "items":  [
+                                                        {
+                                                            "id":  "itedu000001doneback001",
+                                                            "outgoingEdgeId":  "ededu000001backmenu01",
+                                                            "content":  "返回主菜单"
+                                                        }
+                                                    ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "gredu000001backmenu01",
+                       "title":  "返回主菜单",
+                       "graphCoordinates":  {
+                                                "x":  1180,
+                                                "y":  -220
+                                            },
+                       "blocks":  [
+                                      {
+                                          "id":  "bledu000001backmenu01",
+                                          "type":  "Jump",
+                                          "options":  {
+                                                          "groupId":  "gredu000001menu000001"
+                                                      }
+                                      }
+                                  ]
+                   }
+               ],
+    "edges":  [
+                  {
+                      "id":  "ededu000001menu000001",
+                      "from":  {
+                                   "eventId":  "evedu000001start00001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001menu000001"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001course0001",
+                      "from":  {
+                                   "blockId":  "bledu000002menu000001",
+                                   "itemId":  "itedu000001course0001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001course0001"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001enroll0001",
+                      "from":  {
+                                   "blockId":  "bledu000002menu000001",
+                                   "itemId":  "itedu000002enroll00001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001enroll0001"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001schedule01",
+                      "from":  {
+                                   "blockId":  "bledu000002menu000001",
+                                   "itemId":  "itedu000003schedule01"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001schedule01"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001human00001",
+                      "from":  {
+                                   "blockId":  "bledu000002menu000001",
+                                   "itemId":  "itedu000004human00001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001human00001"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001collect001",
+                      "from":  {
+                                   "blockId":  "bledu000002course0001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001collect001"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001collect002",
+                      "from":  {
+                                   "blockId":  "bledu000002enroll0001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001collect001"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001collect003",
+                      "from":  {
+                                   "blockId":  "bledu000002human00001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001collect001"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001done000001",
+                      "from":  {
+                                   "blockId":  "bledu000002collect001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001done000001"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001backmenu01",
+                      "from":  {
+                                   "blockId":  "bledu000002done000001",
+                                   "itemId":  "itedu000001doneback001"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001backmenu01"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001backmenu02",
+                      "from":  {
+                                   "blockId":  "bledu000002schedule01",
+                                   "itemId":  "itedu000002scheduleback"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001backmenu01"
+                             }
+                  },
+                  {
+                      "id":  "ededu000001human02",
+                      "from":  {
+                                   "blockId":  "bledu000002schedule01",
+                                   "itemId":  "itedu000001scheduleask"
+                               },
+                      "to":  {
+                                 "groupId":  "gredu000001human00001"
+                             }
+                  }
+              ],
+    "variables":  [
+                      {
+                          "id":  "vedu000001question01",
+                          "name":  "咨询课程",
+                          "isSessionVariable":  true
+                      },
+                      {
+                          "id":  "vedu000002enrollinfo",
+                          "name":  "报名信息",
+                          "isSessionVariable":  true
+                      },
+                      {
+                          "id":  "vedu000003phone0001",
+                          "name":  "手机号",
+                          "isSessionVariable":  true
+                      },
+                      {
+                          "id":  "vedu000004contact01",
+                          "name":  "联系方式",
+                          "isSessionVariable":  true
+                      }
+                  ],
+    "theme":  {
+
+              },
+    "selectedThemeTemplateId":  null,
+    "settings":  {
+
+                 },
+    "createdAt":  "2026-01-05T08:00:00.000Z",
+    "updatedAt":  "2026-01-05T08:00:00.000Z",
+    "icon":  "🎓",
+    "folderId":  null,
+    "publicId":  null,
+    "customDomain":  null,
+    "workspaceId":  "proWorkspace",
+    "resultsTablePreferences":  null,
+    "isArchived":  false,
+    "isClosed":  false,
+    "whatsAppCredentialsId":  null,
+    "riskLevel":  null,
+    "spaceId":  null
+}

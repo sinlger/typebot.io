@@ -25,6 +25,7 @@ export const icp = {
 export const navLinks = [
   { label: "核心优势", href: "#features" },
   { label: "使用场景", href: "#use-cases" },
+  { label: "行业模板", href: "#templates" },
   { label: "可视化画布", href: "#editor-preview" },
   { label: "互动体验", href: "#chat-simulator" },
   { label: "资费方案", href: "#pricing" },
@@ -54,7 +55,7 @@ export const pricingPlans: PricingPlan[] = [
     yearly: 0,
     priceLabel: "￥0",
     unit: "永久免费",
-    features: ["100 次 / 月 互动对话回复", "无限制 创建连线和工作流"],
+    features: ["200 次 / 月 互动对话回复", "无限制 创建连线和工作流"],
     strikethrough: ["含有“由擎流驱动”品牌水印"],
     cta: { label: "立即注册", href: registerUrl },
   },
@@ -111,7 +112,7 @@ export const comparisonGroups: ComparisonGroup[] = [
   {
     title: "用量",
     rows: [
-      { label: "互动对话回复 / 月", values: ["100 次", "2,000 次", "10,000 次", "不限"] },
+      { label: "互动对话回复 / 月", values: ["200 次", "2,000 次", "10,000 次", "不限"] },
       { label: "创建工作流数量", values: [true, true, true, true] },
       { label: "团队协作席位", values: ["1", "1", "5", "不限"] },
       { label: "会话并发额度", values: ["标准", "标准", "高并发", "不限"] },

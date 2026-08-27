@@ -677,6 +677,96 @@ const templateDefinitions = [
     bestFor: ["E-commerce brands", "Subscription products", "Value pages"],
     collects: ["Current spend", "Usage frequency", "Contact info"],
   },
+  {
+    name: "电商客服",
+    emoji: "🛒",
+    fileName: "ecommerce-support.json",
+    updatedAt: templateUpdatedAt,
+    category: "product",
+    isNew: true,
+    useCase: "Customer Support",
+    features: [],
+    summary:
+      "一个电商网站客服聊天机器人模板，自动处理售前咨询、物流查询与退换货引导。",
+    description:
+      "在您的电商网站上放置一个 7×24 智能客服：自动回答商品咨询、查询物流、说明退换货政策，复杂问题一键转人工。大幅减少重复客服工作，让您不错过任何一笔潜在订单。",
+    highlights: [
+      {
+        title: "Goal",
+        description: "自动承接 80% 重复咨询，减少客服压力。",
+      },
+      {
+        title: "Flow",
+        description: "欢迎 → 选择咨询类型 → 分场景解答 → 转人工/留资。",
+      },
+      {
+        title: "Result",
+        description: "响应更快、线索不遗漏、复购率提升。",
+      },
+    ],
+    bestFor: ["E-commerce stores", "DTC brands", "独立站卖家"],
+    collects: ["咨询问题", "订单号", "联系方式"],
+  },
+  {
+    name: "教育机构客服",
+    emoji: "🎓",
+    fileName: "education-support.json",
+    updatedAt: templateUpdatedAt,
+    category: "product",
+    isNew: true,
+    useCase: "Customer Support",
+    features: [],
+    summary:
+      "一个教育培训机构客服聊天机器人模板，承接课程咨询、报名引导与开课时间查询。",
+    description:
+      "培训机构官网放一个智能课程顾问：介绍课程方向、登记报名意向、告知排课时间，复杂问题转接人工顾问。让每一个潜在学员都能被及时跟进，提升报名转化。",
+    highlights: [
+      {
+        title: "Goal",
+        description: "把官网访客转化为可跟进的报名线索。",
+      },
+      {
+        title: "Flow",
+        description: "欢迎 → 课程/报名/排课 → 登记信息 → 人工跟进。",
+      },
+      {
+        title: "Result",
+        description: "报名意向零流失，顾问跟进更高效。",
+      },
+    ],
+    bestFor: ["K12 培训机构", "职业教育", "成人技能培训"],
+    collects: ["咨询课程", "报名信息", "联系方式"],
+  },
+  {
+    name: "本地生活服务客服",
+    emoji: "🏪",
+    fileName: "local-services-support.json",
+    updatedAt: templateUpdatedAt,
+    category: "product",
+    isNew: true,
+    useCase: "Customer Support",
+    features: [],
+    summary:
+      "一个本地生活服务客服聊天机器人模板，承接服务介绍、在线预约与到店指引。",
+    description:
+      "为本地门店（美容、健身、家政、维修等）配置智能前台：介绍服务、在线登记预约、告知地址与营业时间，复杂需求转人工。让顾客咨询不落空，到店更顺畅。",
+    highlights: [
+      {
+        title: "Goal",
+        description: "24 小时在线接单，预约不漏。",
+      },
+      {
+        title: "Flow",
+        description: "欢迎 → 服务/预约/到店指引 → 登记信息 → 人工确认。",
+      },
+      {
+        title: "Result",
+        description: "预约量提升、顾客体验更佳。",
+      },
+    ],
+    bestFor: ["美容美发", "家政服务", "健身工作室", "维修上门"],
+    collects: ["咨询内容", "预约信息", "联系方式"],
+  },
 ] satisfies TemplateDefinition[];
 
 export const useCases: TemplateUseCase[] = [

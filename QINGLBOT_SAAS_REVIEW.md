@@ -155,8 +155,24 @@
 
 保留未翻译（有意）：平台/品牌名 label（WhatsApp/Stripe/Google Sheets/OpenAI/360Dialog 等）、枚举/存储值（PlanTag Free/Starter/Pro、EmbedTypeMenu Bubble/Popup/Standard）、货币列表、SVG `<title>`、格式示例占位（邮箱/金额/密钥前缀）。
 
+## 六、定位与官网/模板（本轮：网站客服定位 + 3 个行业模板）
+
+产品定位确定为 **「面向中文市场的无代码智能对话机器人平台」，首推「网站客服」场景**（详见 `QINGLBOT_POSITIONING_AND_GTM.md`）。
+
+**新增 3 个网站客服行业模板**（`apps/builder/public/templates/*.json`，100% 通过 `typebotSchema` 校验，注册后模板对话框「product」分组可见，带 NEW 徽章）：
+1. **电商客服** `ecommerce-support.json` —— 售前咨询 / 物流查询 / 退换货 / 转人工
+2. **教育机构客服** `education-support.json` —— 课程咨询 / 报名登记 / 开课时间 / 转人工
+3. **本地生活服务客服** `local-services-support.json` —— 服务介绍 / 在线预约 / 到店指引 / 转人工
+
+**官网（`apps/landing-page-v0`）调整**：
+- 新增「行业模板」区块（`TemplatesShowcase.tsx`）+ 导航锚点 `#templates`，引导注册后从模板创建
+- 修正 FREE 套餐额度显示错误：`100 次/月` → `200 次/月`（对齐 `packages/billing` 的 `chatsLimits[Plan.FREE] = 200`，官网 site.ts 两处）
+
+**注意**：构建产物 `apps/landing-page-v0/dist` 已 gitignore；付费套餐价格（￥78/￥178 等）为官网营销展示，暂与后端未接支付的计费体系解耦，后续接支付时需对齐。
+
 ## 五、待办（本次会话可能继续处理）
 
 - [x] 硬编码英文汉化（完成并通过 typecheck/lint）
-- [ ] 确认上面 P0/P1 决策项（需要你拍板）
-- [ ] 生成 commit（品牌/汉化/SaaS 开关）
+- [x] 按用户决策：维持原计费（默认 FREE）、删旧英文官网、不隐藏账单菜单、i18n 只保留中文（均已完成提交）
+- [x] 修复 `packages/scripts` Stripe 遗留死代码，全仓 typecheck 恢复通过
+- [x] 新增 3 个网站客服行业模板 + 官网行业模板区块 + FREE 额度数字修正
