@@ -131,9 +131,7 @@
           "id": "vzcrfk4vl9gy8igu0ysja5nc",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "你好 👋" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "你好 👋" }] }]
           }
         },
         {

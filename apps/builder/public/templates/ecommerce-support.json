@@ -1,554 +1,550 @@
 {
-    "version":  "6.1",
-    "id":  "clnecom00001ab01support0001",
-    "name":  "电商客服",
-    "events":  [
-                   {
-                       "id":  "evcom000001start00001",
-                       "outgoingEdgeId":  "edcom000001menu000001",
-                       "graphCoordinates":  {
-                                                "x":  -300,
-                                                "y":  -90
-                                            },
-                       "type":  "start"
-                   }
-               ],
-    "groups":  [
-                   {
-                       "id":  "grcom000001menu000001",
-                       "title":  "欢迎菜单",
-                       "graphCoordinates":  {
-                                                "x":  -40,
-                                                "y":  -90
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "blcom000001hello000001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "您好，欢迎光临！👋"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "我是智能客服小助手，请问有什么可以帮您？"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "blcom000002menu000001",
-                                          "type":  "choice input",
-                                          "items":  [
-                                                        {
-                                                            "id":  "itcom000001presale001",
-                                                            "outgoingEdgeId":  "edcom000001presale001",
-                                                            "content":  "商品咨询 🛍️"
-                                                        },
-                                                        {
-                                                            "id":  "itcom000002logistic001",
-                                                            "outgoingEdgeId":  "edcom000001logistic001",
-                                                            "content":  "物流查询 📦"
-                                                        },
-                                                        {
-                                                            "id":  "itcom000003refund0001",
-                                                            "outgoingEdgeId":  "edcom000001refund0001",
-                                                            "content":  "退换货 🔄"
-                                                        },
-                                                        {
-                                                            "id":  "itcom000004human00001",
-                                                            "outgoingEdgeId":  "edcom000001human00001",
-                                                            "content":  "转人工客服 👩‍💼"
-                                                        }
-                                                    ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grcom000001presale001",
-                       "title":  "商品咨询",
-                       "graphCoordinates":  {
-                                                "x":  380,
-                                                "y":  -400
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "blcom000001presale001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "关于商品，您可以告诉我具体想了解什么，例如："
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 商品规格与材质"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 库存与到货时间"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 优惠与满减活动"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 尺码/颜色选择建议"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "blcom000002presale001",
-                                          "outgoingEdgeId":  "edcom000001collect001",
-                                          "type":  "text input",
-                                          "options":  {
-                                                          "labels":  {
-                                                                         "placeholder":  "请输入您想咨询的问题..."
-                                                                     },
-                                                          "variableId":  "vcom000001question01",
-                                                          "isLong":  true
-                                                      }
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grcom000001logistic001",
-                       "title":  "物流查询",
-                       "graphCoordinates":  {
-                                                "x":  380,
-                                                "y":  -180
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "blcom000001logistic001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "请提供您的订单号，我来帮您查询物流进度 📦"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "blcom000002logistic001",
-                                          "outgoingEdgeId":  "edcom000001collect001",
-                                          "type":  "text input",
-                                          "options":  {
-                                                          "labels":  {
-                                                                         "placeholder":  "例如：20250101000001"
-                                                                     },
-                                                          "variableId":  "vcom000002orderid001"
-                                                      }
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grcom000001refund0001",
-                       "title":  "退换货",
-                       "graphCoordinates":  {
-                                                "x":  380,
-                                                "y":  40
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "blcom000001refund0001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "关于退换货，我们的政策如下："
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 支持 7 天无理由退换货"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 商品需保持完好、吊牌齐全"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 质量问题由我们承担运费"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "blcom000002refund0001",
-                                          "type":  "choice input",
-                                          "items":  [
-                                                        {
-                                                            "id":  "itcom000001refundapply",
-                                                            "outgoingEdgeId":  "edcom000001human00001",
-                                                            "content":  "我要申请退换货"
-                                                        },
-                                                        {
-                                                            "id":  "itcom000002refundback",
-                                                            "outgoingEdgeId":  "edcom000001backmenu01",
-                                                            "content":  "返回主菜单"
-                                                        }
-                                                    ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grcom000001human00001",
-                       "title":  "转人工",
-                       "graphCoordinates":  {
-                                                "x":  780,
-                                                "y":  -180
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "blcom000001human00001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "好的，我为您转接人工客服 🙌"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "请留下您的联系方式，客服会尽快与您联系："
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "blcom000002human00001",
-                                          "outgoingEdgeId":  "edcom000001collect001",
-                                          "type":  "phone number input",
-                                          "options":  {
-                                                          "labels":  {
-                                                                         "placeholder":  "请输入手机号"
-                                                                     },
-                                                          "variableId":  "vcom000003phone00001"
-                                                      }
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grcom000001collect001",
-                       "title":  "收集信息",
-                       "graphCoordinates":  {
-                                                "x":  780,
-                                                "y":  40
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "blcom000001collect001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "方便留下您的联系方式吗？我们会尽快回复您 📝"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "blcom000002collect001",
-                                          "outgoingEdgeId":  "edcom000001done000001",
-                                          "type":  "email input",
-                                          "options":  {
-                                                          "labels":  {
-                                                                         "placeholder":  "请输入邮箱或手机号"
-                                                                     },
-                                                          "variableId":  "vcom000004contact01"
-                                                      }
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grcom000001done000001",
-                       "title":  "结束",
-                       "graphCoordinates":  {
-                                                "x":  1180,
-                                                "y":  0
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "blcom000001done000001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "感谢您的咨询！我们会尽快处理并回复您 💙"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "如有其它问题，欢迎随时再来。"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "blcom000002done000001",
-                                          "type":  "choice input",
-                                          "items":  [
-                                                        {
-                                                            "id":  "itcom000001doneback001",
-                                                            "outgoingEdgeId":  "edcom000001backmenu01",
-                                                            "content":  "返回主菜单"
-                                                        }
-                                                    ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grcom000001backmenu01",
-                       "title":  "返回主菜单",
-                       "graphCoordinates":  {
-                                                "x":  1180,
-                                                "y":  -220
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "blcom000001backmenu01",
-                                          "type":  "Jump",
-                                          "options":  {
-                                                          "groupId":  "grcom000001menu000001"
-                                                      }
-                                      }
-                                  ]
-                   }
-               ],
-    "edges":  [
+  "version": "6.1",
+  "id": "clnecom00001ab01support0001",
+  "name": "电商客服",
+  "events": [
+    {
+      "id": "evcom000001start00001",
+      "outgoingEdgeId": "edcom000001menu000001",
+      "graphCoordinates": {
+        "x": -300,
+        "y": -90
+      },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "grcom000001menu000001",
+      "title": "欢迎菜单",
+      "graphCoordinates": {
+        "x": -40,
+        "y": -90
+      },
+      "blocks": [
+        {
+          "id": "blcom000001hello000001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
                   {
-                      "id":  "edcom000001menu000001",
-                      "from":  {
-                                   "eventId":  "evcom000001start00001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001menu000001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001presale001",
-                      "from":  {
-                                   "blockId":  "blcom000002menu000001",
-                                   "itemId":  "itcom000001presale001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001presale001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001logistic001",
-                      "from":  {
-                                   "blockId":  "blcom000002menu000001",
-                                   "itemId":  "itcom000002logistic001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001logistic001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001refund0001",
-                      "from":  {
-                                   "blockId":  "blcom000002menu000001",
-                                   "itemId":  "itcom000003refund0001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001refund0001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001human00001",
-                      "from":  {
-                                   "blockId":  "blcom000002menu000001",
-                                   "itemId":  "itcom000004human00001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001human00001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001collect001",
-                      "from":  {
-                                   "blockId":  "blcom000002presale001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001collect001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001collect002",
-                      "from":  {
-                                   "blockId":  "blcom000002logistic001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001collect001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001collect003",
-                      "from":  {
-                                   "blockId":  "blcom000002human00001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001collect001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001done000001",
-                      "from":  {
-                                   "blockId":  "blcom000002collect001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001done000001"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001backmenu01",
-                      "from":  {
-                                   "blockId":  "blcom000002done000001",
-                                   "itemId":  "itcom000001doneback001"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001backmenu01"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001backmenu02",
-                      "from":  {
-                                   "blockId":  "blcom000002refund0001",
-                                   "itemId":  "itcom000002refundback"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001backmenu01"
-                             }
-                  },
-                  {
-                      "id":  "edcom000001refundhuman",
-                      "from":  {
-                                   "blockId":  "blcom000002refund0001",
-                                   "itemId":  "itcom000001refundapply"
-                               },
-                      "to":  {
-                                 "groupId":  "grcom000001human00001"
-                             }
+                    "text": "您好，欢迎光临！👋"
                   }
-              ],
-    "variables":  [
-                      {
-                          "id":  "vcom000001question01",
-                          "name":  "咨询问题",
-                          "isSessionVariable":  true
-                      },
-                      {
-                          "id":  "vcom000002orderid001",
-                          "name":  "订单号",
-                          "isSessionVariable":  true
-                      },
-                      {
-                          "id":  "vcom000003phone00001",
-                          "name":  "手机号",
-                          "isSessionVariable":  true
-                      },
-                      {
-                          "id":  "vcom000004contact01",
-                          "name":  "联系方式",
-                          "isSessionVariable":  true
-                      }
-                  ],
-    "theme":  {
-
+                ]
               },
-    "selectedThemeTemplateId":  null,
-    "settings":  {
-
-                 },
-    "createdAt":  "2026-01-05T08:00:00.000Z",
-    "updatedAt":  "2026-01-05T08:00:00.000Z",
-    "icon":  "🛒",
-    "folderId":  null,
-    "publicId":  null,
-    "customDomain":  null,
-    "workspaceId":  "proWorkspace",
-    "resultsTablePreferences":  null,
-    "isArchived":  false,
-    "isClosed":  false,
-    "whatsAppCredentialsId":  null,
-    "riskLevel":  null,
-    "spaceId":  null
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "我是智能客服小助手，请问有什么可以帮您？"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "blcom000002menu000001",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "itcom000001presale001",
+              "outgoingEdgeId": "edcom000001presale001",
+              "content": "商品咨询 🛍️"
+            },
+            {
+              "id": "itcom000002logistic001",
+              "outgoingEdgeId": "edcom000001logistic001",
+              "content": "物流查询 📦"
+            },
+            {
+              "id": "itcom000003refund0001",
+              "outgoingEdgeId": "edcom000001refund0001",
+              "content": "退换货 🔄"
+            },
+            {
+              "id": "itcom000004human00001",
+              "outgoingEdgeId": "edcom000001human00001",
+              "content": "转人工客服 👩‍💼"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grcom000001presale001",
+      "title": "商品咨询",
+      "graphCoordinates": {
+        "x": 380,
+        "y": -400
+      },
+      "blocks": [
+        {
+          "id": "blcom000001presale001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "关于商品，您可以告诉我具体想了解什么，例如："
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 商品规格与材质"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 库存与到货时间"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 优惠与满减活动"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 尺码/颜色选择建议"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "blcom000002presale001",
+          "outgoingEdgeId": "edcom000001collect001",
+          "type": "text input",
+          "options": {
+            "labels": {
+              "placeholder": "请输入您想咨询的问题..."
+            },
+            "variableId": "vcom000001question01",
+            "isLong": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "grcom000001logistic001",
+      "title": "物流查询",
+      "graphCoordinates": {
+        "x": 380,
+        "y": -180
+      },
+      "blocks": [
+        {
+          "id": "blcom000001logistic001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "请提供您的订单号，我来帮您查询物流进度 📦"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "blcom000002logistic001",
+          "outgoingEdgeId": "edcom000001collect001",
+          "type": "text input",
+          "options": {
+            "labels": {
+              "placeholder": "例如：20250101000001"
+            },
+            "variableId": "vcom000002orderid001"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grcom000001refund0001",
+      "title": "退换货",
+      "graphCoordinates": {
+        "x": 380,
+        "y": 40
+      },
+      "blocks": [
+        {
+          "id": "blcom000001refund0001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "关于退换货，我们的政策如下："
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 支持 7 天无理由退换货"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 商品需保持完好、吊牌齐全"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 质量问题由我们承担运费"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "blcom000002refund0001",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "itcom000001refundapply",
+              "outgoingEdgeId": "edcom000001human00001",
+              "content": "我要申请退换货"
+            },
+            {
+              "id": "itcom000002refundback",
+              "outgoingEdgeId": "edcom000001backmenu01",
+              "content": "返回主菜单"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grcom000001human00001",
+      "title": "转人工",
+      "graphCoordinates": {
+        "x": 780,
+        "y": -180
+      },
+      "blocks": [
+        {
+          "id": "blcom000001human00001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "好的，我为您转接人工客服 🙌"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "请留下您的联系方式，客服会尽快与您联系："
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "blcom000002human00001",
+          "outgoingEdgeId": "edcom000001collect001",
+          "type": "phone number input",
+          "options": {
+            "labels": {
+              "placeholder": "请输入手机号"
+            },
+            "variableId": "vcom000003phone00001"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grcom000001collect001",
+      "title": "收集信息",
+      "graphCoordinates": {
+        "x": 780,
+        "y": 40
+      },
+      "blocks": [
+        {
+          "id": "blcom000001collect001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "方便留下您的联系方式吗？我们会尽快回复您 📝"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "blcom000002collect001",
+          "outgoingEdgeId": "edcom000001done000001",
+          "type": "email input",
+          "options": {
+            "labels": {
+              "placeholder": "请输入邮箱或手机号"
+            },
+            "variableId": "vcom000004contact01"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grcom000001done000001",
+      "title": "结束",
+      "graphCoordinates": {
+        "x": 1180,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "blcom000001done000001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "感谢您的咨询！我们会尽快处理并回复您 💙"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "如有其它问题，欢迎随时再来。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "blcom000002done000001",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "itcom000001doneback001",
+              "outgoingEdgeId": "edcom000001backmenu01",
+              "content": "返回主菜单"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grcom000001backmenu01",
+      "title": "返回主菜单",
+      "graphCoordinates": {
+        "x": 1180,
+        "y": -220
+      },
+      "blocks": [
+        {
+          "id": "blcom000001backmenu01",
+          "type": "Jump",
+          "options": {
+            "groupId": "grcom000001menu000001"
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edcom000001menu000001",
+      "from": {
+        "eventId": "evcom000001start00001"
+      },
+      "to": {
+        "groupId": "grcom000001menu000001"
+      }
+    },
+    {
+      "id": "edcom000001presale001",
+      "from": {
+        "blockId": "blcom000002menu000001",
+        "itemId": "itcom000001presale001"
+      },
+      "to": {
+        "groupId": "grcom000001presale001"
+      }
+    },
+    {
+      "id": "edcom000001logistic001",
+      "from": {
+        "blockId": "blcom000002menu000001",
+        "itemId": "itcom000002logistic001"
+      },
+      "to": {
+        "groupId": "grcom000001logistic001"
+      }
+    },
+    {
+      "id": "edcom000001refund0001",
+      "from": {
+        "blockId": "blcom000002menu000001",
+        "itemId": "itcom000003refund0001"
+      },
+      "to": {
+        "groupId": "grcom000001refund0001"
+      }
+    },
+    {
+      "id": "edcom000001human00001",
+      "from": {
+        "blockId": "blcom000002menu000001",
+        "itemId": "itcom000004human00001"
+      },
+      "to": {
+        "groupId": "grcom000001human00001"
+      }
+    },
+    {
+      "id": "edcom000001collect001",
+      "from": {
+        "blockId": "blcom000002presale001"
+      },
+      "to": {
+        "groupId": "grcom000001collect001"
+      }
+    },
+    {
+      "id": "edcom000001collect002",
+      "from": {
+        "blockId": "blcom000002logistic001"
+      },
+      "to": {
+        "groupId": "grcom000001collect001"
+      }
+    },
+    {
+      "id": "edcom000001collect003",
+      "from": {
+        "blockId": "blcom000002human00001"
+      },
+      "to": {
+        "groupId": "grcom000001collect001"
+      }
+    },
+    {
+      "id": "edcom000001done000001",
+      "from": {
+        "blockId": "blcom000002collect001"
+      },
+      "to": {
+        "groupId": "grcom000001done000001"
+      }
+    },
+    {
+      "id": "edcom000001backmenu01",
+      "from": {
+        "blockId": "blcom000002done000001",
+        "itemId": "itcom000001doneback001"
+      },
+      "to": {
+        "groupId": "grcom000001backmenu01"
+      }
+    },
+    {
+      "id": "edcom000001backmenu02",
+      "from": {
+        "blockId": "blcom000002refund0001",
+        "itemId": "itcom000002refundback"
+      },
+      "to": {
+        "groupId": "grcom000001backmenu01"
+      }
+    },
+    {
+      "id": "edcom000001refundhuman",
+      "from": {
+        "blockId": "blcom000002refund0001",
+        "itemId": "itcom000001refundapply"
+      },
+      "to": {
+        "groupId": "grcom000001human00001"
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vcom000001question01",
+      "name": "咨询问题",
+      "isSessionVariable": true
+    },
+    {
+      "id": "vcom000002orderid001",
+      "name": "订单号",
+      "isSessionVariable": true
+    },
+    {
+      "id": "vcom000003phone00001",
+      "name": "手机号",
+      "isSessionVariable": true
+    },
+    {
+      "id": "vcom000004contact01",
+      "name": "联系方式",
+      "isSessionVariable": true
+    }
+  ],
+  "theme": {},
+  "selectedThemeTemplateId": null,
+  "settings": {},
+  "createdAt": "2026-01-05T08:00:00.000Z",
+  "updatedAt": "2026-01-05T08:00:00.000Z",
+  "icon": "🛒",
+  "folderId": null,
+  "publicId": null,
+  "customDomain": null,
+  "workspaceId": "proWorkspace",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null,
+  "riskLevel": null,
+  "spaceId": null
 }

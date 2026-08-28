@@ -49,7 +49,10 @@
           "outgoingEdgeId": "k0ikr8x3bu9s5o86g5njqfts",
           "type": "choice input",
           "items": [
-            { "id": "ih0cv1bnpyc83qwz4qq6ywk3", "content": "是的，我们开始吧！" }
+            {
+              "id": "ih0cv1bnpyc83qwz4qq6ywk3",
+              "content": "是的，我们开始吧！"
+            }
           ]
         }
       ]
@@ -204,9 +207,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "现在，让我们谈谈纸巾。🧻" }
-                ]
+                "children": [{ "text": "现在，让我们谈谈纸巾。🧻" }]
               }
             ]
           }
@@ -404,9 +405,7 @@
         {
           "id": "z95sfiyhk4mk3y693ku9ugud",
           "type": "choice input",
-          "items": [
-            { "id": "vagoik95tnerdxebvdqghipf", "content": "去购物" }
-          ]
+          "items": [{ "id": "vagoik95tnerdxebvdqghipf", "content": "去购物" }]
         }
       ]
     },

@@ -15,7 +15,9 @@ export function Hero() {
             <span className="absolute inline-flex w-full h-full rounded-full bg-brand-400 opacity-75 animate-ping" />
             <span className="relative inline-flex w-2 h-2 rounded-full bg-brand-600" />
           </span>
-          <span className="text-xs font-medium text-brand-700">国内高性能、超流畅可视化流编排系统</span>
+          <span className="text-xs font-medium text-brand-700">
+            国内高性能、超流畅可视化流编排系统
+          </span>
         </div>
 
         {/* 标题 */}
@@ -27,7 +29,9 @@ export function Hero() {
 
         {/* 副标题 */}
         <p className="mt-6 text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-          <strong className="font-semibold text-slate-800">“擎流” (QinglBot)</strong>{" "}
+          <strong className="font-semibold text-slate-800">
+            “擎流” (QinglBot)
+          </strong>{" "}
           是一款面向精细化运营打造的低代码工作流画布与对话系统。无需代码，拖拉连线即可瞬间发布表单或智能助手。
         </p>
 

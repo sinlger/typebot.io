@@ -210,9 +210,7 @@
           "id": "e61e41j7wdisp1yxlr78gjxs",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "真可爱 😊" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "真可爱 😊" }] }]
           }
         },
         {
@@ -331,9 +329,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "我们应该把报价发送到哪个邮箱？" }
-                ]
+                "children": [{ "text": "我们应该把报价发送到哪个邮箱？" }]
               }
             ]
           }
@@ -437,9 +433,7 @@
           "id": "ddpum0cjrd2bredvakte914k",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "完美 👌" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "完美 👌" }] }]
           }
         },
         {

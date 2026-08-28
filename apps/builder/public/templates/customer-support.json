@@ -140,7 +140,9 @@
         {
           "id": "cl16lb3b300092e6dh4h01vxw",
           "type": "choice input",
-          "items": [{ "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "重新开始" }]
+          "items": [
+            { "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "重新开始" }
+          ]
         },
         {
           "id": "j08qxg0h804rngfroedblt5f",
@@ -215,9 +217,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "非常感谢您的提交 💙" }
-                ]
+                "children": [{ "text": "非常感谢您的提交 💙" }]
               }
             ]
           }

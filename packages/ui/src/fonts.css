@@ -1,8 +1,7 @@
 /* Uxum Grotesque */
 @font-face {
   font-family: "Uxum Grotesque";
-  src: url("/fonts/uxumGrotesque/uxumGrotesqueRegular.woff2")
-    format("woff2");
+  src: url("/fonts/uxumGrotesque/uxumGrotesqueRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17,8 +16,7 @@
 
 @font-face {
   font-family: "Uxum Grotesque";
-  src: url("/fonts/uxumGrotesque/uxumGrotesqueMedium.woff2")
-    format("woff2");
+  src: url("/fonts/uxumGrotesque/uxumGrotesqueMedium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -33,16 +31,14 @@
 
 @font-face {
   font-family: "Uxum Grotesque";
-  src: url("/fonts/uxumGrotesque/uxumGrotesqueBold.woff2")
-    format("woff2");
+  src: url("/fonts/uxumGrotesque/uxumGrotesqueBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Uxum Grotesque";
-  src: url("/fonts/uxumGrotesque/uxumGrotesqueBoldItalic.woff2")
-    format("woff2");
+  src: url("/fonts/uxumGrotesque/uxumGrotesqueBoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -50,8 +46,7 @@
 /* Untitled Sans */
 @font-face {
   font-family: "Untitled Sans";
-  src: url("/fonts/untitledSans/untitledSansRegular.woff2")
-    format("woff2");
+  src: url("/fonts/untitledSans/untitledSansRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -66,32 +61,28 @@
 
 @font-face {
   font-family: "Untitled Sans";
-  src: url("/fonts/untitledSans/untitledSansMedium.woff2")
-    format("woff2");
+  src: url("/fonts/untitledSans/untitledSansMedium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Untitled Sans";
-  src: url("/fonts/untitledSans/untitledSansMediumItalic.woff2")
-    format("woff2");
+  src: url("/fonts/untitledSans/untitledSansMediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Untitled Sans";
-  src: url("/fonts/untitledSans/untitledSansBold.woff2")
-    format("woff2");
+  src: url("/fonts/untitledSans/untitledSansBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Untitled Sans";
-  src: url("/fonts/untitledSans/untitledSansBoldItalic.woff2")
-    format("woff2");
+  src: url("/fonts/untitledSans/untitledSansBoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }

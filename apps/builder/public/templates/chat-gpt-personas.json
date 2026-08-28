@@ -444,9 +444,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "我可以用非常简单的术语解释概念。" }
-                ]
+                "children": [{ "text": "我可以用非常简单的术语解释概念。" }]
               }
             ]
           }
@@ -459,9 +457,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "您想让我解释什么概念？" }
-                ]
+                "children": [{ "text": "您想让我解释什么概念？" }]
               }
             ]
           }

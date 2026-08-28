@@ -20,7 +20,8 @@ export function ChatSimulator() {
             <div className="mt-6 flex gap-3 p-4 bg-amber-50 border border-amber-100 rounded-2xl">
               <Lightbulb className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
               <p className="text-sm text-amber-800 leading-relaxed">
-                <strong>体验提示：</strong>您可以反复点击选项。完全在前端实时响应，让您的目标客户像在微信里聊天一样轻松给出答案。
+                <strong>体验提示：</strong>
+                您可以反复点击选项。完全在前端实时响应，让您的目标客户像在微信里聊天一样轻松给出答案。
               </p>
             </div>
           </div>

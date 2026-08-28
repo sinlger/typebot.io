@@ -1,6 +1,4 @@
-import {
-  authenticatedProcedure,
-} from "@typebot.io/config/orpc/builder/middlewares";
+import { authenticatedProcedure } from "@typebot.io/config/orpc/builder/middlewares";
 import { z } from "zod";
 import { subscriptionSchema } from "../schemas/subscription";
 import {

@@ -20,9 +20,7 @@
           "id": "uaks8b01ec3fln8g5iq9gnv7",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "你好！👋" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "你好！👋" }] }]
           }
         },
         {
@@ -33,7 +31,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "订阅新闻通讯，即可免费获取我们的专属“社区礼包”。" },
+                  {
+                    "text": "订阅新闻通讯，即可免费获取我们的专属“社区礼包”。"
+                  },
                   {
                     "bold": true,
                     "text": ""
@@ -379,9 +379,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "想通过社区提供更好的支持吗？" }
-                ]
+                "children": [{ "text": "想通过社区提供更好的支持吗？" }]
               }
             ]
           }

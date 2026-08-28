@@ -9,6 +9,7 @@ import { getCredentials } from "@typebot.io/credentials/getCredentials";
 import type { SmtpCredentials } from "@typebot.io/credentials/schemas";
 import { renderDefaultBotNotificationEmail } from "@typebot.io/emails/transactional/DefaultBotNotificationEmail";
 import { env } from "@typebot.io/env";
+import { resolveSmtpHost } from "@typebot.io/lib/nodemailer/resolveSmtpHost";
 import { parseUnknownError } from "@typebot.io/lib/parseUnknownError";
 import { getFileTempUrl } from "@typebot.io/lib/s3/getFileTempUrl";
 import {
@@ -171,8 +172,11 @@ const sendEmail = async ({
     (await getEmailInfo(credentialsId, workspaceId)) ?? {};
   if (!from) return;
 
+  const { host: smtpHost, servername } = await resolveSmtpHost(host);
+
   const transportConfig = {
-    host,
+    host: smtpHost,
+    ...(servername ? { servername } : {}),
     port,
     secure: isTlsEnabled ?? undefined,
     auth: {

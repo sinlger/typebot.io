@@ -1,562 +1,558 @@
 {
-    "version":  "6.1",
-    "id":  "clnlcl00001ab03support0001",
-    "name":  "本地生活服务客服",
-    "events":  [
-                   {
-                       "id":  "evlcl000001start00001",
-                       "outgoingEdgeId":  "edlcl000001menu000001",
-                       "graphCoordinates":  {
-                                                "x":  -300,
-                                                "y":  -90
-                                            },
-                       "type":  "start"
-                   }
-               ],
-    "groups":  [
-                   {
-                       "id":  "grlcl000001menu000001",
-                       "title":  "欢迎菜单",
-                       "graphCoordinates":  {
-                                                "x":  -40,
-                                                "y":  -90
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "bllcl000001hello000001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "您好，欢迎光临 XX 服务 🙌"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "我是前台小助手，请问有什么可以帮您？"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "bllcl000002menu000001",
-                                          "type":  "choice input",
-                                          "items":  [
-                                                        {
-                                                            "id":  "itlcl000001service001",
-                                                            "outgoingEdgeId":  "edlcl000001service001",
-                                                            "content":  "服务介绍 ✨"
-                                                        },
-                                                        {
-                                                            "id":  "itlcl000002appoint0001",
-                                                            "outgoingEdgeId":  "edlcl000001appoint0001",
-                                                            "content":  "在线预约 📅"
-                                                        },
-                                                        {
-                                                            "id":  "itlcl000003location01",
-                                                            "outgoingEdgeId":  "edlcl000001location01",
-                                                            "content":  "地址与营业时间 📍"
-                                                        },
-                                                        {
-                                                            "id":  "itlcl000004human00001",
-                                                            "outgoingEdgeId":  "edlcl000001human00001",
-                                                            "content":  "联系人工 ☎️"
-                                                        }
-                                                    ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grlcl000001service001",
-                       "title":  "服务介绍",
-                       "graphCoordinates":  {
-                                                "x":  380,
-                                                "y":  -400
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "bllcl000001service001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "我们提供以下服务："
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 到店体验与咨询"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 上门服务"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 会员卡与优惠套餐"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "• 常见问题解答"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "bllcl000002service001",
-                                          "outgoingEdgeId":  "edlcl000001collect001",
-                                          "type":  "text input",
-                                          "options":  {
-                                                          "labels":  {
-                                                                         "placeholder":  "请输入您想了解的服务内容..."
-                                                                     },
-                                                          "variableId":  "vlcl000001question01",
-                                                          "isLong":  true
-                                                      }
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grlcl000001appoint0001",
-                       "title":  "在线预约",
-                       "graphCoordinates":  {
-                                                "x":  380,
-                                                "y":  -180
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "bllcl000001appoint0001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "好的，为您登记预约 📅"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "请按以下格式留下：姓名 + 想预约的服务 + 期望时间"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "bllcl000002appoint0001",
-                                          "outgoingEdgeId":  "edlcl000001collect001",
-                                          "type":  "text input",
-                                          "options":  {
-                                                          "labels":  {
-                                                                         "placeholder":  "例如：王先生，美发，明天下午3点"
-                                                                     },
-                                                          "variableId":  "vlcl000002appointinfo"
-                                                      }
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grlcl000001location01",
-                       "title":  "地址与营业时间",
-                       "graphCoordinates":  {
-                                                "x":  380,
-                                                "y":  40
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "bllcl000001location01",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "我们的位置与营业时间如下："
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "📍 地址：XX市XX区XX路XX号"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "🕐 营业时间：每日 9:00 - 21:00（节假日不休）"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "🚗 附近有停车场，公共交通可乘地铁 X 号线"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "bllcl000002location01",
-                                          "type":  "choice input",
-                                          "items":  [
-                                                        {
-                                                            "id":  "itlcl000001locationnav",
-                                                            "outgoingEdgeId":  "edlcl000001human00001",
-                                                            "content":  "需要路线指引"
-                                                        },
-                                                        {
-                                                            "id":  "itlcl000002locationback",
-                                                            "outgoingEdgeId":  "edlcl000001backmenu01",
-                                                            "content":  "返回主菜单"
-                                                        }
-                                                    ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grlcl000001human00001",
-                       "title":  "转人工",
-                       "graphCoordinates":  {
-                                                "x":  780,
-                                                "y":  -180
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "bllcl000001human00001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "好的，我为您转接门店工作人员 🙌"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "请留下您的联系电话，工作人员会尽快联系您："
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "bllcl000002human00001",
-                                          "outgoingEdgeId":  "edlcl000001collect001",
-                                          "type":  "phone number input",
-                                          "options":  {
-                                                          "labels":  {
-                                                                         "placeholder":  "请输入手机号"
-                                                                     },
-                                                          "variableId":  "vlcl000003phone0001"
-                                                      }
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grlcl000001collect001",
-                       "title":  "收集信息",
-                       "graphCoordinates":  {
-                                                "x":  780,
-                                                "y":  40
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "bllcl000001collect001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "方便留下您的联系方式吗？我们会尽快与您联系确认 📝"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "bllcl000002collect001",
-                                          "outgoingEdgeId":  "edlcl000001done000001",
-                                          "type":  "email input",
-                                          "options":  {
-                                                          "labels":  {
-                                                                         "placeholder":  "请输入手机号或邮箱"
-                                                                     },
-                                                          "variableId":  "vlcl000004contact01"
-                                                      }
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grlcl000001done000001",
-                       "title":  "结束",
-                       "graphCoordinates":  {
-                                                "x":  1180,
-                                                "y":  0
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "bllcl000001done000001",
-                                          "type":  "text",
-                                          "content":  {
-                                                          "richText":  [
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "感谢您的咨询！我们会尽快与您联系 💙"
-                                                                                                }
-                                                                                            ]
-                                                                           },
-                                                                           {
-                                                                               "type":  "p",
-                                                                               "children":  [
-                                                                                                {
-                                                                                                    "text":  "期待您的光临，如有其它问题欢迎随时再来。"
-                                                                                                }
-                                                                                            ]
-                                                                           }
-                                                                       ]
-                                                      }
-                                      },
-                                      {
-                                          "id":  "bllcl000002done000001",
-                                          "type":  "choice input",
-                                          "items":  [
-                                                        {
-                                                            "id":  "itlcl000001doneback001",
-                                                            "outgoingEdgeId":  "edlcl000001backmenu01",
-                                                            "content":  "返回主菜单"
-                                                        }
-                                                    ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "id":  "grlcl000001backmenu01",
-                       "title":  "返回主菜单",
-                       "graphCoordinates":  {
-                                                "x":  1180,
-                                                "y":  -220
-                                            },
-                       "blocks":  [
-                                      {
-                                          "id":  "bllcl000001backmenu01",
-                                          "type":  "Jump",
-                                          "options":  {
-                                                          "groupId":  "grlcl000001menu000001"
-                                                      }
-                                      }
-                                  ]
-                   }
-               ],
-    "edges":  [
+  "version": "6.1",
+  "id": "clnlcl00001ab03support0001",
+  "name": "本地生活服务客服",
+  "events": [
+    {
+      "id": "evlcl000001start00001",
+      "outgoingEdgeId": "edlcl000001menu000001",
+      "graphCoordinates": {
+        "x": -300,
+        "y": -90
+      },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "grlcl000001menu000001",
+      "title": "欢迎菜单",
+      "graphCoordinates": {
+        "x": -40,
+        "y": -90
+      },
+      "blocks": [
+        {
+          "id": "bllcl000001hello000001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
                   {
-                      "id":  "edlcl000001menu000001",
-                      "from":  {
-                                   "eventId":  "evlcl000001start00001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001menu000001"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001service001",
-                      "from":  {
-                                   "blockId":  "bllcl000002menu000001",
-                                   "itemId":  "itlcl000001service001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001service001"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001appoint0001",
-                      "from":  {
-                                   "blockId":  "bllcl000002menu000001",
-                                   "itemId":  "itlcl000002appoint0001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001appoint0001"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001location01",
-                      "from":  {
-                                   "blockId":  "bllcl000002menu000001",
-                                   "itemId":  "itlcl000003location01"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001location01"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001human00001",
-                      "from":  {
-                                   "blockId":  "bllcl000002menu000001",
-                                   "itemId":  "itlcl000004human00001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001human00001"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001collect001",
-                      "from":  {
-                                   "blockId":  "bllcl000002service001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001collect001"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001collect002",
-                      "from":  {
-                                   "blockId":  "bllcl000002appoint0001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001collect001"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001collect003",
-                      "from":  {
-                                   "blockId":  "bllcl000002human00001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001collect001"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001done000001",
-                      "from":  {
-                                   "blockId":  "bllcl000002collect001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001done000001"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001backmenu01",
-                      "from":  {
-                                   "blockId":  "bllcl000002done000001",
-                                   "itemId":  "itlcl000001doneback001"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001backmenu01"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001backmenu02",
-                      "from":  {
-                                   "blockId":  "bllcl000002location01",
-                                   "itemId":  "itlcl000002locationback"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001backmenu01"
-                             }
-                  },
-                  {
-                      "id":  "edlcl000001human02",
-                      "from":  {
-                                   "blockId":  "bllcl000002location01",
-                                   "itemId":  "itlcl000001locationnav"
-                               },
-                      "to":  {
-                                 "groupId":  "grlcl000001human00001"
-                             }
+                    "text": "您好，欢迎光临 XX 服务 🙌"
                   }
-              ],
-    "variables":  [
-                      {
-                          "id":  "vlcl000001question01",
-                          "name":  "咨询内容",
-                          "isSessionVariable":  true
-                      },
-                      {
-                          "id":  "vlcl000002appointinfo",
-                          "name":  "预约信息",
-                          "isSessionVariable":  true
-                      },
-                      {
-                          "id":  "vlcl000003phone0001",
-                          "name":  "手机号",
-                          "isSessionVariable":  true
-                      },
-                      {
-                          "id":  "vlcl000004contact01",
-                          "name":  "联系方式",
-                          "isSessionVariable":  true
-                      }
-                  ],
-    "theme":  {
-
+                ]
               },
-    "selectedThemeTemplateId":  null,
-    "settings":  {
-
-                 },
-    "createdAt":  "2026-01-05T08:00:00.000Z",
-    "updatedAt":  "2026-01-05T08:00:00.000Z",
-    "icon":  "🏪",
-    "folderId":  null,
-    "publicId":  null,
-    "customDomain":  null,
-    "workspaceId":  "proWorkspace",
-    "resultsTablePreferences":  null,
-    "isArchived":  false,
-    "isClosed":  false,
-    "whatsAppCredentialsId":  null,
-    "riskLevel":  null,
-    "spaceId":  null
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "我是前台小助手，请问有什么可以帮您？"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "bllcl000002menu000001",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "itlcl000001service001",
+              "outgoingEdgeId": "edlcl000001service001",
+              "content": "服务介绍 ✨"
+            },
+            {
+              "id": "itlcl000002appoint0001",
+              "outgoingEdgeId": "edlcl000001appoint0001",
+              "content": "在线预约 📅"
+            },
+            {
+              "id": "itlcl000003location01",
+              "outgoingEdgeId": "edlcl000001location01",
+              "content": "地址与营业时间 📍"
+            },
+            {
+              "id": "itlcl000004human00001",
+              "outgoingEdgeId": "edlcl000001human00001",
+              "content": "联系人工 ☎️"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grlcl000001service001",
+      "title": "服务介绍",
+      "graphCoordinates": {
+        "x": 380,
+        "y": -400
+      },
+      "blocks": [
+        {
+          "id": "bllcl000001service001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "我们提供以下服务："
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 到店体验与咨询"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 上门服务"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 会员卡与优惠套餐"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "• 常见问题解答"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "bllcl000002service001",
+          "outgoingEdgeId": "edlcl000001collect001",
+          "type": "text input",
+          "options": {
+            "labels": {
+              "placeholder": "请输入您想了解的服务内容..."
+            },
+            "variableId": "vlcl000001question01",
+            "isLong": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "grlcl000001appoint0001",
+      "title": "在线预约",
+      "graphCoordinates": {
+        "x": 380,
+        "y": -180
+      },
+      "blocks": [
+        {
+          "id": "bllcl000001appoint0001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "好的，为您登记预约 📅"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "请按以下格式留下：姓名 + 想预约的服务 + 期望时间"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "bllcl000002appoint0001",
+          "outgoingEdgeId": "edlcl000001collect001",
+          "type": "text input",
+          "options": {
+            "labels": {
+              "placeholder": "例如：王先生，美发，明天下午3点"
+            },
+            "variableId": "vlcl000002appointinfo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grlcl000001location01",
+      "title": "地址与营业时间",
+      "graphCoordinates": {
+        "x": 380,
+        "y": 40
+      },
+      "blocks": [
+        {
+          "id": "bllcl000001location01",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "我们的位置与营业时间如下："
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "📍 地址：XX市XX区XX路XX号"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🕐 营业时间：每日 9:00 - 21:00（节假日不休）"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🚗 附近有停车场，公共交通可乘地铁 X 号线"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "bllcl000002location01",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "itlcl000001locationnav",
+              "outgoingEdgeId": "edlcl000001human00001",
+              "content": "需要路线指引"
+            },
+            {
+              "id": "itlcl000002locationback",
+              "outgoingEdgeId": "edlcl000001backmenu01",
+              "content": "返回主菜单"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grlcl000001human00001",
+      "title": "转人工",
+      "graphCoordinates": {
+        "x": 780,
+        "y": -180
+      },
+      "blocks": [
+        {
+          "id": "bllcl000001human00001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "好的，我为您转接门店工作人员 🙌"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "请留下您的联系电话，工作人员会尽快联系您："
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "bllcl000002human00001",
+          "outgoingEdgeId": "edlcl000001collect001",
+          "type": "phone number input",
+          "options": {
+            "labels": {
+              "placeholder": "请输入手机号"
+            },
+            "variableId": "vlcl000003phone0001"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grlcl000001collect001",
+      "title": "收集信息",
+      "graphCoordinates": {
+        "x": 780,
+        "y": 40
+      },
+      "blocks": [
+        {
+          "id": "bllcl000001collect001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "方便留下您的联系方式吗？我们会尽快与您联系确认 📝"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "bllcl000002collect001",
+          "outgoingEdgeId": "edlcl000001done000001",
+          "type": "email input",
+          "options": {
+            "labels": {
+              "placeholder": "请输入手机号或邮箱"
+            },
+            "variableId": "vlcl000004contact01"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grlcl000001done000001",
+      "title": "结束",
+      "graphCoordinates": {
+        "x": 1180,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "bllcl000001done000001",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "感谢您的咨询！我们会尽快与您联系 💙"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "期待您的光临，如有其它问题欢迎随时再来。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "bllcl000002done000001",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "itlcl000001doneback001",
+              "outgoingEdgeId": "edlcl000001backmenu01",
+              "content": "返回主菜单"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grlcl000001backmenu01",
+      "title": "返回主菜单",
+      "graphCoordinates": {
+        "x": 1180,
+        "y": -220
+      },
+      "blocks": [
+        {
+          "id": "bllcl000001backmenu01",
+          "type": "Jump",
+          "options": {
+            "groupId": "grlcl000001menu000001"
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edlcl000001menu000001",
+      "from": {
+        "eventId": "evlcl000001start00001"
+      },
+      "to": {
+        "groupId": "grlcl000001menu000001"
+      }
+    },
+    {
+      "id": "edlcl000001service001",
+      "from": {
+        "blockId": "bllcl000002menu000001",
+        "itemId": "itlcl000001service001"
+      },
+      "to": {
+        "groupId": "grlcl000001service001"
+      }
+    },
+    {
+      "id": "edlcl000001appoint0001",
+      "from": {
+        "blockId": "bllcl000002menu000001",
+        "itemId": "itlcl000002appoint0001"
+      },
+      "to": {
+        "groupId": "grlcl000001appoint0001"
+      }
+    },
+    {
+      "id": "edlcl000001location01",
+      "from": {
+        "blockId": "bllcl000002menu000001",
+        "itemId": "itlcl000003location01"
+      },
+      "to": {
+        "groupId": "grlcl000001location01"
+      }
+    },
+    {
+      "id": "edlcl000001human00001",
+      "from": {
+        "blockId": "bllcl000002menu000001",
+        "itemId": "itlcl000004human00001"
+      },
+      "to": {
+        "groupId": "grlcl000001human00001"
+      }
+    },
+    {
+      "id": "edlcl000001collect001",
+      "from": {
+        "blockId": "bllcl000002service001"
+      },
+      "to": {
+        "groupId": "grlcl000001collect001"
+      }
+    },
+    {
+      "id": "edlcl000001collect002",
+      "from": {
+        "blockId": "bllcl000002appoint0001"
+      },
+      "to": {
+        "groupId": "grlcl000001collect001"
+      }
+    },
+    {
+      "id": "edlcl000001collect003",
+      "from": {
+        "blockId": "bllcl000002human00001"
+      },
+      "to": {
+        "groupId": "grlcl000001collect001"
+      }
+    },
+    {
+      "id": "edlcl000001done000001",
+      "from": {
+        "blockId": "bllcl000002collect001"
+      },
+      "to": {
+        "groupId": "grlcl000001done000001"
+      }
+    },
+    {
+      "id": "edlcl000001backmenu01",
+      "from": {
+        "blockId": "bllcl000002done000001",
+        "itemId": "itlcl000001doneback001"
+      },
+      "to": {
+        "groupId": "grlcl000001backmenu01"
+      }
+    },
+    {
+      "id": "edlcl000001backmenu02",
+      "from": {
+        "blockId": "bllcl000002location01",
+        "itemId": "itlcl000002locationback"
+      },
+      "to": {
+        "groupId": "grlcl000001backmenu01"
+      }
+    },
+    {
+      "id": "edlcl000001human02",
+      "from": {
+        "blockId": "bllcl000002location01",
+        "itemId": "itlcl000001locationnav"
+      },
+      "to": {
+        "groupId": "grlcl000001human00001"
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vlcl000001question01",
+      "name": "咨询内容",
+      "isSessionVariable": true
+    },
+    {
+      "id": "vlcl000002appointinfo",
+      "name": "预约信息",
+      "isSessionVariable": true
+    },
+    {
+      "id": "vlcl000003phone0001",
+      "name": "手机号",
+      "isSessionVariable": true
+    },
+    {
+      "id": "vlcl000004contact01",
+      "name": "联系方式",
+      "isSessionVariable": true
+    }
+  ],
+  "theme": {},
+  "selectedThemeTemplateId": null,
+  "settings": {},
+  "createdAt": "2026-01-05T08:00:00.000Z",
+  "updatedAt": "2026-01-05T08:00:00.000Z",
+  "icon": "🏪",
+  "folderId": null,
+  "publicId": null,
+  "customDomain": null,
+  "workspaceId": "proWorkspace",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null,
+  "riskLevel": null,
+  "spaceId": null
 }

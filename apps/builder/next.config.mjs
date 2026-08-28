@@ -44,18 +44,7 @@ const nextConfig = {
   output: "standalone",
   i18n: {
     defaultLocale: "zh-CN",
-    locales: [
-      "zh-CN",
-      "en",
-      "fr",
-      "pt",
-      "pt-BR",
-      "de",
-      "ro",
-      "es",
-      "it",
-      "el",
-    ],
+    locales: ["zh-CN", "en", "fr", "pt", "pt-BR", "de", "ro", "es", "it", "el"],
   },
   outputFileTracingRoot: join(__dirname, "../../"),
   headers: async () => {

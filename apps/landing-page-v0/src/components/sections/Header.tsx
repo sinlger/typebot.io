@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import { Logo } from "@/components/Logo";
-import { navLinks, signinUrl, registerUrl } from "@/lib/site";
+import { navLinks, registerUrl, signinUrl } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);

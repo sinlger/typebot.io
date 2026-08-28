@@ -54,8 +54,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "Lead Generation",
     features: [],
-    summary:
-      "一个潜在客户开发聊天机器人模板，快速捕获联系信息并筛选潜在客户。",
+    summary: "一个潜在客户开发聊天机器人模板，快速捕获联系信息并筛选潜在客户。",
     description:
       "使用此聊天机器人欢迎新访客并提出简短友好的问题。它会收集正确的联系方式和意图，方便您的销售团队跟进。流程简短清晰，易于定制。",
     highlights: [
@@ -83,8 +82,7 @@ const templateDefinitions = [
     category: "product",
     useCase: "Customer Support",
     features: [],
-    summary:
-      "一个客户支持聊天机器人模板，回答常见问题并分流问题。",
+    summary: "一个客户支持聊天机器人模板，回答常见问题并分流问题。",
     description:
       "在重复问题到达您的收件箱之前处理它们。此聊天机器人提供清晰的答案，并引导用户找到正确的帮助路径。必要时，它会将复杂问题转接给人工。",
     highlights: [
@@ -112,8 +110,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "Quiz & Survey",
     features: [],
-    summary:
-      "一个测验聊天机器人模板，提出有趣的问题并显示清晰的结果。",
+    summary: "一个测验聊天机器人模板，提出有趣的问题并显示清晰的结果。",
     description:
       "运行一个简短的测验，从头到尾吸引参与者。聊天机器人一次只问一个问题，并在最后显示结果。可用于教育、营销或娱乐。",
     highlights: [
@@ -141,8 +138,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "Lead Generation",
     features: [],
-    summary:
-      "一个潜在客户评分聊天机器人模板，通过简单评分筛选潜在客户。",
+    summary: "一个潜在客户评分聊天机器人模板，通过简单评分筛选潜在客户。",
     description:
       "提出正确的问题以了解匹配度、预算和时机。聊天机器人为每个潜在客户打分，让您的团队知道优先联系谁。它保持体验简短明了，适合访客。",
     highlights: [
@@ -170,8 +166,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "Lead Magnets",
     features: [],
-    summary:
-      "一个潜在客户磁铁聊天机器人模板，以联系信息换取下载资源。",
+    summary: "一个潜在客户磁铁聊天机器人模板，以联系信息换取下载资源。",
     description:
       "通过友好的聊天提供指南、清单或模板。聊天机器人会要求输入电子邮件并立即交付资源。它还会标记兴趣点，以便您用合适的信息跟进。",
     highlights: [
@@ -200,8 +195,7 @@ const templateDefinitions = [
     useCase: "E-commerce",
     features: [],
     backgroundColor: "#010000",
-    summary:
-      "一个产品推荐聊天机器人模板，将购物者匹配到合适的商品。",
+    summary: "一个产品推荐聊天机器人模板，将购物者匹配到合适的商品。",
     description:
       "通过询问几个简单的偏好问题帮助购物者做出选择。聊天机器人缩小选项范围并推荐合适的产品。它还可以直接链接到产品页面。",
     highlights: [
@@ -229,8 +223,7 @@ const templateDefinitions = [
     category: "product",
     useCase: "Quiz & Survey",
     features: [],
-    summary:
-      "一个NPS调查聊天机器人模板，在一分钟内衡量忠诚度。",
+    summary: "一个NPS调查聊天机器人模板，在一分钟内衡量忠诚度。",
     description:
       "以友好、轻量的流程询问经典的 NPS 问题。聊天机器人收集评分和简短原因。可用于跟踪客户情绪并及早发现问题。",
     highlights: [
@@ -258,8 +251,7 @@ const templateDefinitions = [
     category: "product",
     useCase: "Onboarding",
     features: [],
-    summary:
-      "一个用户引导聊天机器人模板，引导新用户完成第一步。",
+    summary: "一个用户引导聊天机器人模板，引导新用户完成第一步。",
     description:
       "欢迎新用户并展示他们需要采取的关键操作。聊天机器人分享资源并逐步检查进度。它能减少流失，帮助用户更快取得成功。",
     highlights: [
@@ -286,8 +278,7 @@ const templateDefinitions = [
     updatedAt: templateUpdatedAt,
     useCase: "E-commerce",
     features: ["Payment integration"],
-    summary:
-      "一个数字产品支付聊天机器人模板，在聊天内销售下载资源。",
+    summary: "一个数字产品支付聊天机器人模板，在聊天内销售下载资源。",
     description:
       "在简短的聊天流程中销售数字产品。聊天机器人解释产品、收集电子邮件并完成支付。它专为流畅、专注的结账体验而设计。",
     highlights: [
@@ -342,8 +333,7 @@ const templateDefinitions = [
     updatedAt: templateUpdatedAt,
     useCase: "Entertainment",
     features: [],
-    summary:
-      "一个电影推荐聊天机器人模板，根据喜好推荐电影。",
+    summary: "一个电影推荐聊天机器人模板，根据喜好推荐电影。",
     description:
       "询问心情、类型和喜好，然后推荐电影。聊天机器人保持轻松有趣的氛围。非常适合演示或娱乐流程。",
     highlights: [
@@ -370,8 +360,7 @@ const templateDefinitions = [
     updatedAt: templateUpdatedAt,
     useCase: "AI Chat",
     features: ["AI-powered"],
-    summary:
-      "一个基础AI聊天机器人模板，用于开放问题和快速回答。",
+    summary: "一个基础AI聊天机器人模板，用于开放问题和快速回答。",
     description:
       "从由 ChatGPT 驱动的简单 AI 聊天体验开始。聊天机器人回答问题并保持对话开放。可将其用作更高级 AI 流程的基础。",
     highlights: [
@@ -398,8 +387,7 @@ const templateDefinitions = [
     updatedAt: templateUpdatedAt,
     useCase: "AI Chat",
     features: ["AI-powered", "File upload"],
-    summary:
-      "一个音频AI聊天机器人模板，让用户说话并听到回复。",
+    summary: "一个音频AI聊天机器人模板，让用户说话并听到回复。",
     description:
       "让用户发送语音输入并获得语音输出。聊天机器人在一个流程中处理音频上传和响应。非常适合免提或无障碍使用场景。",
     highlights: [
@@ -426,8 +414,7 @@ const templateDefinitions = [
     updatedAt: templateUpdatedAt,
     useCase: "AI Chat",
     features: ["AI-powered"],
-    summary:
-      "一个AI角色聊天机器人模板，让用户选择人格。",
+    summary: "一个AI角色聊天机器人模板，让用户选择人格。",
     description:
       "提供多个具有清晰风格或角色的 AI 人格。聊天机器人询问用户想和谁对话并设定语气。这是探索 AI 行为的趣味方式。",
     highlights: [
@@ -484,8 +471,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "E-commerce",
     features: [],
-    summary:
-      "一个保险报价聊天机器人模板，将用户匹配到合适的计划。",
+    summary: "一个保险报价聊天机器人模板，将用户匹配到合适的计划。",
     description:
       "收集基本信息并推荐最佳方案。聊天机器人保持问题简单明了。非常适合报价请求和政策比较。",
     highlights: [
@@ -512,8 +498,7 @@ const templateDefinitions = [
     updatedAt: templateUpdatedAt,
     useCase: "AI Chat",
     features: ["AI-powered"],
-    summary:
-      "一个AI条件逻辑聊天机器人模板，根据意图路由用户。",
+    summary: "一个AI条件逻辑聊天机器人模板，根据意图路由用户。",
     description:
       "使用 AI 检测意图并触发正确的路径。聊天机器人可以根据自然语言而不是固定规则进行分支。它是智能路由的良好起点。",
     highlights: [
@@ -541,8 +526,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "Lead Generation",
     features: ["AI-powered"],
-    summary:
-      "一个高价值潜在客户跟进聊天机器人模板，筛选严肃的潜在客户。",
+    summary: "一个高价值潜在客户跟进聊天机器人模板，筛选严肃的潜在客户。",
     description:
       "在潜在客户获取或演示请求后进行跟进。聊天机器人深入询问预算、需求和决策过程。它能筛选出匹配度低的线索，节省时间。",
     highlights: [
@@ -570,8 +554,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "Entertainment",
     features: [],
-    summary:
-      "一个碳水化合物计算器聊天机器人模板，快速给出补给指导。",
+    summary: "一个碳水化合物计算器聊天机器人模板，快速给出补给指导。",
     description:
       "询问几个问题，然后分享简单的碳水化合物摄入量估算。聊天机器人让计算变得轻松快捷。非常适合运动或营养品牌。",
     highlights: [
@@ -599,8 +582,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "E-commerce",
     features: ["AI-powered"],
-    summary:
-      "一个皮肤分型聊天机器人模板，根据回答推荐护肤方案。",
+    summary: "一个皮肤分型聊天机器人模板，根据回答推荐护肤方案。",
     description:
       "询问皮肤类型、问题和目标，然后给出个性化的推荐。聊天机器人像一次快速咨询。非常适合美容和护肤品牌。",
     highlights: [
@@ -627,8 +609,7 @@ const templateDefinitions = [
     updatedAt: templateUpdatedAt,
     useCase: "AI Chat",
     features: ["AI-powered"],
-    summary:
-      "一个OpenAI助手聊天机器人模板，专注于任务型AI对话。",
+    summary: "一个OpenAI助手聊天机器人模板，专注于任务型AI对话。",
     description:
       "与您的 OpenAI 助手直接开始聊天。聊天机器人专注于快速任务和清晰回答。可将其用作构建更智能助手的基础。",
     highlights: [
@@ -656,8 +637,7 @@ const templateDefinitions = [
     category: "marketing",
     useCase: "E-commerce",
     features: [],
-    summary:
-      "一个节省估算器聊天机器人模板，向用户展示他们可以节省多少。",
+    summary: "一个节省估算器聊天机器人模板，向用户展示他们可以节省多少。",
     description:
       "询问几个简短问题并计算简单的节省估算。聊天机器人以清晰的方式突出您产品的价值。非常适合电子商务或订阅产品。",
     highlights: [

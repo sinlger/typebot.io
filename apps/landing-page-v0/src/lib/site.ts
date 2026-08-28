@@ -3,8 +3,12 @@
 // 环境相关源地址：本地开发 (vite dev) 走 localhost，线上构建走正式域名。
 // 端口取自仓库 .env / nx 配置（builder:8080 / viewer:8081 / landing:6173，均为 strictPort 固定值）。
 const isDev = import.meta.env.DEV;
-const builderOrigin = isDev ? "http://localhost:8080" : "https://builder.qinglbot.com";
-const viewerOrigin = isDev ? "http://localhost:8081" : "https://viewer.qinglbot.com";
+const builderOrigin = isDev
+  ? "http://localhost:8080"
+  : "https://builder.qinglbot.com";
+const viewerOrigin = isDev
+  ? "http://localhost:8081"
+  : "https://viewer.qinglbot.com";
 const homeOrigin = isDev ? "http://localhost:6173" : "https://qinglbot.com";
 
 export const signinUrl = `${builderOrigin}/signin`;
@@ -67,7 +71,7 @@ export const pricingPlans: PricingPlan[] = [
     features: [
       "2,000 次 / 月 互动对话回复",
       "完全去除 擎流官方出厂水印",
-      "支持添加高级 API/Webhook 连接"
+      "支持添加高级 API/Webhook 连接",
     ],
     cta: { label: "立即订阅", href: registerPlanUrl("starter") },
   },
@@ -81,7 +85,7 @@ export const pricingPlans: PricingPlan[] = [
     features: [
       "10,000 次 / 月 互动对话回复",
       "5 名 团队核心成员协作管理席位",
-      "高级统计分析看板，线索数据一键导出"
+      "高级统计分析看板，线索数据一键导出",
     ],
     cta: { label: "立即订购", href: registerPlanUrl("pro") },
   },
@@ -112,7 +116,10 @@ export const comparisonGroups: ComparisonGroup[] = [
   {
     title: "用量",
     rows: [
-      { label: "互动对话回复 / 月", values: ["200 次", "2,000 次", "10,000 次", "不限"] },
+      {
+        label: "互动对话回复 / 月",
+        values: ["200 次", "2,000 次", "10,000 次", "不限"],
+      },
       { label: "创建工作流数量", values: [true, true, true, true] },
       { label: "团队协作席位", values: ["1", "1", "5", "不限"] },
       { label: "会话并发额度", values: ["标准", "标准", "高并发", "不限"] },

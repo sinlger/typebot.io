@@ -302,9 +302,7 @@
           "id": "eixinwxcgsng6v8blw6jdgwy",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "谢谢！🙏" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "谢谢！🙏" }] }]
           }
         },
         {
@@ -314,9 +312,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "您愿意在Capterra上留下评论吗？" }
-                ]
+                "children": [{ "text": "您愿意在Capterra上留下评论吗？" }]
               }
             ]
           }
@@ -351,9 +347,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "感谢您抽出时间回答！" }
-                ]
+                "children": [{ "text": "感谢您抽出时间回答！" }]
               }
             ]
           }
@@ -432,9 +426,7 @@
           "id": "cd8ftyg6tkjggncxuo242u3j",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "太棒了 🤩" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "太棒了 🤩" }] }]
           }
         },
         {

@@ -1,4 +1,4 @@
-import { navLinks, contactEmail, homeUrl, icp } from "@/lib/site";
+import { contactEmail, homeUrl, icp, navLinks } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -31,7 +31,10 @@ export function Footer() {
             <ul className="space-y-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm hover:text-brand-400 transition-colors">
+                  <a
+                    href={link.href}
+                    className="text-sm hover:text-brand-400 transition-colors"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -52,7 +55,10 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={homeUrl} className="text-sm hover:text-brand-400 transition-colors">
+                <a
+                  href={homeUrl}
+                  className="text-sm hover:text-brand-400 transition-colors"
+                >
                   {homeUrl}
                 </a>
               </li>

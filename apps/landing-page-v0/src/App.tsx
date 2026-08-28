@@ -1,14 +1,14 @@
+import { ChatSimulator } from "@/components/sections/ChatSimulator";
+import { CtaBanner } from "@/components/sections/CtaBanner";
+import { EditorPreview } from "@/components/sections/EditorPreview";
+import { Faq } from "@/components/sections/Faq";
+import { Features } from "@/components/sections/Features";
+import { Footer } from "@/components/sections/Footer";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
-import { Features } from "@/components/sections/Features";
-import { UseCases } from "@/components/sections/UseCases";
-import { TemplatesShowcase } from "@/components/sections/TemplatesShowcase";
-import { EditorPreview } from "@/components/sections/EditorPreview";
-import { ChatSimulator } from "@/components/sections/ChatSimulator";
 import { Pricing } from "@/components/sections/Pricing";
-import { Faq } from "@/components/sections/Faq";
-import { CtaBanner } from "@/components/sections/CtaBanner";
-import { Footer } from "@/components/sections/Footer";
+import { TemplatesShowcase } from "@/components/sections/TemplatesShowcase";
+import { UseCases } from "@/components/sections/UseCases";
 
 export default function App() {
   return (

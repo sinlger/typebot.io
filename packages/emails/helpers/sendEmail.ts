@@ -1,4 +1,5 @@
 import { env } from "@typebot.io/env";
+import { resolveSmtpHost } from "@typebot.io/lib/nodemailer/resolveSmtpHost";
 import { createTransport, type SendMailOptions } from "nodemailer";
 import {
   filterSuppressedRecipients,
@@ -33,8 +34,11 @@ export const sendEmail = async (
       suppressedCount,
     });
 
+  const { host: smtpHost, servername } = await resolveSmtpHost(env.SMTP_HOST);
+
   const transporter = createTransport({
-    host: env.SMTP_HOST,
+    host: smtpHost,
+    ...(servername ? { servername } : {}),
     port: env.SMTP_PORT,
     auth: {
       user: env.SMTP_USERNAME,

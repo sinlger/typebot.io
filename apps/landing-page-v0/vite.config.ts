@@ -1,7 +1,7 @@
-import path from "node:path"
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
-import tailwindcss from "@tailwindcss/vite"
+import path from "node:path";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
@@ -10,7 +10,12 @@ export default defineConfig({
     // monorepo 下可能存在多份 React 副本（app 本地 + 根 hoisted），
     // 导致 lucide-react 等 peerDep 内部 context 与 app 渲染用的 React 不致，
     // 触发 "Invalid hook call / useContext of null"。强制去重到单一实例。
-    dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
+    dedupe: [
+      "react",
+      "react-dom",
+      "react/jsx-runtime",
+      "react/jsx-dev-runtime",
+    ],
   },
   optimizeDeps: {
     // lucide-react@1.x 的 CJS/ESM 混合 + 无 exports 字段，让 deps optimizer
@@ -26,4 +31,4 @@ export default defineConfig({
     port: 6173,
     strictPort: true,
   },
-})
+});

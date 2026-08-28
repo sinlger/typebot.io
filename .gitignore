@@ -110,3 +110,12 @@ deploy/ecs/
 
 # Claude Code 本机工具白名单
 .claude/settings.json
+
+# 本机日志与调试产物（禁止入库）
+logs/
+dev-server.log
+
+# 含服务器凭据的本地部署文档（禁止入库）
+DEPLOYMENT_GUIDE.md
+*.tgz
+deploy/native-patch/

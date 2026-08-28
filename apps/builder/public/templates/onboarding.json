@@ -20,9 +20,7 @@
           "id": "cl1267q2c000e2e6dynjeg83n",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "欢迎 👋" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "欢迎 👋" }] }]
           }
         },
         {
@@ -97,9 +95,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "让我们为你准备好Typebot之旅。" }
-                ]
+                "children": [{ "text": "让我们为你准备好Typebot之旅。" }]
               }
             ]
           }
@@ -227,9 +223,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "感谢你回答这些问题！" }
-                ]
+                "children": [{ "text": "感谢你回答这些问题！" }]
               }
             ]
           }
@@ -245,9 +239,7 @@
           "id": "agi2i9xxed4jvv40rnrkf23r",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "很快见 🚀" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "很快见 🚀" }] }]
           }
         }
       ]

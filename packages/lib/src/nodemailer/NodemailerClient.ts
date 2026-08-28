@@ -1,5 +1,6 @@
 import { Config, Effect, Layer, Redacted, Schema, ServiceMap } from "effect";
 import { createTransport, type SendMailOptions } from "nodemailer";
+import { resolveSmtpHost } from "./resolveSmtpHost";
 
 export class NodemailerError extends Schema.TaggedErrorClass<NodemailerError>()(
   "@typebot/NodemailerError",
@@ -18,9 +19,15 @@ export class NodemailerClient extends ServiceMap.Service<
 >()("@typebot/NodemailerClient") {
   static readonly layer = Layer.unwrap(
     Effect.gen(function* () {
+      const smtpHost = yield* Config.string("SMTP_HOST");
+      const { host, servername } = yield* Effect.tryPromise({
+        try: () => resolveSmtpHost(smtpHost),
+        catch: (error) => new NodemailerError({ cause: error }),
+      });
       const transport = createTransport(
         {
-          host: yield* Config.string("SMTP_HOST"),
+          host,
+          ...(servername ? { servername } : {}),
           port: yield* Config.port("SMTP_PORT"),
           secure: yield* Config.boolean("SMTP_SECURE").pipe(
             Config.withDefault(false),

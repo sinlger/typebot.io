@@ -76,9 +76,7 @@
           "id": "cl1r0d8zi00142e6d4tl2yenk",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "做得好！" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "做得好！" }] }]
           }
         },
         {
@@ -133,9 +131,7 @@
           "id": "cl1r0eril001b2e6dh43cqhv5",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "做得好！" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "做得好！" }] }]
           }
         },
         {
@@ -190,9 +186,7 @@
           "id": "cl1r0j8u2001w2e6d3wnpzcj5",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "做得好！" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "做得好！" }] }]
           }
         },
         {
@@ -253,9 +247,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "SEO 代表搜索引擎优化" }
-                ]
+                "children": [{ "text": "SEO 代表搜索引擎优化" }]
               }
             ]
           }
@@ -463,9 +455,7 @@
           "outgoingEdgeId": "cl1r0s9g8003e2e6d5if2ywz9",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "做得好 👏" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "做得好 👏" }] }]
           }
         }
       ]
@@ -483,9 +473,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "你可以做得更好，但没关系！" }
-                ]
+                "children": [{ "text": "你可以做得更好，但没关系！" }]
               }
             ]
           }
@@ -577,7 +565,10 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "bold": true, "text": "准备好了吗？" }] }
+              {
+                "type": "p",
+                "children": [{ "bold": true, "text": "准备好了吗？" }]
+              }
             ]
           }
         },

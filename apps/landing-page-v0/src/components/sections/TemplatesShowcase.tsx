@@ -69,7 +69,9 @@ export function TemplatesShowcase() {
                   {t.tag}
                 </span>
               </div>
-              <h3 className="mt-5 text-xl font-bold text-slate-900">{t.title}</h3>
+              <h3 className="mt-5 text-xl font-bold text-slate-900">
+                {t.title}
+              </h3>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed flex-1">
                 {t.desc}
               </p>

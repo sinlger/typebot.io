@@ -1,18 +1,24 @@
-import { useState } from "react";
 import { Check, X } from "lucide-react";
-import { pricingPlans, type BillingCycle } from "@/lib/site";
+import { useState } from "react";
+import { type BillingCycle, pricingPlans } from "@/lib/site";
 import { PricingComparison } from "./PricingComparison";
 
 export function Pricing() {
   const [cycle, setCycle] = useState<BillingCycle>("monthly");
 
   return (
-    <section id="pricing" className="py-20 md:py-28 bg-linear-to-b from-slate-50 to-white">
+    <section
+      id="pricing"
+      className="py-20 md:py-28 bg-linear-to-b from-slate-50 to-white"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-xs font-bold text-brand-600 uppercase tracking-widest">高性价比服务</h2>
-          <p className="mt-3 text-3xl md:text-4xl font-bold text-slate-900">透明且极具弹性的资费套餐</p>
-
+          <h2 className="text-xs font-bold text-brand-600 uppercase tracking-widest">
+            高性价比服务
+          </h2>
+          <p className="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
+            透明且极具弹性的资费套餐
+          </p>
         </div>
 
         {/* 月/年付切换 */}
@@ -20,26 +26,29 @@ export function Pricing() {
           <div className="relative inline-flex items-center bg-slate-100 rounded-sm p-1">
             <span
               aria-hidden="true"
-              className={`pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] rounded-lg bg-white shadow-sm transition-transform duration-300 ease-out ${cycle === "yearly" ? "translate-x-full" : "translate-x-0"
-                }`}
+              className={`pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] rounded-lg bg-white shadow-sm transition-transform duration-300 ease-out ${
+                cycle === "yearly" ? "translate-x-full" : "translate-x-0"
+              }`}
             />
             <button
               type="button"
               onClick={() => setCycle("monthly")}
-              className={`relative z-10 px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${cycle === "monthly"
-                ? "text-slate-800"
-                : "text-slate-500 hover:text-slate-700"
-                }`}
+              className={`relative z-10 px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
+                cycle === "monthly"
+                  ? "text-slate-800"
+                  : "text-slate-500 hover:text-slate-700"
+              }`}
             >
               按月付
             </button>
             <button
               type="button"
               onClick={() => setCycle("yearly")}
-              className={`relative z-10 px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${cycle === "yearly"
-                ? "text-slate-800"
-                : "text-slate-500 hover:text-slate-700"
-                }`}
+              className={`relative z-10 px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
+                cycle === "yearly"
+                  ? "text-slate-800"
+                  : "text-slate-500 hover:text-slate-700"
+              }`}
             >
               按年付
             </button>
@@ -52,8 +61,7 @@ export function Pricing() {
         {/* 套餐卡片 */}
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {pricingPlans.map((plan) => {
-            const price =
-              cycle === "monthly" ? plan.monthly : plan.yearly;
+            const price = cycle === "monthly" ? plan.monthly : plan.yearly;
             const isFree = plan.monthly === 0;
             const priceDisplay =
               plan.monthly === null
@@ -76,12 +84,17 @@ export function Pricing() {
                   )}
                   <h3 className="text-lg font-bold text-white">{plan.name}</h3>
                   <div className="mt-4 flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-white">{priceDisplay}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {priceDisplay}
+                    </span>
                     <span className="text-sm text-brand-100">{plan.unit}</span>
                   </div>
                   <ul className="mt-6 space-y-3 flex-1">
                     {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm text-white/90">
+                      <li
+                        key={f}
+                        className="flex items-start gap-2 text-sm text-white/90"
+                      >
                         <Check className="w-4 h-4 text-brand-100 shrink-0 mt-0.5" />
                         <span>{f}</span>
                       </li>
@@ -106,12 +119,19 @@ export function Pricing() {
                 >
                   <h3 className="text-lg font-bold text-white">{plan.name}</h3>
                   <div className="mt-4">
-                    <span className="text-3xl font-bold text-white">{plan.priceLabel}</span>
-                    <span className="block text-sm text-slate-400 mt-1">{plan.unit}</span>
+                    <span className="text-3xl font-bold text-white">
+                      {plan.priceLabel}
+                    </span>
+                    <span className="block text-sm text-slate-400 mt-1">
+                      {plan.unit}
+                    </span>
                   </div>
                   <ul className="mt-6 space-y-3 flex-1">
                     {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm text-slate-300">
+                      <li
+                        key={f}
+                        className="flex items-start gap-2 text-sm text-slate-300"
+                      >
                         <Check className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
                         <span>{f}</span>
                       </li>
@@ -133,14 +153,21 @@ export function Pricing() {
                 key={plan.name}
                 className="flex flex-col h-full rounded-3xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:border-brand-200 hover:-translate-y-1 transition-all duration-300"
               >
-                <h3 className="text-lg font-bold text-slate-900">{plan.name}</h3>
+                <h3 className="text-lg font-bold text-slate-900">
+                  {plan.name}
+                </h3>
                 <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-slate-900">{priceDisplay}</span>
+                  <span className="text-4xl font-bold text-slate-900">
+                    {priceDisplay}
+                  </span>
                   <span className="text-sm text-slate-500">{plan.unit}</span>
                 </div>
                 <ul className="mt-6 space-y-3 flex-1">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-slate-600">
+                    <li
+                      key={f}
+                      className="flex items-start gap-2 text-sm text-slate-600"
+                    >
                       <Check className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
                       <span>{f}</span>
                     </li>

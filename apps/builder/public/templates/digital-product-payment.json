@@ -20,9 +20,7 @@
           "id": "cl3u4431500052e6gruhlxklx",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "你好 👋" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "你好 👋" }] }]
           }
         },
         {
@@ -85,9 +83,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "它基于Bullseye增长框架" }
-                ]
+                "children": [{ "text": "它基于Bullseye增长框架" }]
               }
             ]
           }
@@ -182,9 +178,7 @@
           "id": "cl3u4kblb000x2e6g49rot8h0",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "太棒了！" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "太棒了！" }] }]
           }
         },
         {

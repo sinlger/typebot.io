@@ -112,9 +112,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "好的，您可以在这里查看您的账户" }
-                ]
+                "children": [{ "text": "好的，您可以在这里查看您的账户" }]
               }
             ]
           }
@@ -140,9 +138,7 @@
           "id": "nvkp4zm7f24b0g3b25u3rb59",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "我是真人" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "我是真人" }] }]
           }
         }
       ]

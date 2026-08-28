@@ -20,9 +20,7 @@
           "id": "j4i5syifxmq7650xfz8bnd1o",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "你好 👋" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "你好 👋" }] }]
           }
         },
         {
@@ -56,9 +54,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "我有几个问题，您有时间吗？" }
-                ]
+                "children": [{ "text": "我有几个问题，您有时间吗？" }]
               }
             ]
           }
@@ -350,9 +346,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "那么，您现在为什么对SEO感兴趣？" }
-                ]
+                "children": [{ "text": "那么，您现在为什么对SEO感兴趣？" }]
               }
             ]
           }
@@ -432,9 +426,7 @@
               { "type": "p", "children": [{ "text": "" }] },
               {
                 "type": "p",
-                "children": [
-                  { "text": "我可以为您提供一次免费咨询通话。" }
-                ]
+                "children": [{ "text": "我可以为您提供一次免费咨询通话。" }]
               }
             ]
           }

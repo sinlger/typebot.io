@@ -155,7 +155,9 @@
           "id": "cl96o6a2700133b6ii5n027h2",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "当然可以！" }] }]
+            "richText": [
+              { "type": "p", "children": [{ "text": "当然可以！" }] }
+            ]
           }
         },
         {
@@ -204,9 +206,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "事件是您网站上的用户行为。" }
-                ]
+                "children": [{ "text": "事件是您网站上的用户行为。" }]
               }
             ]
           }
@@ -256,9 +256,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "公司由Josh Corn于2020年创立" }
-                ]
+                "children": [{ "text": "公司由Josh Corn于2020年创立" }]
               }
             ]
           }

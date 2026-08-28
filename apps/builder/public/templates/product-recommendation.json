@@ -195,9 +195,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Näak 如何帮助你实现目标？" }
-                ]
+                "children": [{ "text": "Näak 如何帮助你实现目标？" }]
               }
             ]
           }
@@ -242,9 +240,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "你对哪种蛋白质来源感兴趣？" }
-                ]
+                "children": [{ "text": "你对哪种蛋白质来源感兴趣？" }]
               }
             ]
           }
@@ -326,9 +322,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "你有任何饮食限制吗？" }
-                ]
+                "children": [{ "text": "你有任何饮食限制吗？" }]
               }
             ]
           }
@@ -393,9 +387,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "我们还会送一份小礼物 🎁" }
-                ]
+                "children": [{ "text": "我们还会送一份小礼物 🎁" }]
               }
             ]
           }
@@ -576,9 +568,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "让我们谈谈能量。⚡" }
-                ]
+                "children": [{ "text": "让我们谈谈能量。⚡" }]
               }
             ]
           }
@@ -664,9 +654,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "关于补水。💧" }
-                ]
+                "children": [{ "text": "关于补水。💧" }]
               }
             ]
           }

@@ -30,9 +30,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "很高兴您对我们的服务感兴趣。" }
-                ]
+                "children": [{ "text": "很高兴您对我们的服务感兴趣。" }]
               }
             ]
           }
@@ -44,9 +42,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "我需要再多了解您一些" }
-                ]
+                "children": [{ "text": "我需要再多了解您一些" }]
               }
             ]
           }
@@ -141,9 +137,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "您的团队由多少员工组成？" }
-                ]
+                "children": [{ "text": "您的团队由多少员工组成？" }]
               }
             ]
           }
@@ -304,9 +298,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "感谢您回答这些问题" }
-                ]
+                "children": [{ "text": "感谢您回答这些问题" }]
               }
             ]
           }
@@ -448,9 +440,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "我们的服务似乎不符合您的需求。" }
-                ]
+                "children": [{ "text": "我们的服务似乎不符合您的需求。" }]
               }
             ]
           }
@@ -473,9 +463,7 @@
           "id": "cl1sfitz4004r2e6e3ge4x7uy",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "再见 👋" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "再见 👋" }] }]
           }
         }
       ]

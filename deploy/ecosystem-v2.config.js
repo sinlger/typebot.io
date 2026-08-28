@@ -1,20 +1,25 @@
-const fs = require("fs");
+const fs = require("node:fs");
 
 function loadEnv(file) {
   const out = {};
   if (!fs.existsSync(file)) return out;
-  fs.readFileSync(file, "utf8").split(/\r?\n/).forEach((raw) => {
-    const line = raw.trim();
-    if (!line || line.startsWith("#")) return;
-    const eq = line.indexOf("=");
-    if (eq < 0) return;
-    const k = line.slice(0, eq).trim();
-    let v = line.slice(eq + 1).trim();
-    if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
-      v = v.slice(1, -1);
-    }
-    out[k] = v;
-  });
+  fs.readFileSync(file, "utf8")
+    .split(/\r?\n/)
+    .forEach((raw) => {
+      const line = raw.trim();
+      if (!line || line.startsWith("#")) return;
+      const eq = line.indexOf("=");
+      if (eq < 0) return;
+      const k = line.slice(0, eq).trim();
+      let v = line.slice(eq + 1).trim();
+      if (
+        (v.startsWith('"') && v.endsWith('"')) ||
+        (v.startsWith("'") && v.endsWith("'"))
+      ) {
+        v = v.slice(1, -1);
+      }
+      out[k] = v;
+    });
   return out;
 }
 
